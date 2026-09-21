@@ -84,6 +84,31 @@ Copenhagen plank is the block's one genuinely new lift (never trained, best-evid
 adductor exercise, `references/evidence-gym-pool.md`). Trap-bar directly tests the known
 grip-limiter finding from the gym log.
 
+## Weekly schedule
+`Running` and `Gym` above fix *what* each week contains; this fixes *which day*. Jack expects
+to shift days around while he finds a schedule that works — this section gets replaced each
+week to match, current week only. Past weeks' actual days are in `log.md`, not here.
+
+A run can split around a gym session (run to the gym, lift, run home) or get longer as
+distances grow. No format change needed — log each leg as its own `run` entry plus the `gym`
+entry, same date; the legs' distances count toward that day's target between them.
+
+**Week 1 (21–27 Sep).** Constraint: busy Wednesday and Friday evenings.
+
+| Day | Session |
+|---|---|
+| Mon 21 | Easy — done: 6.92km @ 5:50/km ✅ |
+| Tue 22 | Gym — Session A |
+| Wed 23 | Rest (evening busy) |
+| Thu 24 | Gym — Session B |
+| Fri 25 | Rest (evening busy) |
+| Sat 26 | Long — 8km @ 5:30–6:00/km or slower |
+| Sun 27 | Easy — 5km @ 5:30–6:00/km |
+
+Saturday and Sunday are back-to-back running days — not deliberate training stress yet, just
+the constraint's side-effect. Keep Sunday genuinely easy, shorten it rather than push if legs
+are heavy from Saturday.
+
 ## What would change the plan
 - Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,
   freeze reactive level, keep calf work.

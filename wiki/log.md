@@ -318,3 +318,18 @@ run_type: easy
 - Beyond plan: none — distance and pace both land inside the plan
 - Review: On target for week 1. Pace sits at the slow end of the easy band, right where it
   should for a rebuild week.
+
+## [2026-09-21] block | Weekly schedule added, Foundations wk1
+Jack wants the day-by-day table committed as the actual plan each week, not left in chat —
+that's the only way to log what he does against what was intended, and he expects to shift
+days around while finding a routine that works. Added `## Weekly schedule` to
+`blocks/2026-09-foundations.md`: current week only, replaced week to week, past weeks read
+from `log.md` instead. `plan-training` updated to match — ask the week's constraints first,
+write the table into the block file, don't leave it in chat.
+
+Week 1 constraint: busy Wed/Fri evenings, so gym moved to Tue/Thu and the long run/easy run
+pushed to the weekend — leaves Sat/Sun as back-to-back running days, flagged as a side-effect
+of the constraint, not deliberate.
+
+Also noted: a run can split around a gym session (run there, lift, run back) or get longer —
+no format change needed, each leg just logs as its own entry on the same date.

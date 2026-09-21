@@ -63,9 +63,16 @@ update `wiki/index.md`, append a `block` entry to `wiki/log.md`, and commit.
 
 ## Weekly plans
 
-Day-by-day table: day, session, duration, key detail. Fit it around the week Jack describes.
-Heavy legs away from hard runs. Mark which days are flexible. Weekly plans don't get their own
-file — log a short `block` entry if the week departs from the block.
+Day-by-day table: day, session. Ask about the week's known constraints first (busy evenings,
+travel) — they decide day placement more than anything else. Fit sessions around them; heavy
+legs away from hard runs; note any back-to-back running days that fall out of a constraint
+rather than being deliberate.
+
+Write it into the active block file as `## Weekly schedule` → current week, replacing the
+previous week's table (that week's actual days live in `log.md`, not here — this section is
+always just the current week). Commit as a `block` entry. A run can split around a gym
+session or lengthen over the block — log each leg as its own entry, same date; no format
+change needed for that.
 
 ## Race mode
 
