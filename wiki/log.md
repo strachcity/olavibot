@@ -276,3 +276,11 @@ One variable: the squat and deadlift anchor rotates variant week to week (back/f
 conventional/trap-bar deadlift) to find what works empirically, rather than fixing one up
 front — the reason `training-model.md` §4/§6 were amended earlier today. Winner gets fixed
 at block review. Copenhagen plank is the block's one new lift.
+
+## [2026-09-21] model | Upper body bumped to twice a week, gym sessions relisted
+Jack: sessions looked thin next to his usual ~5 exercises, and upper body needs more work.
+Fixed two things. Upper push and pull now run once per session (2×/week each) instead of
+once a week total — `training-model.md` §6 Tier 2 **[stated, 2026-09-21]**. Session A gains
+a push movement to match. Also rewrote both sessions in `blocks/2026-09-foundations.md` as
+plain numbered lists instead of a superset table, so the exercise count is visible — 6 things
+a session either way, not counting warm-up/cool-down.

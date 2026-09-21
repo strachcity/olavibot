@@ -196,8 +196,11 @@ fixing the one that wins at block review. This is systematic variation with a st
 | Upper push | ✅ | ✅ |
 | Upper pull | ✅ | ✅ |
 
-Upper body stays weekly but at minimum dose: one push, one pull. **[I]** Its value is posture
-under fatigue, arm drive over 24 hours, health and enjoyment — not running economy.
+Upper body: one push + one pull **in each session** (two full doses of each a week), not one
+a week total as before — bumped up after Jack said upper body needs more attention
+**[stated, 2026-09-21]**. Sets stay modest; the value is posture under fatigue, arm drive over
+24 hours, health and enjoyment **[I]** — not running economy, so this doesn't compete with the
+anchors for recovery.
 
 **Tier 3 — warm-up tax.** Done inside the warm-up, not given a slot.
 Foot and ankle (tibialis raises, short-foot, single-leg balance), low-level pogos and skipping

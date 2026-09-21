@@ -34,13 +34,25 @@ Ceiling: no 5th run, no second quality session, strides stay strides not a fartl
 Both sessions at the full gym this block — front squat and trap-bar both assumed to need a
 rack/bar the flat gym doesn't have. Flag if that's wrong; sessions would split across gyms.
 
-| | Session A | Session B |
-|---|---|---|
-| Odd weeks (1,3,5) | **Back squat** anchor, 3–5×3–6 RPE-capped | **Conventional deadlift** anchor, straps on top sets |
-| Even weeks (2,4,6) | **Front squat** anchor | **Trap-bar deadlift** anchor |
-| Superset 1 | Bulgarian split squat (single-leg, doubles hip-flexion) + Pallof press (trunk) | Calf, heavy slow, bent+straight knee + bench/DB press (upper push) |
-| Superset 2 | Banded march (hip-flexion endurance) + pull-up (upper pull) | Odd wks: Copenhagen plank + row · Even wks: Nordic curl + row |
-| Reactive | — | Fresh, before the anchor: Level 1 isometric seated calf holds → Level 2 if two clean sessions |
+**Session A**
+1. Anchor — Back squat (odd weeks) / Front squat (even weeks), 3–5×3–6, RPE-capped
+2. Bulgarian split squat — single-leg, doubles as hip-flexion strength
+3. Pallof press — trunk, superset with #2
+4. Banded march — hip-flexion endurance, superset with #5
+5. Pull-up / lat pulldown — upper pull
+6. DB shoulder press or push-up — upper push *(new addition — upper body was too thin)*
+
+**Session B**
+1. Reactive — fresh, before the anchor: Level 1 isometric seated calf holds → Level 2 if two clean sessions
+2. Anchor — Conventional deadlift (odd weeks) / Trap-bar deadlift (even weeks), straps on top sets
+3. Calf, heavy slow — bent-knee and straight-knee
+4. Bench or DB press — upper push, superset with #3
+5. Copenhagen plank (odd weeks) / Nordic curl (even weeks) — superset with #6
+6. Barbell row or single-arm DB row — upper pull
+
+6 things a session either way, not counting warm-up/cool-down. Upper push and pull now run
+once per session (2×/week each) instead of once a week total — bumped after Jack flagged
+upper body needs more attention (`training-model.md` §6, Tier 2).
 
 Copenhagen plank is the block's one genuinely new lift (never trained, best-evidenced
 adductor exercise, `references/evidence-gym-pool.md`). Trap-bar directly tests the known
