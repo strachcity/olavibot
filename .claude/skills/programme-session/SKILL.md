@@ -25,8 +25,11 @@ One session, planned so it fits the model, the block, and the last fortnight.
 - **Time available**
 - **How the Achilles felt on first steps this morning** (0–10)
 
-If any are missing, ask for them in one short message. If Jack wants the session now,
-state your assumptions and plan anyway.
+Never ask Jack for these — he won't answer a checklist before a session **[stated,
+2026-09-21]**. Take what he volunteers; otherwise default and say so in the intro line:
+gym from the active block's plan for that session, time from the block's standard session
+length (§6 session shape, 45–75 min), Achilles assumed fine/unflagged. If he flags a concern
+after the fact, that's a `review-training` correction, not a re-ask here.
 
 ## 3. Decide
 

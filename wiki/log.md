@@ -333,3 +333,10 @@ of the constraint, not deliberate.
 
 Also noted: a run can split around a gym session (run there, lift, run back) or get longer —
 no format change needed, each leg just logs as its own entry on the same date.
+
+## [2026-09-21] model | Stop asking gym/time/Achilles before a session
+Jack won't answer a pre-session checklist either — same pattern as the earlier run-logging
+fix. Fixed `programme-session`: gym, time and Achilles status now default from the active
+block and session shape rather than being asked, with the default stated in the intro line.
+Take what he volunteers; a flagged concern after the fact is a `review-training` correction,
+not a re-ask.
