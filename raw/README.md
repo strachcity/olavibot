@@ -11,7 +11,22 @@ Immutable sources. Add files; never edit or delete them.
 | `history/chatgpt-coaching-2025-2026.md` | ChatGPT coaching conversation, Oct 2025 → Jul 2026 |
 | `history/gym-log-to-2026-09.md` | Export of the Google Drive gym log, up to migration |
 
-Strava is live via MCP and doesn't need exporting.
+Strava is live via MCP and doesn't need exporting. The compiled multi-year view lives in
+`wiki/strava-history.md` — derived, regenerated, never hand-edited.
+
+## Status: sources pending
+
+**`raw/` is empty, and the wiki was seeded before it.** The pages in `wiki/references/` say
+they were compiled from the reports above, and `wiki/athlete.md` tags its strength numbers
+`[data: gym log]` — but neither source is here yet. Those tags are unverifiable until the
+files land.
+
+The wiki's real source at seeding was a claude.ai conversation covering three years of Strava,
+the Drive gym log, the ChatGPT history and two research passes. Worth exporting that here too.
+
+This is a live exception to the rule in `CLAUDE.md` — *if you can't source a claim, don't write
+it.* Treat the seeded pages as provisional: check them against the raw files when those arrive,
+and flag contradictions rather than quietly resolving them.
 
 The compiled, tagged versions of the research live in `wiki/references/`. When they
 disagree with the raw reports, the raw reports win.

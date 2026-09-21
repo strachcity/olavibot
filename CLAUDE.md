@@ -23,6 +23,13 @@ Start every task by reading `wiki/index.md`. It lists every page and what it's f
 Strava is a live source (Strava MCP). Don't copy raw activity data into the wiki — it's
 re-queryable. File what the data *shows*, tagged `[data]`, with the date range it covers.
 
+Two exceptions and one fallback:
+- The multi-year picture is expensive to re-derive every session, so the compiled summary
+  lives in `wiki/strava-history.md`. It is derived, not raw — regenerate it, never hand-edit.
+- A single activity that changes a decision can be quoted in the log entry for that session.
+- **If Strava is unavailable**, don't stall. Plan from `wiki/log.md`, say plainly that the
+  running data is stale and give the date of the last entry you trusted.
+
 ---
 
 ## Provenance — the rule that keeps this honest
@@ -85,7 +92,9 @@ physio. Don't diagnose.
 | Plan a week or block | `plan-training` | `wiki/blocks/` |
 | Log and review a session | `review-training` | `wiki/log.md`, `wiki/observations.md` |
 | Review a block (lint) | `review-training` | `wiki/blocks/`, `wiki/observations.md`, `wiki/index.md` |
+| Run the test battery | `review-training` | `wiki/tests.md`, `wiki/log.md` |
 | Ingest a new source | — | `raw/` then relevant wiki pages |
+| Say where things stand | — | nothing |
 | Answer a question | — | nothing, unless the answer is worth filing |
 
 **Ingest.** New source lands in `raw/`. Read it, tell Jack the takeaways, update the pages it
@@ -94,6 +103,10 @@ touches, tag everything, log it.
 **Filing answers.** If a question produces a genuinely useful analysis, offer to file it as a
 wiki page. Don't file by default.
 
+**Where things stand.** Entry state in six lines: weekly volume and runs over the last 14 days,
+gym sessions, Achilles trend, current Reactive level, active block and week number, anything
+overdue. Read it from the log and Strava. Write nothing.
+
 **After every operation that changes the wiki:** update `wiki/index.md` if pages were added,
 append to `wiki/log.md`, and commit.
 
@@ -101,7 +114,12 @@ append to `wiki/log.md`, and commit.
 
 ## Log format
 
-`wiki/log.md` is append-only. Every entry starts with a parseable header:
+`wiki/log.md` is append-only. **Append-only means entries are never reordered, rewritten or
+deleted.** Amending a field that was explicitly recorded as `pending` inside an existing entry
+— the next-morning Achilles score, usually — is allowed and expected. Nothing else gets edited
+after the fact; a correction is a new entry that references the old one.
+
+Every entry starts with a parseable header:
 
 ```
 ## [YYYY-MM-DD] type | title
@@ -110,7 +128,29 @@ append to `wiki/log.md`, and commit.
 Types: `run`, `gym`, `rest`, `test`, `review`, `block`, `ingest`, `model`.
 `grep "^## \[" wiki/log.md | tail -10` should always give a clean recent history.
 
-Session entry template is in `.claude/skills/review-training/SKILL.md`.
+### Metrics block
+
+`run`, `gym` and `rest` entries carry a fenced `yaml` block immediately after the header, before
+any prose. This is what makes block reviews arithmetic rather than impression. Every field is
+either a number, one of the listed words, or `pending`. Never prose, never a range.
+
+```yaml
+planned: yes          # yes | no | partial — drives adherence %
+rpe: 7                # 1-10
+enjoyment: 4          # 1-5
+achilles_during: 2    # 0-10
+achilles_next_am: pending   # 0-10 | pending
+beyond_plan: none     # none | a short phrase, no commas
+duration_min: 62
+```
+
+`run` adds `distance_km`, `avg_pace` (m:ss), and `run_type` (easy | long | threshold | speed |
+strides | race). `gym` adds `gym` (full | flat), `session` (A | B) and `reactive_level` (0-5).
+
+Omit a field you genuinely don't have rather than guessing it. `scripts/log-metrics.py` reads
+these blocks — run it for block reviews instead of eyeballing the log.
+
+Full session entry template is in `.claude/skills/review-training/SKILL.md`.
 
 ---
 

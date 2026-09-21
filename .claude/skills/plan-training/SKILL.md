@@ -15,13 +15,20 @@ model is built around; weeks are drawn from it.
 3. The previous block file in `wiki/blocks/`, including its review.
 4. `wiki/log.md` since that block started.
 5. Strava (MCP): last 4–6 weeks — actual weekly volume, run count, longest run, pace spread.
-6. `wiki/references/` only where a decision needs evidence.
+   For the multi-year view use `wiki/strava-history.md` rather than re-deriving it; refresh
+   that page if it's stale. **If Strava is unavailable**, plan from the log and say so.
+6. `wiki/tests.md` — the latest column. It sets the Reactive level he's actually cleared for.
+7. `wiki/references/` only where a decision needs evidence.
 
 ## 2. Establish the entry state
 
 Write it down, tagged: weekly volume, runs per week, gym sessions per week, Achilles trend,
 current Reactive level, latest test results. Plan from what he's **actually doing**, not from
 the previous plan.
+
+`scripts/log-metrics.py --since <date>` gives the adherence, enjoyment and Achilles trend for
+the period. The entry state belongs in the block file — never write it back into
+`training-model.md`, which holds the shape of a phase, not where he is in it.
 
 ## 3. Draft the block
 
@@ -33,7 +40,8 @@ Use the template in `wiki/blocks/README.md`. Decide, with a reason for each:
 - **Gym:** for Session A and B, fill every slot from the pools in §6. Pick a genuinely
   different selection from the last block for the accessories. Keep anchors. Allow one new
   lift if there's appetite. Set the Tier 2 fortnightly rotation.
-- **Reactive:** the level he's cleared for, and the condition for moving up.
+- **Reactive:** the level he's cleared for **per `wiki/tests.md`**, and the condition for
+  moving up. Don't clear Level 4 without a seated calf raise ≥1× bodyweight on record.
 - **Ceilings** for key sessions.
 - **1–2 hypotheses** from `observations.md` this block will test, and how.
 - **Triggers** that change the plan.
@@ -44,6 +52,7 @@ Use the template in `wiki/blocks/README.md`. Decide, with a reason for each:
 - Is only one variable rising?
 - Would this feel good to do? If the honest answer is "it's a grind", change it.
 - Does it fit a busy work week? Name the maintenance-floor version.
+- Is any current-state number in here copied from the last block rather than from the log?
 
 ## 5. Agree, then write
 

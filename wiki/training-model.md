@@ -239,13 +239,17 @@ heel and toe walks.
 Plyometrics are high-yield and the main risk to the Achilles. He has to earn each level.
 Progress only after two good sessions at the current one. **[W, small study]**
 
-| Level | Entry condition | Work |
+| Level | Where he is | Work |
 |---|---|---|
-| 1 | Daily-life pain >3/10 | Isometric seated calf holds only |
-| 2 | Pain <3/10 | Standing and seated calf raises, hip work. Pogos/skipping in warm-up |
-| 3 | Pain <3/10, 20 double-leg jumps tolerated | Double-leg jumps, stiff-knee jumps, box jumps |
-| 4 | Pain <3/10, 10 single-leg hops tolerated, **seated calf raise ≥1× bodyweight** | Single-leg hops, bounding, lateral bounds |
+| 1 | Daily-life pain **>2/10** — too irritable for reactive work | Isometric seated calf holds only |
+| 2 | Daily-life pain **≤2/10** | Standing and seated calf raises, hip work. Pogos/skipping in warm-up |
+| 3 | Level 2 solid, 20 double-leg jumps tolerated | Double-leg jumps, stiff-knee jumps, box jumps |
+| 4 | Level 3 solid, 10 single-leg hops tolerated, **seated calf raise ≥1× bodyweight** (`tests.md`) | Single-leg hops, bounding, lateral bounds |
 | 5 | Level 4 solid for several weeks | Depth drops |
+
+Two thresholds, and they're different things: **daily-life pain ≤2/10** is what admits him to
+reactive work at all, and **pain during hopping ≤3/10** is the ceiling within a session.
+Both from `references/evidence-gym-pool.md` **[W]**.
 
 Start around 40–60 low-amplitude contacts per session. Increase hop speed before height or
 volume. Do reactive work fresh, early in the session, and keep it 48–72 hours from hard running
@@ -255,7 +259,7 @@ and heavy calf work.
 
 4–6 weeks, each with a stated emphasis.
 
-- **Foundations** (now → ~6 weeks) — learn the new movements, calf and hip flexion capacity,
+- **Foundations** (weeks 0–6) — learn the new movements, calf and hip flexion capacity,
   Reactive Level 1–2.
 - **Strength** (~6–12 weeks) — heavier anchors, loaded hip flexion, Reactive Level 3 if earned.
 - **Power** (~12–18 weeks) — Reactive Level 4 if earned, lighter faster lifting.
@@ -306,8 +310,9 @@ of what fixed his knee, it takes ten minutes, and he'll actually do it.*
 
 ## 9. Phases
 
-**Phase A — Routine and capacity (now → ~12 weeks)**
-Currently ~19km/week across 3 runs.
+**Phase A — Routine and capacity (~12 weeks)**
+*Entry state belongs to the active block in `wiki/blocks/`, not here. This page holds the
+shape of a phase; the block holds where he actually is.*
 - Build to 4–5 runs. Volume 20 → 40km.
 - All easy, plus strides from week 3. No threshold for ~6 weeks.
 - Gym twice weekly from week one, full coverage grid, loads conservative while learning
@@ -356,6 +361,9 @@ Triggered only when a marathon is booked.
 "Better all-round athlete" needs to be measurable, or it becomes a feeling. Retest at the end
 of each block. Track the trend, not single results.
 
+**Protocols and results live in `wiki/tests.md`.** The table below is the what; that page is
+the how, and it holds every result. Baseline is not yet done (§13).
+
 | Capacity | Test |
 |---|---|
 | Aerobic | Easy-run pace at a fixed heart rate |
@@ -373,8 +381,15 @@ of each block. Track the trend, not single results.
 
 ## 13. Open questions
 
-- **Baseline tests** (§12) — not yet done.
-- **Heel prominence** — one side feels bigger; physio look when convenient.
+- **The Achilles has never been formally diagnosed** `[stated]`, and it matters more than it
+  looks. Mid-portion tolerates full dorsiflexion loading; insertional doesn't, and heel drops
+  off a step can aggravate it **[W]**. This whole calf plan assumes mid-portion on the strength
+  of where Jack reports the symptoms — 2–6cm above the heel `[stated]`. Symptoms are 9+ months
+  recurrent. An in-person assessment would confirm the assumption and rule out the differentials
+  in `references/evidence-achilles-load.md` (Haglund's, plantaris, posterior tibialis, bone
+  stress). Most riding on this of anything in this list.
+- **Baseline tests** (§12) — not yet done. See `tests.md`.
+- **Heel prominence** — one side feels bigger. Same appointment as the above.
 - **Which backyard event and when** — sets Phase C.
 - **Olavi.** He lifts meaningfully heavier with a trainer present (squat 3×110kg vs 100kg
   solo, deadlift 6×100kg vs 8×80kg).

@@ -15,7 +15,9 @@ One session, planned so it fits the model, the block, and the last fortnight.
    that a block should be planned soon.
 3. Recent history: `grep "^## \[" wiki/log.md | tail -14`, then read the last few gym and
    run entries in full. Check the **Tier 2 fortnightly rotation** — what was done last week.
-4. Strava (MCP): the last 7–10 days of activities, for actual running load.
+4. Strava (MCP): the last 7–10 days of activities, for actual running load. **If Strava is
+   unavailable**, plan from the log instead — say the running data is stale, give the date of
+   the last entry you trusted, and be more conservative than usual with volume.
 
 ## 2. Know three things before planning
 
@@ -74,5 +76,7 @@ Then always, in two lines:
 - Don't write to the wiki. The session gets logged afterwards by `review-training`.
 - Loads come from the log, not guesses. If there's no recent number for a lift, prescribe by
   RPE and say so.
+- Reactive work is gated on `wiki/tests.md`, not on how he feels. Level 4 needs a seated calf
+  raise ≥1× bodyweight on record. No result on record means not cleared.
 - A new movement gets a conservative load and a one-line technique cue.
 - Evidence questions → cite `wiki/references/` with the grade. Don't pad sessions with it.

@@ -5,14 +5,16 @@ description: Log and review Jack's completed training — a single session, or a
 
 # Review training
 
-Two modes. Work out which one Jack wants.
+Three modes. Work out which one Jack wants.
 
 ---
 
 ## Mode 1 — Log and review a session
 
 ### Gather
-- Strava (MCP) for the activity if it's a run or it's recorded there.
+- Strava (MCP) for the activity if it's a run or it's recorded there. If Strava is down or the
+  activity isn't there, log what Jack reports and mark the Done line `[stated]` rather than
+  waiting for data.
 - The session plan, if one was made this conversation, and the active block.
 - From Jack, only what isn't already known. Ask in **one** message:
   - RPE (1–10) and **enjoyment (1–5)**
@@ -20,21 +22,47 @@ Two modes. Work out which one Jack wants.
   - Anything done beyond the plan — and why
 
 ### Write the log entry
-Append to `wiki/log.md`:
+Append to `wiki/log.md`. Header, then the metrics block, then prose. The metrics block is what
+makes block reviews arithmetic instead of impression — see `CLAUDE.md` for the field list.
 
-```
+**Gym:**
+
+````
 ## [YYYY-MM-DD] gym | Session A — <block> wk<n> (<full|flat> gym)
+```yaml
+planned: yes          # yes | no | partial
+rpe: 7
+enjoyment: 4
+achilles_during: 2
+achilles_next_am: pending
+beyond_plan: none     # none | short phrase, no commas
+duration_min: 62
+gym: full
+session: A
+reactive_level: 2
+```
 - Planned: <one line>
-- Done: <exercises × sets × reps @ load, or distance / time / pace / HR>
+- Done: <exercises × sets × reps @ load>
 - Beyond plan: none | <what> — <why>
-- RPE: x/10 · Enjoyment: x/5
-- Achilles: during x/10 · next morning x/10 (or "pending")
 - Capacity: <what he could do today that he couldn't recently, if anything>
 - Review: <2–4 lines>
-```
+````
 
-For a run, swap the header type to `run` and the Done line to running data.
-When Jack later reports the next-morning Achilles score, edit that line in place.
+**Run:** same shape, header type `run`, and swap the last three yaml fields for `distance_km`,
+`avg_pace` (m:ss) and `run_type` (easy | long | threshold | speed | strides | race). The Done
+line carries distance / time / pace / HR.
+
+`beyond_plan` appears twice on purpose: the short phrase in the block so it can be counted, the
+*why* in the prose line because that's the part that's useful.
+
+Fields you don't have, omit. Never guess a number into the block — an invented RPE becomes
+`[data]` in a review three months later.
+
+**The one permitted edit.** When Jack later reports the next-morning Achilles score, change
+`achilles_next_am: pending` to the number, in place, in the existing entry. Append-only forbids
+reordering, rewriting and deleting entries; resolving a field explicitly recorded as `pending`
+is the exception. Anything else that turns out wrong gets a **new** entry referencing the old
+one — don't quietly rewrite history.
 
 ### The review (2–4 lines)
 Critical and useful, not cheerleading.
@@ -58,9 +86,16 @@ Commit: `gym: …` or `run: …`.
 At the end of a block, or when Jack asks whether he's improving.
 
 ### Review the block
-Fill the Review section of the block file:
+
+Run `scripts/log-metrics.py --since <block start> --until <block end>` first. It gives
+adherence, enjoyment and RPE means, the Achilles trend, the beyond-plan count with dates, and
+total distance. **Use its numbers.** Reading a block's worth of prose and estimating is how
+`[inferred]` ends up tagged `[data]`.
+
+Then fill the Review section of the block file:
 - Planned vs done: sessions, volume, adherence %
-- Tests from `training-model.md` §12 vs last block — trend, not single numbers
+- Tests: run the battery (Mode 3), then compare the new column in `wiki/tests.md` with the
+  previous one — trend, not single numbers
 - Enjoyment average and the lowest-scoring sessions — what made them bad?
 - Beyond-plan count and what drove it
 - Achilles trend across the block
@@ -82,6 +117,30 @@ Changes to `training-model.md` need Jack's explicit agreement. Log them as `mode
 
 Set the block status to `reviewed`, append a `review` entry to the log, commit, then hand
 over to `plan-training` for the next block.
+
+---
+
+---
+
+## Mode 3 — Test day
+
+At the end of a block, before planning the next one. `wiki/tests.md` holds the protocols and
+every past result.
+
+- Run it **exactly** as that page specifies. A test done differently is a new test, not a trend.
+- Split it over two sessions in the same week if it's long. Don't test on the back of a hard
+  session, and note anything that would have affected the result.
+- Record both sides wherever the test has sides.
+- Two results are gates, not information: **seated calf raise vs bodyweight** (below 1.0× blocks
+  Reactive Level 4) and **heel-raise limb symmetry** (target ≥80–90%, judged on work and height,
+  not reps alone). If either fails, say so plainly and carry it into `plan-training`.
+- The behaviour test is the over-ceiling count from `scripts/log-metrics.py`, not a guess.
+
+Fill the new column in `wiki/tests.md`, append a `test` entry to `wiki/log.md` with anything
+that qualifies the results, commit as `test: …`.
+
+If baseline hasn't been done, this **is** the baseline — say so, and don't compare it to
+anything.
 
 ---
 

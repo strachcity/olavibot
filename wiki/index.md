@@ -9,6 +9,14 @@ Read this first. Every wiki page, one line each.
 | [athlete.md](athlete.md) | Who Jack is as an athlete: race history, backyards, injuries, strength, constraints |
 | [observations.md](observations.md) | Learnings and patterns, tagged by provenance. Includes refuted claims |
 | [log.md](log.md) | Append-only record of every session, review, ingest and model change |
+| [tests.md](tests.md) | The §12 battery: protocols, and every result over time. Baseline pending |
+
+## Derived
+Regenerated from a source, never hand-edited.
+
+| Page | What it's for |
+|---|---|
+| [strava-history.md](strava-history.md) | The multi-year Strava picture: volume, pace distribution, long runs, gaps |
 
 ## Blocks
 | Page | What it's for |
@@ -22,5 +30,9 @@ Read this first. Every wiki page, one line each.
 | [references/evidence-endurance-structure.md](references/evidence-endurance-structure.md) | Intensity distribution, threshold, volume, long runs, periodisation, taper, ultra transfer |
 | [references/evidence-gym-pool.md](references/evidence-gym-pool.md) | Exercise selection, hip flexion, reactive progression, lateral/adductor, upper body, variation |
 
+## Tools
+`scripts/log-metrics.py` — totals the metrics blocks in `log.md`. Use it for block reviews
+instead of reading the log by eye.
+
 ## Open questions
-Live list in `training-model.md` §13.
+Live list in `training-model.md` §13. The undiagnosed Achilles is the one that matters most.
