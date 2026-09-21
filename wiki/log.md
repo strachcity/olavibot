@@ -296,3 +296,25 @@ section run-by-run against the existing easy pace band (5:30–6:00/km, `trainin
 Also widened the block's Emphasis: Jack wants Foundations read as a test of commitment,
 schedule and routine too, not just the anchor/upper-body physical changes — what he actually
 does or adds beyond the plan is data for block review, not noise `[stated, 2026-09-21]`.
+
+## [2026-09-21] model | Stop asking RPE/enjoyment/Achilles per run
+Jack won't answer a 3-question checklist for every standard run — flagged as never going to
+happen. Fixed `review-training`: a run logs straight from Strava, subjective fields omitted
+unless he volunteers them or flags a concern. That's what "omit what you don't have" already
+meant; the skill was asking anyway. Gym still needs his own words (Strava has no exercise
+detail) but takes what he gives rather than running the checklist after it.
+
+## [2026-09-21] run | Easy — Foundations wk1
+```yaml
+planned: yes
+duration_min: 40
+distance_km: 6.92
+avg_pace: 5:50
+run_type: easy
+```
+- Planned: Week 1 easy run, 5–6km @ 5:30–6:00/km (`blocks/2026-09-foundations.md`)
+- Done: 6.92km, 40:24 moving, avg pace 5:50/km, avg HR 140 (max 157), 75m elevation
+  `[data, Strava activity 20270813370]`
+- Beyond plan: none — distance and pace both land inside the plan
+- Review: On target for week 1. Pace sits at the slow end of the easy band, right where it
+  should for a rebuild week.

@@ -16,10 +16,14 @@ Three modes. Work out which one Jack wants.
   activity isn't there, log what Jack reports and mark the Done line `[stated]` rather than
   waiting for data.
 - The session plan, if one was made this conversation, and the active block.
-- From Jack, only what isn't already known. Ask in **one** message:
-  - RPE (1–10) and **enjoyment (1–5)**
-  - Achilles: during (0–10); next-morning score can be added later
-  - Anything done beyond the plan — and why
+- **Don't interrogate a standard run.** Jack won't answer an RPE/enjoyment/Achilles checklist
+  per run, and asking anyway wastes his patience — `[stated, 2026-09-21]`. Log a run straight
+  from Strava (distance, pace, duration, date). Omit `rpe`, `enjoyment`, `achilles_during` if
+  he hasn't volunteered them — that's already what "omit what you don't have" below means, so
+  stop short of asking. If he flags a concern (pain, missed the plan, something felt off), log
+  that detail and follow up on it specifically — that's the exception, not the default.
+- Gym still needs his own words — Strava doesn't capture exercises or loads — but take what
+  he gives you in passing rather than running a fixed set of questions after it.
 
 ### Write the log entry
 Append to `wiki/log.md`. Header, then the metrics block, then prose. The metrics block is what
