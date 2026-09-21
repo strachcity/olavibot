@@ -4,7 +4,11 @@ Dates: 2026-09-21 → 2026-11-01 (6 weeks)  ·  Phase: A  ·  Status: active
 ## Emphasis
 Re-establish running frequency and relearn the gym movements after the backyard/Achilles
 episode and Sydney marathon, while empirically finding the squat and deadlift variant that
-works best — one variable this block: the gym anchor. No threshold running yet.
+works best — one physical variable this block: the gym anchor. No threshold running yet.
+
+This block also doubles as a test of commitment, schedule and routine. What Jack actually
+does — sessions kept as written, sessions changed, exercises added beyond the plan — is data
+to read at block review, not noise to correct for `[stated, 2026-09-21]`.
 
 ## Entry state
 - Running: 18.8km/wk, 1.5 runs/wk over the last 4 weeks `[data, Strava, to 2026-09-21]` —
@@ -17,16 +21,38 @@ works best — one variable this block: the gym anchor. No threshold running yet
 
 ## Running
 No threshold this block — per `training-model.md` §9, Phase A holds no threshold for the
-first ~6 weeks; it returns at week 6 as the test.
+first ~6 weeks; it returns at week 6 as the test. Easy pace band throughout:
+**5:30–6:00/km or slower, conversational, RPE ≤4** (`training-model.md` §4). Numbers below
+are targets, ±1km either way — the ceiling is what matters, not hitting the number exactly.
 
-| Week | Runs | km | Notes |
-|---|---|---|---|
-| 1 | 3 | 18–20 | all easy, continue current shape |
-| 2 | 3 | 20–22 | strides ×2 after easy runs |
-| 3 | 4 | 22–25 | add the 4th run |
-| 4 | 4 | 24–26 | hold if Achilles flat |
-| 5 | 4 | 25–28 | long run extends |
-| 6 | 3 | cutback ~15 | test week: 3×10min threshold (reintroduction + baseline), 5k, rest easy |
+| Week | Run | Distance | Pace | Notes |
+|---|---|---|---|---|
+| 1 | Easy 1 | 5km | 5:30–6:00/km | |
+| 1 | Easy 2 | 6km | 5:30–6:00/km | |
+| 1 | Long | 8km | 5:30–6:00/km or slower | terrain varied if convenient |
+| 2 | Easy 1 | 5km | 5:30–6:00/km | + strides, 4–6×20s relaxed-fast |
+| 2 | Easy 2 | 6km | 5:30–6:00/km | |
+| 2 | Long | 10km | 5:30–6:00/km or slower | |
+| 3 | Easy 1 | 5km | 5:30–6:00/km | + strides |
+| 3 | Easy 2 | 5km | 5:30–6:00/km | the new, 4th run |
+| 3 | Easy 3 | 6km | 5:30–6:00/km | + strides |
+| 3 | Long | 8km | 5:30–6:00/km or slower | |
+| 4 | Easy 1 | 6km | 5:30–6:00/km | + strides |
+| 4 | Easy 2 | 5km | 5:30–6:00/km | |
+| 4 | Easy 3 | 6km | 5:30–6:00/km | + strides |
+| 4 | Long | 9km | 5:30–6:00/km or slower | hold — don't extend yet |
+| 5 | Easy 1 | 5km | 5:30–6:00/km | + strides |
+| 5 | Easy 2 | 5km | 5:30–6:00/km | |
+| 5 | Easy 3 | 6km | 5:30–6:00/km | + strides |
+| 5 | Long | 11km | 5:30–6:00/km or slower | extends |
+| 6 | Easy 1 | 5km | 5:30–6:00/km | cutback |
+| 6 | Easy 2 | 4km | 5:30–6:00/km | cutback |
+| 6 | Test: threshold | 3×10min | just below half-marathon effort, jog 2min between | reintroduces threshold, `tests.md` |
+| 6 | Test: 5k | race effort | | `tests.md` |
+
+The difference between runs: two or three "easy" runs a week hold frequency and are
+interchangeable; the long run is the one that carries duration and terrain, and is the only
+one that changes week to week. Strides ride on easy runs, never the long run.
 
 Ceiling: no 5th run, no second quality session, strides stay strides not a fartlek.
 

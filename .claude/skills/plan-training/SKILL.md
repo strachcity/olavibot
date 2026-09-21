@@ -34,8 +34,10 @@ which holds the shape of a phase, not where he is in it.
 Use the template in `wiki/blocks/README.md`. Decide, with a reason for each:
 
 - **Phase** (§9) and **emphasis** — one sentence.
-- **Running:** weekly volume range, number of runs, the quality session, the long run,
-  strides. Progress one variable only.
+- **Running:** every run in the week gets its own distance and pace, not a weekly total.
+  Name what differs between them (which is the long one, which carries strides, why). Use
+  the pace bands in `training-model.md` §4 (easy: 5:30–6:00/km or slower). Progress one
+  variable only.
 - **Gym:** for Session A and B, fill every slot from the pools in §6. Pick a genuinely
   different selection from the last block for the accessories. Keep anchors. Allow one new
   lift if there's appetite. Set the Tier 2 fortnightly rotation.

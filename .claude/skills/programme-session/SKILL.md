@@ -59,12 +59,14 @@ Short intro line (which session, which gym, why this one today). Then a table.
 
 **Run:**
 
-| Part | What | Target | Ceiling |
-|---|---|---|---|
-| Warm-up | 5 min easy + drills (quality days) | | |
-| Main | … | pace / HR / RPE | stop at … |
-| Strides | 4–6 × 20s (if planned) | relaxed-fast | |
-| Cool-down | … | | |
+| Part | What | Distance | Pace | Ceiling |
+|---|---|---|---|---|
+| Warm-up | 5 min easy + drills (quality days) | | | |
+| Main | … | km | pace / HR / RPE | stop at … |
+| Strides | 4–6 × 20s (if planned) | | relaxed-fast | |
+| Cool-down | … | | | |
+
+Always give a distance, even a range, for the main part — never just "easy run".
 
 Then always, in two lines:
 - **Ceiling:** the point at which he stops, even if it's going well.

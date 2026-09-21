@@ -284,3 +284,15 @@ once a week total — `training-model.md` §6 Tier 2 **[stated, 2026-09-21]**. S
 a push movement to match. Also rewrote both sessions in `blocks/2026-09-foundations.md` as
 plain numbered lists instead of a superset table, so the exercise count is visible — 6 things
 a session either way, not counting warm-up/cool-down.
+
+## [2026-09-21] model | Every run gets a distance and pace, standing rule
+Jack: "all easy" isn't good enough — every run needs how far, what pace, and what's different
+between the runs in a week. Not a one-off fix: added it to `plan-training` and
+`programme-session` skills so all future plans, block or single-session, name distance and
+pace per run rather than a weekly total. Rewrote `blocks/2026-09-foundations.md`'s Running
+section run-by-run against the existing easy pace band (5:30–6:00/km, `training-model.md`
+§4) — no new evidence, just the existing rule applied properly.
+
+Also widened the block's Emphasis: Jack wants Foundations read as a test of commitment,
+schedule and routine too, not just the anchor/upper-body physical changes — what he actually
+does or adds beyond the plan is data for block review, not noise `[stated, 2026-09-21]`.
