@@ -100,8 +100,9 @@ These override session-level optimisation.
    rhythm (§6). Weak links get weighted; nothing gets neglected, and nothing dominates.
    Chasing the last thing that broke is how the next thing breaks.
 3. **Variation is a requirement.** He responds to novelty and learning. Squat and deadlift
-   are fixed anchors. Everything else rotates between blocks, strategically — for a reason,
-   never at random.
+   are fixed anchors — the *pattern*, not necessarily one exercise. A block may rotate the
+   specific variant week to week while establishing what works (§6); everything else rotates
+   between blocks, strategically — for a reason, never at random.
 4. **Every session has a warm-up and a cool-down.** 5–10 minutes each, gym and run.
 5. **Progress one variable at a time.** Volume OR intensity, never both in the same fortnight.
 6. **Easy must be genuinely easy.** Conversational, RPE ≤4, roughly 5:30–6:00/km or slower.
@@ -173,6 +174,13 @@ points.
 |---|---|---|
 | Squat (anchor) | Session A | 3–5 × 3–6, ≥80% 1RM in strength blocks **[W]** |
 | Deadlift (anchor) | Session B | 3–5 × 3–6, straps on top sets **[W]** |
+
+*Anchor normally means one exercise held fixed for the block. During Foundations, or whenever
+the right variant isn't yet known, a block may instead rotate the anchor's variant week to
+week — e.g. back squat vs front squat, conventional vs trap-bar deadlift — logging each, then
+fixing the one that wins at block review. This is systematic variation with a stated reason
+(finding the anchor), not the random variation the evidence warns against **[W]**
+(`references/evidence-gym-pool.md`).*
 | Calf — heavy slow | Both | 3–4 × 6–12, bent-knee AND straight-knee **[W]** |
 | Hip flexion | Both | One strength slot + one endurance slot per week **[I]** |
 | Single-leg strength | Session A | 2 exercises per block **[W]** |
