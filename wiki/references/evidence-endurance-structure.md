@@ -1,0 +1,53 @@
+# Evidence: endurance structure and the marathon build
+
+Compiled from `raw/research/01-achilles-and-endurance-structure.md` (Part Two).
+Grades: **W** · **I** · **H**. Raw report wins on disagreement.
+
+## Intensity distribution
+- Grey-zone clustering is the least productive distribution. **W**
+- Fast recreational marathoners run pyramidal: large easy base, moderate threshold, little
+  high intensity. In a 119k-runner dataset, the fastest did ~80% easy vs 50–60% for typical
+  runners. Easy volume is the strongest differentiator. **W** (Muniz-Pumares 2024)
+- Polarised vs pyramidal: unresolved. Both beat threshold-clustered. **W**
+- Controlling easy without lactate: talk test (best), HR below ~75–80% max, RPE ≤3–4. **W/I**
+
+## Threshold vs short intervals
+- Marathon performance is governed by sustainable fraction of VO2max, set largely by lactate
+  threshold. Threshold work trains it directly. **W**
+- Short 400/800 work builds VO2max and speed but is further from marathon specificity. **I**
+- His own data: shift to longer threshold reps coincided with 3:24 → 3:11. Single case,
+  consistent with the physiology. **I**
+
+## Volume
+- Weekly mileage + mean training pace explained ~77% of marathon time variance in
+  recreational runners; diminishing returns above ~65km/wk in that sample. **W** (Tanda 2011,
+  small n)
+- Sub-3 runners typically peak ~90–115km/wk across a 12–16 week build. **H**
+- Tension: sub-3 volume vs a recurrent Achilles. Build tendon capacity and easy base first. **I**
+
+## Long runs
+- ~2–2.5h, 25–35km, ~25–30% of weekly volume. **I**
+- The 3-hour cap is a heuristic, not a threshold. **H**
+- Marathon-pace segments and fast finishes add more than extra distance. **I**
+
+## Strength for economy
+- Heavy resistance (≥80% 1RM), multi-joint free weights, 2–6 × 3–10, plus plyometrics.
+  Small but real economy gains (~2–8%). **W**
+- ~60 min/wk of focused S&C, 2×/wk, is enough. Maintenance on 1 heavy session/wk. **W/I**
+- Develop strength in base, shift to reactive and maintenance in the specific phase, reduce
+  volume not intensity in the taper. **I**
+
+## Periodisation without a race date
+- Permanent base (~50–70km/wk, mostly easy, 1 threshold, 1 long, 2× gym) keeps him 12–16
+  weeks from race-ready. **I**
+- 12–16 weeks can sharpen threshold, build MP fitness, dial fuelling, taper. It can't build
+  a base or tendon capacity from scratch. **I**
+
+## Taper
+- Cut volume 41–60%, hold intensity and frequency, ~2 weeks (2.5–3 for marathon). ~2–3%
+  performance gain. Cutting >60% is counter-productive. **W** (Bosquet 2007)
+
+## Transfer to the backyard
+- Marathon base transfers substantially. The backyard limiter is musculoskeletal durability
+  and transitions, not VO2max. **I**
+- Time on feet, back-to-back long days, lower-limb capacity, rehearsed restarts. **I**

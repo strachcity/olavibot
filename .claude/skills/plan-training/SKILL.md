@@ -1,0 +1,68 @@
+---
+name: plan-training
+description: Plan Jack's training week or a 4–6 week training block — running shape, gym sessions and exercise selection, rotations, ceilings and triggers — and write the agreed plan to the wiki. Use this whenever Jack asks to plan the week, plan the next block, start a new phase, or when something changes the plan: a marathon or backyard ultra gets booked, he's travelling, work gets heavy, he's missed a week, an injury flares, or a block has just been reviewed. Also use it when he asks "what should the next few weeks look like?".
+---
+
+# Plan training
+
+Two sizes: a **week** (day by day) and a **block** (4–6 weeks). The block is the unit the
+model is built around; weeks are drawn from it.
+
+## 1. Gather
+
+1. `wiki/training-model.md` — all of it for a block; §4–§7 for a week.
+2. `wiki/athlete.md` and `wiki/observations.md` — especially open hypotheses.
+3. The previous block file in `wiki/blocks/`, including its review.
+4. `wiki/log.md` since that block started.
+5. Strava (MCP): last 4–6 weeks — actual weekly volume, run count, longest run, pace spread.
+6. `wiki/references/` only where a decision needs evidence.
+
+## 2. Establish the entry state
+
+Write it down, tagged: weekly volume, runs per week, gym sessions per week, Achilles trend,
+current Reactive level, latest test results. Plan from what he's **actually doing**, not from
+the previous plan.
+
+## 3. Draft the block
+
+Use the template in `wiki/blocks/README.md`. Decide, with a reason for each:
+
+- **Phase** (§9) and **emphasis** — one sentence.
+- **Running:** weekly volume range, number of runs, the quality session, the long run,
+  strides. Progress one variable only.
+- **Gym:** for Session A and B, fill every slot from the pools in §6. Pick a genuinely
+  different selection from the last block for the accessories. Keep anchors. Allow one new
+  lift if there's appetite. Set the Tier 2 fortnightly rotation.
+- **Reactive:** the level he's cleared for, and the condition for moving up.
+- **Ceilings** for key sessions.
+- **1–2 hypotheses** from `observations.md` this block will test, and how.
+- **Triggers** that change the plan.
+
+## 4. Check it before showing it
+
+- Does every capacity appear on its weekly or fortnightly rhythm?
+- Is only one variable rising?
+- Would this feel good to do? If the honest answer is "it's a grind", change it.
+- Does it fit a busy work week? Name the maintenance-floor version.
+
+## 5. Agree, then write
+
+Show Jack the plan concisely. Accept his changes. **Only then** write
+`wiki/blocks/YYYY-MM-name.md` with status `active`, set the previous block to `reviewed`,
+update `wiki/index.md`, append a `block` entry to `wiki/log.md`, and commit.
+
+## Weekly plans
+
+Day-by-day table: day, session, duration, key detail. Fit it around the week Jack describes.
+Heavy legs away from hard runs. Mark which days are flexible. Weekly plans don't get their own
+file — log a short `block` entry if the week departs from the block.
+
+## Race mode
+
+If a **marathon** is booked: race mode (§10) temporarily renegotiates the enjoyment
+constraint. Ask Jack explicitly whether he agrees before planning it. Check the entry
+condition (tolerating base volume pain-free). If not met, say so and propose running it as
+a day out.
+
+If a **backyard** date is set: count back 12 weeks to Phase C and say what has to be true
+by then.
