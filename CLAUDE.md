@@ -1,4 +1,4 @@
-# Fitness Brain
+# olavibot
 
 Jack's personal training system: a durable, all-round endurance athlete, a 24-hour backyard
 ultra as the near target, a sub-3 marathon dormant until a race is booked.

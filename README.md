@@ -1,4 +1,4 @@
-# fitness-brain
+# olavibot
 
 Personal training system, maintained with Claude Code.
 

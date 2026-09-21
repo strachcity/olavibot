@@ -10,7 +10,7 @@
 
 Read CLAUDE.md and wiki/index.md first.
 
-1. Initialise git, create a **private** GitHub repo called `fitness-brain`, and push.
+1. Initialise git, create a **private** GitHub repo called `olavibot`, and push.
 2. Check whether the Strava MCP is connected here. If not, tell me how to add it and stop
    until it is.
 3. Ingest the files in `raw/` one at a time, following CLAUDE.md. For each, tell me the
