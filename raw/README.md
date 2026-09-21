@@ -11,6 +11,7 @@ Immutable sources. Add files; never edit or delete them.
 | `history/chatgpt-coaching-2025-2026.md` | ChatGPT coaching conversation, Oct 2025 → Jul 2026 |
 | `history/gym-log-to-2026-09.md` | Export of the Google Drive gym log, up to migration |
 | `research/references.md` | Source-quality accounting for the two research passes — read first |
+| `research/norwegian-method/` | Marius Bakken's articles + the Norwegian Singles guide, see its own README |
 
 Strava is live via MCP and doesn't need exporting. The compiled multi-year view lives in
 `wiki/strava-history.md` — derived, regenerated, never hand-edited.
@@ -32,8 +33,13 @@ blogs; everything else was named (author, year, journal) without one and hasn't 
 independently verified. The `[evidence: W/I/H]` grades in `wiki/references/` reflect the
 research tool's own confidence, not outside appraisal — a caveat now stated on all three pages.
 
-**Still pending:** the Norwegian Method material (Marius Bakken) — Jack intends to add it.
-Nothing about it belongs in the wiki until it lands; don't infer or summarise it from memory.
+**Landed 21 Sep 2026:** the Norwegian Method material (Marius Bakken's four articles plus
+the Norwegian Singles guide) — see `research/norwegian-method/README.md` for what's real and
+what's anecdote, including a live dispute over Bakken's claimed influence on the Ingebrigtsen
+system. Compiled to `wiki/references/evidence-norwegian-method.md`.
+
+**Still pending:** nothing from the original SETUP.md list. Future sources land here the same
+way.
 
 This is a live exception to the rule in `CLAUDE.md` — *if you can't source a claim, don't write
 it.* All four originally-expected files have now landed and were checked against the seeded

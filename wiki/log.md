@@ -206,3 +206,37 @@ presentation" line is general evidence and stays as written — but a note was a
 originally applied to Jack's own case based on partial data, and the fuller picture (confirmed
 with Jack) is a single recent episode, not a multi-year condition. The general evidence isn't
 wrong; it just may not be the evidence that applies here.
+
+## [2026-09-21] ingest | Norwegian Method / double threshold — answered, not applied
+Jack asked how five sources (four Bakken articles, the Norwegian Singles PDF) supplement the
+model. Saved to `raw/research/norwegian-method/`, compiled to
+`wiki/references/evidence-norwegian-method.md`.
+
+**Sourcing is weak and stated as such up front.** Almost entirely one person's first-person
+account of his own training and coaching over 25 years, not a literature review. Two real
+citations inside it: Kjøsen Talsnes et al. 2024 (Frontiers in Physiology, n=14, real) and
+Casado & Bakken 2023 (a review Bakken co-authored, PubMed 36900796). Everything else —
+including the "Golden Zone" lactate figures and the muscle-tone model — is anecdote.
+
+**Flagged prominently: Bakken's central proof chain is disputed.** He credits himself with
+shaping the Ingebrigtsen system; in 2025 he quotes Gjert Ingebrigtsen's sworn court testimony
+denying this outright ("mine and only mine... no one has influenced it"). Neither side
+verified here. Every "this is why the Ingebrigtsens are so good" line in the source should be
+read as contested.
+
+**What applies:** the core mechanism — controlled sub-threshold repeats with jog recoveries,
+bounded by an effort ceiling — is a genuinely useful reframe of the grey-zone problem already
+in `observations.md`: the fix isn't harder or slower, it's *structured* rather than continuous
+at an undefined pace. The Norwegian Singles guide's progression method (change one run, hold
+time flat, don't add a second workout until repeated weeks show recovery) closely matches
+Phase A's approach already, with clearer checks worth borrowing.
+
+**What doesn't apply, and the sources say so themselves:** double threshold. Every population
+it's built for races 5k–10k at 150–220 km/wk. Bakken himself excludes the marathon from the
+tight interval form ("you definitely need more continuous work"); the Singles guide says
+directly that double threshold "is not a default solution" for ultras. Both of Jack's targets
+are the two events these sources exclude.
+
+**Not applied to `training-model.md`.** Whether to rewrite §5's threshold prescription in the
+Singles style (controlled reps, effort ceiling, talk-test cross-check) is flagged as an open
+question for Jack — a design change, not a factual correction, so it needs his say-so first.
