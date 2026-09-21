@@ -30,9 +30,5 @@ Regenerated from a source, never hand-edited.
 | [references/evidence-endurance-structure.md](references/evidence-endurance-structure.md) | Intensity distribution, threshold, volume, long runs, periodisation, taper, ultra transfer |
 | [references/evidence-gym-pool.md](references/evidence-gym-pool.md) | Exercise selection, hip flexion, reactive progression, lateral/adductor, upper body, variation |
 
-## Tools
-`scripts/log-metrics.py` — totals the metrics blocks in `log.md`. Use it for block reviews
-instead of reading the log by eye.
-
 ## Open questions
 Live list in `training-model.md` §13. The undiagnosed Achilles is the one that matters most.

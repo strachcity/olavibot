@@ -87,12 +87,10 @@ At the end of a block, or when Jack asks whether he's improving.
 
 ### Review the block
 
-Run `scripts/log-metrics.py --since <block start> --until <block end>` first. It gives
-adherence, enjoyment and RPE means, the Achilles trend, the beyond-plan count with dates, and
-total distance. **Use its numbers.** Reading a block's worth of prose and estimating is how
-`[inferred]` ends up tagged `[data]`.
+Count the metrics blocks in the log for the period rather than estimating from the prose —
+estimating is how `[inferred]` ends up tagged `[data]`.
 
-Then fill the Review section of the block file:
+Fill the Review section of the block file:
 - Planned vs done: sessions, volume, adherence %
 - Tests: run the battery (Mode 3), then compare the new column in `wiki/tests.md` with the
   previous one — trend, not single numbers
@@ -124,23 +122,14 @@ over to `plan-training` for the next block.
 
 ## Mode 3 — Test day
 
-At the end of a block, before planning the next one. `wiki/tests.md` holds the protocols and
-every past result.
+End of a block, before planning the next. `wiki/tests.md` holds the protocols and results.
+Run it the same way every time, record both sides, and note anything that would have affected
+a result. Two results are gates, not information: seated calf raise ≥1× bodyweight (blocks
+Reactive Level 4) and heel-raise symmetry ≥80–90%. If either fails, carry it into
+`plan-training`.
 
-- Run it **exactly** as that page specifies. A test done differently is a new test, not a trend.
-- Split it over two sessions in the same week if it's long. Don't test on the back of a hard
-  session, and note anything that would have affected the result.
-- Record both sides wherever the test has sides.
-- Two results are gates, not information: **seated calf raise vs bodyweight** (below 1.0× blocks
-  Reactive Level 4) and **heel-raise limb symmetry** (target ≥80–90%, judged on work and height,
-  not reps alone). If either fails, say so plainly and carry it into `plan-training`.
-- The behaviour test is the over-ceiling count from `scripts/log-metrics.py`, not a guess.
-
-Fill the new column in `wiki/tests.md`, append a `test` entry to `wiki/log.md` with anything
-that qualifies the results, commit as `test: …`.
-
-If baseline hasn't been done, this **is** the baseline — say so, and don't compare it to
-anything.
+Fill the new column in `wiki/tests.md`, append a `test` entry to the log, commit as `test: …`.
+If baseline hasn't been done, this **is** the baseline — don't compare it to anything.
 
 ---
 

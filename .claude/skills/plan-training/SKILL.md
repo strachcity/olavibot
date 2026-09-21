@@ -26,9 +26,8 @@ Write it down, tagged: weekly volume, runs per week, gym sessions per week, Achi
 current Reactive level, latest test results. Plan from what he's **actually doing**, not from
 the previous plan.
 
-`scripts/log-metrics.py --since <date>` gives the adherence, enjoyment and Achilles trend for
-the period. The entry state belongs in the block file — never write it back into
-`training-model.md`, which holds the shape of a phase, not where he is in it.
+The entry state belongs in the block file — never write it back into `training-model.md`,
+which holds the shape of a phase, not where he is in it.
 
 ## 3. Draft the block
 

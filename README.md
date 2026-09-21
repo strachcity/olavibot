@@ -8,7 +8,6 @@ is booked.
 - `wiki/` — the living knowledge base. **Start at `wiki/index.md`**
 - `raw/` — immutable sources. Add, never edit
 - `.claude/skills/` — programme a session, plan training, review training
-- `scripts/log-metrics.py` — totals the log's metrics blocks for block reviews
 
 Three layers, after Karpathy's LLM-wiki pattern: immutable sources, a wiki Claude maintains,
 and a schema the two of us change together.

@@ -147,8 +147,8 @@ duration_min: 62
 `run` adds `distance_km`, `avg_pace` (m:ss), and `run_type` (easy | long | threshold | speed |
 strides | race). `gym` adds `gym` (full | flat), `session` (A | B) and `reactive_level` (0-5).
 
-Omit a field you genuinely don't have rather than guessing it. `scripts/log-metrics.py` reads
-these blocks — run it for block reviews instead of eyeballing the log.
+Omit a field you genuinely don't have rather than guessing it. Block reviews count these
+blocks rather than estimating from the prose.
 
 Full session entry template is in `.claude/skills/review-training/SKILL.md`.
 

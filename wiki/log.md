@@ -41,3 +41,34 @@ the loading prescription, and the whole calf plan assumes mid-portion on the str
 `[stated]` symptom location.
 
 No training decisions changed. `[data]`: none of the above is new information about Jack.
+
+## [2026-09-21] model | Trimmed the schema back
+Correction to the entry above: `scripts/log-metrics.py` has been removed. A 150-line script
+to total a log with two entries in it was overbuilt — the LLM-wiki pattern is to keep only the
+essentials and grow through use. Block reviews count the yaml metrics blocks directly; if that
+becomes painful once there's a block's worth of entries, write the script then.
+
+Also cut back: `wiki/tests.md` from a full protocol spec to the gates plus a results table
+(protocol detail gets added as tests actually get run), and `review-training` Mode 3 from a
+section to a paragraph. The yaml metrics block stays — retrofitting it across a few hundred
+entries later is the expensive version.
+
+## [2026-09-21] ingest | Gym log and seven years of Strava
+Two sources landed. `raw/history/gym-log-to-2026-09.md` (from Gym_Log.docx) and the full
+Strava record, compiled to `wiki/strava-history.md` with row data in `raw/history/`.
+
+Strava covers **Aug 2019 → 21 Sep 2026**: 802 runs, 188 gym sessions. Seven years, not three.
+
+Every race and PB in `athlete.md` reconciles exactly against Strava — Valencia 3:24:44,
+Paris 3:27:04, Florence 3:13:20, Sydney 3:42:04, the three backyards, the 5k/10k/HM marks.
+The Florence long-run ladder (24 → 30.6 → 26 → 34km) matches to the kilometre. An independent
+check: Strava's own "bringing up 2k km for the year" note on 15 Dec 2024 against a computed
+2024 total of 2076km.
+
+Headline result — **the grey-zone hypothesis is confirmed and larger than estimated**. Share of
+training time at 4:45–5:15/km: 26% (2023) → 28% (2024) → **56% (2025) → 54% (2026)**. But it
+displaced quality, not easy running: hard work (<4:45) fell 35% → 10% across the same period
+while easy (≥5:30) stayed flat at 16–21%. See `strava-history.md`.
+
+Contradictions found against `athlete.md` and `observations.md` are **flagged, not resolved** —
+awaiting Jack. Listed in the handover for this session; nothing in those pages edited yet.

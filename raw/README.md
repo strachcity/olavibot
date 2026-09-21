@@ -14,12 +14,15 @@ Immutable sources. Add files; never edit or delete them.
 Strava is live via MCP and doesn't need exporting. The compiled multi-year view lives in
 `wiki/strava-history.md` — derived, regenerated, never hand-edited.
 
-## Status: sources pending
+## Status
 
-**`raw/` is empty, and the wiki was seeded before it.** The pages in `wiki/references/` say
-they were compiled from the reports above, and `wiki/athlete.md` tags its strength numbers
-`[data: gym log]` — but neither source is here yet. Those tags are unverifiable until the
-files land.
+**Landed:** the gym log (`history/gym-log-to-2026-09.md`), and the compiled Strava row data
+(`history/strava-*.csv`, derived — regenerable from the Strava MCP, kept here so the numbers
+in `wiki/strava-history.md` can be checked).
+
+**Still pending:** both research reports and the ChatGPT history. The pages in
+`wiki/references/` say they were compiled from those reports, so their `[evidence]` grades
+stay unverifiable until they land.
 
 The wiki's real source at seeding was a claude.ai conversation covering three years of Strava,
 the Drive gym log, the ChatGPT history and two research passes. Worth exporting that here too.
