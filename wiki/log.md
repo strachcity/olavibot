@@ -72,3 +72,36 @@ while easy (≥5:30) stayed flat at 16–21%. See `strava-history.md`.
 
 Contradictions found against `athlete.md` and `observations.md` are **flagged, not resolved** —
 awaiting Jack. Listed in the handover for this session; nothing in those pages edited yet.
+
+## [2026-09-21] model | Six contradictions worked through with Jack
+Resolved one at a time. Three of my six flags were wrong — my error, not the wiki's — from
+comparing the wrong time windows. Recorded here so the mistakes don't get re-made.
+
+1. **Run frequency — no contradiction.** I compared an 8-week average against a one-week
+   snapshot. "~19km/wk over 3 runs" is accurate for the migration week. Added the weekly shape
+   to `strava-history.md` instead: that week follows seven averaging 1.6 runs, so Phase A is
+   re-establishing 3 runs, not building from them.
+2. **Calf history — corrected and downgraded.** Was "never directly trained until Aug 2026
+   `[data: gym log]`". The log's own Olavi notes have calf and tibialis work on 9 May 2026,
+   and exercise-level records only start Jan 2026 — so earlier years are unknown, not empty.
+   Jack: the Florence block included a lot of plyometric work that was never written down.
+   **Also `[stated]`: the Achilles is a recent post-ultra episode, not a historical condition.**
+   Data agrees — volume rose 164 → 280km/month Jan–May 2026 with no sign of management, and
+   the Dec 2025 "heel > ankle pain" run was followed by 13 more runs that month. Cascaded into
+   `training-model.md` §2 and §13; dropped the "9+ months recurrent" framing.
+3. **Florence gym — corrected.** Was "2×/wk for ~14 weeks"; Strava says 22 sessions over
+   14.9 weeks = 1.48/wk. Fixed in `athlete.md` and in the Confirmed line in `observations.md`
+   that cited it. "Clustered" dropped — only three 21-day gaps in three years.
+4. **Flare hypothesis — rewritten.** My earlier claim that volume fell into the flare was a
+   monthly-bucketing artefact. Weekly: 1 → 3 → 4 → 6 → 7 runs/wk and 6 → 43.5km/wk in four
+   weeks. But intensity fell to 0% hard in both peak weeks. Jack's framing: this was backyard
+   recovery, not a training build. Points at a gap — the model has no post-ultra return
+   protocol.
+5. **Squat — corrected** to 100kg × 2 (8 Aug). The 12 Aug single was stopped with reps in
+   reserve, so no lift has a tested max and every `%1RM` prescription is an estimate. Rest of
+   the strength table verified correct against the log.
+6. **Shoulder surgery, spring 2022 — added.** Was missing entirely. 48-day layoff, rehab still
+   logged Oct 2023, explains 2022 being the lowest-volume year. Non-limiting now.
+
+Still open: the grey-zone hypothesis in `observations.md` is unchanged pending Jack's call on
+promoting it.

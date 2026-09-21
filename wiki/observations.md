@@ -7,8 +7,9 @@ confirms them — the block review should test them.
 - Over-enthusiasm is the main training risk, not laziness. Examples: first 3km of a planned
   easy comeback run at 4:15/km; extra reps at 90kg; unplanned load jumps `[stated]` `[data]`
 - Strength training plus stretching fixed the 2024 knee issue `[stated]`
-- Threshold-weighted quality + a real long run + gym 2×/wk produced the only big marathon
-  jump (3:24 → 3:11) `[data]`
+- Threshold-weighted quality + a real long run + gym ~1.5×/wk produced the only big marathon
+  jump (3:24 → 3:11) `[data]`. *Corrected Sep 2026: this said "gym 2×/wk". Strava shows 22
+  sessions across the 15-week build.*
 - Lifts meaningfully heavier with a trainer present `[data]`
 - Faster backyard laps buy more recovery; the slow-lap experiment didn't work `[stated]`
 
@@ -16,8 +17,14 @@ confirms them — the block review should test them.
 - Grey-zone running (4:45–5:15/km) is what capped volume in 2025–26 `[inferred]`
 - The slow lap shuffle plus 19 restarts from standing contributed to hip flexor failure
   `[inferred]`
-- The July 2026 Achilles flare was driven by volume + intensity rising together after the
-  backyard, not the backyard alone `[inferred]`
+- The July 2026 Achilles flare came out of **backyard recovery, not a training build**. Return
+  to running after the 127km went 1 → 3 → 4 → 6 → 7 runs/wk and 6 → 43.5km/wk across four
+  weeks, with **no intensity component** — 0% under 4:45/km in both peak weeks, and nothing
+  faster than 4:37 in the whole six `[data: Strava, 1 Jun – 13 Jul 2026]`. So: a ×2.8
+  single-session spike, then a fast return-to-frequency on a tendon still absorbing it
+  `[inferred]`. *Rewritten Sep 2026; previously read "volume + intensity rising together",
+  which the weekly data contradicts — intensity fell.*
+  → The model has no post-ultra return protocol. That gap is what this points at.
 - Late-ultra fatigue is mostly central, so hip flexor training alone won't fix hour 19
   `[evidence: W]` — applies to him `[inferred]`
 

@@ -43,9 +43,10 @@ genuinely structured marathon block (Florence), and it produced the PB.
 
 ### Weak links (weighted, not exclusive)
 None of these gets its own programme. Each gets extra weight inside a balanced one.
-- **Achilles** — recurrent symptoms, reported mainly 2–6cm above the heel (consistent with
-  mid-portion). Flares when volume and intensity rise together. Calf never directly trained
-  until August 2026.
+- **Achilles** — a single episode following the May 2026 backyard, not a historical condition
+  `[stated]`. Symptoms mainly 2–6cm above the heel (consistent with mid-portion). Pain-free
+  since ~10 Aug 2026. Calf capacity is the presumed gap, but the training history is
+  unrecorded rather than known empty — see `athlete.md`.
 - **Hip flexors** — failed at hour 19 of the 2026 backyard. Could not lift the leg into
   a running stride. Never directly trained.
 - **Grey-zone running** — since 2025 most runs sit at 4:45–5:15/km: too fast to be easy,
@@ -384,10 +385,11 @@ the how, and it holds every result. Baseline is not yet done (§13).
 - **The Achilles has never been formally diagnosed** `[stated]`, and it matters more than it
   looks. Mid-portion tolerates full dorsiflexion loading; insertional doesn't, and heel drops
   off a step can aggravate it **[W]**. This whole calf plan assumes mid-portion on the strength
-  of where Jack reports the symptoms — 2–6cm above the heel `[stated]`. Symptoms are 9+ months
-  recurrent. An in-person assessment would confirm the assumption and rule out the differentials
+  of where Jack reports the symptoms — 2–6cm above the heel `[stated]`. An in-person assessment would confirm the assumption and rule out the differentials
   in `references/evidence-achilles-load.md` (Haglund's, plantaris, posterior tibialis, bone
-  stress). Most riding on this of anything in this list.
+  stress). Most riding on this of anything in this list. Note this is a recent episode, not a
+  multi-year problem `[stated]`, so the references' "persistent presentation, expect months not
+  weeks" framing may not apply.
 - **Baseline tests** (§12) — not yet done. See `tests.md`.
 - **Heel prominence** — one side feels bigger. Same appointment as the above.
 - **Which backyard event and when** — sets Phase C.

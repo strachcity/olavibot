@@ -74,6 +74,22 @@ month on month into the July flare — it did not rise.
 | Last 8 weeks | 15.4 | 1.8 | 0.9 |
 | Last 12 weeks | 15.8 | 2.1 | 1.0 |
 
+Those averages mislead on their own, because the window contains a marathon. Week by week:
+
+| Week of | Runs | km |
+|---|---|---|
+| 27 Jul | 1 | 8.3 |
+| 3 Aug | 1 | 3.0 |
+| 10 Aug | 3 | 19.1 |
+| 17 Aug | 2 | 12.0 |
+| 24 Aug | 3 | 52.1 (Sydney marathon) |
+| 7 Sep | 1 | 10.0 |
+| 14 Sep | 3 | 18.9 |
+
+`log.md` records entry state as "~19km/week over 3 runs" — accurate for the migration week of
+14 Sep, but that is **one** normal week after a marathon, not a base. The seven weeks before it
+averaged 1.6 runs and 15km. Phase A is re-establishing 3 runs, not building from them.
+
 ## Races and bests, verified against Strava
 
 | Event | Date | Result |
