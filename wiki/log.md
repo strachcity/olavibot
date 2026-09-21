@@ -166,3 +166,43 @@ ratio). The over-enthusiasm examples now carry dates and Strava verification. Th
 **Not changed, deliberately.** The provenance table defines `[inferred]` as "Claude's
 interpretation", and I have used it for another AI's. Widening that definition is a schema
 change, and the schema says change only when Jack agrees. Flagged, not done.
+
+## [2026-09-21] ingest | Two research reports and the references quality accounting
+`raw/research/01-achilles-and-endurance-structure.md`, `02-gym-pool-review.md`,
+`references.md`. The last of the four sources SETUP.md originally asked for. Jack: Norwegian
+Method (Marius Bakken) material to follow separately — nothing about it added here, since none
+of it has landed.
+
+**The wiki pages were already accurately compiled from these reports** — spot-checked all
+three `wiki/references/*.md` pages against the raw text; no disagreements found. So this ingest
+is mostly refinement and one real correction, not reconciliation.
+
+**Real error found and fixed** — `training-model.md` §6's reactive-progression table used
+daily-life pain to gate every level (1: >2/10, 2: ≤2/10). Wrong. Per the source (Sancho 2019),
+daily-life pain ≤2/10 is a single entry gate before the whole progression; movement between
+Levels 1–4 is then gated by pain from *that level's own exercise*, not daily-life pain. Fixed,
+with the correction noted in place rather than silently changed, since this table decides how
+hard plyometric work gets introduced to a tendon that flared four months ago.
+
+**Sourcing-quality caveat added to all three evidence pages**, from `references.md`: only 9
+citations across both reports have a working link, 4 of those are commercial or coaching
+blogs, and everything else was named without one and never independently checked. The
+`[evidence: W]` grades reflect the research tool's own confidence, not outside appraisal. This
+doesn't invalidate anything — the physiology is standard and the named studies are real — but
+it changes how much weight a `[W]` tag should carry on its own.
+
+**Refinements folded in** (precise numbers replacing the vaguer versions already in the wiki):
+Zanini's exact durability figures (4.7%→2.1% economy decay, not "halved") and full protocol;
+Sancho's exact isometric dose (3×/day, 5×45s) and the 0.95×BW detail behind the calf-injury
+marker; Deane's exact percentages (12.2%, 3.8%, 9.0%); Arellano's exact arm-swing costs
+(3/9/13% by condition); Komi's ~12.5×BW figure flagged as a single-subject max, not a mean;
+LT1/LT2 as distinct threshold landmarks; collagen synthesis timing (~37–78h) behind the
+48–72h recovery rule; the single-session-spike evidence noted as independently corroborated by
+Jack's own Strava data (backyard ×2.8, Sydney ×5.7); a caveat that marathon PBs are Strava
+moving time, which flatters chip time.
+
+**One note on scope, not changed:** the Achilles evidence page's "9+ months persistent
+presentation" line is general evidence and stays as written — but a note was added that it was
+originally applied to Jack's own case based on partial data, and the fuller picture (confirmed
+with Jack) is a single recent episode, not a multi-year condition. The general evidence isn't
+wrong; it just may not be the evidence that applies here.

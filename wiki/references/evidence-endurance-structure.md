@@ -3,6 +3,14 @@
 Compiled from `raw/research/01-achilles-and-endurance-structure.md` (Part Two).
 Grades: **W** · **I** · **H**. Raw report wins on disagreement.
 
+**Sourcing caveat (Sep 2026):** most citations below were *named* by the research tool
+(author, year, journal) without a working link, and haven't been independently checked against
+the original papers. Only 9 sources across both reports have an attached link, and 4 of those
+are commercial or coaching blogs. Full accounting: `raw/research/references.md`. Treat **[W]**
+here as "the tool graded this well-supported," not "independently verified" — the ★-marked
+sources below are the ones the model leans on heaviest, so verify those first if it matters.
+
+
 ## Intensity distribution
 - Grey-zone clustering is the least productive distribution. **W**
 - Fast recreational marathoners run pyramidal: large easy base, moderate threshold, little
@@ -14,6 +22,9 @@ Grades: **W** · **I** · **H**. Raw report wins on disagreement.
 ## Threshold vs short intervals
 - Marathon performance is governed by sustainable fraction of VO2max, set largely by lactate
   threshold. Threshold work trains it directly. **W**
+- Two distinct landmarks, both worth including: **LT1** (~2 mmol/L, close to marathon pace)
+  and **LT2** (~4 mmol/L, close to HM/hour-race pace). Marathon work should cover both —
+  classic threshold reps at LT2 and longer marathon-pace running at LT1. **I**
 - Short 400/800 work builds VO2max and speed but is further from marathon specificity. **I**
 - His own data: shift to longer threshold reps coincided with 3:24 → 3:11. Single case,
   consistent with the physiology. **I**
@@ -21,7 +32,10 @@ Grades: **W** · **I** · **H**. Raw report wins on disagreement.
 ## Volume
 - Weekly mileage + mean training pace explained ~77% of marathon time variance in
   recreational runners; diminishing returns above ~65km/wk in that sample. **W** (Tanda 2011,
-  small n)
+  n=22 runners, 46 races — a genuinely small sample behind a widely-quoted figure)
+- **Marathon PBs are Strava moving time, which flatters true (chip) time** — worth remembering
+  when comparing his numbers against volume/pace benchmarks in this section. `athlete.md`
+  gives both official and Strava times where known.
 - Sub-3 runners typically peak ~90–115km/wk across a 12–16 week build. **H**
 - Tension: sub-3 volume vs a recurrent Achilles. Build tendon capacity and easy base first. **I**
 

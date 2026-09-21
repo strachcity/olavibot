@@ -249,21 +249,33 @@ heel and toe walks.
 Plyometrics are high-yield and the main risk to the Achilles. He has to earn each level.
 Progress only after two good sessions at the current one. **[W, small study]**
 
+*Corrected Sep 2026 — the previous version of this table used daily-life pain to gate every
+level. That was wrong. Per the source (Sancho et al. 2019), daily-life pain ≤2/10 is a single
+gate before entering the progression at all; once in it, movement between Levels 1–4 is gated
+by pain **from that level's own exercise**, not daily-life pain.*
+
+**Entry gate, before Level 1:** daily-life pain ≤2/10. Below that, no loading progression at
+all — not even isometrics.
+
 | Level | Where he is | Work |
 |---|---|---|
-| 1 | Daily-life pain **>2/10** — too irritable for reactive work | Isometric seated calf holds only |
-| 2 | Daily-life pain **≤2/10** | Standing and seated calf raises, hip work. Pogos/skipping in warm-up |
-| 3 | Level 2 solid, 20 double-leg jumps tolerated | Double-leg jumps, stiff-knee jumps, box jumps |
+| 1 | Entry gate met; this level's exercise still causing pain **>3/10** | Isometric seated calf holds, up to 3×/day, 5×45s |
+| 2 | Level 1 exercise pain has settled to **<3/10**, tolerated | Standing and seated calf raises, hip abduction/extension. Pogos/skipping in warm-up |
+| 3 | Level 2 solid, 20 double-leg jumps tolerated at <3/10 | Double-leg jumps, stiff-knee jumps, box jumps |
 | 4 | Level 3 solid, 10 single-leg hops tolerated, **seated calf raise ≥1× bodyweight** (`tests.md`) | Single-leg hops, bounding, lateral bounds |
 | 5 | Level 4 solid for several weeks | Depth drops |
 
-Two thresholds, and they're different things: **daily-life pain ≤2/10** is what admits him to
-reactive work at all, and **pain during hopping ≤3/10** is the ceiling within a session.
-Both from `references/evidence-gym-pool.md` **[W]**.
+The source flags **seated calf raise <1.0× bodyweight** as a specific calf-injury risk marker —
+in the underlying study, the one participant who tore a calf was the only Level-4 case below
+bodyweight, at 0.95× BW. Don't round that up.
+
+The 3/10 hopping-pain threshold is more conservative than the 5/10 allowed for loading
+generally (§7) — deliberately, because it's plyometric load on the same tendon.
+Both thresholds from `references/evidence-gym-pool.md` **[W]**.
 
 Start around 40–60 low-amplitude contacts per session. Increase hop speed before height or
-volume. Do reactive work fresh, early in the session, and keep it 48–72 hours from hard running
-and heavy calf work.
+volume. Do reactive work fresh, early in the session, and keep it 48–72 hours (collagen
+synthesis peaks ~37–78h post-loading) from hard running and heavy calf work.
 
 ### Blocks
 

@@ -3,12 +3,22 @@
 Compiled from `raw/research/02-gym-pool-review.md`.
 Grades: **W** · **I** · **H**. Raw report wins on disagreement.
 
+**Sourcing caveat (Sep 2026):** most citations below were *named* by the research tool
+(author, year, journal) without a working link, and haven't been independently checked against
+the original papers. Only 9 sources across both reports have an attached link, and 4 of those
+are commercial or coaching blogs. Full accounting: `raw/research/references.md`. Treat **[W]**
+here as "the tool graded this well-supported," not "independently verified" — the ★-marked
+sources below are the ones the model leans on heaviest, so verify those first if it matters.
+
+
 ## Overall
 - Heavy (≥80% 1RM) + plyometric training improves economy in trained runners; plyometrics
   help most at slower speeds (≤12km/h) — backyard pace. **W**
-- **Durability:** 10 weeks of 2×/wk max strength + plyometrics in ~39-min 10k runners halved
-  economy decay over 90 min and improved fatigued time-to-exhaustion 35%. Direct match to
-  his level. **W** (Zanini 2025)
+- **Durability:** 10 weeks of 2×/wk max strength + plyometrics in ~39-min 10k runners cut
+  economy decay over 90min from 4.7% to 2.1%, and improved fatigued time-to-exhaustion 35%
+  (vs an 8% decline in controls). Direct match to his level. Protocol: back squat, single-leg
+  press, seated isometric calf raise (~3×6), plus vertical (pogos, drop jumps) and horizontal
+  (hops, bounding) plyometrics. **W** ★⚠ (Zanini 2025 — recent, unverified link)
 - Bilateral vs unilateral: no clear winner. Keep bilateral anchors for load, unilateral for
   specificity and asymmetry. **I**
 - Free weights preferred for runners; machines fine as accessories. **I**
@@ -25,22 +35,29 @@ Grades: **W** · **I** · **H**. Raw report wins on disagreement.
 ## Hip flexion
 - Iliopsoas drives swing; activation rises with speed. Simulation: hip flexor and adductor
   strength maximise running speed. **W/I**
-- Band hip flexor training improved hip flexion strength 12% and sprint times in untrained
-  people (Deane 2005). Sprint/untrained data — transfer to ultra is inference. **W/I**
+- Band hip flexor training improved hip flexion strength 12.2% and cut 40-yd dash / shuttle
+  times by 3.8% / 9.0% in untrained people, n=24 (Deane 2005). Sprint/untrained data — transfer
+  to ultra is inference. **W/I**
 - Train strength (cable/band hip flexion 3×8–12) AND strength-endurance (marches for time,
   holds). **I**
 - Priority is strength through range over passive stretching. **I**
 
 ## Reactive progression
 - Improves economy, tendon stiffness, ground contact time. Complements heavy lifting. **W**
-- Entry: daily-life pain ≤2/10. Hopping pain ≤3/10. **W**
-- Sancho 2019 levels (n=15 feasibility study — best available, not an RCT) **W/I**:
-  1 isometric seated calf · 2 isotonic calf + hip · 3 double-leg jumps once 20 are tolerated
-  · 4 single-leg hops once 10 are tolerated. Progress after two good sessions.
-- Seated calf raise <1.0× bodyweight flagged as a calf-injury risk marker. Earn single-leg
-  hops. **I**
-- Start 40–60 low contacts/session. Speed before height/volume. Fresh, early, 48–72h from
-  hard running and heavy calf work. **W/H**
+- **Entry gate before any level: daily-life pain ≤2/10.** Within the progression, moving
+  between levels is gated by pain *from that level's own exercise*, not daily-life pain —
+  these are two different thresholds, easy to conflate (see `training-model.md` §6, corrected
+  Sep 2026). **W**
+- Sancho 2019 levels (n=15 feasibility study — best available, not an RCT) **W/I** ★:
+  1 isometric seated calf, up to 3×/day 5×45s (pain >3/10) · 2 isotonic calf + hip
+  abduction/extension (pain <3/10) · 3 double-leg jumps once 20 are tolerated at <3/10 ·
+  4 single-leg hops once 10 are tolerated at <3/10. Progress after two good sessions.
+- Seated calf raise <1.0× bodyweight flagged as a calf-injury risk marker — in Sancho's data,
+  the one participant who tore a calf was the only Level-4 case below bodyweight, at 0.95× BW.
+  Earn single-leg hops. **I**
+- Start 40–60 low contacts/session. Speed before height/volume. Fresh, early, 48–72h from hard
+  running and heavy calf work — collagen synthesis peaks ~37–78h post-loading, hence ≥3
+  recovery days between heavy tendon sessions. **W/H**
 - Hopping deficits persist ~1 year after symptoms resolve. Keep loading ≥12 months. **W**
 
 ## Lateral, adductor, trunk
@@ -53,8 +70,9 @@ Grades: **W** · **I** · **H**. Raw report wins on disagreement.
   already load the trunk. Programme a little anti-rotation instead of random abs. **W**
 
 ## Upper body
-- Arm swing matters metabolically (restricting it costs 3–13%) — but that's arm *motion*,
-  not gym strength. No good evidence upper-body lifting improves running. **W**
+- Arm swing matters metabolically — restricting it costs 3% (back), 9% (chest) or 13% (head)
+  more metabolic power (Arellano & Kram 2014) — but that's arm *motion*, not gym strength.
+  No good evidence upper-body lifting improves running. **W**
 - Value: posture under fatigue, arm drive over 24h, health, enjoyment. One push + one pull
   per week is plenty. **I/H**
 

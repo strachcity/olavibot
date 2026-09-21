@@ -10,6 +10,7 @@ Immutable sources. Add files; never edit or delete them.
 | `research/02-gym-pool-review.md` | Research pass 2 (claude.ai, Sept 2026) |
 | `history/chatgpt-coaching-2025-2026.md` | ChatGPT coaching conversation, Oct 2025 → Jul 2026 |
 | `history/gym-log-to-2026-09.md` | Export of the Google Drive gym log, up to migration |
+| `research/references.md` | Source-quality accounting for the two research passes — read first |
 
 Strava is live via MCP and doesn't need exporting. The compiled multi-year view lives in
 `wiki/strava-history.md` — derived, regenerated, never hand-edited.
@@ -24,15 +25,20 @@ in `wiki/strava-history.md` can be checked).
 an excerpt covering 25 May – 30 Jul 2026. Jack's note says the conversation began Oct 2025;
 that earlier portion is not in the excerpt.
 
-**Still pending:** both research reports. The pages in `wiki/references/` say they were
-compiled from those reports, so their `[evidence]` grades stay unverifiable until they land.
+**Landed 21 Sep 2026:** both research reports, plus `research/references.md` — the tool's own
+accounting of which citations are independently checkable. **Read that file first.** Only 9
+sources across both reports have a working link, and 4 of those are commercial or coaching
+blogs; everything else was named (author, year, journal) without one and hasn't been
+independently verified. The `[evidence: W/I/H]` grades in `wiki/references/` reflect the
+research tool's own confidence, not outside appraisal — a caveat now stated on all three pages.
 
-The wiki's real source at seeding was a claude.ai conversation covering three years of Strava,
-the Drive gym log, the ChatGPT history and two research passes. Worth exporting that here too.
+**Still pending:** the Norwegian Method material (Marius Bakken) — Jack intends to add it.
+Nothing about it belongs in the wiki until it lands; don't infer or summarise it from memory.
 
 This is a live exception to the rule in `CLAUDE.md` — *if you can't source a claim, don't write
-it.* Treat the seeded pages as provisional: check them against the raw files when those arrive,
-and flag contradictions rather than quietly resolving them.
+it.* All four originally-expected files have now landed and were checked against the seeded
+wiki pages; one real error was found and fixed (`training-model.md` §6's reactive-progression
+gating had conflated two different pain thresholds) — see the `ingest` entry in `wiki/log.md`.
 
 The compiled, tagged versions of the research live in `wiki/references/`. When they
 disagree with the raw reports, the raw reports win.
