@@ -265,3 +265,14 @@ decided against.
 
 Nothing added to `observations.md` — the grey-zone diagnosis lives there already; the fix
 belongs in `training-model.md` where prescriptions live, not duplicated across both.
+
+## [2026-09-21] block | Foundations planned
+`wiki/blocks/2026-09-foundations.md`. 6 weeks, 21 Sep → 1 Nov, Phase A. Treated as already
+underway since Sydney marathon — entry state drawn from Strava/gym data, not a blank start.
+No threshold this block (Phase A default). Baseline testing deliberately deferred to week 6
+per Jack — too soon post-marathon/post-Achilles to test to a real max now.
+
+One variable: the squat and deadlift anchor rotates variant week to week (back/front squat,
+conventional/trap-bar deadlift) to find what works empirically, rather than fixing one up
+front — the reason `training-model.md` §4/§6 were amended earlier today. Winner gets fixed
+at block review. Copenhagen plank is the block's one new lift.
