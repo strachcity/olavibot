@@ -49,8 +49,10 @@ None of these gets its own programme. Each gets extra weight inside a balanced o
   unrecorded rather than known empty — see `athlete.md`.
 - **Hip flexors** — failed at hour 19 of the 2026 backyard. Could not lift the leg into
   a running stride. Never directly trained.
-- **Grey-zone running** — since 2025 most runs sit at 4:45–5:15/km: too fast to be easy,
-  too slow to build anything.
+- **Grey-zone running** — since 2025 most runs sit at 4:45–5:15/km: too fast to be easy, too
+  slow to build anything. ~52–60% of running time since 2025Q1, against 20.5% in the Florence
+  quarter `[data: Strava]`. It replaced quality, not easy running — easy has never exceeded a
+  third of training time in any year on record, so §5's ~80% easy target has never been met.
 - **Movement is almost entirely forward.** Running, squats, deadlifts. Little lateral,
   rotational, reactive or single-leg-balance work.
 - **Restraint** — see §3.

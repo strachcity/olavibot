@@ -12,9 +12,21 @@ confirms them — the block review should test them.
   sessions across the 15-week build.*
 - Lifts meaningfully heavier with a trainer present `[data]`
 - Faster backyard laps buy more recovery; the slow-lap experiment didn't work `[stated]`
+- **Quality stopped after Florence, and the pace drifted into the grey zone.** Hard running
+  (<4:45/km) fell 42.9% → 17.5% → 9.3% of running time across 2024Q4 → 2025Q1 → 2025Q2, while
+  grey-zone (4:45–5:15) rose 20.5% → 48.2% → 59.9% `[data: Strava, quarterly]`. Structured
+  threshold sessions stop after Nov 2024; what remains is occasional 5–6km efforts, not
+  sessions. Cause `[stated]`: finishing the MPA, running became open-ended and purely for
+  enjoyment — quality sessions stopped entirely and everything slipped from there.
+- **The grey zone replaced quality, not easy running.** Easy (≥5:30/km) sat at 11–27%
+  throughout and has never exceeded a third of training time in any year on record `[data]`.
+  The model's ~80%-easy target has never once been met, including in the PB year.
+- **Fitness lagged the slip by about six months.** Both PBs came *after* quality stopped —
+  5k 17:55 (Jan 2025) and half 1:29:09 (May 2025) `[data]`. The Florence base carried, which
+  is why the decline wasn't visible at the time. Worth remembering: current form is a lagging
+  indicator of current training `[inferred]`.
 
 ## Hypotheses — need testing or confirmation
-- Grey-zone running (4:45–5:15/km) is what capped volume in 2025–26 `[inferred]`
 - The slow lap shuffle plus 19 restarts from standing contributed to hip flexor failure
   `[inferred]`
 - The July 2026 Achilles flare came out of **backyard recovery, not a training build**. Return
@@ -37,3 +49,4 @@ Kept so they don't come back.
 | Florence PB was 2025 | November 2024 `[data]` | Sep 2026 |
 | He's never done a classic marathon block | Florence was one, and produced the PB `[data]` | Sep 2026 (from ChatGPT history) |
 | Starting from zero after Sydney | ~19km/wk + 1 gym session at migration `[data]` | Sep 2026 |
+| Grey-zone running *capped volume* in 2025–26 | It replaced **quality**, not volume. Volume fell only 37.9 → 30.6 km/wk (19%) while hard running fell 43% → 9% `[data]` | Sep 2026 |

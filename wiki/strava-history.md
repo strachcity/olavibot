@@ -49,6 +49,28 @@ not easy running — hard work fell 35% → 11% over the same period while easy 
 ~16–21%. Easy volume has never been above a third of training time in any year, and the
 model's ~80%-easy target has never once been met.
 
+### Quarterly, around the inflection
+
+The year table hides where it happened. It happened at Florence.
+
+| Quarter | Hard <4:45 | Grey 4:45–5:15 | Easy ≥5:30 | km/wk |
+|---|---|---|---|---|
+| 2024 Q3 | 17.4% | 35.6% | 20.9% | 49.3 |
+| **2024 Q4** | **42.9%** | 20.5% | 13.5% | 45.6 |
+| 2025 Q1 | 17.5% | 48.2% | 22.9% | 37.0 |
+| 2025 Q2 | 9.3% | 59.9% | 13.4% | 41.4 |
+| 2025 Q3 | 8.2% | 68.6% | 16.9% | 19.4 |
+| 2025 Q4 | 8.2% | 52.4% | 10.8% | 29.7 |
+| 2026 Q1 | 11.4% | 54.4% | 17.0% | 38.5 |
+| 2026 Q2 | 12.6% | 51.1% | 22.4% | 35.4 |
+
+Florence was run 24 Nov 2024. Hard running goes 42.9% → 17.5% → 9.3% over the following two
+quarters and never recovers.
+
+The shape of what remains matters as much as the share. Before Florence, the fast runs are
+repeated 10km+ efforts at threshold (12.0km @ 4:13, 10.6km @ 4:15, 10.5km @ 4:28). Afterwards
+almost every run under 4:30/km is a **5–6km one-off**. Sessions became efforts.
+
 ## 2026 by month
 
 | Month | km | Runs | Gym |

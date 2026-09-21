@@ -105,3 +105,24 @@ comparing the wrong time windows. Recorded here so the mistakes don't get re-mad
 
 Still open: the grey-zone hypothesis in `observations.md` is unchanged pending Jack's call on
 promoting it.
+
+## [2026-09-21] model | Grey-zone hypothesis confirmed and rewritten
+Jack confirmed it explicitly, with the mechanism: after Florence he was finishing his MPA,
+running went open-ended and purely for enjoyment, quality sessions stopped entirely and
+everything slipped from there `[stated]`.
+
+Quarterly data puts the inflection exactly at Florence (24 Nov 2024). Hard running <4:45/km:
+2024Q4 42.9% → 2025Q1 17.5% → 2025Q2 9.3%, and it never recovers. Grey 4:45–5:15 over the
+same quarters: 20.5% → 48.2% → 59.9% `[data: Strava]`. The shape corroborates the mechanism —
+before Florence the fast runs are repeated 10km+ threshold efforts; after it, nearly every run
+under 4:30/km is a 5–6km one-off. Sessions became efforts.
+
+Three lines added to Confirmed: the finding itself; that the grey zone replaced **quality, not
+easy** (easy has never exceeded a third of training time in any year, so §5's ~80% target has
+never once been met); and that both PBs came *after* quality stopped, so form lagged the slip
+by about six months.
+
+**Refuted:** the original wording, "grey-zone running capped volume in 2025–26". Volume fell
+only 37.9 → 30.6 km/wk (19%) while hard running fell 43% → 9%. It was never a volume story.
+
+Quarterly table added to `strava-history.md`. §2 weak-link entry updated with the numbers.
