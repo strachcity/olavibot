@@ -240,3 +240,28 @@ are the two events these sources exclude.
 **Not applied to `training-model.md`.** Whether to rewrite §5's threshold prescription in the
 Singles style (controlled reps, effort ceiling, talk-test cross-check) is flagged as an open
 question for Jack — a design change, not a factual correction, so it needs his say-so first.
+
+## [2026-09-21] model | Norwegian Method integrated, kept small
+Jack: integrate the research, don't over-engineer, delete anything not needed or repeated.
+
+**Applied to `training-model.md` §5** — two changes, both operational, neither a rewrite:
+- The threshold prescription now states the effort ceiling explicitly (talk test, finish with
+  one more rep in reserve, don't chase pace/HR against what breath says) and names *structure*
+  — controlled reps with jog recoveries, not continuous running — as what actually separates a
+  threshold session from grey-zone running. Same rep scheme as before, same 3:24→3:11 evidence
+  line kept.
+- Double threshold added as a considered-and-rejected line, so it doesn't get re-proposed
+  later: built for 150–220km/wk racing 5k–10k, both of Jack's targets are events its own
+  source explicitly excludes.
+
+**Cut from `wiki/references/evidence-norwegian-method.md`** — 127 lines to 43. Removed: the
+NTNU split-session study (real finding, but scoped to splitting one day's volume, and Jack
+doesn't run enough threshold volume to have anything to split — filed as not applicable, then
+cut rather than kept as unused padding), the muscle-tone/elasticity model (H-grade speculation,
+nothing built on it), and the Radcliffe corroboration paragraph (restated what
+`evidence-endurance-structure.md` already says — pure repetition). Kept: the sourcing caveat,
+the Ingebrigtsen dispute, the population mismatch, and the two things actually applied or
+decided against.
+
+Nothing added to `observations.md` — the grey-zone diagnosis lives there already; the fix
+belongs in `training-model.md` where prescriptions live, not duplicated across both.

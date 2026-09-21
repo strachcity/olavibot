@@ -124,8 +124,14 @@ Year-round default.
 | Cross-training | Optional, counts toward aerobic load |
 | Distribution | ~80% easy / 20% harder, by time |
 
-**Threshold.** Longer reps at half-marathon effort: 3×8–10min, 4×8min, 3×15min, off 2min.
-This is what moved him from 3:24 to 3:11.
+**Threshold.** Controlled reps with a jog recovery, not continuous running: 3×8–10min,
+4×8min, 3×15min, off 2min, at an effort just below half-marathon pace. Breathe harder than easy
+but hold a short phrase; finish each rep with enough left for one more. Don't chase a pace or
+HR number against what breath and legs say — the point is a session he can repeat, not one he
+survives. This structure, not just the pace band, is what fixes grey-zone running: the same
+effort run continuously and undosed is the grey zone; run as bounded reps, it's a session
+`[I]` (`references/evidence-norwegian-method.md`). This shift from short fast intervals to
+longer reps is what moved him from 3:24 to 3:11.
 
 **Strides.** Keep speed and running mechanics alive at almost no fatigue cost. After easy runs.
 This is also the sanctioned outlet for a good-legs day.
@@ -138,6 +144,12 @@ that spares the Achilles and trains hip flexion. Counts as easy volume.
 
 **Occasional speed session.** One short VO2-type session every 2–3 weeks in Phase B, replacing
 that week's threshold. Keeps the 5k engine and adds variety. Not in Phase A.
+
+**Not adopting double threshold.** Two threshold sessions a day is built for 150–220km/wk
+runners racing 5k–10k. Jack peaks 60–70, currently rebuilding from ~15–19. Neither of his
+targets is the event it's built for — its own source excludes the marathon ("you definitely
+need more continuous work") and calls it "not a default solution" for ultras. Considered and
+ruled out; see `references/evidence-norwegian-method.md`.
 
 ---
 

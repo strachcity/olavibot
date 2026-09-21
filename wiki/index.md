@@ -29,7 +29,7 @@ Regenerated from a source, never hand-edited.
 | [references/evidence-achilles-load.md](references/evidence-achilles-load.md) | Tendon loading, pain monitoring, calf capacity, load management, concurrent training |
 | [references/evidence-endurance-structure.md](references/evidence-endurance-structure.md) | Intensity distribution, threshold, volume, long runs, periodisation, taper, ultra transfer |
 | [references/evidence-gym-pool.md](references/evidence-gym-pool.md) | Exercise selection, hip flexion, reactive progression, lateral/adductor, upper body, variation |
-| [references/evidence-norwegian-method.md](references/evidence-norwegian-method.md) | Double threshold and the Norwegian model — mostly anecdote, one real study, not a fit for Jack's events |
+| [references/evidence-norwegian-method.md](references/evidence-norwegian-method.md) | Norwegian Method — mostly anecdote; effort-control method adopted, double threshold ruled out |
 
 ## Open questions
 Live list in `training-model.md` §13. The undiagnosed Achilles is the one that matters most.
