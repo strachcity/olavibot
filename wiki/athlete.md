@@ -3,7 +3,9 @@
 Stable facts about Jack as an athlete. Changes slowly. Session-level detail goes in `log.md`.
 
 ## Basics
-- 170cm, 75kg `[stated, May 2026]`
+- 170cm (5'7"), 75kg `[stated, 25 May 2026 — ChatGPT history]`. Strava profile currently
+  reads 73kg `[data]`; unreconciled, and it matters slightly because `tests.md` uses bodyweight
+  for the seated-calf-raise ratio
 - London-based, busy full-time job; training has to fit around work `[stated]`
 - Completed an MPA and thesis in 2025 — why structured training lapsed `[stated]`
 - Trains with a personal trainer (Olavi) roughly monthly; weighing whether to continue `[stated]`
@@ -64,9 +66,24 @@ meant less tired. Left 4–8 min recovery per lap.
   pain-free by ~10 Aug `[data]`
 - **This is a recent episode, not a historical condition** `[stated]`. It does not recur across
   previous years. Monthly volume Jan–May 2026 ran 164 → 183 → 154 → 193 → 280km, rising with no
-  sign of load management `[data]`
-- Achilles **never formally diagnosed** `[stated]`. Symptoms mainly 2–6cm above the heel —
-  consistent with mid-portion `[stated]`. One heel feels more prominent than the other `[stated]`
+  sign of load management `[data]`. Independently corroborated: **"I'm injury free"**, six days
+  before the backyard `[stated, 25 May 2026 — ChatGPT history]`
+- **Recovery timeline, Jul 2026** `[data: ChatGPT history + Strava]` — 13 Jul flare, limping
+  and morning stiffness · 17 Jul first run back, 5.7km (first 3km at 4:15/km, unplanned) ·
+  18 Jul gym, medium load · 19 Jul no pain, no next-day reaction · 10 Aug "Pain free!" ·
+  30 Aug Sydney marathon. Contemporaneous assessment on 19 Jul was **"recovering well, not
+  recovered"**
+- Achilles **never formally diagnosed** `[stated]`
+- Symptom location: mainly 2–6cm above the heel `[stated]`
+- **"Consistent with mid-portion" is an inference, and not Jack's.** It traces to ChatGPT,
+  30 Jul 2026: *"Your symptoms have mainly been 2–6 cm above the heel, which fits more with the
+  mid-portion of the tendon than the point where it inserts into the bone"* `[inferred]`. No
+  clinician has examined it. The entire calf and reactive prescription rests on this line —
+  see `training-model.md` §13
+- One heel feels more prominent than the other `[stated]`. ChatGPT raised **Haglund's
+  deformity** as one of three possibilities and asked three narrowing questions (hard or
+  squishy; visible or only palpable; at the insertion or above it) plus photos. **None were
+  answered** — the conversation ends there `[data: ChatGPT history, 30 Jul 2026]`
 - **Calf training history is unrecorded, not absent.** The Florence build (Aug–Nov 2024)
   included a lot of plyometric work that was never written down `[stated]`. Exercise-level
   records only begin Jan 2026, so earlier years are unknown rather than empty `[inferred]`.

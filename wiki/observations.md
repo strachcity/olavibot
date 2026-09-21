@@ -4,8 +4,11 @@ Patterns and learnings. Every line tagged. `[inferred]` lines are hypotheses unt
 confirms them — the block review should test them.
 
 ## Confirmed
-- Over-enthusiasm is the main training risk, not laziness. Examples: first 3km of a planned
-  easy comeback run at 4:15/km; extra reps at 90kg; unplanned load jumps `[stated]` `[data]`
+- Over-enthusiasm is the main training risk, not laziness. Originally ChatGPT's observation,
+  19 Jul 2026, adopted by Jack `[stated]`. Dated instances: 17 Jul 2026, first 3km of a planned
+  easy 20–30min comeback run at 4:15/km, four days after the flare; 19 Aug, squats to 8 reps at
+  90kg when 6 were planned and lateral squats 12.5→15kg, eleven days from Sydney; 23 Aug, dead
+  hangs added after being told to skip grip work `[data: Strava + gym log]`
 - Strength training plus stretching fixed the 2024 knee issue `[stated]`
 - Threshold-weighted quality + a real long run + gym ~1.5×/wk produced the only big marathon
   jump (3:24 → 3:11) `[data]`. *Corrected Sep 2026: this said "gym 2×/wk". Strava shows 22
@@ -47,6 +50,6 @@ Kept so they don't come back.
 | Calves/feet ended the 2026 backyard | Hip flexors failed first; calves held `[stated]` | Sep 2026 |
 | Hip flexors are *the* limiter | One weak link among several; fatigue is mostly central `[evidence]` | Sep 2026 |
 | Florence PB was 2025 | November 2024 `[data]` | Sep 2026 |
-| He's never done a classic marathon block | Florence was one, and produced the PB `[data]` | Sep 2026 (from ChatGPT history) |
+| He's never done a classic marathon block | Florence was one, and produced the PB `[data]` | Sep 2026. Origin traced: ChatGPT, 19 Jul 2026 |
 | Starting from zero after Sydney | ~19km/wk + 1 gym session at migration `[data]` | Sep 2026 |
 | Grey-zone running *capped volume* in 2025–26 | It replaced **quality**, not volume. Volume fell only 37.9 → 30.6 km/wk (19%) while hard running fell 43% → 9% `[data]` | Sep 2026 |

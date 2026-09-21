@@ -69,8 +69,15 @@ Faster laps are the rest strategy.
 **His biggest training risk isn't laziness. It's enthusiasm.**
 
 Examples: the planned 20–30 minute easy comeback run whose first 3km went at 4:15/km because
-he was late; extra reps at 90kg; unplanned load jumps; added grip work when told to skip it.
-He is excellent at committing and doing. He is less good at stopping.
+he was late (17 Jul 2026, four days after the flare — 5.7km, verified on Strava); squats run to
+8 reps at 90kg when 6 were planned and lateral squats jumped 12.5→15kg in the same session
+(19 Aug, eleven days out from Sydney); dead hangs added after being told to skip grip work
+(23 Aug, eight days out). He is excellent at committing and doing. He is less good at stopping.
+
+*This insight is not ours.* It came from the ChatGPT coaching conversation, 19 Jul 2026 —
+"your biggest training risk isn't laziness, it's enthusiasm" — and Jack adopted it. The gym log
+then produced three fresh instances inside a single taper week, which is why it sits in
+Confirmed rather than Hypotheses `[data: gym log, Aug 2026]`.
 
 So the system builds restraint in structurally rather than relying on willpower:
 - **Every session has a stated ceiling**, not just a target. "40 minutes easy, stop at 45."
@@ -79,7 +86,7 @@ So the system builds restraint in structurally rather than relying on willpower:
   more pace, never more load on an anchor.
 - **Reviews ask two questions:** what did you do beyond the plan, and why.
 - **Report capacity, not just symptoms.** Not "did it hurt?" but "what can I comfortably do
-  this week that I couldn't last week?"
+  this week that I couldn't last week?" — also from the ChatGPT conversation, 19 Jul 2026.
 
 ---
 
@@ -384,16 +391,22 @@ the how, and it holds every result. Baseline is not yet done (§13).
 
 ## 13. Open questions
 
-- **The Achilles has never been formally diagnosed** `[stated]`, and it matters more than it
-  looks. Mid-portion tolerates full dorsiflexion loading; insertional doesn't, and heel drops
-  off a step can aggravate it **[W]**. This whole calf plan assumes mid-portion on the strength
-  of where Jack reports the symptoms — 2–6cm above the heel `[stated]`. An in-person assessment would confirm the assumption and rule out the differentials
-  in `references/evidence-achilles-load.md` (Haglund's, plantaris, posterior tibialis, bone
-  stress). Most riding on this of anything in this list. Note this is a recent episode, not a
-  multi-year problem `[stated]`, so the references' "persistent presentation, expect months not
-  weeks" framing may not apply.
+- **The Achilles has never been formally diagnosed, and the working assumption came from an
+  AI.** Mid-portion tolerates full dorsiflexion loading; insertional doesn't, and heel drops off
+  a step can aggravate it **[W]**. Every calf and reactive prescription in §6 assumes
+  mid-portion. That assumption traces to a single line in the ChatGPT conversation of
+  30 Jul 2026 `[inferred]` — reasonable, consistent with where Jack reports symptoms
+  `[stated]`, and never examined by anyone qualified. **This is the highest-stakes unverified
+  claim in the wiki.** An assessment would confirm it and rule out the differentials in
+  `references/evidence-achilles-load.md` (Haglund's, plantaris, posterior tibialis, bone
+  stress). Note it is a recent episode, not a multi-year problem `[stated]`, so the references'
+  "persistent presentation, expect months not weeks" framing may not apply.
+- **Heel prominence — three specific questions are outstanding.** ChatGPT asked on 30 Jul 2026
+  whether the prominence is hard or squishy, visible or only palpable, and at the tendon
+  insertion or above it, and asked for photos from behind and side. None were answered. Those
+  three answers are most of what separates normal anatomy from Haglund's, and they cost
+  nothing. Same appointment as the above.
 - **Baseline tests** (§12) — not yet done. See `tests.md`.
-- **Heel prominence** — one side feels bigger. Same appointment as the above.
 - **Which backyard event and when** — sets Phase C.
 - **Olavi.** He lifts meaningfully heavier with a trainer present (squat 3×110kg vs 100kg
   solo, deadlift 6×100kg vs 8×80kg).

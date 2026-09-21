@@ -23,7 +23,7 @@ and `[data: gym log]` tag in the wiki is unverifiable — see `raw/README.md`.
 |---|---|---|
 | `raw/research/01-achilles-and-endurance-structure.md` | Research pass 1 | pending |
 | `raw/research/02-gym-pool-review.md` | Research pass 2 | pending |
-| `raw/history/chatgpt-coaching-2025-2026.md` | ChatGPT coaching conversation | pending |
+| `raw/history/chatgpt-coaching-2025-2026.md` | ChatGPT coaching conversation | **landed 21 Sep** (May–Jul 2026 excerpt) |
 | `raw/history/gym-log-to-2026-09.md` | Google Drive gym log export | **landed 21 Sep** |
 
 Also worth exporting: the claude.ai conversation the wiki was actually seeded from. It's the

@@ -126,3 +126,43 @@ by about six months.
 only 37.9 → 30.6 km/wk (19%) while hard running fell 43% → 9%. It was never a volume story.
 
 Quarterly table added to `strava-history.md`. §2 weak-link entry updated with the numbers.
+
+## [2026-09-21] ingest | ChatGPT coaching conversation
+`raw/history/chatgpt-coaching-2025-2026.md`. An excerpt, 25 May – 30 Jul 2026; Jack says the
+conversation began Oct 2025 but that part isn't included. Decisions made on the evidence rather
+than referred back, at Jack's instruction.
+
+**Verified contemporaneous.** The timestamps carry days of the week, which fixes all three to
+2026 (25 May, 19 Jul, 30 Jul are Mon/Sun/Thu in 2026, not 2025). Strava corroborates the 19 Jul
+entry exactly: flare 13 Jul, a 5,754m run on Friday 17 Jul (ChatGPT says "5.7 km"), an 83-minute
+gym session on the Saturday, and on the Sunday a 6.0km run at 5:19/km — the "20–30 minutes easy"
+it prescribed.
+
+**The significant finding: "consistent with mid-portion" was never Jack's claim.** It was tagged
+`[stated]` in `athlete.md`. The source is one line of ChatGPT's on 30 Jul 2026 — *"which fits
+more with the mid-portion of the tendon than the point where it inserts into the bone"*.
+Re-tagged `[inferred]` with the origin quoted. This matters because §6's entire calf and
+reactive prescription assumes mid-portion, and mid-portion and insertional take different
+loading `[W]`. §13 rewritten to say so plainly: **the highest-stakes unverified claim in the
+wiki, and it came from an AI.**
+
+Also from the heel question, 30 Jul: ChatGPT raised **Haglund's deformity** and asked three
+narrowing questions plus photos. **None were answered** — the conversation ends there. Those
+three answers are most of what separates normal anatomy from Haglund's. Now recorded as
+outstanding rather than lost.
+
+**Two rules in the model turn out to be ChatGPT's, not ours**, and are now attributed: "your
+biggest training risk isn't laziness, it's enthusiasm" (§3, and the Confirmed observation), and
+"report capacity, not symptoms" (§3 and `review-training`). Both stand — the gym log produced
+three fresh instances of the enthusiasm pattern inside one taper week — but the wiki was
+presenting borrowed insight as its own.
+
+**Corroborations.** "I'm injury free", 25 May 2026, six days before the backyard — independent
+support for the Achilles being a recent episode. Height and weight sourced: 5'7", 75kg, same
+date (Strava profile reads 73kg; unreconciled, and `tests.md` uses bodyweight for the calf
+ratio). The over-enthusiasm examples now carry dates and Strava verification. The refuted
+"never done a classic marathon block" claim traced to its exact origin, ChatGPT 19 Jul 2026.
+
+**Not changed, deliberately.** The provenance table defines `[inferred]` as "Claude's
+interpretation", and I have used it for another AI's. Widening that definition is a schema
+change, and the schema says change only when Jack agrees. Flagged, not done.

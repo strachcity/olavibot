@@ -20,9 +20,12 @@ Strava is live via MCP and doesn't need exporting. The compiled multi-year view 
 (`history/strava-*.csv`, derived — regenerable from the Strava MCP, kept here so the numbers
 in `wiki/strava-history.md` can be checked).
 
-**Still pending:** both research reports and the ChatGPT history. The pages in
-`wiki/references/` say they were compiled from those reports, so their `[evidence]` grades
-stay unverifiable until they land.
+**Landed since:** the ChatGPT coaching conversation (`history/chatgpt-coaching-2025-2026.md`),
+an excerpt covering 25 May – 30 Jul 2026. Jack's note says the conversation began Oct 2025;
+that earlier portion is not in the excerpt.
+
+**Still pending:** both research reports. The pages in `wiki/references/` say they were
+compiled from those reports, so their `[evidence]` grades stay unverifiable until they land.
 
 The wiki's real source at seeding was a claude.ai conversation covering three years of Strava,
 the Drive gym log, the ChatGPT history and two research passes. Worth exporting that here too.
