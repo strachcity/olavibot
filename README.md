@@ -30,15 +30,18 @@ Skills needed:
 - `review-training` — drafts the log entry in the right format
 
 Install:
-1. Zip each skill folder, keeping the folder at the top of the zip:
-   `cd .claude/skills && zip -r review-training.zip review-training && zip -r programme-session.zip programme-session`
+1. Download the zips from `skills-zip/` — open each file on GitHub and press **Download raw
+   file**:
+   - [review-training.zip](https://github.com/strachcity/olavibot/raw/main/skills-zip/review-training.zip)
+   - [programme-session.zip](https://github.com/strachcity/olavibot/raw/main/skills-zip/programme-session.zip)
 2. claude.ai → Settings → Capabilities → turn on code execution if it's off, then
    **Skills → Upload skill** and upload each zip.
 3. In the claude.ai project, add `wiki/training-model.md`, `wiki/log.md` and the active block
    in `wiki/blocks/` to project knowledge — the skills read them, and claude.ai can't see this
    repo.
 
-When a skill changes here, re-zip and re-upload it. Refresh the project knowledge files when
+When a skill changes here, rebuild its zip in the same commit and re-upload it in claude.ai:
+`cd .claude/skills && zip -qrX ../../skills-zip/<skill>.zip <skill>` (delete the old zip first). Refresh the project knowledge files when
 the block or model changes, and `log.md` every so often so recent loads are current.
 
 Private repo. Contains health information. Not medical advice.
