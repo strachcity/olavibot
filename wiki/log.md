@@ -340,3 +340,19 @@ fix. Fixed `programme-session`: gym, time and Achilles status now default from t
 block and session shape rather than being asked, with the default stated in the intro line.
 Take what he volunteers; a flagged concern after the fact is a `review-training` correction,
 not a re-ask.
+
+## [2026-09-22] gym | Session A — Foundations wk1 (flat gym)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 81
+gym: flat
+session: A
+```
+- Planned: Back squat ramp-up (bar×10 → 50×8 → 65×5 → 75×3) then working sets 3×5 @~80kg RPE7 (flex to 85kg if 80kg felt like RPE6), Bulgarian split squat + Pallof press superset, hip-flexion + pull superset, DB shoulder press 3×10 @14kg, cool-down.
+- Done: Back squat bar×10 → 50×8 → 65×5 → 75×3 → working 3×5 @80kg. Bulgarian split squat 3×8/leg @14kg DB each hand. Pallof press 3×10/side @9.1kg (20lb) cable. Weighted march 3×30s/leg @16kg DB (swapped for banded march — no bands at flat gym). Single-arm DB row 3×8/side @18kg (swapped for lat pulldown — flat gym has none). DB shoulder press 3×10 @14kg standing, last set nearly failed on the left arm. `[stated]`
+  Strava: 81:07 elapsed, avg HR 97 (max 148), relative effort 12, no exercise sets recorded `[data, Strava activity 20286596155]`
+- Beyond plan: none — flat-gym equipment swaps only (march→weighted, pulldown→single-arm row), no added load or volume.
+- Capacity: not reported.
+- Review: Squat and split squat both executed exactly as planned despite pre-existing groin DOMS — tolerated throughout, no sharp or pulling pain reported. Jack's own read on the split squat: it's the hardest exercise in the session, in a way he considers productive rather than just unpleasant. Shoulder press at 14kg standing is now at or near true failure (left arm, last set) — next time either seat it or drop to 12kg for reps in reserve. `duration_min` (81) includes a post-session walk taken on the same watch activity, so it overstates actual gym time — don't read it as a clean session duration. Jack asked for session plans to include the reasoning/evidence behind exercise choices going forward, not just the prescription — noted for `programme-session` from the next session on.
