@@ -98,7 +98,7 @@ entry, same date; the legs' distances count toward that day's target between the
 | Day | Session |
 |---|---|
 | Mon 21 | Easy — done: 6.92km @ 5:50/km ✅ |
-| Tue 22 | Gym — Session A |
+| Tue 22 | Gym — Session A (flat) — done ✅ |
 | Wed 23 | Rest (evening busy) |
 | Thu 24 | Gym — Session B |
 | Fri 25 | Rest (evening busy) |
