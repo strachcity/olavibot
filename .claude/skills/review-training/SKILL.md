@@ -15,15 +15,25 @@ Three modes. Work out which one Jack wants.
 - Strava (MCP) for the activity if it's a run or it's recorded there. If Strava is down or the
   activity isn't there, log what Jack reports and mark the Done line `[stated]` rather than
   waiting for data.
-- The session plan, if one was made this conversation, and the active block.
+- The session plan — made this conversation, in the pasted draft, or in the active block — and
+  the active block.
 - **Don't interrogate a standard run.** Jack won't answer an RPE/enjoyment/Achilles checklist
   per run, and asking anyway wastes his patience — `[stated, 2026-09-21]`. Log a run straight
   from Strava (distance, pace, duration, date). Omit `rpe`, `enjoyment`, `achilles_during` if
   he hasn't volunteered them — that's already what "omit what you don't have" below means, so
   stop short of asking. If he flags a concern (pain, missed the plan, something felt off), log
   that detail and follow up on it specifically — that's the exception, not the default.
-- Gym still needs his own words — Strava doesn't capture exercises or loads — but take what
-  he gives you in passing rather than running a fixed set of questions after it.
+- **Don't interrogate a gym session either** — same rule, `[stated, 2026-09-22]`. Gym still
+  needs his own words (Strava doesn't capture exercises or loads), but take what he gives you
+  in passing rather than running a fixed set of questions after it. Anything he doesn't
+  volunteer: omit it from the yaml, write "not reported" on the prose line.
+- **Sessions narrated in claude.ai are the normal workflow.** Jack runs the session while
+  talking to Claude in the claude.ai project, reporting sets, reps, loads and on-the-fly swaps
+  as he goes. That Claude drafts the log entry; Jack pastes it here because claude.ai has no
+  write access to this repo. Treat the draft as `[stated]` and check it before appending:
+  header format, metrics block holds only allowed values (numbers, listed words, `pending` —
+  no prose), and the Strava activity matches. Fix format problems, flag content problems,
+  then append and commit.
 
 ### Write the log entry
 Append to `wiki/log.md`. Header, then the metrics block, then prose. The metrics block is what
@@ -55,6 +65,14 @@ reactive_level: 2
 **Run:** same shape, header type `run`, and swap the last three yaml fields for `distance_km`,
 `avg_pace` (m:ss) and `run_type` (easy | long | threshold | speed | strides | race). The Done
 line carries distance / time / pace / HR.
+
+- **Planned line keeps the plan's structure.** One line, but if the plan staged it (ramp-up
+  then working sets, or similar), keep the stages distinct rather than collapsing them.
+- **Equipment swaps** forced by the gym (flat gym, missing kit) count as planned: `planned:
+  yes`, `beyond_plan: none`, the swap noted in the Done line. Beyond plan means *more*, not
+  different.
+- **`duration_min` is the session total** as the watch recorded it. If that includes something
+  beyond the session (a walk after, watch not stopped), say so in the Review line.
 
 `beyond_plan` appears twice on purpose: the short phrase in the block so it can be counted, the
 *why* in the prose line because that's the part that's useful.
@@ -138,6 +156,6 @@ If baseline hasn't been done, this **is** the baseline — don't compare it to a
 ---
 
 ## Always
-- Ask about **capacity**, not only symptoms: "what can you comfortably do now that you
-  couldn't a few weeks ago?"
+- Note **capacity**, not only symptoms, when he mentions it — what he can comfortably do now
+  that he couldn't a few weeks ago. Don't ask; "not reported" is fine.
 - Keep it short. A session review is four lines, not a report.

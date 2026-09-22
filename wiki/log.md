@@ -356,3 +356,17 @@ session: A
 - Beyond plan: none — flat-gym equipment swaps only (march→weighted, pulldown→single-arm row), no added load or volume.
 - Capacity: not reported.
 - Review: Squat and split squat both executed exactly as planned despite pre-existing groin DOMS — tolerated throughout, no sharp or pulling pain reported. Jack's own read on the split squat: it's the hardest exercise in the session, in a way he considers productive rather than just unpleasant. Shoulder press at 14kg standing is now at or near true failure (left arm, last set) — next time either seat it or drop to 12kg for reps in reserve. `duration_min` (81) includes a post-session walk taken on the same watch activity, so it overstates actual gym time — don't read it as a clean session duration. Jack asked for session plans to include the reasoning/evidence behind exercise choices going forward, not just the prescription — noted for `programme-session` from the next session on.
+
+## [2026-09-22] model | Gym sessions not interrogated either, session plans explain their reasoning
+Jack won't answer a post-session checklist for gym any more than for runs `[stated, 2026-09-22]`.
+`review-training` now says so explicitly: take what he volunteers, omit missing fields from the
+yaml, "not reported" on the prose line. The "Always: ask about capacity" line became "note it
+when he mentions it", since it contradicted the rule. Also written down: sessions narrated in
+claude.ai are the normal workflow (Claude Code checks and commits the pasted draft); the
+Planned line keeps the plan's stages; forced equipment swaps count as planned, not beyond plan
+(as the 2026-09-22 gym entry already did); `duration_min` is the watch's session total, with
+anything extra flagged in the Review line.
+
+`programme-session` now gives a one-phrase Why per row — training-model section, or reference
+with grade — as a table column rather than prose `[stated, 2026-09-22]`. The old "don't pad
+sessions with evidence" rule narrowed to "fuller evidence only when asked".
