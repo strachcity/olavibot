@@ -49,25 +49,30 @@ Run these checks. If one fails, change the session and say why in a line.
 
 Short intro line (which session, which gym, why this one today). Then a table.
 
+**State why, briefly** `[stated, 2026-09-22]`. Every row gets a **Why**: a short phrase on
+what it's training, pointing to the `training-model.md` section, or to `wiki/references/` with
+its grade (W / I / H) where one exists. One phrase, not a lecture — the reasoning surfaced by
+default, not just the numbers.
+
 **Gym:**
 
-| Block | Exercise | Sets × reps | Load / effort | Notes |
-|---|---|---|---|---|
-| Warm-up | … | | | incl. foot/ankle, low pogos if cleared |
-| Reactive | … | contacts | | Session B, only at the earned level |
-| Anchor | Squat / Deadlift | | % or RPE | straight sets |
-| Superset 1 | … + … | | | |
-| … | | | | |
-| Cool-down | … | | | stretching here, not before |
+| Block | Exercise | Sets × reps | Load / effort | Why | Notes |
+|---|---|---|---|---|---|
+| Warm-up | … | | | | incl. foot/ankle, low pogos if cleared |
+| Reactive | … | contacts | | | Session B, only at the earned level |
+| Anchor | Squat / Deadlift | | % or RPE | | straight sets |
+| Superset 1 | … + … | | | | |
+| … | | | | | |
+| Cool-down | … | | | | stretching here, not before |
 
 **Run:**
 
-| Part | What | Distance | Pace | Ceiling |
-|---|---|---|---|---|
-| Warm-up | 5 min easy + drills (quality days) | | | |
-| Main | … | km | pace / HR / RPE | stop at … |
-| Strides | 4–6 × 20s (if planned) | | relaxed-fast | |
-| Cool-down | … | | | |
+| Part | What | Distance | Pace | Ceiling | Why |
+|---|---|---|---|---|---|
+| Warm-up | 5 min easy + drills (quality days) | | | | |
+| Main | … | km | pace / HR / RPE | stop at … | |
+| Strides | 4–6 × 20s (if planned) | | relaxed-fast | | |
+| Cool-down | … | | | | |
 
 Always give a distance, even a range, for the main part — never just "easy run".
 
@@ -84,4 +89,5 @@ Then always, in two lines:
 - Reactive work is gated on `wiki/tests.md`, not on how he feels. Level 4 needs a seated calf
   raise ≥1× bodyweight on record. No result on record means not cleared.
 - A new movement gets a conservative load and a one-line technique cue.
-- Evidence questions → cite `wiki/references/` with the grade. Don't pad sessions with it.
+- Evidence: one phrase per row in the Why column by default. Fuller evidence only when he
+  asks — then cite `wiki/references/` with the grade.
