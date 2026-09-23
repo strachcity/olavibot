@@ -262,8 +262,9 @@
 const ROOT = "../";
 const FILES = {
   index: "wiki/index.md", log: "wiki/log.md", tests: "wiki/tests.md", history: "wiki/strava-history.md",
-  runs: "raw/history/strava-runs-2019-2026.csv", gym: "raw/history/strava-gym-2019-2026.csv",
 };
+// The Strava exports are named in strava-history.md's "Row data" line, so a renamed export still loads.
+const csvName = (history, kind) => (new RegExp(`strava-${kind}-[\\w-]+\\.csv`).exec(history || "") || [])[0];
 
 // ---------- dates: ISO strings, UTC arithmetic ----------
 const DAY = 864e5;
@@ -437,6 +438,11 @@ async function load() {
   const got = await Promise.allSettled(keys.map(k => get(FILES[k])));
   const T = Object.fromEntries(keys.map((k, i) => [k, got[i].status === "fulfilled" ? got[i].value : null]));
   if (!T.index || !T.log) throw new Error("wiki/index.md and wiki/log.md are required");
+  const [runsCSV, gymCSV] = await Promise.all(["runs", "gym"].map(k => {
+    const f = csvName(T.history, k);
+    return f ? get("raw/history/" + f).catch(() => null) : null;
+  }));
+  T.runs = runsCSV; T.gym = gymCSV;
   S.log = parseLog(T.log);
   const files = [...new Set([...T.index.matchAll(/\((?:wiki\/)?blocks\/(\d{4}-\d{2}-[\w-]+\.md)\)/g)].map(m => m[1]))];
   const texts = await Promise.allSettled(files.map(f => get("wiki/blocks/" + f)));
@@ -526,12 +532,10 @@ function achilles() {
   const last = pts[pts.length - 1];
   const n = pts.length;
   const rising = n >= 3 && pts[n - 1].v > pts[n - 2].v && pts[n - 2].v > pts[n - 3].v;
-  let word = "No scores yet.", cls = "wait";
-  if (last) {
-    if (last.v > 5 || rising) { word = "Hold."; cls = "hot"; }
-    else if (last.v >= 3) { word = "Watch."; cls = "flag"; }
-    else { word = "Quiet."; cls = "ok"; }
-  }
+  // Only the Achilles rule (>5/10, or two rising mornings) earns a word; otherwise just the score.
+  const hold = !!last && (last.v > 5 || rising);
+  const word = !last ? "No scores yet." : hold ? "Hold." : `${last.v} / 10`;
+  const cls = hold ? "hot" : last ? "ok" : "wait";
   return { pts, last, rising, word, cls };
 }
 
@@ -563,7 +567,7 @@ const icons = {
   gym: '<svg class="glyph" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 6v6M15 6v6M5.5 4.5v9M12.5 4.5v9M5.5 9h7"/></svg>',
   rest: '<svg class="glyph" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="9" cy="9" r="5"/></svg>',
 };
-const stLabel = { done: "Done", today: "Today", plan: "Planned", rest: "Rest", missed: "Missed", none: "Unplanned" };
+const stLabel = { done: "Done", today: "Today", plan: "Planned", rest: "Rest", missed: "Not logged", none: "Unplanned" };
 
 function ringSVG(done, planned) {
   const r = 52, C = 2 * Math.PI * r, f = planned ? Math.min(1, done / planned) : 0;
@@ -605,7 +609,7 @@ function sessionHTML(b, d) {
   const title = d.work.length
     ? d.work.map(e => e.type === "run" ? `${e.y.run_type ? e.y.run_type[0].toUpperCase() + e.y.run_type.slice(1) + " run" : "Run"}` : `${e.title.split(" — ")[0]}${e.y.gym ? " · " + e.y.gym + " gym" : ""}`).join(" + ")
     : d.plan || "Rest";
-  const tag = d.st === "done" ? "Done · logged" : d.st === "missed" ? "Missed · not in the log" : d.st === "today" ? (d.planKind && d.planKind !== "rest" ? "Today · planned" : "Today · rest") : d.st === "plan" ? "Planned" : d.st === "none" ? "Not in a weekly plan" : "Rest";
+  const tag = d.st === "done" ? "Done · logged" : d.st === "missed" ? "Planned · not in the log" : d.st === "today" ? (d.planKind && d.planKind !== "rest" ? "Today · planned" : "Today · rest") : d.st === "plan" ? "Planned" : d.st === "none" ? "Not in a weekly plan" : "Rest";
   let stats = [], rows = [], notes = [];
   d.work.forEach(e => {
     const y = e.y;
@@ -677,8 +681,8 @@ function viewNow() {
   const pk = plannedKm(b, n, days);
 
   const a = achilles();
-  const glow = { ok: "#7ef2c1", flag: "#ffc15e", hot: "#ff7a45", wait: "#7c8588" }[a.cls];
-  const spark = a.pts.length >= 2 ? `<div class="spark" aria-label="Morning scores">${a.pts.slice(-14).map(p => `<i title="${dm(p.date)}: ${p.v}/10" style="height:${4 + p.v * 2.2}px;background:${p.v > 5 ? "var(--ember)" : p.v >= 3 ? "var(--warn)" : "var(--mint)"}"></i>`).join("")}</div>` : "";
+  const glow = { ok: "#7ef2c1", hot: "#ff7a45", wait: "#7c8588" }[a.cls];
+  const spark = a.pts.length >= 2 ? `<div class="spark" aria-label="Morning scores">${a.pts.slice(-14).map(p => `<i title="${dm(p.date)}: ${p.v}/10" style="height:${4 + p.v * 2.2}px;background:${p.v > 5 ? "var(--ember)" : "var(--mint)"}"></i>`).join("")}</div>` : "";
 
   // pace shares by year: backyards and hikes excluded, as in strava-history.md
   const years = {};
@@ -793,12 +797,12 @@ function viewNow() {
     <p class="q">Is anything becoming a problem?</p>
     <div class="label">Read from the log · ${esc(b.name)} so far</div>
     <div class="watch">
-      <div class="chip"><div class="k">Adherence</div><div class="v num">${bl.due ? `${bl.due - bl.missed} / ${bl.due}` : "—"}</div><div class="s ${bl.missed ? "flag" : bl.due ? "ok" : "wait"}">${bl.missed ? `${bl.missed} missed` : bl.due ? "On plan" : "Nothing due yet"}</div></div>
-      <div class="chip"><div class="k">Beyond plan</div><div class="v num">${bl.beyond}</div><div class="s ${bl.beyond ? "flag" : "ok"}">${bl.beyond ? "Check the why" : "Clean"}</div></div>
+      <div class="chip"><div class="k">Adherence</div><div class="v num">${bl.due ? `${bl.due - bl.missed} / ${bl.due}` : "—"}</div><div class="s wait">${bl.missed ? `${bl.missed} not logged` : bl.due ? "All logged" : "Nothing due yet"}</div></div>
+      <div class="chip"><div class="k">Beyond plan</div><div class="v num">${bl.beyond}</div><div class="s wait">Sessions over plan</div></div>
       <div class="chip"><div class="k">Achilles next AM</div><div class="v num">${a.last ? `${a.last.v} / 10` : "—"}</div><div class="s ${a.cls}">${a.last ? (a.rising ? "Rising" : dm(a.last.date)) : "None logged"}</div></div>
-      <div class="chip"><div class="k">Enjoyment</div><div class="v num">${bl.enjoy != null ? `${bl.enjoy.toFixed(1)} / 5` : "—"}</div><div class="s ${bl.enjoy == null ? "wait" : bl.enjoy < 3 ? "flag" : "ok"}">${bl.enjoy == null ? "Not reported" : bl.enjoy < 3 ? "Dropping" : "Good"}</div></div>
-      <div class="chip"><div class="k">Last spike</div><div class="v num">${spike ? `×${spike.ratio.toFixed(1)}` : "—"}</div><div class="s ${spike && diffDays(spike.date, TODAY) <= 42 ? "hot" : "wait"}">${spike ? `${esc(spike.note ? spike.note.replace(/^RACE_|^BACKYARD_?/, "").replace(/_/g, " ").trim() || "Race" : "Run")} · ${dm(spike.date)}` : "None found"}</div></div>
-      <div class="chip"><div class="k">Last logged</div><div class="v num">${lastLog ? dm(lastLog) : "—"}</div><div class="s ${stale == null ? "wait" : stale > 4 ? "flag" : "ok"}">${stale == null ? "Nothing logged" : stale > 4 ? `${stale} days ago` : "Up to date"}</div></div>
+      <div class="chip"><div class="k">Enjoyment</div><div class="v num">${bl.enjoy != null ? `${bl.enjoy.toFixed(1)} / 5` : "—"}</div><div class="s wait">${bl.enjoy == null ? "Not reported" : "Average so far"}</div></div>
+      <div class="chip"><div class="k">Last spike (>1.7× 28-day max)</div><div class="v num">${spike ? `×${spike.ratio.toFixed(1)}` : "—"}</div><div class="s wait">${spike ? `${esc(spike.note ? spike.note.replace(/^RACE_|^BACKYARD_?/, "").replace(/_/g, " ").trim() || "Race" : "Run")} · ${dm(spike.date)}` : "None found"}</div></div>
+      <div class="chip"><div class="k">Last logged</div><div class="v num">${lastLog ? dm(lastLog) : "—"}</div><div class="s wait">${stale == null ? "Nothing logged" : stale === 0 ? "Today" : `${stale} day${stale === 1 ? "" : "s"} ago`}</div></div>
     </div>
   </section>`;
 }
@@ -813,7 +817,7 @@ function viewBlock(b) {
     <div class="totals" style="margin-top:16px">
       <div class="stat"><div class="label">Running</div><div class="v num">${bl.km.toFixed(1)}<small>km</small></div><div class="d">${bl.runs} run${bl.runs === 1 ? "" : "s"}</div></div>
       <div class="stat"><div class="label">Gym</div><div class="v num">${bl.gym}<small>sessions</small></div></div>
-      <div class="stat"><div class="label">Adherence</div><div class="v num">${bl.due ? Math.round((bl.due - bl.missed) / bl.due * 100) : "—"}<small>${bl.due ? "%" : ""}</small></div><div class="d">${bl.missed} missed</div></div>
+      <div class="stat"><div class="label">Adherence</div><div class="v num">${bl.due ? Math.round((bl.due - bl.missed) / bl.due * 100) : "—"}<small>${bl.due ? "%" : ""}</small></div><div class="d">${bl.missed} not logged</div></div>
       <div class="stat"><div class="label">Beyond plan</div><div class="v num">${bl.beyond}</div></div>
       <div class="stat"><div class="label">Enjoyment</div><div class="v num">${bl.enjoy != null ? bl.enjoy.toFixed(1) : "—"}<small>${bl.enjoy != null ? "/ 5" : ""}</small></div></div>
     </div>

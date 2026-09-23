@@ -4,8 +4,9 @@ Jack's personal training system, maintained with Claude Code. A durable all-roun
 athlete, a 24-hour backyard ultra as the near target, a sub-3 marathon dormant until a race
 is booked.
 
-**Dashboard:** https://strachcity.github.io/olavibot/dashboard/ — a snapshot, rebuilt by hand at
-block end from `dashboard/index.html`.
+**Dashboard (prototype):** https://strachcity.github.io/olavibot/dashboard/ — reads the wiki
+read-only when it loads. Nothing in the training system depends on it; delete `dashboard/` and
+`.nojekyll` to remove it.
 
 - `CLAUDE.md` — the schema and the rules. Loads every session
 - `wiki/` — the living knowledge base. **Start at `wiki/index.md`**

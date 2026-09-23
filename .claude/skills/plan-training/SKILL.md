@@ -70,9 +70,9 @@ rather than being deliberate.
 
 Write it into the active block file under `## Weekly schedule`, **below** the previous
 weeks' tables — never replace or delete a past week, and don't edit one afterwards to match
-what happened (that's `log.md`'s job; plan + log together show what was missed). Keep the
-format the dashboard reads: a `**Week <n> (<dates>).** Constraint: …` line, then a
-`| Day | Session |` table with days as `Mon 21`. Commit as a `block` entry. A run can split around a gym
+what happened (that's `log.md`'s job; plan + log together show what was missed). Same
+format every week: a `**Week <n> (<dates>).** Constraint: …` line, then a `| Day | Session |`
+table with days as `Mon 21`. Commit as a `block` entry. A run can split around a gym
 session or lengthen over the block — log each leg as its own entry, same date; no format
 change needed for that.
 

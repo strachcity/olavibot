@@ -377,14 +377,9 @@ sensitive, 1/10, okay, not stiff `[stated, 2026-09-23]`. Inside the Achilles rul
 first-steps stiffness, which is the signal that matters. One morning, no trend yet. Session B
 on Thursday stands as planned.
 
-## [2026-09-23] model | Weekly schedules kept, dashboard reads the wiki live
+## [2026-09-23] model | Weekly schedules kept, not replaced
 Agreed with Jack `[stated, 2026-09-23]`: each week's schedule table now stays in the block file,
 added below the previous week rather than replacing it. Without the plan, a past week can only
 show what was done, never what was missed — and adherence is what Foundations is testing.
-`plan-training` and the Foundations block's schedule intro updated to match.
-
-The dashboard (`dashboard/index.html`) now reads `wiki/index.md`, the block files, `log.md`,
-`tests.md`, `strava-history.md` and the Strava CSVs at load time instead of carrying a
-hand-typed snapshot. Blocks appear when they're in the index; weeks appear when they have a
-schedule table or log entries. `.nojekyll` added so Pages serves the markdown raw. Also added
-the Foundations block to `wiki/index.md`, which it was missing.
+`plan-training` and the Foundations block's schedule intro updated to match. Also added the
+Foundations block to `wiki/index.md`, which it was missing.
