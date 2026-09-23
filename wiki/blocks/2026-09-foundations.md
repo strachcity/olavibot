@@ -86,8 +86,9 @@ grip-limiter finding from the gym log.
 
 ## Weekly schedule
 `Running` and `Gym` above fix *what* each week contains; this fixes *which day*. Jack expects
-to shift days around while he finds a schedule that works — this section gets replaced each
-week to match, current week only. Past weeks' actual days are in `log.md`, not here.
+to shift days around while he finds a schedule that works. Each week's table is added below
+the last and kept — the plan as it stood, not edited afterwards to match what happened. What
+actually happened is in `log.md`; the two together show what was missed.
 
 A run can split around a gym session (run to the gym, lift, run home) or get longer as
 distances grow. No format change needed — log each leg as its own `run` entry plus the `gym`

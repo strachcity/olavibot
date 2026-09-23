@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <title>Olavi Dashboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -198,6 +199,43 @@
     .ring { width: 108px; height: 108px; }
     .chart svg { width: 760px; max-width: none; }
   }
+
+  /* ---------- navigation ---------- */
+  .nav { display: flex; gap: 6px; flex-wrap: wrap; }
+  a.pill { text-decoration: none; transition: border-color .15s ease, color .15s ease; }
+  a.pill:hover { border-color: rgba(255,255,255,.35); color: var(--ink); }
+  a.pill:focus-visible, a.strip:focus-visible, a.wk:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; }
+  a.pill[aria-current="page"] { color: var(--mint); border-color: rgba(126,242,193,.45); background: rgba(126,242,193,.08); }
+  a.strip { display: grid; grid-template-columns: auto 1fr; gap: 6px 22px; align-items: baseline; padding: 14px 22px; border-radius: 18px; text-decoration: none; color: inherit; }
+  .strip .bn { font-size: 22px; font-weight: 300; letter-spacing: -.02em; white-space: nowrap; }
+  .strip .bn b { font-weight: 500; }
+  .strip .why { color: var(--ink-2); font-size: 14px; text-wrap: pretty; }
+  .strip .meta { grid-column: 1 / -1; display: flex; gap: 8px; flex-wrap: wrap; }
+  .weeks { display: flex; gap: 6px; flex-wrap: wrap; }
+  .wk-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  a.wk { display: grid; gap: 10px; padding: 16px 18px; border-radius: 18px; text-decoration: none; color: inherit; background: rgba(0,0,0,.2); border: 1px solid rgba(255,255,255,.1); transition: transform .18s ease, border-color .18s ease; }
+  a.wk:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.3); }
+  a.wk.now { border-color: rgba(255,122,69,.55); box-shadow: 0 0 30px -10px rgba(255,122,69,.6); }
+  .wk .n { white-space: nowrap; font-size: 26px; font-weight: 200; letter-spacing: -.02em; line-height: 1; }
+  .wk .dots { display: flex; gap: 5px; }
+  .wk .dots i { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.12); }
+  .wk .dots i.done { background: var(--mint); box-shadow: 0 0 8px rgba(126,242,193,.6); }
+  .wk .dots i.missed { background: transparent; border: 1px solid var(--ember); }
+  .wk .dots i.rest { background: transparent; border: 1px dashed rgba(255,255,255,.18); }
+  .totals { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; }
+  .review-text { color: var(--ink-2); font-size: 14px; white-space: pre-line; max-width: 75ch; }
+  .day.missed { border-color: rgba(255,122,69,.4); border-style: dashed; }
+  .day.missed .st { color: var(--ember); }
+  .spark { display: flex; gap: 4px; align-items: flex-end; height: 26px; margin-top: 10px; }
+  .spark i { width: 7px; border-radius: 2px; background: var(--mint); opacity: .85; }
+  .empty { color: var(--ink-3); font-size: 14px; }
+  .sess-row.one { grid-template-columns: 1fr; }
+  @media (max-width: 1020px) { .totals { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 640px) {
+    a.strip { grid-template-columns: 1fr; }
+    .totals { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (prefers-reduced-motion: reduce) { a.wk { transition: none; } }
 </style>
 
 <div class="sky" aria-hidden="true">
@@ -208,195 +246,156 @@
 <main class="wrap">
   <header class="glass bar">
     <div class="mark"><i></i>olavibot</div>
-    <span class="pill live">Foundations · wk 1 / 6</span>
+    <nav class="nav" id="nav" aria-label="Views"></nav>
     <span class="spacer"></span>
-    <span class="pill">Phase A</span>
-    <span class="pill">Snapshot 23 Sep 2026</span>
+    <span class="pill" id="today-pill"></span>
   </header>
-
-  <!-- 1. What am I doing this week? + 2. Am I progressing? + 5. Achilles -->
-  <section class="hero">
-    <div class="glass week">
-      <div class="headline">
-        <div>
-          <div class="label">This week · 21–27 Sep</div>
-          <h1>Three runs,<br><b>two lifts.</b></h1>
-        </div>
-        <div class="ring" id="ring"></div>
-      </div>
-      <div class="days" id="days" role="group" aria-label="Pick a day to see its session"></div>
-      <div class="sess" id="sess" aria-live="polite"></div>
-      <div class="soft" style="font-size:13px">Ceiling: no 5th run, no second quality session, strides stay strides. Sunday shortens rather than pushes if Saturday leaves heavy legs.</div>
-    </div>
-
-    <div class="side">
-      <div class="glass">
-        <p class="q">Am I progressing?</p>
-        <div class="label">Rolling 4 weeks vs the block's shape</div>
-        <div class="stats" style="margin-top:16px">
-          <div class="stat"><div class="label">Volume</div><div class="v num">18.8<small>km/wk</small></div><div class="d">Plan builds 19 → 27 by wk 5</div></div>
-          <div class="stat"><div class="label">Runs</div><div class="v num">1.5<small>/wk</small></div><div class="d">Target 3, then 4 from wk 3</div></div>
-          <div class="stat"><div class="label">Gym</div><div class="v num">0.2<small>/wk</small></div><div class="d">Target 2 · <span class="up">1 done this week</span></div></div>
-          <div class="stat"><div class="label">Long run</div><div class="v num">10.0<small>km</small></div><div class="d">Longest, last 3 wks · Sat target 8</div></div>
-        </div>
-      </div>
-      <div class="glass achilles">
-        <svg class="tendon" viewBox="0 0 84 132" aria-hidden="true">
-          <defs>
-            <radialGradient id="hot" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#7ef2c1" stop-opacity=".9"/><stop offset="1" stop-color="#7ef2c1" stop-opacity="0"/></radialGradient>
-            <linearGradient id="leg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".02"/><stop offset="1" stop-color="#ffffff" stop-opacity=".22"/></linearGradient>
-          </defs>
-          <path d="M30 0 C28 40 34 70 40 96 C42 106 38 112 26 116 C14 120 8 124 10 128 L74 128 C78 124 74 118 66 114 C58 110 56 100 56 88 C58 60 60 30 58 0 Z" fill="url(#leg)" stroke="rgba(255,255,255,.18)"/>
-          <circle cx="46" cy="100" r="18" fill="url(#hot)"/>
-          <circle cx="46" cy="100" r="3.5" fill="#7ef2c1"/>
-        </svg>
-        <div>
-          <div class="label">Achilles · morning signal</div>
-          <div class="ach-big">Quiet.</div>
-          <div class="soft" style="font-size:13px;margin-top:4px">“Currently okay” — stated 21 Sep. Next morning after Tue’s gym: 1/10, a bit sensitive, not stiff.</div>
-          <div class="rules">
-            <span class="pill">Load ≤5/10</span><span class="pill">Settled by AM</span><span class="pill">2 rising AMs → hold</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. Am I running the right way? + 4. Capacity -->
-  <section class="mid">
-    <div class="glass">
-      <p class="q">Am I running the right way?</p>
-      <div class="label">Share of running time by pace · races excluded</div>
-      <div class="grey-head">
-        <div class="big num">54%</div>
-        <p>of 2026 running sits in the grey zone, 4:45–5:15/km. It doubled after Florence and took the place of quality, not easy. The dashed line is the ~80% easy target — never met in any year.</p>
-      </div>
-      <div class="years" id="years"></div>
-      <div class="legend">
-        <span style="--c:var(--easy)">Easy ≥5:30</span>
-        <span style="--c:var(--steady)">Steady 5:15–5:30</span>
-        <span style="--c:var(--grey)">Grey 4:45–5:15</span>
-        <span style="--c:var(--hard)">Hard &lt;4:45</span>
-      </div>
-    </div>
-
-    <div class="glass">
-      <p class="q">How is capacity changing?</p>
-      <div class="label">Test battery · baseline pending</div>
-      <div class="countdown"><strong class="num" id="cd">39</strong><span class="soft">days to the first baseline — Foundations wk 6</span></div>
-      <div class="cap-grid">
-        <div class="lock"><div class="t">Easy pace @ fixed HR</div><div class="v">— · wk 6</div></div>
-        <div class="lock"><div class="t">Threshold 3×10 min</div><div class="v">— · wk 6</div></div>
-        <div class="lock"><div class="t">5k</div><div class="v">— · wk 6</div></div>
-        <div class="lock"><div class="t">Squat / deadlift e1RM</div><div class="v">— · wk 6</div></div>
-        <div class="lock"><div class="t">Seated calf × BW</div><div class="v">gate: ≥1.0 for Reactive 4</div></div>
-        <div class="lock"><div class="t">Heel-raise symmetry</div><div class="v">gate: ≥80–90%</div></div>
-      </div>
-      <div class="bests">
-        <div class="best"><div class="v num">3:13:20</div><div class="t">Marathon · Florence ’24</div></div>
-        <div class="best"><div class="v num">1:29:09</div><div class="t">Half · ’25</div></div>
-        <div class="best"><div class="v num">17:55</div><div class="t">5k · track ’25</div></div>
-        <div class="best"><div class="v num">127.5</div><div class="t">km backyard · ’26</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Season bars -->
-  <section class="glass">
-    <div class="season-head">
-      <div>
-        <p class="q">Fifty-two weeks</p>
-        <div class="label">Weekly km by pace band · dots are gym sessions</div>
-      </div>
-      <div class="meta">
-        <span>2026 avg <b class="num">33.6 km/wk</b></span>
-        <span>Longest ’26 <b class="num">42.9 km</b></span>
-        <span>Gym ’26 <b class="num">0.95/wk</b></span>
-      </div>
-    </div>
-    <div class="chart" id="chart"></div>
-  </section>
-
-  <!-- 5. Is anything becoming a problem? -->
-  <section class="glass">
-    <p class="q">Is anything becoming a problem?</p>
-    <div class="label">Read from the log · Foundations so far</div>
-    <div class="watch">
-      <div class="chip"><div class="k">Adherence</div><div class="v num">2 / 2</div><div class="s ok">On plan</div></div>
-      <div class="chip"><div class="k">Beyond plan</div><div class="v num">0</div><div class="s ok">Clean</div></div>
-      <div class="chip"><div class="k">Achilles next AM</div><div class="v num">1 / 10</div><div class="s ok">Not stiff · 23 Sep</div></div>
-      <div class="chip"><div class="k">Enjoyment</div><div class="v">—</div><div class="s wait">Not reported</div></div>
-      <div class="chip"><div class="k">Last spike</div><div class="v num">×5.7</div><div class="s hot">Sydney · 30 Aug</div></div>
-      <div class="chip"><div class="k">Shoulder press</div><div class="v num">14 kg</div><div class="s flag">Near failure L</div></div>
-    </div>
-  </section>
-
-  <footer>
-    <span>Snapshot, not live · rebuilt by hand at block end</span>
-    <span>Strava to 21 Sep 2026 · wiki/log.md to 23 Sep 2026</span>
-  </footer>
+  <div id="strip"></div>
+  <div id="view" style="display:grid;gap:16px"><section class="glass"><div class="empty">Loading the wiki…</div></section></div>
+  <footer id="foot"></footer>
 </main>
 
 <div class="tip" id="tip" hidden></div>
 
 <script>
-// ---- Snapshot data (regenerate at block end) ----
-const WEEK = [
-  { d: "Mon", n: 21, what: "Easy 6.9 km @ 5:50", st: "done", kind: "run",
-    title: "Easy run", tag: "Done · Strava",
-    stats: [["Distance", "6.92 km"], ["Pace", "5:50 /km"], ["Moving", "40:24"], ["Avg HR", "140"]],
-    note: "Slow end of the easy band, right where a rebuild week should sit." },
-  { d: "Tue", n: 22, what: "Session A · flat gym", st: "done", kind: "gym",
-    title: "Session A · flat gym", tag: "Done · logged",
-    stats: [["Watch", "81 min"], ["Achilles next AM", "1 / 10"]],
-    rows: [
-      ["Back squat", "bar×10 → 50×8 → 65×5 → 75×3, then 3×5 @ 80 kg"],
-      ["Bulgarian split squat", "3×8/leg @ 14 kg DBs"],
-      ["Pallof press", "3×10/side @ 9.1 kg"],
-      ["Weighted march", "3×30 s/leg @ 16 kg · swap for banded march"],
-      ["Single-arm DB row", "3×8/side @ 18 kg · swap for pulldown"],
-      ["DB shoulder press", "3×10 @ 14 kg standing · last set near failure, left"],
-    ],
-    note: "Next time seat the press or drop to 12 kg to keep reps in reserve." },
-  { d: "Wed", n: 23, what: "Rest — busy evening", st: "today", kind: "rest",
-    title: "Rest", tag: "Today",
-    stats: [["Achilles this AM", "1 / 10"], ["Stiffness", "None"]],
-    note: "Busy evening. Session B is tomorrow." },
-  { d: "Thu", n: 24, what: "Session B · gym", st: "plan", kind: "gym",
-    title: "Session B · full gym", tag: "Planned · loads set on the day",
-    rows: [
-      ["Reactive", "Level 1 isometric seated calf holds, fresh, before the anchor"],
-      ["Conventional deadlift", "Odd-week anchor · RPE-capped, straps on top sets"],
-      ["Calf, heavy slow", "Bent-knee and straight-knee"],
-      ["Bench or DB press", "Superset with the calf work"],
-      ["Copenhagen plank", "Odd week · superset with the row · the block's one new lift"],
-      ["Barbell or single-arm DB row", "Upper pull"],
-    ],
-    note: "Warm-up and cool-down, 5–10 min each." },
-  { d: "Fri", n: 25, what: "Rest — busy evening", st: "rest", kind: "rest",
-    title: "Rest", tag: "Planned",
-    note: "Busy evening. Legs fresh for the weekend's back-to-back runs." },
-  { d: "Sat", n: 26, what: "Long 8 km, easy", st: "plan", kind: "run",
-    title: "Long run", tag: "Planned",
-    stats: [["Distance", "8 km"], ["Pace", "5:30–6:00 /km or slower"], ["Effort", "RPE ≤4"]],
-    note: "Varied terrain if convenient. Conversational the whole way; the ceiling matters more than the number." },
-  { d: "Sun", n: 27, what: "Easy 5 km", st: "plan", kind: "run",
-    title: "Easy run", tag: "Planned",
-    stats: [["Distance", "5 km"], ["Pace", "5:30–6:00 /km"], ["Effort", "RPE ≤4"]],
-    note: "Back-to-back with Saturday. Shorten it rather than push if the legs are heavy." },
-];
-const WEEK_KM = { done: 6.9, planned: 19.9 };
+// Everything on this page is read from the repo at load time. Nothing here is hand-typed data.
+const ROOT = "../";
+const FILES = {
+  index: "wiki/index.md", log: "wiki/log.md", tests: "wiki/tests.md", history: "wiki/strava-history.md",
+};
+// The Strava exports are named in strava-history.md's "Row data" line, so a renamed export still loads.
+const csvName = (history, kind) => (new RegExp(`strava-${kind}-[\\w-]+\\.csv`).exec(history || "") || [])[0];
 
-// Share of running time, from strava-history.md pace table (races and hikes excluded)
-const YEARS = [
-  { y: 2023, easy: 31.1, steady: 18.1, grey: 26.0, hard: 24.7 },
-  { y: 2024, easy: 16.2, steady: 20.6, grey: 28.4, hard: 34.7 },
-  { y: 2025, easy: 16.1, steady: 16.6, grey: 56.1, hard: 11.3 },
-  { y: 2026, easy: 20.9, steady: 15.3, grey: 53.9, hard: 9.9 },
-];
+// ---------- dates: ISO strings, UTC arithmetic ----------
+const DAY = 864e5;
+const ms = d => Date.parse(d + "T00:00:00Z");
+const iso = t => new Date(t).toISOString().slice(0, 10);
+const addDays = (d, n) => iso(ms(d) + n * DAY);
+const diffDays = (a, b) => Math.round((ms(b) - ms(a)) / DAY);
+const mondayOf = d => addDays(d, -((new Date(ms(d)).getUTCDay() + 6) % 7));
+const fmt = (d, o) => new Date(ms(d)).toLocaleDateString("en-GB", { timeZone: "UTC", ...o });
+const dm = d => fmt(d, { day: "numeric", month: "short" });
+const DOW = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const TODAY = (() => {
+  const q = new URLSearchParams(location.search).get("today");
+  if (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) return q;
+  const n = new Date();
+  return `${n.getFullYear()}-${String(n.getMonth() + 1).padStart(2, "0")}-${String(n.getDate()).padStart(2, "0")}`;
+})();
 
-const WEEKS = [{"w":"2025-09-29","easy":0,"steady":0,"grey":8.6,"hard":10.5,"race":0,"gym":2},{"w":"2025-10-06","easy":0,"steady":22.0,"grey":15.6,"hard":0,"race":0,"gym":1},{"w":"2025-10-13","easy":15.0,"steady":0,"grey":8.2,"hard":5.8,"race":0,"gym":1},{"w":"2025-10-20","easy":0,"steady":15.0,"grey":13.1,"hard":0,"race":0,"gym":1},{"w":"2025-10-27","easy":0,"steady":0,"grey":31.5,"hard":0,"race":0,"gym":1},{"w":"2025-11-03","easy":0,"steady":0,"grey":31.0,"hard":0,"race":0,"gym":1},{"w":"2025-11-10","easy":0,"steady":18.2,"grey":8.0,"hard":5.0,"race":0,"gym":1},{"w":"2025-11-17","easy":0,"steady":14.2,"grey":16.5,"hard":8.1,"race":0,"gym":1},{"w":"2025-11-24","easy":16.3,"steady":14.5,"grey":5.1,"hard":0,"race":0,"gym":1},{"w":"2025-12-01","easy":0,"steady":0,"grey":20.9,"hard":0,"race":0,"gym":1},{"w":"2025-12-08","easy":0,"steady":0,"grey":22.0,"hard":5.4,"race":0,"gym":1},{"w":"2025-12-15","easy":5.6,"steady":10.0,"grey":5.0,"hard":7.2,"race":0,"gym":1},{"w":"2025-12-22","easy":0,"steady":11.0,"grey":15.0,"hard":0,"race":0,"gym":2},{"w":"2025-12-29","easy":11.1,"steady":0,"grey":19.4,"hard":0,"race":0,"gym":0},{"w":"2026-01-05","easy":0,"steady":0,"grey":25.1,"hard":5.0,"race":0,"gym":2},{"w":"2026-01-12","easy":5.7,"steady":0,"grey":25.3,"hard":0,"race":0,"gym":1},{"w":"2026-01-19","easy":0,"steady":10.0,"grey":29.0,"hard":0,"race":0,"gym":1},{"w":"2026-01-26","easy":0,"steady":0,"grey":45.8,"hard":0,"race":0,"gym":1},{"w":"2026-02-02","easy":0,"steady":24.0,"grey":22.8,"hard":0,"race":0,"gym":1},{"w":"2026-02-09","easy":0,"steady":7.7,"grey":37.4,"hard":0,"race":0,"gym":2},{"w":"2026-02-16","easy":7.7,"steady":10.1,"grey":13.0,"hard":15.7,"race":0,"gym":2},{"w":"2026-02-23","easy":7.9,"steady":7.6,"grey":22.1,"hard":7.2,"race":0,"gym":1},{"w":"2026-03-02","easy":8.1,"steady":15.2,"grey":12.5,"hard":5.2,"race":0,"gym":1},{"w":"2026-03-09","easy":0,"steady":0,"grey":10.0,"hard":0,"race":0,"gym":0},{"w":"2026-03-16","easy":0,"steady":7.5,"grey":11.6,"hard":17.9,"race":0,"gym":1},{"w":"2026-03-23","easy":19.9,"steady":0,"grey":16.2,"hard":6.1,"race":0,"gym":0},{"w":"2026-03-30","easy":14.5,"steady":0,"grey":3.0,"hard":22.6,"race":0,"gym":1},{"w":"2026-04-06","easy":0,"steady":20.0,"grey":22.1,"hard":0,"race":0,"gym":0},{"w":"2026-04-13","easy":8.0,"steady":0,"grey":40.1,"hard":0,"race":0,"gym":2},{"w":"2026-04-20","easy":8.0,"steady":3.5,"grey":48.6,"hard":0,"race":0,"gym":1},{"w":"2026-04-27","easy":25.0,"steady":12.0,"grey":13.6,"hard":0,"race":0,"gym":1},{"w":"2026-05-04","easy":5.1,"steady":0,"grey":24.2,"hard":21.1,"race":0,"gym":1},{"w":"2026-05-11","easy":16.0,"steady":0,"grey":18.3,"hard":6.0,"race":0,"gym":0},{"w":"2026-05-18","easy":11.3,"steady":0,"grey":12.0,"hard":8.0,"race":0,"gym":0},{"w":"2026-05-25","easy":5.2,"steady":0,"grey":0,"hard":0,"race":127.5,"gym":1,"note":"Macyard backyard"},{"w":"2026-06-01","easy":0,"steady":0,"grey":6.0,"hard":0,"race":0,"gym":1},{"w":"2026-06-08","easy":0,"steady":20.0,"grey":0,"hard":7.6,"race":0,"gym":1},{"w":"2026-06-15","easy":0,"steady":0,"grey":25.6,"hard":6.0,"race":0,"gym":0},{"w":"2026-06-22","easy":11.1,"steady":3.0,"grey":29.4,"hard":0,"race":0,"gym":1},{"w":"2026-06-29","easy":0,"steady":3.1,"grey":37.6,"hard":0,"race":0,"gym":2},{"w":"2026-07-06","easy":0,"steady":0,"grey":0,"hard":0,"race":0,"gym":2},{"w":"2026-07-13","easy":0,"steady":9.2,"grey":5.8,"hard":0,"race":0,"gym":1},{"w":"2026-07-20","easy":0,"steady":4.3,"grey":5.0,"hard":0,"race":0,"gym":1},{"w":"2026-07-27","easy":8.3,"steady":0,"grey":7.5,"hard":0,"race":0,"gym":0},{"w":"2026-08-03","easy":0,"steady":0,"grey":3.0,"hard":0,"race":0,"gym":2},{"w":"2026-08-10","easy":11.5,"steady":0,"grey":7.5,"hard":0,"race":0,"gym":2},{"w":"2026-08-17","easy":6.0,"steady":6.0,"grey":0,"hard":0,"race":0,"gym":2},{"w":"2026-08-24","easy":3.2,"steady":0,"grey":6.0,"hard":0,"race":42.9,"gym":0,"note":"Sydney marathon"},{"w":"2026-08-31","easy":0,"steady":0,"grey":0,"hard":0,"race":0,"gym":0},{"w":"2026-09-07","easy":10.0,"steady":0,"grey":0,"hard":0,"race":0,"gym":0},{"w":"2026-09-14","easy":7.1,"steady":6.0,"grey":5.8,"hard":0,"race":0,"gym":1},{"w":"2026-09-21","easy":6.9,"steady":0,"grey":0,"hard":0,"race":0,"gym":1,"note":"This week, so far"}];
+// ---------- text helpers ----------
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+const plain = s => String(s ?? "").replace(/`\[[^\]]*\]`/g, "").replace(/\*\*|`/g, "").replace(/\s+/g, " ").trim();
+const WORDS = ["No", "One", "Two", "Three", "Four", "Five", "Six", "Seven"];
+const paceStr = s => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, "0")}`;
+const paceSec = p => { const m = /^(\d+):(\d{2})$/.exec(String(p || "")); return m ? +m[1] * 60 + +m[2] : null; };
+function section(text, name) {
+  const m = new RegExp(`^## ${name}[^\\n]*\\n([\\s\\S]*?)(?=^## |(?![\\s\\S]))`, "m").exec(text);
+  return m ? m[1] : "";
+}
 
+// ---------- parsers ----------
+function parseLog(text) {
+  return text.split(/^## \[/m).slice(1).map(chunk => {
+    const h = /^(\d{4}-\d{2}-\d{2})\] (\w+) \| (.*)/.exec(chunk);
+    if (!h) return null;
+    const e = { date: h[1], type: h[2], title: h[3].trim(), y: {}, lines: {} };
+    const y = /```yaml\n([\s\S]*?)```/.exec(chunk);
+    if (y) y[1].split("\n").forEach(l => {
+      const m = /^(\w+):\s*([^#]*)/.exec(l);
+      if (!m) return;
+      const v = m[2].trim();
+      e.y[m[1]] = /^-?\d+(\.\d+)?$/.test(v) ? +v : v;
+    });
+    let key = null;
+    chunk.split("\n").forEach(l => {
+      const m = /^- (Planned|Done|Beyond plan|Capacity|Review):\s*(.*)/.exec(l);
+      if (m) { key = m[1]; e.lines[key] = m[2]; }
+      else if (key && /^\s{2,}\S/.test(l)) e.lines[key] += " " + l.trim();
+      else key = null;
+    });
+    return e;
+  }).filter(Boolean);
+}
+
+function parseBlock(file, text) {
+  const d = /Dates:\s*(\d{4}-\d{2}-\d{2})\s*→\s*(\d{4}-\d{2}-\d{2})(?:\s*\((\d+) weeks?\))?(?:.*?Phase:\s*([^·\n]+))?(?:.*?Status:\s*(\w+))?/.exec(text);
+  if (!d) return null;
+  const b = {
+    id: file.replace(/\.md$/, ""), file,
+    name: (/^# Block:\s*(.+)$/m.exec(text) || [, file])[1].trim(),
+    start: d[1], end: d[2], phase: (d[4] || "").trim(), status: (d[5] || "").trim(),
+  };
+  b.weeks = +d[3] || Math.ceil((diffDays(b.start, b.end) + 1) / 7);
+  const emph = plain(section(text, "Emphasis"));
+  b.why = (/^.+?[.!?](?=\s|$)/.exec(emph) || [emph])[0];
+  b.ceiling = plain((/^Ceiling:\s*(.+)$/m.exec(text) || [, ""])[1]);
+  // Running targets: | Week | Run | Distance | ...
+  b.targets = [];
+  section(text, "Running").split("\n").forEach(l => {
+    const m = /^\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|/.exec(l);
+    if (m) b.targets.push({ week: +m[1], run: m[2], km: /km/.test(m[3]) ? parseFloat(m[3]) : null });
+  });
+  // Gym sessions: **Session X** then a numbered list
+  b.sessions = {};
+  const gym = section(text, "Gym");
+  for (const m of gym.matchAll(/\*\*Session ([A-Z])\*\*\n((?:\d+\..*(?:\n|$))+)/g)) {
+    b.sessions[m[1]] = m[2].trim().split("\n").map(l => {
+      const t = plain(l.replace(/^\d+\.\s*/, ""));
+      const i = t.indexOf(" — ");
+      return i > 0 ? [t.slice(0, i), t.slice(i + 3)] : [t, ""];
+    });
+  }
+  // Weekly schedule: **Week N (dates).** Constraint… then | Day | Session |
+  b.schedule = {};
+  const sched = section(text, "Weekly schedule");
+  const heads = [...sched.matchAll(/\*\*Week (\d+)[^*]*\*\*([^\n]*)/g)];
+  heads.forEach((m, i) => {
+    const body = sched.slice(m.index, i + 1 < heads.length ? heads[i + 1].index : undefined);
+    const days = {};
+    body.split("\n").forEach(l => {
+      const r = /^\|\s*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\w*\.?\s*\d*\s*\|\s*(.+?)\s*\|\s*$/.exec(l);
+      if (r) days[r[1]] = plain(r[2]);
+    });
+    b.schedule[+m[1]] = { note: plain(m[2]), days };
+  });
+  b.review = b.status === "reviewed" ? section(text, "Review").trim() : "";
+  return b;
+}
+
+function parseCSV(text) {
+  const [head, ...rows] = text.trim().split("\n");
+  const keys = head.split(",");
+  return rows.map(r => { const v = r.split(","); return Object.fromEntries(keys.map((k, i) => [k, v[i] ?? ""])); });
+}
+
+function parseBests(text) {
+  const rows = section(text, "Races and bests").split("\n")
+    .map(l => l.split("|").map(c => c.trim())).filter(c => c.length > 4 && !/^(Event|-+)$/.test(c[1]))
+    .map(c => ({ ev: c[1], date: c[2], res: c[3] }));
+  const yr = d => "’" + ((/(\d{4})\s*$/.exec(d) || [, ""])[1]).slice(2);
+  const out = [];
+  const mar = rows.find(r => /marathon/i.test(r.ev) && /PB/.test(r.res));
+  if (mar) out.push([plain(mar.res).replace(/\s*\(PB\)/, ""), `Marathon · ${mar.ev.replace(/\s*marathon/i, "")} ${yr(mar.date)}`]);
+  const half = rows.find(r => /^half/i.test(r.ev));
+  if (half) { const t = half.res.split("/").map(s => s.trim()).sort()[0]; out.push([t, `Half ${yr(half.date)}`]); }
+  const k5 = rows.find(r => /^5k/i.test(r.ev));
+  if (k5) out.push([plain(k5.res).replace(/\s*\(.*\)/, ""), `5k ${yr(k5.date)}`]);
+  const by = rows.filter(r => /backyard/i.test(r.ev)).map(r => ({ km: parseFloat(plain(r.res)), date: r.date })).sort((a, b) => b.km - a.km)[0];
+  if (by) out.push([String(by.km), `km backyard ${yr(by.date)}`]);
+  return out;
+}
+
+function parseTests(text) {
+  const rows = section(text, "Results").split("\n").filter(l => /^\|/.test(l) && !/^\|\s*-/.test(l))
+    .map(l => l.split("|").slice(1, -1).map(c => c.trim()));
+  if (!rows.length) return null;
+  const [head, ...body] = rows;
+  const cols = head.slice(1).map((h, i) => ({ h, filled: body.some(r => r[i + 1] && !/^[—-]?$/.test(r[i + 1])) }));
+  return { head, body, cols };
+}
+
+// ---------- derived data ----------
 const BANDS = [
   { k: "easy", name: "Easy", c: "#4fd8a0" },
   { k: "steady", name: "Steady", c: "#2f8a70" },
@@ -404,9 +403,155 @@ const BANDS = [
   { k: "hard", name: "Hard", c: "#ff7a45" },
   { k: "race", name: "Race", c: "#f3ece4" },
 ];
-const NS = "http://www.w3.org/2000/svg";
-const el = (tag, attrs = {}, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
-const tip = document.getElementById("tip");
+const bandOf = sPerKm => sPerKm < 285 ? "hard" : sPerKm < 315 ? "grey" : sPerKm < 330 ? "steady" : "easy";
+
+function buildRuns(csv, log) {
+  const runs = csv.map(r => ({ date: r.date, km: +r.dist_m / 1000, sec: +r.mov_s, note: r.note || "" })).filter(r => r.km > 0);
+  const last = runs.reduce((m, r) => r.date > m ? r.date : m, "");
+  log.filter(e => e.type === "run" && e.date > last && +e.y.distance_km > 0).forEach(e => {
+    const km = +e.y.distance_km, p = paceSec(e.y.avg_pace);
+    runs.push({ date: e.date, km, sec: p ? p * km : (+e.y.duration_min || 0) * 60, note: e.y.run_type === "race" ? "RACE" : "" });
+  });
+  runs.sort((a, b) => a.date < b.date ? -1 : 1);
+  return { runs: runs.filter(r => !/EXCLUDE/.test(r.note)), csvTo: last };
+}
+function buildGym(csv, log) {
+  const dates = csv.map(r => r.date);
+  const last = dates.reduce((m, d) => d > m ? d : m, "");
+  log.filter(e => e.type === "gym" && e.date > last).forEach(e => dates.push(e.date));
+  return dates.sort();
+}
+const isRace = r => /^(BACKYARD|RACE)/.test(r.note);
+
+// ---------- app ----------
+const $ = id => document.getElementById(id);
+const S = {};
+
+async function get(path) {
+  const r = await fetch(ROOT + path, { cache: "no-cache" });
+  if (!r.ok) throw new Error(`${path} (${r.status})`);
+  return r.text();
+}
+
+async function load() {
+  const keys = Object.keys(FILES);
+  const got = await Promise.allSettled(keys.map(k => get(FILES[k])));
+  const T = Object.fromEntries(keys.map((k, i) => [k, got[i].status === "fulfilled" ? got[i].value : null]));
+  if (!T.index || !T.log) throw new Error("wiki/index.md and wiki/log.md are required");
+  const [runsCSV, gymCSV] = await Promise.all(["runs", "gym"].map(k => {
+    const f = csvName(T.history, k);
+    return f ? get("raw/history/" + f).catch(() => null) : null;
+  }));
+  T.runs = runsCSV; T.gym = gymCSV;
+  S.log = parseLog(T.log);
+  const files = [...new Set([...T.index.matchAll(/\((?:wiki\/)?blocks\/(\d{4}-\d{2}-[\w-]+\.md)\)/g)].map(m => m[1]))];
+  const texts = await Promise.allSettled(files.map(f => get("wiki/blocks/" + f)));
+  S.blocks = files.map((f, i) => texts[i].status === "fulfilled" ? parseBlock(f, texts[i].value) : null)
+    .filter(Boolean).sort((a, b) => a.start < b.start ? -1 : 1);
+  S.active = S.blocks.find(b => b.status === "active") || S.blocks.find(b => b.start <= TODAY && TODAY <= b.end) || S.blocks[S.blocks.length - 1];
+  const R = buildRuns(T.runs ? parseCSV(T.runs) : [], S.log);
+  S.runs = R.runs; S.csvTo = R.csvTo;
+  S.gym = buildGym(T.gym ? parseCSV(T.gym) : [], S.log);
+  S.tests = T.tests ? parseTests(T.tests) : null;
+  S.bests = T.history ? parseBests(T.history) : [];
+}
+
+// Blocks & weeks
+const weekStart = (b, n) => addDays(b.start, (n - 1) * 7);
+const weekOf = (b, d) => d < b.start || d > b.end ? null : Math.floor(diffDays(b.start, d) / 7) + 1;
+const entriesOn = d => S.log.filter(e => e.date === d && ["run", "gym", "rest"].includes(e.type));
+function weeksWithData(b) {
+  const out = [];
+  for (let n = 1; n <= b.weeks; n++) {
+    const s = weekStart(b, n), e = addDays(s, 6);
+    if (b.schedule[n] || S.log.some(x => ["run", "gym", "rest"].includes(x.type) && x.date >= s && x.date <= e)) out.push(n);
+  }
+  return out;
+}
+function kindOf(text) {
+  if (!text) return null;
+  if (/^rest/i.test(text)) return "rest";
+  if (/gym|session [a-z]\b/i.test(text)) return "gym";
+  if (/easy|long|run|threshold|test|5k|stride|tempo/i.test(text)) return "run";
+  return null;
+}
+const planShort = t => t.replace(/\s*[—-]\s*done\b.*$/i, "").replace(/✅/g, "").trim();
+function buildWeek(b, n) {
+  const s = weekStart(b, n), sch = b.schedule[n];
+  return DOW.map((dow, i) => {
+    const date = addDays(s, i);
+    const plan = sch?.days[dow] ? planShort(sch.days[dow]) : null;
+    const entries = entriesOn(date);
+    const work = entries.filter(e => e.type !== "rest");
+    const planKind = kindOf(plan);
+    const kind = work.some(e => e.type === "gym") ? "gym" : work.length ? "run" : planKind || "rest";
+    let st;
+    if (work.length) st = "done";
+    else if (date === TODAY) st = "today";
+    else if (!sch) st = "none";
+    else if (!planKind || planKind === "rest") st = "rest";
+    else if (date < TODAY) st = "missed";
+    else st = "plan";
+    const what = work.length
+      ? work.map(e => e.type === "run" ? `${e.y.distance_km} km @ ${e.y.avg_pace}` : `${e.title.split(" — ")[0]}${e.y.gym ? " · " + e.y.gym : ""}`).join(" + ")
+      : plan ? plan.replace(/\s*@.*$/, "") : "—";
+    return { date, dow, plan, planKind, entries, work, kind, st, what, isToday: date === TODAY };
+  });
+}
+const plannedKm = (b, n, days) => {
+  const t = b.targets.filter(x => x.week === n && x.km);
+  if (t.length) return t.reduce((a, x) => a + x.km, 0);
+  return days.reduce((a, d) => a + (d.plan && d.planKind === "run" ? parseFloat((/([\d.]+)\s*km/.exec(d.plan) || [, 0])[1]) : 0), 0);
+};
+const doneKm = days => days.reduce((a, d) => a + d.work.filter(e => e.type === "run").reduce((x, e) => x + (+e.y.distance_km || 0), 0), 0);
+
+function blockStats(b, upTo = TODAY) {
+  const weeks = weeksWithData(b);
+  let due = 0, done = 0, missed = 0;
+  weeks.forEach(n => buildWeek(b, n).forEach(d => {
+    if (d.date > upTo) return;
+    if (d.work.length) { done++; if (d.planKind && d.planKind !== "rest") due++; }
+    else if (d.st === "missed") { due++; missed++; }
+  }));
+  const ents = S.log.filter(e => ["run", "gym", "rest"].includes(e.type) && e.date >= b.start && e.date <= b.end && e.date <= upTo);
+  const runs = ents.filter(e => e.type === "run");
+  const enjoy = ents.map(e => e.y.enjoyment).filter(v => typeof v === "number");
+  return {
+    weeks, done, due, missed,
+    km: runs.reduce((a, e) => a + (+e.y.distance_km || 0), 0), runs: runs.length,
+    gym: ents.filter(e => e.type === "gym").length,
+    beyond: ents.filter(e => e.y.beyond_plan && e.y.beyond_plan !== "none").length,
+    enjoy: enjoy.length ? enjoy.reduce((a, v) => a + v, 0) / enjoy.length : null,
+    logged: ents.length,
+  };
+}
+
+function achilles() {
+  const pts = S.log.filter(e => typeof e.y.achilles_next_am === "number").map(e => ({ date: addDays(e.date, 1), v: e.y.achilles_next_am }))
+    .sort((a, b) => a.date < b.date ? -1 : 1);
+  const last = pts[pts.length - 1];
+  const n = pts.length;
+  const rising = n >= 3 && pts[n - 1].v > pts[n - 2].v && pts[n - 2].v > pts[n - 3].v;
+  // Only the Achilles rule (>5/10, or two rising mornings) earns a word; otherwise just the score.
+  const hold = !!last && (last.v > 5 || rising);
+  const word = !last ? "No scores yet." : hold ? "Hold." : `${last.v} / 10`;
+  const cls = hold ? "hot" : last ? "ok" : "wait";
+  return { pts, last, rising, word, cls };
+}
+
+function lastSpike() {
+  let spike = null;
+  S.runs.forEach((r, i) => {
+    const from = addDays(r.date, -28);
+    let prev = 0;
+    for (let j = i - 1; j >= 0 && S.runs[j].date >= from; j--) if (S.runs[j].date < r.date) prev = Math.max(prev, S.runs[j].km);
+    if (prev > 0 && r.km > 1.7 * prev) spike = { ...r, ratio: r.km / prev };
+  });
+  return spike;
+}
+
+// ---------- tooltip ----------
+const tip = $("tip");
 function showTip(html, x, y) {
   tip.innerHTML = html; tip.hidden = false;
   const w = tip.offsetWidth, h = tip.offsetHeight, m = 8;
@@ -416,100 +561,330 @@ function showTip(html, x, y) {
 }
 function hideTip() { tip.hidden = true; }
 
-// ---- Week days ----
+// ---------- components ----------
 const icons = {
   run: '<svg class="glyph" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 12c3 0 4-6 7-6s4 6 7 6"/></svg>',
   gym: '<svg class="glyph" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 6v6M15 6v6M5.5 4.5v9M12.5 4.5v9M5.5 9h7"/></svg>',
   rest: '<svg class="glyph" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="9" cy="9" r="5"/></svg>',
 };
-const stLabel = { done: "Done", today: "Today", plan: "Planned", rest: "Rest" };
-const daysEl = document.getElementById("days"), sessEl = document.getElementById("sess");
-daysEl.innerHTML = WEEK.map((w, i) => `
-  <button type="button" class="day ${w.st} ${w.kind === "rest" ? "rest" : ""}" data-i="${i}" aria-pressed="false" aria-controls="sess">
-    <div style="display:flex;justify-content:space-between;align-items:center"><span class="dn">${w.d}</span><span style="color:${w.st === "done" ? "var(--mint)" : "var(--ink-3)"}">${icons[w.kind]}</span></div>
-    <div class="dd num">${w.n}</div>
-    <div class="what">${w.what}</div>
-    <div class="st">${stLabel[w.st]}</div>
-  </button>`).join("");
-function pickDay(i) {
-  const w = WEEK[i];
-  daysEl.querySelectorAll(".day").forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.i === i)));
-  const stats = w.stats ? `<div class="sess-stats">${w.stats.map(([k, v]) => `<div><div class="label">${k}</div><div class="v num">${v}</div></div>`).join("")}</div>` : "";
-  const rows = w.rows ? `<div class="sess-rows">${w.rows.map(([k, v]) => `<div class="sess-row"><b>${k}</b><span>${v}</span></div>`).join("")}</div>` : "";
-  sessEl.innerHTML = `<div class="sess-top"><h2>${w.d} ${w.n} · ${w.title}</h2><span class="label">${w.tag}</span></div>${stats}${rows}${w.note ? `<div class="sess-note">${w.note}</div>` : ""}`;
-  sessEl.style.animation = "none"; sessEl.offsetHeight; sessEl.style.animation = "";
+const stLabel = { done: "Done", today: "Today", plan: "Planned", rest: "Rest", missed: "Not logged", none: "Unplanned" };
+
+function ringSVG(done, planned) {
+  const r = 52, C = 2 * Math.PI * r, f = planned ? Math.min(1, done / planned) : 0;
+  return `<svg viewBox="0 0 120 120"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7ef2c1"/><stop offset="1" stop-color="#d9fff0"/></linearGradient></defs>
+    <circle cx="60" cy="60" r="${r}" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="6"/>
+    <circle cx="60" cy="60" r="${r}" fill="none" stroke="url(#rg)" stroke-width="6" stroke-linecap="round" stroke-dasharray="${C * f} ${C}"/></svg>
+    <div class="c"><strong class="num">${+done.toFixed(1)}</strong><span>${planned ? `of ${+planned.toFixed(1)} km` : "km"}</span></div>`;
 }
-daysEl.addEventListener("click", e => { const b = e.target.closest(".day"); if (b) pickDay(+b.dataset.i); });
-pickDay(Math.max(0, WEEK.findIndex(w => w.st === "today")));
 
-// ---- Ring ----
-(function ring() {
-  const host = document.getElementById("ring");
-  const svg = el("svg", { viewBox: "0 0 120 120" }, host);
-  const defs = el("defs", {}, svg);
-  const g = el("linearGradient", { id: "rg", x1: "0", y1: "0", x2: "1", y2: "1" }, defs);
-  el("stop", { offset: "0", "stop-color": "#7ef2c1" }, g); el("stop", { offset: "1", "stop-color": "#d9fff0" }, g);
-  const r = 52, C = 2 * Math.PI * r, f = WEEK_KM.done / WEEK_KM.planned;
-  el("circle", { cx: 60, cy: 60, r, fill: "none", stroke: "rgba(255,255,255,.1)", "stroke-width": 6 }, svg);
-  el("circle", { cx: 60, cy: 60, r, fill: "none", stroke: "url(#rg)", "stroke-width": 6, "stroke-linecap": "round", "stroke-dasharray": `${C * f} ${C}` }, svg);
-  const c = document.createElement("div"); c.className = "c";
-  c.innerHTML = `<strong class="num">${WEEK_KM.done}</strong><span>of ${WEEK_KM.planned} km</span>`;
-  host.appendChild(c);
-})();
+function weekPanel(b, n, label) {
+  const days = buildWeek(b, n);
+  const runs = days.filter(d => d.kind === "run").length, lifts = days.filter(d => d.kind === "gym").length;
+  const s = weekStart(b, n);
+  const note = [b.schedule[n]?.note, b.ceiling && `Ceiling: ${b.ceiling}`].filter(Boolean).join(" ");
+  return {
+    days,
+    html: `<div class="glass week">
+      <div class="headline">
+        <div>
+          <div class="label">${esc(label)} · ${dm(s)} – ${dm(addDays(s, 6))}</div>
+          <h1>${b.schedule[n] || runs + lifts ? `${WORDS[runs] || runs} run${runs === 1 ? "" : "s"},<br><b>${(WORDS[lifts] || String(lifts)).toLowerCase()} lift${lifts === 1 ? "" : "s"}.</b>` : `Not planned<br><b>yet.</b>`}</h1>
+        </div>
+        <div class="ring">${ringSVG(doneKm(days), plannedKm(b, n, days))}</div>
+      </div>
+      <div class="days" role="group" aria-label="Pick a day to see its session">${days.map((d, i) => `
+        <button type="button" class="day ${d.st}${d.isToday && d.st !== "today" ? " today" : ""}${d.kind === "rest" ? " rest" : ""}" data-i="${i}" aria-pressed="false">
+          <div style="display:flex;justify-content:space-between;align-items:center"><span class="dn">${d.dow}</span><span style="color:${d.st === "done" ? "var(--mint)" : "var(--ink-3)"}">${icons[d.kind]}</span></div>
+          <div class="dd num">${+d.date.slice(8)}</div>
+          <div class="what">${esc(d.what)}</div>
+          <div class="st">${stLabel[d.st]}</div>
+        </button>`).join("")}</div>
+      <div class="sess" aria-live="polite"></div>
+      ${note ? `<div class="soft" style="font-size:13px">${esc(note)}</div>` : ""}
+    </div>`,
+  };
+}
 
-// ---- Year bars ----
-document.getElementById("years").innerHTML = YEARS.map(y => {
-  const segs = ["easy", "steady", "grey", "hard"].map(k => {
-    const b = BANDS.find(b => b.k === k);
-    return `<div class="seg" data-y="${y.y}" data-k="${b.name}" data-v="${y[k]}" style="flex:${y[k]};background:${b.c}"></div>`;
-  }).join("");
-  const total = y.easy + y.steady + y.grey + y.hard;
-  return `<div class="yr"><div class="y">${y.y}</div><div class="track">${segs}<div class="target" style="left:${80 / total * 100}%"></div></div></div>`;
-}).join("");
-document.querySelectorAll(".seg").forEach(s => {
-  s.addEventListener("mousemove", e => showTip(`<div class="h">${s.dataset.y}</div><div class="r"><span>${s.dataset.k}</span><b class="num">${(+s.dataset.v).toFixed(1)}%</b></div>`, e.clientX, e.clientY));
-  s.addEventListener("mouseleave", hideTip);
-});
+function sessionHTML(b, d) {
+  const title = d.work.length
+    ? d.work.map(e => e.type === "run" ? `${e.y.run_type ? e.y.run_type[0].toUpperCase() + e.y.run_type.slice(1) + " run" : "Run"}` : `${e.title.split(" — ")[0]}${e.y.gym ? " · " + e.y.gym + " gym" : ""}`).join(" + ")
+    : d.plan || "Rest";
+  const tag = d.st === "done" ? "Done · logged" : d.st === "missed" ? "Planned · not in the log" : d.st === "today" ? (d.planKind && d.planKind !== "rest" ? "Today · planned" : "Today · rest") : d.st === "plan" ? "Planned" : d.st === "none" ? "Not in a weekly plan" : "Rest";
+  let stats = [], rows = [], notes = [];
+  d.work.forEach(e => {
+    const y = e.y;
+    if (e.type === "run") stats.push(["Distance", y.distance_km != null ? `${y.distance_km} km` : null], ["Pace", y.avg_pace ? `${y.avg_pace} /km` : null], ["Time", y.duration_min ? `${y.duration_min} min` : null]);
+    else stats.push(["Watch", y.duration_min ? `${y.duration_min} min` : null], ["Reactive", y.reactive_level != null ? `L${y.reactive_level}` : null]);
+    stats.push(["RPE", y.rpe], ["Enjoyment", y.enjoyment != null ? `${y.enjoyment} / 5` : null], ["Achilles next AM", typeof y.achilles_next_am === "number" ? `${y.achilles_next_am} / 10` : null]);
+    const done = plain(e.lines.Done || "");
+    if (e.type === "gym") done.split(/(?<=\.)\s+(?=[A-Z])/).forEach(t => t && rows.push([t.replace(/\.$/, "")]));
+    else if (done) notes.push(done);
+    if (y.beyond_plan && y.beyond_plan !== "none") rows.push(["Beyond plan", plain(e.lines["Beyond plan"] || y.beyond_plan)]);
+    if (e.lines.Review) notes.push(plain(e.lines.Review));
+  });
+  if (!d.work.length && d.planKind === "gym") {
+    const k = (/session ([a-z])\b/i.exec(d.plan) || [])[1];
+    if (k && b.sessions[k.toUpperCase()]) rows = b.sessions[k.toUpperCase()];
+  }
+  d.entries.filter(e => e.type === "rest").forEach(e => e.lines.Review && notes.push(plain(e.lines.Review)));
+  if (d.isToday) { const a = achilles(); if (a.last && a.last.date === d.date) stats.unshift(["Achilles this AM", `${a.last.v} / 10`]); }
+  stats = stats.filter(s => s[1] != null && s[1] !== "");
+  return `<div class="sess-top"><h2>${d.dow} ${+d.date.slice(8)} · ${esc(title)}</h2><span class="label">${tag}</span></div>
+    ${stats.length ? `<div class="sess-stats">${stats.map(([k, v]) => `<div><div class="label">${esc(k)}</div><div class="v num">${esc(v)}</div></div>`).join("")}</div>` : ""}
+    ${rows.length ? `<div class="sess-rows">${rows.map(r => r.length > 1 && r[1] ? `<div class="sess-row"><b>${esc(r[0])}</b><span>${esc(r[1])}</span></div>` : `<div class="sess-row one"><span>${esc(r[0])}</span></div>`).join("")}</div>` : ""}
+    ${notes.map(n => `<div class="sess-note">${esc(n)}</div>`).join("")}`;
+}
 
-// ---- 52-week chart ----
-(function chart() {
-  const host = document.getElementById("chart");
+function wireWeek(root, b, days) {
+  const grid = root.querySelector(".days"), panel = root.querySelector(".sess");
+  const pick = i => {
+    grid.querySelectorAll(".day").forEach(x => x.setAttribute("aria-pressed", String(+x.dataset.i === i)));
+    panel.innerHTML = sessionHTML(b, days[i]);
+    panel.style.animation = "none"; panel.offsetHeight; panel.style.animation = "";
+  };
+  grid.addEventListener("click", e => { const x = e.target.closest(".day"); if (x) pick(+x.dataset.i); });
+  const t = days.findIndex(d => d.isToday);
+  const next = days.findIndex(d => d.date > TODAY && d.planKind && d.planKind !== "rest");
+  pick(t >= 0 ? t : next >= 0 ? next : days.reduce((a, d, i) => d.work.length ? i : a, 0));
+}
+
+function stripHTML(b) {
+  const n = weekOf(b, TODAY);
+  const pills = [
+    n ? `Week ${n} of ${b.weeks}` : b.status === "reviewed" ? "Reviewed" : TODAY < b.start ? "Starts " + dm(b.start) : "Finished",
+    `${dm(b.start)} → ${dm(b.end)}`, b.phase && `Phase ${b.phase}`,
+  ].filter(Boolean);
+  return `<a class="glass strip" href="#${b.id}">
+    <div class="bn">${b === S.active ? "Now in " : ""}<b>${esc(b.name)}</b></div>
+    <div class="why">${esc(b.why)}</div>
+    <div class="meta">${pills.map(p => `<span class="pill">${esc(p)}</span>`).join("")}</div>
+  </a>`;
+}
+
+// ---------- views ----------
+function viewNow() {
+  const b = S.active;
+  if (!b) return `<section class="glass"><div class="empty">No block in wiki/index.md yet.</div></section>`;
+  const n = Math.min(Math.max(weekOf(b, TODAY) || (TODAY < b.start ? 1 : b.weeks), 1), b.weeks);
+  const wp = weekPanel(b, n, TODAY >= weekStart(b, n) && TODAY <= addDays(weekStart(b, n), 6) ? "This week" : `Week ${n}`);
+  S.after = root => wireWeek(root.querySelector(".week"), b, wp.days);
+
+  // rolling 4 weeks
+  const from = addDays(TODAY, -27), from21 = addDays(TODAY, -20);
+  const r28 = S.runs.filter(r => r.date >= from && r.date <= TODAY);
+  const g28 = S.gym.filter(d => d >= from && d <= TODAY).length;
+  const long21 = Math.max(0, ...S.runs.filter(r => r.date >= from21 && r.date <= TODAY).map(r => r.km));
+  const days = wp.days;
+  const pRuns = days.filter(d => d.planKind === "run").length, pGym = days.filter(d => d.planKind === "gym").length;
+  const gDone = days.filter(d => d.work.some(e => e.type === "gym")).length;
+  const longT = b.targets.find(t => t.week === n && /long/i.test(t.run) && t.km);
+  const pk = plannedKm(b, n, days);
+
+  const a = achilles();
+  const glow = { ok: "#7ef2c1", hot: "#ff7a45", wait: "#7c8588" }[a.cls];
+  const spark = a.pts.length >= 2 ? `<div class="spark" aria-label="Morning scores">${a.pts.slice(-14).map(p => `<i title="${dm(p.date)}: ${p.v}/10" style="height:${4 + p.v * 2.2}px;background:${p.v > 5 ? "var(--ember)" : "var(--mint)"}"></i>`).join("")}</div>` : "";
+
+  // pace shares by year: backyards and hikes excluded, as in strava-history.md
+  const years = {};
+  S.runs.filter(r => !/^BACKYARD/.test(r.note)).forEach(r => {
+    const y = r.date.slice(0, 4), band = bandOf(r.sec / r.km);
+    years[y] ??= { easy: 0, steady: 0, grey: 0, hard: 0 };
+    years[y][band] += r.sec;
+  });
+  const ys = Object.keys(years).sort().slice(-4).map(y => {
+    const t = years[y], T = t.easy + t.steady + t.grey + t.hard;
+    return { y, easy: t.easy / T * 100, steady: t.steady / T * 100, grey: t.grey / T * 100, hard: t.hard / T * 100 };
+  });
+  const cur = ys[ys.length - 1];
+  const neverMet = ys.every(y => y.easy < 80);
+
+  // tests
+  const T = S.tests;
+  const filled = T ? T.cols.map((c, i) => c.filled ? i : -1).filter(i => i >= 0) : [];
+  const lastCol = filled[filled.length - 1], prevCol = filled[filled.length - 2];
+  const testRows = T ? T.body.filter(r => !/^(Date|Bodyweight|Over-ceiling)/i.test(r[0])).slice(0, 6) : [];
+  const gate = name => /seated calf/i.test(name) ? "gate: ≥1.0× BW for Reactive 4" : /heel raise/i.test(name) ? "gate: ≥80–90% symmetry" : null;
+  const toEnd = diffDays(TODAY, b.end);
+
+  const bl = blockStats(b);
+  const spike = lastSpike();
+  const lastLog = S.log.filter(e => ["run", "gym", "rest", "test"].includes(e.type)).map(e => e.date).sort().pop();
+  const stale = lastLog ? diffDays(lastLog, TODAY) : null;
+  const yr = cur ? cur.y : TODAY.slice(0, 4);
+  const yRuns = S.runs.filter(r => r.date.startsWith(yr));
+  const wksYr = Math.max(1, (diffDays(`${yr}-01-01`, TODAY < `${yr}-12-31` ? TODAY : `${yr}-12-31`) + 1) / 7);
+
+  return `
+  <section class="hero">
+    ${wp.html}
+    <div class="side">
+      <div class="glass">
+        <p class="q">Am I progressing?</p>
+        <div class="label">Rolling 4 weeks vs this week's plan</div>
+        <div class="stats" style="margin-top:16px">
+          <div class="stat"><div class="label">Volume</div><div class="v num">${(r28.reduce((x, r) => x + r.km, 0) / 4).toFixed(1)}<small>km/wk</small></div><div class="d">${pk ? `Plan this week ${+pk.toFixed(1)} km` : "No distance planned"}</div></div>
+          <div class="stat"><div class="label">Runs</div><div class="v num">${(r28.length / 4).toFixed(1)}<small>/wk</small></div><div class="d">Planned this week ${pRuns}</div></div>
+          <div class="stat"><div class="label">Gym</div><div class="v num">${(g28 / 4).toFixed(1)}<small>/wk</small></div><div class="d">Planned ${pGym} · <span class="up">${gDone} done this week</span></div></div>
+          <div class="stat"><div class="label">Long run</div><div class="v num">${long21.toFixed(1)}<small>km</small></div><div class="d">Longest, last 3 wks${longT ? ` · target ${longT.km}` : ""}</div></div>
+        </div>
+      </div>
+      <div class="glass achilles">
+        <svg class="tendon" viewBox="0 0 84 132" aria-hidden="true">
+          <defs>
+            <radialGradient id="hot" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="${glow}" stop-opacity=".9"/><stop offset="1" stop-color="${glow}" stop-opacity="0"/></radialGradient>
+            <linearGradient id="leg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".02"/><stop offset="1" stop-color="#ffffff" stop-opacity=".22"/></linearGradient>
+          </defs>
+          <path d="M30 0 C28 40 34 70 40 96 C42 106 38 112 26 116 C14 120 8 124 10 128 L74 128 C78 124 74 118 66 114 C58 110 56 100 56 88 C58 60 60 30 58 0 Z" fill="url(#leg)" stroke="rgba(255,255,255,.18)"/>
+          <circle cx="46" cy="100" r="18" fill="url(#hot)"/>
+          <circle cx="46" cy="100" r="3.5" fill="${glow}"/>
+        </svg>
+        <div>
+          <div class="label">Achilles · morning signal</div>
+          <div class="ach-big">${a.word}</div>
+          <div class="soft" style="font-size:13px;margin-top:4px">${a.last ? `Morning of ${fmt(a.last.date, { weekday: "short", day: "numeric", month: "short" })}: ${a.last.v}/10.${a.rising ? " Two rising mornings: hold volume, drop the next quality session." : ""} ${a.pts.length} score${a.pts.length === 1 ? "" : "s"} logged.` : "No next-morning scores in the log yet."}</div>
+          ${spark}
+          <div class="rules"><span class="pill">Load ≤5/10</span><span class="pill">Settled by AM</span><span class="pill">2 rising AMs → hold</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mid">
+    <div class="glass">
+      <p class="q">Am I running the right way?</p>
+      <div class="label">Share of running time by pace · backyards and hikes excluded</div>
+      ${cur ? `<div class="grey-head">
+        <div class="big num">${Math.round(cur.grey)}%</div>
+        <p>of ${cur.y} running sits in the grey zone, 4:45–5:15/km. Easy is ${Math.round(cur.easy)}%. The dashed line is the ~80% easy target${neverMet ? ", not met in any year shown" : ""}.</p>
+      </div>
+      <div class="years">${ys.map(y => `<div class="yr"><div class="y">${y.y}</div><div class="track">${["easy", "steady", "grey", "hard"].map(k => {
+        const bd = BANDS.find(x => x.k === k);
+        return `<div class="seg" data-y="${y.y}" data-k="${bd.name}" data-v="${y[k]}" style="flex:${y[k]};background:${bd.c}"></div>`;
+      }).join("")}<div class="target" style="left:80%"></div></div></div>`).join("")}</div>
+      <div class="legend">
+        <span style="--c:var(--easy)">Easy ≥5:30</span><span style="--c:var(--steady)">Steady 5:15–5:30</span>
+        <span style="--c:var(--grey)">Grey 4:45–5:15</span><span style="--c:var(--hard)">Hard &lt;4:45</span>
+      </div>` : `<div class="empty">No running data found.</div>`}
+    </div>
+
+    <div class="glass">
+      <p class="q">How is capacity changing?</p>
+      ${T ? (lastCol == null ? `
+        <div class="label">Test battery · baseline pending</div>
+        <div class="countdown"><strong class="num">${Math.max(0, toEnd)}</strong><span class="soft">days to the first baseline — end of ${esc(b.name)}</span></div>
+        <div class="cap-grid">${testRows.map(r => `<div class="lock"><div class="t">${esc(r[0])}</div><div class="v">${esc(gate(r[0]) || `— · wk ${b.weeks}`)}</div></div>`).join("")}</div>` : `
+        <div class="label">Test battery · ${esc(T.cols[lastCol].h)}</div>
+        <div class="countdown"><strong class="num">${Math.max(0, toEnd)}</strong><span class="soft">days to the next test — end of ${esc(b.name)}</span></div>
+        <div class="cap-grid">${testRows.map(r => `<div class="lock" style="border-style:solid"><div class="t">${esc(r[0])}</div><div class="v" style="color:var(--ink)">${esc(r[lastCol + 1] || "—")}${prevCol != null && r[prevCol + 1] ? ` <span class="muted">· was ${esc(r[prevCol + 1])}</span>` : ""}</div></div>`).join("")}</div>`)
+      : `<div class="empty">wiki/tests.md not found.</div>`}
+      ${S.bests.length ? `<div class="bests">${S.bests.map(([v, t]) => `<div class="best"><div class="v num">${esc(v)}</div><div class="t">${esc(t)}</div></div>`).join("")}</div>` : ""}
+    </div>
+  </section>
+
+  <section class="glass">
+    <div class="season-head">
+      <div><p class="q">Fifty-two weeks</p><div class="label">Weekly km by pace band · dots are gym sessions</div></div>
+      <div class="meta">
+        <span>${yr} avg <b class="num">${(yRuns.reduce((x, r) => x + r.km, 0) / wksYr).toFixed(1)} km/wk</b></span>
+        <span>Longest ’${yr.slice(2)} <b class="num">${Math.max(0, ...yRuns.map(r => r.km)).toFixed(1)} km</b></span>
+        <span>Gym ’${yr.slice(2)} <b class="num">${(S.gym.filter(d => d.startsWith(yr)).length / wksYr).toFixed(2)}/wk</b></span>
+      </div>
+    </div>
+    <div class="chart" id="chart"></div>
+  </section>
+
+  <section class="glass">
+    <p class="q">Is anything becoming a problem?</p>
+    <div class="label">Read from the log · ${esc(b.name)} so far</div>
+    <div class="watch">
+      <div class="chip"><div class="k">Adherence</div><div class="v num">${bl.due ? `${bl.due - bl.missed} / ${bl.due}` : "—"}</div><div class="s wait">${bl.missed ? `${bl.missed} not logged` : bl.due ? "All logged" : "Nothing due yet"}</div></div>
+      <div class="chip"><div class="k">Beyond plan</div><div class="v num">${bl.beyond}</div><div class="s wait">Sessions over plan</div></div>
+      <div class="chip"><div class="k">Achilles next AM</div><div class="v num">${a.last ? `${a.last.v} / 10` : "—"}</div><div class="s ${a.cls}">${a.last ? (a.rising ? "Rising" : dm(a.last.date)) : "None logged"}</div></div>
+      <div class="chip"><div class="k">Enjoyment</div><div class="v num">${bl.enjoy != null ? `${bl.enjoy.toFixed(1)} / 5` : "—"}</div><div class="s wait">${bl.enjoy == null ? "Not reported" : "Average so far"}</div></div>
+      <div class="chip"><div class="k">Last spike (>1.7× 28-day max)</div><div class="v num">${spike ? `×${spike.ratio.toFixed(1)}` : "—"}</div><div class="s wait">${spike ? `${esc(spike.note ? spike.note.replace(/^RACE_|^BACKYARD_?/, "").replace(/_/g, " ").trim() || "Race" : "Run")} · ${dm(spike.date)}` : "None found"}</div></div>
+      <div class="chip"><div class="k">Last logged</div><div class="v num">${lastLog ? dm(lastLog) : "—"}</div><div class="s wait">${stale == null ? "Nothing logged" : stale === 0 ? "Today" : `${stale} day${stale === 1 ? "" : "s"} ago`}</div></div>
+    </div>
+  </section>`;
+}
+
+function viewBlock(b) {
+  const bl = blockStats(b);
+  const cur = weekOf(b, TODAY);
+  return `
+  <section class="glass">
+    <p class="q">${esc(b.name)} so far</p>
+    <div class="label">Read from the log · ${dm(b.start)} → ${dm(TODAY < b.end ? TODAY : b.end)}</div>
+    <div class="totals" style="margin-top:16px">
+      <div class="stat"><div class="label">Running</div><div class="v num">${bl.km.toFixed(1)}<small>km</small></div><div class="d">${bl.runs} run${bl.runs === 1 ? "" : "s"}</div></div>
+      <div class="stat"><div class="label">Gym</div><div class="v num">${bl.gym}<small>sessions</small></div></div>
+      <div class="stat"><div class="label">Adherence</div><div class="v num">${bl.due ? Math.round((bl.due - bl.missed) / bl.due * 100) : "—"}<small>${bl.due ? "%" : ""}</small></div><div class="d">${bl.missed} not logged</div></div>
+      <div class="stat"><div class="label">Beyond plan</div><div class="v num">${bl.beyond}</div></div>
+      <div class="stat"><div class="label">Enjoyment</div><div class="v num">${bl.enjoy != null ? bl.enjoy.toFixed(1) : "—"}<small>${bl.enjoy != null ? "/ 5" : ""}</small></div></div>
+    </div>
+  </section>
+  ${bl.weeks.length ? `<section class="glass">
+    <p class="q">Weeks</p>
+    <div class="label">Only weeks with a plan or a log entry</div>
+    <div class="wk-grid" style="margin-top:14px">${bl.weeks.map(n => {
+      const days = buildWeek(b, n), s = weekStart(b, n);
+      const km = doneKm(days), done = days.filter(d => d.work.length).length;
+      return `<a class="wk${n === cur ? " now" : ""}" href="#${b.id}/w${n}">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span class="n">Week ${n}</span><span class="label">${dm(s)} – ${dm(addDays(s, 6))}</span></div>
+        <div class="dots">${days.map(d => `<i class="${d.st === "done" ? "done" : d.st === "missed" ? "missed" : d.kind === "rest" ? "rest" : ""}" title="${d.dow}: ${stLabel[d.st]}"></i>`).join("")}</div>
+        <div class="soft" style="font-size:13px">${done} session${done === 1 ? "" : "s"} done · ${+km.toFixed(1)} km${n === cur ? " · this week" : ""}</div>
+      </a>`;
+    }).join("")}</div>
+  </section>` : ""}
+  ${b.review ? `<section class="glass"><p class="q">Block review</p><div class="review-text" style="margin-top:10px">${esc(plain(b.review.replace(/\n/g, " ⏎ ")).replace(/ ⏎ /g, "\n"))}</div></section>` : ""}`;
+}
+
+function viewWeek(b, n) {
+  const wp = weekPanel(b, n, `Week ${n}`);
+  S.after = root => wireWeek(root.querySelector(".week"), b, wp.days);
+  return wp.html;
+}
+
+// ---------- charts ----------
+function drawYears(root) {
+  root.querySelectorAll(".seg").forEach(s => {
+    s.addEventListener("mousemove", e => showTip(`<div class="h">${s.dataset.y}</div><div class="r"><span>${s.dataset.k}</span><b class="num">${(+s.dataset.v).toFixed(1)}%</b></div>`, e.clientX, e.clientY));
+    s.addEventListener("mouseleave", hideTip);
+  });
+}
+function drawChart(host) {
+  if (!host) return;
+  const NS = "http://www.w3.org/2000/svg";
+  const el = (tag, attrs = {}, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+  const end = mondayOf(TODAY);
+  const weeks = Array.from({ length: 52 }, (_, i) => ({ w: addDays(end, (i - 51) * 7), easy: 0, steady: 0, grey: 0, hard: 0, race: 0, gym: 0, notes: [] }));
+  const idx = d => { const i = diffDays(weeks[0].w, mondayOf(d)) / 7; return i >= 0 && i < 52 ? i : -1; };
+  S.runs.forEach(r => { const i = idx(r.date); if (i < 0) return; const b = isRace(r) ? "race" : bandOf(r.sec / r.km); weeks[i][b] += r.km; if (isRace(r)) weeks[i].notes.push(r.note.replace(/^RACE_|^BACKYARD_?/, "").replace(/_/g, " ").trim() || "Race"); });
+  S.gym.forEach(d => { const i = idx(d); if (i >= 0) weeks[i].gym++; });
   const W = 1200, H = 260, padL = 34, padR = 8, padT = 16, padB = 46, cap = 60;
   const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Weekly running km over 52 weeks, stacked by pace band" }, host);
-  const defs = el("defs", {}, svg);
-  const glow = el("filter", { id: "glow", x: "-50%", y: "-50%", width: "200%", height: "200%" }, defs);
+  const glow = el("filter", { id: "glow", x: "-50%", y: "-50%", width: "200%", height: "200%" }, el("defs", {}, svg));
   el("feGaussianBlur", { stdDeviation: 6 }, glow);
-  const iw = W - padL - padR, ih = H - padT - padB, n = WEEKS.length, slot = iw / n, bw = Math.max(6, slot - 6);
+  const iw = W - padL - padR, ih = H - padT - padB, slot = iw / 52, bw = Math.max(6, slot - 6);
   const y = v => padT + ih - Math.min(v, cap) / cap * ih;
+  const mono = { fill: "#7c8588", "font-size": 11, "font-family": "IBM Plex Mono, monospace" };
   [0, 20, 40, 60].forEach(t => {
     el("line", { x1: padL, x2: W - padR, y1: y(t), y2: y(t), stroke: "rgba(255,255,255,.07)" }, svg);
-    const tx = el("text", { x: padL - 8, y: y(t) + 4, "text-anchor": "end", fill: "#7c8588", "font-size": 11, "font-family": "IBM Plex Mono, monospace" }, svg);
-    tx.textContent = t;
+    el("text", { x: padL - 8, y: y(t) + 4, "text-anchor": "end", ...mono }, svg).textContent = t;
   });
-  WEEKS.forEach((w, i) => {
-    const x = padL + i * slot + (slot - bw) / 2;
-    const g = el("g", {}, svg);
-    const isNow = i === n - 1;
+  weeks.forEach((w, i) => {
+    const x = padL + i * slot + (slot - bw) / 2, g = el("g", {}, svg), isNow = i === 51;
     if (isNow) el("rect", { x: x - 4, y: padT, width: bw + 8, height: ih, rx: 6, fill: "rgba(126,242,193,.08)" }, g);
     let base = 0;
     const total = BANDS.reduce((s, b) => s + w[b.k], 0);
     BANDS.forEach(b => {
       const v = w[b.k]; if (!v) return;
       const top = y(base + v), bot = y(base);
-      const h = Math.max(1.5, bot - top - 2);
-      el("rect", { x, y: top, width: bw, height: h, rx: 3, fill: b.c, opacity: isNow ? 1 : .9 }, g);
+      el("rect", { x, y: top, width: bw, height: Math.max(1.5, bot - top - 2), rx: 3, fill: b.c, opacity: isNow ? 1 : .9 }, g);
       base += v;
     });
-    if (total > cap) {
-      const t = el("text", { x: x + bw / 2, y: padT - 4, "text-anchor": "middle", fill: "#f3ece4", "font-size": 10.5, "font-family": "IBM Plex Mono, monospace" }, g);
-      t.textContent = Math.round(total) + "↑";
-    }
+    if (total > cap) el("text", { x: x + bw / 2, y: padT - 4, "text-anchor": "middle", ...mono, fill: "#f3ece4", "font-size": 10.5 }, g).textContent = Math.round(total) + "↑";
     for (let k = 0; k < w.gym; k++) el("circle", { cx: x + bw / 2, cy: H - padB + 12 + k * 8, r: 2.6, fill: "#7ef2c1" }, g);
-    const d = new Date(w.w);
-    if (d.getDate() <= 7) {
-      const t = el("text", { x: x + bw / 2, y: H - 6, "text-anchor": "middle", fill: "#7c8588", "font-size": 11, "font-family": "IBM Plex Mono, monospace" }, g);
-      t.textContent = d.toLocaleString("en-GB", { month: "short" });
-    }
+    if (+w.w.slice(8) <= 7) el("text", { x: x + bw / 2, y: H - 6, "text-anchor": "middle", ...mono }, g).textContent = fmt(w.w, { month: "short" });
     if (isNow) {
       el("circle", { cx: x + bw / 2, cy: y(total) - 10, r: 9, fill: "#7ef2c1", opacity: .5, filter: "url(#glow)" }, g);
       el("circle", { cx: x + bw / 2, cy: y(total) - 10, r: 3.5, fill: "#7ef2c1" }, g);
@@ -517,10 +892,48 @@ document.querySelectorAll(".seg").forEach(s => {
     const hit = el("rect", { x: padL + i * slot, y: padT, width: slot, height: ih + 34, fill: "transparent" }, g);
     hit.addEventListener("mousemove", e => {
       const rows = BANDS.filter(b => w[b.k]).map(b => `<div class="r"><span><i style="background:${b.c}"></i>${b.name}</span><b class="num">${w[b.k].toFixed(1)} km</b></div>`).join("");
-      const head = new Date(w.w).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "2-digit" });
-      showTip(`<div class="h">Week of ${head}${w.note ? " · " + w.note : ""}</div>${rows || '<div class="r muted">No running</div>'}<div class="r" style="margin-top:6px;border-top:1px solid rgba(255,255,255,.1);padding-top:6px"><span>Total</span><b class="num">${total.toFixed(1)} km</b></div><div class="r"><span>Gym</span><b class="num">${w.gym}</b></div>`, e.clientX, e.clientY);
+      const note = isNow ? "This week, so far" : w.notes.join(", ");
+      showTip(`<div class="h">Week of ${fmt(w.w, { day: "numeric", month: "short", year: "2-digit" })}${note ? " · " + esc(note) : ""}</div>${rows || '<div class="r muted">No running</div>'}<div class="r" style="margin-top:6px;border-top:1px solid rgba(255,255,255,.1);padding-top:6px"><span>Total</span><b class="num">${total.toFixed(1)} km</b></div><div class="r"><span>Gym</span><b class="num">${w.gym}</b></div>`, e.clientX, e.clientY);
     });
     hit.addEventListener("mouseleave", hideTip);
   });
-})();
+}
+
+// ---------- router ----------
+function render() {
+  hideTip();
+  S.after = null;
+  const [bid, wk] = decodeURIComponent(location.hash.slice(1)).split("/");
+  const b = S.blocks.find(x => x.id === bid);
+  const n = b && wk && /^w\d+$/.test(wk) ? +wk.slice(1) : null;
+  const route = !b ? "now" : n && weeksWithData(b).includes(n) ? "week" : "block";
+  const cur = b || S.active;
+
+  $("nav").innerHTML = [`<a class="pill" href="#now"${route === "now" ? ' aria-current="page"' : ""}>Now</a>`,
+    ...S.blocks.map(x => `<a class="pill" href="#${x.id}"${route !== "now" && x === b ? ' aria-current="page"' : ""}>${esc(x.name)}</a>`)].join("");
+
+  let strip = cur ? stripHTML(cur) : "";
+  if (b) {
+    const wks = weeksWithData(b);
+    if (wks.length) strip += `<nav class="weeks" aria-label="Weeks" style="margin-top:12px">${wks.map(k => `<a class="pill" href="#${b.id}/w${k}"${route === "week" && k === n ? ' aria-current="page"' : ""}>Week ${k}</a>`).join("")}</nav>`;
+  }
+  $("strip").innerHTML = strip;
+
+  const view = $("view");
+  view.innerHTML = route === "now" ? viewNow() : route === "week" ? viewWeek(b, n) : viewBlock(b);
+  if (S.after) S.after(view);
+  drawYears(view);
+  drawChart(view.querySelector("#chart"));
+  if (route !== "now") window.scrollTo({ top: 0 });
+}
+
+$("today-pill").textContent = fmt(TODAY, { weekday: "short", day: "numeric", month: "short", year: "numeric" });
+load().then(() => {
+  const lastLog = S.log.map(e => e.date).sort().pop();
+  $("foot").innerHTML = `<span>Live from the repo · wiki is the source</span><span>Log to ${lastLog ? dm(lastLog) + " " + lastLog.slice(0, 4) : "—"} · Strava export to ${S.csvTo ? dm(S.csvTo) + " " + S.csvTo.slice(0, 4) : "—"}</span>`;
+  render();
+  addEventListener("hashchange", render);
+}).catch(err => {
+  $("view").innerHTML = `<section class="glass"><p class="q">Couldn't read the wiki.</p><div class="empty">${esc(err.message)}. The page reads the repo's markdown, so open it from GitHub Pages or a local server at the repo root (python3 -m http.server), not as a file.</div></section>`;
+});
 </script>
