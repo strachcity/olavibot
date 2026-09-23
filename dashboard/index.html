@@ -104,6 +104,25 @@
   .day.rest .what { color: var(--ink-3); }
   .day.plan .st { color: var(--ink-3); }
   .day .glyph { width: 18px; height: 18px; }
+  button.day { font: inherit; color: inherit; text-align: left; cursor: pointer; transition: transform .18s ease, border-color .18s ease, background-color .18s ease; }
+  button.day:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.28); }
+  button.day:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; }
+  button.day[aria-pressed="true"] { border-color: rgba(255,255,255,.55); background-color: rgba(255,255,255,.07); transform: translateY(-3px); }
+  button.day[aria-pressed="true"]::after { content: ""; position: absolute; left: 50%; bottom: -9px; width: 10px; height: 10px; transform: translateX(-50%) rotate(45deg); background: rgba(255,255,255,.55); border-radius: 2px; }
+
+  .sess { border-radius: 18px; padding: 18px 20px; background: rgba(0,0,0,.26); border: 1px solid rgba(255,255,255,.12); display: grid; gap: 14px; animation: rise .28s ease; }
+  @keyframes rise { from { opacity: .3; transform: translateY(6px); } }
+  @media (prefers-reduced-motion: reduce) { .sess { animation: none; } button.day { transition: none; } }
+  .sess-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .sess-top h2 { margin: 0; font-size: 24px; font-weight: 300; letter-spacing: -.02em; }
+  .sess-stats { display: flex; gap: 26px; flex-wrap: wrap; }
+  .sess-stats .v { font-size: 26px; font-weight: 200; letter-spacing: -.02em; line-height: 1.1; }
+  .sess-rows { display: grid; }
+  .sess-row { display: grid; grid-template-columns: minmax(150px, 1fr) 2fr; gap: 14px; padding: 9px 0; border-top: 1px solid rgba(255,255,255,.07); font-size: 14px; }
+  .sess-row b { font-weight: 500; }
+  .sess-row span { color: var(--ink-2); }
+  .sess-note { font-size: 13px; color: var(--ink-2); }
+  .sess-note::before { content: "→ "; color: var(--mint); }
 
   .side { display: grid; gap: 16px; grid-template-rows: auto 1fr; }
   .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 16px; }
@@ -171,6 +190,7 @@
     .wrap { padding-inline: 16px; }
     .days { grid-template-columns: repeat(4, 1fr); }
     .day { min-height: 104px; }
+    .sess-row { grid-template-columns: 1fr; gap: 2px; }
     .watch { grid-template-columns: repeat(2, 1fr); }
     .bests { grid-template-columns: repeat(2, 1fr); }
     .cap-grid { grid-template-columns: 1fr 1fr; }
@@ -204,7 +224,8 @@
         </div>
         <div class="ring" id="ring"></div>
       </div>
-      <div class="days" id="days"></div>
+      <div class="days" id="days" role="group" aria-label="Pick a day to see its session"></div>
+      <div class="sess" id="sess" aria-live="polite"></div>
       <div class="soft" style="font-size:13px">Ceiling: no 5th run, no second quality session, strides stay strides. Sunday shortens rather than pushes if Saturday leaves heavy legs.</div>
     </div>
 
@@ -321,13 +342,48 @@
 <script>
 // ---- Snapshot data (regenerate at block end) ----
 const WEEK = [
-  { d: "Mon", n: 21, what: "Easy 6.9 km @ 5:50", st: "done", kind: "run" },
-  { d: "Tue", n: 22, what: "Session A · flat gym", st: "done", kind: "gym" },
-  { d: "Wed", n: 23, what: "Rest — busy evening", st: "today", kind: "rest" },
-  { d: "Thu", n: 24, what: "Session B · gym", st: "plan", kind: "gym" },
-  { d: "Fri", n: 25, what: "Rest — busy evening", st: "rest", kind: "rest" },
-  { d: "Sat", n: 26, what: "Long 8 km, easy", st: "plan", kind: "run" },
-  { d: "Sun", n: 27, what: "Easy 5 km", st: "plan", kind: "run" },
+  { d: "Mon", n: 21, what: "Easy 6.9 km @ 5:50", st: "done", kind: "run",
+    title: "Easy run", tag: "Done · Strava",
+    stats: [["Distance", "6.92 km"], ["Pace", "5:50 /km"], ["Moving", "40:24"], ["Avg HR", "140"]],
+    note: "Slow end of the easy band, right where a rebuild week should sit." },
+  { d: "Tue", n: 22, what: "Session A · flat gym", st: "done", kind: "gym",
+    title: "Session A · flat gym", tag: "Done · logged",
+    stats: [["Watch", "81 min"], ["Achilles next AM", "1 / 10"]],
+    rows: [
+      ["Back squat", "bar×10 → 50×8 → 65×5 → 75×3, then 3×5 @ 80 kg"],
+      ["Bulgarian split squat", "3×8/leg @ 14 kg DBs"],
+      ["Pallof press", "3×10/side @ 9.1 kg"],
+      ["Weighted march", "3×30 s/leg @ 16 kg · swap for banded march"],
+      ["Single-arm DB row", "3×8/side @ 18 kg · swap for pulldown"],
+      ["DB shoulder press", "3×10 @ 14 kg standing · last set near failure, left"],
+    ],
+    note: "Next time seat the press or drop to 12 kg to keep reps in reserve." },
+  { d: "Wed", n: 23, what: "Rest — busy evening", st: "today", kind: "rest",
+    title: "Rest", tag: "Today",
+    stats: [["Achilles this AM", "1 / 10"], ["Stiffness", "None"]],
+    note: "Busy evening. Session B is tomorrow." },
+  { d: "Thu", n: 24, what: "Session B · gym", st: "plan", kind: "gym",
+    title: "Session B · full gym", tag: "Planned · loads set on the day",
+    rows: [
+      ["Reactive", "Level 1 isometric seated calf holds, fresh, before the anchor"],
+      ["Conventional deadlift", "Odd-week anchor · RPE-capped, straps on top sets"],
+      ["Calf, heavy slow", "Bent-knee and straight-knee"],
+      ["Bench or DB press", "Superset with the calf work"],
+      ["Copenhagen plank", "Odd week · superset with the row · the block's one new lift"],
+      ["Barbell or single-arm DB row", "Upper pull"],
+    ],
+    note: "Warm-up and cool-down, 5–10 min each." },
+  { d: "Fri", n: 25, what: "Rest — busy evening", st: "rest", kind: "rest",
+    title: "Rest", tag: "Planned",
+    note: "Busy evening. Legs fresh for the weekend's back-to-back runs." },
+  { d: "Sat", n: 26, what: "Long 8 km, easy", st: "plan", kind: "run",
+    title: "Long run", tag: "Planned",
+    stats: [["Distance", "8 km"], ["Pace", "5:30–6:00 /km or slower"], ["Effort", "RPE ≤4"]],
+    note: "Varied terrain if convenient. Conversational the whole way; the ceiling matters more than the number." },
+  { d: "Sun", n: 27, what: "Easy 5 km", st: "plan", kind: "run",
+    title: "Easy run", tag: "Planned",
+    stats: [["Distance", "5 km"], ["Pace", "5:30–6:00 /km"], ["Effort", "RPE ≤4"]],
+    note: "Back-to-back with Saturday. Shorten it rather than push if the legs are heavy." },
 ];
 const WEEK_KM = { done: 6.9, planned: 19.9 };
 
@@ -367,13 +423,24 @@ const icons = {
   rest: '<svg class="glyph" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="9" cy="9" r="5"/></svg>',
 };
 const stLabel = { done: "Done", today: "Today", plan: "Planned", rest: "Rest" };
-document.getElementById("days").innerHTML = WEEK.map(w => `
-  <div class="day ${w.st} ${w.kind === "rest" ? "rest" : ""}">
+const daysEl = document.getElementById("days"), sessEl = document.getElementById("sess");
+daysEl.innerHTML = WEEK.map((w, i) => `
+  <button type="button" class="day ${w.st} ${w.kind === "rest" ? "rest" : ""}" data-i="${i}" aria-pressed="false" aria-controls="sess">
     <div style="display:flex;justify-content:space-between;align-items:center"><span class="dn">${w.d}</span><span style="color:${w.st === "done" ? "var(--mint)" : "var(--ink-3)"}">${icons[w.kind]}</span></div>
     <div class="dd num">${w.n}</div>
     <div class="what">${w.what}</div>
     <div class="st">${stLabel[w.st]}</div>
-  </div>`).join("");
+  </button>`).join("");
+function pickDay(i) {
+  const w = WEEK[i];
+  daysEl.querySelectorAll(".day").forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.i === i)));
+  const stats = w.stats ? `<div class="sess-stats">${w.stats.map(([k, v]) => `<div><div class="label">${k}</div><div class="v num">${v}</div></div>`).join("")}</div>` : "";
+  const rows = w.rows ? `<div class="sess-rows">${w.rows.map(([k, v]) => `<div class="sess-row"><b>${k}</b><span>${v}</span></div>`).join("")}</div>` : "";
+  sessEl.innerHTML = `<div class="sess-top"><h2>${w.d} ${w.n} · ${w.title}</h2><span class="label">${w.tag}</span></div>${stats}${rows}${w.note ? `<div class="sess-note">${w.note}</div>` : ""}`;
+  sessEl.style.animation = "none"; sessEl.offsetHeight; sessEl.style.animation = "";
+}
+daysEl.addEventListener("click", e => { const b = e.target.closest(".day"); if (b) pickDay(+b.dataset.i); });
+pickDay(Math.max(0, WEEK.findIndex(w => w.st === "today")));
 
 // ---- Ring ----
 (function ring() {
