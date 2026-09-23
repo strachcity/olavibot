@@ -10,8 +10,6 @@ Where this repo is, and what's left to do before it's actually running.
 - Wiki seeded: training model, athlete profile, observations, three evidence references
 - `wiki/tests.md` created, awaiting baseline
 
-The repo is public, by Jack's decision. It holds injury history, symptom scores and body weight.
-
 ## Not done — in order
 
 ### 1. Land the remaining raw sources
