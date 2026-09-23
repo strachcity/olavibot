@@ -22,6 +22,7 @@ Regenerated from a source, never hand-edited.
 | Page | What it's for |
 |---|---|
 | [blocks/README.md](blocks/README.md) | Block template. One file per block: plan, then review |
+| [blocks/2026-09-foundations.md](blocks/2026-09-foundations.md) | Foundations, 21 Sep → 1 Nov 2026. Phase A, active |
 
 ## References (evidence, compiled from `raw/research/`)
 | Page | What it's for |

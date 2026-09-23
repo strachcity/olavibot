@@ -68,9 +68,11 @@ travel) — they decide day placement more than anything else. Fit sessions arou
 legs away from hard runs; note any back-to-back running days that fall out of a constraint
 rather than being deliberate.
 
-Write it into the active block file as `## Weekly schedule` → current week, replacing the
-previous week's table (that week's actual days live in `log.md`, not here — this section is
-always just the current week). Commit as a `block` entry. A run can split around a gym
+Write it into the active block file under `## Weekly schedule`, **below** the previous
+weeks' tables — never replace or delete a past week, and don't edit one afterwards to match
+what happened (that's `log.md`'s job; plan + log together show what was missed). Keep the
+format the dashboard reads: a `**Week <n> (<dates>).** Constraint: …` line, then a
+`| Day | Session |` table with days as `Mon 21`. Commit as a `block` entry. A run can split around a gym
 session or lengthen over the block — log each leg as its own entry, same date; no format
 change needed for that.
 
