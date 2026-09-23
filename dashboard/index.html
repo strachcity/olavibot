@@ -147,7 +147,7 @@
   .season-head .meta b { font-weight: 500; color: var(--ink); }
   .chart { position: relative; margin-top: 12px; overflow-x: auto; }
   .chart svg { display: block; width: 100%; min-width: 640px; height: auto; }
-  .tip { position: absolute; pointer-events: none; padding: 10px 12px; border-radius: 12px; background: rgba(14,16,20,.82); border: 1px solid var(--edge); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); font-size: 12px; min-width: 150px; transform: translate(-50%, -100%); white-space: nowrap; }
+  .tip { position: fixed; z-index: 100; pointer-events: none; padding: 10px 12px; border-radius: 12px; background: rgba(14,16,20,.82); border: 1px solid var(--edge); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); font-size: 12px; min-width: 150px; transform: translate(-50%, -100%); white-space: nowrap; }
   .tip .h { font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; color: var(--ink-3); text-transform: uppercase; margin-bottom: 6px; }
   .tip .r { display: flex; justify-content: space-between; gap: 14px; }
   .tip .r i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 6px; }
@@ -232,7 +232,7 @@
         <div>
           <div class="label">Achilles · morning signal</div>
           <div class="ach-big">Quiet.</div>
-          <div class="soft" style="font-size:13px;margin-top:4px">“Currently okay” — stated 21 Sep. No morning scores logged yet; Tue’s is pending.</div>
+          <div class="soft" style="font-size:13px;margin-top:4px">“Currently okay” — stated 21 Sep. Next morning after Tue’s gym: 1/10, a bit sensitive, not stiff.</div>
           <div class="rules">
             <span class="pill">Load ≤5/10</span><span class="pill">Settled by AM</span><span class="pill">2 rising AMs → hold</span>
           </div>
@@ -303,7 +303,7 @@
     <div class="watch">
       <div class="chip"><div class="k">Adherence</div><div class="v num">2 / 2</div><div class="s ok">On plan</div></div>
       <div class="chip"><div class="k">Beyond plan</div><div class="v num">0</div><div class="s ok">Clean</div></div>
-      <div class="chip"><div class="k">Achilles next AM</div><div class="v">—</div><div class="s wait">Pending</div></div>
+      <div class="chip"><div class="k">Achilles next AM</div><div class="v num">1 / 10</div><div class="s ok">Not stiff · 23 Sep</div></div>
       <div class="chip"><div class="k">Enjoyment</div><div class="v">—</div><div class="s wait">Not reported</div></div>
       <div class="chip"><div class="k">Last spike</div><div class="v num">×5.7</div><div class="s hot">Sydney · 30 Aug</div></div>
       <div class="chip"><div class="k">Shoulder press</div><div class="v num">14 kg</div><div class="s flag">Near failure L</div></div>
@@ -312,7 +312,7 @@
 
   <footer>
     <span>Snapshot, not live · rebuilt by hand at block end</span>
-    <span>Strava to 21 Sep 2026 · wiki/log.md to 22 Sep 2026</span>
+    <span>Strava to 21 Sep 2026 · wiki/log.md to 23 Sep 2026</span>
   </footer>
 </main>
 
@@ -351,7 +351,13 @@ const BANDS = [
 const NS = "http://www.w3.org/2000/svg";
 const el = (tag, attrs = {}, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
 const tip = document.getElementById("tip");
-function showTip(html, x, y) { tip.innerHTML = html; tip.hidden = false; tip.style.left = x + "px"; tip.style.top = (y - 12) + "px"; }
+function showTip(html, x, y) {
+  tip.innerHTML = html; tip.hidden = false;
+  const w = tip.offsetWidth, h = tip.offsetHeight, m = 8;
+  const left = Math.min(Math.max(x, w / 2 + m), window.innerWidth - w / 2 - m);
+  const top = y - 12 - h < m ? y + h + 20 : y - 12;
+  tip.style.left = left + "px"; tip.style.top = top + "px";
+}
 function hideTip() { tip.hidden = true; }
 
 // ---- Week days ----
@@ -394,7 +400,7 @@ document.getElementById("years").innerHTML = YEARS.map(y => {
   return `<div class="yr"><div class="y">${y.y}</div><div class="track">${segs}<div class="target" style="left:${80 / total * 100}%"></div></div></div>`;
 }).join("");
 document.querySelectorAll(".seg").forEach(s => {
-  s.addEventListener("mousemove", e => showTip(`<div class="h">${s.dataset.y}</div><div class="r"><span>${s.dataset.k}</span><b class="num">${(+s.dataset.v).toFixed(1)}%</b></div>`, e.clientX, e.clientY + window.scrollY));
+  s.addEventListener("mousemove", e => showTip(`<div class="h">${s.dataset.y}</div><div class="r"><span>${s.dataset.k}</span><b class="num">${(+s.dataset.v).toFixed(1)}%</b></div>`, e.clientX, e.clientY));
   s.addEventListener("mouseleave", hideTip);
 });
 
@@ -445,7 +451,7 @@ document.querySelectorAll(".seg").forEach(s => {
     hit.addEventListener("mousemove", e => {
       const rows = BANDS.filter(b => w[b.k]).map(b => `<div class="r"><span><i style="background:${b.c}"></i>${b.name}</span><b class="num">${w[b.k].toFixed(1)} km</b></div>`).join("");
       const head = new Date(w.w).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "2-digit" });
-      showTip(`<div class="h">Week of ${head}${w.note ? " · " + w.note : ""}</div>${rows || '<div class="r muted">No running</div>'}<div class="r" style="margin-top:6px;border-top:1px solid rgba(255,255,255,.1);padding-top:6px"><span>Total</span><b class="num">${total.toFixed(1)} km</b></div><div class="r"><span>Gym</span><b class="num">${w.gym}</b></div>`, e.clientX, e.clientY + window.scrollY);
+      showTip(`<div class="h">Week of ${head}${w.note ? " · " + w.note : ""}</div>${rows || '<div class="r muted">No running</div>'}<div class="r" style="margin-top:6px;border-top:1px solid rgba(255,255,255,.1);padding-top:6px"><span>Total</span><b class="num">${total.toFixed(1)} km</b></div><div class="r"><span>Gym</span><b class="num">${w.gym}</b></div>`, e.clientX, e.clientY);
     });
     hit.addEventListener("mouseleave", hideTip);
   });
