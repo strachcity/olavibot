@@ -166,6 +166,11 @@ model: add tier-2 fortnightly rotation
 
 Never commit changes to `raw/` except adding new files.
 
+**Session logs go straight to `main`** `[stated, 2026-09-23]`. A commit that only appends
+`run`, `gym`, `rest` or `test` entries to `wiki/log.md`, or fills in a `pending` field, is
+pushed directly to `main`, with no branch and no PR. Everything else (blocks, model changes,
+reviews, ingests, skills, this file) still goes through the working branch.
+
 ---
 
 ## How to talk to Jack

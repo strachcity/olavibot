@@ -383,3 +383,9 @@ added below the previous week rather than replacing it. Without the plan, a past
 show what was done, never what was missed — and adherence is what Foundations is testing.
 `plan-training` and the Foundations block's schedule intro updated to match. Also added the
 Foundations block to `wiki/index.md`, which it was missing.
+
+## [2026-09-23] model | Session logs committed straight to main
+Jack asked for session log entries to go directly to `main` `[stated, 2026-09-23]`, so they
+show up on the dashboard without a PR to merge. Scope is narrow: commits that only append
+`run`/`gym`/`rest`/`test` entries or fill a `pending` field. Everything else still goes through
+a branch. Written into `CLAUDE.md` → Commits.
