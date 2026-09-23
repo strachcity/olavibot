@@ -344,7 +344,7 @@ not a re-ask.
 ## [2026-09-22] gym | Session A — Foundations wk1 (flat gym)
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 1
 beyond_plan: none
 duration_min: 81
 gym: flat
@@ -370,3 +370,9 @@ anything extra flagged in the Review line.
 `programme-session` now gives a one-phrase Why per row — training-model section, or reference
 with grade — as a table column rather than prose `[stated, 2026-09-22]`. The old "don't pad
 sessions with evidence" rule narrowed to "fuller evidence only when asked".
+
+## [2026-09-23] review | Achilles next-AM after Session A (22 Sep)
+`achilles_next_am` on the 2026-09-22 gym entry resolved from `pending` to 1. Woke feeling
+sensitive, 1/10, okay, not stiff `[stated, 2026-09-23]`. Inside the Achilles rules — no
+first-steps stiffness, which is the signal that matters. One morning, no trend yet. Session B
+on Thursday stands as planned.
