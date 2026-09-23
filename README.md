@@ -4,6 +4,9 @@ Jack's personal training system, maintained with Claude Code. A durable all-roun
 athlete, a 24-hour backyard ultra as the near target, a sub-3 marathon dormant until a race
 is booked.
 
+**Dashboard:** https://strachcity.github.io/olavibot/dashboard/ — a snapshot, rebuilt by hand at
+block end from `dashboard/index.html`.
+
 - `CLAUDE.md` — the schema and the rules. Loads every session
 - `wiki/` — the living knowledge base. **Start at `wiki/index.md`**
 - `raw/` — immutable sources. Add, never edit
@@ -44,4 +47,4 @@ When a skill changes here, rebuild its zip in the same commit and re-upload it i
 `cd .claude/skills && zip -qrX ../../skills-zip/<skill>.zip <skill>` (delete the old zip first). Refresh the project knowledge files when
 the block or model changes, and `log.md` every so often so recent loads are current.
 
-Private repo. Contains health information. Not medical advice.
+Not medical advice.
