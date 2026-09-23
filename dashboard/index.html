@@ -1,0 +1,453 @@
+<title>Olavi Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Single dark world, on purpose: dusk, fog, ember and mint. */
+  :root {
+    color-scheme: dark;
+    --ground: #0c0e12;
+    --ink: #eef1f0;
+    --ink-2: #b4bcbd;
+    --ink-3: #7c8588;
+    --glass: rgba(255, 255, 255, 0.055);
+    --glass-hi: rgba(255, 255, 255, 0.10);
+    --edge: rgba(255, 255, 255, 0.13);
+    --ember: #ff7a45;
+    --mint: #7ef2c1;
+    --easy: #4fd8a0;
+    --steady: #2f8a70;
+    --grey: #8d90a0;
+    --hard: #ff7a45;
+    --race: #f3ece4;
+    --warn: #ffc15e;
+    --display: "Urbanist", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--ground); }
+  body {
+    margin: 0;
+    color: var(--ink);
+    font-family: var(--display);
+    font-size: 15px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ---------- atmosphere ---------- */
+  .sky { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+  .blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .75; }
+  .b1 { width: 62vw; height: 62vw; right: -18vw; top: -22vw; background: radial-gradient(circle, #ff8a4c 0%, #c2410c 45%, transparent 70%); animation: drift1 38s ease-in-out infinite alternate; }
+  .b2 { width: 55vw; height: 55vw; left: -20vw; bottom: -25vw; background: radial-gradient(circle, #1f6f5a 0%, #0f3b33 50%, transparent 72%); animation: drift2 46s ease-in-out infinite alternate; }
+  .b3 { width: 38vw; height: 38vw; left: 30vw; top: 30vh; background: radial-gradient(circle, #6d6a86 0%, transparent 70%); opacity: .35; animation: drift1 52s ease-in-out infinite alternate-reverse; }
+  .streaks { position: absolute; inset: -10%; background:
+      repeating-linear-gradient(97deg, transparent 0 38px, rgba(255,255,255,.018) 38px 40px, transparent 40px 120px);
+    filter: blur(2px); animation: slide 24s linear infinite; }
+  .grain { position: absolute; inset: 0; opacity: .08; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)' fill='%23ffffff'/></svg>"); }
+  @keyframes drift1 { to { transform: translate(-8vw, 10vh) scale(1.12); } }
+  @keyframes drift2 { to { transform: translate(10vw, -8vh) scale(1.08); } }
+  @keyframes slide { to { transform: translateX(-120px); } }
+  @media (prefers-reduced-motion: reduce) { .blob, .streaks { animation: none; } }
+
+  /* ---------- frame ---------- */
+  .wrap { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding-inline: 20px; padding-block: 22px 48px; display: grid; gap: 16px; }
+  .glass {
+    background: linear-gradient(160deg, var(--glass-hi), var(--glass) 55%);
+    border: 1px solid var(--edge);
+    border-radius: 22px;
+    backdrop-filter: blur(22px) saturate(140%);
+    -webkit-backdrop-filter: blur(22px) saturate(140%);
+    box-shadow: 0 1px 0 rgba(255,255,255,.08) inset, 0 30px 60px -30px rgba(0,0,0,.6);
+    padding: 20px 22px;
+    min-width: 0;
+  }
+  .label { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+  .q { font-size: 17px; font-weight: 500; margin: 0 0 2px; color: var(--ink); text-wrap: balance; }
+  .num { font-variant-numeric: tabular-nums; }
+  .muted { color: var(--ink-3); }
+  .soft { color: var(--ink-2); }
+
+  header.bar { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding: 12px 18px; border-radius: 999px; }
+  .mark { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 19px; letter-spacing: -.01em; }
+  .mark i { width: 22px; height: 22px; border-radius: 50%; background: conic-gradient(from 200deg, var(--mint), var(--ember), var(--mint)); filter: blur(.3px); box-shadow: 0 0 18px rgba(255,122,69,.5); }
+  .pill { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--edge); background: rgba(0,0,0,.25); color: var(--ink-2); white-space: nowrap; }
+  .pill.live { color: var(--mint); border-color: rgba(126,242,193,.35); }
+  .pill.live::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--mint); margin-right: 8px; box-shadow: 0 0 8px var(--mint); vertical-align: 1px; }
+  .spacer { flex: 1; }
+
+  /* ---------- hero ---------- */
+  .hero { display: grid; grid-template-columns: 1.55fr 1fr; gap: 16px; }
+  .week { padding: 26px 28px 24px; display: grid; gap: 22px; }
+  .headline { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+  .headline h1 { margin: 0; font-weight: 200; font-size: clamp(40px, 6.2vw, 78px); line-height: .95; letter-spacing: -.035em; text-wrap: balance; }
+  .headline h1 b { font-weight: 500; background: linear-gradient(90deg, var(--mint), #d9fff0); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .ring { position: relative; width: 132px; height: 132px; flex: none; }
+  .ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+  .ring .c { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; }
+  .ring .c strong { font-size: 30px; font-weight: 300; letter-spacing: -.02em; }
+  .ring .c span { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; color: var(--ink-3); text-transform: uppercase; }
+
+  .days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+  .day { position: relative; border-radius: 16px; padding: 12px 10px 12px; min-height: 124px; display: flex; flex-direction: column; gap: 6px; border: 1px solid rgba(255,255,255,.08); background: rgba(0,0,0,.18); }
+  .day .dn { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; color: var(--ink-3); text-transform: uppercase; }
+  .day .dd { font-size: 22px; font-weight: 300; line-height: 1; }
+  .day .what { font-size: 13px; color: var(--ink-2); line-height: 1.25; margin-top: auto; }
+  .day .st { font-family: var(--mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+  .day.done { background: linear-gradient(180deg, rgba(79,216,160,.22), rgba(79,216,160,.04)); border-color: rgba(126,242,193,.35); }
+  .day.done .st { color: var(--mint); }
+  .day.today { border-color: rgba(255,122,69,.6); box-shadow: 0 0 0 1px rgba(255,122,69,.35), 0 0 30px -6px rgba(255,122,69,.55); }
+  .day.today .st { color: var(--ember); }
+  .day.rest .what { color: var(--ink-3); }
+  .day.plan .st { color: var(--ink-3); }
+  .day .glyph { width: 18px; height: 18px; }
+
+  .side { display: grid; gap: 16px; grid-template-rows: auto 1fr; }
+  .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 16px; }
+  .stat .v { font-size: 38px; font-weight: 200; letter-spacing: -.03em; line-height: 1; margin-top: 6px; }
+  .stat .v small { font-size: 15px; font-weight: 400; color: var(--ink-3); margin-left: 4px; letter-spacing: 0; }
+  .stat .d { font-size: 12.5px; color: var(--ink-3); margin-top: 4px; }
+  .up { color: var(--mint); } .down { color: var(--ember); }
+
+  .achilles { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; }
+  .tendon { width: 84px; height: 132px; }
+  .ach-big { font-size: 34px; font-weight: 200; letter-spacing: -.02em; line-height: 1.05; }
+  .rules { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+
+  /* ---------- middle ---------- */
+  .mid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 16px; }
+  .grey-head { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin: 12px 0 18px; }
+  .grey-head .big { font-size: clamp(64px, 9vw, 112px); font-weight: 200; letter-spacing: -.05em; line-height: .85; background: linear-gradient(180deg, #e3e4ea, #8d90a0); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .grey-head p { margin: 0; max-width: 34ch; color: var(--ink-2); font-size: 14px; }
+  .years { display: grid; gap: 10px; }
+  .yr { display: grid; grid-template-columns: 44px 1fr; gap: 12px; align-items: center; }
+  .yr .y { font-family: var(--mono); font-size: 12px; color: var(--ink-3); }
+  .track { position: relative; display: flex; gap: 2px; height: 22px; border-radius: 6px; overflow: visible; }
+  .seg { height: 100%; border-radius: 4px; min-width: 2px; cursor: default; }
+  .target { position: absolute; top: -6px; bottom: -6px; width: 0; border-left: 1px dashed rgba(126,242,193,.8); }
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 14px; font-size: 12px; color: var(--ink-2); }
+  .legend span::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 3px; margin-right: 6px; background: var(--c); vertical-align: -1px; }
+
+  .cap-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 14px; }
+  .lock { border-radius: 14px; padding: 10px 12px; border: 1px dashed rgba(255,255,255,.14); background: rgba(0,0,0,.14); }
+  .lock .t { font-size: 13px; color: var(--ink-2); }
+  .lock .v { font-family: var(--mono); font-size: 11px; color: var(--ink-3); margin-top: 2px; }
+  .bests { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.08); }
+  .best .v { font-size: 22px; font-weight: 300; letter-spacing: -.02em; }
+  .best .t { font-size: 11.5px; color: var(--ink-3); }
+  .countdown { display: flex; align-items: baseline; gap: 10px; margin-top: 6px; }
+  .countdown strong { font-size: 44px; font-weight: 200; letter-spacing: -.03em; }
+
+  /* ---------- 52 weeks ---------- */
+  .season-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .season-head .meta { display: flex; gap: 22px; flex-wrap: wrap; font-size: 13px; color: var(--ink-2); }
+  .season-head .meta b { font-weight: 500; color: var(--ink); }
+  .chart { position: relative; margin-top: 12px; overflow-x: auto; }
+  .chart svg { display: block; width: 100%; min-width: 640px; height: auto; }
+  .tip { position: absolute; pointer-events: none; padding: 10px 12px; border-radius: 12px; background: rgba(14,16,20,.82); border: 1px solid var(--edge); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); font-size: 12px; min-width: 150px; transform: translate(-50%, -100%); white-space: nowrap; }
+  .tip .h { font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; color: var(--ink-3); text-transform: uppercase; margin-bottom: 6px; }
+  .tip .r { display: flex; justify-content: space-between; gap: 14px; }
+  .tip .r i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 6px; }
+
+  /* ---------- watch ---------- */
+  .watch { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 14px; }
+  .chip { border-radius: 16px; padding: 12px 14px; background: rgba(0,0,0,.2); border: 1px solid rgba(255,255,255,.08); display: grid; gap: 4px; align-content: start; }
+  .chip .k { font-size: 12px; color: var(--ink-3); }
+  .chip .v { font-size: 24px; font-weight: 300; letter-spacing: -.02em; }
+  .chip .s { font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; display: flex; align-items: center; gap: 6px; }
+  .chip .s::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  .ok { color: var(--mint); } .wait { color: var(--ink-3); } .flag { color: var(--warn); } .hot { color: var(--ember); }
+
+  footer { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: .04em; padding: 4px 6px; }
+
+  @media (max-width: 1020px) {
+    .hero, .mid { grid-template-columns: 1fr; }
+    .watch { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .wrap { padding-inline: 16px; }
+    .days { grid-template-columns: repeat(4, 1fr); }
+    .day { min-height: 104px; }
+    .watch { grid-template-columns: repeat(2, 1fr); }
+    .bests { grid-template-columns: repeat(2, 1fr); }
+    .cap-grid { grid-template-columns: 1fr 1fr; }
+    header.bar { border-radius: 22px; }
+    .ring { width: 108px; height: 108px; }
+    .chart svg { width: 760px; max-width: none; }
+  }
+</style>
+
+<div class="sky" aria-hidden="true">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="streaks"></div><div class="grain"></div>
+</div>
+
+<main class="wrap">
+  <header class="glass bar">
+    <div class="mark"><i></i>olavibot</div>
+    <span class="pill live">Foundations · wk 1 / 6</span>
+    <span class="spacer"></span>
+    <span class="pill">Phase A</span>
+    <span class="pill">Snapshot 23 Sep 2026</span>
+  </header>
+
+  <!-- 1. What am I doing this week? + 2. Am I progressing? + 5. Achilles -->
+  <section class="hero">
+    <div class="glass week">
+      <div class="headline">
+        <div>
+          <div class="label">This week · 21–27 Sep</div>
+          <h1>Three runs,<br><b>two lifts.</b></h1>
+        </div>
+        <div class="ring" id="ring"></div>
+      </div>
+      <div class="days" id="days"></div>
+      <div class="soft" style="font-size:13px">Ceiling: no 5th run, no second quality session, strides stay strides. Sunday shortens rather than pushes if Saturday leaves heavy legs.</div>
+    </div>
+
+    <div class="side">
+      <div class="glass">
+        <p class="q">Am I progressing?</p>
+        <div class="label">Rolling 4 weeks vs the block's shape</div>
+        <div class="stats" style="margin-top:16px">
+          <div class="stat"><div class="label">Volume</div><div class="v num">18.8<small>km/wk</small></div><div class="d">Plan builds 19 → 27 by wk 5</div></div>
+          <div class="stat"><div class="label">Runs</div><div class="v num">1.5<small>/wk</small></div><div class="d">Target 3, then 4 from wk 3</div></div>
+          <div class="stat"><div class="label">Gym</div><div class="v num">0.2<small>/wk</small></div><div class="d">Target 2 · <span class="up">1 done this week</span></div></div>
+          <div class="stat"><div class="label">Long run</div><div class="v num">10.0<small>km</small></div><div class="d">Longest, last 3 wks · Sat target 8</div></div>
+        </div>
+      </div>
+      <div class="glass achilles">
+        <svg class="tendon" viewBox="0 0 84 132" aria-hidden="true">
+          <defs>
+            <radialGradient id="hot" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#7ef2c1" stop-opacity=".9"/><stop offset="1" stop-color="#7ef2c1" stop-opacity="0"/></radialGradient>
+            <linearGradient id="leg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".02"/><stop offset="1" stop-color="#ffffff" stop-opacity=".22"/></linearGradient>
+          </defs>
+          <path d="M30 0 C28 40 34 70 40 96 C42 106 38 112 26 116 C14 120 8 124 10 128 L74 128 C78 124 74 118 66 114 C58 110 56 100 56 88 C58 60 60 30 58 0 Z" fill="url(#leg)" stroke="rgba(255,255,255,.18)"/>
+          <circle cx="46" cy="100" r="18" fill="url(#hot)"/>
+          <circle cx="46" cy="100" r="3.5" fill="#7ef2c1"/>
+        </svg>
+        <div>
+          <div class="label">Achilles · morning signal</div>
+          <div class="ach-big">Quiet.</div>
+          <div class="soft" style="font-size:13px;margin-top:4px">“Currently okay” — stated 21 Sep. No morning scores logged yet; Tue’s is pending.</div>
+          <div class="rules">
+            <span class="pill">Load ≤5/10</span><span class="pill">Settled by AM</span><span class="pill">2 rising AMs → hold</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Am I running the right way? + 4. Capacity -->
+  <section class="mid">
+    <div class="glass">
+      <p class="q">Am I running the right way?</p>
+      <div class="label">Share of running time by pace · races excluded</div>
+      <div class="grey-head">
+        <div class="big num">54%</div>
+        <p>of 2026 running sits in the grey zone, 4:45–5:15/km. It doubled after Florence and took the place of quality, not easy. The dashed line is the ~80% easy target — never met in any year.</p>
+      </div>
+      <div class="years" id="years"></div>
+      <div class="legend">
+        <span style="--c:var(--easy)">Easy ≥5:30</span>
+        <span style="--c:var(--steady)">Steady 5:15–5:30</span>
+        <span style="--c:var(--grey)">Grey 4:45–5:15</span>
+        <span style="--c:var(--hard)">Hard &lt;4:45</span>
+      </div>
+    </div>
+
+    <div class="glass">
+      <p class="q">How is capacity changing?</p>
+      <div class="label">Test battery · baseline pending</div>
+      <div class="countdown"><strong class="num" id="cd">39</strong><span class="soft">days to the first baseline — Foundations wk 6</span></div>
+      <div class="cap-grid">
+        <div class="lock"><div class="t">Easy pace @ fixed HR</div><div class="v">— · wk 6</div></div>
+        <div class="lock"><div class="t">Threshold 3×10 min</div><div class="v">— · wk 6</div></div>
+        <div class="lock"><div class="t">5k</div><div class="v">— · wk 6</div></div>
+        <div class="lock"><div class="t">Squat / deadlift e1RM</div><div class="v">— · wk 6</div></div>
+        <div class="lock"><div class="t">Seated calf × BW</div><div class="v">gate: ≥1.0 for Reactive 4</div></div>
+        <div class="lock"><div class="t">Heel-raise symmetry</div><div class="v">gate: ≥80–90%</div></div>
+      </div>
+      <div class="bests">
+        <div class="best"><div class="v num">3:13:20</div><div class="t">Marathon · Florence ’24</div></div>
+        <div class="best"><div class="v num">1:29:09</div><div class="t">Half · ’25</div></div>
+        <div class="best"><div class="v num">17:55</div><div class="t">5k · track ’25</div></div>
+        <div class="best"><div class="v num">127.5</div><div class="t">km backyard · ’26</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Season bars -->
+  <section class="glass">
+    <div class="season-head">
+      <div>
+        <p class="q">Fifty-two weeks</p>
+        <div class="label">Weekly km by pace band · dots are gym sessions</div>
+      </div>
+      <div class="meta">
+        <span>2026 avg <b class="num">33.6 km/wk</b></span>
+        <span>Longest ’26 <b class="num">42.9 km</b></span>
+        <span>Gym ’26 <b class="num">0.95/wk</b></span>
+      </div>
+    </div>
+    <div class="chart" id="chart"></div>
+  </section>
+
+  <!-- 5. Is anything becoming a problem? -->
+  <section class="glass">
+    <p class="q">Is anything becoming a problem?</p>
+    <div class="label">Read from the log · Foundations so far</div>
+    <div class="watch">
+      <div class="chip"><div class="k">Adherence</div><div class="v num">2 / 2</div><div class="s ok">On plan</div></div>
+      <div class="chip"><div class="k">Beyond plan</div><div class="v num">0</div><div class="s ok">Clean</div></div>
+      <div class="chip"><div class="k">Achilles next AM</div><div class="v">—</div><div class="s wait">Pending</div></div>
+      <div class="chip"><div class="k">Enjoyment</div><div class="v">—</div><div class="s wait">Not reported</div></div>
+      <div class="chip"><div class="k">Last spike</div><div class="v num">×5.7</div><div class="s hot">Sydney · 30 Aug</div></div>
+      <div class="chip"><div class="k">Shoulder press</div><div class="v num">14 kg</div><div class="s flag">Near failure L</div></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Snapshot, not live · rebuilt by hand at block end</span>
+    <span>Strava to 21 Sep 2026 · wiki/log.md to 22 Sep 2026</span>
+  </footer>
+</main>
+
+<div class="tip" id="tip" hidden></div>
+
+<script>
+// ---- Snapshot data (regenerate at block end) ----
+const WEEK = [
+  { d: "Mon", n: 21, what: "Easy 6.9 km @ 5:50", st: "done", kind: "run" },
+  { d: "Tue", n: 22, what: "Session A · flat gym", st: "done", kind: "gym" },
+  { d: "Wed", n: 23, what: "Rest — busy evening", st: "today", kind: "rest" },
+  { d: "Thu", n: 24, what: "Session B · gym", st: "plan", kind: "gym" },
+  { d: "Fri", n: 25, what: "Rest — busy evening", st: "rest", kind: "rest" },
+  { d: "Sat", n: 26, what: "Long 8 km, easy", st: "plan", kind: "run" },
+  { d: "Sun", n: 27, what: "Easy 5 km", st: "plan", kind: "run" },
+];
+const WEEK_KM = { done: 6.9, planned: 19.9 };
+
+// Share of running time, from strava-history.md pace table (races and hikes excluded)
+const YEARS = [
+  { y: 2023, easy: 31.1, steady: 18.1, grey: 26.0, hard: 24.7 },
+  { y: 2024, easy: 16.2, steady: 20.6, grey: 28.4, hard: 34.7 },
+  { y: 2025, easy: 16.1, steady: 16.6, grey: 56.1, hard: 11.3 },
+  { y: 2026, easy: 20.9, steady: 15.3, grey: 53.9, hard: 9.9 },
+];
+
+const WEEKS = [{"w":"2025-09-29","easy":0,"steady":0,"grey":8.6,"hard":10.5,"race":0,"gym":2},{"w":"2025-10-06","easy":0,"steady":22.0,"grey":15.6,"hard":0,"race":0,"gym":1},{"w":"2025-10-13","easy":15.0,"steady":0,"grey":8.2,"hard":5.8,"race":0,"gym":1},{"w":"2025-10-20","easy":0,"steady":15.0,"grey":13.1,"hard":0,"race":0,"gym":1},{"w":"2025-10-27","easy":0,"steady":0,"grey":31.5,"hard":0,"race":0,"gym":1},{"w":"2025-11-03","easy":0,"steady":0,"grey":31.0,"hard":0,"race":0,"gym":1},{"w":"2025-11-10","easy":0,"steady":18.2,"grey":8.0,"hard":5.0,"race":0,"gym":1},{"w":"2025-11-17","easy":0,"steady":14.2,"grey":16.5,"hard":8.1,"race":0,"gym":1},{"w":"2025-11-24","easy":16.3,"steady":14.5,"grey":5.1,"hard":0,"race":0,"gym":1},{"w":"2025-12-01","easy":0,"steady":0,"grey":20.9,"hard":0,"race":0,"gym":1},{"w":"2025-12-08","easy":0,"steady":0,"grey":22.0,"hard":5.4,"race":0,"gym":1},{"w":"2025-12-15","easy":5.6,"steady":10.0,"grey":5.0,"hard":7.2,"race":0,"gym":1},{"w":"2025-12-22","easy":0,"steady":11.0,"grey":15.0,"hard":0,"race":0,"gym":2},{"w":"2025-12-29","easy":11.1,"steady":0,"grey":19.4,"hard":0,"race":0,"gym":0},{"w":"2026-01-05","easy":0,"steady":0,"grey":25.1,"hard":5.0,"race":0,"gym":2},{"w":"2026-01-12","easy":5.7,"steady":0,"grey":25.3,"hard":0,"race":0,"gym":1},{"w":"2026-01-19","easy":0,"steady":10.0,"grey":29.0,"hard":0,"race":0,"gym":1},{"w":"2026-01-26","easy":0,"steady":0,"grey":45.8,"hard":0,"race":0,"gym":1},{"w":"2026-02-02","easy":0,"steady":24.0,"grey":22.8,"hard":0,"race":0,"gym":1},{"w":"2026-02-09","easy":0,"steady":7.7,"grey":37.4,"hard":0,"race":0,"gym":2},{"w":"2026-02-16","easy":7.7,"steady":10.1,"grey":13.0,"hard":15.7,"race":0,"gym":2},{"w":"2026-02-23","easy":7.9,"steady":7.6,"grey":22.1,"hard":7.2,"race":0,"gym":1},{"w":"2026-03-02","easy":8.1,"steady":15.2,"grey":12.5,"hard":5.2,"race":0,"gym":1},{"w":"2026-03-09","easy":0,"steady":0,"grey":10.0,"hard":0,"race":0,"gym":0},{"w":"2026-03-16","easy":0,"steady":7.5,"grey":11.6,"hard":17.9,"race":0,"gym":1},{"w":"2026-03-23","easy":19.9,"steady":0,"grey":16.2,"hard":6.1,"race":0,"gym":0},{"w":"2026-03-30","easy":14.5,"steady":0,"grey":3.0,"hard":22.6,"race":0,"gym":1},{"w":"2026-04-06","easy":0,"steady":20.0,"grey":22.1,"hard":0,"race":0,"gym":0},{"w":"2026-04-13","easy":8.0,"steady":0,"grey":40.1,"hard":0,"race":0,"gym":2},{"w":"2026-04-20","easy":8.0,"steady":3.5,"grey":48.6,"hard":0,"race":0,"gym":1},{"w":"2026-04-27","easy":25.0,"steady":12.0,"grey":13.6,"hard":0,"race":0,"gym":1},{"w":"2026-05-04","easy":5.1,"steady":0,"grey":24.2,"hard":21.1,"race":0,"gym":1},{"w":"2026-05-11","easy":16.0,"steady":0,"grey":18.3,"hard":6.0,"race":0,"gym":0},{"w":"2026-05-18","easy":11.3,"steady":0,"grey":12.0,"hard":8.0,"race":0,"gym":0},{"w":"2026-05-25","easy":5.2,"steady":0,"grey":0,"hard":0,"race":127.5,"gym":1,"note":"Macyard backyard"},{"w":"2026-06-01","easy":0,"steady":0,"grey":6.0,"hard":0,"race":0,"gym":1},{"w":"2026-06-08","easy":0,"steady":20.0,"grey":0,"hard":7.6,"race":0,"gym":1},{"w":"2026-06-15","easy":0,"steady":0,"grey":25.6,"hard":6.0,"race":0,"gym":0},{"w":"2026-06-22","easy":11.1,"steady":3.0,"grey":29.4,"hard":0,"race":0,"gym":1},{"w":"2026-06-29","easy":0,"steady":3.1,"grey":37.6,"hard":0,"race":0,"gym":2},{"w":"2026-07-06","easy":0,"steady":0,"grey":0,"hard":0,"race":0,"gym":2},{"w":"2026-07-13","easy":0,"steady":9.2,"grey":5.8,"hard":0,"race":0,"gym":1},{"w":"2026-07-20","easy":0,"steady":4.3,"grey":5.0,"hard":0,"race":0,"gym":1},{"w":"2026-07-27","easy":8.3,"steady":0,"grey":7.5,"hard":0,"race":0,"gym":0},{"w":"2026-08-03","easy":0,"steady":0,"grey":3.0,"hard":0,"race":0,"gym":2},{"w":"2026-08-10","easy":11.5,"steady":0,"grey":7.5,"hard":0,"race":0,"gym":2},{"w":"2026-08-17","easy":6.0,"steady":6.0,"grey":0,"hard":0,"race":0,"gym":2},{"w":"2026-08-24","easy":3.2,"steady":0,"grey":6.0,"hard":0,"race":42.9,"gym":0,"note":"Sydney marathon"},{"w":"2026-08-31","easy":0,"steady":0,"grey":0,"hard":0,"race":0,"gym":0},{"w":"2026-09-07","easy":10.0,"steady":0,"grey":0,"hard":0,"race":0,"gym":0},{"w":"2026-09-14","easy":7.1,"steady":6.0,"grey":5.8,"hard":0,"race":0,"gym":1},{"w":"2026-09-21","easy":6.9,"steady":0,"grey":0,"hard":0,"race":0,"gym":1,"note":"This week, so far"}];
+
+const BANDS = [
+  { k: "easy", name: "Easy", c: "#4fd8a0" },
+  { k: "steady", name: "Steady", c: "#2f8a70" },
+  { k: "grey", name: "Grey", c: "#8d90a0" },
+  { k: "hard", name: "Hard", c: "#ff7a45" },
+  { k: "race", name: "Race", c: "#f3ece4" },
+];
+const NS = "http://www.w3.org/2000/svg";
+const el = (tag, attrs = {}, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const tip = document.getElementById("tip");
+function showTip(html, x, y) { tip.innerHTML = html; tip.hidden = false; tip.style.left = x + "px"; tip.style.top = (y - 12) + "px"; }
+function hideTip() { tip.hidden = true; }
+
+// ---- Week days ----
+const icons = {
+  run: '<svg class="glyph" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 12c3 0 4-6 7-6s4 6 7 6"/></svg>',
+  gym: '<svg class="glyph" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 6v6M15 6v6M5.5 4.5v9M12.5 4.5v9M5.5 9h7"/></svg>',
+  rest: '<svg class="glyph" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="9" cy="9" r="5"/></svg>',
+};
+const stLabel = { done: "Done", today: "Today", plan: "Planned", rest: "Rest" };
+document.getElementById("days").innerHTML = WEEK.map(w => `
+  <div class="day ${w.st} ${w.kind === "rest" ? "rest" : ""}">
+    <div style="display:flex;justify-content:space-between;align-items:center"><span class="dn">${w.d}</span><span style="color:${w.st === "done" ? "var(--mint)" : "var(--ink-3)"}">${icons[w.kind]}</span></div>
+    <div class="dd num">${w.n}</div>
+    <div class="what">${w.what}</div>
+    <div class="st">${stLabel[w.st]}</div>
+  </div>`).join("");
+
+// ---- Ring ----
+(function ring() {
+  const host = document.getElementById("ring");
+  const svg = el("svg", { viewBox: "0 0 120 120" }, host);
+  const defs = el("defs", {}, svg);
+  const g = el("linearGradient", { id: "rg", x1: "0", y1: "0", x2: "1", y2: "1" }, defs);
+  el("stop", { offset: "0", "stop-color": "#7ef2c1" }, g); el("stop", { offset: "1", "stop-color": "#d9fff0" }, g);
+  const r = 52, C = 2 * Math.PI * r, f = WEEK_KM.done / WEEK_KM.planned;
+  el("circle", { cx: 60, cy: 60, r, fill: "none", stroke: "rgba(255,255,255,.1)", "stroke-width": 6 }, svg);
+  el("circle", { cx: 60, cy: 60, r, fill: "none", stroke: "url(#rg)", "stroke-width": 6, "stroke-linecap": "round", "stroke-dasharray": `${C * f} ${C}` }, svg);
+  const c = document.createElement("div"); c.className = "c";
+  c.innerHTML = `<strong class="num">${WEEK_KM.done}</strong><span>of ${WEEK_KM.planned} km</span>`;
+  host.appendChild(c);
+})();
+
+// ---- Year bars ----
+document.getElementById("years").innerHTML = YEARS.map(y => {
+  const segs = ["easy", "steady", "grey", "hard"].map(k => {
+    const b = BANDS.find(b => b.k === k);
+    return `<div class="seg" data-y="${y.y}" data-k="${b.name}" data-v="${y[k]}" style="flex:${y[k]};background:${b.c}"></div>`;
+  }).join("");
+  const total = y.easy + y.steady + y.grey + y.hard;
+  return `<div class="yr"><div class="y">${y.y}</div><div class="track">${segs}<div class="target" style="left:${80 / total * 100}%"></div></div></div>`;
+}).join("");
+document.querySelectorAll(".seg").forEach(s => {
+  s.addEventListener("mousemove", e => showTip(`<div class="h">${s.dataset.y}</div><div class="r"><span>${s.dataset.k}</span><b class="num">${(+s.dataset.v).toFixed(1)}%</b></div>`, e.clientX, e.clientY + window.scrollY));
+  s.addEventListener("mouseleave", hideTip);
+});
+
+// ---- 52-week chart ----
+(function chart() {
+  const host = document.getElementById("chart");
+  const W = 1200, H = 260, padL = 34, padR = 8, padT = 16, padB = 46, cap = 60;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Weekly running km over 52 weeks, stacked by pace band" }, host);
+  const defs = el("defs", {}, svg);
+  const glow = el("filter", { id: "glow", x: "-50%", y: "-50%", width: "200%", height: "200%" }, defs);
+  el("feGaussianBlur", { stdDeviation: 6 }, glow);
+  const iw = W - padL - padR, ih = H - padT - padB, n = WEEKS.length, slot = iw / n, bw = Math.max(6, slot - 6);
+  const y = v => padT + ih - Math.min(v, cap) / cap * ih;
+  [0, 20, 40, 60].forEach(t => {
+    el("line", { x1: padL, x2: W - padR, y1: y(t), y2: y(t), stroke: "rgba(255,255,255,.07)" }, svg);
+    const tx = el("text", { x: padL - 8, y: y(t) + 4, "text-anchor": "end", fill: "#7c8588", "font-size": 11, "font-family": "IBM Plex Mono, monospace" }, svg);
+    tx.textContent = t;
+  });
+  WEEKS.forEach((w, i) => {
+    const x = padL + i * slot + (slot - bw) / 2;
+    const g = el("g", {}, svg);
+    const isNow = i === n - 1;
+    if (isNow) el("rect", { x: x - 4, y: padT, width: bw + 8, height: ih, rx: 6, fill: "rgba(126,242,193,.08)" }, g);
+    let base = 0;
+    const total = BANDS.reduce((s, b) => s + w[b.k], 0);
+    BANDS.forEach(b => {
+      const v = w[b.k]; if (!v) return;
+      const top = y(base + v), bot = y(base);
+      const h = Math.max(1.5, bot - top - 2);
+      el("rect", { x, y: top, width: bw, height: h, rx: 3, fill: b.c, opacity: isNow ? 1 : .9 }, g);
+      base += v;
+    });
+    if (total > cap) {
+      const t = el("text", { x: x + bw / 2, y: padT - 4, "text-anchor": "middle", fill: "#f3ece4", "font-size": 10.5, "font-family": "IBM Plex Mono, monospace" }, g);
+      t.textContent = Math.round(total) + "↑";
+    }
+    for (let k = 0; k < w.gym; k++) el("circle", { cx: x + bw / 2, cy: H - padB + 12 + k * 8, r: 2.6, fill: "#7ef2c1" }, g);
+    const d = new Date(w.w);
+    if (d.getDate() <= 7) {
+      const t = el("text", { x: x + bw / 2, y: H - 6, "text-anchor": "middle", fill: "#7c8588", "font-size": 11, "font-family": "IBM Plex Mono, monospace" }, g);
+      t.textContent = d.toLocaleString("en-GB", { month: "short" });
+    }
+    if (isNow) {
+      el("circle", { cx: x + bw / 2, cy: y(total) - 10, r: 9, fill: "#7ef2c1", opacity: .5, filter: "url(#glow)" }, g);
+      el("circle", { cx: x + bw / 2, cy: y(total) - 10, r: 3.5, fill: "#7ef2c1" }, g);
+    }
+    const hit = el("rect", { x: padL + i * slot, y: padT, width: slot, height: ih + 34, fill: "transparent" }, g);
+    hit.addEventListener("mousemove", e => {
+      const rows = BANDS.filter(b => w[b.k]).map(b => `<div class="r"><span><i style="background:${b.c}"></i>${b.name}</span><b class="num">${w[b.k].toFixed(1)} km</b></div>`).join("");
+      const head = new Date(w.w).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "2-digit" });
+      showTip(`<div class="h">Week of ${head}${w.note ? " · " + w.note : ""}</div>${rows || '<div class="r muted">No running</div>'}<div class="r" style="margin-top:6px;border-top:1px solid rgba(255,255,255,.1);padding-top:6px"><span>Total</span><b class="num">${total.toFixed(1)} km</b></div><div class="r"><span>Gym</span><b class="num">${w.gym}</b></div>`, e.clientX, e.clientY + window.scrollY);
+    });
+    hit.addEventListener("mouseleave", hideTip);
+  });
+})();
+</script>
