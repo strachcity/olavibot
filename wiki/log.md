@@ -393,7 +393,7 @@ a branch. Written into `CLAUDE.md` → Commits.
 ## [2026-09-23] rest | Rest day — Foundations wk1
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 1
 beyond_plan: none
 ```
 - Planned: Rest (Wednesday evening busy), per week 1 schedule.
@@ -406,3 +406,11 @@ beyond_plan: none
   two, so nothing triggers yet: Session B tonight stands, calf work stays in. If Friday
   morning is worse again, that's two rising mornings — hold Saturday's long run at 8km and
   drop the next quality session. Both ankles rather than one side is worth watching.
+
+## [2026-09-24] review | Achilles next-AM after rest day (23 Sep) — correction
+`achilles_next_am` on the 2026-09-23 rest entry resolved from `pending` to 1 `[stated,
+2026-09-24]`. The tenderness was in the soft tissue around the Achilles, not the tendon
+itself, and he'd been drinking the night before, which he says usually makes mornings worse
+even after a rest day `[stated, 2026-09-24]`. That corrects the rest entry's review, which
+read the morning as rising: the score is 1/10, the same as 23 Sep. Flat, not climbing, no
+trigger. Session B tonight stands.
