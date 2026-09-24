@@ -420,3 +420,22 @@ Added to `observations.md` → Confirmed: drinking the night before usually make
 morning's ankle/Achilles-area symptoms worse, even on a rest day `[stated, 2026-09-24]`. Tied
 to the Achilles rule that two rising mornings trigger action, so a morning after drinking gets
 noted as confounded rather than counted blind.
+
+## [2026-09-24] run | Easy — Foundations wk1 (swapped from Sun)
+```yaml
+planned: yes
+beyond_plan: none
+duration_min: 34
+distance_km: 5.01
+avg_pace: 6:28
+run_type: easy
+```
+- Planned: Easy 5km, slow (5:45–6:15/km, RPE ≤4, no strides). This is Sunday's easy run moved to
+  Thursday, with Session B moving to Saturday (see the 2026-09-24 `block` entry).
+- Done: 5.01km, 32:25 moving (33:54 elapsed), avg pace 6:28/km, avg HR 126 (max 144), 17m
+  elevation, Victoria Park, run with Ruth `[data, Strava activity 20314126911]`
+- Beyond plan: none
+- Review: Easy was actually easy. Pace sat below the 5:45–6:15 band and HR averaged 126, which
+  is 14 bpm under Monday's easy run (140 @ 5:50). Fastest 1k was 5:15, a brief surge and not a
+  pattern. Running with someone else kept it conversational. Worth repeating. Friday morning
+  is the next Achilles check.
