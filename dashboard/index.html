@@ -5,18 +5,26 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-  /* Single dark world, on purpose: dusk, fog, ember and mint. */
+  /* Colours are tokens. The palette script sets them per week from the recipe book;
+     these defaults are the dusk recipe, so the page still looks right if the script fails. */
   :root {
     color-scheme: dark;
     --ground: #0c0e12;
     --ink: #eef1f0;
     --ink-2: #b4bcbd;
     --ink-3: #7c8588;
+    --fg: #ffffff;            /* hairlines and faint fills */
+    --sink: #000000;          /* recessed wells */
     --glass: rgba(255, 255, 255, 0.055);
     --glass-hi: rgba(255, 255, 255, 0.10);
     --edge: rgba(255, 255, 255, 0.13);
-    --ember: #ff7a45;
-    --mint: #7ef2c1;
+    --accent: #7ef2c1;
+    --accent-2: #d9fff0;
+    --warm: #ff7a45;
+    --glow-1a: #ff8a4c; --glow-1b: #c2410c;
+    --glow-2a: #1f6f5a; --glow-2b: #0f3b33;
+    --glow-3: #6d6a86;
+    --grey-top: #e3e4ea;
     --easy: #4fd8a0;
     --steady: #2f8a70;
     --grey: #8d90a0;
@@ -41,11 +49,11 @@
   /* ---------- atmosphere ---------- */
   .sky { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
   .blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .75; }
-  .b1 { width: 62vw; height: 62vw; right: -18vw; top: -22vw; background: radial-gradient(circle, #ff8a4c 0%, #c2410c 45%, transparent 70%); animation: drift1 38s ease-in-out infinite alternate; }
-  .b2 { width: 55vw; height: 55vw; left: -20vw; bottom: -25vw; background: radial-gradient(circle, #1f6f5a 0%, #0f3b33 50%, transparent 72%); animation: drift2 46s ease-in-out infinite alternate; }
-  .b3 { width: 38vw; height: 38vw; left: 30vw; top: 30vh; background: radial-gradient(circle, #6d6a86 0%, transparent 70%); opacity: .35; animation: drift1 52s ease-in-out infinite alternate-reverse; }
+  .b1 { width: 62vw; height: 62vw; right: -18vw; top: -22vw; background: radial-gradient(circle, var(--glow-1a) 0%, var(--glow-1b) 45%, transparent 70%); animation: drift1 38s ease-in-out infinite alternate; }
+  .b2 { width: 55vw; height: 55vw; left: -20vw; bottom: -25vw; background: radial-gradient(circle, var(--glow-2a) 0%, var(--glow-2b) 50%, transparent 72%); animation: drift2 46s ease-in-out infinite alternate; }
+  .b3 { width: 38vw; height: 38vw; left: 30vw; top: 30vh; background: radial-gradient(circle, var(--glow-3) 0%, transparent 70%); opacity: .35; animation: drift1 52s ease-in-out infinite alternate-reverse; }
   .streaks { position: absolute; inset: -10%; background:
-      repeating-linear-gradient(97deg, transparent 0 38px, rgba(255,255,255,.018) 38px 40px, transparent 40px 120px);
+      repeating-linear-gradient(97deg, transparent 0 38px, color-mix(in srgb, var(--fg) 1.8%, transparent) 38px 40px, transparent 40px 120px);
     filter: blur(2px); animation: slide 24s linear infinite; }
   .grain { position: absolute; inset: 0; opacity: .08; mix-blend-mode: overlay;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)' fill='%23ffffff'/></svg>"); }
@@ -62,7 +70,7 @@
     border-radius: 22px;
     backdrop-filter: blur(22px) saturate(140%);
     -webkit-backdrop-filter: blur(22px) saturate(140%);
-    box-shadow: 0 1px 0 rgba(255,255,255,.08) inset, 0 30px 60px -30px rgba(0,0,0,.6);
+    box-shadow: 0 1px 0 color-mix(in srgb, var(--fg) 8%, transparent) inset, 0 30px 60px -30px color-mix(in srgb, var(--sink) 60%, transparent);
     padding: 20px 22px;
     min-width: 0;
   }
@@ -74,10 +82,10 @@
 
   header.bar { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding: 12px 18px; border-radius: 999px; }
   .mark { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 19px; letter-spacing: -.01em; }
-  .mark i { width: 22px; height: 22px; border-radius: 50%; background: conic-gradient(from 200deg, var(--mint), var(--ember), var(--mint)); filter: blur(.3px); box-shadow: 0 0 18px rgba(255,122,69,.5); }
-  .pill { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--edge); background: rgba(0,0,0,.25); color: var(--ink-2); white-space: nowrap; }
-  .pill.live { color: var(--mint); border-color: rgba(126,242,193,.35); }
-  .pill.live::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--mint); margin-right: 8px; box-shadow: 0 0 8px var(--mint); vertical-align: 1px; }
+  .mark i { width: 22px; height: 22px; border-radius: 50%; background: conic-gradient(from 200deg, var(--accent), var(--warm), var(--accent)); filter: blur(.3px); box-shadow: 0 0 18px color-mix(in srgb, var(--warm) 50%, transparent); }
+  .pill { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--edge); background: color-mix(in srgb, var(--sink) 25%, transparent); color: var(--ink-2); white-space: nowrap; }
+  .pill.live { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+  .pill.live::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-right: 8px; box-shadow: 0 0 8px var(--accent); vertical-align: 1px; }
   .spacer { flex: 1; }
 
   /* ---------- hero ---------- */
@@ -85,7 +93,7 @@
   .week { padding: 26px 28px 24px; display: grid; gap: 22px; }
   .headline { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
   .headline h1 { margin: 0; font-weight: 200; font-size: clamp(40px, 6.2vw, 78px); line-height: .95; letter-spacing: -.035em; text-wrap: balance; }
-  .headline h1 b { font-weight: 500; background: linear-gradient(90deg, var(--mint), #d9fff0); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .headline h1 b { font-weight: 500; background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .ring { position: relative; width: 132px; height: 132px; flex: none; }
   .ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
   .ring .c { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; }
@@ -93,25 +101,25 @@
   .ring .c span { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; color: var(--ink-3); text-transform: uppercase; }
 
   .days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
-  .day { position: relative; border-radius: 16px; padding: 12px 10px 12px; min-height: 124px; display: flex; flex-direction: column; gap: 6px; border: 1px solid rgba(255,255,255,.08); background: rgba(0,0,0,.18); }
+  .day { position: relative; border-radius: 16px; padding: 12px 10px 12px; min-height: 124px; display: flex; flex-direction: column; gap: 6px; border: 1px solid color-mix(in srgb, var(--fg) 8%, transparent); background: color-mix(in srgb, var(--sink) 18%, transparent); }
   .day .dn { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; color: var(--ink-3); text-transform: uppercase; }
   .day .dd { font-size: 22px; font-weight: 300; line-height: 1; }
   .day .what { font-size: 13px; color: var(--ink-2); line-height: 1.25; margin-top: auto; }
   .day .st { font-family: var(--mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
-  .day.done { background: linear-gradient(180deg, rgba(79,216,160,.22), rgba(79,216,160,.04)); border-color: rgba(126,242,193,.35); }
-  .day.done .st { color: var(--mint); }
-  .day.today { border-color: rgba(255,122,69,.6); box-shadow: 0 0 0 1px rgba(255,122,69,.35), 0 0 30px -6px rgba(255,122,69,.55); }
-  .day.today .st { color: var(--ember); }
+  .day.done { background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 22%, transparent), color-mix(in srgb, var(--accent) 4%, transparent)); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+  .day.done .st { color: var(--accent); }
+  .day.today { border-color: color-mix(in srgb, var(--warm) 60%, transparent); box-shadow: 0 0 0 1px color-mix(in srgb, var(--warm) 35%, transparent), 0 0 30px -6px color-mix(in srgb, var(--warm) 55%, transparent); }
+  .day.today .st { color: var(--warm); }
   .day.rest .what { color: var(--ink-3); }
   .day.plan .st { color: var(--ink-3); }
   .day .glyph { width: 18px; height: 18px; }
   button.day { font: inherit; color: inherit; text-align: left; cursor: pointer; transition: transform .18s ease, border-color .18s ease, background-color .18s ease; }
-  button.day:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.28); }
-  button.day:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; }
-  button.day[aria-pressed="true"] { border-color: rgba(255,255,255,.55); background-color: rgba(255,255,255,.07); transform: translateY(-3px); }
-  button.day[aria-pressed="true"]::after { content: ""; position: absolute; left: 50%; bottom: -9px; width: 10px; height: 10px; transform: translateX(-50%) rotate(45deg); background: rgba(255,255,255,.55); border-radius: 2px; }
+  button.day:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--fg) 28%, transparent); }
+  button.day:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  button.day[aria-pressed="true"] { border-color: color-mix(in srgb, var(--fg) 55%, transparent); background-color: color-mix(in srgb, var(--fg) 7%, transparent); transform: translateY(-3px); }
+  button.day[aria-pressed="true"]::after { content: ""; position: absolute; left: 50%; bottom: -9px; width: 10px; height: 10px; transform: translateX(-50%) rotate(45deg); background: color-mix(in srgb, var(--fg) 55%, transparent); border-radius: 2px; }
 
-  .sess { border-radius: 18px; padding: 18px 20px; background: rgba(0,0,0,.26); border: 1px solid rgba(255,255,255,.12); display: grid; gap: 14px; animation: rise .28s ease; }
+  .sess { border-radius: 18px; padding: 18px 20px; background: color-mix(in srgb, var(--sink) 26%, transparent); border: 1px solid color-mix(in srgb, var(--fg) 12%, transparent); display: grid; gap: 14px; animation: rise .28s ease; }
   @keyframes rise { from { opacity: .3; transform: translateY(6px); } }
   @media (prefers-reduced-motion: reduce) { .sess { animation: none; } button.day { transition: none; } }
   .sess-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
@@ -119,18 +127,18 @@
   .sess-stats { display: flex; gap: 26px; flex-wrap: wrap; }
   .sess-stats .v { font-size: 26px; font-weight: 200; letter-spacing: -.02em; line-height: 1.1; }
   .sess-rows { display: grid; }
-  .sess-row { display: grid; grid-template-columns: minmax(150px, 1fr) 2fr; gap: 14px; padding: 9px 0; border-top: 1px solid rgba(255,255,255,.07); font-size: 14px; }
+  .sess-row { display: grid; grid-template-columns: minmax(150px, 1fr) 2fr; gap: 14px; padding: 9px 0; border-top: 1px solid color-mix(in srgb, var(--fg) 7%, transparent); font-size: 14px; }
   .sess-row b { font-weight: 500; }
   .sess-row span { color: var(--ink-2); }
   .sess-note { font-size: 13px; color: var(--ink-2); }
-  .sess-note::before { content: "→ "; color: var(--mint); }
+  .sess-note::before { content: "→ "; color: var(--accent); }
 
   .side { display: grid; gap: 16px; grid-template-rows: auto 1fr; }
   .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 16px; }
   .stat .v { font-size: 38px; font-weight: 200; letter-spacing: -.03em; line-height: 1; margin-top: 6px; }
   .stat .v small { font-size: 15px; font-weight: 400; color: var(--ink-3); margin-left: 4px; letter-spacing: 0; }
   .stat .d { font-size: 12.5px; color: var(--ink-3); margin-top: 4px; }
-  .up { color: var(--mint); } .down { color: var(--ember); }
+  .up { color: var(--accent); } .down { color: var(--warm); }
 
   .achilles { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; }
   .tendon { width: 84px; height: 132px; }
@@ -140,22 +148,22 @@
   /* ---------- middle ---------- */
   .mid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 16px; }
   .grey-head { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin: 12px 0 18px; }
-  .grey-head .big { font-size: clamp(64px, 9vw, 112px); font-weight: 200; letter-spacing: -.05em; line-height: .85; background: linear-gradient(180deg, #e3e4ea, #8d90a0); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .grey-head .big { font-size: clamp(64px, 9vw, 112px); font-weight: 200; letter-spacing: -.05em; line-height: .85; background: linear-gradient(180deg, var(--grey-top), var(--grey)); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .grey-head p { margin: 0; max-width: 34ch; color: var(--ink-2); font-size: 14px; }
   .years { display: grid; gap: 10px; }
   .yr { display: grid; grid-template-columns: 44px 1fr; gap: 12px; align-items: center; }
   .yr .y { font-family: var(--mono); font-size: 12px; color: var(--ink-3); }
   .track { position: relative; display: flex; gap: 2px; height: 22px; border-radius: 6px; overflow: visible; }
   .seg { height: 100%; border-radius: 4px; min-width: 2px; cursor: default; }
-  .target { position: absolute; top: -6px; bottom: -6px; width: 0; border-left: 1px dashed rgba(126,242,193,.8); }
+  .target { position: absolute; top: -6px; bottom: -6px; width: 0; border-left: 1px dashed color-mix(in srgb, var(--accent) 80%, transparent); }
   .legend { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 14px; font-size: 12px; color: var(--ink-2); }
   .legend span::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 3px; margin-right: 6px; background: var(--c); vertical-align: -1px; }
 
   .cap-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 14px; }
-  .lock { border-radius: 14px; padding: 10px 12px; border: 1px dashed rgba(255,255,255,.14); background: rgba(0,0,0,.14); }
+  .lock { border-radius: 14px; padding: 10px 12px; border: 1px dashed color-mix(in srgb, var(--fg) 14%, transparent); background: color-mix(in srgb, var(--sink) 14%, transparent); }
   .lock .t { font-size: 13px; color: var(--ink-2); }
   .lock .v { font-family: var(--mono); font-size: 11px; color: var(--ink-3); margin-top: 2px; }
-  .bests { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.08); }
+  .bests { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 16px; padding-top: 14px; border-top: 1px solid color-mix(in srgb, var(--fg) 8%, transparent); }
   .best .v { font-size: 22px; font-weight: 300; letter-spacing: -.02em; }
   .best .t { font-size: 11.5px; color: var(--ink-3); }
   .countdown { display: flex; align-items: baseline; gap: 10px; margin-top: 6px; }
@@ -167,19 +175,19 @@
   .season-head .meta b { font-weight: 500; color: var(--ink); }
   .chart { position: relative; margin-top: 12px; overflow-x: auto; }
   .chart svg { display: block; width: 100%; min-width: 640px; height: auto; }
-  .tip { position: fixed; z-index: 100; pointer-events: none; padding: 10px 12px; border-radius: 12px; background: rgba(14,16,20,.82); border: 1px solid var(--edge); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); font-size: 12px; min-width: 150px; transform: translate(-50%, -100%); white-space: nowrap; }
+  .tip { position: fixed; z-index: 100; pointer-events: none; padding: 10px 12px; border-radius: 12px; background: color-mix(in srgb, var(--ground) 82%, transparent); border: 1px solid var(--edge); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); font-size: 12px; min-width: 150px; transform: translate(-50%, -100%); white-space: nowrap; }
   .tip .h { font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; color: var(--ink-3); text-transform: uppercase; margin-bottom: 6px; }
   .tip .r { display: flex; justify-content: space-between; gap: 14px; }
   .tip .r i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 6px; }
 
   /* ---------- watch ---------- */
   .watch { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 14px; }
-  .chip { border-radius: 16px; padding: 12px 14px; background: rgba(0,0,0,.2); border: 1px solid rgba(255,255,255,.08); display: grid; gap: 4px; align-content: start; }
+  .chip { border-radius: 16px; padding: 12px 14px; background: color-mix(in srgb, var(--sink) 20%, transparent); border: 1px solid color-mix(in srgb, var(--fg) 8%, transparent); display: grid; gap: 4px; align-content: start; }
   .chip .k { font-size: 12px; color: var(--ink-3); }
   .chip .v { font-size: 24px; font-weight: 300; letter-spacing: -.02em; }
   .chip .s { font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; display: flex; align-items: center; gap: 6px; }
   .chip .s::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
-  .ok { color: var(--mint); } .wait { color: var(--ink-3); } .flag { color: var(--warn); } .hot { color: var(--ember); }
+  .ok { color: var(--accent); } .wait { color: var(--ink-3); } .flag { color: var(--warn); } .hot { color: var(--hard); }
 
   footer { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-family: var(--mono); font-size: 11px; color: var(--ink-3); letter-spacing: .04em; padding: 4px 6px; }
 
@@ -203,9 +211,9 @@
   /* ---------- navigation ---------- */
   .nav { display: flex; gap: 6px; flex-wrap: wrap; }
   a.pill { text-decoration: none; transition: border-color .15s ease, color .15s ease; }
-  a.pill:hover { border-color: rgba(255,255,255,.35); color: var(--ink); }
-  a.pill:focus-visible, a.strip:focus-visible, a.wk:focus-visible { outline: 2px solid var(--mint); outline-offset: 2px; }
-  a.pill[aria-current="page"] { color: var(--mint); border-color: rgba(126,242,193,.45); background: rgba(126,242,193,.08); }
+  a.pill:hover { border-color: color-mix(in srgb, var(--fg) 35%, transparent); color: var(--ink); }
+  a.pill:focus-visible, a.strip:focus-visible, a.wk:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  a.pill[aria-current="page"] { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, transparent); background: color-mix(in srgb, var(--accent) 8%, transparent); }
   a.strip { display: grid; grid-template-columns: auto 1fr; gap: 6px 22px; align-items: baseline; padding: 14px 22px; border-radius: 18px; text-decoration: none; color: inherit; }
   .strip .bn { font-size: 22px; font-weight: 300; letter-spacing: -.02em; white-space: nowrap; }
   .strip .bn b { font-weight: 500; }
@@ -213,21 +221,21 @@
   .strip .meta { grid-column: 1 / -1; display: flex; gap: 8px; flex-wrap: wrap; }
   .weeks { display: flex; gap: 6px; flex-wrap: wrap; }
   .wk-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
-  a.wk { display: grid; gap: 10px; padding: 16px 18px; border-radius: 18px; text-decoration: none; color: inherit; background: rgba(0,0,0,.2); border: 1px solid rgba(255,255,255,.1); transition: transform .18s ease, border-color .18s ease; }
-  a.wk:hover { transform: translateY(-2px); border-color: rgba(255,255,255,.3); }
-  a.wk.now { border-color: rgba(255,122,69,.55); box-shadow: 0 0 30px -10px rgba(255,122,69,.6); }
+  a.wk { display: grid; gap: 10px; padding: 16px 18px; border-radius: 18px; text-decoration: none; color: inherit; background: color-mix(in srgb, var(--sink) 20%, transparent); border: 1px solid color-mix(in srgb, var(--fg) 10%, transparent); transition: transform .18s ease, border-color .18s ease; }
+  a.wk:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--fg) 30%, transparent); }
+  a.wk.now { border-color: color-mix(in srgb, var(--warm) 55%, transparent); box-shadow: 0 0 30px -10px color-mix(in srgb, var(--warm) 60%, transparent); }
   .wk .n { white-space: nowrap; font-size: 26px; font-weight: 200; letter-spacing: -.02em; line-height: 1; }
   .wk .dots { display: flex; gap: 5px; }
-  .wk .dots i { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.12); }
-  .wk .dots i.done { background: var(--mint); box-shadow: 0 0 8px rgba(126,242,193,.6); }
-  .wk .dots i.missed { background: transparent; border: 1px solid var(--ember); }
-  .wk .dots i.rest { background: transparent; border: 1px dashed rgba(255,255,255,.18); }
+  .wk .dots i { width: 9px; height: 9px; border-radius: 50%; background: color-mix(in srgb, var(--fg) 12%, transparent); }
+  .wk .dots i.done { background: var(--accent); box-shadow: 0 0 8px color-mix(in srgb, var(--accent) 60%, transparent); }
+  .wk .dots i.missed { background: transparent; border: 1px solid var(--hard); }
+  .wk .dots i.rest { background: transparent; border: 1px dashed color-mix(in srgb, var(--fg) 18%, transparent); }
   .totals { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; }
   .review-text { color: var(--ink-2); font-size: 14px; white-space: pre-line; max-width: 75ch; }
-  .day.missed { border-color: rgba(255,122,69,.4); border-style: dashed; }
-  .day.missed .st { color: var(--ember); }
+  .day.missed { border-color: color-mix(in srgb, var(--hard) 40%, transparent); border-style: dashed; }
+  .day.missed .st { color: var(--hard); }
   .spark { display: flex; gap: 4px; align-items: flex-end; height: 26px; margin-top: 10px; }
-  .spark i { width: 7px; border-radius: 2px; background: var(--mint); opacity: .85; }
+  .spark i { width: 7px; border-radius: 2px; background: var(--accent); opacity: .85; }
   .empty { color: var(--ink-3); font-size: 14px; }
   .sess-row.one { grid-template-columns: 1fr; }
   @media (max-width: 1020px) { .totals { grid-template-columns: repeat(3, 1fr); } }
@@ -235,6 +243,12 @@
     a.strip { grid-template-columns: 1fr; }
     .totals { grid-template-columns: repeat(2, 1fr); }
   }
+  .pill.mood { display: inline-flex; align-items: center; gap: 8px; text-transform: lowercase; letter-spacing: .06em; color: var(--ink); }
+  .mode-btn { display: inline-grid; place-items: center; width: 32px; height: 32px; padding: 0; cursor: pointer; color: var(--ink); font: inherit; }
+  .mode-btn svg { width: 15px; height: 15px; }
+  .mode-btn:hover { border-color: color-mix(in srgb, var(--fg) 35%, transparent); }
+  .mode-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .pill.mood i { width: 12px; height: 12px; border-radius: 50%; background: conic-gradient(var(--glow-1a), var(--accent), var(--glow-2a), var(--glow-1a)); }
   @media (prefers-reduced-motion: reduce) { a.wk { transition: none; } }
 </style>
 
@@ -248,6 +262,8 @@
     <div class="mark"><i></i>olavibot</div>
     <nav class="nav" id="nav" aria-label="Views"></nav>
     <span class="spacer"></span>
+    <span class="pill mood" id="mood-pill" title="This week's palette"></span>
+    <button type="button" class="pill mode-btn" id="mode-btn"></button>
     <span class="pill" id="today-pill"></span>
   </header>
   <div id="strip"></div>
@@ -397,11 +413,11 @@ function parseTests(text) {
 
 // ---------- derived data ----------
 const BANDS = [
-  { k: "easy", name: "Easy", c: "#4fd8a0" },
-  { k: "steady", name: "Steady", c: "#2f8a70" },
-  { k: "grey", name: "Grey", c: "#8d90a0" },
-  { k: "hard", name: "Hard", c: "#ff7a45" },
-  { k: "race", name: "Race", c: "#f3ece4" },
+  { k: "easy", name: "Easy", c: "var(--easy)" },
+  { k: "steady", name: "Steady", c: "var(--steady)" },
+  { k: "grey", name: "Grey", c: "var(--grey)" },
+  { k: "hard", name: "Hard", c: "var(--hard)" },
+  { k: "race", name: "Race", c: "var(--race)" },
 ];
 const bandOf = sPerKm => sPerKm < 285 ? "hard" : sPerKm < 315 ? "grey" : sPerKm < 330 ? "steady" : "easy";
 
@@ -571,8 +587,8 @@ const stLabel = { done: "Done", today: "Today", plan: "Planned", rest: "Rest", m
 
 function ringSVG(done, planned) {
   const r = 52, C = 2 * Math.PI * r, f = planned ? Math.min(1, done / planned) : 0;
-  return `<svg viewBox="0 0 120 120"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7ef2c1"/><stop offset="1" stop-color="#d9fff0"/></linearGradient></defs>
-    <circle cx="60" cy="60" r="${r}" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="6"/>
+  return `<svg viewBox="0 0 120 120"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--accent)"/><stop offset="1" style="stop-color:var(--accent-2)"/></linearGradient></defs>
+    <circle cx="60" cy="60" r="${r}" fill="none" style="stroke:color-mix(in srgb, var(--fg) 10%, transparent)" stroke-width="6"/>
     <circle cx="60" cy="60" r="${r}" fill="none" stroke="url(#rg)" stroke-width="6" stroke-linecap="round" stroke-dasharray="${C * f} ${C}"/></svg>
     <div class="c"><strong class="num">${+done.toFixed(1)}</strong><span>${planned ? `of ${+planned.toFixed(1)} km` : "km"}</span></div>`;
 }
@@ -594,7 +610,7 @@ function weekPanel(b, n, label) {
       </div>
       <div class="days" role="group" aria-label="Pick a day to see its session">${days.map((d, i) => `
         <button type="button" class="day ${d.st}${d.isToday && d.st !== "today" ? " today" : ""}${d.kind === "rest" ? " rest" : ""}" data-i="${i}" aria-pressed="false">
-          <div style="display:flex;justify-content:space-between;align-items:center"><span class="dn">${d.dow}</span><span style="color:${d.st === "done" ? "var(--mint)" : "var(--ink-3)"}">${icons[d.kind]}</span></div>
+          <div style="display:flex;justify-content:space-between;align-items:center"><span class="dn">${d.dow}</span><span style="color:${d.st === "done" ? "var(--accent)" : "var(--ink-3)"}">${icons[d.kind]}</span></div>
           <div class="dd num">${+d.date.slice(8)}</div>
           <div class="what">${esc(d.what)}</div>
           <div class="st">${stLabel[d.st]}</div>
@@ -681,8 +697,8 @@ function viewNow() {
   const pk = plannedKm(b, n, days);
 
   const a = achilles();
-  const glow = { ok: "#7ef2c1", hot: "#ff7a45", wait: "#7c8588" }[a.cls];
-  const spark = a.pts.length >= 2 ? `<div class="spark" aria-label="Morning scores">${a.pts.slice(-14).map(p => `<i title="${dm(p.date)}: ${p.v}/10" style="height:${4 + p.v * 2.2}px;background:${p.v > 5 ? "var(--ember)" : "var(--mint)"}"></i>`).join("")}</div>` : "";
+  const glow = { ok: "var(--accent)", hot: "var(--hard)", wait: "var(--ink-3)" }[a.cls];
+  const spark = a.pts.length >= 2 ? `<div class="spark" aria-label="Morning scores">${a.pts.slice(-14).map(p => `<i title="${dm(p.date)}: ${p.v}/10" style="height:${4 + p.v * 2.2}px;background:${p.v > 5 ? "var(--hard)" : "var(--accent)"}"></i>`).join("")}</div>` : "";
 
   // pace shares by year: backyards and hikes excluded, as in strava-history.md
   const years = {};
@@ -731,12 +747,12 @@ function viewNow() {
       <div class="glass achilles">
         <svg class="tendon" viewBox="0 0 84 132" aria-hidden="true">
           <defs>
-            <radialGradient id="hot" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="${glow}" stop-opacity=".9"/><stop offset="1" stop-color="${glow}" stop-opacity="0"/></radialGradient>
-            <linearGradient id="leg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".02"/><stop offset="1" stop-color="#ffffff" stop-opacity=".22"/></linearGradient>
+            <radialGradient id="hot" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:${glow}" stop-opacity=".9"/><stop offset="1" style="stop-color:${glow}" stop-opacity="0"/></radialGradient>
+            <linearGradient id="leg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--fg)" stop-opacity=".02"/><stop offset="1" style="stop-color:var(--fg)" stop-opacity=".22"/></linearGradient>
           </defs>
           <path d="M30 0 C28 40 34 70 40 96 C42 106 38 112 26 116 C14 120 8 124 10 128 L74 128 C78 124 74 118 66 114 C58 110 56 100 56 88 C58 60 60 30 58 0 Z" fill="url(#leg)" stroke="rgba(255,255,255,.18)"/>
           <circle cx="46" cy="100" r="18" fill="url(#hot)"/>
-          <circle cx="46" cy="100" r="3.5" fill="${glow}"/>
+          <circle cx="46" cy="100" r="3.5" style="fill:${glow}"/>
         </svg>
         <div>
           <div class="label">Achilles · morning signal</div>
@@ -866,38 +882,149 @@ function drawChart(host) {
   el("feGaussianBlur", { stdDeviation: 6 }, glow);
   const iw = W - padL - padR, ih = H - padT - padB, slot = iw / 52, bw = Math.max(6, slot - 6);
   const y = v => padT + ih - Math.min(v, cap) / cap * ih;
-  const mono = { fill: "#7c8588", "font-size": 11, "font-family": "IBM Plex Mono, monospace" };
+  const mono = { style: "fill:var(--ink-3)", "font-size": 11, "font-family": "IBM Plex Mono, monospace" };
   [0, 20, 40, 60].forEach(t => {
-    el("line", { x1: padL, x2: W - padR, y1: y(t), y2: y(t), stroke: "rgba(255,255,255,.07)" }, svg);
+    el("line", { x1: padL, x2: W - padR, y1: y(t), y2: y(t), style: "stroke:color-mix(in srgb, var(--fg) 7%, transparent)" }, svg);
     el("text", { x: padL - 8, y: y(t) + 4, "text-anchor": "end", ...mono }, svg).textContent = t;
   });
   weeks.forEach((w, i) => {
     const x = padL + i * slot + (slot - bw) / 2, g = el("g", {}, svg), isNow = i === 51;
-    if (isNow) el("rect", { x: x - 4, y: padT, width: bw + 8, height: ih, rx: 6, fill: "rgba(126,242,193,.08)" }, g);
+    if (isNow) el("rect", { x: x - 4, y: padT, width: bw + 8, height: ih, rx: 6, style: "fill:color-mix(in srgb, var(--accent) 8%, transparent)" }, g);
     let base = 0;
     const total = BANDS.reduce((s, b) => s + w[b.k], 0);
     BANDS.forEach(b => {
       const v = w[b.k]; if (!v) return;
       const top = y(base + v), bot = y(base);
-      el("rect", { x, y: top, width: bw, height: Math.max(1.5, bot - top - 2), rx: 3, fill: b.c, opacity: isNow ? 1 : .9 }, g);
+      el("rect", { x, y: top, width: bw, height: Math.max(1.5, bot - top - 2), rx: 3, style: `fill:${b.c}`, opacity: isNow ? 1 : .9 }, g);
       base += v;
     });
-    if (total > cap) el("text", { x: x + bw / 2, y: padT - 4, "text-anchor": "middle", ...mono, fill: "#f3ece4", "font-size": 10.5 }, g).textContent = Math.round(total) + "↑";
-    for (let k = 0; k < w.gym; k++) el("circle", { cx: x + bw / 2, cy: H - padB + 12 + k * 8, r: 2.6, fill: "#7ef2c1" }, g);
+    if (total > cap) el("text", { x: x + bw / 2, y: padT - 4, "text-anchor": "middle", ...mono, style: "fill:var(--ink)", "font-size": 10.5 }, g).textContent = Math.round(total) + "↑";
+    for (let k = 0; k < w.gym; k++) el("circle", { cx: x + bw / 2, cy: H - padB + 12 + k * 8, r: 2.6, style: "fill:var(--accent)" }, g);
     if (+w.w.slice(8) <= 7) el("text", { x: x + bw / 2, y: H - 6, "text-anchor": "middle", ...mono }, g).textContent = fmt(w.w, { month: "short" });
     if (isNow) {
-      el("circle", { cx: x + bw / 2, cy: y(total) - 10, r: 9, fill: "#7ef2c1", opacity: .5, filter: "url(#glow)" }, g);
-      el("circle", { cx: x + bw / 2, cy: y(total) - 10, r: 3.5, fill: "#7ef2c1" }, g);
+      el("circle", { cx: x + bw / 2, cy: y(total) - 10, r: 9, style: "fill:var(--accent)", opacity: .5, filter: "url(#glow)" }, g);
+      el("circle", { cx: x + bw / 2, cy: y(total) - 10, r: 3.5, style: "fill:var(--accent)" }, g);
     }
     const hit = el("rect", { x: padL + i * slot, y: padT, width: slot, height: ih + 34, fill: "transparent" }, g);
     hit.addEventListener("mousemove", e => {
       const rows = BANDS.filter(b => w[b.k]).map(b => `<div class="r"><span><i style="background:${b.c}"></i>${b.name}</span><b class="num">${w[b.k].toFixed(1)} km</b></div>`).join("");
       const note = isNow ? "This week, so far" : w.notes.join(", ");
-      showTip(`<div class="h">Week of ${fmt(w.w, { day: "numeric", month: "short", year: "2-digit" })}${note ? " · " + esc(note) : ""}</div>${rows || '<div class="r muted">No running</div>'}<div class="r" style="margin-top:6px;border-top:1px solid rgba(255,255,255,.1);padding-top:6px"><span>Total</span><b class="num">${total.toFixed(1)} km</b></div><div class="r"><span>Gym</span><b class="num">${w.gym}</b></div>`, e.clientX, e.clientY);
+      showTip(`<div class="h">Week of ${fmt(w.w, { day: "numeric", month: "short", year: "2-digit" })}${note ? " · " + esc(note) : ""}</div>${rows || '<div class="r muted">No running</div>'}<div class="r" style="margin-top:6px;border-top:1px solid color-mix(in srgb, var(--fg) 10%, transparent);padding-top:6px"><span>Total</span><b class="num">${total.toFixed(1)} km</b></div><div class="r"><span>Gym</span><b class="num">${w.gym}</b></div>`, e.clientX, e.clientY);
     });
     hit.addEventListener("mouseleave", hideTip);
   });
 }
+
+// ---------- palette: one per week, from the recipe book ----------
+// Each week (by its Monday) deterministically picks a recipe and a hue, so a week keeps its
+// colours on every device and past weeks keep theirs. The name is "<hue word> <recipe>".
+// To grow the book, add a recipe. To fix a week you don't like, pin it in PINNED.
+const RECIPES = [
+  { name: "dusk",     mode: "dark",  hue: [25, 60],   shift: 125 },   // ember glow, mint accent
+  { name: "frost",    mode: "light", hue: [215, 255], shift: 25 },    // bright, frosted, blue
+  { name: "nocturne", mode: "dark",  hue: [250, 295], shift: 175 },   // violet night, amber accent
+  { name: "bloom",    mode: "light", hue: [335, 370], shift: 160 },   // pastel rose, deep teal accent
+  { name: "canopy",   mode: "dark",  hue: [140, 175], shift: -115 },  // forest, coral accent
+  { name: "haze",     mode: "light", hue: [55, 90],   shift: 170 },   // sand and sun, indigo accent
+];
+const PINNED = {
+  "2026-09-21": { recipe: "dusk", hue: 42 },   // the original ember-and-mint week
+};
+const HUE_WORDS = [[20, "cherry"], [45, "ember"], [75, "amber"], [105, "citrus"], [150, "moss"], [185, "jade"],
+  [215, "lagoon"], [250, "cobalt"], [285, "indigo"], [320, "violet"], [345, "orchid"], [360, "cherry"]];
+const hueWord = h => HUE_WORDS.find(([m]) => ((h % 360) + 360) % 360 < m)[1];
+
+function oklch(L, C, h) {
+  const r = h * Math.PI / 180, a = C * Math.cos(r), b = C * Math.sin(r);
+  const l = (L + .3963377774 * a + .2158037573 * b) ** 3, m = (L - .1055613458 * a - .0638541728 * b) ** 3, s = (L - .0894841775 * a - 1.291485548 * b) ** 3;
+  const lin = [4.0767416621 * l - 3.3077115913 * m + .2309699292 * s, -1.2684380046 * l + 2.6097574011 * m - .3413193965 * s, -.0041960863 * l - .7034186147 * m + 1.707614701 * s];
+  return "#" + lin.map(x => { x = Math.min(1, Math.max(0, x)); x = x <= .0031308 ? 12.92 * x : 1.055 * x ** (1 / 2.4) - .055; return Math.round(x * 255).toString(16).padStart(2, "0"); }).join("");
+}
+function lum(hex) {
+  const c = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255).map(v => v <= .03928 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4);
+  return .2126 * c[0] + .7152 * c[1] + .0722 * c[2];
+}
+const contrast = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + .05) / (y + .05); };
+// Walk lightness away from the ground until the colour reads at the required contrast.
+function readable(L, C, h, ground, min, dark) {
+  let c = oklch(L, C, h);
+  for (let i = 0; i < 30 && contrast(c, ground) < min; i++) { L += dark ? .015 : -.015; c = oklch(L, C, h); }
+  return c;
+}
+function rand(seed) {  // mulberry32
+  let t = (seed + 0x6d2b79f5) | 0;
+  t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+}
+const REROLL = +(new URLSearchParams(location.search).get("palette") || 0);
+// Recipes are dealt like a shuffled deck: every recipe once per cycle, reshuffled each cycle,
+// never the same recipe two weeks running (pins included).
+function dealt(w) {
+  const n = RECIPES.length, cycle = Math.floor(w / n), order = [...RECIPES.keys()];
+  for (let i = n - 1; i > 0; i--) { const j = Math.floor(rand(cycle * 9973 + i) * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
+  return order[((w % n) + n) % n];
+}
+function pickFor(monday) {
+  if (!REROLL && PINNED[monday]) return { recipe: RECIPES.find(r => r.name === PINNED[monday].recipe) || RECIPES[0], hue: PINNED[monday].hue };
+  const w = Math.round(ms(monday) / (7 * DAY)) + REROLL * 7919;
+  const prevPin = !REROLL && PINNED[addDays(monday, -7)];
+  const prev = prevPin ? RECIPES.findIndex(r => r.name === prevPin.recipe) : dealt(w - 1);
+  let i = dealt(w);
+  if (i === prev) i = (i + 1) % RECIPES.length;
+  const recipe = RECIPES[i];
+  return { recipe, hue: recipe.hue[0] + rand(w * 40503 + 7) * (recipe.hue[1] - recipe.hue[0]) };
+}
+function paletteFor(monday, mode) {
+  const { recipe, hue } = pickFor(monday);
+  const dark = (mode || recipe.mode) === "dark", h = hue, ah = hue + recipe.shift;
+  const ground = dark ? oklch(.155, .012, h) : oklch(.968, .012, h);
+  const P = {
+    name: `${hueWord(h)} ${recipe.name}`, dark, ground,
+    ink: dark ? oklch(.95, .01, h) : oklch(.22, .02, h),
+    "ink-2": readable(dark ? .8 : .42, .015, h, ground, 7, dark),
+    "ink-3": readable(dark ? .62 : .54, .015, h, ground, 4.5, dark),
+    fg: dark ? "#ffffff" : oklch(.25, .02, h),
+    sink: dark ? "#000000" : "#ffffff",
+    glass: dark ? "rgba(255,255,255,.055)" : "rgba(255,255,255,.42)",
+    "glass-hi": dark ? "rgba(255,255,255,.10)" : "rgba(255,255,255,.72)",
+    edge: dark ? "rgba(255,255,255,.13)" : "rgba(255,255,255,.9)",
+    accent: readable(dark ? .88 : .5, dark ? .14 : .15, ah, ground, 4.5, dark),
+    "accent-2": dark ? oklch(.96, .05, ah) : oklch(.38, .12, ah),
+    warm: readable(dark ? .72 : .6, .17, h, ground, 3, dark),
+    "glow-1a": dark ? oklch(.7, .17, h) : oklch(.84, .11, h), "glow-1b": dark ? oklch(.5, .16, h) : oklch(.9, .07, h),
+    "glow-2a": dark ? oklch(.46, .09, ah) : oklch(.87, .08, ah), "glow-2b": dark ? oklch(.3, .06, ah) : oklch(.93, .04, ah),
+    "glow-3": dark ? oklch(.5, .04, h + 60) : oklch(.9, .05, h + 60),
+    // Pace colours keep their meaning every week; only their lightness follows the mode.
+    easy: dark ? "#4fd8a0" : "#1b9a6b", steady: dark ? "#2f8a70" : "#7cc4a8", grey: dark ? "#8d90a0" : "#9a9dab",
+    "grey-top": dark ? "#e3e4ea" : "#5b5e6b", hard: dark ? "#ff7a45" : "#e0602c", race: dark ? "#f3ece4" : "#2b2f36",
+  };
+  return P;
+}
+// Light/dark: each week's recipe picks a default; the header button overrides it, and the
+// choice is remembered in this browser until switched back.
+let MODE = null;
+try { MODE = localStorage.getItem("olavi-mode"); } catch (e) {}
+const ICONS = {
+  sun: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="3"/><path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3 3l1 1M12 12l1 1M3 13l1-1M12 4l1-1"/></svg>',
+  moon: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M13.5 9.5A6 6 0 0 1 6.5 2.5a6 6 0 1 0 7 7z"/></svg>',
+};
+function applyPalette(monday) {
+  S.monday = monday;
+  const P = paletteFor(monday, MODE), root = document.documentElement.style;
+  Object.entries(P).forEach(([k, v]) => typeof v === "string" && k !== "name" && root.setProperty("--" + k, v));
+  root.setProperty("color-scheme", P.dark ? "dark" : "light");
+  $("mood-pill").innerHTML = `<i></i>${esc(P.name)}`;
+  const btn = $("mode-btn");
+  btn.innerHTML = P.dark ? ICONS.sun : ICONS.moon;
+  btn.setAttribute("aria-label", P.dark ? "Switch to light mode" : "Switch to dark mode");
+  btn.title = btn.getAttribute("aria-label");
+  btn.dataset.dark = P.dark ? "1" : "";
+}
+$("mode-btn").addEventListener("click", e => {
+  MODE = e.currentTarget.dataset.dark ? "light" : "dark";
+  try { localStorage.setItem("olavi-mode", MODE); } catch (err) {}
+  if (S.monday) applyPalette(S.monday);
+});
 
 // ---------- router ----------
 function render() {
@@ -908,6 +1035,7 @@ function render() {
   const n = b && wk && /^w\d+$/.test(wk) ? +wk.slice(1) : null;
   const route = !b ? "now" : n && weeksWithData(b).includes(n) ? "week" : "block";
   const cur = b || S.active;
+  applyPalette(route === "week" ? weekStart(b, n) : route === "block" ? mondayOf(b.start) : mondayOf(TODAY));
 
   $("nav").innerHTML = [`<a class="pill" href="#now"${route === "now" ? ' aria-current="page"' : ""}>Now</a>`,
     ...S.blocks.map(x => `<a class="pill" href="#${x.id}"${route !== "now" && x === b ? ' aria-current="page"' : ""}>${esc(x.name)}</a>`)].join("");
