@@ -244,6 +244,10 @@
     .totals { grid-template-columns: repeat(2, 1fr); }
   }
   .pill.mood { display: inline-flex; align-items: center; gap: 8px; text-transform: lowercase; letter-spacing: .06em; color: var(--ink); }
+  .mode-btn { display: inline-grid; place-items: center; width: 32px; height: 32px; padding: 0; cursor: pointer; color: var(--ink); font: inherit; }
+  .mode-btn svg { width: 15px; height: 15px; }
+  .mode-btn:hover { border-color: color-mix(in srgb, var(--fg) 35%, transparent); }
+  .mode-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   .pill.mood i { width: 12px; height: 12px; border-radius: 50%; background: conic-gradient(var(--glow-1a), var(--accent), var(--glow-2a), var(--glow-1a)); }
   @media (prefers-reduced-motion: reduce) { a.wk { transition: none; } }
 </style>
@@ -259,6 +263,7 @@
     <nav class="nav" id="nav" aria-label="Views"></nav>
     <span class="spacer"></span>
     <span class="pill mood" id="mood-pill" title="This week's palette"></span>
+    <button type="button" class="pill mode-btn" id="mode-btn"></button>
     <span class="pill" id="today-pill"></span>
   </header>
   <div id="strip"></div>
@@ -969,9 +974,9 @@ function pickFor(monday) {
   const recipe = RECIPES[i];
   return { recipe, hue: recipe.hue[0] + rand(w * 40503 + 7) * (recipe.hue[1] - recipe.hue[0]) };
 }
-function paletteFor(monday) {
+function paletteFor(monday, mode) {
   const { recipe, hue } = pickFor(monday);
-  const dark = recipe.mode === "dark", h = hue, ah = hue + recipe.shift;
+  const dark = (mode || recipe.mode) === "dark", h = hue, ah = hue + recipe.shift;
   const ground = dark ? oklch(.155, .012, h) : oklch(.968, .012, h);
   const P = {
     name: `${hueWord(h)} ${recipe.name}`, dark, ground,
@@ -995,12 +1000,31 @@ function paletteFor(monday) {
   };
   return P;
 }
+// Light/dark: each week's recipe picks a default; the header button overrides it, and the
+// choice is remembered in this browser until switched back.
+let MODE = null;
+try { MODE = localStorage.getItem("olavi-mode"); } catch (e) {}
+const ICONS = {
+  sun: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="3"/><path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3 3l1 1M12 12l1 1M3 13l1-1M12 4l1-1"/></svg>',
+  moon: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M13.5 9.5A6 6 0 0 1 6.5 2.5a6 6 0 1 0 7 7z"/></svg>',
+};
 function applyPalette(monday) {
-  const P = paletteFor(monday), root = document.documentElement.style;
+  S.monday = monday;
+  const P = paletteFor(monday, MODE), root = document.documentElement.style;
   Object.entries(P).forEach(([k, v]) => typeof v === "string" && k !== "name" && root.setProperty("--" + k, v));
   root.setProperty("color-scheme", P.dark ? "dark" : "light");
   $("mood-pill").innerHTML = `<i></i>${esc(P.name)}`;
+  const btn = $("mode-btn");
+  btn.innerHTML = P.dark ? ICONS.sun : ICONS.moon;
+  btn.setAttribute("aria-label", P.dark ? "Switch to light mode" : "Switch to dark mode");
+  btn.title = btn.getAttribute("aria-label");
+  btn.dataset.dark = P.dark ? "1" : "";
 }
+$("mode-btn").addEventListener("click", e => {
+  MODE = e.currentTarget.dataset.dark ? "light" : "dark";
+  try { localStorage.setItem("olavi-mode", MODE); } catch (err) {}
+  if (S.monday) applyPalette(S.monday);
+});
 
 // ---------- router ----------
 function render() {
