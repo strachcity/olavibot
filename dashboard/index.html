@@ -1,4 +1,5 @@
 <meta charset="utf-8">
+<script>document.documentElement.classList.add("instant")</script>
 <title>Olavi Dashboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +19,9 @@
     --glass: rgba(255, 255, 255, 0.055);
     --glass-hi: rgba(255, 255, 255, 0.10);
     --edge: rgba(255, 255, 255, 0.13);
+    --highlight: rgba(255, 255, 255, 0.08);
+    --shadow-color: rgba(0, 0, 0, 0.6);
+    --blob-opacity: .75;
     --accent: #7ef2c1;
     --accent-2: #d9fff0;
     --warm: #ff7a45;
@@ -34,6 +38,36 @@
     --display: "Urbanist", "Avenir Next", "Segoe UI", system-ui, sans-serif;
     --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
   }
+  /* Colour tokens are registered so a mode or week change blends every colour over 0.5s. */
+  @property --ground { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --ink { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --ink-2 { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --ink-3 { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --fg { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --sink { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --glass { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --glass-hi { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --edge { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --highlight { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --shadow-color { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --accent { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --accent-2 { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --warm { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --glow-1a { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --glow-1b { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --glow-2a { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --glow-2b { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --glow-3 { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --grey-top { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --easy { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --steady { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --grey { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --hard { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --race { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --blob-opacity { syntax: "<number>"; inherits: true; initial-value: .75; }
+  :root { transition: --ground .5s ease, --ink .5s ease, --ink-2 .5s ease, --ink-3 .5s ease, --fg .5s ease, --sink .5s ease, --glass .5s ease, --glass-hi .5s ease, --edge .5s ease, --highlight .5s ease, --shadow-color .5s ease, --accent .5s ease, --accent-2 .5s ease, --warm .5s ease, --glow-1a .5s ease, --glow-1b .5s ease, --glow-2a .5s ease, --glow-2b .5s ease, --glow-3 .5s ease, --grey-top .5s ease, --easy .5s ease, --steady .5s ease, --grey .5s ease, --hard .5s ease, --race .5s ease, --blob-opacity .5s ease; }
+  :root.instant { transition: none; }
+  @media (prefers-reduced-motion: reduce) { :root { transition: none; } }
   * { box-sizing: border-box; }
   html, body { background: var(--ground); }
   body {
@@ -48,7 +82,7 @@
 
   /* ---------- atmosphere ---------- */
   .sky { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
-  .blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .75; }
+  .blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: var(--blob-opacity); }
   .b1 { width: 62vw; height: 62vw; right: -18vw; top: -22vw; background: radial-gradient(circle, var(--glow-1a) 0%, var(--glow-1b) 45%, transparent 70%); animation: drift1 38s ease-in-out infinite alternate; }
   .b2 { width: 55vw; height: 55vw; left: -20vw; bottom: -25vw; background: radial-gradient(circle, var(--glow-2a) 0%, var(--glow-2b) 50%, transparent 72%); animation: drift2 46s ease-in-out infinite alternate; }
   .b3 { width: 38vw; height: 38vw; left: 30vw; top: 30vh; background: radial-gradient(circle, var(--glow-3) 0%, transparent 70%); opacity: .35; animation: drift1 52s ease-in-out infinite alternate-reverse; }
@@ -68,9 +102,9 @@
     background: linear-gradient(160deg, var(--glass-hi), var(--glass) 55%);
     border: 1px solid var(--edge);
     border-radius: 22px;
-    backdrop-filter: blur(22px) saturate(140%);
-    -webkit-backdrop-filter: blur(22px) saturate(140%);
-    box-shadow: 0 1px 0 color-mix(in srgb, var(--fg) 8%, transparent) inset, 0 30px 60px -30px color-mix(in srgb, var(--sink) 60%, transparent);
+    backdrop-filter: blur(24px) saturate(160%);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    box-shadow: inset 0 1px 0 var(--highlight), 0 30px 60px -30px var(--shadow-color);
     padding: 20px 22px;
     min-width: 0;
   }
@@ -244,10 +278,19 @@
     .totals { grid-template-columns: repeat(2, 1fr); }
   }
   .pill.mood { display: inline-flex; align-items: center; gap: 8px; text-transform: lowercase; letter-spacing: .06em; color: var(--ink); }
-  .mode-btn { display: inline-grid; place-items: center; width: 32px; height: 32px; padding: 0; cursor: pointer; color: var(--ink); font: inherit; }
-  .mode-btn svg { width: 15px; height: 15px; }
-  .mode-btn:hover { border-color: color-mix(in srgb, var(--fg) 35%, transparent); }
-  .mode-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .switch { position: relative; flex: none; width: 62px; height: 32px; padding: 0; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--edge); background: color-mix(in srgb, var(--sink) 22%, transparent); box-shadow: inset 0 1px 2px rgba(0,0,0,.18); }
+  .switch:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .switch .ico { position: absolute; top: 50%; width: 14px; height: 14px; transform: translateY(-50%); color: var(--ink-3); }
+  .switch .ico.sun { left: 9px; } .switch .ico.moon { right: 9px; }
+  .knob { position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center;
+    background: #fbf6f2; color: #3a2a22; box-shadow: 0 2px 6px rgba(0,0,0,.3), inset 0 1px 0 #fff;
+    transition: transform .5s cubic-bezier(.4,0,.2,1), background-color .5s ease, color .5s ease, box-shadow .5s ease; }
+  .knob svg { width: 14px; height: 14px; transition: transform .5s cubic-bezier(.4,0,.2,1); }
+  :root[data-mode="dark"] .knob { transform: translateX(30px); background: #22262d; color: var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.15); }
+  :root[data-mode="dark"] .knob svg { transform: rotate(-90deg); }
+  :root.instant .knob, :root.instant .knob svg { transition: none; }
+  @media (prefers-reduced-motion: reduce) { .knob, .knob svg { transition: none; } }
   .pill.mood i { width: 12px; height: 12px; border-radius: 50%; background: conic-gradient(var(--glow-1a), var(--accent), var(--glow-2a), var(--glow-1a)); }
   @media (prefers-reduced-motion: reduce) { a.wk { transition: none; } }
 </style>
@@ -263,7 +306,11 @@
     <nav class="nav" id="nav" aria-label="Views"></nav>
     <span class="spacer"></span>
     <span class="pill mood" id="mood-pill" title="This week's palette"></span>
-    <button type="button" class="pill mode-btn" id="mode-btn"></button>
+    <button type="button" class="switch" id="mode-btn" role="switch" aria-checked="true" aria-label="Dark mode">
+      <svg class="ico sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="3"/><path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3 3l1 1M12 12l1 1M3 13l1-1M12 4l1-1"/></svg>
+      <svg class="ico moon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M13.5 9.5A6 6 0 0 1 6.5 2.5a6 6 0 1 0 7 7z"/></svg>
+      <span class="knob" id="knob"></span>
+    </button>
     <span class="pill" id="today-pill"></span>
   </header>
   <div id="strip"></div>
@@ -944,6 +991,7 @@ function lum(hex) {
   const c = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255).map(v => v <= .03928 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4);
   return .2126 * c[0] + .7152 * c[1] + .0722 * c[2];
 }
+const rgba = (hex, a) => `rgba(${[1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16)).join(",")},${a})`;
 const contrast = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + .05) / (y + .05); };
 // Walk lightness away from the ground until the colour reads at the required contrast.
 function readable(L, C, h, ground, min, dark) {
@@ -977,7 +1025,7 @@ function pickFor(monday) {
 function paletteFor(monday, mode) {
   const { recipe, hue } = pickFor(monday);
   const dark = (mode || recipe.mode) === "dark", h = hue, ah = hue + recipe.shift;
-  const ground = dark ? oklch(.155, .012, h) : oklch(.968, .012, h);
+  const ground = dark ? oklch(.155, .012, h) : oklch(.89, .03, h);   // light: mid-tone, so the glass has colour to frost
   const P = {
     name: `${hueWord(h)} ${recipe.name}`, dark, ground,
     ink: dark ? oklch(.95, .01, h) : oklch(.22, .02, h),
@@ -985,15 +1033,18 @@ function paletteFor(monday, mode) {
     "ink-3": readable(dark ? .62 : .54, .015, h, ground, 4.5, dark),
     fg: dark ? "#ffffff" : oklch(.25, .02, h),
     sink: dark ? "#000000" : "#ffffff",
-    glass: dark ? "rgba(255,255,255,.055)" : "rgba(255,255,255,.42)",
-    "glass-hi": dark ? "rgba(255,255,255,.10)" : "rgba(255,255,255,.72)",
-    edge: dark ? "rgba(255,255,255,.13)" : "rgba(255,255,255,.9)",
+    glass: dark ? "rgba(255,255,255,.045)" : "rgba(255,255,255,.18)",
+    "glass-hi": dark ? "rgba(255,255,255,.10)" : "rgba(255,255,255,.42)",
+    edge: dark ? "rgba(255,255,255,.13)" : "rgba(255,255,255,.65)",
+    highlight: dark ? "rgba(255,255,255,.08)" : "rgba(255,255,255,.9)",
+    "shadow-color": dark ? "rgba(0,0,0,.6)" : rgba(oklch(.35, .1, h), .35),
     accent: readable(dark ? .88 : .5, dark ? .14 : .15, ah, ground, 4.5, dark),
     "accent-2": dark ? oklch(.96, .05, ah) : oklch(.38, .12, ah),
     warm: readable(dark ? .72 : .6, .17, h, ground, 3, dark),
-    "glow-1a": dark ? oklch(.7, .17, h) : oklch(.84, .11, h), "glow-1b": dark ? oklch(.5, .16, h) : oklch(.9, .07, h),
-    "glow-2a": dark ? oklch(.46, .09, ah) : oklch(.87, .08, ah), "glow-2b": dark ? oklch(.3, .06, ah) : oklch(.93, .04, ah),
-    "glow-3": dark ? oklch(.5, .04, h + 60) : oklch(.9, .05, h + 60),
+    "glow-1a": dark ? oklch(.7, .17, h) : oklch(.78, .15, h), "glow-1b": dark ? oklch(.5, .16, h) : oklch(.68, .18, h),
+    "glow-2a": dark ? oklch(.46, .09, ah) : oklch(.79, .12, ah), "glow-2b": dark ? oklch(.3, .06, ah) : oklch(.87, .08, ah),
+    "glow-3": dark ? oklch(.5, .04, h + 60) : oklch(.78, .11, h + 60),
+    "blob-opacity": dark ? ".75" : ".9",
     // Pace colours keep their meaning every week; only their lightness follows the mode.
     easy: dark ? "#4fd8a0" : "#1b9a6b", steady: dark ? "#2f8a70" : "#7cc4a8", grey: dark ? "#8d90a0" : "#9a9dab",
     "grey-top": dark ? "#e3e4ea" : "#5b5e6b", hard: dark ? "#ff7a45" : "#e0602c", race: dark ? "#f3ece4" : "#2b2f36",
@@ -1013,15 +1064,17 @@ function applyPalette(monday) {
   const P = paletteFor(monday, MODE), root = document.documentElement.style;
   Object.entries(P).forEach(([k, v]) => typeof v === "string" && k !== "name" && root.setProperty("--" + k, v));
   root.setProperty("color-scheme", P.dark ? "dark" : "light");
+  document.documentElement.dataset.mode = P.dark ? "dark" : "light";
   $("mood-pill").innerHTML = `<i></i>${esc(P.name)}`;
   const btn = $("mode-btn");
-  btn.innerHTML = P.dark ? ICONS.sun : ICONS.moon;
-  btn.setAttribute("aria-label", P.dark ? "Switch to light mode" : "Switch to dark mode");
-  btn.title = btn.getAttribute("aria-label");
-  btn.dataset.dark = P.dark ? "1" : "";
+  $("knob").innerHTML = P.dark ? ICONS.moon : ICONS.sun;
+  btn.setAttribute("aria-checked", String(P.dark));
+  btn.title = P.dark ? "Dark mode · switch to light" : "Light mode · switch to dark";
+  // First paint lands without a fade; later changes (switch, week to week) blend.
+  if (document.documentElement.classList.contains("instant")) requestAnimationFrame(() => requestAnimationFrame(() => document.documentElement.classList.remove("instant")));
 }
-$("mode-btn").addEventListener("click", e => {
-  MODE = e.currentTarget.dataset.dark ? "light" : "dark";
+$("mode-btn").addEventListener("click", () => {
+  MODE = document.documentElement.dataset.mode === "dark" ? "light" : "dark";
   try { localStorage.setItem("olavi-mode", MODE); } catch (err) {}
   if (S.monday) applyPalette(S.monday);
 });
