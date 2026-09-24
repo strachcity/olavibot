@@ -14,6 +14,9 @@ confirms them — the block review should test them.
   jump (3:24 → 3:11) `[data]`. *Corrected Sep 2026: this said "gym 2×/wk". Strava shows 22
   sessions across the 15-week build.*
 - Lifts meaningfully heavier with a trainer present `[data]`
+- Drinking the night before usually makes the next morning's ankle/Achilles-area symptoms
+  worse, even after a rest day `[stated, 2026-09-24]`. Read a morning score with that in mind
+  before calling it a rising trend.
 - Faster backyard laps buy more recovery; the slow-lap experiment didn't work `[stated]`
 - **Quality stopped after Florence, and the pace drifted into the grey zone.** Hard running
   (<4:45/km) fell 42.9% → 17.5% → 9.3% of running time across 2024Q4 → 2025Q1 → 2025Q2, while

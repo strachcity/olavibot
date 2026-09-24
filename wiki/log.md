@@ -414,3 +414,9 @@ itself, and he'd been drinking the night before, which he says usually makes mor
 even after a rest day `[stated, 2026-09-24]`. That corrects the rest entry's review, which
 read the morning as rising: the score is 1/10, the same as 23 Sep. Flat, not climbing, no
 trigger. Session B tonight stands.
+
+## [2026-09-24] model | Alcohol noted as a morning-symptom confounder
+Added to `observations.md` → Confirmed: drinking the night before usually makes the next
+morning's ankle/Achilles-area symptoms worse, even on a rest day `[stated, 2026-09-24]`. Tied
+to the Achilles rule that two rising mornings trigger action, so a morning after drinking gets
+noted as confounded rather than counted blind.
