@@ -14,8 +14,17 @@ sources below are the ones the model leans on heaviest, so verify those first if
 ## Intensity distribution
 - Grey-zone clustering is the least productive distribution. **W**
 - Fast recreational marathoners run pyramidal: large easy base, moderate threshold, little
-  high intensity. In a 119k-runner dataset, the fastest did ~80% easy vs 50–60% for typical
-  runners. Easy volume is the strongest differentiator. **W** (Muniz-Pumares 2024)
+  high intensity. In a 119k-runner dataset (~152k marathons), the fastest did ~80% of their
+  mileage easy vs 50–60% for typical runners. Easy volume is the strongest differentiator.
+  **W** (Muniz-Pumares 2024). The raw report doesn't record the finish-time cut-offs between
+  groups, and the paper hasn't been checked directly.
+- Elites follow the same pyramid: the best-performing recreational *and* elite marathoners run
+  pyramidal. **W** (same report). What differs is volume, not shape — Bakken's athletes ran
+  ~180 km/wk, so the hard work is a small slice of a much bigger total.
+- Elite easy is easier than the ~75–80% HRmax guide below: Bakken keeps easy runs under 70%
+  HRmax (lactate <1.0 mmol/L) and says to stay out of the zone between very easy and threshold
+  for 5k/10k. For the marathon he allows some of it, mostly inside a hard session. **H**
+  (`raw/research/norwegian-method/bakken-norwegian-model-2022.md`)
 - Polarised vs pyramidal: unresolved. Both beat threshold-clustered. **W**
 - Controlling easy without lactate: talk test (best), HR below ~75–80% max, RPE ≤3–4. **W/I**
 

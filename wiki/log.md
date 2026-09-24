@@ -421,6 +421,22 @@ morning's ankle/Achilles-area symptoms worse, even on a rest day `[stated, 2026-
 to the Achilles rule that two rising mornings trigger action, so a morning after drinking gets
 noted as confounded rather than counted blind.
 
+## [2026-09-24] block | Week 1 swap: run Thursday, gym Saturday
+Jack's call `[stated, 2026-09-24]`: run tonight, move Session B to Saturday. The Week 1 table in
+`blocks/2026-09-foundations.md` stays as planned; this is the change against it.
+
+| Day | Was | Now |
+|---|---|---|
+| Thu 24 | Gym — Session B | Easy 5km, slow (5:45–6:15/km, RPE ≤4, no strides) |
+| Fri 25 | Rest | Rest |
+| Sat 26 | Long — 8km | Gym — Session B |
+| Sun 27 | Easy — 5km | Long — 8km |
+
+Running volume unchanged: the Sunday easy 5km moves to Thursday, the long run moves to Sunday.
+The swap removes the Sat/Sun back-to-back running days. Cost: Session B's deadlift and heavy
+calf work sit the day before the long run. At 8km easy that's acceptable. If legs are flat on
+Sunday, shorten it rather than push.
+
 ## [2026-09-24] run | Easy — Foundations wk1 (swapped from Sun)
 ```yaml
 planned: yes
@@ -439,3 +455,20 @@ run_type: easy
   is 14 bpm under Monday's easy run (140 @ 5:50). Fastest 1k was 5:15, a brief surge and not a
   pattern. Running with someone else kept it conversational. Worth repeating. Friday morning
   is the next Achilles check.
+
+## [2026-09-24] model | 80% easy target counted by distance, not time
+Jack's call `[stated, 2026-09-24]`. §5 of `training-model.md` said "~80% easy / 20% harder, by
+time", but the source for the figure (Muniz-Pumares 2024 **[W]**, via
+`raw/research/01-achilles-and-endurance-structure.md`) measures share of mileage. The model now
+says "by distance" and notes that by time the easy share is higher. The reference page now says
+"of their mileage" too. The finding that the target has never been met still stands: the
+grey-zone analysis measured time, and easy km take longer to run, so easy's share by distance
+is lower still than the ≤⅓ recorded by time.
+
+## [2026-09-24] ingest | Elite vs recreational intensity distribution filed
+Filed from a question Jack asked, at his request `[stated, 2026-09-24]`. Added to
+`references/evidence-endurance-structure.md` → Intensity distribution: elites follow the same
+pyramid as the fastest recreational marathoners **[W]**, at far higher volume; Bakken's easy
+runs sit under 70% HRmax **[H]**, tighter than the 75–80% guide. Also noted on the Muniz-Pumares
+line that group cut-offs aren't recorded and the paper hasn't been checked directly. No new raw
+source. Everything is compiled from what `raw/research/` already held.
