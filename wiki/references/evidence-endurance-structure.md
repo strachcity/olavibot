@@ -14,8 +14,8 @@ sources below are the ones the model leans on heaviest, so verify those first if
 ## Intensity distribution
 - Grey-zone clustering is the least productive distribution. **W**
 - Fast recreational marathoners run pyramidal: large easy base, moderate threshold, little
-  high intensity. In a 119k-runner dataset, the fastest did ~80% easy vs 50–60% for typical
-  runners. Easy volume is the strongest differentiator. **W** (Muniz-Pumares 2024)
+  high intensity. In a 119k-runner dataset, the fastest did ~80% of their mileage easy vs 50–60% for
+  typical runners. Easy volume is the strongest differentiator. **W** (Muniz-Pumares 2024)
 - Polarised vs pyramidal: unresolved. Both beat threshold-clustered. **W**
 - Controlling easy without lactate: talk test (best), HR below ~75–80% max, RPE ≤3–4. **W/I**
 

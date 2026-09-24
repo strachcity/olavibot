@@ -123,7 +123,7 @@ Year-round default.
 | Speed | Strides twice a week (4–6 × 20s, relaxed-fast, full recovery) |
 | Long run | 1, progressed by duration |
 | Cross-training | Optional, counts toward aerobic load |
-| Distribution | ~80% easy / 20% harder, by time |
+| Distribution | ~80% easy / 20% harder, by distance (the evidence counts km; by time the easy share runs higher, as easy km take longer) |
 
 **Threshold.** Controlled reps with a jog recovery, not continuous running: 3×8–10min,
 4×8min, 3×15min, off 2min, at an effort just below half-marathon pace. Breathe harder than easy

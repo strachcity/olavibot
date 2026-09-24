@@ -455,3 +455,12 @@ run_type: easy
   is 14 bpm under Monday's easy run (140 @ 5:50). Fastest 1k was 5:15, a brief surge and not a
   pattern. Running with someone else kept it conversational. Worth repeating. Friday morning
   is the next Achilles check.
+
+## [2026-09-24] model | 80% easy target counted by distance, not time
+Jack's call `[stated, 2026-09-24]`. §5 of `training-model.md` said "~80% easy / 20% harder, by
+time", but the source for the figure (Muniz-Pumares 2024 **[W]**, via
+`raw/research/01-achilles-and-endurance-structure.md`) measures share of mileage. The model now
+says "by distance" and notes that by time the easy share is higher. The reference page now says
+"of their mileage" too. The finding that the target has never been met still stands: the
+grey-zone analysis measured time, and easy km take longer to run, so easy's share by distance
+is lower still than the ≤⅓ recorded by time.
