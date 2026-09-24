@@ -421,6 +421,22 @@ morning's ankle/Achilles-area symptoms worse, even on a rest day `[stated, 2026-
 to the Achilles rule that two rising mornings trigger action, so a morning after drinking gets
 noted as confounded rather than counted blind.
 
+## [2026-09-24] block | Week 1 swap: run Thursday, gym Saturday
+Jack's call `[stated, 2026-09-24]`: run tonight, move Session B to Saturday. The Week 1 table in
+`blocks/2026-09-foundations.md` stays as planned; this is the change against it.
+
+| Day | Was | Now |
+|---|---|---|
+| Thu 24 | Gym — Session B | Easy 5km, slow (5:45–6:15/km, RPE ≤4, no strides) |
+| Fri 25 | Rest | Rest |
+| Sat 26 | Long — 8km | Gym — Session B |
+| Sun 27 | Easy — 5km | Long — 8km |
+
+Running volume unchanged: the Sunday easy 5km moves to Thursday, the long run moves to Sunday.
+The swap removes the Sat/Sun back-to-back running days. Cost: Session B's deadlift and heavy
+calf work sit the day before the long run. At 8km easy that's acceptable. If legs are flat on
+Sunday, shorten it rather than push.
+
 ## [2026-09-24] run | Easy — Foundations wk1 (swapped from Sun)
 ```yaml
 planned: yes
