@@ -472,3 +472,11 @@ pyramid as the fastest recreational marathoners **[W]**, at far higher volume; B
 runs sit under 70% HRmax **[H]**, tighter than the 75–80% guide. Also noted on the Muniz-Pumares
 line that group cut-offs aren't recorded and the paper hasn't been checked directly. No new raw
 source. Everything is compiled from what `raw/research/` already held.
+
+## [2026-09-24] block | Weekly schedule gains a Changed column
+Jack changes days within a week often and wants the dashboard to show the plan as it now
+stands `[stated, 2026-09-24]`. Each week's table is now `| Day | Planned | Changed |`. Planned
+is never edited; a change made before the day goes in Changed, with a `Changed <date>:` line
+under the table. The dashboard shows Changed over Planned, marks the day "changed", and gives
+the original plan in the day's detail. Week 1 converted: Thu/Sat/Sun now carry this morning's
+swap. Updated `plan-training` and the Foundations block's schedule intro to match.

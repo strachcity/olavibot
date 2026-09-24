@@ -409,18 +409,21 @@ function parseBlock(file, text) {
       return i > 0 ? [t.slice(0, i), t.slice(i + 3)] : [t, ""];
     });
   }
-  // Weekly schedule: **Week N (dates).** Constraint… then | Day | Session |
+  // Weekly schedule: **Week N (dates).** Constraint… then | Day | Planned | Changed |
+  // A filled Changed cell is the plan now; the Planned cell is kept as `was`.
   b.schedule = {};
   const sched = section(text, "Weekly schedule");
   const heads = [...sched.matchAll(/\*\*Week (\d+)[^*]*\*\*([^\n]*)/g)];
   heads.forEach((m, i) => {
     const body = sched.slice(m.index, i + 1 < heads.length ? heads[i + 1].index : undefined);
-    const days = {};
+    const days = {}, was = {};
     body.split("\n").forEach(l => {
-      const r = /^\|\s*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\w*\.?\s*\d*\s*\|\s*(.+?)\s*\|\s*$/.exec(l);
-      if (r) days[r[1]] = plain(r[2]);
+      const r = /^\|\s*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\w*\.?\s*\d*\s*\|\s*([^|]*?)\s*\|(?:\s*([^|]*?)\s*\|)?\s*$/.exec(l);
+      if (!r) return;
+      if (r[3]) { days[r[1]] = plain(r[3]); was[r[1]] = plain(r[2]); }
+      else days[r[1]] = plain(r[2]);
     });
-    b.schedule[+m[1]] = { note: plain(m[2]), days };
+    b.schedule[+m[1]] = { note: plain(m[2]), days, was };
   });
   b.review = b.status === "reviewed" ? section(text, "Review").trim() : "";
   return b;
@@ -544,6 +547,7 @@ function buildWeek(b, n) {
   return DOW.map((dow, i) => {
     const date = addDays(s, i);
     const plan = sch?.days[dow] ? planShort(sch.days[dow]) : null;
+    const was = sch?.was[dow] ? planShort(sch.was[dow]) : null;
     const entries = entriesOn(date);
     const work = entries.filter(e => e.type !== "rest");
     const planKind = kindOf(plan);
@@ -558,7 +562,7 @@ function buildWeek(b, n) {
     const what = work.length
       ? work.map(e => e.type === "run" ? `${e.y.distance_km} km @ ${e.y.avg_pace}` : `${e.title.split(" — ")[0]}${e.y.gym ? " · " + e.y.gym : ""}`).join(" + ")
       : plan ? plan.replace(/\s*@.*$/, "") : "—";
-    return { date, dow, plan, planKind, entries, work, kind, st, what, isToday: date === TODAY };
+    return { date, dow, plan, was, planKind, entries, work, kind, st, what, isToday: date === TODAY };
   });
 }
 const plannedKm = (b, n, days) => {
@@ -660,7 +664,7 @@ function weekPanel(b, n, label) {
           <div style="display:flex;justify-content:space-between;align-items:center"><span class="dn">${d.dow}</span><span style="color:${d.st === "done" ? "var(--accent)" : "var(--ink-3)"}">${icons[d.kind]}</span></div>
           <div class="dd num">${+d.date.slice(8)}</div>
           <div class="what">${esc(d.what)}</div>
-          <div class="st">${stLabel[d.st]}</div>
+          <div class="st">${stLabel[d.st]}${d.was ? " · changed" : ""}</div>
         </button>`).join("")}</div>
       <div class="sess" aria-live="polite"></div>
       ${note ? `<div class="soft" style="font-size:13px">${esc(note)}</div>` : ""}
@@ -689,6 +693,7 @@ function sessionHTML(b, d) {
     const k = (/session ([a-z])\b/i.exec(d.plan) || [])[1];
     if (k && b.sessions[k.toUpperCase()]) rows = b.sessions[k.toUpperCase()];
   }
+  if (d.was) notes.unshift(`Changed from the original plan: ${d.was}`);
   d.entries.filter(e => e.type === "rest").forEach(e => e.lines.Review && notes.push(plain(e.lines.Review)));
   if (d.isToday) { const a = achilles(); if (a.last && a.last.date === d.date) stats.unshift(["Achilles this AM", `${a.last.v} / 10`]); }
   stats = stats.filter(s => s[1] != null && s[1] !== "");
