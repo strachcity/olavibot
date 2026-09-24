@@ -464,3 +464,11 @@ says "by distance" and notes that by time the easy share is higher. The referenc
 "of their mileage" too. The finding that the target has never been met still stands: the
 grey-zone analysis measured time, and easy km take longer to run, so easy's share by distance
 is lower still than the ≤⅓ recorded by time.
+
+## [2026-09-24] ingest | Elite vs recreational intensity distribution filed
+Filed from a question Jack asked, at his request `[stated, 2026-09-24]`. Added to
+`references/evidence-endurance-structure.md` → Intensity distribution: elites follow the same
+pyramid as the fastest recreational marathoners **[W]**, at far higher volume; Bakken's easy
+runs sit under 70% HRmax **[H]**, tighter than the 75–80% guide. Also noted on the Muniz-Pumares
+line that group cut-offs aren't recorded and the paper hasn't been checked directly. No new raw
+source. Everything is compiled from what `raw/research/` already held.
