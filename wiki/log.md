@@ -389,3 +389,20 @@ Jack asked for session log entries to go directly to `main` `[stated, 2026-09-23
 show up on the dashboard without a PR to merge. Scope is narrow: commits that only append
 `run`/`gym`/`rest`/`test` entries or fill a `pending` field. Everything else still goes through
 a branch. Written into `CLAUDE.md` → Commits.
+
+## [2026-09-23] rest | Rest day — Foundations wk1
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+```
+- Planned: Rest (Wednesday evening busy), per week 1 schedule.
+- Done: Rest. No Strava activity 23 Sep `[data, Strava]`.
+- Next morning (24 Sep): woke with both ankles tender; took a few steps of walking before the
+  tenderness went. Fine once moving `[stated, 2026-09-24]`. No score given yet, so the field
+  stays `pending`.
+- Review: That is first-steps stiffness — the signal that matters — and it's up on 23 Sep
+  (1/10, sensitive, not stiff) after a rest day, not a training day. One rising morning, not
+  two, so nothing triggers yet: Session B tonight stands, calf work stays in. If Friday
+  morning is worse again, that's two rising mornings — hold Saturday's long run at 8km and
+  drop the next quality session. Both ankles rather than one side is worth watching.
