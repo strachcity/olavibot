@@ -207,6 +207,16 @@
   .season-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
   .season-head .meta { display: flex; gap: 22px; flex-wrap: wrap; font-size: 13px; color: var(--ink-2); }
   .season-head .meta b { font-weight: 500; color: var(--ink); }
+  .season-right { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .pager { display: flex; align-items: center; gap: 8px; }
+  .pager .label { min-width: 132px; text-align: center; }
+  .pg { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--edge); background: color-mix(in srgb, var(--sink) 20%, transparent);
+    color: var(--ink); font: 500 16px/1 var(--display); cursor: pointer; display: grid; place-items: center; padding: 0 0 2px; transition: border-color .15s ease, opacity .15s ease; }
+  .pg:hover:not(:disabled) { border-color: color-mix(in srgb, var(--fg) 35%, transparent); }
+  .pg:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .pg:disabled { opacity: .3; cursor: default; }
+  .chart { transition: opacity .2s ease; }
+  @media (prefers-reduced-motion: reduce) { .chart { transition: none; } }
   .chart { position: relative; margin-top: 12px; overflow-x: auto; }
   .chart svg { display: block; width: 100%; min-width: 640px; height: auto; }
   .tip { position: fixed; z-index: 100; pointer-events: none; padding: 10px 12px; border-radius: 12px; background: color-mix(in srgb, var(--ground) 82%, transparent); border: 1px solid var(--edge); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); font-size: 12px; min-width: 150px; transform: translate(-50%, -100%); white-space: nowrap; }
@@ -910,10 +920,13 @@ function viewNow() {
   <section class="glass">
     <div class="season-head">
       <div><p class="q">Fifty-two weeks</p><div class="label">Weekly km by pace band · dots are gym sessions</div></div>
-      <div class="meta">
-        <span>${yr} avg <b class="num">${(yRuns.reduce((x, r) => x + r.km, 0) / wksYr).toFixed(1)} km/wk</b></span>
-        <span>Longest ’${yr.slice(2)} <b class="num">${Math.max(0, ...yRuns.map(r => r.km)).toFixed(1)} km</b></span>
-        <span>Gym ’${yr.slice(2)} <b class="num">${(S.gym.filter(d => d.startsWith(yr)).length / wksYr).toFixed(2)}/wk</b></span>
+      <div class="season-right">
+        <div class="meta" id="chart-meta"></div>
+        <div class="pager">
+          <button type="button" class="pg" id="pg-prev" aria-label="Previous 52 weeks">‹</button>
+          <span class="label num" id="pg-range"></span>
+          <button type="button" class="pg" id="pg-next" aria-label="Next 52 weeks">›</button>
+        </div>
       </div>
     </div>
     <div class="chart" id="chart"></div>
@@ -981,11 +994,27 @@ function drawChart(host) {
   if (!host) return;
   const NS = "http://www.w3.org/2000/svg";
   const el = (tag, attrs = {}, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
-  const end = mondayOf(TODAY);
+  // 52-week pages counted back from this week; the oldest page starts at the first run instead of running off the data.
+  const latest = mondayOf(TODAY), first = S.runs.length ? mondayOf(S.runs[0].date) : latest;
+  const span = diffDays(first, latest) / 7 + 1;
+  const maxPage = Math.max(0, Math.ceil((span - 52) / 52));
+  S.page = Math.min(Math.max(S.page || 0, 0), maxPage);
+  let end = addDays(latest, -364 * S.page);
+  if (addDays(end, -357) < first) end = addDays(first, 357);
   const weeks = Array.from({ length: 52 }, (_, i) => ({ w: addDays(end, (i - 51) * 7), easy: 0, steady: 0, grey: 0, hard: 0, race: 0, gym: 0, notes: [] }));
   const idx = d => { const i = diffDays(weeks[0].w, mondayOf(d)) / 7; return i >= 0 && i < 52 ? i : -1; };
   S.runs.forEach(r => { const i = idx(r.date); if (i < 0) return; const b = isRace(r) ? "race" : bandOf(r.sec / r.km); weeks[i][b] += r.km; if (isRace(r)) weeks[i].notes.push(r.note.replace(/^RACE_|^BACKYARD_?/, "").replace(/_/g, " ").trim() || "Race"); });
   S.gym.forEach(d => { const i = idx(d); if (i >= 0) weeks[i].gym++; });
+  // header figures follow the 52 weeks in view
+  const from = weeks[0].w, to = addDays(end, 6), inView = S.runs.filter(r => r.date >= from && r.date <= to);
+  const meta = $("chart-meta");
+  if (meta) meta.innerHTML = `<span>Avg <b class="num">${(inView.reduce((x, r) => x + r.km, 0) / 52).toFixed(1)} km/wk</b></span>
+    <span>Longest <b class="num">${Math.max(0, ...inView.map(r => r.km)).toFixed(1)} km</b></span>
+    <span>Gym <b class="num">${(S.gym.filter(d => d >= from && d <= to).length / 52).toFixed(2)}/wk</b></span>`;
+  const range = $("pg-range"), prev = $("pg-prev"), next = $("pg-next");
+  if (range) range.textContent = `${fmt(from, { month: "short", year: "numeric" })} – ${fmt(to, { month: "short", year: "numeric" })}`;
+  if (prev) { prev.disabled = S.page >= maxPage; prev.onclick = () => pageTo(host, S.page + 1); }
+  if (next) { next.disabled = S.page <= 0; next.onclick = () => pageTo(host, S.page - 1); }
   const W = 1200, H = 260, padL = 34, padR = 8, padT = 16, padB = 46, cap = 60;
   const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Weekly running km over 52 weeks, stacked by pace band" }, host);
   const glow = el("filter", { id: "glow", x: "-50%", y: "-50%", width: "200%", height: "200%" }, el("defs", {}, svg));
@@ -998,7 +1027,7 @@ function drawChart(host) {
     el("text", { x: padL - 8, y: y(t) + 4, "text-anchor": "end", ...mono }, svg).textContent = t;
   });
   weeks.forEach((w, i) => {
-    const x = padL + i * slot + (slot - bw) / 2, g = el("g", {}, svg), isNow = i === 51;
+    const x = padL + i * slot + (slot - bw) / 2, g = el("g", {}, svg), isNow = w.w === latest;
     if (isNow) el("rect", { x: x - 4, y: padT, width: bw + 8, height: ih, rx: 6, style: "fill:color-mix(in srgb, var(--accent) 8%, transparent)" }, g);
     let base = 0;
     const total = BANDS.reduce((s, b) => s + w[b.k], 0);
@@ -1141,6 +1170,15 @@ $("mode-btn").addEventListener("click", () => {
   try { localStorage.setItem("olavi-mode", MODE); } catch (err) {}
   if (S.monday) applyPalette(S.monday);
 });
+
+function pageTo(host, page) {
+  hideTip();
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const redraw = () => { S.page = page; host.innerHTML = ""; drawChart(host); host.style.opacity = 1; };
+  if (reduce) return redraw();
+  host.style.opacity = 0;
+  setTimeout(redraw, 200);
+}
 
 // ---------- router ----------
 function render() {
