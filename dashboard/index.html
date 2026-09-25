@@ -266,6 +266,8 @@
   .wk .dots i.rest { background: transparent; border: 1px dashed color-mix(in srgb, var(--fg) 18%, transparent); }
   .totals { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; }
   .review-text { color: var(--ink-2); font-size: 14px; white-space: pre-line; max-width: 75ch; }
+  .day.moved { border-color: color-mix(in srgb, var(--accent) 30%, transparent); }
+  .day.moved .st, .day.moved .what { color: var(--accent); }
   .day.missed { border-color: color-mix(in srgb, var(--hard) 40%, transparent); border-style: dashed; }
   .day.missed .st { color: var(--hard); }
   .spark { display: flex; gap: 4px; align-items: flex-end; height: 26px; margin-top: 10px; }
@@ -409,21 +411,18 @@ function parseBlock(file, text) {
       return i > 0 ? [t.slice(0, i), t.slice(i + 3)] : [t, ""];
     });
   }
-  // Weekly schedule: **Week N (dates).** Constraint… then | Day | Planned | Changed |
-  // A filled Changed cell is the plan now; the Planned cell is kept as `was`.
+  // Weekly schedule: **Week N (dates).** Constraint… then | Day | Session |
   b.schedule = {};
   const sched = section(text, "Weekly schedule");
   const heads = [...sched.matchAll(/\*\*Week (\d+)[^*]*\*\*([^\n]*)/g)];
   heads.forEach((m, i) => {
     const body = sched.slice(m.index, i + 1 < heads.length ? heads[i + 1].index : undefined);
-    const days = {}, was = {};
+    const days = {};
     body.split("\n").forEach(l => {
-      const r = /^\|\s*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\w*\.?\s*\d*\s*\|\s*([^|]*?)\s*\|(?:\s*([^|]*?)\s*\|)?\s*$/.exec(l);
-      if (!r) return;
-      if (r[3]) { days[r[1]] = plain(r[3]); was[r[1]] = plain(r[2]); }
-      else days[r[1]] = plain(r[2]);
+      const r = /^\|\s*(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\w*\.?\s*\d*\s*\|\s*(.+?)\s*\|\s*$/.exec(l);
+      if (r) days[r[1]] = plain(r[2]);
     });
-    b.schedule[+m[1]] = { note: plain(m[2]), days, was };
+    b.schedule[+m[1]] = { note: plain(m[2]), days };
   });
   b.review = b.status === "reviewed" ? section(text, "Review").trim() : "";
   return b;
@@ -542,27 +541,74 @@ function kindOf(text) {
   return null;
 }
 const planShort = t => t.replace(/\s*[—-]\s*done\b.*$/i, "").replace(/✅/g, "").trim();
+// What a session is, regardless of day: a moved session still counts as done.
+function planKey(text, kind) {
+  if (kind === "gym") { const k = (/session ([a-z])\b/i.exec(text || "") || [])[1]; return k ? "gym:" + k.toUpperCase() : "gym"; }
+  if (kind !== "run") return null;
+  if (/long/i.test(text)) return "run:long";
+  if (/threshold|tempo/i.test(text)) return "run:threshold";
+  if (/test|\b5k\b|race/i.test(text)) return "run:test";
+  return "run:easy";
+}
+function entryKey(e) {
+  if (e.type === "gym") return e.y.session ? "gym:" + e.y.session : "gym";
+  return "run:" + ({ long: "long", threshold: "threshold", race: "test", speed: "speed" }[e.y.run_type] || "easy");
+}
+const sameKey = (pk, ek) => pk === ek || (pk === "gym" && ek.startsWith("gym"));
+const dowOf = d => DOW[(new Date(ms(d)).getUTCDay() + 6) % 7];
+const planName = t => planShort(t || "").replace(/\s*@.*$/, "");
+// Planned sessions matched to logged ones across the whole week: same day first, then the
+// same session on any day, then any session of the same kind (counted as not as planned).
+// Days don't matter; a session is missed only if the week ends without it.
+function matchWeek(b, n) {
+  const s = weekStart(b, n), e = addDays(s, 6), sch = b.schedule[n];
+  const items = DOW.map((dow, i) => {
+    const date = addDays(s, i), plan = sch?.days[dow] ? planShort(sch.days[dow]) : null, kind = kindOf(plan);
+    return { date, dow, plan, kind, key: planKey(plan, kind), match: null, how: null };
+  }).filter(p => p.kind === "run" || p.kind === "gym");
+  const done = S.log.filter(x => (x.type === "run" || x.type === "gym") && x.date >= s && x.date <= e);
+  const free = new Set(done);
+  const pass = (ok, how) => items.forEach(p => {
+    if (p.match) return;
+    const x = [...free].find(x => ok(p, x));
+    if (x) { p.match = x; p.how = how; free.delete(x); }
+  });
+  pass((p, x) => x.date === p.date && sameKey(p.key, entryKey(x)), "day");
+  pass((p, x) => sameKey(p.key, entryKey(x)), "moved");
+  pass((p, x) => x.type === p.kind, "different");
+  const over = TODAY > e;
+  const off = [];
+  items.filter(p => p.how === "different").forEach(p => off.push({ x: p.match, why: `planned ${planName(p.plan)}` }));
+  done.filter(x => !off.some(o => o.x === x)).forEach(x => {
+    if (x.y.planned === "partial" || x.y.planned === "no") off.push({ x, why: `logged as planned: ${x.y.planned}` });
+    else if (x.y.beyond_plan && x.y.beyond_plan !== "none") off.push({ x, why: `beyond plan: ${x.y.beyond_plan}` });
+  });
+  const extra = [...free].filter(x => !off.some(o => o.x === x));
+  return { items, over, off, extra, missed: over ? items.filter(p => !p.match) : [], open: over ? [] : items.filter(p => !p.match) };
+}
+const entryName = x => x.type === "run" ? `${x.y.run_type || "run"}${x.y.distance_km != null ? ` ${x.y.distance_km} km` : ""}` : x.title.split(" — ")[0];
 function buildWeek(b, n) {
-  const s = weekStart(b, n), sch = b.schedule[n];
+  const s = weekStart(b, n), sch = b.schedule[n], M = matchWeek(b, n);
   return DOW.map((dow, i) => {
     const date = addDays(s, i);
     const plan = sch?.days[dow] ? planShort(sch.days[dow]) : null;
-    const was = sch?.was[dow] ? planShort(sch.was[dow]) : null;
     const entries = entriesOn(date);
     const work = entries.filter(e => e.type !== "rest");
     const planKind = kindOf(plan);
+    const item = M.items.find(p => p.date === date);
     const kind = work.some(e => e.type === "gym") ? "gym" : work.length ? "run" : planKind || "rest";
     let st;
     if (work.length) st = "done";
+    else if (item?.match) st = "moved";
     else if (date === TODAY) st = "today";
     else if (!sch) st = "none";
     else if (!planKind || planKind === "rest") st = "rest";
-    else if (date < TODAY) st = "missed";
+    else if (date < TODAY) st = M.over ? "missed" : "open";
     else st = "plan";
     const what = work.length
       ? work.map(e => e.type === "run" ? `${e.y.distance_km} km @ ${e.y.avg_pace}` : `${e.title.split(" — ")[0]}${e.y.gym ? " · " + e.y.gym : ""}`).join(" + ")
-      : plan ? plan.replace(/\s*@.*$/, "") : "—";
-    return { date, dow, plan, was, planKind, entries, work, kind, st, what, isToday: date === TODAY };
+      : plan ? planName(plan) : "—";
+    return { date, dow, plan, planKind, item, entries, work, kind, st, what, isToday: date === TODAY };
   });
 }
 const plannedKm = (b, n, days) => {
@@ -574,17 +620,20 @@ const doneKm = days => days.reduce((a, d) => a + d.work.filter(e => e.type === "
 
 function blockStats(b, upTo = TODAY) {
   const weeks = weeksWithData(b);
-  let due = 0, done = 0, missed = 0;
-  weeks.forEach(n => buildWeek(b, n).forEach(d => {
-    if (d.date > upTo) return;
-    if (d.work.length) { done++; if (d.planKind && d.planKind !== "rest") due++; }
-    else if (d.st === "missed") { due++; missed++; }
-  }));
+  let due = 0, done = 0, missed = 0, off = 0;
+  weeks.forEach(n => {
+    const M = matchWeek(b, n);
+    M.items.forEach(p => {
+      if (p.match && p.match.date <= upTo) { done++; due++; }
+      else if (!p.match && M.over) { due++; missed++; }
+    });
+    off += M.off.length + M.extra.length;
+  });
   const ents = S.log.filter(e => ["run", "gym", "rest"].includes(e.type) && e.date >= b.start && e.date <= b.end && e.date <= upTo);
   const runs = ents.filter(e => e.type === "run");
   const enjoy = ents.map(e => e.y.enjoyment).filter(v => typeof v === "number");
   return {
-    weeks, done, due, missed,
+    weeks, done, due, missed, off,
     km: runs.reduce((a, e) => a + (+e.y.distance_km || 0), 0), runs: runs.length,
     gym: ents.filter(e => e.type === "gym").length,
     beyond: ents.filter(e => e.y.beyond_plan && e.y.beyond_plan !== "none").length,
@@ -634,7 +683,7 @@ const icons = {
   gym: '<svg class="glyph" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 6v6M15 6v6M5.5 4.5v9M12.5 4.5v9M5.5 9h7"/></svg>',
   rest: '<svg class="glyph" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="9" cy="9" r="5"/></svg>',
 };
-const stLabel = { done: "Done", today: "Today", plan: "Planned", rest: "Rest", missed: "Not logged", none: "Unplanned" };
+const stLabel = { done: "Done", moved: "Done · moved", today: "Today", plan: "Planned", open: "Not done yet", rest: "Rest", missed: "Missed", none: "Unplanned" };
 
 function ringSVG(done, planned) {
   const r = 52, C = 2 * Math.PI * r, f = planned ? Math.min(1, done / planned) : 0;
@@ -649,6 +698,14 @@ function weekPanel(b, n, label) {
   const runs = days.filter(d => d.kind === "run").length, lifts = days.filter(d => d.kind === "gym").length;
   const s = weekStart(b, n);
   const note = [b.schedule[n]?.note, b.ceiling && `Ceiling: ${b.ceiling}`].filter(Boolean).join(" ");
+  const M = matchWeek(b, n), got = M.items.filter(p => p.match).length, all = M.items.length;
+  const verdict = !all ? "" : [
+    M.over
+      ? (M.missed.length ? `<span style="color:var(--hard)">Missed: ${esc(M.missed.map(p => planName(p.plan)).join(", "))}.</span>` : `All ${all} planned sessions done.`)
+      : `${got} of ${all} planned sessions done${M.open.length ? `. Still to do: ${esc(M.open.map(p => planName(p.plan)).join(", "))}` : ""}.`,
+    M.off.length ? `<span style="color:var(--warm)">Not as planned: ${esc(M.off.map(o => `${dowOf(o.x.date)} ${entryName(o.x)} (${o.why})`).join("; "))}.</span>` : "",
+    M.extra.length ? `Extra: ${esc(M.extra.map(x => `${dowOf(x.date)} ${entryName(x)}`).join(", "))}.` : "",
+  ].filter(Boolean).join(" ");
   return {
     days,
     html: `<div class="glass week">
@@ -664,9 +721,10 @@ function weekPanel(b, n, label) {
           <div style="display:flex;justify-content:space-between;align-items:center"><span class="dn">${d.dow}</span><span style="color:${d.st === "done" ? "var(--accent)" : "var(--ink-3)"}">${icons[d.kind]}</span></div>
           <div class="dd num">${+d.date.slice(8)}</div>
           <div class="what">${esc(d.what)}</div>
-          <div class="st">${stLabel[d.st]}${d.was ? " · changed" : ""}</div>
+          <div class="st">${stLabel[d.st]}</div>
         </button>`).join("")}</div>
       <div class="sess" aria-live="polite"></div>
+      ${verdict ? `<div style="font-size:14px">${verdict}</div>` : ""}
       ${note ? `<div class="soft" style="font-size:13px">${esc(note)}</div>` : ""}
     </div>`,
   };
@@ -676,7 +734,7 @@ function sessionHTML(b, d) {
   const title = d.work.length
     ? d.work.map(e => e.type === "run" ? `${e.y.run_type ? e.y.run_type[0].toUpperCase() + e.y.run_type.slice(1) + " run" : "Run"}` : `${e.title.split(" — ")[0]}${e.y.gym ? " · " + e.y.gym + " gym" : ""}`).join(" + ")
     : d.plan || "Rest";
-  const tag = d.st === "done" ? "Done · logged" : d.st === "missed" ? "Planned · not in the log" : d.st === "today" ? (d.planKind && d.planKind !== "rest" ? "Today · planned" : "Today · rest") : d.st === "plan" ? "Planned" : d.st === "none" ? "Not in a weekly plan" : "Rest";
+  const tag = d.st === "done" ? "Done · logged" : d.st === "moved" ? `Done on ${dowOf(d.item.match.date)}` : d.st === "open" ? "Planned · not done yet" : d.st === "missed" ? "Planned · missed" : d.st === "today" ? (d.planKind && d.planKind !== "rest" ? "Today · planned" : "Today · rest") : d.st === "plan" ? "Planned" : d.st === "none" ? "Not in a weekly plan" : "Rest";
   let stats = [], rows = [], notes = [];
   d.work.forEach(e => {
     const y = e.y;
@@ -693,7 +751,7 @@ function sessionHTML(b, d) {
     const k = (/session ([a-z])\b/i.exec(d.plan) || [])[1];
     if (k && b.sessions[k.toUpperCase()]) rows = b.sessions[k.toUpperCase()];
   }
-  if (d.was) notes.unshift(`Changed from the original plan: ${d.was}`);
+  if (d.st === "moved") notes.push(`Done ${dowOf(d.item.match.date)} ${+d.item.match.date.slice(8)}: ${entryName(d.item.match)}${d.item.how === "different" ? " — not the session planned" : ""}`);
   d.entries.filter(e => e.type === "rest").forEach(e => e.lines.Review && notes.push(plain(e.lines.Review)));
   if (d.isToday) { const a = achilles(); if (a.last && a.last.date === d.date) stats.unshift(["Achilles this AM", `${a.last.v} / 10`]); }
   stats = stats.filter(s => s[1] != null && s[1] !== "");
@@ -865,7 +923,7 @@ function viewNow() {
     <p class="q">Is anything becoming a problem?</p>
     <div class="label">Read from the log · ${esc(b.name)} so far</div>
     <div class="watch">
-      <div class="chip"><div class="k">Adherence</div><div class="v num">${bl.due ? `${bl.due - bl.missed} / ${bl.due}` : "—"}</div><div class="s wait">${bl.missed ? `${bl.missed} not logged` : bl.due ? "All logged" : "Nothing due yet"}</div></div>
+      <div class="chip"><div class="k">Adherence</div><div class="v num">${bl.due ? `${bl.due - bl.missed} / ${bl.due}` : "—"}</div><div class="s wait">${bl.missed ? `${bl.missed} missed` : bl.due ? "None missed" : "Nothing due yet"}</div></div>
       <div class="chip"><div class="k">Beyond plan</div><div class="v num">${bl.beyond}</div><div class="s wait">Sessions over plan</div></div>
       <div class="chip"><div class="k">Achilles next AM</div><div class="v num">${a.last ? `${a.last.v} / 10` : "—"}</div><div class="s ${a.cls}">${a.last ? (a.rising ? "Rising" : dm(a.last.date)) : "None logged"}</div></div>
       <div class="chip"><div class="k">Enjoyment</div><div class="v num">${bl.enjoy != null ? `${bl.enjoy.toFixed(1)} / 5` : "—"}</div><div class="s wait">${bl.enjoy == null ? "Not reported" : "Average so far"}</div></div>
@@ -885,8 +943,8 @@ function viewBlock(b) {
     <div class="totals" style="margin-top:16px">
       <div class="stat"><div class="label">Running</div><div class="v num">${bl.km.toFixed(1)}<small>km</small></div><div class="d">${bl.runs} run${bl.runs === 1 ? "" : "s"}</div></div>
       <div class="stat"><div class="label">Gym</div><div class="v num">${bl.gym}<small>sessions</small></div></div>
-      <div class="stat"><div class="label">Adherence</div><div class="v num">${bl.due ? Math.round((bl.due - bl.missed) / bl.due * 100) : "—"}<small>${bl.due ? "%" : ""}</small></div><div class="d">${bl.missed} not logged</div></div>
-      <div class="stat"><div class="label">Beyond plan</div><div class="v num">${bl.beyond}</div></div>
+      <div class="stat"><div class="label">Adherence</div><div class="v num">${bl.due ? Math.round((bl.due - bl.missed) / bl.due * 100) : "—"}<small>${bl.due ? "%" : ""}</small></div><div class="d">${bl.missed} missed · counted by session, not day</div></div>
+      <div class="stat"><div class="label">Not as planned</div><div class="v num">${bl.off}</div><div class="d">different, partial, beyond plan or extra</div></div>
       <div class="stat"><div class="label">Enjoyment</div><div class="v num">${bl.enjoy != null ? bl.enjoy.toFixed(1) : "—"}<small>${bl.enjoy != null ? "/ 5" : ""}</small></div></div>
     </div>
   </section>
@@ -898,7 +956,7 @@ function viewBlock(b) {
       const km = doneKm(days), done = days.filter(d => d.work.length).length;
       return `<a class="wk${n === cur ? " now" : ""}" href="#${b.id}/w${n}">
         <div style="display:flex;justify-content:space-between;align-items:baseline"><span class="n">Week ${n}</span><span class="label">${dm(s)} – ${dm(addDays(s, 6))}</span></div>
-        <div class="dots">${days.map(d => `<i class="${d.st === "done" ? "done" : d.st === "missed" ? "missed" : d.kind === "rest" ? "rest" : ""}" title="${d.dow}: ${stLabel[d.st]}"></i>`).join("")}</div>
+        <div class="dots">${days.map(d => `<i class="${d.st === "done" || d.st === "moved" ? "done" : d.st === "missed" ? "missed" : d.kind === "rest" ? "rest" : ""}" title="${d.dow}: ${stLabel[d.st]}"></i>`).join("")}</div>
         <div class="soft" style="font-size:13px">${done} session${done === 1 ? "" : "s"} done · ${+km.toFixed(1)} km${n === cur ? " · this week" : ""}</div>
       </a>`;
     }).join("")}</div>

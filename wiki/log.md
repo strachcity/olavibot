@@ -473,10 +473,15 @@ runs sit under 70% HRmax **[H]**, tighter than the 75–80% guide. Also noted on
 line that group cut-offs aren't recorded and the paper hasn't been checked directly. No new raw
 source. Everything is compiled from what `raw/research/` already held.
 
-## [2026-09-24] block | Weekly schedule gains a Changed column
-Jack changes days within a week often and wants the dashboard to show the plan as it now
-stands `[stated, 2026-09-24]`. Each week's table is now `| Day | Planned | Changed |`. Planned
-is never edited; a change made before the day goes in Changed, with a `Changed <date>:` line
-under the table. The dashboard shows Changed over Planned, marks the day "changed", and gives
-the original plan in the day's detail. Week 1 converted: Thu/Sat/Sun now carry this morning's
-swap. Updated `plan-training` and the Foundations block's schedule intro to match.
+## [2026-09-25] block | Sessions move days freely, adherence judged per week
+Jack: sessions will change days regularly and that doesn't matter. What matters is finishing a
+week having missed a session, or having done something other than what was planned `[stated,
+2026-09-24]`. So a day move is no longer a plan change: nothing is edited, logged or committed
+for it. The dashboard now matches each logged session to a planned one anywhere in that week.
+It tries the same session on the same day first, then the same session on any day, then any
+session of the same kind, which it flags as not as planned. A session only counts as missed
+once the week has ended without it. Mid-week, the dashboard lists what's still to do. It
+flags as not as planned any session done in place of a different one, logged `planned:
+partial`/`no`, beyond plan, or extra. Block adherence is now counted by session, not by day.
+`plan-training` and the Foundations block's schedule intro updated to match.
+The 2026-09-24 swap entry above stays as history; under this rule it didn't need logging.

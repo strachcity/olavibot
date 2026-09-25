@@ -87,10 +87,11 @@ grip-limiter finding from the gym log.
 ## Weekly schedule
 `Running` and `Gym` above fix *what* each week contains; this fixes *which day*. Jack expects
 to shift days around while he finds a schedule that works. Each week's table is added below
-the last and kept. **Planned** is the plan as first written and is never edited. When a day
-changes before it happens, the new session goes in **Changed** and the dashboard shows that.
-What actually happened is in `log.md`. Planned, Changed and the log together show what moved
-and what was missed.
+the last and kept — the plan as it stood, not edited afterwards to match what happened. What
+actually happened is in `log.md`. Days are a starting point, not a commitment: sessions move
+freely within the week `[stated, 2026-09-24]`. What counts is whether every planned session got
+done by Sunday, and done as planned. The dashboard matches logged sessions to planned ones
+across the week, whatever the day.
 
 A run can split around a gym session (run to the gym, lift, run home) or get longer as
 distances grow. No format change needed — log each leg as its own `run` entry plus the `gym`
@@ -98,17 +99,15 @@ entry, same date; the legs' distances count toward that day's target between the
 
 **Week 1 (21–27 Sep).** Constraint: busy Wednesday and Friday evenings.
 
-| Day | Planned | Changed |
-|---|---|---|
-| Mon 21 | Easy — done: 6.92km @ 5:50/km ✅ | |
-| Tue 22 | Gym — Session A (flat) — done ✅ | |
-| Wed 23 | Rest (evening busy) | |
-| Thu 24 | Gym — Session B | Easy — 5km, slow |
-| Fri 25 | Rest (evening busy) | |
-| Sat 26 | Long — 8km @ 5:30–6:00/km or slower | Gym — Session B |
-| Sun 27 | Easy — 5km @ 5:30–6:00/km | Long — 8km @ 5:30–6:00/km or slower |
-
-Changed 24 Sep: run Thursday, gym Saturday, long run Sunday (log, 2026-09-24 `block`).
+| Day | Session |
+|---|---|
+| Mon 21 | Easy — done: 6.92km @ 5:50/km ✅ |
+| Tue 22 | Gym — Session A (flat) — done ✅ |
+| Wed 23 | Rest (evening busy) |
+| Thu 24 | Gym — Session B |
+| Fri 25 | Rest (evening busy) |
+| Sat 26 | Long — 8km @ 5:30–6:00/km or slower |
+| Sun 27 | Easy — 5km @ 5:30–6:00/km |
 
 Saturday and Sunday are back-to-back running days — not deliberate training stress yet, just
 the constraint's side-effect. Keep Sunday genuinely easy, shorten it rather than push if legs

@@ -71,15 +71,17 @@ rather than being deliberate.
 Write it into the active block file under `## Weekly schedule`, **below** the previous
 weeks' tables — never replace or delete a past week, and don't edit one afterwards to match
 what happened (that's `log.md`'s job; plan + log together show what was missed). Same
-format every week: a `**Week <n> (<dates>).** Constraint: …` line, then a
-`| Day | Planned | Changed |` table with days as `Mon 21`, Changed left empty. Commit as a
-`block` entry.
+format every week: a `**Week <n> (<dates>).** Constraint: …` line, then a `| Day | Session |`
+table with days as `Mon 21`. Commit as a `block` entry.
 
-**Changing a day mid-week** is normal `[stated, 2026-09-24]`. Don't touch the Planned cell. Put
-the new session in that day's Changed cell, written the same way (`Easy — 5km`, `Gym — Session
-B`, `Rest`), and add one line under the table: `Changed <date>: <what moved>`. The dashboard
-shows Changed over Planned. Only change days that haven't happened yet. A day that already
-happened differently is a log entry, not a plan change. Append a `block` entry to the log. A run can split around a gym
+**Sessions move days freely** `[stated, 2026-09-24]`. That's normal, not a plan change: don't
+edit the table, don't log it, don't commit anything for it. Adherence is judged per week, by
+session: was every planned session done by Sunday, and done as planned? The dashboard matches
+each logged session to a planned one on any day of the week (same session first, then same
+kind, which counts as "not as planned"). A session is missed only when the week ends without
+it. Only a change to *what* the week contains (a session dropped, added or swapped for a
+different one) is a plan change: write it under that week's table as `Changed <date>: …` and
+append a `block` entry. A run can split around a gym
 session or lengthen over the block — log each leg as its own entry, same date; no format
 change needed for that.
 
