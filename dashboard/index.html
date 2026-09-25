@@ -222,7 +222,7 @@
   .pg:disabled { opacity: .3; cursor: default; }
   .chart .track { transition: transform .45s cubic-bezier(.4,0,.2,1); }
   @media (prefers-reduced-motion: reduce) { .chart .track { transition: none !important; } }
-  .chart { position: relative; margin-top: 12px; }
+  .chart { position: relative; margin-top: 12px; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
   .chart svg { display: block; width: 100%; height: auto; overflow: hidden; }
   .tip { position: fixed; z-index: 100; pointer-events: none; padding: 10px 12px; border-radius: 12px; background: color-mix(in srgb, var(--ground) 82%, transparent); border: 1px solid var(--edge); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); font-size: 12px; min-width: 150px; transform: translate(-50%, -100%); white-space: nowrap; }
   .tip .h { font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; color: var(--ink-3); text-transform: uppercase; margin-bottom: 6px; }
@@ -1075,6 +1075,38 @@ function drawChart(host) {
   };
   place(false);
   S.chart = { host, track, offset, maxPage, place, slot };
+
+  // Touch: the strip follows the finger, resists past either end, and settles on the next
+  // period (or back) on release. Vertical scrolling passes through (touch-action: pan-y).
+  let drag = null;
+  host.onpointerdown = e => {
+    if (e.pointerType === "mouse") return;
+    drag = { id: e.pointerId, x: e.clientX, y: e.clientY, t: performance.now(), dx: 0, horiz: null, base: offset(S.page) };
+  };
+  host.onpointermove = e => {
+    if (!drag || e.pointerId !== drag.id) return;
+    const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+    if (drag.horiz === null) {
+      if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+      drag.horiz = Math.abs(dx) > Math.abs(dy);
+      if (!drag.horiz) { drag = null; return; }
+      host.setPointerCapture?.(e.pointerId); host.classList.add("sliding"); hideTip();
+      drag.t = performance.now(); drag.x0 = e.clientX;
+    }
+    const pastEnd = (dx > 0 && S.page >= maxPage) || (dx < 0 && S.page <= 0);
+    drag.dx = dx;
+    track.style.transition = "none";
+    track.style.transform = `translateX(${drag.base + (pastEnd ? dx * .3 : dx) * (W / host.clientWidth)}px)`;
+  };
+  host.onpointerup = host.onpointercancel = e => {
+    if (!drag || e.pointerId !== drag.id) return;
+    const d = drag; drag = null;
+    if (!d.horiz) return;
+    const v = d.dx / Math.max(1, performance.now() - d.t), far = host.clientWidth * .18;
+    if ((d.dx > far || v > .45) && S.page < maxPage) S.page++;
+    else if ((d.dx < -far || v < -.45) && S.page > 0) S.page--;
+    place(true);
+  };
 }
 addEventListener("resize", () => {
   clearTimeout(S.resizeT);
