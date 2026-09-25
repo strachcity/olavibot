@@ -24,6 +24,7 @@
     --blob-opacity: .75;
     --accent: #7ef2c1;
     --accent-2: #d9fff0;
+    --text-glow: rgba(0, 0, 0, 0);
     --warm: #ff7a45;
     --glow-1a: #ff8a4c; --glow-1b: #c2410c;
     --glow-2a: #1f6f5a; --glow-2b: #0f3b33;
@@ -52,6 +53,7 @@
   @property --shadow-color { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --accent { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --accent-2 { syntax: "<color>"; inherits: true; initial-value: transparent; }
+  @property --text-glow { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --warm { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --glow-1a { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --glow-1b { syntax: "<color>"; inherits: true; initial-value: transparent; }
@@ -65,7 +67,7 @@
   @property --hard { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --race { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --blob-opacity { syntax: "<number>"; inherits: true; initial-value: .75; }
-  :root { transition: --ground .5s ease, --ink .5s ease, --ink-2 .5s ease, --ink-3 .5s ease, --fg .5s ease, --sink .5s ease, --glass .5s ease, --glass-hi .5s ease, --edge .5s ease, --highlight .5s ease, --shadow-color .5s ease, --accent .5s ease, --accent-2 .5s ease, --warm .5s ease, --glow-1a .5s ease, --glow-1b .5s ease, --glow-2a .5s ease, --glow-2b .5s ease, --glow-3 .5s ease, --grey-top .5s ease, --easy .5s ease, --steady .5s ease, --grey .5s ease, --hard .5s ease, --race .5s ease, --blob-opacity .5s ease; }
+  :root { transition: --text-glow .5s ease, --ground .5s ease, --ink .5s ease, --ink-2 .5s ease, --ink-3 .5s ease, --fg .5s ease, --sink .5s ease, --glass .5s ease, --glass-hi .5s ease, --edge .5s ease, --highlight .5s ease, --shadow-color .5s ease, --accent .5s ease, --accent-2 .5s ease, --warm .5s ease, --glow-1a .5s ease, --glow-1b .5s ease, --glow-2a .5s ease, --glow-2b .5s ease, --glow-3 .5s ease, --grey-top .5s ease, --easy .5s ease, --steady .5s ease, --grey .5s ease, --hard .5s ease, --race .5s ease, --blob-opacity .5s ease; }
   :root.instant { transition: none; }
   @media (prefers-reduced-motion: reduce) { :root { transition: none; } }
   * { box-sizing: border-box; }
@@ -125,9 +127,9 @@
   /* ---------- hero ---------- */
   .hero { display: grid; grid-template-columns: 1.55fr 1fr; gap: 16px; }
   .week { padding: 26px 28px 24px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; }
-  .headline { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+  .headline { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
   .headline h1 { margin: 0; font-weight: 200; font-size: clamp(40px, 6.2vw, 78px); line-height: .95; letter-spacing: -.035em; text-wrap: balance; }
-  .headline h1 b { font-weight: 500; background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .headline h1 b { font-weight: 500; background: linear-gradient(90deg, var(--accent), var(--accent-2)); filter: drop-shadow(0 0 14px var(--text-glow)); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .ring { position: relative; width: 132px; height: 132px; flex: none; }
   .ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
   .ring .c { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; }
@@ -174,10 +176,13 @@
   .stat .d { font-size: 12.5px; color: var(--ink-3); margin-top: 4px; }
   .up { color: var(--accent); } .down { color: var(--warm); }
 
-  .achilles { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; }
-  .tendon { width: 84px; height: 132px; }
-  .ach-big { font-size: 34px; font-weight: 200; letter-spacing: -.02em; line-height: 1.05; }
-  .rules { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  /* The Achilles card scales its contents to its own width (cqi), so it fills a big desktop card and stays compact on a phone. */
+  .achilles { container-type: inline-size; display: grid; grid-template-columns: minmax(64px, 32%) 1fr; gap: clamp(14px, 5cqi, 36px); align-items: center; }
+  .tendon { width: 100%; height: auto; max-height: 100%; }
+  .ach-body { display: flex; flex-direction: column; gap: clamp(4px, 1.4cqi, 10px); min-width: 0; }
+  .ach-big { font-size: clamp(40px, 17cqi, 104px); font-weight: 200; letter-spacing: -.03em; line-height: 1; }
+  .ach-note { font-size: clamp(13px, 3.4cqi, 18px); color: var(--ink-2); }
+  .rules { display: flex; gap: 6px; flex-wrap: wrap; margin-top: clamp(6px, 2cqi, 14px); }
 
   /* ---------- middle ---------- */
   .mid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 16px; }
@@ -280,8 +285,8 @@
   .day.moved .st, .day.moved .what { color: var(--accent); }
   .day.missed { border-color: color-mix(in srgb, var(--hard) 40%, transparent); border-style: dashed; }
   .day.missed .st { color: var(--hard); }
-  .spark { display: flex; gap: 4px; align-items: flex-end; height: 26px; margin-top: 10px; }
-  .spark i { width: 7px; border-radius: 2px; background: var(--accent); opacity: .85; }
+  .spark { display: flex; gap: clamp(3px, 1cqi, 6px); align-items: flex-end; height: clamp(26px, 13cqi, 64px); margin-top: clamp(4px, 1.5cqi, 10px); }
+  .spark i { flex: 1 1 0; min-width: 6px; max-width: 22px; border-radius: 3px; background: var(--accent); opacity: .85; }
   .empty { color: var(--ink-3); font-size: 14px; }
   .sess-row.one { grid-template-columns: 1fr; }
   @media (max-width: 1020px) { .totals { grid-template-columns: repeat(3, 1fr); } }
@@ -817,7 +822,7 @@ function viewNow() {
 
   const a = achilles();
   const glow = { ok: "var(--accent)", hot: "var(--hard)", wait: "var(--ink-3)" }[a.cls];
-  const spark = a.pts.length >= 2 ? `<div class="spark" aria-label="Morning scores">${a.pts.slice(-14).map(p => `<i title="${dm(p.date)}: ${p.v}/10" style="height:${4 + p.v * 2.2}px;background:${p.v > 5 ? "var(--hard)" : "var(--accent)"}"></i>`).join("")}</div>` : "";
+  const spark = a.pts.length >= 2 ? `<div class="spark" aria-label="Morning scores">${a.pts.slice(-14).map(p => `<i title="${dm(p.date)}: ${p.v}/10" style="height:${10 + p.v * 9}%;background:${p.v > 5 ? "var(--hard)" : "var(--accent)"}"></i>`).join("")}</div>` : "";
 
   // pace shares by year: backyards and hikes excluded, as in strava-history.md
   const years = {};
@@ -873,10 +878,10 @@ function viewNow() {
           <circle cx="46" cy="100" r="18" fill="url(#hot)"/>
           <circle cx="46" cy="100" r="3.5" style="fill:${glow}"/>
         </svg>
-        <div>
+        <div class="ach-body">
           <div class="label">Achilles · morning signal</div>
           <div class="ach-big">${a.word}</div>
-          <div class="soft" style="font-size:13px;margin-top:4px">${a.last ? `Morning of ${fmt(a.last.date, { weekday: "short", day: "numeric", month: "short" })}: ${a.last.v}/10.${a.rising ? " Two rising mornings: hold volume, drop the next quality session." : ""} ${a.pts.length} score${a.pts.length === 1 ? "" : "s"} logged.` : "No next-morning scores in the log yet."}</div>
+          <div class="ach-note">${a.last ? `Morning of ${fmt(a.last.date, { weekday: "short", day: "numeric", month: "short" })}: ${a.last.v}/10.${a.rising ? " Two rising mornings: hold volume, drop the next quality session." : ""} ${a.pts.length} score${a.pts.length === 1 ? "" : "s"} logged.` : "No next-morning scores in the log yet."}</div>
           ${spark}
           <div class="rules"><span class="pill">Load ≤5/10</span><span class="pill">Settled by AM</span><span class="pill">2 rising AMs → hold</span></div>
         </div>
@@ -1130,7 +1135,8 @@ function paletteFor(monday, mode) {
     highlight: dark ? "rgba(255,255,255,.08)" : "rgba(255,255,255,.9)",
     "shadow-color": dark ? "rgba(0,0,0,.6)" : rgba(oklch(.35, .1, h), .35),
     accent: readable(dark ? .88 : .5, dark ? .14 : .15, ah, ground, 4.5, dark),
-    "accent-2": dark ? oklch(.96, .05, ah) : oklch(.38, .12, ah),
+    "accent-2": dark ? oklch(.96, .05, ah) : oklch(.68, .16, ah),   // light: runs up to a brighter tint for sheen
+    "text-glow": dark ? "rgba(0,0,0,0)" : rgba(oklch(.72, .17, ah), .55),   // dark glows on its own; light gets a halo
     warm: readable(dark ? .72 : .6, .17, h, ground, 3, dark),
     "glow-1a": dark ? oklch(.7, .17, h) : oklch(.78, .15, h), "glow-1b": dark ? oklch(.5, .16, h) : oklch(.68, .18, h),
     "glow-2a": dark ? oklch(.46, .09, ah) : oklch(.79, .12, ah), "glow-2b": dark ? oklch(.3, .06, ah) : oklch(.87, .08, ah),
