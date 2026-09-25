@@ -472,3 +472,16 @@ pyramid as the fastest recreational marathoners **[W]**, at far higher volume; B
 runs sit under 70% HRmax **[H]**, tighter than the 75–80% guide. Also noted on the Muniz-Pumares
 line that group cut-offs aren't recorded and the paper hasn't been checked directly. No new raw
 source. Everything is compiled from what `raw/research/` already held.
+
+## [2026-09-25] block | Sessions move days freely, adherence judged per week
+Jack: sessions will change days regularly and that doesn't matter. What matters is finishing a
+week having missed a session, or having done something other than what was planned `[stated,
+2026-09-24]`. So a day move is no longer a plan change: nothing is edited, logged or committed
+for it. The dashboard now matches each logged session to a planned one anywhere in that week.
+It tries the same session on the same day first, then the same session on any day, then any
+session of the same kind, which it flags as not as planned. A session only counts as missed
+once the week has ended without it. Mid-week, the dashboard lists what's still to do. It
+flags as not as planned any session done in place of a different one, logged `planned:
+partial`/`no`, beyond plan, or extra. Block adherence is now counted by session, not by day.
+`plan-training` and the Foundations block's schedule intro updated to match.
+The 2026-09-24 swap entry above stays as history; under this rule it didn't need logging.

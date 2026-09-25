@@ -88,7 +88,10 @@ grip-limiter finding from the gym log.
 `Running` and `Gym` above fix *what* each week contains; this fixes *which day*. Jack expects
 to shift days around while he finds a schedule that works. Each week's table is added below
 the last and kept — the plan as it stood, not edited afterwards to match what happened. What
-actually happened is in `log.md`; the two together show what was missed.
+actually happened is in `log.md`. Days are a starting point, not a commitment: sessions move
+freely within the week `[stated, 2026-09-24]`. What counts is whether every planned session got
+done by Sunday, and done as planned. The dashboard matches logged sessions to planned ones
+across the week, whatever the day.
 
 A run can split around a gym session (run to the gym, lift, run home) or get longer as
 distances grow. No format change needed — log each leg as its own `run` entry plus the `gym`
