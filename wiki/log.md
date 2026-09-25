@@ -440,6 +440,7 @@ Sunday, shorten it rather than push.
 ## [2026-09-24] run | Easy — Foundations wk1 (swapped from Sun)
 ```yaml
 planned: yes
+achilles_next_am: 1
 beyond_plan: none
 duration_min: 34
 distance_km: 5.01
@@ -485,3 +486,21 @@ flags as not as planned any session done in place of a different one, logged `pl
 partial`/`no`, beyond plan, or extra. Block adherence is now counted by session, not by day.
 `plan-training` and the Foundations block's schedule intro updated to match.
 The 2026-09-24 swap entry above stays as history; under this rule it didn't need logging.
+
+## [2026-09-25] rest | Rest day — Foundations wk1
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+```
+- Planned: Rest (Friday evening busy).
+- Done: Rest.
+- Morning (25 Sep): both ankles sensitive, "very aware", not painful, 1/10 `[stated,
+  2026-09-25]`. Added to the 24 Sep run entry as `achilles_next_am`, with Jack's agreement,
+  because that entry was logged before the morning.
+- Review: Third 1/10 morning in a row. Flat, inside the Achilles rules. Jack says it feels
+  more sensitive this week since starting the calf work than last week without it `[stated,
+  2026-09-25]`. The log has no calf work so far this week: Session A (22 Sep) had none, and
+  Session B moved to Saturday. Asked what he meant. There are no morning scores for last week,
+  so a week-on-week comparison isn't possible yet. Manage carefully: Saturday's calf work
+  starts conservative, and neither calf load nor running goes up until the mornings stay ≤1.
