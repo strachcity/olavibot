@@ -124,7 +124,7 @@
 
   /* ---------- hero ---------- */
   .hero { display: grid; grid-template-columns: 1.55fr 1fr; gap: 16px; }
-  .week { padding: 26px 28px 24px; display: grid; gap: 22px; }
+  .week { padding: 26px 28px 24px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; }
   .headline { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
   .headline h1 { margin: 0; font-weight: 200; font-size: clamp(40px, 6.2vw, 78px); line-height: .95; letter-spacing: -.035em; text-wrap: balance; }
   .headline h1 b { font-weight: 500; background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
@@ -721,7 +721,7 @@ function weekPanel(b, n, label) {
       <div class="headline">
         <div>
           <div class="label">${esc(b.name)} · Week ${n} of ${b.weeks} · ${dm(s)} – ${dm(addDays(s, 6))}</div>
-          <h1>${current ? "This<br><b>week.</b>" : `Week<br><b>${(WORDS[n] || String(n)).toLowerCase()}.</b>`}</h1>
+          <h1>${current ? "This <b>week.</b>" : `Week <b>${(WORDS[n] || String(n)).toLowerCase()}.</b>`}</h1>
         </div>
         <div class="ring">${ringSVG(doneKm(days), plannedKm(b, n, days))}</div>
       </div>
