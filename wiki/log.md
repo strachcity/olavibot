@@ -504,3 +504,13 @@ beyond_plan: none
   Session B moved to Saturday. Asked what he meant. There are no morning scores for last week,
   so a week-on-week comparison isn't possible yet. Manage carefully: Saturday's calf work
   starts conservative, and neither calf load nor running goes up until the mornings stay ≤1.
+
+## [2026-09-25] review | Correction: Session A did include calf/ankle work
+Correcting the 2026-09-25 rest entry, which said the log had no calf work this week. Session A
+(22 Sep) had calf/ankle work in the warm-up `[stated, 2026-09-25]`. The 22 Sep gym entry didn't
+record it, because the Done line only lists the main exercises. Exact drills not yet given.
+Jack's read is that this week's extra sensitivity comes from the increased load. That's
+plausible: this is the first full gym week after 0.2–0.9 sessions/wk, with heavy squats, split
+squats and the calf/ankle warm-up all new, while running went down (~19km, 3 runs → ~12km,
+2 runs `[data, Strava, 14–25 Sep]`). But it can't be pinned on one cause yet `[inferred]`.
+Scores 1, 1, 1: flat, inside the rules.
