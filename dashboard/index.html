@@ -220,10 +220,10 @@
   .pg:hover:not(:disabled) { border-color: color-mix(in srgb, var(--fg) 35%, transparent); }
   .pg:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   .pg:disabled { opacity: .3; cursor: default; }
-  .chart { transition: opacity .2s ease; }
-  @media (prefers-reduced-motion: reduce) { .chart { transition: none; } }
-  .chart { position: relative; margin-top: 12px; overflow-x: auto; }
-  .chart svg { display: block; width: 100%; min-width: 640px; height: auto; }
+  .chart .track { transition: transform .45s cubic-bezier(.4,0,.2,1); }
+  @media (prefers-reduced-motion: reduce) { .chart .track { transition: none !important; } }
+  .chart { position: relative; margin-top: 12px; }
+  .chart svg { display: block; width: 100%; height: auto; overflow: hidden; }
   .tip { position: fixed; z-index: 100; pointer-events: none; padding: 10px 12px; border-radius: 12px; background: color-mix(in srgb, var(--ground) 82%, transparent); border: 1px solid var(--edge); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); font-size: 12px; min-width: 150px; transform: translate(-50%, -100%); white-space: nowrap; }
   .tip .h { font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; color: var(--ink-3); text-transform: uppercase; margin-bottom: 6px; }
   .tip .r { display: flex; justify-content: space-between; gap: 14px; }
@@ -254,7 +254,6 @@
     .cap-grid { grid-template-columns: 1fr 1fr; }
     header.bar { border-radius: 22px; }
     .ring { width: 108px; height: 108px; }
-    .chart svg { width: 760px; max-width: none; }
   }
 
   /* ---------- navigation ---------- */
@@ -994,69 +993,93 @@ function drawYears(root) {
     s.addEventListener("mouseleave", hideTip);
   });
 }
+// The whole history is drawn once as one strip of weeks behind a fixed 52-week window.
+// Paging slides the strip; the axis, gridlines and card stay put.
 function drawChart(host) {
   if (!host) return;
   const NS = "http://www.w3.org/2000/svg";
   const el = (tag, attrs = {}, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
-  // 52-week pages counted back from this week; the oldest page starts at the first run instead of running off the data.
+  host.innerHTML = "";
   const latest = mondayOf(TODAY), first = S.runs.length ? mondayOf(S.runs[0].date) : latest;
-  const span = diffDays(first, latest) / 7 + 1;
-  const maxPage = Math.max(0, Math.ceil((span - 52) / 52));
-  S.page = Math.min(Math.max(S.page || 0, 0), maxPage);
-  let end = addDays(latest, -364 * S.page);
-  if (addDays(end, -357) < first) end = addDays(first, 357);
-  const weeks = Array.from({ length: 52 }, (_, i) => ({ w: addDays(end, (i - 51) * 7), easy: 0, steady: 0, grey: 0, hard: 0, race: 0, gym: 0, notes: [] }));
-  const idx = d => { const i = diffDays(weeks[0].w, mondayOf(d)) / 7; return i >= 0 && i < 52 ? i : -1; };
+  const N = diffDays(first, latest) / 7 + 1;
+  const weeks = Array.from({ length: N }, (_, i) => ({ w: addDays(first, i * 7), easy: 0, steady: 0, grey: 0, hard: 0, race: 0, gym: 0, notes: [] }));
+  const idx = d => { const i = diffDays(first, mondayOf(d)) / 7; return i >= 0 && i < N ? i : -1; };
   S.runs.forEach(r => { const i = idx(r.date); if (i < 0) return; const b = isRace(r) ? "race" : bandOf(r.sec / r.km); weeks[i][b] += r.km; if (isRace(r)) weeks[i].notes.push(r.note.replace(/^RACE_|^BACKYARD_?/, "").replace(/_/g, " ").trim() || "Race"); });
   S.gym.forEach(d => { const i = idx(d); if (i >= 0) weeks[i].gym++; });
-  // header figures follow the 52 weeks in view
-  const from = weeks[0].w, to = addDays(end, 6), inView = S.runs.filter(r => r.date >= from && r.date <= to);
-  const meta = $("chart-meta");
-  if (meta) meta.innerHTML = `<span>Avg <b class="num">${(inView.reduce((x, r) => x + r.km, 0) / 52).toFixed(1)} km/wk</b></span>
-    <span>Longest <b class="num">${Math.max(0, ...inView.map(r => r.km)).toFixed(1)} km</b></span>
-    <span>Gym <b class="num">${(S.gym.filter(d => d >= from && d <= to).length / 52).toFixed(2)}/wk</b></span>`;
-  const range = $("pg-range"), prev = $("pg-prev"), next = $("pg-next");
-  if (range) range.textContent = `${fmt(from, { month: "short", year: "numeric" })} – ${fmt(to, { month: "short", year: "numeric" })}`;
-  if (prev) { prev.disabled = S.page >= maxPage; prev.onclick = () => pageTo(host, S.page + 1); }
-  if (next) { next.disabled = S.page <= 0; next.onclick = () => pageTo(host, S.page - 1); }
-  const W = 1200, H = 260, padL = 34, padR = 8, padT = 16, padB = 46, cap = 60;
-  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Weekly running km over 52 weeks, stacked by pace band" }, host);
-  const glow = el("filter", { id: "glow", x: "-50%", y: "-50%", width: "200%", height: "200%" }, el("defs", {}, svg));
-  el("feGaussianBlur", { stdDeviation: 6 }, glow);
-  const iw = W - padL - padR, ih = H - padT - padB, slot = iw / 52, bw = Math.max(6, slot - 6);
+  const maxPage = Math.max(0, Math.ceil((N - 52) / 52));
+  // First week index shown on a page: whole 52-week steps back from this week; the oldest page starts at the first run.
+  const startOf = p => Math.max(0, N - 52 - 52 * p);
+
+  // Drawn at the host's real pixel width so text stays text-sized on a phone.
+  const W = Math.max(320, Math.round(host.clientWidth || 1200)), H = 260, padL = 34, padR = 8, padT = 16, padB = 46, cap = 60;
+  const iw = W - padL - padR, ih = H - padT - padB, slot = iw / 52, bw = Math.max(3, Math.min(slot - 2, slot * .74));
   const y = v => padT + ih - Math.min(v, cap) / cap * ih;
   const mono = { style: "fill:var(--ink-3)", "font-size": 11, "font-family": "IBM Plex Mono, monospace" };
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: "img", "aria-label": "Weekly running km, 52 weeks at a time, stacked by pace band" }, host);
+  const defs = el("defs", {}, svg);
+  const glow = el("filter", { id: "glow", x: "-50%", y: "-50%", width: "200%", height: "200%" }, defs);
+  el("feGaussianBlur", { stdDeviation: 6 }, glow);
+  el("rect", { x: padL, y: 0, width: iw, height: H }, el("clipPath", { id: "win" }, defs));
   [0, 20, 40, 60].forEach(t => {
     el("line", { x1: padL, x2: W - padR, y1: y(t), y2: y(t), style: "stroke:color-mix(in srgb, var(--fg) 7%, transparent)" }, svg);
     el("text", { x: padL - 8, y: y(t) + 4, "text-anchor": "end", ...mono }, svg).textContent = t;
   });
+  const track = el("g", { class: "track" }, el("g", { "clip-path": "url(#win)" }, svg));
+  const monthEvery = slot < 12 ? 3 : 1;   // narrow screens label every third month
   weeks.forEach((w, i) => {
-    const x = padL + i * slot + (slot - bw) / 2, g = el("g", {}, svg), isNow = w.w === latest;
+    const x = padL + i * slot + (slot - bw) / 2, g = el("g", {}, track), isNow = w.w === latest;
     if (isNow) el("rect", { x: x - 4, y: padT, width: bw + 8, height: ih, rx: 6, style: "fill:color-mix(in srgb, var(--accent) 8%, transparent)" }, g);
     let base = 0;
     const total = BANDS.reduce((s, b) => s + w[b.k], 0);
     BANDS.forEach(b => {
       const v = w[b.k]; if (!v) return;
       const top = y(base + v), bot = y(base);
-      el("rect", { x, y: top, width: bw, height: Math.max(1.5, bot - top - 2), rx: 3, style: `fill:${b.c}`, opacity: isNow ? 1 : .9 }, g);
+      el("rect", { x, y: top, width: bw, height: Math.max(1.5, bot - top - 2), rx: Math.min(3, bw / 2), style: `fill:${b.c}`, opacity: isNow ? 1 : .9 }, g);
       base += v;
     });
-    if (total > cap) el("text", { x: x + bw / 2, y: padT - 4, "text-anchor": "middle", ...mono, style: "fill:var(--ink)", "font-size": 10.5 }, g).textContent = Math.round(total) + "↑";
-    for (let k = 0; k < w.gym; k++) el("circle", { cx: x + bw / 2, cy: H - padB + 12 + k * 8, r: 2.6, style: "fill:var(--accent)" }, g);
-    if (+w.w.slice(8) <= 7) el("text", { x: x + bw / 2, y: H - 6, "text-anchor": "middle", ...mono }, g).textContent = fmt(w.w, { month: "short" });
+    if (total > cap) el("text", { x: x + bw / 2, y: padT - 4, "text-anchor": "middle", ...mono, style: "fill:var(--ink)", "font-size": 10.5 }, g).textContent = slot < 12 ? "↑" : Math.round(total) + "↑";
+    for (let k = 0; k < w.gym; k++) el("circle", { cx: x + bw / 2, cy: H - padB + 12 + k * 8, r: Math.min(2.6, slot / 4), style: "fill:var(--accent)" }, g);
+    const d = new Date(ms(w.w));
+    if (d.getUTCDate() <= 7 && d.getUTCMonth() % monthEvery === 0) el("text", { x: x + bw / 2, y: H - 6, "text-anchor": "middle", ...mono }, g).textContent = fmt(w.w, { month: "short" });
     if (isNow) {
       el("circle", { cx: x + bw / 2, cy: y(total) - 10, r: 9, style: "fill:var(--accent)", opacity: .5, filter: "url(#glow)" }, g);
       el("circle", { cx: x + bw / 2, cy: y(total) - 10, r: 3.5, style: "fill:var(--accent)" }, g);
     }
     const hit = el("rect", { x: padL + i * slot, y: padT, width: slot, height: ih + 34, fill: "transparent" }, g);
     hit.addEventListener("mousemove", e => {
+      if (host.classList.contains("sliding")) return;
       const rows = BANDS.filter(b => w[b.k]).map(b => `<div class="r"><span><i style="background:${b.c}"></i>${b.name}</span><b class="num">${w[b.k].toFixed(1)} km</b></div>`).join("");
       const note = isNow ? "This week, so far" : w.notes.join(", ");
       showTip(`<div class="h">Week of ${fmt(w.w, { day: "numeric", month: "short", year: "2-digit" })}${note ? " · " + esc(note) : ""}</div>${rows || '<div class="r muted">No running</div>'}<div class="r" style="margin-top:6px;border-top:1px solid color-mix(in srgb, var(--fg) 10%, transparent);padding-top:6px"><span>Total</span><b class="num">${total.toFixed(1)} km</b></div><div class="r"><span>Gym</span><b class="num">${w.gym}</b></div>`, e.clientX, e.clientY);
     });
     hit.addEventListener("mouseleave", hideTip);
   });
+
+  const offset = p => -startOf(p) * slot;
+  const place = (animate) => {
+    S.page = Math.min(Math.max(S.page || 0, 0), maxPage);
+    const st = startOf(S.page), from = weeks[st].w, to = addDays(weeks[Math.min(N, st + 52) - 1].w, 6);
+    track.style.transition = animate ? "" : "none";
+    track.style.transform = `translateX(${offset(S.page)}px)`;
+    if (animate) { host.classList.add("sliding"); hideTip(); clearTimeout(S.slideT); S.slideT = setTimeout(() => host.classList.remove("sliding"), 460); }
+    // header figures follow the 52 weeks in view
+    const inView = S.runs.filter(r => r.date >= from && r.date <= to);
+    const meta = $("chart-meta");
+    if (meta) meta.innerHTML = `<span>Avg <b class="num">${(inView.reduce((x, r) => x + r.km, 0) / 52).toFixed(1)} km/wk</b></span>
+      <span>Longest <b class="num">${Math.max(0, ...inView.map(r => r.km)).toFixed(1)} km</b></span>
+      <span>Gym <b class="num">${(S.gym.filter(d => d >= from && d <= to).length / 52).toFixed(2)}/wk</b></span>`;
+    const range = $("pg-range"), prev = $("pg-prev"), next = $("pg-next");
+    if (range) range.textContent = `${fmt(from, { month: "short", year: "numeric" })} – ${fmt(to, { month: "short", year: "numeric" })}`;
+    if (prev) { prev.disabled = S.page >= maxPage; prev.onclick = () => { S.page++; place(true); }; }
+    if (next) { next.disabled = S.page <= 0; next.onclick = () => { S.page--; place(true); }; }
+  };
+  place(false);
+  S.chart = { host, track, offset, maxPage, place, slot };
 }
+addEventListener("resize", () => {
+  clearTimeout(S.resizeT);
+  S.resizeT = setTimeout(() => { const h = S.chart?.host; if (h && h.isConnected && Math.abs(h.clientWidth - (+h.querySelector("svg")?.getAttribute("width") || 0)) > 4) drawChart(h); }, 150);
+});
 
 // ---------- palette: one per week, from the recipe book ----------
 // Each week (by its Monday) deterministically picks a recipe and a hue, so a week keeps its
@@ -1175,15 +1198,6 @@ $("mode-btn").addEventListener("click", () => {
   try { localStorage.setItem("olavi-mode", MODE); } catch (err) {}
   if (S.monday) applyPalette(S.monday);
 });
-
-function pageTo(host, page) {
-  hideTip();
-  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const redraw = () => { S.page = page; host.innerHTML = ""; drawChart(host); host.style.opacity = 1; };
-  if (reduce) return redraw();
-  host.style.opacity = 0;
-  setTimeout(redraw, 200);
-}
 
 // ---------- router ----------
 function render() {
