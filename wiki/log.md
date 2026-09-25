@@ -504,3 +504,31 @@ beyond_plan: none
   Session B moved to Saturday. Asked what he meant. There are no morning scores for last week,
   so a week-on-week comparison isn't possible yet. Manage carefully: Saturday's calf work
   starts conservative, and neither calf load nor running goes up until the mornings stay ≤1.
+
+## [2026-09-25] review | Correction: Session A did include calf/ankle work
+Correcting the 2026-09-25 rest entry, which said the log had no calf work this week. Session A
+(22 Sep) had calf/ankle work in the warm-up `[stated, 2026-09-25]`. The 22 Sep gym entry didn't
+record it, because the Done line only lists the main exercises. Exact drills not yet given.
+Jack's read is that this week's extra sensitivity comes from the increased load. That's
+plausible: this is the first full gym week after 0.2–0.9 sessions/wk, with heavy squats, split
+squats and the calf/ankle warm-up all new, while running went down (~19km, 3 runs → ~12km,
+2 runs `[data, Strava, 14–25 Sep]`). But it can't be pinned on one cause yet `[inferred]`.
+Scores 1, 1, 1: flat, inside the rules.
+
+## [2026-09-25] review | Session A (22 Sep) warm-up, as planned
+Warm-up content for the 22 Sep gym entry, from the session plan `[stated, 2026-09-25]`:
+- Mobility, 10 min, 1 round: child's pose side-to-side, cat-cow, fire hydrants, scorpions,
+  90/90s, sunrise-arc lunge.
+- Foot and ankle, bodyweight: tibialis raises 1×15; short-foot holds, single-leg balance,
+  heel walks and toe walks, 3×20s each. No pogos: the reactive gate isn't cleared.
+
+This is low tendon load. No hopping, and only light calf work (toe walks). So it's an unlikely
+main cause of this week's sensitivity. The heavier new load was loaded ankle dorsiflexion
+under the bar and dumbbells: back squat 3×5 @80kg, Bulgarian split squat 3×8/leg, weighted
+march `[inferred]`.
+
+## [2026-09-25] model | Warm-up recorded in every session log
+Agreed with Jack `[stated, 2026-09-25]`: the Done line of a session entry now starts with the
+warm-up. It names the drills and gives sets × reps for anything that loads the ankle or calf.
+This week's Achilles question needed the 22 Sep warm-up, and it had only survived in the
+claude.ai session plan. `review-training` updated and its zip rebuilt.
