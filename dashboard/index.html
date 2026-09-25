@@ -705,8 +705,7 @@ function ringSVG(done, planned) {
 
 function weekPanel(b, n, label) {
   const days = buildWeek(b, n);
-  const runs = days.filter(d => d.kind === "run").length, lifts = days.filter(d => d.kind === "gym").length;
-  const s = weekStart(b, n);
+  const s = weekStart(b, n), current = TODAY >= s && TODAY <= addDays(s, 6);
   const note = [b.schedule[n]?.note, b.ceiling && `Ceiling: ${b.ceiling}`].filter(Boolean).join(" ");
   const M = matchWeek(b, n), got = M.items.filter(p => p.match).length, all = M.items.length;
   const verdict = !all ? "" : [
@@ -721,8 +720,8 @@ function weekPanel(b, n, label) {
     html: `<div class="glass week">
       <div class="headline">
         <div>
-          <div class="label">${esc(label)} · ${dm(s)} – ${dm(addDays(s, 6))}</div>
-          <h1>${b.schedule[n] || runs + lifts ? `${WORDS[runs] || runs} run${runs === 1 ? "" : "s"},<br><b>${(WORDS[lifts] || String(lifts)).toLowerCase()} lift${lifts === 1 ? "" : "s"}.</b>` : `Not planned<br><b>yet.</b>`}</h1>
+          <div class="label">${esc(b.name)} · Week ${n} of ${b.weeks} · ${dm(s)} – ${dm(addDays(s, 6))}</div>
+          <h1>${current ? "This<br><b>week.</b>" : `Week<br><b>${(WORDS[n] || String(n)).toLowerCase()}.</b>`}</h1>
         </div>
         <div class="ring">${ringSVG(doneKm(days), plannedKm(b, n, days))}</div>
       </div>
