@@ -224,6 +224,8 @@
   @media (prefers-reduced-motion: reduce) { .chart .track { transition: none !important; } }
   .chart { position: relative; margin-top: 12px; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
   .chart svg { display: block; width: 100%; height: auto; overflow: hidden; }
+  .chart.scroll { overflow-x: auto; touch-action: auto; }
+  .chart.scroll svg { width: 760px; max-width: none; }
   .tip { position: fixed; z-index: 100; pointer-events: none; padding: 10px 12px; border-radius: 12px; background: color-mix(in srgb, var(--ground) 82%, transparent); border: 1px solid var(--edge); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); font-size: 12px; min-width: 150px; transform: translate(-50%, -100%); white-space: nowrap; }
   .tip .h { font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; color: var(--ink-3); text-transform: uppercase; margin-bottom: 6px; }
   .tip .r { display: flex; justify-content: space-between; gap: 14px; }
@@ -1011,7 +1013,10 @@ function drawChart(host) {
   const startOf = p => Math.max(0, N - 52 - 52 * p);
 
   // Drawn at the host's real pixel width so text stays text-sized on a phone.
-  const W = Math.max(320, Math.round(host.clientWidth || 1200)), H = 260, padL = 34, padR = 8, padT = 16, padB = 46, cap = 60;
+  // Phones keep a readable 760px chart that scrolls sideways within its 52 weeks.
+  const narrow = (host.clientWidth || 1200) < 700;
+  host.classList.toggle("scroll", narrow); S.chartCW = host.clientWidth;
+  const W = narrow ? 760 : Math.max(320, Math.round(host.clientWidth || 1200)), H = 260, padL = 34, padR = 8, padT = 16, padB = 46, cap = 60;
   const iw = W - padL - padR, ih = H - padT - padB, slot = iw / 52, bw = Math.max(3, Math.min(slot - 2, slot * .74));
   const y = v => padT + ih - Math.min(v, cap) / cap * ih;
   const mono = { style: "fill:var(--ink-3)", "font-size": 11, "font-family": "IBM Plex Mono, monospace" };
@@ -1061,6 +1066,7 @@ function drawChart(host) {
     const st = startOf(S.page), from = weeks[st].w, to = addDays(weeks[Math.min(N, st + 52) - 1].w, 6);
     track.style.transition = animate ? "" : "none";
     track.style.transform = `translateX(${offset(S.page)}px)`;
+    if (narrow) host.scrollTo({ left: host.scrollWidth, behavior: animate ? "smooth" : "auto" });   // open each period on its latest weeks
     if (animate) { host.classList.add("sliding"); hideTip(); clearTimeout(S.slideT); S.slideT = setTimeout(() => host.classList.remove("sliding"), 460); }
     // header figures follow the 52 weeks in view
     const inView = S.runs.filter(r => r.date >= from && r.date <= to);
@@ -1080,7 +1086,7 @@ function drawChart(host) {
   // period (or back) on release. Vertical scrolling passes through (touch-action: pan-y).
   let drag = null;
   host.onpointerdown = e => {
-    if (e.pointerType === "mouse") return;
+    if (e.pointerType === "mouse" || narrow) return;   // on phones sideways drags scroll the chart instead
     drag = { id: e.pointerId, x: e.clientX, y: e.clientY, t: performance.now(), dx: 0, horiz: null, base: offset(S.page) };
   };
   host.onpointermove = e => {
@@ -1110,7 +1116,7 @@ function drawChart(host) {
 }
 addEventListener("resize", () => {
   clearTimeout(S.resizeT);
-  S.resizeT = setTimeout(() => { const h = S.chart?.host; if (h && h.isConnected && Math.abs(h.clientWidth - (+h.querySelector("svg")?.getAttribute("width") || 0)) > 4) drawChart(h); }, 150);
+  S.resizeT = setTimeout(() => { const h = S.chart?.host; if (h && h.isConnected && Math.abs(h.clientWidth - (S.chartCW || 0)) > 4) drawChart(h); }, 150);
 });
 
 // ---------- palette: one per week, from the recipe book ----------
