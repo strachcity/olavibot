@@ -514,3 +514,15 @@ plausible: this is the first full gym week after 0.2–0.9 sessions/wk, with hea
 squats and the calf/ankle warm-up all new, while running went down (~19km, 3 runs → ~12km,
 2 runs `[data, Strava, 14–25 Sep]`). But it can't be pinned on one cause yet `[inferred]`.
 Scores 1, 1, 1: flat, inside the rules.
+
+## [2026-09-25] review | Session A (22 Sep) warm-up, as planned
+Warm-up content for the 22 Sep gym entry, from the session plan `[stated, 2026-09-25]`:
+- Mobility, 10 min, 1 round: child's pose side-to-side, cat-cow, fire hydrants, scorpions,
+  90/90s, sunrise-arc lunge.
+- Foot and ankle, bodyweight: tibialis raises 1×15; short-foot holds, single-leg balance,
+  heel walks and toe walks, 3×20s each. No pogos: the reactive gate isn't cleared.
+
+This is low tendon load. No hopping, and only light calf work (toe walks). So it's an unlikely
+main cause of this week's sensitivity. The heavier new load was loaded ankle dorsiflexion
+under the bar and dumbbells: back squat 3×5 @80kg, Bulgarian split squat 3×8/leg, weighted
+march `[inferred]`.
