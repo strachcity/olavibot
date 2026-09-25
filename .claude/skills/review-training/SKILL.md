@@ -56,7 +56,7 @@ session: A
 reactive_level: 2
 ```
 - Planned: <one line>
-- Done: <exercises × sets × reps @ load>
+- Done: Warm-up: <drills>; <anything loading the ankle: exercise × sets × reps>. <exercises × sets × reps @ load>
 - Beyond plan: none | <what> — <why>
 - Capacity: <what he could do today that he couldn't recently, if anything>
 - Review: <2–4 lines>
@@ -68,6 +68,11 @@ line carries distance / time / pace / HR.
 
 - **Planned line keeps the plan's structure.** One line, but if the plan staged it (ramp-up
   then working sets, or similar), keep the stages distinct rather than collapsing them.
+- **The warm-up goes in the Done line** `[stated, 2026-09-25]`. Name the drills, and give
+  anything that loads the ankle or calf (calf raises, toe walks, tibialis raises, pogos, hops)
+  with sets × reps. When the Achilles plays up, the warm-up is part of the load. Leave it out
+  and the log can't explain a morning score. Session plans live in claude.ai and never reach
+  the repo, so the log is the only record.
 - **Equipment swaps** forced by the gym (flat gym, missing kit) count as planned: `planned:
   yes`, `beyond_plan: none`, the swap noted in the Done line. Beyond plan means *more*, not
   different.

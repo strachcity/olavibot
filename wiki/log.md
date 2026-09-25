@@ -526,3 +526,9 @@ This is low tendon load. No hopping, and only light calf work (toe walks). So it
 main cause of this week's sensitivity. The heavier new load was loaded ankle dorsiflexion
 under the bar and dumbbells: back squat 3×5 @80kg, Bulgarian split squat 3×8/leg, weighted
 march `[inferred]`.
+
+## [2026-09-25] model | Warm-up recorded in every session log
+Agreed with Jack `[stated, 2026-09-25]`: the Done line of a session entry now starts with the
+warm-up. It names the drills and gives sets × reps for anything that loads the ankle or calf.
+This week's Achilles question needed the 22 Sep warm-up, and it had only survived in the
+claude.ai session plan. `review-training` updated and its zip rebuilt.
