@@ -553,3 +553,12 @@ run_type: long
   of the 75–80% easy guide, and 6 bpm above Monday (140 @ 5:50) for 17 s/km faster. Easy, not
   grey zone, but not much margin. Next long run, aim for ~5:50 and let HR sit in the low
   140s. Session B still to do this week.
+
+## [2026-09-26] block | Week 2 schedule, Foundations
+Agreed with Jack `[stated, 2026-09-26]`. Constraint: Swansea Tuesday–Wednesday, with a possible
+Wednesday morning run. Three runs (easy 5km + strides, easy 6km, long 10km) and two gym
+sessions (A Thursday, B Sunday). This assumes Session B from week 1 happens Sunday 27 Sep.
+Only one thing rises this week: running, as planned. Calf load holds at the starting dose
+because of the week's mild ankle sensitivity: 1/10 on four straight mornings, 23–26 Sep. The
+long run drops back to 8km if any morning goes above 1. Also noted: Jack used a massage gun on
+his calves before the 26 Sep run and found it helped `[stated, 2026-09-26]`.

@@ -113,6 +113,24 @@ Saturday and Sunday are back-to-back running days — not deliberate training st
 the constraint's side-effect. Keep Sunday genuinely easy, shorten it rather than push if legs
 are heavy from Saturday.
 
+**Week 2 (28 Sep – 4 Oct).** Constraint: travelling to Swansea Tuesday morning, back Wednesday.
+Wednesday morning run possible, not certain.
+
+| Day | Session |
+|---|---|
+| Mon 28 | Easy — 5km @ 5:30–6:00/km + strides 4–6×20s |
+| Tue 29 | Rest (travel to Swansea) |
+| Wed 30 | Easy — 6km @ 5:30–6:00/km, morning in Swansea (optional, else Friday) |
+| Thu 1 | Gym — Session A (full gym, front squat) |
+| Fri 2 | Rest, or Wednesday's 6km if it didn't happen |
+| Sat 3 | Long — 10km @ ~5:50/km, HR low 140s (8km if any morning is above 1) |
+| Sun 4 | Gym — Session B (full gym, trap-bar deadlift) |
+
+One thing goes up at a time. Running rises as the block planned (long run 8 → 10km, strides
+start), and calf load holds at the starting dose in Session B. If mornings are still ≤1 at the
+end of the week, calf load progresses in week 3 and running holds. If a morning reaches 2+, or
+rises two days running: long run stays 8km, drop the strides, keep the calf work.
+
 ## What would change the plan
 - Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,
   freeze reactive level, keep calf work.
