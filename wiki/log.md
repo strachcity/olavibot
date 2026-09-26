@@ -562,3 +562,10 @@ Only one thing rises this week: running, as planned. Calf load holds at the star
 because of the week's mild ankle sensitivity: 1/10 on four straight mornings, 23–26 Sep. The
 long run drops back to 8km if any morning goes above 1. Also noted: Jack used a massage gun on
 his calves before the 26 Sep run and found it helped `[stated, 2026-09-26]`.
+
+## [2026-09-26] ingest | Max HR estimated from Strava race efforts
+Filed at Jack's request `[stated, 2026-09-26]`, to be updated as data improves. New
+`## Heart rate` section in `athlete.md`. Max HR is at least 190 (Hackney Half, 19 May 2024),
+with 190 as the working value. The true max is probably 190–195 `[inferred]`. The 5k PB's HR
+data is unreliable. Until now the model's only max HR was Strava's age-formula figure. From
+Strava, no new raw source.
