@@ -532,3 +532,24 @@ Agreed with Jack `[stated, 2026-09-25]`: the Done line of a session entry now st
 warm-up. It names the drills and gives sets × reps for anything that loads the ankle or calf.
 This week's Achilles question needed the 22 Sep warm-up, and it had only survived in the
 claude.ai session plan. `review-training` updated and its zip rebuilt.
+
+## [2026-09-26] run | Long — Foundations wk1
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 45
+distance_km: 8.09
+avg_pace: 5:33
+run_type: long
+```
+- Planned: Long 8km @ 5:30–6:00/km or slower (week 1). Back on its original day. Session B,
+  swapped onto Saturday on 24 Sep, isn't done yet.
+- Done: 8.09km, 44:49 moving, avg pace 5:33/km, avg HR 146 (max 159), 21m elevation,
+  Victoria Park loops. Mile splits even, ~5:25–5:40/km `[data, Strava activity 20336464660]`
+- Beyond plan: none
+- Review: Distance on the ceiling and pace inside the band, but at its fast end, and the long
+  run's band says "or slower". HR 146 is about 77% of the age-estimated max (~190): at the top
+  of the 75–80% easy guide, and 6 bpm above Monday (140 @ 5:50) for 17 s/km faster. Easy, not
+  grey zone, but not much margin. Next long run, aim for ~5:50 and let HR sit in the low
+  140s. Session B still to do this week.
