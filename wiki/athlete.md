@@ -10,6 +10,22 @@ Stable facts about Jack as an athlete. Changes slowly. Session-level detail goes
 - Completed an MPA and thesis in 2025 — why structured training lapsed `[stated]`
 - Trains with a personal trainer (Olavi) roughly monthly; weighing whether to continue `[stated]`
 
+## Heart rate
+Update as better data arrives: a higher race max, or threshold HR from the week 6 test.
+
+- **Max HR: at least 190** `[data, Strava, to 2026-09-26]`. That's the highest reliable reading,
+  from the Hackney Half on 19 May 2024 (avg 177). He held 184–185 over the final ~2km, so it's
+  not a sensor spike. Other hard efforts: track 4×3min, 30 Apr 2024, max 186; 10k 39:52, 22 Apr
+  2024, max 180; half 1:28:35, 18 May 2025, max 182.
+- The true max is probably 190–195 `[inferred]`. Race maxes usually sit at or just below true
+  max, and a 177 average across a half fits 190–195. Sensor type (strap or wrist) unknown. The
+  reading is over two years old.
+- **Working value for % of max HR: 190.** It happens to match Strava's age-derived figure.
+  If the real max is higher, easy-run percentages read a little lower than calculated.
+- The 5k PB (29 Jan 2025) has unreliable HR: max 168, and flat at 147 for several laps. Don't
+  use it.
+- Better anchor to come: threshold HR from the week 6 test (3×10min, `tests.md`).
+
 ## Race history
 
 Official times `[stated]`: **5k 17:55 · 10k 39:35 · HM 1:28 · Marathon 3:11**
