@@ -490,7 +490,7 @@ The 2026-09-24 swap entry above stays as history; under this rule it didn't need
 ## [2026-09-25] rest | Rest day — Foundations wk1
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 1
 beyond_plan: none
 ```
 - Planned: Rest (Friday evening busy).
