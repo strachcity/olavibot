@@ -536,7 +536,7 @@ claude.ai session plan. `review-training` updated and its zip rebuilt.
 ## [2026-09-26] run | Long — Foundations wk1
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 1
 beyond_plan: none
 duration_min: 45
 distance_km: 8.09
