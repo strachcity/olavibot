@@ -77,6 +77,12 @@ no asking, no estimating. It feeds the Fitness line on the dashboard.
   with sets × reps. When the Achilles plays up, the warm-up is part of the load. Leave it out
   and the log can't explain a morning score. Session plans live in claude.ai and never reach
   the repo, so the log is the only record.
+- **Getting to the gym is Jack's choice** `[stated, 2026-09-27]`: cycle, run, or switch to the
+  flat gym, and none of it is a plan issue. A run leg to or from the gym logs as its own `run`
+  entry titled `Commute — to gym` / `Commute — home`, `run_type: easy`, `planned: yes`,
+  `beyond_plan: none`. The dashboard leaves commute runs out of session matching, so they
+  never count as extra or replace a planned run. Their km still count toward the week, and
+  toward the Achilles picture. Cycling needs no entry. Mention it in the gym entry's Done line.
 - **Equipment swaps** forced by the gym (flat gym, missing kit) count as planned: `planned:
   yes`, `beyond_plan: none`, the swap noted in the Done line. Beyond plan means *more*, not
   different.

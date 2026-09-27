@@ -234,7 +234,7 @@ row. Supersets save time without costing adaptation **[W]**. Keep anchors as str
 | Unstructured abs | **Replace** with programmed anti-rotation |
 | Calf | **Add** |
 | Loaded hip flexion | **Add** |
-| Adductor (Copenhagen) | **Add** — never trained, best-evidenced adductor exercise |
+| Adductor (Copenhagen) | **Add** — rarely trained (sparse Swiss-ball holds only), best-evidenced adductor exercise |
 | Reactive | **Add**, gated |
 
 ### Pools

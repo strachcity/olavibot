@@ -80,8 +80,9 @@ rack/bar the flat gym doesn't have. Flag if that's wrong; sessions would split a
 once per session (2×/week each) instead of once a week total — bumped after Jack flagged
 upper body needs more attention (`training-model.md` §6, Tier 2).
 
-Copenhagen plank is the block's one genuinely new lift (never trained, best-evidenced
-adductor exercise, `references/evidence-gym-pool.md`). Trap-bar directly tests the known
+Copenhagen plank is the block's one new lift in this form: done sparsely before on a Swiss
+ball, never on a bench `[stated, 2026-09-27]`. Best-evidenced adductor exercise,
+`references/evidence-gym-pool.md`. Trap-bar directly tests the known
 grip-limiter finding from the gym log.
 
 ## Weekly schedule
