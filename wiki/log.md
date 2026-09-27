@@ -631,3 +631,21 @@ Its km count toward the week. Claude's view, on record for Jack to weigh: at ~20
 running both legs on two gym days adds up to ~10 km, about +50%. Treat it as real load: cycle
 in any week a morning reaches 2+. `review-training` updated and its zip rebuilt; dashboard
 matching updated.
+
+## [2026-09-27] ingest | Research pass 3: ramp (warm-up) sets before lifting
+Run at Jack's request `[stated, 2026-09-27]`. New raw source `raw/research/03-warm-up-sets.md`,
+summarised in `references/evidence-gym-pool.md` under Warm-up and cool-down. This was web
+search only: publisher and PubMed hosts are blocked from this environment, so it rests on
+abstracts and search summaries, and the grades are provisional.
+
+Takeaways:
+- Warming up helps performance generally **[W]**.
+- Ramp sets raise 1RM and bar speed **[I]**.
+- Best-supported structure: load up, reps down, finishing near the working load **[I]**, with
+  mixed results.
+- No direct evidence that ramp sets prevent lifting injuries **[H]**.
+
+Jack's 22 Sep squat ramp (bar×10, 50×8, 65×5, 75×3 → 3×5 @80kg) is front-loaded with reps:
+the 50×8 set does more work than the evidence needs `[inferred]`. Proposed to Jack: change
+`training-model.md` §8 to "ramp: load up, reps down, last set ~85–90% of working load for
+1–2 reps". Not applied; it needs his agreement.
