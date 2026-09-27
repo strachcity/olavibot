@@ -221,6 +221,13 @@
   .fit-now { font-size: clamp(40px, 6vw, 64px); font-weight: 200; letter-spacing: -.03em; line-height: 1; }
   .fit-delta { font-size: 18px; font-weight: 500; }
   .fit-delta.up { color: var(--accent); } .fit-delta.flat { color: var(--ink-2); }
+  .fit-key { display: grid; gap: 4px; margin-top: 10px; font-size: 12.5px; color: var(--ink-2); }
+  .fit-key div { display: flex; gap: 8px; align-items: baseline; }
+  .fit-key div.off { opacity: .45; }
+  .fit-key b { font-weight: 500; color: var(--ink); white-space: nowrap; }
+  .fit-key i { flex: none; width: 16px; height: 0; border-top: 2px solid var(--accent); transform: translateY(-3px); }
+  .fit-key i.fat { border-top: 2px dashed var(--warm); }
+  .fit-key i.frm { border-top: 2px solid var(--ink-2); }
   .fit svg { display: block; width: 100%; height: auto; touch-action: pan-y; }
   .season-right { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
   .pager { display: flex; align-items: center; gap: 8px; }
@@ -937,6 +944,16 @@ function viewNow() {
     </div>
   </section>
 
+  ${S.load ? `<section class="glass">
+    <div class="season-head">
+      <div><p class="q">Fitness</p><div class="label">Relative Effort from Strava · 42-day average</div></div>
+      <div class="fit-tabs" id="fit-tabs"></div>
+    </div>
+    <div class="fit-head" id="fit-head"></div>
+    <div class="fit" id="fit"></div>
+    <div class="fit-key" id="fit-key"></div>
+  </section>` : ""}
+
   <section class="glass">
     <div class="season-head">
       <div><p class="q">Fifty-two weeks</p><div class="label">Weekly km by pace band · dots are gym sessions</div></div>
@@ -952,14 +969,6 @@ function viewNow() {
     <div class="chart" id="chart"></div>
   </section>
 
-  ${S.load ? `<section class="glass">
-    <div class="season-head">
-      <div><p class="q">Fitness</p><div class="label">Relative Effort from Strava · 42-day average</div></div>
-      <div class="fit-tabs" id="fit-tabs"></div>
-    </div>
-    <div class="fit-head" id="fit-head"></div>
-    <div class="fit" id="fit"></div>
-  </section>` : ""}
 
   <section class="glass">
     <p class="q">Is anything becoming a problem?</p>
@@ -1253,6 +1262,12 @@ function drawFitness(host) {
   hit.addEventListener("pointerdown", read);
   hit.addEventListener("pointerleave", () => { hideTip(); guide.style.opacity = 0; });
   S.fitCW = host.clientWidth;
+  // one-line key: what each line means; the off lines stay dimmed
+  $("fit-key").innerHTML = [
+    ["fit", true, "Fitness", "your training load built up over roughly the last six weeks; it climbs as you train and fades as you rest."],
+    ["fat", S.fit.fatigue, "Fatigue", "the same measure over roughly the last week, so it rises and falls quickly with each session."],
+    ["frm", S.fit.form, "Form", "fitness minus fatigue: negative after a hard week, positive when you're fresh."],
+  ].map(([k, on, t, d]) => `<div class="${on ? "" : "off"}"><i class="${k}"></i><b>${t}</b> ${d}</div>`).join("");
 }
 
 // ---------- palette: one per week, from the recipe book ----------
