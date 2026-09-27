@@ -1321,15 +1321,26 @@ function dealt(w) {
   for (let i = n - 1; i > 0; i--) { const j = Math.floor(rand(cycle * 9973 + i) * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
   return order[((w % n) + n) % n];
 }
+// A week is fresh when its ground colour (the one that fills the page) sits at least 60° from
+// both of last week's colours, so swapped pairs (ember/mint, then moss/coral) count as a repeat.
+const FIRST_WEEK = "2026-09-21", PICKS = {};
+const hueGap = (a, b) => { const d = Math.abs(((a - b) % 360 + 360) % 360); return Math.min(d, 360 - d); };
+const huesOf = p => [p.hue, p.hue + p.recipe.shift];
+const fresh = (p, q) => huesOf(q).every(b => hueGap(p.hue, b) >= 60);
 function pickFor(monday) {
-  if (!REROLL && PINNED[monday]) return { recipe: RECIPES.find(r => r.name === PINNED[monday].recipe) || RECIPES[0], hue: PINNED[monday].hue };
+  if (PICKS[monday]) return PICKS[monday];
+  if (!REROLL && PINNED[monday]) return PICKS[monday] = { recipe: RECIPES.find(r => r.name === PINNED[monday].recipe) || RECIPES[0], hue: PINNED[monday].hue };
   const w = Math.round(ms(monday) / (7 * DAY)) + REROLL * 7919;
-  const prevPin = !REROLL && PINNED[addDays(monday, -7)];
-  const prev = prevPin ? RECIPES.findIndex(r => r.name === prevPin.recipe) : dealt(w - 1);
-  let i = dealt(w);
-  if (i === prev) i = (i + 1) % RECIPES.length;
-  const recipe = RECIPES[i];
-  return { recipe, hue: recipe.hue[0] + rand(w * 40503 + 7) * (recipe.hue[1] - recipe.hue[0]) };
+  const at = i => { const r = RECIPES[i]; return { recipe: r, hue: r.hue[0] + rand(w * 40503 + 7) * (r.hue[1] - r.hue[0]) }; };
+  // The last three weeks, newest first. No recipe returns within three weeks; failing that,
+  // at least keep the colours clear of last week's.
+  const recent = [];
+  for (let d = addDays(monday, -7); d >= FIRST_WEEK && recent.length < 3; d = addDays(d, -7)) recent.push(pickFor(d));
+  const order = RECIPES.map((_, k) => (dealt(w) + k) % RECIPES.length).map(at);
+  const ok = p => !recent.length || fresh(p, recent[0]);
+  return PICKS[monday] = order.find(p => ok(p) && !recent.some(q => q.recipe === p.recipe))
+    || order.find(p => ok(p) && p.recipe !== recent[0].recipe)
+    || order.find(p => p.recipe !== recent[0].recipe);
 }
 function paletteFor(monday, mode) {
   const { recipe, hue } = pickFor(monday);
