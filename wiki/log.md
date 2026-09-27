@@ -311,6 +311,7 @@ duration_min: 40
 distance_km: 6.92
 avg_pace: 5:50
 run_type: easy
+relative_effort: 27
 ```
 - Planned: Week 1 easy run, 5–6km @ 5:30–6:00/km (`blocks/2026-09-foundations.md`)
 - Done: 6.92km, 40:24 moving, avg pace 5:50/km, avg HR 140 (max 157), 75m elevation
@@ -349,6 +350,7 @@ beyond_plan: none
 duration_min: 81
 gym: flat
 session: A
+relative_effort: 12
 ```
 - Planned: Back squat ramp-up (bar×10 → 50×8 → 65×5 → 75×3) then working sets 3×5 @~80kg RPE7 (flex to 85kg if 80kg felt like RPE6), Bulgarian split squat + Pallof press superset, hip-flexion + pull superset, DB shoulder press 3×10 @14kg, cool-down.
 - Done: Back squat bar×10 → 50×8 → 65×5 → 75×3 → working 3×5 @80kg. Bulgarian split squat 3×8/leg @14kg DB each hand. Pallof press 3×10/side @9.1kg (20lb) cable. Weighted march 3×30s/leg @16kg DB (swapped for banded march — no bands at flat gym). Single-arm DB row 3×8/side @18kg (swapped for lat pulldown — flat gym has none). DB shoulder press 3×10 @14kg standing, last set nearly failed on the left arm. `[stated]`
@@ -446,6 +448,7 @@ duration_min: 34
 distance_km: 5.01
 avg_pace: 6:28
 run_type: easy
+relative_effort: 7
 ```
 - Planned: Easy 5km, slow (5:45–6:15/km, RPE ≤4, no strides). This is Sunday's easy run moved to
   Thursday, with Session B moving to Saturday (see the 2026-09-24 `block` entry).
@@ -542,6 +545,7 @@ duration_min: 45
 distance_km: 8.09
 avg_pace: 5:33
 run_type: long
+relative_effort: 47
 ```
 - Planned: Long 8km @ 5:30–6:00/km or slower (week 1). Back on its original day. Session B,
   swapped onto Saturday on 24 Sep, isn't done yet.
@@ -593,6 +597,7 @@ duration_min: 92
 gym: full
 session: B
 reactive_level: 1
+relative_effort: 11
 ```
 - Planned: Warm-up (mobility, tibialis raises 1×15, short-foot/balance/heel+toe walks 3×20s each, no pogos). Reactive L1 isometric seated calf holds 5×30s. Deadlift ramp (bar×10 → 60×5 → 80×3) then working sets 3×5 @~90kg RPE7, straps on (85kg if heavy after Saturday's long run). Superset: heavy slow calf raise bent + straight knee 3×8 each at bodyweight only (calf dose held for the week's ankle sensitivity) + bench or DB press 3×8 ~50kg RPE7. Superset: Copenhagen plank short lever 3×15–20s/side + barbell row 3×8 ~45kg. Cool-down stretches.
 - Done: Warm-up: mobility round; tibialis raises 1×15; short-foot holds, single-leg balance, heel walks, toe walks 3×20s each; no pogos. Cycled 2.5km to the gym beforehand. Isometric seated calf hold: 1 calibration hold with 25kg dumbbell (easy, "felt like nothing"), then 5×30s @25kg on the seated calf raise machine, 30s rest (shortened from 60s). Deadlift ramp as planned, working 3×5 @90kg RPE7, no straps (none available) — reps done slightly faster and more explosive, grip held on all sets. Heavy slow calf raise straight-knee and bent-knee 3×8 each @bodyweight. Flat DB press (bench busy) 2×8 @20kg, 1×8 @22.5kg RPE7. Copenhagen plank short lever on bench, 3 holds/side as planned. Barbell row 3×8 @45kg. Cycled 2.5km home; cool-down stretches done at home. `[stated]`
