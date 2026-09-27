@@ -569,3 +569,17 @@ Filed at Jack's request `[stated, 2026-09-26]`, to be updated as data improves. 
 with 190 as the working value. The true max is probably 190–195 `[inferred]`. The 5k PB's HR
 data is unreliable. Until now the model's only max HR was Strava's age-formula figure. From
 Strava, no new raw source.
+
+## [2026-09-27] ingest | Strava Relative Effort history
+Pulled Relative Effort for every Strava activity that has one into
+`raw/history/strava-effort-2021-2026.csv` `[data, Strava, 22 Aug 2021 → 26 Sep 2026]`: 959
+activities. Nothing before 22 Aug 2021 has it (no heart rate), and neither do the three Macyard
+backyards (entered without heart rate). One artefact kept as Strava has it: 28 Jul 2026 gym
+session scores 79 because the watch ran for 13 hours.
+
+## [2026-09-27] model | relative_effort added to run and gym entries
+Agreed with Jack `[stated, 2026-09-27]`: `run` and `gym` metrics blocks gain `relative_effort`,
+Strava's number copied as-is, omitted when an activity has none. It lets the dashboard draw a
+Fitness line (Strava's method: daily Relative Effort, 42-day exponential average) with fatigue
+(7-day) and form (fitness minus fatigue) alongside. `CLAUDE.md` log format and `review-training`
+updated; skill zip rebuilt.

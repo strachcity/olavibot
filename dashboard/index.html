@@ -212,6 +212,16 @@
   .season-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
   .season-head .meta { display: flex; gap: 22px; flex-wrap: wrap; font-size: 13px; color: var(--ink-2); }
   .season-head .meta b { font-weight: 500; color: var(--ink); }
+  .fit-tabs { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .fit-tabs button.pill { cursor: pointer; font: inherit; font-family: var(--mono); font-size: 11px; letter-spacing: .08em; }
+  .fit-tabs button.pill.on { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, transparent); background: color-mix(in srgb, var(--accent) 10%, transparent); }
+  .fit-tabs button.pill:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .fit-sep { width: 1px; height: 18px; background: var(--edge); margin: 0 4px; }
+  .fit-head { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin: 10px 0 4px; }
+  .fit-now { font-size: clamp(40px, 6vw, 64px); font-weight: 200; letter-spacing: -.03em; line-height: 1; }
+  .fit-delta { font-size: 18px; font-weight: 500; }
+  .fit-delta.up { color: var(--accent); } .fit-delta.flat { color: var(--ink-2); }
+  .fit svg { display: block; width: 100%; height: auto; touch-action: pan-y; }
   .season-right { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
   .pager { display: flex; align-items: center; gap: 8px; }
   .pager .label { min-width: 132px; text-align: center; }
@@ -343,6 +353,7 @@
 const ROOT = "../";
 const FILES = {
   index: "wiki/index.md", log: "wiki/log.md", tests: "wiki/tests.md", history: "wiki/strava-history.md",
+  rawReadme: "raw/README.md",
 };
 // The Strava exports are named in strava-history.md's "Row data" line, so a renamed export still loads.
 const csvName = (history, kind) => (new RegExp(`strava-${kind}-[\\w-]+\\.csv`).exec(history || "") || [])[0];
@@ -524,6 +535,9 @@ async function load() {
     return f ? get("raw/history/" + f).catch(() => null) : null;
   }));
   T.runs = runsCSV; T.gym = gymCSV;
+  // Relative Effort history is named in raw/README.md; later activities carry it in the log.
+  const effortFile = csvName(T.rawReadme, "effort");
+  T.effort = effortFile ? await get("raw/history/" + effortFile).catch(() => null) : null;
   S.log = parseLog(T.log);
   const files = [...new Set([...T.index.matchAll(/\((?:wiki\/)?blocks\/(\d{4}-\d{2}-[\w-]+\.md)\)/g)].map(m => m[1]))];
   const texts = await Promise.allSettled(files.map(f => get("wiki/blocks/" + f)));
@@ -534,6 +548,7 @@ async function load() {
   S.runs = R.runs; S.csvTo = R.csvTo;
   S.gym = buildGym(T.gym ? parseCSV(T.gym) : [], S.log);
   S.tests = T.tests ? parseTests(T.tests) : null;
+  S.load = buildLoad(T.effort ? parseCSV(T.effort) : [], S.log);
   S.bests = T.history ? parseBests(T.history) : [];
 }
 
@@ -937,6 +952,15 @@ function viewNow() {
     <div class="chart" id="chart"></div>
   </section>
 
+  ${S.load ? `<section class="glass">
+    <div class="season-head">
+      <div><p class="q">Fitness</p><div class="label">Relative Effort from Strava · 42-day average</div></div>
+      <div class="fit-tabs" id="fit-tabs"></div>
+    </div>
+    <div class="fit-head" id="fit-head"></div>
+    <div class="fit" id="fit"></div>
+  </section>` : ""}
+
   <section class="glass">
     <p class="q">Is anything becoming a problem?</p>
     <div class="label">Read from the log · ${esc(b.name)} so far</div>
@@ -1116,8 +1140,120 @@ function drawChart(host) {
 }
 addEventListener("resize", () => {
   clearTimeout(S.resizeT);
-  S.resizeT = setTimeout(() => { const h = S.chart?.host; if (h && h.isConnected && Math.abs(h.clientWidth - (S.chartCW || 0)) > 4) drawChart(h); }, 150);
+  S.resizeT = setTimeout(() => {
+    const h = S.chart?.host; if (h && h.isConnected && Math.abs(h.clientWidth - (S.chartCW || 0)) > 4) drawChart(h);
+    const f = $("fit"); if (f && Math.abs(f.clientWidth - (S.fitCW || 0)) > 4) drawFitness(f);
+  }, 150);
 });
+
+// ---------- fitness: Strava's method on Relative Effort ----------
+// Daily load = summed Relative Effort. Fitness is its 42-day exponential average, fatigue its
+// 7-day one, form = fitness − fatigue. Arithmetic on measured numbers only.
+function buildLoad(csv, log) {
+  const day = {};
+  let last = "";
+  csv.forEach(r => { const v = +r.relative_effort; if (!r.date || isNaN(v)) return; day[r.date] = (day[r.date] || 0) + v; if (r.date > last) last = r.date; });
+  log.filter(e => ["run", "gym"].includes(e.type) && e.date > last && typeof e.y.relative_effort === "number")
+    .forEach(e => { day[e.date] = (day[e.date] || 0) + e.y.relative_effort; });
+  const dates = Object.keys(day).sort();
+  if (!dates.length) return null;
+  const out = [], kF = 1 - Math.exp(-1 / 42), kA = 1 - Math.exp(-1 / 7);
+  let F = 0, A = 0;
+  for (let d = dates[0]; d <= TODAY; d = addDays(d, 1)) {
+    const L = day[d] || 0;
+    F += (L - F) * kF; A += (L - A) * kA;
+    out.push({ d, L, F, A, form: F - A });
+  }
+  return { days: out, csvTo: last };
+}
+const FIT_RANGES = [["1M", 30], ["3M", 91], ["6M", 182], ["1Y", 365], ["2Y", 730], ["All", 0]];
+function drawFitness(host) {
+  if (!host || !S.load) return;
+  const NS = "http://www.w3.org/2000/svg";
+  const el = (tag, attrs = {}, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+  S.fit ??= { range: "3M", fatigue: false, form: false };
+  const all = S.load.days, n = FIT_RANGES.find(r => r[0] === S.fit.range)[1];
+  const days = n ? all.slice(-n) : all;
+  const first = days[0], last = days[days.length - 1];
+  // headline: today's fitness and the change across the range
+  const delta = last.F - first.F, pct = first.F > 0.5 ? delta / first.F * 100 : null;
+  const up = delta >= 0;
+  const since = n ? (n === 30 ? "over the past 30 days" : `since ${fmt(first.d, { day: "numeric", month: "short", year: "numeric" })}`) : `since ${fmt(first.d, { month: "short", year: "numeric" })}`;
+  $("fit-head").innerHTML = `<span class="fit-now num">${Math.round(last.F)}</span>
+    <span class="fit-delta ${up ? "up" : "flat"}">${up ? "▲" : "▼"} ${pct == null ? "" : Math.abs(Math.round(pct)) + "% · "}${up ? "+" : "−"}${Math.abs(Math.round(delta))} pts</span>
+    <span class="soft">${since}</span>`;
+  $("fit-tabs").innerHTML = FIT_RANGES.map(([k]) => `<button type="button" class="pill${k === S.fit.range ? " on" : ""}" data-r="${k}" aria-pressed="${k === S.fit.range}">${k}</button>`).join("")
+    + `<span class="fit-sep"></span>`
+    + [["fatigue", "Fatigue"], ["form", "Form"]].map(([k, t]) => `<button type="button" class="pill tog${S.fit[k] ? " on" : ""}" data-t="${k}" aria-pressed="${S.fit[k]}">${t}</button>`).join("");
+  $("fit-tabs").onclick = e => {
+    const b = e.target.closest("button"); if (!b) return;
+    if (b.dataset.r) S.fit.range = b.dataset.r; else S.fit[b.dataset.t] = !S.fit[b.dataset.t];
+    drawFitness(host);
+  };
+
+  host.innerHTML = "";
+  const W = Math.max(300, Math.round(host.clientWidth || 1000)), H = 230, formH = S.fit.form ? 70 : 0;
+  const padL = 34, padR = 44, padT = 18, padB = 28, ih = H - padT - padB, iw = W - padL - padR;
+  const top = Math.max(10, ...days.map(p => Math.max(p.F, S.fit.fatigue ? p.A : 0)));
+  const step = top > 80 ? 20 : 10, yMax = Math.ceil(top * 1.1 / step) * step;
+  const x = i => padL + (days.length === 1 ? iw : i / (days.length - 1) * iw);
+  const y = v => padT + ih - v / yMax * ih;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H + formH}`, width: W, height: H + formH, role: "img", "aria-label": "Fitness over time from Strava Relative Effort" }, host);
+  const defs = el("defs", {}, svg);
+  const g = el("linearGradient", { id: "fitfill", x1: 0, y1: 0, x2: 0, y2: 1 }, defs);
+  el("stop", { offset: 0, style: "stop-color:var(--accent)", "stop-opacity": .38 }, g);
+  el("stop", { offset: 1, style: "stop-color:var(--accent)", "stop-opacity": 0 }, g);
+  const mono = { style: "fill:var(--ink-3)", "font-size": 11, "font-family": "IBM Plex Mono, monospace" };
+  for (let t = 0; t <= yMax; t += step) {
+    el("line", { x1: padL, x2: W - padR, y1: y(t), y2: y(t), style: "stroke:color-mix(in srgb, var(--fg) 7%, transparent)" }, svg);
+    el("text", { x: padL - 8, y: y(t) + 4, "text-anchor": "end", ...mono }, svg).textContent = t;
+  }
+  const path = key => days.map((p, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(p[key]).toFixed(1)}`).join("");
+  el("path", { d: `${path("F")}L${x(days.length - 1)},${y(0)}L${x(0)},${y(0)}Z`, fill: "url(#fitfill)" }, svg);
+  if (S.fit.fatigue) el("path", { d: path("A"), fill: "none", "stroke-width": 1.5, "stroke-dasharray": "4 4", style: "stroke:var(--warm)" }, svg);
+  el("path", { d: path("F"), fill: "none", "stroke-width": 2.2, "stroke-linejoin": "round", style: "stroke:var(--accent)" }, svg);
+  if (n && n <= 30) days.forEach((p, i) => { if (p.L > 0) el("circle", { cx: x(i), cy: y(p.F), r: Math.min(9, 2.5 + Math.sqrt(p.L) * .55), "stroke-width": 1.5, style: "fill:var(--ground);stroke:var(--accent)" }, svg); });
+  // x labels: about six, evenly spaced
+  const ticks = Math.min(W < 520 ? 3 : 6, days.length);
+  for (let k = 0; k < ticks; k++) {
+    const i = Math.round(k / (ticks - 1 || 1) * (days.length - 1));
+    const long = days.length > 400;
+    el("text", { x: x(i), y: H - 6, "text-anchor": k === 0 ? "start" : k === ticks - 1 ? "end" : "middle", ...mono }, svg)
+      .textContent = i === days.length - 1 && days[i].d === TODAY ? "Today" : fmt(days[i].d, long ? { month: "short", year: "2-digit" } : { day: "numeric", month: "short" });
+  }
+  // today's value, Strava-style
+  const lx = x(days.length - 1), ly = y(last.F);
+  el("circle", { cx: lx, cy: ly, r: 4, style: "fill:var(--accent)" }, svg);
+  const tag = el("g", {}, svg);
+  el("rect", { x: lx - 18, y: ly - 30, width: 36, height: 20, rx: 6, style: "fill:var(--accent)" }, tag);
+  el("text", { x: lx, y: ly - 16, "text-anchor": "middle", "font-size": 12, "font-weight": 600, "font-family": "Urbanist, sans-serif", style: "fill:var(--ground)" }, tag).textContent = Math.round(last.F);
+  // form strip: fitness minus fatigue around a zero line
+  if (S.fit.form) {
+    const fTop = H + 6, fh = formH - 14, fMax = Math.max(5, ...days.map(p => Math.abs(p.form)));
+    const fy = v => fTop + fh / 2 - v / fMax * (fh / 2);
+    el("line", { x1: padL, x2: W - padR, y1: fy(0), y2: fy(0), style: "stroke:color-mix(in srgb, var(--fg) 18%, transparent)" }, svg);
+    el("text", { x: padL - 8, y: fy(0) + 4, "text-anchor": "end", ...mono }, svg).textContent = "form";
+    el("path", { d: days.map((p, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${fy(p.form).toFixed(1)}`).join(""), fill: "none", "stroke-width": 1.5, style: "stroke:var(--ink-2)" }, svg);
+  }
+  // hover / touch readout
+  const guide = el("line", { y1: padT, y2: H - padB, "stroke-width": 1, style: "stroke:var(--accent);opacity:0" }, svg);
+  const hit = el("rect", { x: padL, y: 0, width: iw, height: H + formH, fill: "transparent" }, svg);
+  const read = e => {
+    const r = svg.getBoundingClientRect(), px = (e.clientX - r.left) * (W / r.width);
+    const i = Math.max(0, Math.min(days.length - 1, Math.round((px - padL) / iw * (days.length - 1))));
+    const p = days[i];
+    guide.setAttribute("x1", x(i)); guide.setAttribute("x2", x(i)); guide.style.opacity = .6;
+    showTip(`<div class="h">${fmt(p.d, { weekday: "short", day: "numeric", month: "short", year: "numeric" })}</div>
+      <div class="r"><span>Fitness</span><b class="num">${Math.round(p.F)}</b></div>
+      <div class="r"><span>Fatigue</span><b class="num">${Math.round(p.A)}</b></div>
+      <div class="r"><span>Form</span><b class="num">${Math.round(p.form)}</b></div>
+      <div class="r"><span>Relative Effort</span><b class="num">${p.L}</b></div>`, e.clientX, e.clientY);
+  };
+  hit.addEventListener("pointermove", read);
+  hit.addEventListener("pointerdown", read);
+  hit.addEventListener("pointerleave", () => { hideTip(); guide.style.opacity = 0; });
+  S.fitCW = host.clientWidth;
+}
 
 // ---------- palette: one per week, from the recipe book ----------
 // Each week (by its Monday) deterministically picks a recipe and a hue, so a week keeps its
@@ -1263,6 +1399,7 @@ function render() {
   if (S.after) S.after(view);
   drawYears(view);
   drawChart(view.querySelector("#chart"));
+  drawFitness(view.querySelector("#fit"));
   if (route !== "now") window.scrollTo({ top: 0 });
 }
 

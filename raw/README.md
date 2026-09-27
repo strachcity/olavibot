@@ -13,7 +13,8 @@ Immutable sources. Add files; never edit or delete them.
 | `research/references.md` | Source-quality accounting for the two research passes — read first |
 | `research/norwegian-method/` | Marius Bakken's articles + the Norwegian Singles guide, see its own README |
 
-Strava is live via MCP and doesn't need exporting. The compiled multi-year view lives in
+Strava is live via MCP and doesn't need exporting. The one exception is Relative Effort history,
+`history/strava-effort-2021-2026.csv` (see Status). The compiled multi-year view lives in
 `wiki/strava-history.md` — derived, regenerated, never hand-edited.
 
 ## Status
@@ -48,3 +49,9 @@ gating had conflated two different pain thresholds) — see the `ingest` entry i
 
 The compiled, tagged versions of the research live in `wiki/references/`. When they
 disagree with the raw reports, the raw reports win.
+
+**Landed 27 Sep 2026:** `history/strava-effort-2021-2026.csv` — Strava's Relative Effort per
+activity, 22 Aug 2021 → 26 Sep 2026 (959 activities: runs, gym, and the odd hike, swim, ride or
+ski day). Activities recorded without heart rate have no Relative Effort and are not in the file,
+including all runs before 22 Aug 2021 and the three Macyard backyards. New activities carry the
+number in their `wiki/log.md` entry (`relative_effort`) instead.

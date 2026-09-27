@@ -146,6 +146,8 @@ duration_min: 62
 
 `run` adds `distance_km`, `avg_pace` (m:ss), and `run_type` (easy | long | threshold | speed |
 strides | race). `gym` adds `gym` (full | flat), `session` (A | B) and `reactive_level` (0-5).
+Both add `relative_effort`: Strava's Relative Effort for the activity, copied as-is (for a split
+session, the sum of its Strava activities). Omit it when Strava has none (no heart rate).
 
 Omit a field you genuinely don't have rather than guessing it. Block reviews count these
 blocks rather than estimating from the prose.

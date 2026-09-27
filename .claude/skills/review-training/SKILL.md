@@ -54,6 +54,7 @@ duration_min: 62
 gym: full
 session: A
 reactive_level: 2
+relative_effort: 12   # Strava's number, as-is; omit if the activity has none
 ```
 - Planned: <one line>
 - Done: Warm-up: <drills>; <anything loading the ankle: exercise × sets × reps>. <exercises × sets × reps @ load>
@@ -62,9 +63,12 @@ reactive_level: 2
 - Review: <2–4 lines>
 ````
 
-**Run:** same shape, header type `run`, and swap the last three yaml fields for `distance_km`,
-`avg_pace` (m:ss) and `run_type` (easy | long | threshold | speed | strides | race). The Done
-line carries distance / time / pace / HR.
+**Run:** same shape, header type `run`, and swap `gym`, `session` and `reactive_level` for
+`distance_km`, `avg_pace` (m:ss) and `run_type` (easy | long | threshold | speed | strides |
+race); keep `relative_effort`. The Done line carries distance / time / pace / HR.
+
+**`relative_effort`** comes straight from the Strava activity (`list_activities` returns it) —
+no asking, no estimating. It feeds the Fitness line on the dashboard.
 
 - **Planned line keeps the plan's structure.** One line, but if the plan staged it (ramp-up
   then working sets, or similar), keep the stages distinct rather than collapsing them.
