@@ -342,7 +342,15 @@ keep the calf work. The calf work is the treatment, not the cause.
 ## 8. Warm-up and cool-down
 
 **Before a run:** 5 minutes easy, then drills (leg swings, A-skips, high knees) before quality.
-**Before gym:** 8–10 minutes dynamic hip and ankle mobility, activation, ramp sets.
+**Before gym:** 8–10 minutes dynamic hip and ankle mobility, activation, then ramp sets on
+each anchor lift. Load up, reps down; finish near the working load and don't pile up reps on
+the way. Default for a working load W: bar × 8–10 → ~50% W × 5 → ~70% W × 3 → ~85–90% W × 1–2
+`[stated, 2026-09-27]`. Ramp sets are preparation, not volume. The last one also sets the day's
+working load (RPE check).
+
+*Evidence note (ramp sets): specific warm-ups raise 1RM and bar speed **[I]**. Finishing near
+the working load is the best-supported structure **[I]**, though results are mixed. The exact
+percentages are practitioner convention **[H]**. See `references/evidence-gym-pool.md`.*
 **After everything:** 5–10 minutes. Hip flexors, calves (bent and straight knee), hamstrings,
 glutes, adductors.
 

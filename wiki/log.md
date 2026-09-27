@@ -649,3 +649,9 @@ Jack's 22 Sep squat ramp (bar×10, 50×8, 65×5, 75×3 → 3×5 @80kg) is front-
 the 50×8 set does more work than the evidence needs `[inferred]`. Proposed to Jack: change
 `training-model.md` §8 to "ramp: load up, reps down, last set ~85–90% of working load for
 1–2 reps". Not applied; it needs his agreement.
+
+## [2026-09-27] model | Ramp sets: load up, reps down
+Agreed with Jack `[stated, 2026-09-27]`, following research pass 3. `training-model.md` §8
+now sets the default ramp for anchor lifts: bar × 8–10 → ~50% × 5 → ~70% × 3 → ~85–90% × 1–2
+of the working load. Evidence **[I]** for the shape and **[H]** for the exact percentages. It
+replaces rep-heavy ramps like 22 Sep's 50×8. Session plans use it from the next session.
