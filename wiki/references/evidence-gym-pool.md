@@ -96,3 +96,18 @@ sources below are the ones the model leans on heaviest, so verify those first if
 - Neuromuscular warm-ups reduce lower-limb injury. **W**
 - Routine static stretching doesn't reduce injury. Holds >60s before a session blunt
   strength, power and economy. Put stretching in the cool-down. **W**
+
+### Ramp (warm-up) sets before lifting
+From `raw/research/03-warm-up-sets.md`, research pass 3 (27 Sep 2026). Web-search abstracts
+only; no full texts were read, so treat grades as provisional.
+- Warming up improves performance in general: 79% of criteria across 32 studies. **W**
+  (Fradkin 2010, all activities, not lifting-specific)
+- Specific warm-ups (ramp sets) raise squat/leg-press 1RM and bar speed. **I** (2025 scoping
+  review, 19 small studies)
+- Ramp structure: finish with a low-rep set near the working load (~80% of it) rather than
+  high-rep light sets. **I**, and mixed: two small trials (n=40, n=15) favour it; a 2025 trial
+  found set number and load made no appreciable difference; Ribeiro 2014 found no effect on
+  reps to failure.
+- Common conventions (load up, reps down; last ramp ~85–90% × 1–2) fit that signal but are
+  practitioner heuristics. **H**
+- Ramp sets as injury prevention in lifting: no direct evidence, mechanistic only. **H**
