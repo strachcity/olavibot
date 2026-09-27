@@ -55,4 +55,5 @@ Kept so they don't come back.
 | Florence PB was 2025 | November 2024 `[data]` | Sep 2026 |
 | He's never done a classic marathon block | Florence was one, and produced the PB `[data]` | Sep 2026. Origin traced: ChatGPT, 19 Jul 2026 |
 | Starting from zero after Sydney | ~19km/wk + 1 gym session at migration `[data]` | Sep 2026 |
+| Copenhagen plank never trained | Done sparsely on a Swiss ball; the bench version is new `[stated, 2026-09-27]` | Sep 2026 |
 | Grey-zone running *capped volume* in 2025–26 | It replaced **quality**, not volume. Volume fell only 37.9 → 30.6 km/wk (19%) while hard running fell 43% → 9% `[data]` | Sep 2026 |

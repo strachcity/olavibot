@@ -606,3 +606,23 @@ reactive_level: 1
   - Running to/from the gym (2.5km each way) as "free mileage" `[stated, 2026-09-27]`. Answered: it isn't free for the Achilles — ~10km/week across two gym days would add about half to current running. Proposed to count commute runs as planned easy mileage replacing an easy run, not added on top. Needs a model/planning decision from Jack.
   - Also explained in session: RPE (as reps in reserve), and why rest between isometric holds can drop to 30s at this load.
 - Also noted: weighed 77.7kg at the gym, clothed and after breakfast `[stated, 2026-09-27]` — not a clean reading; not usable for the seated calf raise ≥1×BW gate until taken under standard conditions.
+
+## [2026-09-27] review | Achilles after the 26 Sep long run; Copenhagen history corrected
+- `achilles_next_am` on the 26 Sep run filled as 1. Jack: better this morning, worse last night
+  `[stated, 2026-09-27]`. The evening after the long run plus Session B was the sensitive
+  point, and it settled by morning. That's within the rules: settled by next morning, and five
+  straight mornings at 1 (23–27 Sep). No evening score was given.
+- Corrected at Jack's confirmation: Copenhagen planks were not "never trained". He has done
+  them sparsely on a Swiss ball, and the bench version is new `[stated, 2026-09-27]`. Fixed in
+  the Foundations block and `training-model.md` §6. The old claim is now under Refuted in
+  `observations.md`.
+
+## [2026-09-27] model | Getting to the gym is free choice; commute runs logged, not matched
+Jack wants to cycle, run or use the flat gym without it affecting the week's plan `[stated,
+2026-09-27]`. He didn't want commute runs to replace a planned run. Agreed handling: a run
+leg to or from the gym logs as its own `run` entry titled `Commute — …`. The dashboard leaves
+it out of session matching, so it's never "extra" and never stands in for a planned session.
+Its km count toward the week. Claude's view, on record for Jack to weigh: at ~20 km/wk,
+running both legs on two gym days adds up to ~10 km, about +50%. Treat it as real load: cycle
+in any week a morning reaches 2+. `review-training` updated and its zip rebuilt; dashboard
+matching updated.

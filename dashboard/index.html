@@ -604,7 +604,8 @@ function matchWeek(b, n) {
     const date = addDays(s, i), plan = sch?.days[dow] ? planShort(sch.days[dow]) : null, kind = kindOf(plan);
     return { date, dow, plan, kind, key: planKey(plan, kind), match: null, how: null };
   }).filter(p => p.kind === "run" || p.kind === "gym");
-  const done = S.log.filter(x => (x.type === "run" || x.type === "gym") && x.date >= s && x.date <= e);
+  // Commute legs to or from the gym are free choice: their km count, but they never match or miss a session.
+  const done = S.log.filter(x => (x.type === "run" || x.type === "gym") && x.date >= s && x.date <= e && !/commute/i.test(x.title));
   const free = new Set(done);
   const pass = (ok, how) => items.forEach(p => {
     if (p.match) return;
