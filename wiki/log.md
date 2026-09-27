@@ -583,3 +583,26 @@ Strava's number copied as-is, omitted when an activity has none. It lets the das
 Fitness line (Strava's method: daily Relative Effort, 42-day exponential average) with fatigue
 (7-day) and form (fitness minus fatigue) alongside. `CLAUDE.md` log format and `review-training`
 updated; skill zip rebuilt.
+
+## [2026-09-27] gym | Session B — Foundations wk1 (full gym)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 92
+gym: full
+session: B
+reactive_level: 1
+```
+- Planned: Warm-up (mobility, tibialis raises 1×15, short-foot/balance/heel+toe walks 3×20s each, no pogos). Reactive L1 isometric seated calf holds 5×30s. Deadlift ramp (bar×10 → 60×5 → 80×3) then working sets 3×5 @~90kg RPE7, straps on (85kg if heavy after Saturday's long run). Superset: heavy slow calf raise bent + straight knee 3×8 each at bodyweight only (calf dose held for the week's ankle sensitivity) + bench or DB press 3×8 ~50kg RPE7. Superset: Copenhagen plank short lever 3×15–20s/side + barbell row 3×8 ~45kg. Cool-down stretches.
+- Done: Warm-up: mobility round; tibialis raises 1×15; short-foot holds, single-leg balance, heel walks, toe walks 3×20s each; no pogos. Cycled 2.5km to the gym beforehand. Isometric seated calf hold: 1 calibration hold with 25kg dumbbell (easy, "felt like nothing"), then 5×30s @25kg on the seated calf raise machine, 30s rest (shortened from 60s). Deadlift ramp as planned, working 3×5 @90kg RPE7, no straps (none available) — reps done slightly faster and more explosive, grip held on all sets. Heavy slow calf raise straight-knee and bent-knee 3×8 each @bodyweight. Flat DB press (bench busy) 2×8 @20kg, 1×8 @22.5kg RPE7. Copenhagen plank short lever on bench, 3 holds/side as planned. Barbell row 3×8 @45kg. Cycled 2.5km home; cool-down stretches done at home. `[stated]`
+  Strava: 91:55, relative effort 11, no exercise sets recorded; the cycling isn't a separate activity `[data, Strava activity 20350520160]`
+- Beyond plan: none. Bench → DB press is a listed option in the block, and no straps is an equipment gap, not a change.
+- Capacity: not reported.
+- Review: Everything done as planned, calf load held at the starting dose as the week required. Deadlift 3×5 @90kg without straps, grip held: moving faster cut the time the bar hangs in the hands. That's one data point on the grip-limiter finding, and it doesn't yet say whether grip limits a genuinely heavy set. Isometric load now calibrated: 25kg on the machine was "good work", while 25kg on dumbbells on the knees was nothing, so start from the machine number next time and don't compare the two. Level 1 counts as clean only if pain during the holds stays ≤3/10. None was reported, so ask next session before progressing.
+- Questions raised (Jack wants these to build the model):
+  - Box-drop landings without rebound — do they fit? Answered: they're depth drops, Level 5 of the reactive progression. The landing, not the jump, is the high Achilles load, so removing the rebound doesn't make them lighter on the tendon. Landing drills are valid for knee/ACL prevention but aim at the tendon the reactive ladder protects. No change to the model.
+  - Copenhagen plank on a bench or a Swiss ball? Answered: bench. On a ball the effort splits into balance and the adductor load can't be controlled or compared. Jack has done Copenhagen planks on a ball before `[stated, 2026-09-27]`, so the block's "never trained" is wrong: the bench version is new, the exercise isn't.
+  - Running to/from the gym (2.5km each way) as "free mileage" `[stated, 2026-09-27]`. Answered: it isn't free for the Achilles — ~10km/week across two gym days would add about half to current running. Proposed to count commute runs as planned easy mileage replacing an easy run, not added on top. Needs a model/planning decision from Jack.
+  - Also explained in session: RPE (as reps in reserve), and why rest between isometric holds can drop to 30s at this load.
+- Also noted: weighed 77.7kg at the gym, clothed and after breakfast `[stated, 2026-09-27]` — not a clean reading; not usable for the seated calf raise ≥1×BW gate until taken under standard conditions.
