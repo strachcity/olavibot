@@ -591,7 +591,7 @@ updated; skill zip rebuilt.
 ## [2026-09-27] gym | Session B — Foundations wk1 (full gym)
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 92
 gym: full
