@@ -655,3 +655,25 @@ Agreed with Jack `[stated, 2026-09-27]`, following research pass 3. `training-mo
 now sets the default ramp for anchor lifts: bar × 8–10 → ~50% × 5 → ~70% × 3 → ~85–90% × 1–2
 of the working load. Evidence **[I]** for the shape and **[H]** for the exact percentages. It
 replaces rep-heavy ramps like 22 Sep's 50×8. Session plans use it from the next session.
+
+## [2026-09-28] run | Easy + strides — Foundations wk2
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 39
+distance_km: 6.72
+avg_pace: 5:44
+run_type: strides
+relative_effort: 21
+```
+- Planned: Easy 5km @ 5:30–6:00/km + strides 4–6×20s, relaxed-fast, full recovery.
+- Done: Easy 5km, then 4×20s strides with 1 min recoveries, then a slow cool-down jog home
+  `[stated]`. As one activity: 6.72km, 38:32 moving, avg pace 5:44/km, avg HR 139 (max 169
+  during the strides), top speed 6.46 m/s (~2:35/km) `[data, Strava activity 20367675209]`
+- Beyond plan: none. The extra ~1.7km is the cool-down jog, and the model asks for one
+  (rule 8).
+- Review: Easy part genuinely easy: avg HR 139 is ~73% of 190, and the loops ran at 134–138.
+  Four strides, the bottom of the 4–6 range, a sensible first time back. HR peaked at 169,
+  normal for strides, and dropped back between them. First strides of the block, so
+  tomorrow's morning score counts: stride loading is new for the Achilles.
