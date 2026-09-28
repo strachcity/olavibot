@@ -1,3 +1,5 @@
+<!doctype html>
+<html lang="en-GB">
 <meta charset="utf-8">
 <script>document.documentElement.classList.add("instant")</script>
 <title>Olavi Dashboard</title>
@@ -136,11 +138,11 @@
   .ring .c strong { font-size: 30px; font-weight: 300; letter-spacing: -.02em; }
   .ring .c span { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; color: var(--ink-3); text-transform: uppercase; }
 
-  .days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+  .days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
   .day { position: relative; border-radius: 16px; padding: 12px 10px 12px; min-height: 124px; display: flex; flex-direction: column; gap: 6px; border: 1px solid color-mix(in srgb, var(--fg) 8%, transparent); background: color-mix(in srgb, var(--sink) 18%, transparent); }
   .day .dn { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; color: var(--ink-3); text-transform: uppercase; }
   .day .dd { font-size: 22px; font-weight: 300; line-height: 1; }
-  .day .what { font-size: 13px; color: var(--ink-2); line-height: 1.25; margin-top: auto; }
+  .day .what { font-size: 13px; color: var(--ink-2); line-height: 1.25; margin-top: auto; overflow-wrap: break-word; hyphens: auto; }
   .day .st { font-family: var(--mono); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
   .day.done { background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 22%, transparent), color-mix(in srgb, var(--accent) 4%, transparent)); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
   .day.done .st { color: var(--accent); }
@@ -265,8 +267,11 @@
   }
   @media (max-width: 640px) {
     .wrap { padding-inline: 16px; }
-    .days { grid-template-columns: repeat(4, 1fr); }
-    .day { min-height: 104px; }
+    .week { padding: 22px 18px 20px; }
+    .days { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+    .day { min-height: 104px; padding: 10px 8px; }
+    .day .what { font-size: 12px; }
+    .day .dn, .day .st { font-size: 9.5px; letter-spacing: .04em; }
     .sess-row { grid-template-columns: 1fr; gap: 2px; }
     .watch { grid-template-columns: repeat(2, 1fr); }
     .bests { grid-template-columns: repeat(2, 1fr); }
