@@ -659,7 +659,7 @@ replaces rep-heavy ramps like 22 Sep's 50×8. Session plans use it from the next
 ## [2026-09-28] run | Easy + strides — Foundations wk2
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 39
 distance_km: 6.72
@@ -677,3 +677,19 @@ relative_effort: 21
   Four strides, the bottom of the 4–6 range, a sensible first time back. HR peaked at 169,
   normal for strides, and dropped back between them. First strides of the block, so
   tomorrow's morning score counts: stride loading is new for the Achilles.
+
+## [2026-09-29] rest | Rest day (travel to Swansea) — Foundations wk2
+```yaml
+planned: yes
+achilles_next_am: 0
+beyond_plan: none
+```
+- Planned: Rest (travel to Swansea).
+- Done: Rest.
+- Mornings: 0/10 Achilles on both 29 and 30 Sep, the two mornings after the first strides of
+  the block. Calves stiff both mornings, no pain `[stated, 2026-09-30]`.
+- Review: The Achilles took the strides well: 0, 0, after five mornings at 1. The calf
+  stiffness is muscle, not tendon, most likely from new strides on top of Sunday's calf work
+  plus travel `[inferred]`. Jack skipped the optional Wednesday 6km: tired, calves stiff. The
+  plan already moves it to Friday. Friday runs only if the calves feel normal, and the 10km
+  long run takes priority over it.
