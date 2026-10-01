@@ -707,3 +707,25 @@ beyond_plan: none
 - Review: Third straight 0. Calves recovered in 48 hours. Rest of the week: easy 6km tonight,
   Session A Friday, long run Saturday, Session B Sunday. Work tiredness is real load too, so
   keep tonight genuinely easy.
+
+## [2026-10-01] run | Easy — Foundations wk2
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 38
+distance_km: 6.56
+avg_pace: 5:45
+run_type: easy
+relative_effort: 26
+```
+- Planned: Easy 6km @ 5:30–6:00/km. Wednesday's optional run, done Thursday. Asked to keep it at
+  the slow end (5:50–6:00), no strides, given a tiring work week.
+- Done: 6.56km, 37:44 moving, avg pace 5:45/km, avg HR 141 (max 164), 20m elevation, Victoria
+  Park `[data, Strava activity 20410120226]`
+- Beyond plan: none
+- Review: Easy, slightly quicker than the 5:50–6:00 asked for but inside the band. Most loops
+  sat at HR 127–139. One stretch reads a flat 160–163 at unchanged pace and power (~195W): the
+  same flat-line pattern as the 29 Jan 2025 5k, so likely a sensor artefact, and it pulls the
+  141 average up `[inferred]`. Week so far: 2 of 5 planned sessions (both easy runs done).
+  Session A Friday, long run Saturday, Session B Sunday.
