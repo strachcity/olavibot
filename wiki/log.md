@@ -693,3 +693,17 @@ beyond_plan: none
   plus travel `[inferred]`. Jack skipped the optional Wednesday 6km: tired, calves stiff. The
   plan already moves it to Friday. Friday runs only if the calves feel normal, and the 10km
   long run takes priority over it.
+
+## [2026-09-30] rest | Rest day (optional run skipped) — Foundations wk2
+```yaml
+planned: yes
+achilles_next_am: 0
+beyond_plan: none
+```
+- Planned: Easy 6km, optional, morning in Swansea; the plan moves it later in the week if skipped.
+- Done: Rest. Run skipped: tired, calves stiff `[stated, 2026-09-30]`.
+- Morning (1 Oct): 0/10, feels good again, calf stiffness gone. Tired from a busy work week
+  `[stated, 2026-10-01]`.
+- Review: Third straight 0. Calves recovered in 48 hours. Rest of the week: easy 6km tonight,
+  Session A Friday, long run Saturday, Session B Sunday. Work tiredness is real load too, so
+  keep tonight genuinely easy.
