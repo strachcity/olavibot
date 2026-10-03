@@ -729,3 +729,46 @@ relative_effort: 26
   same flat-line pattern as the 29 Jan 2025 5k, so likely a sensor artefact, and it pulls the
   141 average up `[inferred]`. Week so far: 2 of 5 planned sessions (both easy runs done).
   Session A Friday, long run Saturday, Session B Sunday.
+
+## [2026-10-02] gym | Session A — Foundations wk2 (flat gym, stopped early)
+```yaml
+planned: partial
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 64
+gym: flat
+session: A
+relative_effort: 9
+```
+- Planned: Warm-up (mobility round; tibialis raises 1×15; short-foot holds, single-leg balance, heel/toe walks 3×20s each). Front squat ramp bar×10 → 30×5 → 45×3 → 55×1–2, then working 3×5 @~60kg RPE7, ceiling 65kg. Superset: Bulgarian split squat 3×8/leg @14kg + Pallof press 3×10/side @9.1kg. Superset: weighted march 3×30s/leg @16kg (no bands at flat gym) + half-kneeling single-arm cable pulldown 3×8/side (no lat pulldown at flat gym). Seated DB shoulder press 3×10 @14kg. Cool-down.
+- Done: Warm-up as planned. Front squat ramp as planned, working 3×5 @60kg. Bulgarian split squat 3×8/leg, supersetted with cable woodchop 3×10/side @11.3kg on the rope (swapped in for Pallof press). Weighted march 3×30s/leg @16kg, supersetted with DB bench 3×10 @16kg (misread the plan — done in place of the cable pulldown). Pulldown, shoulder press and cool-down not done: stopped early — "tired because of the week and can't be bothered" `[stated]`.
+  Strava: 63:36, relative effort 9, no exercise sets `[data, Strava activity 20423580958]`
+- Beyond plan: none. Woodchop for Pallof and DB bench for pulldown are swaps, not added volume. Net effect: no upper pull this session, one push exercise instead of two.
+- Capacity: not reported.
+- Review: The front squat is the first data point for the block's squat-variant comparison. 60kg at RPE7, against 80kg back squat last week, so the expected ~80% ratio held. The flat gym was chosen for the lighter loads front squat needs `[stated]`. The woodchop swap changes what's trained: Pallof press trains resisting rotation, which is the trunk's main job while running; woodchops train producing it. Fine once, but Pallof stays the default. The missed pull continues a pattern — upper body was already flagged as too thin, and today lost its only pull. Stopping early from a tiring week is adherence data for the block review, not a failure. The session ran the day before the 10km long run (Jack's preferred order: gym Fri → long Sat → gym Sun).
+- Questions raised (to build the model):
+  - Lat pulldown at the flat gym with only a tricep-style cable? Answered: half-kneeling single-arm cable pulldown on a D-handle or rope is the best substitute; a kneeling pulldown if a straight bar turns up; single-arm DB row as the fallback. Worth adding to the flat-gym swaps.
+  - Woodchop vs Pallof press: answered as above. They aren't interchangeable, because anti-rotation is the point of the slot.
+
+## [2026-10-03] run | Long — Foundations wk2
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 57
+distance_km: 10.01
+avg_pace: 5:39
+run_type: long
+relative_effort: 56
+```
+- Planned: Long 10km @ ~5:50/km, HR low 140s; 8km if any morning was above 1.
+- Done: 10.01km, 56:34 moving (63:08 elapsed), avg pace 5:39/km, avg HR 145 (max 155), 79m
+  elevation, Regent's Canal. "Ran as slow as I could… trundling along enjoying myself"
+  `[stated]` `[data, Strava activity 20431447548]`
+- Beyond plan: none
+- Review: First 10km of the block, on the ceiling. A little quicker and higher than asked
+  (5:39 vs ~5:50, HR 145 vs low 140s), but inside the easy band and the 75–80% HR guide (~76%
+  of 190), and it felt easy. HR was very steady, 142–150 throughout with no upward drift
+  across the hour, which is a good aerobic sign. His natural easy now looks like ~5:40/km
+  at 140–145 `[inferred]`: not a breach, so the "go slower" note can rest unless HR starts
+  drifting. Week 2: four of five planned sessions done, Session B Sunday.
