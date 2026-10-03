@@ -711,7 +711,7 @@ beyond_plan: none
 ## [2026-10-01] run | Easy — Foundations wk2
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 38
 distance_km: 6.56
@@ -733,7 +733,7 @@ relative_effort: 26
 ## [2026-10-02] gym | Session A — Foundations wk2 (flat gym, stopped early)
 ```yaml
 planned: partial
-achilles_next_am: pending
+achilles_next_am: 1
 beyond_plan: none
 duration_min: 64
 gym: flat
@@ -753,7 +753,7 @@ relative_effort: 9
 ## [2026-10-03] run | Long — Foundations wk2
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 1
 beyond_plan: none
 duration_min: 57
 distance_km: 10.01
