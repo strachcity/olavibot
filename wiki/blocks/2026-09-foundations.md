@@ -36,7 +36,7 @@ are targets, ±1km either way — the ceiling is what matters, not hitting the n
 | 3 | Easy 1 | 5km | 5:30–6:00/km | + strides |
 | 3 | Easy 2 | 5km | 5:30–6:00/km | the new, 4th run |
 | 3 | Easy 3 | 6km | 5:30–6:00/km | + strides |
-| 3 | Long | 8km | 5:30–6:00/km or slower | |
+| 3 | Long | 10km | 5:30–6:00/km or slower | held at 10km, not cut to 8 (changed 4 Oct, Jack's call) |
 | 4 | Easy 1 | 6km | 5:30–6:00/km | + strides |
 | 4 | Easy 2 | 5km | 5:30–6:00/km | |
 | 4 | Easy 3 | 6km | 5:30–6:00/km | + strides |
@@ -133,7 +133,8 @@ end of the week, calf load progresses in week 3 and running holds. If a morning 
 rises two days running: long run stays 8km, drop the strides, keep the calf work.
 
 **Week 3 (5–11 Oct).** Constraint: busy Wednesday evening. The fourth run starts this week,
-and Reactive Level 2 opens. The long run holds at 10km rather than dropping to the block's
+and Reactive Level 2 opens: pogos 2×10 in the warm-up and standing calf raises in Session B,
+which also has conventional deadlift and Copenhagen plank (odd week). The long run holds at 10km rather than dropping to the block's
 original 8km: 10km matches the recent longest, so it's no spike `[stated, 2026-10-04]`.
 
 | Day | Session |
@@ -143,8 +144,8 @@ original 8km: 10km matches the recent longest, so it's no spike `[stated, 2026-1
 | Wed 7 | Easy — 5km @ 5:30–6:00/km, any time that suits (busy evening; else Friday) |
 | Thu 8 | Easy — 6km @ 5:30–6:00/km + strides 4–6×20s |
 | Fri 9 | Rest, or Wednesday's 5km if it didn't happen |
-| Sat 10 | Long — 10km, natural easy pace (~5:40/km), HR flat |
-| Sun 11 | Gym — Session B (conventional deadlift, Copenhagen plank; Reactive Level 2: pogos 2×10 in warm-up, standing calf raises) |
+| Sat 10 | Long — 10km @ natural easy (~5:40/km), HR flat |
+| Sun 11 | Gym — Session B (Reactive Level 2) |
 
 Level 2 opens only if the 5 Oct morning is ≤1. Achilles rules as always: a 2+ or two rising
 mornings → no pogos or strides, long run holds at 8km, calf work stays.
