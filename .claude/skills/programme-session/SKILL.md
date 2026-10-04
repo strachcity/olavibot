@@ -39,7 +39,6 @@ Run these checks. If one fails, change the session and say why in a line.
   calf work, hold volume.
 - **Spacing:** heavy legs ≥6h from hard running, and reactive/heavy calf work 48–72h from
   the last hard run.
-- **One variable:** if volume went up this fortnight, intensity doesn't.
 - **Variation:** use the block's chosen exercises. Don't import exercises from outside the
   block mid-block, and don't repeat the exact same session twice in a row if the block
   allows alternatives.

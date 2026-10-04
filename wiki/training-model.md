@@ -104,7 +104,11 @@ These override session-level optimisation.
    specific variant week to week while establishing what works (§6); everything else rotates
    between blocks, strategically — for a reason, never at random.
 4. **Every session has a warm-up and a cool-down.** 5–10 minutes each, gym and run.
-5. **Progress one variable at a time.** Volume OR intensity, never both in the same fortnight.
+5. *Removed 2026-10-04 at Jack's call* `[stated]`: "progress one variable at a time — volume or
+   intensity, never both in the same fortnight". It had no direct evidence. It came from the
+   research report's synthesis of "flares when volume and intensity rise together", a premise
+   since rewritten in `observations.md`: the July 2026 flare had no intensity component. The
+   evidence-backed load risk is single-session spikes **[W]**, `references/evidence-achilles-load.md`.
 6. **Easy must be genuinely easy.** Conversational, RPE ≤4, roughly 5:30–6:00/km or slower.
 7. **Morning first-steps stiffness is the governing Achilles signal.**
 8. **Feeling good is not a reason to do more.** See §3.
