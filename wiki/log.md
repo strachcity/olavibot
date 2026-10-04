@@ -817,3 +817,19 @@ sessions (A Tuesday, B Sunday). Reactive Level 2 opens Sunday if the 5 Oct morni
 Two changes from the block's original week 3, both Jack's call after the one-variable rule
 was removed: the long run holds at 10km instead of dropping to 8km (10km is the recent
 longest, so no spike **[W]**), and calf progression is no longer held back for running.
+
+## [2026-10-04] model | Weekly plans carry their reasoning and a recency check
+Jack wants to understand the logic and evidence behind each week, not only each gym session.
+He wants it critical, so he learns as he goes and blocks aren't shaped by recency bias
+`[stated, 2026-10-04]`. `plan-training` now requires, under each week's table:
+- a `Why this week` table (decision → reason → graded source);
+- a `Weak points` list.
+
+It also requires a recency check before a week is shown: every change from the block's
+planned week must name its source, and recent conversation is tagged as such. Removed a
+leftover "progress one variable only" line from the same skill. Week 3 in the Foundations
+block now has both sections.
+
+The first critical find: week 3 puts Session B (pogos + heavy calf) the day after the long run
+and Monday's strides the day after Session B, against the 48–72h spacing guidance
+**[W/H]**. Put to Jack for a decision.

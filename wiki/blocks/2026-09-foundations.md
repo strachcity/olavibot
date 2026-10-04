@@ -150,6 +150,38 @@ original 8km: 10km matches the recent longest, so it's no spike `[stated, 2026-1
 Level 2 opens only if the 5 Oct morning is ≤1. Achilles rules as always: a 2+ or two rising
 mornings → no pogos or strides, long run holds at 8km, calf work stays.
 
+*Why this week*
+
+| Decision | Why | Source |
+|---|---|---|
+| All running easy (~5:40/km natural pace OK) | Easy volume is the biggest difference between fast and average marathoners; grey-zone running is the least productive | **[W]** `evidence-endurance-structure.md` |
+| Fourth run (3 → 4 runs, ~21 → 26km) | Build frequency towards the base week's 4–5 runs; higher chronic load protects against injury | Block plan; **[W]** `evidence-achilles-load.md` |
+| Size of the step (+24%) | No evidence sets a safe weekly %: the 10% rule and ACWR are both unsupported. This is judgement, guarded by morning scores | **[W]** that the rules don't hold; the step itself **[H]** |
+| Long run held at 10km | 10km equals the recent longest, so no single-session spike, the load factor with the best evidence | **[W]** `evidence-achilles-load.md`; Jack's call `[stated, 2026-10-04]` |
+| Strides twice | Keep speed and mechanics at very little fatigue cost | Model §5, no graded source **[H]** |
+| Reactive Level 2 | Gate met: two clean Level 1 sessions, holds pain 0/10, mornings ≤1 | Sancho 2019, n=15 feasibility, not an RCT **[W/I]** `evidence-gym-pool.md` |
+| Heavy slow calf, bent + straight knee | Tendon capacity; soleus carries most Achilles load | Beyer 2015 RCT **[W]**; soleus **[W]** `evidence-achilles-load.md` |
+| Back squat (A), conventional deadlift (B) | Odd week of the variant comparison the block is testing | Block hypothesis `[inferred]`; heavy lifting improves economy **[W]** |
+| Copenhagen plank | Best-evidenced adductor exercise | Harøy 2019 RCT in footballers **[W]**; transfer to runners **[I]** |
+| Gym and runs on separate days | Heavy legs and hard running ≥6h apart; no hard running this week anyway | **[W/I]** `evidence-achilles-load.md` |
+
+*Weak points*
+
+- **Spacing conflict.** Reactive and heavy calf work should sit 48–72h from hard running and
+  heavy calf work **[W/H]**, `evidence-gym-pool.md`. Here Session B (pogos + heavy calf) is
+  the day after the 10km long run, and Monday's strides follow Session B by one day. Week 2
+  had the same Saturday → Sunday pairing with calf work and stayed at 0–1, but pogos are new
+  load. Unresolved, put to Jack.
+- **Two choices came from the last 24h of conversation**: the one-variable rule's removal and
+  the 10km hold. Both are now checked against the evidence, but they are recent decisions, not
+  block design.
+- **The week can't measure capacity.** Baseline tests are deferred to week 6 `[stated]`, so
+  every progression so far rests on symptom scores, not on whether the calf or tendon got
+  stronger.
+- **The squat/deadlift comparison is thin.** One session per variant per fortnight gives ~3
+  data points each by week 6, and loads are RPE-capped. Expect a preference, not a verdict
+  `[inferred]`.
+
 ## What would change the plan
 - Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,
   freeze reactive level, keep calf work.

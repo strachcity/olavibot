@@ -36,8 +36,7 @@ Use the template in `wiki/blocks/README.md`. Decide, with a reason for each:
 - **Phase** (§9) and **emphasis** — one sentence.
 - **Running:** every run in the week gets its own distance and pace, not a weekly total.
   Name what differs between them (which is the long one, which carries strides, why). Use
-  the pace bands in `training-model.md` §4 (easy: 5:30–6:00/km or slower). Progress one
-  variable only.
+  the pace bands in `training-model.md` §4 (easy: 5:30–6:00/km or slower).
 - **Gym:** for Session A and B, fill every slot from the pools in §6. Pick a genuinely
   different selection from the last block for the accessories. Keep anchors. Allow one new
   lift if there's appetite. Set the Tier 2 fortnightly rotation.
@@ -72,6 +71,23 @@ weeks' tables — never replace or delete a past week, and don't edit one afterw
 what happened (that's `log.md`'s job; plan + log together show what was missed). Same
 format every week: a `**Week <n> (<dates>).** Constraint: …` line, then a `| Day | Session |`
 table with days as `Mon 21`. Commit as a `block` entry.
+
+**Every week carries its reasoning** `[stated, 2026-10-04]`. Jack wants to learn as he goes and
+to see that the plan is built on evidence, not on whatever happened last. Under each week's
+table, before it's agreed:
+
+- **Why this week** — a `| Decision | Why | Source |` table. One row per decision: each
+  element that's new, changed from last week, or held when the block planned a change. Source
+  is a reference with its grade (`[W]`/`[I]`/`[H]`, file named), `[stated]` with the date, or
+  `[inferred]`. A row with no source gets cut or marked as judgement.
+- **Weak points** — critical, not reassuring. Where the evidence is thin or extrapolated, where
+  the week departs from the block plan or from a reference's guidance (spacing, spikes, gates),
+  and what the week can't tell us. Name conflicts; don't bury them.
+
+**Recency check, before showing the week.** Decisions come from the block plan, the model and
+the evidence, read against the last 2–4 weeks of the log — not from the last session or the
+last conversation. For every change from the block's planned week, name where it came from.
+If the only source is something said or done in the last few days, say so and tag it.
 
 **Sessions move days freely** `[stated, 2026-09-24]`. That's normal, not a plan change: don't
 edit the table, don't log it, don't commit anything for it. Adherence is judged per week, by
