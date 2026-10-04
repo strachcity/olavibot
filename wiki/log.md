@@ -809,3 +809,11 @@ never tagged `[inferred]`. Jack cycled both ways to the 4 Oct Session B `[stated
 
 `CLAUDE.md` rule 5 still carries the old wording. Claude can't edit `CLAUDE.md` in this
 session; Jack to remove it.
+
+## [2026-10-04] block | Week 3 schedule, Foundations
+Agreed with Jack `[stated, 2026-10-04]`. Constraint: busy Wednesday evening. Four runs (easy
+5km + strides, easy 5km, easy 6km + strides, long 10km; ~26km, up from ~21km) and two gym
+sessions (A Tuesday, B Sunday). Reactive Level 2 opens Sunday if the 5 Oct morning is ≤1.
+Two changes from the block's original week 3, both Jack's call after the one-variable rule
+was removed: the long run holds at 10km instead of dropping to 8km (10km is the recent
+longest, so no spike **[W]**), and calf progression is no longer held back for running.
