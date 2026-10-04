@@ -772,3 +772,23 @@ relative_effort: 56
   across the hour, which is a good aerobic sign. His natural easy now looks like ~5:40/km
   at 140–145 `[inferred]`: not a breach, so the "go slower" note can rest unless HR starts
   drifting. Week 2: four of five planned sessions done, Session B Sunday.
+
+## [2026-10-04] gym | Session B — Foundations wk2 (full gym)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 101
+gym: full
+session: B
+reactive_level: 1
+relative_effort: 12
+```
+- Planned: Warm-up (mobility round; tibialis raises 1×15; short-foot holds, single-leg balance, heel/toe walks 3×20s each; no pogos). Reactive L1 isometric seated calf hold 5×30s @25kg machine, 30s rest, Achilles ≤3/10 during. Trap-bar deadlift ramp bar×10 → 50×5 → 70×3 → 80×1–2, then working 3×5 @~90kg RPE7, ceiling 95kg. Superset: heavy slow calf raise straight + bent knee 3×8 each @bodyweight + DB press 3×8 @20kg RPE7. Superset: Nordic curl eccentric-only 2×3 + barbell row 3×8 @45kg. Cool-down, extra hamstrings.
+- Done: Cycled 2.5km to the gym. Weighed 77.6kg with shoes on `[stated]`. Warm-up as planned. Isometric seated calf hold on the machine: 3×30s @20kg (meant to be 25kg, misread; easy), then 3×30s @35kg ("better and challenging, still managed"), 30s rest. Achilles 0/10 during the holds and on the day `[stated]`. Trap-bar ramp as planned, top ramp set 80×2, working 3×5 @90kg RPE7. Heavy slow calf raise straight + bent knee 3×8 each @bodyweight, supersetted with seated DB shoulder press 3×10 @15kg (swapped in for DB press). Nordic curl eccentric-only 2×3 as written, supersetted with single-arm DB row 3×8/side @30kg ("ok but hard"; swapped in for barbell row). Cool-down.
+  Strava: 100:59, relative effort 12, no exercise sets `[data, Strava activity 20451903375]`
+- Beyond plan: none. Six isometric holds instead of five, with the first three a mis-loaded warm-up, not added dose. Both swaps are like-for-like slots.
+- Capacity: not reported.
+- Review: Second clean Level 1 session: 0/10 during holds, and the working load moved 25 → 35kg because 25kg had already become easy in a week. Two clean L1 sessions meet the progression rule, so Level 2 opens next session if tomorrow morning stays ≤1. The trap bar's first data point is 90kg 3×5 at RPE7, matching last week's conventional deadlift exactly, so the variant comparison has a like-for-like pair; grip wasn't raised as an issue on the neutral handles. Shoulder press was swapped in for DB press on purpose: Friday's misread DB bench and skipped shoulder press had left the week with two horizontal presses and no overhead press. 15kg seated 3×10 versus 14kg standing near failure on 22 Sep is a fair, not like-for-like, comparison. The single-arm row at 30kg is well above the 18kg done at the flat gym and closes Friday's missing pull. Nordics were a first exposure at minimal dose; watch for hamstring DOMS over the next 48h before week 3's session. Weight 77.6kg in shoes after cycling, consistent with last week's 77.7kg on the same scale; still not a standard-conditions reading. Strava's 101 min is well over the ~60 planned. Not confirmed whether it includes the ride home.
+- Questions raised (to build the model):
+  - Should Session B swap out DB press when Session A already had DB pressing? Answered: repeating a push across the week is normal, and is how the plan doses it twice. The real issue was the direction balance after Friday's swap — the vertical push was missing — so shoulder press filled it. Rule worth keeping: when a session swap leaves a movement direction uncovered that week, fill it in the next session rather than repeating the covered one.
