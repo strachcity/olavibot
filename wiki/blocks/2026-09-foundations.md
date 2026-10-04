@@ -133,19 +133,21 @@ end of the week, calf load progresses in week 3 and running holds. If a morning 
 rises two days running: long run stays 8km, drop the strides, keep the calf work.
 
 **Week 3 (5–11 Oct).** Constraint: busy Wednesday evening. The fourth run starts this week,
-and Reactive Level 2 opens: pogos 2×10 in the warm-up and standing calf raises in Session B,
-which also has conventional deadlift and Copenhagen plank (odd week). The long run holds at 10km rather than dropping to the block's
+and Reactive Level 2 opens: pogos 2×10 in Tuesday's Session A warm-up, standing calf raises in
+Session B, which also has conventional deadlift and Copenhagen plank (odd week). Heel-raise
+baseline Wednesday morning (protocol in `tests.md`). Revised 4 Oct for tendon spacing, see
+Weak points. The long run holds at 10km rather than dropping to the block's
 original 8km: 10km matches the recent longest, so it's no spike `[stated, 2026-10-04]`.
 
 | Day | Session |
 |---|---|
-| Mon 5 | Easy — 5km @ 5:30–6:00/km + strides 4–6×20s |
-| Tue 6 | Gym — Session A (back squat, odd week) |
-| Wed 7 | Easy — 5km @ 5:30–6:00/km, any time that suits (busy evening; else Friday) |
+| Mon 5 | Easy — 5km @ 5:30–6:00/km |
+| Tue 6 | Gym — Session A (back squat, odd week; Level 2 pogos in warm-up) |
+| Wed 7 | Easy — 5km @ 5:30–6:00/km, later in the day (heel-raise baseline first, at home, fresh) |
 | Thu 8 | Easy — 6km @ 5:30–6:00/km + strides 4–6×20s |
 | Fri 9 | Rest, or Wednesday's 5km if it didn't happen |
 | Sat 10 | Long — 10km @ natural easy (~5:40/km), HR flat |
-| Sun 11 | Gym — Session B (Reactive Level 2) |
+| Sun 11 | Gym — Session B (heavy calf; no pogos) |
 
 Level 2 opens only if the 5 Oct morning is ≤1. Achilles rules as always: a 2+ or two rising
 mornings → no pogos or strides, long run holds at 8km, calf work stays.
@@ -158,8 +160,9 @@ mornings → no pogos or strides, long run holds at 8km, calf work stays.
 | Fourth run (3 → 4 runs, ~21 → 26km) | Build frequency towards the base week's 4–5 runs; higher chronic load protects against injury | Block plan; **[W]** `evidence-achilles-load.md` |
 | Size of the step (+24%) | No evidence sets a safe weekly %: the 10% rule and ACWR are both unsupported. This is judgement, guarded by morning scores | **[W]** that the rules don't hold; the step itself **[H]** |
 | Long run held at 10km | 10km equals the recent longest, so no single-session spike, the load factor with the best evidence | **[W]** `evidence-achilles-load.md`; Jack's call `[stated, 2026-10-04]` |
-| Strides twice | Keep speed and mechanics at very little fatigue cost | Model §5, no graded source **[H]** |
-| Reactive Level 2 | Gate met: two clean Level 1 sessions, holds pain 0/10, mornings ≤1 | Sancho 2019, n=15 feasibility, not an RCT **[W/I]** `evidence-gym-pool.md` |
+| Strides once (Thursday), not twice | Keep speed and mechanics at very little fatigue cost. Cut to one set this week to keep Monday clear of Sunday's calf work and Wednesday for the test | Model §5, no graded source **[H]**; spacing **[W/H]** |
+| Reactive Level 2, pogos on Tuesday | Gate met: two clean Level 1 sessions, holds pain 0/10, mornings ≤1. Tuesday is 72h after the long run and 48h after Sunday's calf work | Sancho 2019, n=15 feasibility, not an RCT **[W/I]**; spacing 48–72h, collagen synthesis peaks ~37–78h **[W/H]** `evidence-gym-pool.md` |
+| Heel-raise baseline, Wednesday | Gives the block a capacity number so progressions stop resting on symptoms alone. Fresh: 72h after Sunday's calf work | Judge on work and height, not reps; symmetry ≥80–90% **[W]**; norms protocol-dependent **[I]** `evidence-achilles-load.md` |
 | Heavy slow calf, bent + straight knee | Tendon capacity; soleus carries most Achilles load | Beyer 2015 RCT **[W]**; soleus **[W]** `evidence-achilles-load.md` |
 | Back squat (A), conventional deadlift (B) | Odd week of the variant comparison the block is testing | Block hypothesis `[inferred]`; heavy lifting improves economy **[W]** |
 | Copenhagen plank | Best-evidenced adductor exercise | Harøy 2019 RCT in footballers **[W]**; transfer to runners **[I]** |
@@ -167,17 +170,20 @@ mornings → no pogos or strides, long run holds at 8km, calf work stays.
 
 *Weak points*
 
-- **Spacing conflict.** Reactive and heavy calf work should sit 48–72h from hard running and
-  heavy calf work **[W/H]**, `evidence-gym-pool.md`. Here Session B (pogos + heavy calf) is
-  the day after the 10km long run, and Monday's strides follow Session B by one day. Week 2
-  had the same Saturday → Sunday pairing with calf work and stayed at 0–1, but pogos are new
-  load. Unresolved, put to Jack.
+- **Spacing conflict, resolved 4 Oct** `[stated]`. As first drafted, Session B (pogos + heavy
+  calf) sat the day after the long run, and Monday's strides the day after Session B, against
+  48–72h spacing **[W/H]**. Fixed by moving the pogos to Tuesday and dropping Monday's strides.
+  Still left: Session B's heavy calf work the day after the long run (as in week 2, which held
+  at 0–1). The spacing guidance is partly mechanistic (collagen timing), so this is the
+  weaker end of it.
+- **Wednesday's run follows the heel-raise test.** Run it later in the day, or move it to
+  Friday if calves are tired.
 - **Two choices came from the last 24h of conversation**: the one-variable rule's removal and
   the 10km hold. Both are now checked against the evidence, but they are recent decisions, not
   block design.
-- **The week can't measure capacity.** Baseline tests are deferred to week 6 `[stated]`, so
-  every progression so far rests on symptom scores, not on whether the calf or tendon got
-  stronger.
+- **Capacity, partly fixed.** The heel-raise baseline gives one capacity number now. The rest
+  of the battery stays at week 6 `[stated]`. A home protocol without an encoder measures
+  height roughly, so the work estimate is approximate `[inferred]`.
 - **The squat/deadlift comparison is thin.** One session per variant per fortnight gives ~3
   data points each by week 6, and loads are RPE-capped. Expect a preference, not a verdict
   `[inferred]`.
