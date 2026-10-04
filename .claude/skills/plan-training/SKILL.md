@@ -50,7 +50,6 @@ Use the template in `wiki/blocks/README.md`. Decide, with a reason for each:
 ## 4. Check it before showing it
 
 - Does every capacity appear on its weekly or fortnightly rhythm?
-- Is only one variable rising?
 - Would this feel good to do? If the honest answer is "it's a grind", change it.
 - Does it fit a busy work week? Name the maintenance-floor version.
 - Is any current-state number in here copied from the last block rather than from the log?

@@ -792,3 +792,20 @@ relative_effort: 12
 - Review: Second clean Level 1 session: 0/10 during holds, and the working load moved 25 → 35kg because 25kg had already become easy in a week. Two clean L1 sessions meet the progression rule, so Level 2 opens next session if tomorrow morning stays ≤1. The trap bar's first data point is 90kg 3×5 at RPE7, matching last week's conventional deadlift exactly, so the variant comparison has a like-for-like pair; grip wasn't raised as an issue on the neutral handles. Shoulder press was swapped in for DB press on purpose: Friday's misread DB bench and skipped shoulder press had left the week with two horizontal presses and no overhead press. 15kg seated 3×10 versus 14kg standing near failure on 22 Sep is a fair, not like-for-like, comparison. The single-arm row at 30kg is well above the 18kg done at the flat gym and closes Friday's missing pull. Nordics were a first exposure at minimal dose; watch for hamstring DOMS over the next 48h before week 3's session. Weight 77.6kg in shoes after cycling, consistent with last week's 77.7kg on the same scale; still not a standard-conditions reading. Strava's 101 min is well over the ~60 planned. Not confirmed whether it includes the ride home.
 - Questions raised (to build the model):
   - Should Session B swap out DB press when Session A already had DB pressing? Answered: repeating a push across the week is normal, and is how the plan doses it twice. The real issue was the direction balance after Friday's swap — the vertical push was missing — so shoulder press filled it. Rule worth keeping: when a session swap leaves a movement direction uncovered that week, fill it in the next session rather than repeating the covered one.
+
+## [2026-10-04] model | "One variable at a time" rule removed
+Jack asked whether the rule was evidence-based, and said he doesn't want it if not `[stated,
+2026-10-04]`. It isn't. Principle 5 ("volume or intensity, never both in the same
+fortnight") traces to the research report's synthesis, which rests on a premise since
+corrected: the July 2026 flare came with no intensity rise (`observations.md` → Hypotheses).
+The references grade the 10% rule and ACWR as unsupported. What they support **[W]** is
+avoiding single-session spikes, building chronic load, and previous injury as the main risk
+factor. Removed from `training-model.md` §4 (slot kept, with the reason) and from the checks
+in `programme-session` and `plan-training` (programme-session zip rebuilt).
+
+Also withdrawn: Claude's own "only one thing rises each week, gym or running", added 26 Sep
+from Jack's "manage carefully" (25 Sep). It was Claude's extension, not his rule, and was
+never tagged `[inferred]`. Jack cycled both ways to the 4 Oct Session B `[stated, 2026-10-04]`.
+
+`CLAUDE.md` rule 5 still carries the old wording. Claude can't edit `CLAUDE.md` in this
+session; Jack to remove it.
