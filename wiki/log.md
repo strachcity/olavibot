@@ -833,3 +833,16 @@ block now has both sections.
 The first critical find: week 3 puts Session B (pogos + heavy calf) the day after the long run
 and Monday's strides the day after Session B, against the 48–72h spacing guidance
 **[W/H]**. Put to Jack for a decision.
+
+## [2026-10-04] block | Week 3 revised for tendon spacing; heel-raise baseline added
+Agreed with Jack `[stated, 2026-10-04]`. Changes:
+- Level 2 pogos move from Sunday's Session B to Tuesday's Session A warm-up: 72h after the long
+  run, 48h after Sunday's calf work.
+- Monday's strides are dropped, keeping Monday clear of Session B.
+- Strides run once this week, on Thursday.
+- Wednesday morning: a single-leg heel-raise baseline at home, fresh, with the protocol now
+  written into `tests.md`. The run moves later that day, or to Friday.
+
+Reason: 48–72h spacing for reactive and heavy calf work **[W/H]**, and giving the block a
+capacity measure so progressions don't rest on symptom scores alone. Left in place: Session
+B's heavy calf the day after the long run (weaker end of the guidance, tolerated in week 2).
