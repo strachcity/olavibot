@@ -846,3 +846,23 @@ Agreed with Jack `[stated, 2026-10-04]`. Changes:
 Reason: 48–72h spacing for reactive and heavy calf work **[W/H]**, and giving the block a
 capacity measure so progressions don't rest on symptom scores alone. Left in place: Session
 B's heavy calf the day after the long run (weaker end of the guidance, tolerated in week 2).
+
+## [2026-10-05] run | Easy — Foundations wk3
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 33
+distance_km: 6.01
+avg_pace: 5:34
+run_type: easy
+relative_effort: 15
+```
+- Planned: Easy 5km @ 5:30–6:00/km, no strides (dropped to keep Monday clear of Session B).
+- Done: 6.01km, 33:28 moving, avg pace 5:34/km, avg HR 137 (max 157), Victoria Park and
+  canal `[data, Strava activity 20463899587]`
+- Beyond plan: none. 6km against 5km planned is inside the block's ±1km.
+- Review: Easy and very even: HR held at 136–139 on every segment. Compared with week 1's
+  first easy run (21 Sep: 5:50/km at HR 140), this is 16 s/km faster at a slightly lower HR.
+  It's the first sign of aerobic gain, but there's one pair of runs, and the conditions differ
+  `[inferred]`. Pace sits at the fast edge of the band, fine while HR stays this flat.
