@@ -886,3 +886,12 @@ relative_effort: 13
 - Review: Back squat 3×5 @90kg, up from 80kg two weeks ago. That's the top of the allowed range, so next odd week holds at 90kg rather than adding more, unless it was clearly easier than RPE7 (not reported). Shoulder press 15kg went from a solid working weight on 4 Oct to "easy" two days later; mostly re-learning the movement, but a clear cue to move to 16–17.5kg next time. Pull covered in full across two pieces of kit, which matters after two Session As that lost it. Level 2 pogos weren't started: the gate hasn't been closed or reset, it's simply not yet used — they go in the next session that has them, provided mornings stay ≤1. The 5 Oct morning score that gated them is still pending in the log. Busy-gym reshuffling cost the Pallof press; see the trunk-slot change below.
 - Questions raised (to build the model):
   - Pallof press replacement — "it sucks" `[stated]`, and it needs a free cable. Answered: whatever replaces it should do the same job, resisting the trunk being pulled out of line (twisting, tipping, arching), not creating movement, which rules out chops and crunches. Options: suitcase carry (resists tipping sideways; builds grip; one dumbbell, works at both gyms), dead bug (resists arching; floor only), side plank (resists side-bending). Jack's call: rotate between them rather than fix one — "let's mix it up" `[stated]`.
+
+## [2026-10-06] block | Session A trunk slot rotates between anti-movement exercises
+Jack's call `[stated, 2026-10-06]`: Pallof press is tedious and needs a free cable, so Session
+A's trunk slot rotates instead. One per session from suitcase carry (the default when busy or
+at the flat gym), dead bug, side plank, or Pallof press when a cable is free. Every option
+resists the trunk being moved, which is the slot's purpose. Rotational and flexion exercises
+(woodchop, crunch) don't qualify. Foundations block Session A #3 updated. All four are already
+in `training-model.md` §6's trunk pool except the suitcase carry, a loaded carry, used here
+for its anti-lateral-flexion job `[inferred]`.
