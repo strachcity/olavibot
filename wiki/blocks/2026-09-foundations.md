@@ -63,7 +63,11 @@ rack/bar the flat gym doesn't have. Flag if that's wrong; sessions would split a
 **Session A**
 1. Anchor — Back squat (odd weeks) / Front squat (even weeks), 3–5×3–6, RPE-capped
 2. Bulgarian split squat — single-leg, doubles as hip-flexion strength
-3. Pallof press — trunk, superset with #2
+3. Trunk, anti-movement, rotating — superset with #2. One per session: suitcase carry
+   (default when the gym is busy or at the flat gym; one DB, also trains grip), dead bug,
+   side plank, or Pallof press (only if a cable is free; Jack finds it tedious, so not the
+   default). The slot's job is resisting being moved; woodchops and crunches don't fill it
+   `[stated, 2026-10-06]`
 4. Banded march — hip-flexion endurance, superset with #5
 5. Pull-up / lat pulldown — upper pull
 6. DB shoulder press or push-up — upper push *(new addition — upper body was too thin)*
