@@ -866,3 +866,23 @@ relative_effort: 15
   first easy run (21 Sep: 5:50/km at HR 140), this is 16 s/km faster at a slightly lower HR.
   It's the first sign of aerobic gain, but there's one pair of runs, and the conditions differ
   `[inferred]`. Pace sits at the fast edge of the band, fine while HR stays this flat.
+
+## [2026-10-06] gym | Session A — Foundations wk3 (full gym, busy)
+```yaml
+planned: partial
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 77
+gym: full
+session: A
+reactive_level: 1
+relative_effort: 13
+```
+- Planned: Warm-up (mobility round; tibialis raises 1×15; short-foot holds, single-leg balance, heel/toe walks 3×20s each) + Level 2 pogos 2×10, gated on the 5 Oct morning ≤1. Back squat ramp bar×10 → 50×5 → 65×3 → 80×1–2, then working 3×5 @~85kg RPE7, ceiling 90kg. Superset: Bulgarian split squat 3×8/leg @16kg + Pallof press 3×10/side @9.1–11kg. Superset: banded march 3×30s/leg + lat pulldown 3×8 @~38kg. Seated DB shoulder press 3×10 @15kg. Cool-down. No extra calf work (heel-raise baseline Wednesday morning).
+- Done: Warm-up as planned; pogos skipped — "didn't feel mentally ready" `[stated]`. Back squat ramp as planned, working 3×5 @90kg. Bulgarian split squat 3×8/leg @17.5kg, supersetted with seated DB shoulder press 3×10 @15kg — "easy, so much easier than last time" `[stated]` (moved up from the end because the gym was busy). Banded march 3×30s/leg, medium (yellow) band — "good/hard" `[stated]`. Lat pulldown 1×8 @38kg, then single-arm DB row 2×8/side @30kg (machine taken). Pallof press not done — gym too busy. Cool-down done.
+  Strava: 77:05, relative effort 13, no exercise sets `[data, Strava activity 20479773450]`
+- Beyond plan: none. Squat at 90kg is over the ~85kg target but inside the stated ceiling; split squat 17.5kg vs 16kg planned is a small step on a lift done twice before at 14kg.
+- Capacity: not reported.
+- Review: Back squat 3×5 @90kg, up from 80kg two weeks ago. That's the top of the allowed range, so next odd week holds at 90kg rather than adding more, unless it was clearly easier than RPE7 (not reported). Shoulder press 15kg went from a solid working weight on 4 Oct to "easy" two days later; mostly re-learning the movement, but a clear cue to move to 16–17.5kg next time. Pull covered in full across two pieces of kit, which matters after two Session As that lost it. Level 2 pogos weren't started: the gate hasn't been closed or reset, it's simply not yet used — they go in the next session that has them, provided mornings stay ≤1. The 5 Oct morning score that gated them is still pending in the log. Busy-gym reshuffling cost the Pallof press; see the trunk-slot change below.
+- Questions raised (to build the model):
+  - Pallof press replacement — "it sucks" `[stated]`, and it needs a free cable. Answered: whatever replaces it should do the same job, resisting the trunk being pulled out of line (twisting, tipping, arching), not creating movement, which rules out chops and crunches. Options: suitcase carry (resists tipping sideways; builds grip; one dumbbell, works at both gyms), dead bug (resists arching; floor only), side plank (resists side-bending). Jack's call: rotate between them rather than fix one — "let's mix it up" `[stated]`.
