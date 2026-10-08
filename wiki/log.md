@@ -931,3 +931,14 @@ relative_effort: 35
   distance on the day `[stated]` model §3. Week so far: Mon 6.0 + Thu 7.5 = 13.5km of 26km
   planned, with the Wednesday 5km and Saturday's 10km to come. Doing both would take the week
   to ~28.5km.
+
+## [2026-10-08] review | Correction: 8 Oct run was not over plan
+Corrects the 2026-10-08 run entry. Jack ran the planned 6km, then 6×20s strides with 20s jog
+recoveries, then a cool-down jog `[stated, 2026-10-08]`. The extra ~1.5km was strides,
+recoveries and cool-down, which the model asks for (rule 8), as on 28 Sep. So `beyond_plan`
+should read `none` and `run_type` `strides`. The entry's "second run over plan" review is
+withdrawn: Monday's 6km was inside the ±1km allowance, and tonight wasn't over at all. Claude
+read the total distance without asking what it contained. Ask before calling distance creep.
+
+One real note: 20s jog recoveries are short for strides. The model asks for full recovery
+(§5), so each stays relaxed-fast and they don't turn into intervals.
