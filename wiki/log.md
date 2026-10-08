@@ -912,11 +912,11 @@ beyond_plan: none
 ```yaml
 planned: yes
 achilles_next_am: pending
-beyond_plan: 1.5km over the 6km plan
+beyond_plan: none
 duration_min: 43
 distance_km: 7.53
 avg_pace: 5:41
-run_type: easy
+run_type: strides
 relative_effort: 35
 ```
 - Planned: Easy 6km @ 5:30–6:00/km + strides 4–6×20s.
