@@ -1,11 +1,11 @@
 ---
 name: review-training
-description: Log and review Jack's completed training — a single session, or a whole block (which includes a health check of the wiki). Use this whenever Jack reports a session he's done ("just finished Session A", "ran 10k", "gym done"), shares a Strava activity, tells you how something felt, reports Achilles symptoms, finishes a block, runs a test, or asks "how's it going?" or "am I improving?". Use it even when he mentions a session in passing.
+description: Log and review Jack's completed training — a single session, a week (end-of-week summary), or a whole block (which includes a health check of the wiki). Use this whenever Jack reports a session he's done ("just finished Session A", "ran 10k", "gym done"), shares a Strava activity, tells you how something felt, reports Achilles symptoms, finishes a block, runs a test, or asks "how's it going?" or "am I improving?". Use it even when he mentions a session in passing, and at the end of every training week.
 ---
 
 # Review training
 
-Three modes. Work out which one Jack wants.
+Four modes. Work out which one Jack wants.
 
 ---
 
@@ -115,6 +115,34 @@ Only update `wiki/observations.md` if:
 Never promote an `[inferred]` line to confirmed without Jack saying so.
 
 Commit: `gym: …` or `run: …`.
+
+---
+
+## Mode 1b — End-of-week summary
+
+Every week, without being asked `[stated, 2026-10-08]`: once the week's last planned session
+is logged, or when Jack asks to plan the next week, whichever comes first. Write it before
+planning the next week, because the next week's plan should start from it.
+
+Read from the metrics blocks and Strava for the week (Mon–Sun), not from memory of the chat.
+Keep it short, critical where it should be, and tag claims as usual.
+
+```
+**Week <n> summary (<dates>)**
+- Progress: sessions done/planned (missed, not as planned), running km vs plan, runs, gym
+  sessions, Achilles mornings (range and trend), Reactive level, fitness/form from the
+  dashboard method, capacity numbers if any were measured.
+- Went well: 2–3 things, each with the evidence.
+- Went badly: 1–3 things, honestly. Missed sessions, skipped slots, over-plan, gaps in the
+  log. Don't pad, and don't soften.
+- Watch: what could go wrong next, and the signal that would show it.
+- Next: a hint for next week, i.e. what changes and what holds, and why. It feeds
+  `plan-training` and is not the plan itself.
+```
+
+Write it under that week's section in the block file, as `*Week <n> summary*`, and append a
+`review` log entry titled `Week <n> summary` pointing to it. Same commit route as other
+block/review changes.
 
 ---
 
