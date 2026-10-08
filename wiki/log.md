@@ -942,3 +942,11 @@ read the total distance without asking what it contained. Ask before calling dis
 
 One real note: 20s jog recoveries are short for strides. The model asks for full recovery
 (§5), so each stays relaxed-fast and they don't turn into intervals.
+
+## [2026-10-08] model | End-of-week summary added
+Jack asked for a summary at the end of every week: progress, what went well or badly, what to
+watch, and a hint for next week `[stated, 2026-10-08]`. `review-training` gains Mode 1b. It
+runs once the week's last session is logged or when the next week is being planned, written
+from the metrics blocks and Strava, and saved under the week in the block file plus a
+`review` log entry. `plan-training` now starts from the last week's summary.
+`review-training.zip` rebuilt. First one due after week 3's Session B (11 Oct).

@@ -84,6 +84,9 @@ table, before it's agreed:
   the week departs from the block plan or from a reference's guidance (spacing, spikes, gates),
   and what the week can't tell us. Name conflicts; don't bury them.
 
+**Start from the last week's summary** (`review-training` Mode 1b). If it hasn't been
+written, write it first.
+
 **Recency check, before showing the week.** Decisions come from the block plan, the model and
 the evidence, read against the last 2–4 weeks of the log — not from the last session or the
 last conversation. For every change from the block's planned week, name where it came from.
