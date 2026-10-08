@@ -776,7 +776,7 @@ relative_effort: 56
 ## [2026-10-04] gym | Session B — Foundations wk2 (full gym)
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 101
 gym: full
@@ -850,7 +850,7 @@ B's heavy calf the day after the long run (weaker end of the guidance, tolerated
 ## [2026-10-05] run | Easy — Foundations wk3
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 33
 distance_km: 6.01
@@ -870,7 +870,7 @@ relative_effort: 15
 ## [2026-10-06] gym | Session A — Foundations wk3 (full gym, busy)
 ```yaml
 planned: partial
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 77
 gym: full
@@ -895,3 +895,39 @@ resists the trunk being moved, which is the slot's purpose. Rotational and flexi
 (woodchop, crunch) don't qualify. Foundations block Session A #3 updated. All four are already
 in `training-model.md` §6's trunk pool except the suitcase carry, a loaded carry, used here
 for its anti-lateral-flexion job `[inferred]`.
+
+## [2026-10-07] rest | Rest day (busy evening) — Foundations wk3
+```yaml
+planned: partial
+achilles_next_am: 0
+beyond_plan: none
+```
+- Planned: Heel-raise baseline in the morning, easy 5km later (or Friday).
+- Done: Rest. Baseline forgotten `[stated, 2026-10-08]`; the run moves to later in the week.
+- Review: Achilles 0/10 every morning this week (5–8 Oct) `[stated, 2026-10-08]`. Baseline
+  rescheduled to the next fresh morning, ≥72h after heavy calf work and before any run that
+  day.
+
+## [2026-10-08] run | Easy — Foundations wk3
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: 1.5km over the 6km plan
+duration_min: 43
+distance_km: 7.53
+avg_pace: 5:41
+run_type: easy
+relative_effort: 35
+```
+- Planned: Easy 6km @ 5:30–6:00/km + strides 4–6×20s.
+- Done: 7.53km, 42:50 moving, avg pace 5:41/km, avg HR 141 (max 174), Victoria Park
+  `[data, Strava activity 20506425572]`. Strides not reported. The data shows one faster
+  250m (~4:26/km, HR 168), not a clear set of strides. Several segments read a flat 122,
+  the same sensor dropout as before.
+- Beyond plan: 1.5km over the 6km plan, outside the block's ±1km. Why not reported.
+- Review: The pace and HR were easy, but this is the second run this week over its planned
+  distance (Mon 6.0 vs 5, Thu 7.5 vs 6). That's small on its own, and it's exactly the
+  creep the model watches for: extras are meant to be pre-agreed and small, never more
+  distance on the day `[stated]` model §3. Week so far: Mon 6.0 + Thu 7.5 = 13.5km of 26km
+  planned, with the Wednesday 5km and Saturday's 10km to come. Doing both would take the week
+  to ~28.5km.
