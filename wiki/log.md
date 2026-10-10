@@ -982,3 +982,10 @@ relative_effort: 30
   recent longest (10.0km). The references flag single-run spikes as the best-evidenced load
   risk **[W]** but give no threshold, so that ~19% isn't judged here. Next morning's score
   is the check.
+
+## [2026-10-10] review | 10 Oct long run: context
+The extra 1.9km on the 10 Oct long run was the run home `[stated, 2026-10-10]`, so
+`beyond_plan` resolved to none. Jack was hungover and tired on the day `[stated,
+2026-10-10]`, yet HR ran the lowest of any long run (136). The 11 Oct morning score should be
+read with the known alcohol effect in mind (`observations.md`). This replaces a note
+mistakenly logged as a `rest` entry, removed at Jack's request.
