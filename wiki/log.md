@@ -955,7 +955,7 @@ from the metrics blocks and Strava, and saved under the week in the block file p
 ```yaml
 planned: yes
 achilles_next_am: pending
-beyond_plan: pending
+beyond_plan: none
 duration_min: 74
 distance_km: 11.87
 avg_pace: 6:12
@@ -973,3 +973,14 @@ relative_effort: 30
   recent longest (10.0km). The references flag single-run spikes as the best-evidenced load
   risk **[W]** but give no threshold, so that ~19% isn't judged here. Next morning's score
   is the check.
+
+## [2026-10-10] rest | Note: 10 Oct long run, context
+```yaml
+planned: yes
+beyond_plan: none
+```
+- The extra 1.9km on the 10 Oct long run was the run home `[stated, 2026-10-10]`, so the
+  pending `beyond_plan` resolved to none: getting home, not an extension.
+- Hungover and tired on the day `[stated, 2026-10-10]`. HR still ran lowest of any long run
+  (136). Tomorrow's morning score is read with the known alcohol effect in mind
+  (`observations.md`).
