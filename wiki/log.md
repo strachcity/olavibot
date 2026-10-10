@@ -911,7 +911,7 @@ beyond_plan: none
 ## [2026-10-08] run | Easy — Foundations wk3
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 43
 distance_km: 7.53
@@ -951,6 +951,15 @@ from the metrics blocks and Strava, and saved under the week in the block file p
 `review` log entry. `plan-training` now starts from the last week's summary.
 `review-training.zip` rebuilt. First one due after week 3's Session B (11 Oct).
 
+## [2026-10-09] rest | Rest day — Foundations wk3
+```yaml
+planned: yes
+achilles_next_am: 0
+beyond_plan: none
+```
+- Planned: Rest, or Wednesday's 5km (optional, not done).
+- Done: Rest. Achilles 0/10 on 9 and 10 Oct mornings `[stated, 2026-10-10]`.
+
 ## [2026-10-10] run | Long — Foundations wk3
 ```yaml
 planned: yes
@@ -973,14 +982,3 @@ relative_effort: 30
   recent longest (10.0km). The references flag single-run spikes as the best-evidenced load
   risk **[W]** but give no threshold, so that ~19% isn't judged here. Next morning's score
   is the check.
-
-## [2026-10-10] rest | Note: 10 Oct long run, context
-```yaml
-planned: yes
-beyond_plan: none
-```
-- The extra 1.9km on the 10 Oct long run was the run home `[stated, 2026-10-10]`, so the
-  pending `beyond_plan` resolved to none: getting home, not an extension.
-- Hungover and tired on the day `[stated, 2026-10-10]`. HR still ran lowest of any long run
-  (136). Tomorrow's morning score is read with the known alcohol effect in mind
-  (`observations.md`).
