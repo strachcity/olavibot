@@ -950,3 +950,26 @@ runs once the week's last session is logged or when the next week is being plann
 from the metrics blocks and Strava, and saved under the week in the block file plus a
 `review` log entry. `plan-training` now starts from the last week's summary.
 `review-training.zip` rebuilt. First one due after week 3's Session B (11 Oct).
+
+## [2026-10-10] run | Long — Foundations wk3
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: pending
+duration_min: 74
+distance_km: 11.87
+avg_pace: 6:12
+run_type: long
+relative_effort: 30
+```
+- Planned: Long 10km at natural easy pace (~5:40/km), HR flat.
+- Done: 11.87km, 73:40 moving (80:52 elapsed), avg pace 6:12/km, avg HR 136 (max 151), 88m
+  elevation, Victoria Park, Hackney Marshes and the Olympic Park
+  `[data, Strava activity 20527306204]`
+- Beyond plan: pending. 1.9km over the 10km plan. Asked Jack what the extra was before
+  calling it beyond plan (cool-down, route, or an extension).
+- Review: The easiest long run yet: HR 136 against 145 last week, at 6:12/km. HR stayed
+  127–145 across the route, no drift. The new longest run of the block, ~19% over the
+  recent longest (10.0km). The references flag single-run spikes as the best-evidenced load
+  risk **[W]** but give no threshold, so that ~19% isn't judged here. Next morning's score
+  is the check.
