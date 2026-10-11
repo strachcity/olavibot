@@ -100,7 +100,7 @@
   @keyframes slide { to { transform: translateX(-120px); } }
   @media (prefers-reduced-motion: reduce) { .blob, .streaks { animation: none; } }
 
-  /* ---------- "coordinate" sky: dot grid, halftone marks, a light beam with flares ----------
+  /* ---------- "coordinate" sky: dot grid, halftone marks, orange crosslines ----------
      Used instead of the glow blobs when a week's recipe sets sky: "coordinate". */
   .coord { display: none; position: absolute; inset: 0; }
   [data-sky="coordinate"] .coord { display: block; }
@@ -118,23 +118,12 @@
     -webkit-mask-image: var(--m); mask-image: var(--m); }
   .tone { background-image: radial-gradient(circle, var(--tone) 4px, transparent 4.6px); background-size: 12px 12px; }
   .tone-shade { background: var(--tone-shade); filter: blur(22px); transform: translate(-14px, 10px) scale(1.15); opacity: .55; }
-  .beam { position: absolute; top: -5%; bottom: -5%; left: 50%; width: 3px; transform: translateX(-50%);
-    background: linear-gradient(transparent, var(--beam) 12%, var(--beam) 88%, transparent);
-    box-shadow: 0 0 10px 3px var(--beam-glow), 0 0 40px 12px var(--beam-haze); animation: hum 7s ease-in-out infinite alternate; }
   .hline { position: absolute; left: 0; right: 0; height: 2px;
     background: linear-gradient(90deg, transparent, var(--beam-glow) 20%, var(--beam-glow) 80%, transparent);
     box-shadow: 0 0 10px 2px var(--beam-haze); opacity: .7; }
   .hline.h1 { top: 24%; } .hline.h2 { top: 74%; }
-  .flare { position: absolute; left: 50%; width: 340px; height: 340px; transform: translate(-50%, -50%);
-    background: radial-gradient(circle, #fff 0, var(--beam) 4%, var(--beam-glow) 11%, transparent 32%); animation: hum 5s ease-in-out infinite alternate; }
-  .flare.f1 { top: 24%; } .flare.f2 { top: 74%; animation-delay: -2.5s; }
-  .flare::before, .flare::after { content: ""; position: absolute; left: 50%; top: 50%; background: linear-gradient(90deg, transparent, var(--beam) 50%, transparent); }
-  .flare::before { width: 100%; height: 12px; transform: translate(-50%, -50%); clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%); }
-  .flare::after { width: 12px; height: 100%; transform: translate(-50%, -50%); background: linear-gradient(transparent, var(--beam) 50%, transparent); clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
   .tone { opacity: .85; }
   @media (max-width: 760px) { .tone { opacity: .28; } .tone-shade { opacity: .3; } }
-  @keyframes hum { to { opacity: .72; } }
-  @media (prefers-reduced-motion: reduce) { .beam, .flare { animation: none; } }
 
   /* ---------- frame ---------- */
   .wrap { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding-inline: 20px; padding-block: 22px 48px; display: grid; gap: 16px; }
@@ -375,8 +364,7 @@
   <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
   <div class="streaks"></div>
   <div class="coord"><div class="dots"></div><div class="tone-shade"></div><div class="tone"></div>
-    <div class="hline h1"></div><div class="hline h2"></div><div class="beam"></div>
-    <div class="flare f1"></div><div class="flare f2"></div></div>
+    <div class="hline h1"></div><div class="hline h2"></div></div>
   <div class="grain"></div>
 </div>
 
@@ -1331,7 +1319,7 @@ const RECIPES = [
 ];
 // Pin-only recipes: not in the dealt deck (adding them there would re-deal past weeks).
 const SPECIALS = [
-  { name: "coordinate", mode: "light", hue: [205, 230], shift: -160, sky: "coordinate" },  // dot grid, halftone marks, orange beam
+  { name: "coordinate", mode: "light", hue: [205, 230], shift: -160, sky: "coordinate" },  // dot grid, halftone marks, orange crosslines
 ];
 const PINNED = {
   "2026-09-21": { recipe: "dusk", hue: 42 },   // the original ember-and-mint week
@@ -1407,7 +1395,7 @@ function paletteFor(monday, mode) {
     dot: dark ? rgba(oklch(.9, .02, h), .22) : rgba(oklch(.3, .03, h), .32),
     tone: dark ? oklch(.92, .02, h) : oklch(.16, .02, h),
     "tone-shade": dark ? rgba(oklch(.6, .08, h), .5) : rgba(oklch(.55, .09, h), .55),
-    beam: null, "beam-glow": rgba(oklch(.78, .19, ah), .85), "beam-haze": rgba(oklch(.82, .15, ah), .45),
+    "beam-glow": rgba(oklch(.78, .19, ah), .85), "beam-haze": rgba(oklch(.82, .15, ah), .45),
     ink: dark ? oklch(.95, .01, h) : oklch(.22, .02, h),
     "ink-2": readable(dark ? .8 : .42, .015, h, ground, 7, dark),
     "ink-3": readable(dark ? .62 : .54, .015, h, ground, 4.5, dark),
@@ -1430,7 +1418,6 @@ function paletteFor(monday, mode) {
     easy: dark ? "#4fd8a0" : "#1b9a6b", steady: dark ? "#2f8a70" : "#7cc4a8", grey: dark ? "#8d90a0" : "#9a9dab",
     "grey-top": dark ? "#e3e4ea" : "#5b5e6b", hard: dark ? "#ff7a45" : "#e0602c", race: dark ? "#f3ece4" : "#2b2f36",
   };
-  P.beam = P.accent;
   if (recipe.sky === "coordinate") { P.warm = P.accent; P["accent-2"] = oklch(.82, .17, ah); }   // one orange everywhere
   return P;
 }
