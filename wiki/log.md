@@ -1028,3 +1028,12 @@ Written under week 3 in `blocks/2026-09-foundations.md`. In short:
 - Heel-raise baseline missed twice.
 - Watch the left lateral foot.
 - Next week holds volume and lift loads, and keeps pogos parked.
+
+## [2026-10-11] review | Week 3 summary merged with Jack's claude.ai version
+Jack pasted a week 3 summary drafted in claude.ai `[stated, 2026-10-11]`. Merged into the
+block's week 3 summary. The claude.ai version added two points Claude Code missed: the week's
+km came from fewer, longer runs (frequency was the goal), and lower the ceilings if week 4
+lands on them again. Corrected in both versions: the heel-raise baseline timing. ≥72h after
+Sunday's calf work makes Thursday 15 Oct the first fresh morning; Claude Code's "Tuesday" and
+claude.ai's "Wednesday" were both short. Open for Jack: long run 9km (block) or 10–12km
+(claude.ai).

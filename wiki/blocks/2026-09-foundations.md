@@ -194,36 +194,48 @@ mornings → no pogos or strides, long run holds at 8km, calf work stays.
 
 *Week 3 summary (5–11 Oct)*
 
+Merged from Claude Code's version and the claude.ai version Jack pasted (11 Oct). Corrected:
+the baseline timing.
+
 - **Progress.** 5 of 6 planned sessions (3 of 4 runs, both gym; Session A partial). Missed:
-  the optional Wednesday 5km. Running 25.4km against 26 planned (6.0, 7.5 incl. strides and
-  cool-down, 11.9 long incl. the run home). Achilles 0/10 on every recorded morning, 5–10
-  Oct. Reactive Level 2 started Sunday (full-range seated calf raises); pogos not yet
-  started. Fitness flat at ~17 and form ~+1. Relative effort fell to 106 from 124 despite more
-  km, because the runs were easier `[data]`.
+  Wednesday's 5km (the Friday fallback wasn't used, so the fourth run never started), the
+  heel-raise baseline (forgotten 7 Oct `[stated]`), and the Level 2 pogos (skipped 6 Oct, "not
+  mentally ready" `[stated]`). Running 25.4km over 3 runs (6.0, 7.5 incl. strides and
+  cool-down, 11.9 long incl. the run home) against 26km over 4 `[data]`. Achilles 0/10 on every
+  recorded morning, 5–10 Oct. Reactive Level 1 → 2 in Session B (full-range seated calf
+  raises). Fitness flat at ~17, form ~+1. Relative effort fell to 106 from 124 despite more
+  km, because the runs were easier `[data]`. New: left lateral foot pain on landing, 1/10,
+  recurring from Sydney `[stated]`.
 - **Went well.**
-  - Achilles at 0 all week, through the block's biggest running week, a new longest run and
-    two heavy lower-body sessions `[stated]`.
-  - Easy running is getting cheaper: 6km at 5:34/km on HR 137 (5 Oct), 11.9km at 6:12/km
-    on HR 136 (10 Oct), against 140 for 5:50/km on 21 Sep `[data]`.
-  - Lifts up without straps and grip holding: back squat 90kg 3×5, deadlift 100kg 3×5.
-    Pull covered in both sessions.
+  - Easy running is getting cheaper: 6km at 5:34/km on HR 137 (5 Oct), and the long run at HR
+    136, the lowest yet, despite a hangover. 21 Sep was 5:50/km at 140 `[inferred]`.
+  - Strength rose on both anchors without straps: back squat 80 → 90kg, deadlift 90 → 100kg,
+    both 3×5. Pull covered in both sessions.
+  - Achilles flat at 0 through the block's biggest load week.
 - **Went badly.**
-  - The heel-raise baseline was missed twice, so the block still has no capacity number.
-    This was the week's main gap.
-  - Pogos skipped (a fair call) and the Pallof press lost to a busy gym, now replaced by a
-    rotating anti-movement slot.
-  - Two working loads went to the ceiling, not the target: squat 90 vs 85, deadlift 100 vs
-    95. No rule broken, but it's the ceiling-becomes-target pattern in model §3.
+  - The km came from fewer, longer runs: the long run went 10 → 11.9km while a whole run was
+    dropped. That's a heavier single session instead of more frequency, the opposite of
+    what the week was for.
+  - Two scheduled steps didn't happen (heel-raise baseline, pogos), so the block still has no
+    capacity number.
+  - Anchor loads went to the ceiling twice (squat 90 vs 85, deadlift 100 vs 95). That's the
+    ceiling-becomes-target pattern in model §3.
 - **Watch.**
-  - **Left lateral foot**: 1/10 on landing and walking, recurring since the Sydney marathon.
-    The signal: walking pain past ~3–4 days, a rising score, or a tender spot on the bone
-    means a physio.
-  - The ceiling-load pattern.
-  - The long run's ~19% jump. The 11 Oct morning score is still to come.
-- **Next.** Hold running around ~25km and don't extend the long run while the foot is
-  live. The block's week 4 already says long 9km, "hold". Pogos stay parked while landing
-  hurts. Lifts hold at their ceilings (squat 90, deadlift 100) rather than climbing.
-  Heel-raise baseline Tuesday morning, before Session A.
+  - **Left foot first.** See a physio if walking pain lasts beyond ~3–4 days, the score rises
+    above 1/10, a tender spot appears on the bone, or it comes back again after settling.
+  - **The ceiling pattern.** If week 4's anchors land on the ceiling again, lower the
+    ceilings rather than restate them.
+- **Next.**
+  - Repeat week 3's running rather than progress it, because the fourth run hasn't happened
+    yet and the foot is new: 4 runs, ~26km.
+  - Long run: the two versions differed (claude.ai: 10–12km; Claude Code: don't extend, the
+    block says 9). Jack to decide.
+  - Pogos wait until landing is pain-free: they load the outside of the forefoot, where it
+    hurts.
+  - Anchors hold: squat 90kg, deadlift 100kg. Shoulder press goes to 16–17.5kg.
+  - Heel-raise baseline as a fixed slot on the first fresh morning ≥72h after Session B's calf
+    work. Sunday's session ended ~17:45, so that's **Thursday 15 Oct** (Tuesday and Wednesday
+    mornings fall short).
 
 ## What would change the plan
 - Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,
