@@ -80,6 +80,11 @@ meant less tired. Left 4–8 min recovery per lap.
 - **May–Aug 2026 — the Achilles episode.** Onset after the 127km backyard (30–31 May)
   `[stated]`; flare 13 Jul ("Ankle of glass") `[data]`; limping, morning stiffness `[stated]`;
   pain-free by ~10 Aug `[data]`
+- **Aug–Oct 2026 — left lateral foot, soft-tissue-type pain on landing** `[stated, 2026-10-11]`.
+  Outside bottom of the left foot. First felt at the Sydney marathon (30 Aug), went away, and
+  came back 9–10 Oct in the week running rose to ~25km with an 11.9km long run. 1/10, hurts
+  walking, not tender to press, no swelling, no rest or night pain. Jack reads it as soft
+  tissue, not bone. Undiagnosed: not assessed by a physio.
 - **This is a recent episode, not a historical condition** `[stated]`. It does not recur across
   previous years. Monthly volume Jan–May 2026 ran 164 → 183 → 154 → 193 → 280km, rising with no
   sign of load management `[data]`. Independently corroborated: **"I'm injury free"**, six days
