@@ -37,10 +37,10 @@ are targets, ±1km either way — the ceiling is what matters, not hitting the n
 | 3 | Easy 2 | 5km | 5:30–6:00/km | the new, 4th run |
 | 3 | Easy 3 | 6km | 5:30–6:00/km | + strides |
 | 3 | Long | 10km | 5:30–6:00/km or slower | held at 10km, not cut to 8 (changed 4 Oct, Jack's call) |
-| 4 | Easy 1 | 6km | 5:30–6:00/km | + strides |
+| 4 | Easy 1 | 5km | 5:30–6:00/km | + strides (changed 11 Oct) |
 | 4 | Easy 2 | 5km | 5:30–6:00/km | |
-| 4 | Easy 3 | 6km | 5:30–6:00/km | + strides |
-| 4 | Long | 9km | 5:30–6:00/km or slower | hold — don't extend yet |
+| 4 | Easy 3 | 5km | 5:30–6:00/km | as 2×2.5km to and from the gym, or one run (changed 11 Oct) |
+| 4 | Long | 12km | 5:30–6:00/km or slower | 12km, Jack's call (changed 11 Oct; block had 9) |
 | 5 | Easy 1 | 5km | 5:30–6:00/km | + strides |
 | 5 | Easy 2 | 5km | 5:30–6:00/km | |
 | 5 | Easy 3 | 6km | 5:30–6:00/km | + strides |
@@ -237,11 +237,54 @@ the baseline timing.
     work. Sunday's session ended ~17:45, so that's **Thursday 15 Oct** (Tuesday and Wednesday
     mornings fall short).
 
+**Week 4 (12–18 Oct).** Constraint: Swansea Monday–Wednesday, back late Wednesday. A busy week,
+so days stay open to moving `[stated, 2026-10-11]`. Guardrails for moving things: no
+gym and long run on the same day, the day before the long run is rest or easy, and Session B
+isn't moved to before the long run.
+
+| Day | Session |
+|---|---|
+| Mon 12 | Easy — 5km, Swansea, evening |
+| Tue 13 | Easy — 5km + strides 4–6×20s (full recovery), Swansea, evening |
+| Wed 14 | Rest (travel home late) |
+| Thu 15 | Gym — Session A (front squat, even week; or Friday). Heel-raise baseline first thing |
+| Fri 16 | Easy — 5km (2×2.5km to and from Session A on Thursday, or a run Friday) |
+| Sat 17 | Long — 12km, natural easy pace |
+| Sun 18 | Gym — Session B (trap-bar deadlift, even week) |
+
+*Why this week*
+
+| Decision | Why | Source |
+|---|---|---|
+| 4 runs, ~27km (~28 with extras) | Repeat week 3's aim: the fourth run never happened, so frequency hasn't risen yet | Block plan; higher chronic load protects **[W]**; week 3 summary |
+| Monday and Tuesday runs in Swansea | Only way to fit four runs around the trip | `[stated, 2026-10-11]` |
+| Long run 12km | 11.9km is now the recent longest, so no spike. Jack's call over Claude's 10km cap | Spike evidence **[W]**; `[stated, 2026-10-11]` |
+| Easy runs 5km, strides once | Keep the week near plan with a longer long run; strides two days clear of Sunday's calf work | Judgement **[H]**; spacing **[W/H]** |
+| Fourth run as run to and from Thursday's gym | Leaves Friday as rest before the long run. Easy running before lifting costs little | Concurrent training **[W]**; `[stated, 2026-10-11]` |
+| Heel-raise baseline Thursday morning | First fresh morning ≥72h after Sunday's calf work | `tests.md` protocol |
+| Anchors held: front squat 60–65kg, trap bar 90–95kg | Both anchors hit their ceiling in week 3 | Model §3; week 3 summary |
+| Pogos parked | They load the outer forefoot, where the foot hurts on landing | Week 3 summary |
+| Shoulder press 16–17.5kg | 15kg was "easy" | Log, 6 Oct |
+
+*Weak points*
+
+- **The 12km long run is the most landings on a foot that hurts on landing.** Check walking
+  each morning. Stop a run if it worsens. If it's sore on Saturday morning, cut the long run
+  to 9–10km.
+- **Session B the day after the long run again**, the weaker end of the spacing guidance.
+  Tolerated in weeks 2–3.
+- **Thursday is a heavy day if everything lands on it**: baseline in the morning, then
+  runs and Session A in the evening, straight after travel. Cycling instead, or moving the
+  gym and run to Friday, is within the plan.
+- **Recent decisions**: the 12km long run and the flexible Thursday/Friday both came from the
+  last day's conversation `[stated]`.
+
 ## What would change the plan
 - Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,
   freeze reactive level, keep calf work.
 - Any reactive exercise's pain not settling <3/10: stay at that level, don't progress it.
 - Enjoyment dropping or adherence slipping: simplify the rotation before cutting volume.
+
 
 ---
 
