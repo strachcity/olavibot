@@ -237,13 +237,6 @@ the baseline timing.
     work. Sunday's session ended ~17:45, so that's **Thursday 15 Oct** (Tuesday and Wednesday
     mornings fall short).
 
-## What would change the plan
-- Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,
-  freeze reactive level, keep calf work.
-- Any reactive exercise's pain not settling <3/10: stay at that level, don't progress it.
-- Enjoyment dropping or adherence slipping: simplify the rotation before cutting volume.
-
-
 **Week 4 (12–18 Oct).** Constraint: Swansea Monday–Wednesday, back late Wednesday. A busy week,
 so days stay open to moving `[stated, 2026-10-11]`. Guardrails for moving things: no
 gym and long run on the same day, the day before the long run is rest or easy, and Session B
@@ -285,6 +278,13 @@ isn't moved to before the long run.
   gym and run to Friday, is within the plan.
 - **Recent decisions**: the 12km long run and the flexible Thursday/Friday both came from the
   last day's conversation `[stated]`.
+
+## What would change the plan
+- Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,
+  freeze reactive level, keep calf work.
+- Any reactive exercise's pain not settling <3/10: stay at that level, don't progress it.
+- Enjoyment dropping or adherence slipping: simplify the rotation before cutting volume.
+
 
 ---
 
