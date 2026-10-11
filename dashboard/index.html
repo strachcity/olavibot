@@ -108,29 +108,29 @@
   [data-sky="coordinate"] .glass { background: color-mix(in srgb, var(--ground) 38%, transparent); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); box-shadow: none; }
   .dots { position: absolute; inset: 0; background-image: radial-gradient(circle, var(--dot) 1px, transparent 1.5px); background-size: 12px 12px; }
   .tone, .tone-shade { position: absolute; inset: 0; --m:
-      radial-gradient(ellipse 9% 4% at 80% 9%, #000 35%, transparent 72%),
-      radial-gradient(ellipse 5% 11% at 22% 28%, #000 35%, transparent 72%),
-      radial-gradient(ellipse 11% 4% at 30% 38%, #000 35%, transparent 72%),
-      radial-gradient(ellipse 3.4% 14% at 63% 50%, #000 35%, transparent 72%),
-      radial-gradient(ellipse 3.2% 10% at 29% 68%, #000 35%, transparent 72%),
-      radial-gradient(ellipse 7% 7% at 8% 82%, #000 35%, transparent 72%),
-      radial-gradient(ellipse 4% 11% at 75% 86%, #000 35%, transparent 72%);
+      radial-gradient(ellipse 6% 3.5% at 90% 8%, #000 35%, transparent 72%),
+      radial-gradient(ellipse 3% 9% at 5% 22%, #000 35%, transparent 72%),
+      radial-gradient(ellipse 2.4% 11% at 96% 38%, #000 35%, transparent 72%),
+      radial-gradient(ellipse 6% 3% at 6% 50%, #000 35%, transparent 72%),
+      radial-gradient(ellipse 2.6% 9% at 95% 64%, #000 35%, transparent 72%),
+      radial-gradient(ellipse 4% 6% at 5% 80%, #000 35%, transparent 72%),
+      radial-gradient(ellipse 3% 8% at 91% 91%, #000 35%, transparent 72%);
     -webkit-mask-image: var(--m); mask-image: var(--m); }
   .tone { background-image: radial-gradient(circle, var(--tone) 4px, transparent 4.6px); background-size: 12px 12px; }
   .tone-shade { background: var(--tone-shade); filter: blur(22px); transform: translate(-14px, 10px) scale(1.15); opacity: .55; }
-  .beam { position: absolute; top: -5%; bottom: -5%; left: 50%; width: 3px; transform: translateX(-50%);
+  .beam { position: absolute; top: -5%; bottom: -5%; left: 50%; width: 2px; transform: translateX(-50%); opacity: .85;
     background: linear-gradient(transparent, var(--beam) 12%, var(--beam) 88%, transparent);
-    box-shadow: 0 0 10px 3px var(--beam-glow), 0 0 36px 10px var(--beam-haze); animation: hum 7s ease-in-out infinite alternate; }
+    box-shadow: 0 0 6px 2px var(--beam-glow), 0 0 22px 6px var(--beam-haze); animation: hum 7s ease-in-out infinite alternate; }
   .hline { position: absolute; left: 0; right: 0; height: 2px;
     background: linear-gradient(90deg, transparent, var(--beam-glow) 20%, var(--beam-glow) 80%, transparent);
     box-shadow: 0 0 10px 2px var(--beam-haze); opacity: .7; }
   .hline.h1 { top: 24%; } .hline.h2 { top: 74%; }
-  .flare { position: absolute; left: 50%; width: 360px; height: 360px; transform: translate(-50%, -50%);
+  .flare { position: absolute; left: 50%; width: 300px; height: 300px; opacity: .9; transform: translate(-50%, -50%);
     background: radial-gradient(circle, #fff 0, var(--beam) 3%, var(--beam-glow) 8%, transparent 26%); animation: hum 5s ease-in-out infinite alternate; }
   .flare.f1 { top: 24%; } .flare.f2 { top: 74%; animation-delay: -2.5s; }
   .flare::before, .flare::after { content: ""; position: absolute; left: 50%; top: 50%; background: linear-gradient(90deg, transparent, var(--beam) 50%, transparent); }
-  .flare::before { width: 100%; height: 16px; transform: translate(-50%, -50%); clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%); }
-  .flare::after { width: 16px; height: 100%; transform: translate(-50%, -50%); background: linear-gradient(transparent, var(--beam) 50%, transparent); clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
+  .flare::before { width: 100%; height: 12px; transform: translate(-50%, -50%); clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%); }
+  .flare::after { width: 12px; height: 100%; transform: translate(-50%, -50%); background: linear-gradient(transparent, var(--beam) 50%, transparent); clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
   .tone { opacity: .85; }
   @media (max-width: 760px) { .tone { opacity: .28; } .tone-shade { opacity: .3; } }
   @keyframes hum { to { opacity: .72; } }
@@ -167,7 +167,7 @@
   .week { padding: 26px 28px 24px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; }
   .headline { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
   .headline h1 { margin: 0; font-weight: 200; font-size: clamp(40px, 6.2vw, 78px); line-height: .95; letter-spacing: -.035em; text-wrap: balance; }
-  .headline h1 b { font-weight: 500; background: linear-gradient(90deg, var(--accent), var(--accent-2)); filter: drop-shadow(0 0 14px var(--text-glow)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .headline h1 b { font-weight: 500; color: var(--accent); }
   .ring { position: relative; width: 132px; height: 132px; flex: none; }
   .ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
   .ring .c { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; }
@@ -1330,7 +1330,7 @@ const RECIPES = [
 ];
 // Pin-only recipes: not in the dealt deck (adding them there would re-deal past weeks).
 const SPECIALS = [
-  { name: "coordinate", mode: "light", hue: [205, 230], shift: -170, sky: "coordinate" },  // dot grid, halftone marks, orange beam
+  { name: "coordinate", mode: "light", hue: [205, 230], shift: -160, sky: "coordinate" },  // dot grid, halftone marks, orange beam
 ];
 const PINNED = {
   "2026-09-21": { recipe: "dusk", hue: 42 },   // the original ember-and-mint week
@@ -1402,7 +1402,7 @@ function paletteFor(monday, mode) {
     dot: dark ? rgba(oklch(.9, .02, h), .22) : rgba(oklch(.3, .03, h), .32),
     tone: dark ? oklch(.92, .02, h) : oklch(.16, .02, h),
     "tone-shade": dark ? rgba(oklch(.6, .08, h), .5) : rgba(oklch(.55, .09, h), .55),
-    beam: oklch(.74, .19, ah), "beam-glow": rgba(oklch(.78, .17, ah), .75), "beam-haze": rgba(oklch(.8, .14, ah), .35),
+    beam: null, "beam-glow": rgba(oklch(.72, .18, ah), .6), "beam-haze": rgba(oklch(.78, .14, ah), .28),
     ink: dark ? oklch(.95, .01, h) : oklch(.22, .02, h),
     "ink-2": readable(dark ? .8 : .42, .015, h, ground, 7, dark),
     "ink-3": readable(dark ? .62 : .54, .015, h, ground, 4.5, dark),
@@ -1413,7 +1413,7 @@ function paletteFor(monday, mode) {
     edge: dark ? "rgba(255,255,255,.13)" : "rgba(255,255,255,.65)",
     highlight: dark ? "rgba(255,255,255,.08)" : "rgba(255,255,255,.9)",
     "shadow-color": dark ? "rgba(0,0,0,.6)" : rgba(oklch(.35, .1, h), .35),
-    accent: readable(dark ? .88 : .5, dark ? .14 : .15, ah, ground, 4.5, dark),
+    accent: readable(dark ? .88 : recipe.sky === "coordinate" ? .62 : .5, dark ? .14 : recipe.sky === "coordinate" ? .2 : .15, ah, ground, 4.5, dark),
     "accent-2": dark ? oklch(.96, .05, ah) : oklch(.68, .16, ah),   // light: runs up to a brighter tint for sheen
     "text-glow": dark ? "rgba(0,0,0,0)" : rgba(oklch(.72, .17, ah), .55),   // dark glows on its own; light gets a halo
     warm: readable(dark ? .72 : .6, .17, h, ground, 3, dark),
@@ -1425,6 +1425,7 @@ function paletteFor(monday, mode) {
     easy: dark ? "#4fd8a0" : "#1b9a6b", steady: dark ? "#2f8a70" : "#7cc4a8", grey: dark ? "#8d90a0" : "#9a9dab",
     "grey-top": dark ? "#e3e4ea" : "#5b5e6b", hard: dark ? "#ff7a45" : "#e0602c", race: dark ? "#f3ece4" : "#2b2f36",
   };
+  P.beam = P.accent;   // the beam is the accent: one orange, not two
   return P;
 }
 // Light/dark: each week's recipe picks a default; the header button overrides it, and the
