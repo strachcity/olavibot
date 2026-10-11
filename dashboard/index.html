@@ -100,6 +100,42 @@
   @keyframes slide { to { transform: translateX(-120px); } }
   @media (prefers-reduced-motion: reduce) { .blob, .streaks { animation: none; } }
 
+  /* ---------- "coordinate" sky: dot grid, halftone marks, a light beam with flares ----------
+     Used instead of the glow blobs when a week's recipe sets sky: "coordinate". */
+  .coord { display: none; position: absolute; inset: 0; }
+  [data-sky="coordinate"] .coord { display: block; }
+  [data-sky="coordinate"] .blob, [data-sky="coordinate"] .streaks { display: none; }
+  [data-sky="coordinate"] .glass { background: color-mix(in srgb, var(--ground) 38%, transparent); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); box-shadow: none; }
+  .dots { position: absolute; inset: 0; background-image: radial-gradient(circle, var(--dot) 1px, transparent 1.5px); background-size: 12px 12px; }
+  .tone, .tone-shade { position: absolute; inset: 0; --m:
+      radial-gradient(ellipse 6% 3.5% at 90% 8%, #000 35%, transparent 72%),
+      radial-gradient(ellipse 3% 9% at 5% 22%, #000 35%, transparent 72%),
+      radial-gradient(ellipse 2.4% 11% at 96% 38%, #000 35%, transparent 72%),
+      radial-gradient(ellipse 6% 3% at 6% 50%, #000 35%, transparent 72%),
+      radial-gradient(ellipse 2.6% 9% at 95% 64%, #000 35%, transparent 72%),
+      radial-gradient(ellipse 4% 6% at 5% 80%, #000 35%, transparent 72%),
+      radial-gradient(ellipse 3% 8% at 91% 91%, #000 35%, transparent 72%);
+    -webkit-mask-image: var(--m); mask-image: var(--m); }
+  .tone { background-image: radial-gradient(circle, var(--tone) 4px, transparent 4.6px); background-size: 12px 12px; }
+  .tone-shade { background: var(--tone-shade); filter: blur(22px); transform: translate(-14px, 10px) scale(1.15); opacity: .55; }
+  .beam { position: absolute; top: -5%; bottom: -5%; left: 50%; width: 3px; transform: translateX(-50%);
+    background: linear-gradient(transparent, var(--beam) 12%, var(--beam) 88%, transparent);
+    box-shadow: 0 0 10px 3px var(--beam-glow), 0 0 40px 12px var(--beam-haze); animation: hum 7s ease-in-out infinite alternate; }
+  .hline { position: absolute; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--beam-glow) 20%, var(--beam-glow) 80%, transparent);
+    box-shadow: 0 0 10px 2px var(--beam-haze); opacity: .7; }
+  .hline.h1 { top: 24%; } .hline.h2 { top: 74%; }
+  .flare { position: absolute; left: 50%; width: 340px; height: 340px; transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #fff 0, var(--beam) 4%, var(--beam-glow) 11%, transparent 32%); animation: hum 5s ease-in-out infinite alternate; }
+  .flare.f1 { top: 24%; } .flare.f2 { top: 74%; animation-delay: -2.5s; }
+  .flare::before, .flare::after { content: ""; position: absolute; left: 50%; top: 50%; background: linear-gradient(90deg, transparent, var(--beam) 50%, transparent); }
+  .flare::before { width: 100%; height: 12px; transform: translate(-50%, -50%); clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%); }
+  .flare::after { width: 12px; height: 100%; transform: translate(-50%, -50%); background: linear-gradient(transparent, var(--beam) 50%, transparent); clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
+  .tone { opacity: .85; }
+  @media (max-width: 760px) { .tone { opacity: .28; } .tone-shade { opacity: .3; } }
+  @keyframes hum { to { opacity: .72; } }
+  @media (prefers-reduced-motion: reduce) { .beam, .flare { animation: none; } }
+
   /* ---------- frame ---------- */
   .wrap { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding-inline: 20px; padding-block: 22px 48px; display: grid; gap: 16px; }
   .glass {
@@ -131,7 +167,7 @@
   .week { padding: 26px 28px 24px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; }
   .headline { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
   .headline h1 { margin: 0; font-weight: 200; font-size: clamp(40px, 6.2vw, 78px); line-height: .95; letter-spacing: -.035em; text-wrap: balance; }
-  .headline h1 b { font-weight: 500; background: linear-gradient(90deg, var(--accent), var(--accent-2)); filter: drop-shadow(0 0 14px var(--text-glow)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .headline h1 b { font-weight: 500; }
   .ring { position: relative; width: 132px; height: 132px; flex: none; }
   .ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
   .ring .c { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; }
@@ -189,7 +225,7 @@
   /* ---------- middle ---------- */
   .mid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 16px; }
   .grey-head { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin: 12px 0 18px; }
-  .grey-head .big { font-size: clamp(64px, 9vw, 112px); font-weight: 200; letter-spacing: -.05em; line-height: .85; background: linear-gradient(180deg, var(--grey-top), var(--grey)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .grey-head .big { font-size: clamp(64px, 9vw, 112px); font-weight: 200; letter-spacing: -.05em; line-height: .85; color: var(--grey-top); }
   .grey-head p { margin: 0; max-width: 34ch; color: var(--ink-2); font-size: 14px; }
   .years { display: grid; gap: 10px; }
   .yr { display: grid; grid-template-columns: 44px 1fr; gap: 12px; align-items: center; }
@@ -337,7 +373,11 @@
 
 <div class="sky" aria-hidden="true">
   <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
-  <div class="streaks"></div><div class="grain"></div>
+  <div class="streaks"></div>
+  <div class="coord"><div class="dots"></div><div class="tone-shade"></div><div class="tone"></div>
+    <div class="hline h1"></div><div class="hline h2"></div><div class="beam"></div>
+    <div class="flare f1"></div><div class="flare f2"></div></div>
+  <div class="grain"></div>
 </div>
 
 <main class="wrap">
@@ -733,7 +773,7 @@ function ringSVG(done, planned) {
   const r = 52, C = 2 * Math.PI * r, f = planned ? Math.min(1, done / planned) : 0;
   return `<svg viewBox="0 0 120 120"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--accent)"/><stop offset="1" style="stop-color:var(--accent-2)"/></linearGradient></defs>
     <circle cx="60" cy="60" r="${r}" fill="none" style="stroke:color-mix(in srgb, var(--fg) 10%, transparent)" stroke-width="6"/>
-    <circle cx="60" cy="60" r="${r}" fill="none" stroke="url(#rg)" stroke-width="6" stroke-linecap="round" stroke-dasharray="${C * f} ${C}"/></svg>
+    <circle cx="60" cy="60" r="${r}" fill="none" stroke="url(#rg)" stroke-width="6" stroke-linecap="round" stroke-dasharray="${C * f} ${C}" style="filter:drop-shadow(0 0 6px var(--accent))"/></svg>
     <div class="c"><strong class="num">${+done.toFixed(1)}</strong><span>${planned ? `of ${+planned.toFixed(1)} km` : "km"}</span></div>`;
 }
 
@@ -1280,6 +1320,7 @@ function drawFitness(host) {
 // Each week (by its Monday) deterministically picks a recipe and a hue, so a week keeps its
 // colours on every device and past weeks keep theirs. The name is "<hue word> <recipe>".
 // To grow the book, add a recipe. To fix a week you don't like, pin it in PINNED.
+// To keep one look running week after week, set HOLD; clear it (null) to go back to the deal.
 const RECIPES = [
   { name: "dusk",     mode: "dark",  hue: [25, 60],   shift: 125 },   // ember glow, mint accent
   { name: "frost",    mode: "light", hue: [215, 255], shift: 25 },    // bright, frosted, blue
@@ -1288,10 +1329,18 @@ const RECIPES = [
   { name: "canopy",   mode: "dark",  hue: [140, 175], shift: -115 },  // forest, coral accent
   { name: "haze",     mode: "light", hue: [55, 90],   shift: 170 },   // sand and sun, indigo accent
 ];
+// Pin-only recipes: not in the dealt deck (adding them there would re-deal past weeks).
+const SPECIALS = [
+  { name: "coordinate", mode: "light", hue: [205, 230], shift: -160, sky: "coordinate" },  // dot grid, halftone marks, orange beam
+];
 const PINNED = {
   "2026-09-21": { recipe: "dusk", hue: 42 },   // the original ember-and-mint week
   "2026-09-28": { recipe: "frost", hue: 235 }, // dealt moss canopy, too close to week 1's green and orange
+  "2026-10-12": { recipe: "coordinate", hue: 218 }, // Jack's pick: the Ewha "The Coordinate" poster look
 };
+// Every week from `from` on wears this until Jack changes it. When he does, pin the held
+// weeks in PINNED first so they keep this look.
+const HOLD = { from: "2026-10-12", recipe: "coordinate", hue: 218 };
 const HUE_WORDS = [[20, "cherry"], [45, "ember"], [75, "amber"], [105, "citrus"], [150, "moss"], [185, "jade"],
   [215, "lagoon"], [250, "cobalt"], [285, "indigo"], [320, "violet"], [345, "orchid"], [360, "cherry"]];
 const hueWord = h => HUE_WORDS.find(([m]) => ((h % 360) + 360) % 360 < m)[1];
@@ -1335,7 +1384,8 @@ const huesOf = p => [p.hue, p.hue + p.recipe.shift];
 const fresh = (p, q) => huesOf(q).every(b => hueGap(p.hue, b) >= 60);
 function pickFor(monday) {
   if (PICKS[monday]) return PICKS[monday];
-  if (!REROLL && PINNED[monday]) return PICKS[monday] = { recipe: RECIPES.find(r => r.name === PINNED[monday].recipe) || RECIPES[0], hue: PINNED[monday].hue };
+  const fixed = !REROLL && (PINNED[monday] || (HOLD && monday >= HOLD.from && HOLD));
+  if (fixed) return PICKS[monday] = { recipe: [...RECIPES, ...SPECIALS].find(r => r.name === fixed.recipe) || RECIPES[0], hue: fixed.hue };
   const w = Math.round(ms(monday) / (7 * DAY)) + REROLL * 7919;
   const at = i => { const r = RECIPES[i]; return { recipe: r, hue: r.hue[0] + rand(w * 40503 + 7) * (r.hue[1] - r.hue[0]) }; };
   // The last three weeks, newest first. No recipe returns within three weeks; failing that,
@@ -1353,7 +1403,11 @@ function paletteFor(monday, mode) {
   const dark = (mode || recipe.mode) === "dark", h = hue, ah = hue + recipe.shift;
   const ground = dark ? oklch(.155, .012, h) : oklch(.89, .03, h);   // light: mid-tone, so the glass has colour to frost
   const P = {
-    name: `${hueWord(h)} ${recipe.name}`, dark, ground,
+    name: `${hueWord(h)} ${recipe.name}`, dark, ground, sky: recipe.sky || "glow",
+    dot: dark ? rgba(oklch(.9, .02, h), .22) : rgba(oklch(.3, .03, h), .32),
+    tone: dark ? oklch(.92, .02, h) : oklch(.16, .02, h),
+    "tone-shade": dark ? rgba(oklch(.6, .08, h), .5) : rgba(oklch(.55, .09, h), .55),
+    beam: null, "beam-glow": rgba(oklch(.78, .19, ah), .85), "beam-haze": rgba(oklch(.82, .15, ah), .45),
     ink: dark ? oklch(.95, .01, h) : oklch(.22, .02, h),
     "ink-2": readable(dark ? .8 : .42, .015, h, ground, 7, dark),
     "ink-3": readable(dark ? .62 : .54, .015, h, ground, 4.5, dark),
@@ -1364,7 +1418,7 @@ function paletteFor(monday, mode) {
     edge: dark ? "rgba(255,255,255,.13)" : "rgba(255,255,255,.65)",
     highlight: dark ? "rgba(255,255,255,.08)" : "rgba(255,255,255,.9)",
     "shadow-color": dark ? "rgba(0,0,0,.6)" : rgba(oklch(.35, .1, h), .35),
-    accent: readable(dark ? .88 : .5, dark ? .14 : .15, ah, ground, 4.5, dark),
+    accent: recipe.sky === "coordinate" ? oklch(.73, .2, ah) : readable(dark ? .88 : .5, dark ? .14 : .15, ah, ground, 4.5, dark),   // coordinate: bright orange by choice, below 4.5:1 for small text
     "accent-2": dark ? oklch(.96, .05, ah) : oklch(.68, .16, ah),   // light: runs up to a brighter tint for sheen
     "text-glow": dark ? "rgba(0,0,0,0)" : rgba(oklch(.72, .17, ah), .55),   // dark glows on its own; light gets a halo
     warm: readable(dark ? .72 : .6, .17, h, ground, 3, dark),
@@ -1376,6 +1430,8 @@ function paletteFor(monday, mode) {
     easy: dark ? "#4fd8a0" : "#1b9a6b", steady: dark ? "#2f8a70" : "#7cc4a8", grey: dark ? "#8d90a0" : "#9a9dab",
     "grey-top": dark ? "#e3e4ea" : "#5b5e6b", hard: dark ? "#ff7a45" : "#e0602c", race: dark ? "#f3ece4" : "#2b2f36",
   };
+  P.beam = P.accent;
+  if (recipe.sky === "coordinate") { P.warm = P.accent; P["accent-2"] = oklch(.82, .17, ah); }   // one orange everywhere
   return P;
 }
 // Light/dark: each week's recipe picks a default; the header button overrides it, and the
@@ -1392,6 +1448,7 @@ function applyPalette(monday) {
   Object.entries(P).forEach(([k, v]) => typeof v === "string" && k !== "name" && root.setProperty("--" + k, v));
   root.setProperty("color-scheme", P.dark ? "dark" : "light");
   document.documentElement.dataset.mode = P.dark ? "dark" : "light";
+  document.documentElement.dataset.sky = P.sky;
   $("mood-pill").innerHTML = `<i></i>${esc(P.name)}`;
   const btn = $("mode-btn");
   $("knob").innerHTML = P.dark ? ICONS.moon : ICONS.sun;
