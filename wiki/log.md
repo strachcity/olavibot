@@ -1037,3 +1037,11 @@ lands on them again. Corrected in both versions: the heel-raise baseline timing.
 Sunday's calf work makes Thursday 15 Oct the first fresh morning; Claude Code's "Tuesday" and
 claude.ai's "Wednesday" were both short. Open for Jack: long run 9km (block) or 10–12km
 (claude.ai).
+
+## [2026-10-11] block | Week 4 schedule, Foundations
+Agreed with Jack `[stated, 2026-10-11]`. Constraint: Swansea Monday–Wednesday. Four runs (easy
+5km, easy 5km + strides, easy 5km as 2×2.5km to and from Thursday's gym or a Friday run, long
+12km; ~27km) and Sessions A (Thursday or Friday) and B (Sunday). Heel-raise baseline Thursday
+morning. Days stay open to moving, within the stated guardrails. Changes from the block's
+week 4: long run 12km instead of 9km (Jack's call, against Claude's 10km cap), and easy runs
+5km instead of 6km. Pogos stay parked for the foot; anchors held.
