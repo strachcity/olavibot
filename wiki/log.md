@@ -1001,3 +1001,21 @@ Plan agreed in principle: Session B goes ahead (no hopping). Before each run, wa
 pain-free that morning. Stop the run if it worsens as it goes. A physio if walking pain lasts
 beyond ~3–4 days, if it rises, if a tender spot on the bone appears, or if it keeps coming
 back. It has now recurred once since the marathon.
+
+## [2026-10-11] gym | Session B — Foundations wk3 (full gym)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 95
+gym: full
+session: B
+reactive_level: 2
+relative_effort: 13
+```
+- Planned: Warm-up (mobility round; tibialis raises 1×15; short-foot holds, single-leg balance, heel/toe walks 3×20s each; no pogos). Reactive L2: seated calf raise full range 3×12 @~35kg, 3s up / 3s down. Conventional deadlift ramp bar×10 → 50×5 → 70×3 → 85×1–2, then working 3×5 @~95kg RPE7, ceiling 100kg. Superset: standing calf raise both legs straight knee 3×10 @10–12.5kg DBs (both legs because of the left lateral foot pain; drop to bodyweight if foot >2/10) + DB press 3×8 @22.5kg. Superset: Copenhagen plank short lever 3×20–25s/side + barbell row 3×8 @~47.5–50kg. Cool-down.
+- Done: Cycled to the gym. Warm-up as planned. Seated calf raise 3×12 @~35kg as planned. Deadlift ramp as planned, working 3×5 @100kg on a 20kg deadlift bar, no straps, grip held `[stated]`. Standing calf raise both legs 3×10 @15kg DB each hand (12.5kg not available). Bench press 3×8 @50kg (in place of DB press). Copenhagen plank 3×25s/side. Barbell row 3×8 @50kg. Cool-down. Left foot 1/10 through the loaded calf work, same as before the session `[stated]`.
+  Strava: 95:02, relative effort 13, no exercise sets `[data, Strava activity 20545005703]`
+- Beyond plan: none. Deadlift at the 100kg ceiling, not above it; calf DBs 15kg vs 12.5kg because of kit; bench for DB press is a listed option.
+- Capacity: not reported.
+- Review: Reactive Level 2 started: full-range seated calf raises replace the isometric holds, with the Achilles at 0/10 every recorded morning this week. Deadlift 3×5 @100kg without straps, up 10kg on 27 Sep with grip holding — better evidence than last time that grip keeps up with the legs at sets of 5. Second session this week where the working load went to the ceiling instead of the target (squat 90 vs 85 on 6 Oct): neither broke a rule, together they're the ceiling-becomes-target pattern from model §3. Next odd week holds deadlift at 100kg. The left foot didn't react to loaded double-leg calf raises — the most useful thing today showed about it. Copenhagen 25s/side, top of the range; long lever or longer holds become the next step. Barbell row 50kg matches the best on record (23 Aug). `duration_min` 95 may include the cycle to the gym; not confirmed.
