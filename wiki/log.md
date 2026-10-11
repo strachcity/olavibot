@@ -989,3 +989,15 @@ The extra 1.9km on the 10 Oct long run was the run home `[stated, 2026-10-10]`, 
 2026-10-10]`, yet HR ran the lowest of any long run (136). The 11 Oct morning score should be
 read with the known alcohol effect in mind (`observations.md`). This replaces a note
 mistakenly logged as a `rest` entry, removed at Jack's request.
+
+## [2026-10-11] review | Left lateral foot pain flagged
+Jack reports pain under the outside of the left foot on landing, 1/10. It hurts when
+walking, isn't tender to press, has no swelling and no pain at rest or at night `[stated,
+2026-10-11]`. First felt at the Sydney marathon (30 Aug), settled, and returned over the last
+couple of days, in the week of the block's biggest running jump (~19 → ~25km, long run
+11.9km). Added to `athlete.md` → Injury history. No diagnosis made here.
+
+Plan agreed in principle: Session B goes ahead (no hopping). Before each run, walking must be
+pain-free that morning. Stop the run if it worsens as it goes. A physio if walking pain lasts
+beyond ~3–4 days, if it rises, if a tender spot on the bone appears, or if it keeps coming
+back. It has now recurred once since the marathon.
