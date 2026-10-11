@@ -1320,6 +1320,7 @@ function drawFitness(host) {
 // Each week (by its Monday) deterministically picks a recipe and a hue, so a week keeps its
 // colours on every device and past weeks keep theirs. The name is "<hue word> <recipe>".
 // To grow the book, add a recipe. To fix a week you don't like, pin it in PINNED.
+// To keep one look running week after week, set HOLD; clear it (null) to go back to the deal.
 const RECIPES = [
   { name: "dusk",     mode: "dark",  hue: [25, 60],   shift: 125 },   // ember glow, mint accent
   { name: "frost",    mode: "light", hue: [215, 255], shift: 25 },    // bright, frosted, blue
@@ -1337,6 +1338,9 @@ const PINNED = {
   "2026-09-28": { recipe: "frost", hue: 235 }, // dealt moss canopy, too close to week 1's green and orange
   "2026-10-12": { recipe: "coordinate", hue: 218 }, // Jack's pick: the Ewha "The Coordinate" poster look
 };
+// Every week from `from` on wears this until Jack changes it. When he does, pin the held
+// weeks in PINNED first so they keep this look.
+const HOLD = { from: "2026-10-12", recipe: "coordinate", hue: 218 };
 const HUE_WORDS = [[20, "cherry"], [45, "ember"], [75, "amber"], [105, "citrus"], [150, "moss"], [185, "jade"],
   [215, "lagoon"], [250, "cobalt"], [285, "indigo"], [320, "violet"], [345, "orchid"], [360, "cherry"]];
 const hueWord = h => HUE_WORDS.find(([m]) => ((h % 360) + 360) % 360 < m)[1];
@@ -1380,7 +1384,8 @@ const huesOf = p => [p.hue, p.hue + p.recipe.shift];
 const fresh = (p, q) => huesOf(q).every(b => hueGap(p.hue, b) >= 60);
 function pickFor(monday) {
   if (PICKS[monday]) return PICKS[monday];
-  if (!REROLL && PINNED[monday]) return PICKS[monday] = { recipe: [...RECIPES, ...SPECIALS].find(r => r.name === PINNED[monday].recipe) || RECIPES[0], hue: PINNED[monday].hue };
+  const fixed = !REROLL && (PINNED[monday] || (HOLD && monday >= HOLD.from && HOLD));
+  if (fixed) return PICKS[monday] = { recipe: [...RECIPES, ...SPECIALS].find(r => r.name === fixed.recipe) || RECIPES[0], hue: fixed.hue };
   const w = Math.round(ms(monday) / (7 * DAY)) + REROLL * 7919;
   const at = i => { const r = RECIPES[i]; return { recipe: r, hue: r.hue[0] + rand(w * 40503 + 7) * (r.hue[1] - r.hue[0]) }; };
   // The last three weeks, newest first. No recipe returns within three weeks; failing that,
