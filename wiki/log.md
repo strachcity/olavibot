@@ -1019,3 +1019,12 @@ relative_effort: 13
 - Beyond plan: none. Deadlift at the 100kg ceiling, not above it; calf DBs 15kg vs 12.5kg because of kit; bench for DB press is a listed option.
 - Capacity: not reported.
 - Review: Reactive Level 2 started: full-range seated calf raises replace the isometric holds, with the Achilles at 0/10 every recorded morning this week. Deadlift 3×5 @100kg without straps, up 10kg on 27 Sep with grip holding — better evidence than last time that grip keeps up with the legs at sets of 5. Second session this week where the working load went to the ceiling instead of the target (squat 90 vs 85 on 6 Oct): neither broke a rule, together they're the ceiling-becomes-target pattern from model §3. Next odd week holds deadlift at 100kg. The left foot didn't react to loaded double-leg calf raises — the most useful thing today showed about it. Copenhagen 25s/side, top of the range; long lever or longer holds become the next step. Barbell row 50kg matches the best on record (23 Aug). `duration_min` 95 may include the cycle to the gym; not confirmed.
+
+## [2026-10-11] review | Week 3 summary
+Written under week 3 in `blocks/2026-09-foundations.md`. In short:
+- 5 of 6 sessions done; 25.4km of 26 planned; Achilles 0 all week.
+- Easy-running HR is trending down at the same or faster pace.
+- Squat 90kg and deadlift 100kg, both at their ceilings.
+- Heel-raise baseline missed twice.
+- Watch the left lateral foot.
+- Next week holds volume and lift loads, and keeps pogos parked.
