@@ -1045,3 +1045,20 @@ Agreed with Jack `[stated, 2026-10-11]`. Constraint: Swansea Monday–Wednesday.
 morning. Days stay open to moving, within the stated guardrails. Changes from the block's
 week 4: long run 12km instead of 9km (Jack's call, against Claude's 10km cap), and easy runs
 5km instead of 6km. Pogos stay parked for the foot; anchors held.
+
+## [2026-10-12] run | Easy 5km — Foundations wk4 (Swansea)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 29
+distance_km: 5.01
+avg_pace: 5:39
+run_type: easy
+relative_effort: 18
+```
+- Planned: Easy 5km, Swansea, evening. Walking pain-free that morning before running (left foot rule).
+- Done: 5.01km in 28:17 moving (28:41 elapsed), 5:39/km, avg HR 140, max 151, 29m gain, Swansea seafront and marina `[data, Strava activity 20557585841]`. Quite windy on the seafront `[stated]`. Fastest km 5:14 `[data]`.
+- Beyond plan: none.
+- Capacity: not reported.
+- Review: On plan, and the pace sits in the easy band. HR 140 average is a few beats up on recent flat easy runs. The wind is the likely cause. Max 151 and a 5:14 km both suggest the pace spiked once, probably with a tailwind or on the bridge. On a windy day, run by effort into the wind, not pace. Left foot not reported today. Tomorrow's run needs the same walking check first.
