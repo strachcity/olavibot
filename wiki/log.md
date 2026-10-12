@@ -1062,3 +1062,8 @@ relative_effort: 18
 - Beyond plan: none.
 - Capacity: not reported.
 - Review: On plan, and the pace sits in the easy band. HR 140 average is a few beats up on recent flat easy runs. The wind is the likely cause. Max 151 and a 5:14 km both suggest the pace spiked once, probably with a tailwind or on the bridge. On a windy day, run by effort into the wind, not pace. Left foot not reported today. Tomorrow's run needs the same walking check first.
+
+## [2026-10-12] review | Correction to today's easy 5km review
+The 12 Oct run review said HR 140 was "a few beats up on recent flat easy runs". The log says
+otherwise: 137 at 5:34/km (6 Oct, 6km) and 141 at 5:41/km (8 Oct, 7.5km) `[data]`. HR 140 at
+5:39/km is in line with those, wind or not. The spike reading (max 151, fastest km 5:14) stands.
