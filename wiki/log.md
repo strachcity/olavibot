@@ -963,7 +963,7 @@ beyond_plan: none
 ## [2026-10-10] run | Long — Foundations wk3
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 74
 distance_km: 11.87
@@ -1005,7 +1005,7 @@ back. It has now recurred once since the marathon.
 ## [2026-10-11] gym | Session B — Foundations wk3 (full gym)
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 95
 gym: full
@@ -1049,7 +1049,7 @@ week 4: long run 12km instead of 9km (Jack's call, against Claude's 10km cap), a
 ## [2026-10-12] run | Easy 5km — Foundations wk4 (Swansea)
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 29
 distance_km: 5.01
@@ -1090,3 +1090,13 @@ The 13 Oct review called it "the easiest run of the block by heart rate". It isn
 easy 5km averaged HR 126 at 6:28/km `[data]`. Today's 133 average includes the strides. Its
 5km segments ran HR 125–134 at about 5:56/km. That is low for the pace, which is the useful
 part.
+
+## [2026-10-13] review | Calves tight, Achilles 0
+Achilles 0/10 on the mornings of 11, 12 and 13 Oct `[stated, 2026-10-13]`, filled into the
+10, 11 and 12 Oct entries. Calves tight today `[stated]`, after Sunday's loaded calf work
+(seated 3×12 @~35kg, standing 3×10 @15kg) and two runs, the second with 6 strides. Jack
+calls tomorrow (Wednesday) a rest day, which was already the plan.
+
+Thursday's heel-raise baseline needs fresh calves. If they're still tight on Thursday
+morning, move the baseline to the next fresh morning rather than record a depressed first
+number. A baseline taken on tired calves would make every later test look like progress.
