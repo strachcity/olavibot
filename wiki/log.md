@@ -1067,3 +1067,20 @@ relative_effort: 18
 The 12 Oct run review said HR 140 was "a few beats up on recent flat easy runs". The log says
 otherwise: 137 at 5:34/km (6 Oct, 6km) and 141 at 5:41/km (8 Oct, 7.5km) `[data]`. HR 140 at
 5:39/km is in line with those, wind or not. The spike reading (max 151, fastest km 5:14) stands.
+
+## [2026-10-13] run | Easy 5km + strides — Foundations wk4 (Swansea)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 37
+distance_km: 6.01
+avg_pace: 5:57
+run_type: strides
+relative_effort: 13
+```
+- Planned: Easy 5km + strides 4–6×20s (full recovery), Swansea, evening.
+- Done: Easy 5km, then 6×20s strides, then a slow jog to dinner `[stated]`. The whole activity was 6.01km in 35:47 moving (36:48 elapsed), 5:57/km, avg HR 133, max 162 `[data, Strava activity 20571957004]`. Best 5km within it was 29:41 (5:56/km) `[data]`. Strides peaked at 6.72 m/s (~2:29/km) `[data]`.
+- Beyond plan: none. The extra ~1km is the strides and the jog to dinner, which served as the cool-down.
+- Capacity: not reported.
+- Review: The easiest run of the block by heart rate. HR 125–134 on every segment of the 5km, against 140 at 5:39/km yesterday. The strides were the top of the planned range (6) and fast, which is the point of them; max HR 162 came from those. Slower pace and lower HR is exactly what easy is for, and suggests last night's 140 was the wind. Left foot not reported. Wednesday is rest and travel, then the heel-raise baseline is first thing Thursday.
