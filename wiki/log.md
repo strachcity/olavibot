@@ -1084,3 +1084,9 @@ relative_effort: 13
 - Beyond plan: none. The extra ~1km is the strides and the jog to dinner, which served as the cool-down.
 - Capacity: not reported.
 - Review: The easiest run of the block by heart rate. HR 125–134 on every segment of the 5km, against 140 at 5:39/km yesterday. The strides were the top of the planned range (6) and fast, which is the point of them; max HR 162 came from those. Slower pace and lower HR is exactly what easy is for, and suggests last night's 140 was the wind. Left foot not reported. Wednesday is rest and travel, then the heel-raise baseline is first thing Thursday.
+
+## [2026-10-13] review | Correction to today's easy 5km + strides review
+The 13 Oct review called it "the easiest run of the block by heart rate". It isn't: an earlier
+easy 5km averaged HR 126 at 6:28/km `[data]`. Today's 133 average includes the strides. Its
+5km segments ran HR 125–134 at about 5:56/km. That is low for the pace, which is the useful
+part.
