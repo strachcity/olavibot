@@ -1114,3 +1114,9 @@ session: A
 - Capacity: pull-ups 4 reps max, wide grip, bodyweight `[stated, 2026-10-14]`. First recorded number.
 - Context: Left foot sore on a 20-minute walk this morning. Ankles and calves tight `[stated, 2026-10-14]`. Walking pain on 11 Oct and again today puts it at the physio threshold set on 11 Oct; Claude recommended booking one before Saturday's long run. Achilles score for this morning not given.
 - Review: The foot didn't react to loaded split squats, after the same result with loaded calf raises on 11 Oct. Load is tolerated; walking and landing are what hurt it. Front squat working sets landed on the ceiling instead of the target for the third Session A running (85→90 back squat 6 Oct, now 65 front squat). Week 3's summary said lower the ceilings if week 4 does it again, so next week's plan takes that up. Session done on the Wednesday rest day, so Thursday and Friday are free for the run and the baseline.
+
+## [2026-10-14] review | Correction to today's Session A review
+Today's review said the squat landed on its ceiling "for the third Session A running". It's
+the second. On 2 Oct the front squat was 3×5 @60kg, on target `[data, log]`. The run is 6 Oct
+(back squat 90kg, ceiling) and 14 Oct (front squat 65kg, ceiling). Deadlift 100kg on 11 Oct
+(Session B) also hit its ceiling. Across both anchors it's three sessions in a row.
