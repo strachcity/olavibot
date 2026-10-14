@@ -116,8 +116,10 @@ append to `wiki/log.md`, and commit.
 
 `wiki/log.md` is append-only. **Append-only means entries are never reordered, rewritten or
 deleted.** Amending a field that was explicitly recorded as `pending` inside an existing entry
-— the next-morning Achilles score, usually — is allowed and expected. Nothing else gets edited
-after the fact; a correction is a new entry that references the old one.
+— the next-morning Achilles score, usually — is allowed and expected. So is adding Strava's
+`duration_min` and `relative_effort` to an entry logged before the activity reached Strava
+`[stated, 2026-10-14]`. Nothing else gets edited after the fact; a correction is a new entry
+that references the old one.
 
 Every entry starts with a parseable header:
 

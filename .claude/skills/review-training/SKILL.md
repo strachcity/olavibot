@@ -98,7 +98,8 @@ Fields you don't have, omit. Never guess a number into the block — an invented
 **The one permitted edit.** When Jack later reports the next-morning Achilles score, change
 `achilles_next_am: pending` to the number, in place, in the existing entry. Append-only forbids
 reordering, rewriting and deleting entries; resolving a field explicitly recorded as `pending`
-is the exception. Anything else that turns out wrong gets a **new** entry referencing the old
+is the exception. So is adding `duration_min` and `relative_effort` from Strava to an entry
+logged before the activity uploaded `[stated, 2026-10-14]`. Anything else that turns out wrong gets a **new** entry referencing the old
 one — don't quietly rewrite history.
 
 ### The review (2–4 lines)
