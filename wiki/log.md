@@ -1100,3 +1100,17 @@ calls tomorrow (Wednesday) a rest day, which was already the plan.
 Thursday's heel-raise baseline needs fresh calves. If they're still tight on Thursday
 morning, move the baseline to the next fresh morning rather than record a depressed first
 number. A baseline taken on tired calves would make every later test look like progress.
+
+## [2026-10-14] gym | Session A — Foundations wk4 (home gym)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+session: A
+```
+- Planned: Mobility warm-up only (no heel/toe walks, tibialis raises or bouncing, for the left foot). Front squat ramp bar×10 → 40×5 → 50×3 → 57.5×1, then working 3×5 @60–62.5kg RPE7, ceiling 65kg. Superset: Bulgarian split squat 3×8/leg @17.5kg + dead bug 3×8/side (trunk slot). Superset: banded march 3×30s/leg + pull-ups 3×5–8 (or DB row). Seated DB shoulder press 3×10 @16–17.5kg. Cool-down. No calf work. Moved from Thu/Fri to Wednesday, a planned rest day.
+- Done: Warm-up done before planning; contents not reported. Front squat ramp as planned, working 3×5 @65kg `[stated]`. Bulgarian split squat 3×8/leg @18kg DBs (no 17.5kg at home), left foot fine throughout `[stated]`. Dead bug "good" `[stated]`. Pull-ups: max 4 reps wide grip `[stated]`; switched to 4×3 plus negatives or DB rows, what was done not reported. Banded march, shoulder press and cool-down: done, details not reported. No Strava activity, so no duration or relative effort.
+- Beyond plan: none. Front squat 65kg is at the ceiling, not over it. 18kg vs 17.5kg is kit.
+- Capacity: pull-ups 4 reps max, wide grip, bodyweight `[stated, 2026-10-14]`. First recorded number.
+- Context: Left foot sore on a 20-minute walk this morning. Ankles and calves tight `[stated, 2026-10-14]`. Walking pain on 11 Oct and again today puts it at the physio threshold set on 11 Oct; Claude recommended booking one before Saturday's long run. Achilles score for this morning not given.
+- Review: The foot didn't react to loaded split squats, after the same result with loaded calf raises on 11 Oct. Load is tolerated; walking and landing are what hurt it. Front squat working sets landed on the ceiling instead of the target for the third Session A running (85→90 back squat 6 Oct, now 65 front squat). Week 3's summary said lower the ceilings if week 4 does it again, so next week's plan takes that up. Session done on the Wednesday rest day, so Thursday and Friday are free for the run and the baseline.
