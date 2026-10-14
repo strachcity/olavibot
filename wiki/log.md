@@ -1120,3 +1120,11 @@ Today's review said the squat landed on its ceiling "for the third Session A run
 the second. On 2 Oct the front squat was 3×5 @60kg, on target `[data, log]`. The run is 6 Oct
 (back squat 90kg, ceiling) and 14 Oct (front squat 65kg, ceiling). Deadlift 100kg on 11 Oct
 (Session B) also hit its ceiling. Across both anchors it's three sessions in a row.
+
+## [2026-10-14] review | Session A details added
+Jack confirms that everything not already reported in today's Session A was done as planned
+`[stated, 2026-10-14]`:
+- seated DB shoulder press 3×10, in the 16–17.5kg range (exact dumbbell not stated)
+- banded march 3×30s/leg
+- pull-ups 4×3 plus negatives or DB rows, as revised mid-session after the 4-rep max
+- cool-down
