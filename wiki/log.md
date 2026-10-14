@@ -1106,7 +1106,9 @@ number. A baseline taken on tired calves would make every later test look like p
 planned: yes
 achilles_next_am: pending
 beyond_plan: none
+duration_min: 63
 session: A
+relative_effort: 7
 ```
 - Planned: Mobility warm-up only (no heel/toe walks, tibialis raises or bouncing, for the left foot). Front squat ramp bar×10 → 40×5 → 50×3 → 57.5×1, then working 3×5 @60–62.5kg RPE7, ceiling 65kg. Superset: Bulgarian split squat 3×8/leg @17.5kg + dead bug 3×8/side (trunk slot). Superset: banded march 3×30s/leg + pull-ups 3×5–8 (or DB row). Seated DB shoulder press 3×10 @16–17.5kg. Cool-down. No calf work. Moved from Thu/Fri to Wednesday, a planned rest day.
 - Done: Warm-up done before planning; contents not reported. Front squat ramp as planned, working 3×5 @65kg `[stated]`. Bulgarian split squat 3×8/leg @18kg DBs (no 17.5kg at home), left foot fine throughout `[stated]`. Dead bug "good" `[stated]`. Pull-ups: max 4 reps wide grip `[stated]`; switched to 4×3 plus negatives or DB rows, what was done not reported. Banded march, shoulder press and cool-down: done, details not reported. No Strava activity, so no duration or relative effort.
