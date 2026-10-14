@@ -1128,3 +1128,10 @@ Jack confirms that everything not already reported in today's Session A was done
 - banded march 3×30s/leg
 - pull-ups 4×3 plus negatives or DB rows, as revised mid-session after the 4-rep max
 - cool-down
+
+## [2026-10-14] review | Shoulder press load and Achilles 1/10
+Session A shoulder press was 3×10 @16kg `[stated, 2026-10-14]`, up from 15kg on 6 Oct.
+Achilles 1/10 on the morning of 14 Oct `[stated]`, filled into the 13 Oct run (strides). It is
+the first rise after three mornings at 0, with calves tight. The rule is two rising mornings
+in a row. If 15 Oct is higher than 1, hold running volume and drop the next quality session
+(strides). Keep the calf work.
