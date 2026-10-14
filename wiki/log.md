@@ -1135,3 +1135,8 @@ Achilles 1/10 on the morning of 14 Oct `[stated]`, filled into the 13 Oct run (s
 the first rise after three mornings at 0, with calves tight. The rule is two rising mornings
 in a row. If 15 Oct is higher than 1, hold running volume and drop the next quality session
 (strides). Keep the calf work.
+
+## [2026-10-14] review | Session A on Strava
+Session A uploaded after it was logged: 63:04, relative effort 7 `[data, Strava activity
+20586954356]`. The 14 Oct gym entry's metrics block has no `duration_min` or
+`relative_effort` because neither existed when it was written.
