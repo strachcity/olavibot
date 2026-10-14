@@ -1071,7 +1071,7 @@ otherwise: 137 at 5:34/km (6 Oct, 6km) and 141 at 5:41/km (8 Oct, 7.5km) `[data]
 ## [2026-10-13] run | Easy 5km + strides — Foundations wk4 (Swansea)
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 1
 beyond_plan: none
 duration_min: 37
 distance_km: 6.01
