@@ -1142,3 +1142,20 @@ in a row. If 15 Oct is higher than 1, hold running volume and drop the next qual
 Session A uploaded after it was logged: 63:04, relative effort 7 `[data, Strava activity
 20586954356]`. The 14 Oct gym entry's metrics block has no `duration_min` or
 `relative_effort` because neither existed when it was written.
+
+## [2026-10-17] run | Long 12km — Foundations wk4
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 79
+distance_km: 12.26
+avg_pace: 5:54
+run_type: long
+relative_effort: 32
+```
+- Planned: Long 12km, natural easy pace. Go only if walking is pain-free that morning. Stop if the left foot worsens during the run.
+- Done: 12.26km in 72:20 moving (79:21 elapsed), 5:54/km, avg HR 136, max 151, 94m gain, Victoria Park `[data, Strava activity 20619626306]`. Left foot fine; heels tight `[stated, 2026-10-17]`.
+- Beyond plan: none.
+- Capacity: longest run of the block, 12.26km against 11.87km on 10 Oct `[data]`.
+- Review: Same average HR as last Saturday's long run (136), but 18 s/km faster (5:54 against 6:12) and 0.4km longer `[data]`. Still inside the easy band. The foot held up on the week's biggest number of landings, which was the main risk. Heels tight is new wording: if that means the Achilles, the next-morning score is the one that counts. Rule 7: two rising mornings in a row means hold volume and keep the calf work. Friday's 5km isn't on Strava, so the week has three runs, about 23km against 27km planned.
