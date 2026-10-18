@@ -316,11 +316,10 @@ Merged from Claude Code and Jack's claude.ai draft `[stated, 2026-10-18]`.
   - No strides until the foot is clear. Commute runs count in the week's km.
   - Heel-raise baseline on the first fresh morning, scheduled as its own session.
   - The pull-up slot needs a progression from 4 reps.
-  - **Open for Jack: anchor targets.** claude.ai suggests holding the ceilings (back squat 90,
-    front squat 65, deadlift 100, trap bar 95) with target and ceiling the same. Claude Code
-    recommends keeping those ceilings with targets about 5kg under, so a ceiling stays a
-    ceiling (model §3). Equal targets and ceilings remove the safety margin a ceiling exists
-    to give.
+  - **Anchor targets: decided.** Target equals ceiling: back squat 90, front squat 65,
+    deadlift 100, trap bar 95 `[stated, 2026-10-18]`. Jack's call over Claude Code's
+    recommendation of targets about 5kg under (model §3). Because target and ceiling are
+    now the same, a session that hits the target is on plan, not at the edge.
 
 ## What would change the plan
 - Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,

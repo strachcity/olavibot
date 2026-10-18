@@ -1224,3 +1224,9 @@ Corrections to the claude.ai draft:
 - The trap bar was at its ceiling, not a break in the pattern.
 - The baseline has been missed three times, not twice.
 - The foot has recurred three times since Sydney, not "three times" counting Sydney.
+
+## [2026-10-18] block | Anchor targets set equal to ceilings
+Jack's decision `[stated, 2026-10-18]`: anchor targets equal their ceilings for the rest of
+Foundations. That means back squat 90, front squat 65, deadlift 100 and trap bar 95. Claude
+Code had recommended targets about 5kg under. Recorded in the week 4 summary. From here on, an
+anchor that hits its number counts as on plan.
