@@ -279,6 +279,48 @@ isn't moved to before the long run.
 - **Recent decisions**: the 12km long run and the flexible Thursday/Friday both came from the
   last day's conversation `[stated]`.
 
+*Week 4 summary (12–18 Oct)*
+
+Merged from Claude Code and Jack's claude.ai draft `[stated, 2026-10-18]`.
+
+- **Progress.** 6 of 6 planned sessions. Friday's 5km was moved to Sunday as 2×2.5km to and
+  from Session B, the agreed fallback. Session A moved to Wednesday, at the home gym. Running
+  28.6km against 27km planned, over five runs (5.0, 6.0, 12.3, 2.8, 2.6) `[data, Strava]`.
+  Gym 2/2. Achilles mornings 0, 0, 1 (12–14 Oct), none given 15–17 Oct, 2 on 18 Oct
+  `[stated]`. Reactive Level 2, second session. Heel-raise baseline missed for the third week
+  running. Pull-ups 4 max, the first number `[stated, 2026-10-14]`.
+- **Went well.**
+  - Long run 12.3km at HR 136, 18 s/km faster than a week earlier at the same HR `[data]`. The
+    aerobic trend from week 3 holds.
+  - The foot has tolerated every loaded lift: calf raises, split squats and deadlifts
+    `[stated]`.
+  - Shoulder press went from 15kg to 16kg, and trap bar from 90kg to 95kg `[stated]`.
+- **Went badly.**
+  - The foot has come back three times since Sydney (11, 14 and 18 Oct). It is past the
+    physio threshold agreed on 11 Oct, and no appointment is booked.
+  - Sunday's two runs went ahead with both morning checks failed (Achilles 2, foot painful)
+    `[stated]`.
+  - The baseline still hasn't run, so the calf work is judged by symptoms alone.
+  - Morning scores went missing from 15 to 17 Oct.
+  - Both anchors finished at their ceilings again: front squat 65kg, and trap bar 95kg with the
+    target set equal to the ceiling. That makes four anchor sessions in a row. Week 3's summary
+    said to lower the ceilings if this happened; it didn't happen.
+- **Watch.**
+  - The foot, above everything: book the physio this week. Running landings irritate it;
+    lifting doesn't.
+  - Achilles rule 7: 14 Oct was 1 and 18 Oct was 2. If 19 Oct is higher than 2, that's two
+    rising mornings, so running volume holds and strides come out.
+  - Commute runs add landings that have no slot in the plan.
+- **Next.** These are hints for the plan, not the plan itself.
+  - Running holds at week 4's size or below. No long-run increase: 12km stays the longest.
+  - No strides until the foot is clear. Commute runs count in the week's km.
+  - Heel-raise baseline on the first fresh morning, scheduled as its own session.
+  - The pull-up slot needs a progression from 4 reps.
+  - **Anchor targets: decided.** Target equals ceiling: back squat 90, front squat 65,
+    deadlift 100, trap bar 95 `[stated, 2026-10-18]`. Jack's call over Claude Code's
+    recommendation of targets about 5kg under (model §3). Because target and ceiling are
+    now the same, a session that hits the target is on plan, not at the edge.
+
 ## What would change the plan
 - Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,
   freeze reactive level, keep calf work.

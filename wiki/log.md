@@ -1207,3 +1207,26 @@ relative_effort: 11
 - Planned: second half of Friday's moved easy 5km.
 - Done: 2.61km, 14:42 moving, 5:38/km `[data, Strava activity 20638580353]`. Run against the suggestion to walk home because of the foot. Jack's call `[stated]`, with a stop rule: foot >2/10 or worsening → walk. Foot during the run not reported.
 - Review: The faster of the two legs, at the quick end of easy. Tomorrow morning's foot and Achilles scores show what the 5.4km cost.
+
+## [2026-10-18] review | Week 4 summary
+Written under week 4 in `blocks/2026-09-foundations.md`, merged from Claude Code and Jack's
+claude.ai draft. In short:
+- 6/6 sessions, with Friday's run moved to Sunday's runs to and from the gym. 28.6km of 27km.
+  Long run 12.3km at HR 136.
+- The foot is past the physio threshold.
+- The baseline has been missed three times.
+- Four anchor sessions in a row finished at their ceilings.
+- Open for Jack: whether anchor targets equal their ceilings or sit 5kg under.
+
+Corrections to the claude.ai draft:
+- With the agreed titles, Sunday's runs stand in for Friday's (6/6, not 5/6).
+- The Achilles score for 18 Oct was 2 `[stated]`, not a word.
+- The trap bar was at its ceiling, not a break in the pattern.
+- The baseline has been missed three times, not twice.
+- The foot has recurred three times since Sydney, not "three times" counting Sydney.
+
+## [2026-10-18] block | Anchor targets set equal to ceilings
+Jack's decision `[stated, 2026-10-18]`: anchor targets equal their ceilings for the rest of
+Foundations. That means back squat 90, front squat 65, deadlift 100 and trap bar 95. Claude
+Code had recommended targets about 5kg under. Recorded in the week 4 summary. From here on, an
+anchor that hits its number counts as on plan.
