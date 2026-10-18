@@ -1146,7 +1146,7 @@ Session A uploaded after it was logged: 63:04, relative effort 7 `[data, Strava 
 ## [2026-10-17] run | Long 12km — Foundations wk4
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 2
 beyond_plan: none
 duration_min: 79
 distance_km: 12.26
@@ -1159,3 +1159,51 @@ relative_effort: 32
 - Beyond plan: none.
 - Capacity: longest run of the block, 12.26km against 11.87km on 10 Oct `[data]`.
 - Review: Same average HR as last Saturday's long run (136), but 18 s/km faster (5:54 against 6:12) and 0.4km longer `[data]`. Still inside the easy band. The foot held up on the week's biggest number of landings, which was the main risk. Heels tight is new wording: if that means the Achilles, the next-morning score is the one that counts. Rule 7: two rising mornings in a row means hold volume and keep the calf work. Friday's 5km isn't on Strava, so the week has three runs, about 23km against 27km planned.
+
+## [2026-10-18] run | Easy — to gym (Session B)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 16
+distance_km: 2.76
+avg_pace: 5:50
+run_type: easy
+relative_effort: 18
+```
+- Planned: Friday's easy 5km, moved to Sunday as 2×2.5km to and from Session B (the fallback agreed on 11 Oct and confirmed on 17 Oct). Only if the Achilles was ≤1 and walking was pain-free that morning.
+- Done: 2.76km, 16:06 moving, 5:50/km `[data, Strava activity 20637650347]`. Left foot "painful" that morning, heel tight and tender `[stated]`. Achilles/ankle 2/10 that morning `[stated, 2026-10-18]`. How it felt on the run not reported.
+- Beyond plan: none.
+- Review: Both morning gates were failed: Achilles 2 (gate ≤1) and a painful foot (gate pain-free walking). The run went ahead anyway, which was Jack's call. Pace was easy.
+
+## [2026-10-18] gym | Session B — Foundations wk4 (full gym)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 51
+gym: full
+session: B
+reactive_level: 2
+relative_effort: 8
+```
+- Planned (claude.ai version, the one followed): Mobility warm-up only (no heel/toe walks or tibialis raises, for the foot). Reactive L2 seated calf raise 3×12 @35kg. Trap-bar ramp bar×10 → 50×5 → 70×3 → 85×1–2, then working 3×5 @95kg RPE7, with 95kg also the ceiling. Superset: standing calf raise both legs 3×10 @15kg + DB press 3×8 @22.5kg. Superset: Nordic curl eccentric 3×3 + barbell row 3×8 @50kg. Cool-down. Claude Code's version set the target at 90kg under the 95kg ceiling; Jack followed claude.ai's.
+- Done: Warm-up, seated calf raise, ramp and trap-bar 3×5 @95kg as planned `[stated]`. Standing calf raise 3×10 at **bodyweight**, the load dropped mid-session because the morning was tender and the foot painful. DB press 3×8 @22.5kg, Nordic curl 3×3, barbell row 3×8 @50kg, cool-down, all as planned `[stated]`. Strava 50:53, relative effort 8 `[data, Strava activity 20638540504]`.
+- Beyond plan: none.
+- Capacity: trap-bar 95kg × 3×5, up from 90kg on 4 Oct.
+- Review: Trap bar at 95kg is the top of week 4's 90–95kg range. Setting the target equal to the ceiling made "on target" and "at the ceiling" the same thing. So this is the fourth anchor session in a row at its ceiling, not a break in the pattern. Standing calf load was reduced, not progressed, for the foot and the tender morning: the right call. Nordics went up one set; hamstring DOMS would show in 24–48h. The session itself didn't load the foot. The two runs either side did.
+
+## [2026-10-18] run | Easy — home (Session B)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 15
+distance_km: 2.61
+avg_pace: 5:38
+run_type: easy
+relative_effort: 11
+```
+- Planned: second half of Friday's moved easy 5km.
+- Done: 2.61km, 14:42 moving, 5:38/km `[data, Strava activity 20638580353]`. Run against the suggestion to walk home because of the foot. Jack's call `[stated]`, with a stop rule: foot >2/10 or worsening → walk. Foot during the run not reported.
+- Review: The faster of the two legs, at the quick end of easy. Tomorrow morning's foot and Achilles scores show what the 5.4km cost.
