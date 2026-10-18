@@ -1230,3 +1230,11 @@ Jack's decision `[stated, 2026-10-18]`: anchor targets equal their ceilings for 
 Foundations. That means back squat 90, front squat 65, deadlift 100 and trap bar 95. Claude
 Code had recommended targets about 5kg under. Recorded in the week 4 summary. From here on, an
 anchor that hits its number counts as on plan.
+
+## [2026-10-18] block | Week 5 schedule, Foundations
+Agreed with Jack `[stated, 2026-10-18]`. Constraint: travelling Monday. Four runs: easy 5km,
+easy 4km, long 11km and easy 2×2.5km to and from Session B (~25km). No strides. Session A
+Wednesday (back squat 90kg). Heel-raise baseline Thursday as its own session. Session B
+Sunday (deadlift 100kg, Copenhagen longer lever). Pull-ups 5×3. Reactive L2 held. Changes
+from the block's week 5: strides dropped, easy runs 5/4/5km instead of 5/5/6km. Every run
+gated on pain-free walking that morning.
