@@ -41,10 +41,10 @@ are targets, ±1km either way — the ceiling is what matters, not hitting the n
 | 4 | Easy 2 | 5km | 5:30–6:00/km | |
 | 4 | Easy 3 | 5km | 5:30–6:00/km | as 2×2.5km to and from the gym, or one run (changed 11 Oct) |
 | 4 | Long | 12km | 5:30–6:00/km or slower | 12km, Jack's call (changed 11 Oct; block had 9) |
-| 5 | Easy 1 | 5km | 5:30–6:00/km | + strides |
-| 5 | Easy 2 | 5km | 5:30–6:00/km | |
-| 5 | Easy 3 | 6km | 5:30–6:00/km | + strides |
-| 5 | Long | 11km | 5:30–6:00/km or slower | extends |
+| 5 | Easy 1 | 5km | 5:30–6:00/km | no strides, for the foot (changed 18 Oct) |
+| 5 | Easy 2 | 4km | 5:30–6:00/km | (changed 18 Oct; block had 5km) |
+| 5 | Easy 3 | 5km | 5:30–6:00/km | as 2×2.5km to and from Session B; no strides (changed 18 Oct; block had 6km + strides) |
+| 5 | Long | 11km | 5:30–6:00/km or slower | |
 | 6 | Easy 1 | 5km | 5:30–6:00/km | cutback |
 | 6 | Easy 2 | 4km | 5:30–6:00/km | cutback |
 | 6 | Test: threshold | 3×10min | just below half-marathon effort, jog 2min between | reintroduces threshold, `tests.md` |
@@ -320,6 +320,46 @@ Merged from Claude Code and Jack's claude.ai draft `[stated, 2026-10-18]`.
     deadlift 100, trap bar 95 `[stated, 2026-10-18]`. Jack's call over Claude Code's
     recommendation of targets about 5kg under (model §3). Because target and ceiling are
     now the same, a session that hits the target is on plan, not at the edge.
+
+**Week 5 (19–25 Oct).** Constraint: travelling Monday `[stated, 2026-10-18]`. Every run is gated
+on pain-free walking that morning. If walking hurts, cycle or skip the run.
+
+| Day | Session |
+|---|---|
+| Mon 19 | Rest (travel) |
+| Tue 20 | Easy — 5km, no strides |
+| Wed 21 | Gym — Session A (back squat 90kg, odd week) |
+| Thu 22 | Heel-raise baseline, first thing. Nothing else |
+| Fri 23 | Easy — 4km |
+| Sat 24 | Long — 11km, natural easy pace |
+| Sun 25 | Gym — Session B (deadlift 100kg, Copenhagen) + Easy — 2×2.5km to and from |
+
+*Why this week*
+
+| Decision | Why | Source |
+|---|---|---|
+| ~25km, below week 4's 28.6km | The foot is past the physio threshold and the Achilles rose to 2. Hold or cut, don't build | Week 4 summary; rule 7 |
+| Long run 11km, down from 12 | The block planned 11km. No reason to push the longest run while the foot is unassessed | Block plan; spike evidence **[W]** |
+| No strides (block had two sets) | Strides land hard on the forefoot, the painful area | Week 4 summary; judgement **[H]** |
+| 4 runs kept, short apart from the long run | Frequency is the block's running goal. Pain comes from landings, which add up by distance more than by number of runs | Block emphasis; judgement **[H]** |
+| Monday rest | Travel | `[stated, 2026-10-18]` |
+| Baseline Thursday, as its own day | ~85h after Sunday's calf work; no calf loading Wednesday. Missed three weeks running when tacked onto other days | `tests.md` protocol; log |
+| Anchors: back squat 90, deadlift 100, target = ceiling | Jack's call | `[stated, 2026-10-18]` |
+| Pull-ups 5×3 | Max is 4. Repeated sets below max add volume without failing reps | Judgement **[H]** |
+| Reactive L2 held: seated calf 3×12 @35kg | The Achilles rose to 2 and there's no baseline yet. Hold until both settle | Rule 7; model §8 |
+| Copenhagen, longer lever | Short lever at 25s/side was the top of its range | Log, 11 Oct |
+
+*Weak points*
+
+- **The foot is the biggest unknown.** Nothing here is built on a diagnosis. A physio could
+  change the plan.
+- **Fri, Sat and Sun are three running days in a row**, including the long run and Sunday's
+  runs to and from the gym. That's the same shape as week 4, whose cost isn't known until the
+  19 Oct morning scores.
+- **Targets equal to ceilings leave no room on a bad day.** Stopping short of the number on
+  a heavy day counts as on plan.
+- **The baseline only works if it happens.** If Thursday slips, the next valid morning is
+  Friday, before the run.
 
 ## What would change the plan
 - Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,
