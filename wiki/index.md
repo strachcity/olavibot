@@ -10,6 +10,7 @@ Read this first. Every wiki page, one line each.
 | [observations.md](observations.md) | Learnings and patterns, tagged by provenance. Includes refuted claims |
 | [log.md](log.md) | Append-only record of every session, review, ingest and model change |
 | [tests.md](tests.md) | The §12 battery: protocols, and every result over time. Baseline pending |
+| [food-diary.md](food-diary.md) | Prototype food diary, 19–25 Oct 2026: daily intake against training, then a review |
 
 ## Derived
 Regenerated from a source, never hand-edited.
@@ -30,6 +31,7 @@ Regenerated from a source, never hand-edited.
 | [references/evidence-achilles-load.md](references/evidence-achilles-load.md) | Tendon loading, pain monitoring, calf capacity, load management, concurrent training |
 | [references/evidence-endurance-structure.md](references/evidence-endurance-structure.md) | Intensity distribution, threshold, volume, long runs, periodisation, taper, ultra transfer |
 | [references/evidence-gym-pool.md](references/evidence-gym-pool.md) | Exercise selection, hip flexion, reactive progression, lateral/adductor, upper body, variation |
+| [references/evidence-nutrition.md](references/evidence-nutrition.md) | Everyday eating against training: protein, carbs by load, avoiding fat gain, REDs, bodyweight noise |
 | [references/evidence-norwegian-method.md](references/evidence-norwegian-method.md) | Norwegian Method — mostly anecdote; effort-control method adopted, double threshold ruled out |
 
 ## Open questions

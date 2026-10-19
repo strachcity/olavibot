@@ -3,9 +3,11 @@
 Stable facts about Jack as an athlete. Changes slowly. Session-level detail goes in `log.md`.
 
 ## Basics
-- 170cm (5'7"), 75kg `[stated, 25 May 2026 — ChatGPT history]`. Strava profile currently
-  reads 73kg `[data]`; unreconciled, and it matters slightly because `tests.md` uses bodyweight
-  for the seated-calf-raise ratio
+- 170cm (5'7"). Bodyweight 77–78kg on the gym scale, consistently; 78.5kg on 18 Oct 2026
+  `[stated, 2026-10-19]`. Earlier figure: 75kg `[stated, 25 May 2026 — ChatGPT history]`.
+  Whether that gap is a real gain or a different scale is unknown. Strava profile reads 73kg
+  `[data]`, which looks stale. `tests.md` uses bodyweight for the seated-calf-raise ratio, so
+  use a gym-scale weight from the same week
 - London-based, busy full-time job; training has to fit around work `[stated]`
 - Completed an MPA and thesis in 2025 — why structured training lapsed `[stated]`
 - Trains with a personal trainer (Olavi) roughly monthly; weighing whether to continue `[stated]`
