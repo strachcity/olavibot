@@ -59,6 +59,40 @@ scale `[stated, 2026-10-19]`.
 
 ---
 
+## Baseline: recall of 12–18 Oct (Foundations week 4)
+
+From Jack's rough recall `[stated, 2026-10-19]`. Every number is Claude's estimate
+`[inferred]`, ±30% at best. Assumptions: 1 scoop of Huel Black = half a 90g serving (~200 kcal,
+20g protein); semi-skimmed milk 300ml ≈ 140 kcal; a pint ≈ 200 kcal, ~15g carbs, ~2.5 units;
+crisps a standard bag ≈ 170 kcal; sandwiches ≈ 450–550 kcal. Black coffee ×2 a day, negligible.
+
+| Day | Training `[data]` | Food, roughly | kcal | P (g) | C (g) | Pints |
+|---|---|---|---|---|---|---|
+| Mon 12 | Easy 5km | Huel + milk; fried chicken wrap; Nando's: 4 thighs, mash, garlic bread, 5 wings | 2,400 | 170 | 150 | 0 |
+| Tue 13 | Easy 6km + strides | Eggs ×3, beans, toast ×2; tuna mayo baguette, crisps; Huel bar; burrito, chips, salsa, guac | 3,050 | 125 | 325 | 0 |
+| Wed 14 | Session A | Huel ready-to-drink; chicken tikka baguette, crisps; ham and cheese sandwich; protein nut bar; tuna, veg and cheese sandwich | 2,300 | 140 | 200 | 0 |
+| Thu 15 | Rest | Huel + milk; tuna mayo sandwich, crisps; tuna mayo sandwich | 2,100 | 80 | 175 | 3–4 |
+| Fri 16 | Rest | Huel + milk; tuna mayo sandwich, crisps; oven pizza | 3,250 | 95 | 300 | 6–8 |
+| Sat 17 | Long 12km | Veggie bagel; tuna sandwiches ×2; crisps | 2,250 | 65 | 210 | 4 |
+| Sun 18 | Session B + 2×2.5km | Eggs ×2, avocado, seeded toast ×2; tuna mayo and cheese sandwich; chicken sandwiches ×2 | 2,100 | 120 | 145 | 0 |
+| **Average** | | | **~2,500** | **~115** | **~215** | **~14.5 total** |
+
+What it shows `[inferred]`, against `references/evidence-nutrition.md`:
+- **Energy ≈ maintenance.** ~2,500 eaten against ~2,450–2,600 burned. Fits a stable 77–78kg.
+- **Alcohol is the biggest single item.** ~14.5 pints ≈ 2,900 kcal, about a sixth of the
+  week, all Thu–Sat. Without it the week would have run ~400 kcal/day under maintenance.
+- **Protein is fine on average, low on drinking days.** ~115 g/day ≈ 1.5 g/kg, inside
+  1.2–2.0. Thu–Sat ran 65–95 g, under the 94 g floor.
+- **Carbs are low, fat is high.** ~215 g/day ≈ 2.8 g/kg, under even the light-day band
+  (3–5 g/kg), and about a quarter of that is beer. Fat ≈ 100 g/day (~35% of energy), mostly
+  mayo, cheese, crisps and fried food.
+- **Almost no fruit or veg.** Tomato, lettuce, beans, avocado, salsa and one "veg" topping in
+  seven days. Tuna mayo sandwiches at least 7 times.
+- Achilles 2/10 on Sun 18 Oct followed Fri–Sat drinking, which fits the confirmed observation
+  that drinking worsens next-morning symptoms.
+
+---
+
 ## Mon 19 Oct: travel, rest
 
 ```yaml
@@ -74,3 +108,5 @@ complete: pending
 
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
+| Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk; black coffee | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
+| Day | Second black coffee (assumed) | 5 | 0 | 0 | `[stated]` default |
