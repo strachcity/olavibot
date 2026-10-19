@@ -103,9 +103,9 @@ What it shows `[inferred]`, against `references/evidence-nutrition.md`:
 
 ```yaml
 training: none
-kcal_est: pending
-protein_g_est: pending
-carbs_g_est: pending
+kcal_est: 2900
+protein_g_est: 200
+carbs_g_est: 200
 alcohol_units: pending
 energy: pending
 hunger: pending
@@ -116,4 +116,8 @@ complete: pending
 |---|---|---|---|---|---|
 | Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk; black coffee | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
 | Lunch | Tortilla burrito, medium: hot chicken, black beans, Mexican rice, guacamole, cheese, sour cream; black coffee | 1,050 | 50 | 110 | `[stated]`, estimate `[inferred]` |
-| **So far** | | **~1,400** | **~80** | **~135** | |
+| Dinner | 2 sandwiches, 4 slices seeded bread: 2 chicken breasts, 1 avocado, cucumber, mayo and mustard, cheese | 1,500 | 120 | 65 | `[stated]`, estimate `[inferred]` |
+| **Day** | | **~2,900** | **~200** | **~200** | |
+
+Apple Watch active energy expected ~600 `[stated]`, so ~2,300 burned in total. ~600 over
+`[inferred]`.
