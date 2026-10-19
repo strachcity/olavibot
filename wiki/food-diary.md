@@ -109,4 +109,5 @@ complete: pending
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
 | Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk; black coffee | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
-| Day | Second black coffee (assumed) | 5 | 0 | 0 | `[stated]` default |
+| Lunch | Tortilla burrito, medium: hot chicken, black beans, Mexican rice, guacamole, cheese, sour cream; black coffee | 1,050 | 50 | 110 | `[stated]`, estimate `[inferred]` |
+| **So far** | | **~1,400** | **~80** | **~135** | |
