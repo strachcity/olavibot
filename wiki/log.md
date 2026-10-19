@@ -1261,3 +1261,10 @@ Rough estimates are fine, with packet details when he has them. Weights come fro
 scale. Bodyweight updated in `athlete.md` to 77–78kg `[stated]` (78.5kg on 18 Oct), which
 differs from the earlier 75kg `[stated]` and Strava's 73kg `[data]`. Flagged for Jack. One
 `review` entry to follow when the week is reviewed.
+
+## [2026-10-19] model | Food diary entries go straight to main
+Agreed with Jack `[stated, 2026-10-19]`: commits that only add or fill in daily entries in
+`food-diary.md` push directly to `main`, prefixed `food:`, like session logs. `CLAUDE.md`
+Commits section updated. Also recorded: the May 75kg was on the same gym scale `[stated]`, so
+77–78kg now is a real gain of ~2–3kg (`athlete.md`). Daily energy estimate added to
+`food-diary.md`, ~2,300–3,050 kcal by day type, ~2,550 average `[inferred]`.

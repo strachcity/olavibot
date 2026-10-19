@@ -31,6 +31,24 @@ hunger: 3             # 1-5, 5 = hungry most of the day
 complete: yes         # yes | partial — partial if meals were missed or recalled loosely
 ```
 
+**Daily energy estimate** `[inferred]`, about ±15%. Resting rate from the Mifflin–St Jeor
+equation (78kg, 170cm, age assumed early 30s, not yet confirmed): ~1,700 kcal. ×1.35 for a desk
+job with ordinary walking gives ~2,300 before training. Training comes from Strava's calories:
+21 Sep → 18 Oct averaged ~310 kcal/day `[data]` (8,653 kcal over 28 days). Strava's figure
+includes resting burn and uses its 73kg profile weight, so the true extra is a little lower.
+
+| Day type this week | Training | Roughly maintains weight |
+|---|---|---|
+| Rest or travel (Mon) | none | ~2,300 |
+| Easy run 4–5km | ~300 | ~2,600 |
+| Gym session | ~250–400 | ~2,600 |
+| Long run 11km | ~750 | ~3,050 |
+| **Week average** | | **~2,550** |
+
+Cross-check: the bodyweight trend. 75kg in May → 77–78kg now on the same scale. If all of
+that were fat, it would be a surplus of only ~100–150 kcal/day across ~5 months `[inferred]`.
+Some may be muscle. The scale over weeks is a better calorie meter than any formula.
+
 **Baseline weight:** 78.5 kg, gym scale, 18 Oct (Session B day). Usually 77–78 kg on the gym
 scale `[stated, 2026-10-19]`.
 

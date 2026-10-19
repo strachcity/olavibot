@@ -4,8 +4,9 @@ Stable facts about Jack as an athlete. Changes slowly. Session-level detail goes
 
 ## Basics
 - 170cm (5'7"). Bodyweight 77–78kg on the gym scale, consistently; 78.5kg on 18 Oct 2026
-  `[stated, 2026-10-19]`. Earlier figure: 75kg `[stated, 25 May 2026 — ChatGPT history]`.
-  Whether that gap is a real gain or a different scale is unknown. Strava profile reads 73kg
+  `[stated, 2026-10-19]`. Earlier figure: 75kg `[stated, 25 May 2026 — ChatGPT history]`, on
+  the same gym scale `[stated, 2026-10-19]`, so the gap is a real gain of ~2–3kg since May.
+  Whether it's fat or muscle is unknown. Strava profile reads 73kg
   `[data]`, which looks stale. `tests.md` uses bodyweight for the seated-calf-raise ratio, so
   use a gym-scale weight from the same week
 - London-based, busy full-time job; training has to fit around work `[stated]`
