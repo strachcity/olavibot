@@ -66,7 +66,9 @@ From Jack's rough recall `[stated, 2026-10-19]`. Every number is Claude's estima
 `[stated, 2026-10-19]`, taken as ~200 kcal and 20g protein; semi-skimmed milk 300ml ≈ 140 kcal; a pint ≈ 200 kcal, ~15g carbs, ~2.5 units;
 crisps a standard bag ≈ 170 kcal; sandwiches ≈ 450–550 kcal. Black coffee ×2 a day, negligible.
 Chicken sandwiches always include avocado `[stated, 2026-10-19]`, taken as half an avocado per
-sandwich (~120 kcal); Sun 18 corrected for it.
+sandwich (~120 kcal); Sun 18 corrected for it. Tuna mayo sandwiches always include onion,
+chilli and lettuce, sometimes red pepper `[stated, 2026-10-19]`; negligible energy. The chicken
+wrap (Mon 12) and tikka baguette (Wed 14) had no avocado `[stated]`.
 
 | Day | Training `[data]` | Food, roughly | kcal | P (g) | C (g) | Pints |
 |---|---|---|---|---|---|---|
@@ -88,8 +90,10 @@ What it shows `[inferred]`, against `references/evidence-nutrition.md`:
 - **Carbs are low, fat is high.** ~215 g/day ≈ 2.8 g/kg, under even the light-day band
   (3–5 g/kg), and about a quarter of that is beer. Fat ≈ 100 g/day (~35% of energy), mostly
   mayo, cheese, crisps and fried food.
-- **Almost no fruit or veg.** Tomato, lettuce, beans, avocado, salsa and one "veg" topping in
-  seven days. Tuna mayo sandwiches at least 7 times.
+- **Veg is there, but in small amounts, and there's no fruit.** Onion, chilli and lettuce in
+  every tuna mayo sandwich (at least 7), sometimes red pepper; avocado in the chicken
+  sandwiches; tomato, beans, salsa and one veg topping besides. No fruit all week. *Corrected
+  19 Oct: this said "almost no fruit or veg", before Jack said what goes in his sandwiches.*
 - Achilles 2/10 on Sun 18 Oct followed Fri–Sat drinking, which fits the confirmed observation
   that drinking worsens next-morning symptoms.
 
