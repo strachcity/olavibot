@@ -1268,3 +1268,10 @@ Agreed with Jack `[stated, 2026-10-19]`: commits that only add or fill in daily 
 Commits section updated. Also recorded: the May 75kg was on the same gym scale `[stated]`, so
 77–78kg now is a real gain of ~2–3kg (`athlete.md`). Daily energy estimate added to
 `food-diary.md`, ~2,300–3,050 kcal by day type, ~2,550 average `[inferred]`.
+
+## [2026-10-19] ingest | Apple Watch Move screenshot
+From Jack `[stated, 2026-10-19]`, saved as `raw/history/apple-watch-move-2026-10-19.png`.
+Active energy: 734 kcal/day over the last 90 days, 894 over the year to 19 Oct 2026 `[data]`.
+Resting plus active gives ~2,450 kcal/day recently, within ~100 of the food-diary estimate.
+New hypothesis in `observations.md`: the weight gained since May mostly comes from a
+~160 kcal/day drop in movement, not from eating more `[inferred]`. The food diary tests it.

@@ -45,7 +45,12 @@ includes resting burn and uses its 73kg profile weight, so the true extra is a l
 | Long run 11km | ~750 | ~3,050 |
 | **Week average** | | **~2,550** |
 
-Cross-check: the bodyweight trend. 75kg in May → 77–78kg now on the same scale. If all of
+Cross-check 1, Apple Watch: active energy averaged 734 kcal/day over the last 90 days and
+894 over the year `[data: Apple Watch Move, to 19 Oct 2026]`. Add ~1,700 resting gives ~2,450
+a day recently and ~2,600 over the year. The watch figure is an estimate too, and depends on
+the weight set in Health. It lands within ~100 kcal of the table above.
+
+Cross-check 2: the bodyweight trend. 75kg in May → 77–78kg now on the same scale. If all of
 that were fat, it would be a surplus of only ~100–150 kcal/day across ~5 months `[inferred]`.
 Some may be muscle. The scale over weeks is a better calorie meter than any formula.
 
