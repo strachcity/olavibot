@@ -117,7 +117,7 @@ complete: pending
 | Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk; black coffee | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
 | Lunch | Tortilla burrito, medium: hot chicken, black beans, Mexican rice, guacamole, cheese, sour cream; black coffee | 1,050 | 50 | 110 | `[stated]`, estimate `[inferred]` |
 | Dinner | 2 sandwiches, 4 slices seeded bread: 2 chicken breasts, 1 avocado, cucumber, mayo and mustard, cheese | 1,500 | 120 | 65 | `[stated]`, estimate `[inferred]` |
-| Evening | Huel energy drink, 1 can (assumed low-sugar, ~20 kcal; packet figure pending) | 20 | 0 | 3 | `[stated]`, estimate `[inferred]` |
+| Evening | Huel sparkling multivitamin energy drink, 330ml can: 3.0g sugars, 3.5g fibre, 100mg caffeine | 30 | 0 | 4 | `[data: can label]` |
 | **Day** | | **~2,900** | **~200** | **~200** | |
 
 Apple Watch active energy expected ~600 `[stated]`, so ~2,300 burned in total. ~600 over
