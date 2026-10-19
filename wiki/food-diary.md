@@ -65,6 +65,8 @@ From Jack's rough recall `[stated, 2026-10-19]`. Every number is Claude's estima
 `[inferred]`, ±30% at best. Assumptions: 1 level scoop of Huel Black = half the recommended serving
 `[stated, 2026-10-19]`, taken as ~200 kcal and 20g protein; semi-skimmed milk 300ml ≈ 140 kcal; a pint ≈ 200 kcal, ~15g carbs, ~2.5 units;
 crisps a standard bag ≈ 170 kcal; sandwiches ≈ 450–550 kcal. Black coffee ×2 a day, negligible.
+Chicken sandwiches always include avocado `[stated, 2026-10-19]`, taken as half an avocado per
+sandwich (~120 kcal); Sun 18 corrected for it.
 
 | Day | Training `[data]` | Food, roughly | kcal | P (g) | C (g) | Pints |
 |---|---|---|---|---|---|---|
@@ -74,11 +76,11 @@ crisps a standard bag ≈ 170 kcal; sandwiches ≈ 450–550 kcal. Black coffee 
 | Thu 15 | Rest | Huel + milk; tuna mayo sandwich, crisps; tuna mayo sandwich | 2,100 | 80 | 175 | 3–4 |
 | Fri 16 | Rest | Huel + milk; tuna mayo sandwich, crisps; oven pizza | 3,250 | 95 | 300 | 6–8 |
 | Sat 17 | Long 12km | Veggie bagel; tuna sandwiches ×2; crisps | 2,250 | 65 | 210 | 4 |
-| Sun 18 | Session B + 2×2.5km | Eggs ×2, avocado, seeded toast ×2; tuna mayo and cheese sandwich; chicken sandwiches ×2 | 2,100 | 120 | 145 | 0 |
-| **Average** | | | **~2,500** | **~115** | **~215** | **~14.5 total** |
+| Sun 18 | Session B + 2×2.5km | Eggs ×2, avocado, seeded toast ×2; tuna mayo and cheese sandwich; chicken and avocado sandwiches ×2 | 2,350 | 125 | 150 | 0 |
+| **Average** | | | **~2,550** | **~115** | **~215** | **~14.5 total** |
 
 What it shows `[inferred]`, against `references/evidence-nutrition.md`:
-- **Energy ≈ maintenance.** ~2,500 eaten against ~2,450–2,600 burned. Fits a stable 77–78kg.
+- **Energy ≈ maintenance.** ~2,550 eaten against ~2,450–2,600 burned. Fits a stable 77–78kg.
 - **Alcohol is the biggest single item.** ~14.5 pints ≈ 2,900 kcal, about a sixth of the
   week, all Thu–Sat. Without it the week would have run ~400 kcal/day under maintenance.
 - **Protein is fine on average, low on drinking days.** ~115 g/day ≈ 1.5 g/kg, inside
