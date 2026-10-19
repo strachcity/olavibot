@@ -1238,3 +1238,40 @@ Wednesday (back squat 90kg). Heel-raise baseline Thursday as its own session. Se
 Sunday (deadlift 100kg, Copenhagen longer lever). Pull-ups 5×3. Reactive L2 held. Changes
 from the block's week 5: strides dropped, easy runs 5/4/5km instead of 5/5/6km. Every run
 gated on pain-free walking that morning.
+
+## [2026-10-19] ingest | Research pass 4: everyday nutrition
+Run at Jack's request `[stated, 2026-10-19]`. New raw source `raw/research/04-everyday-nutrition.md`,
+compiled to `references/evidence-nutrition.md`. The 2016 joint position statement (AND,
+Dietitians of Canada, ACSM) was read in full. Morton 2018 rests on its abstract. REDs and
+bodyweight noise rest on secondary summaries.
+
+Takeaways:
+- Protein 1.2–2.0 g/kg/day **[W]**. The muscle gain from extra protein flattens at ~1.6 g/kg
+  **[W]**. Spread it at ~0.3 g/kg a feed **[I]**.
+- Carbs scale with load: 3–5 g/kg light, 5–7 g/kg at ~1 h/day **[I]**. Jack's current training
+  sits mostly in those two bands, not the endurance band `[inferred]`.
+- If fat loss is wanted: base phase, slow (<1%/week), ~250–500 kcal/day under needs, protein
+  up **[I]/[H]**.
+- Day-to-day weight swings of 1–2 kg are noise. Compare weekly figures **[H]**.
+
+## [2026-10-19] model | Food diary prototype, one week
+Agreed with Jack `[stated, 2026-10-19]`: a one-week food diary, 19–25 Oct, kept in the
+background in `food-diary.md`, not in this log. The aim is a sense check against fat gain.
+Rough estimates are fine, with packet details when he has them. Weights come from the gym
+scale. Bodyweight updated in `athlete.md` to 77–78kg `[stated]` (78.5kg on 18 Oct), which
+differs from the earlier 75kg `[stated]` and Strava's 73kg `[data]`. Flagged for Jack. One
+`review` entry to follow when the week is reviewed.
+
+## [2026-10-19] model | Food diary entries go straight to main
+Agreed with Jack `[stated, 2026-10-19]`: commits that only add or fill in daily entries in
+`food-diary.md` push directly to `main`, prefixed `food:`, like session logs. `CLAUDE.md`
+Commits section updated. Also recorded: the May 75kg was on the same gym scale `[stated]`, so
+77–78kg now is a real gain of ~2–3kg (`athlete.md`). Daily energy estimate added to
+`food-diary.md`, ~2,300–3,050 kcal by day type, ~2,550 average `[inferred]`.
+
+## [2026-10-19] ingest | Apple Watch Move screenshot
+From Jack `[stated, 2026-10-19]`, saved as `raw/history/apple-watch-move-2026-10-19.png`.
+Active energy: 734 kcal/day over the last 90 days, 894 over the year to 19 Oct 2026 `[data]`.
+Resting plus active gives ~2,450 kcal/day recently, within ~100 of the food-diary estimate.
+New hypothesis in `observations.md`: the weight gained since May mostly comes from a
+~160 kcal/day drop in movement, not from eating more `[inferred]`. The food diary tests it.

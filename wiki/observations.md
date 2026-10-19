@@ -43,6 +43,12 @@ confirms them — the block review should test them.
   `[inferred]`. *Rewritten Sep 2026; previously read "volume + intensity rising together",
   which the weekly data contradicts — intensity fell.*
   → The model has no post-ultra return protocol. That gap is what this points at.
+- **The ~2–3kg gained since May came mainly from moving less, not eating more.** Apple Watch
+  active energy averaged 894 kcal/day over the year but 734 kcal/day over the last 90 days
+  `[data: Apple Watch Move, 19 Oct 2025 → 19 Oct 2026, raw/history/apple-watch-move-2026-10-19.png]`.
+  That ~160 kcal/day drop matches the ~100–150 kcal/day surplus the weight gain implies,
+  if eating stayed roughly the same through the Achilles episode `[inferred]`.
+  → The food diary (19–25 Oct) tests the "eating stayed the same" half.
 - Late-ultra fatigue is mostly central, so hip flexor training alone won't fix hour 19
   `[evidence: W]` — applies to him `[inferred]`
 
