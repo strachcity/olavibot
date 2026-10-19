@@ -62,8 +62,8 @@ scale `[stated, 2026-10-19]`.
 ## Baseline: recall of 12–18 Oct (Foundations week 4)
 
 From Jack's rough recall `[stated, 2026-10-19]`. Every number is Claude's estimate
-`[inferred]`, ±30% at best. Assumptions: 1 scoop of Huel Black = half a 90g serving (~200 kcal,
-20g protein); semi-skimmed milk 300ml ≈ 140 kcal; a pint ≈ 200 kcal, ~15g carbs, ~2.5 units;
+`[inferred]`, ±30% at best. Assumptions: 1 level scoop of Huel Black = half the recommended serving
+`[stated, 2026-10-19]`, taken as ~200 kcal and 20g protein; semi-skimmed milk 300ml ≈ 140 kcal; a pint ≈ 200 kcal, ~15g carbs, ~2.5 units;
 crisps a standard bag ≈ 170 kcal; sandwiches ≈ 450–550 kcal. Black coffee ×2 a day, negligible.
 
 | Day | Training `[data]` | Food, roughly | kcal | P (g) | C (g) | Pints |
