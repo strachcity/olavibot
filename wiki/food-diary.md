@@ -123,13 +123,14 @@ complete: yes
 Apple Watch active energy expected ~600 `[stated]`, so ~2,300 burned in total. ~600 over
 `[inferred]`.
 
-## Tue 20 Oct: easy 5km planned
+## Tue 20 Oct: Session A (moved from Wed; easy 5km moved to Wed)
 
 ```yaml
-training: run
-kcal_est: pending
-protein_g_est: pending
-carbs_g_est: pending
+training: gym
+relative_effort: 14
+kcal_est: 1850
+protein_g_est: 105
+carbs_g_est: 195
 alcohol_units: pending
 energy: pending
 hunger: pending
@@ -141,4 +142,9 @@ complete: pending
 | Breakfast | None, missed by accident | 0 | 0 | 0 | `[stated]` |
 | Lunch | Tuna mayo sandwich with onion, red pepper, lettuce; Walkers Baked cheese and onion, small multipack bag | 600 | 27 | 58 | `[stated]`, estimate `[inferred]` |
 | Afternoon | Tesco oat and raisin cookie, 1 of a 5-pack (177 kcal `[data: label]`; macros estimated) | 177 | 2 | 25 | `[data]` + `[inferred]` |
-| **So far** | | **~780** | **~29** | **~83** | |
+| Dinner | Chicken, bacon and leek pasta with cherry tomatoes and garlic-and-herb Philadelphia, 1 of 2 portions (~100g dry pasta, 1 breast, ~60g Philadelphia) | 850 | 65 | 80 | `[stated]`, estimate `[inferred]` |
+| Evening | Tesco chocolate milk (size not given, taken as 330ml) | 220 | 11 | 33 | `[stated]`, estimate `[inferred]` |
+| **Day** | | **~1,850** | **~105** | **~195** | |
+
+Session A: Strava 413 kcal, 81 min `[data]`. Burned ~2,600 in total `[inferred]`, so ~750
+under. Taken with Monday's ~600 over, the two days roughly net out.
