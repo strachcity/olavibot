@@ -1292,3 +1292,17 @@ relative_effort: 14
 - Beyond plan: back squat 95kg over the 90kg ceiling — felt great on the day `[stated]`.
 - Capacity: back squat 95kg × 3×5, the heaviest working sets on record (previous 90kg, 6 Oct). Pull-ups 3×4 at the reported max of 4.
 - Review: First ceiling actually broken this block, two days after targets were set equal to ceilings. That decision only means something if it holds on good days (rule 4, model §3). Next odd week, back squat returns to 90kg; the 95kg is data, not a new floor. Pull-ups 3×4 matched the planned volume (12 reps) but took every set to failure, the thing 5×3 was meant to avoid. The reaction plank is a fair trunk-slot substitute (anti-extension) and counts as done. Shoulder press missed, so overhead push isn't done this week unless Session B adds it. No calf work beyond the warm-up, as needed for Thursday's baseline.
+
+## [2026-10-20] gym | Session A — Foundations wk5
+```yaml
+planned: yes
+achilles_next_am: pending
+duration_min: 81
+session: A
+relative_effort: 14
+```
+- Planned: Back squat (odd week) to 90kg, target = ceiling. Bulgarian split squat + trunk superset, banded march + pull-ups 5×3, shoulder press, cool-down. Scheduled Wed 21; moved to Tue 20 in place of the easy 5km, which moves to Wed 21 `[stated, 2026-10-20]`.
+- Done: "Was fine" `[stated]`. Strava: 81 min, Relative Effort 14 `[data]`. Gym, warm-up, loads and sets not reported.
+- Beyond plan: not reported.
+- Capacity: not reported.
+- Review: Swapping the day puts two clear days between Session A and Thursday's heel-raise baseline instead of one. The easy 5km now lands the day before the baseline, so keep it genuinely easy and on flat ground. 81 minutes is the longest Session A on Strava in this block; worth knowing whether that was rest periods or extra work.
