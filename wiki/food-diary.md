@@ -140,4 +140,5 @@ complete: pending
 |---|---|---|---|---|---|
 | Breakfast | None, missed by accident | 0 | 0 | 0 | `[stated]` |
 | Lunch | Tuna mayo sandwich with onion, red pepper, lettuce; Walkers Baked cheese and onion, small multipack bag | 600 | 27 | 58 | `[stated]`, estimate `[inferred]` |
-| **So far** | | **~600** | **~27** | **~58** | |
+| Afternoon | Tesco oat and raisin cookie, 1 of a 5-pack (177 kcal `[data: label]`; macros estimated) | 177 | 2 | 25 | `[data]` + `[inferred]` |
+| **So far** | | **~780** | **~29** | **~83** | |
