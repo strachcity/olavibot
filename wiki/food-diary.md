@@ -109,7 +109,7 @@ carbs_g_est: 200
 alcohol_units: 0
 energy: pending
 hunger: pending
-complete: pending
+complete: yes
 ```
 
 | Time | What | kcal | P (g) | C (g) | Source |
@@ -122,3 +122,22 @@ complete: pending
 
 Apple Watch active energy expected ~600 `[stated]`, so ~2,300 burned in total. ~600 over
 `[inferred]`.
+
+## Tue 20 Oct: easy 5km planned
+
+```yaml
+training: run
+kcal_est: pending
+protein_g_est: pending
+carbs_g_est: pending
+alcohol_units: pending
+energy: pending
+hunger: pending
+complete: pending
+```
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| Breakfast | None, missed by accident | 0 | 0 | 0 | `[stated]` |
+| Lunch | Tuna mayo sandwich with onion, red pepper, lettuce; Walkers Baked cheese and onion, small multipack bag | 600 | 27 | 58 | `[stated]`, estimate `[inferred]` |
+| **So far** | | **~600** | **~27** | **~58** | |
