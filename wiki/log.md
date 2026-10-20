@@ -1275,3 +1275,18 @@ Active energy: 734 kcal/day over the last 90 days, 894 over the year to 19 Oct 2
 Resting plus active gives ~2,450 kcal/day recently, within ~100 of the food-diary estimate.
 New hypothesis in `observations.md`: the weight gained since May mostly comes from a
 ~160 kcal/day drop in movement, not from eating more `[inferred]`. The food diary tests it.
+
+## [2026-10-20] gym | Session A — Foundations wk5 (full gym)
+```yaml
+planned: partial
+achilles_next_am: pending
+beyond_plan: back squat 95kg over 90kg ceiling
+gym: full
+session: A
+reactive_level: 2
+```
+- Planned: Mobility warm-up only (foot). Back squat ramp bar×10 → 50×5 → 70×3 → 80×1–2, then 3×5 @90kg RPE7 (target = ceiling, agreed 18 Oct). Superset: Bulgarian split squat 3×8/leg @17.5–18kg + side plank 3×30s/side. Superset: banded march 3×30s/leg + pull-ups 5×3. Seated DB shoulder press 3×10 @16–17.5kg. Cool-down, light on calves (heel-raise baseline Thursday). Moved from Wednesday to Tuesday.
+- Done: Cycled to the gym. Warm-up and ramp as planned. Back squat 3×5 @95kg — "fancied it and felt great" `[stated]`. Bulgarian split squat @17.5kg; banded march; pull-ups 3×4. Reaction plank challenge (plank, hit one of three buzzers as they light) in place of the side plank, score 103, "tired me out" `[stated]`. Shoulder press and cool-down not done. Cycled home. Not on Strava at the time of logging; duration and relative effort to be added when it uploads.
+- Beyond plan: back squat 95kg over the 90kg ceiling — felt great on the day `[stated]`.
+- Capacity: back squat 95kg × 3×5, the heaviest working sets on record (previous 90kg, 6 Oct). Pull-ups 3×4 at the reported max of 4.
+- Review: First ceiling actually broken this block, two days after targets were set equal to ceilings. That decision only means something if it holds on good days (rule 4, model §3). Next odd week, back squat returns to 90kg; the 95kg is data, not a new floor. Pull-ups 3×4 matched the planned volume (12 reps) but took every set to failure, the thing 5×3 was meant to avoid. The reaction plank is a fair trunk-slot substitute (anti-extension) and counts as done. Shoulder press missed, so overhead push isn't done this week unless Session B adds it. No calf work beyond the warm-up, as needed for Thursday's baseline.
