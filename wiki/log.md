@@ -1306,3 +1306,8 @@ relative_effort: 14
 - Beyond plan: not reported.
 - Capacity: not reported.
 - Review: Swapping the day puts two clear days between Session A and Thursday's heel-raise baseline instead of one. The easy 5km now lands the day before the baseline, so keep it genuinely easy and on flat ground. 81 minutes is the longest Session A on Strava in this block; worth knowing whether that was rest periods or extra work.
+
+## [2026-10-20] review | Correction to today's Session A review
+The review said 81 minutes was the longest Session A on Strava in this block. Wrong: the
+22 Sep session was also 81 minutes, and 6 Oct was 77 `[data: Strava]`. Today's length is
+normal for Session A, not a flag.
