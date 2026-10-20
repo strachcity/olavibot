@@ -1284,6 +1284,8 @@ beyond_plan: back squat 95kg over 90kg ceiling
 gym: full
 session: A
 reactive_level: 2
+duration_min: 81
+relative_effort: 14
 ```
 - Planned: Mobility warm-up only (foot). Back squat ramp bar×10 → 50×5 → 70×3 → 80×1–2, then 3×5 @90kg RPE7 (target = ceiling, agreed 18 Oct). Superset: Bulgarian split squat 3×8/leg @17.5–18kg + side plank 3×30s/side. Superset: banded march 3×30s/leg + pull-ups 5×3. Seated DB shoulder press 3×10 @16–17.5kg. Cool-down, light on calves (heel-raise baseline Thursday). Moved from Wednesday to Tuesday.
 - Done: Cycled to the gym. Warm-up and ramp as planned. Back squat 3×5 @95kg — "fancied it and felt great" `[stated]`. Bulgarian split squat @17.5kg; banded march; pull-ups 3×4. Reaction plank challenge (plank, hit one of three buzzers as they light) in place of the side plank, score 103, "tired me out" `[stated]`. Shoulder press and cool-down not done. Cycled home. Not on Strava at the time of logging; duration and relative effort to be added when it uploads.
