@@ -1311,3 +1311,20 @@ relative_effort: 14
 The review said 81 minutes was the longest Session A on Strava in this block. Wrong: the
 22 Sep session was also 81 minutes, and 6 Oct was 77 `[data: Strava]`. Today's length is
 normal for Session A, not a flag.
+
+## [2026-10-21] run | Easy 5km — Foundations wk5
+```yaml
+planned: partial
+achilles_next_am: pending
+beyond_plan: strides in last km
+duration_min: 34
+distance_km: 6.01
+avg_pace: 5:38
+run_type: strides
+relative_effort: 18
+```
+- Planned: Easy 5km, no strides (dropped this week for the left foot). Moved from Tuesday to Wednesday after Session A moved to Tuesday.
+- Done: 6.01km in 33:53 moving (34:17 elapsed), 5:38/km, avg HR 138, max 156, Victoria Park `[data, Strava activity 20678575433]`. Strides in the last km, on the way home. "All very comfortable, no pain anywhere" `[stated, 2026-10-21]`. Top speed 5.4 m/s (~3:05/km) `[data]`.
+- Beyond plan: strides, which week 5 had dropped for the foot. The extra km was the run home and is inside the block's ±1km tolerance.
+- Capacity: not reported.
+- Review: The run itself was easy: HR 138 at 5:38/km is in line with recent easy runs, and the strides were relaxed rather than flat out (top speed 3:05/km against 2:29/km on 13 Oct). The foot gave no pain, the first clean report since 11 Oct. Still, strides were taken out on purpose, and this is the second time this week a session went past its plan on a good day (after the back squat on 20 Oct). No harm shows yet. Thursday's baseline and Friday's morning are the checks.
