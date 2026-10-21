@@ -1279,7 +1279,7 @@ New hypothesis in `observations.md`: the weight gained since May mostly comes fr
 ## [2026-10-20] gym | Session A — Foundations wk5 (full gym)
 ```yaml
 planned: partial
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: back squat 95kg over 90kg ceiling
 gym: full
 session: A
