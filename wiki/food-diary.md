@@ -167,4 +167,7 @@ complete: pending
 | Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
 | Lunch | Tuna mayo sandwich (usual fillings); Walkers Baked crisps, small bag | 600 | 27 | 58 | `[stated]`, estimate `[inferred]` |
 | Day | Banana; 2 black coffees | 110 | 1 | 27 | `[stated]`, estimate `[inferred]` |
-| **So far** | | **~1,050** | **~58** | **~111** | |
+| Dinner | Leftover chicken, bacon and leek pasta, full portion | 850 | 65 | 80 | `[stated]`, estimate `[inferred]` |
+| **So far** | | **~1,900** | **~123** | **~191** | |
+
+Run: 6.0km, Strava 406 kcal `[data]`. Burned ~2,650 in total `[inferred]`, so ~750 under so far.
