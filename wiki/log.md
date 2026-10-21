@@ -1328,3 +1328,19 @@ relative_effort: 18
 - Beyond plan: strides, which week 5 had dropped for the foot. The extra km was the run home and is inside the block's ±1km tolerance.
 - Capacity: not reported.
 - Review: The run itself was easy: HR 138 at 5:38/km is in line with recent easy runs, and the strides were relaxed rather than flat out (top speed 3:05/km against 2:29/km on 13 Oct). The foot gave no pain, the first clean report since 11 Oct. Still, strides were taken out on purpose, and this is the second time this week a session went past its plan on a good day (after the back squat on 20 Oct). No harm shows yet. Thursday's baseline and Friday's morning are the checks.
+
+## [2026-10-21] run | Easy 6km — Foundations wk5 (moved from Tue)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: 1km extra
+duration_min: 34
+distance_km: 6.0
+avg_pace: 5:38
+run_type: easy
+relative_effort: 18
+```
+- Planned: Easy 5km, no strides. Moved from Tue 20 when Session A moved up a day.
+- Done: 6.0km in 33:53 moving, 5:38/km, 22m gain, Relative Effort 18 `[data: Strava]`. Achilles that morning 0 `[stated]`.
+- Beyond plan: 1km extra, about 5–6 easy minutes, which sits inside the pre-agreed good-day allowance. Reason not reported.
+- Review: Pace inside the easy band. The extra kilometre is the kind of small creep rule 4 watches for, and it lands the day before the heel-raise baseline in a week deliberately cut to ~25km. Fine once; worth noticing if it repeats on Friday or Saturday.
