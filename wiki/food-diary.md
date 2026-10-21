@@ -168,7 +168,8 @@ complete: pending
 | Lunch | Tuna mayo sandwich (usual fillings); Walkers Baked crisps, small bag | 600 | 27 | 58 | `[stated]`, estimate `[inferred]` |
 | Day | Banana; 2 black coffees | 110 | 1 | 27 | `[stated]`, estimate `[inferred]` |
 | Dinner | Leftover chicken, bacon and leek pasta, full portion | 850 | 65 | 80 | `[stated]`, estimate `[inferred]` |
-| Evening | Snack a Jack, ~50 kcal as stated | 50 | 1 | 10 | `[stated]` |
-| **So far** | | **~1,950** | **~124** | **~201** | |
+| Evening | Snack a Jack, single rice cake, ~50 kcal `[stated]` | 50 | 1 | 10 | `[stated]` |
+| Evening | Tesco chocolate milk (taken as 330ml, as Tue) | 220 | 11 | 33 | `[stated]`, estimate `[inferred]` |
+| **Day** | | **~2,170** | **~135** | **~234** | |
 
-Run: 6.0km, Strava 406 kcal `[data]`. Burned ~2,650 in total `[inferred]`, so ~700 under so far.
+Run: 6.0km, Strava 406 kcal `[data]`. Burned ~2,650 in total `[inferred]`, so ~480 under.
