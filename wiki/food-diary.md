@@ -131,10 +131,10 @@ relative_effort: 14
 kcal_est: 1850
 protein_g_est: 105
 carbs_g_est: 195
-alcohol_units: pending
+alcohol_units: 0
 energy: pending
 hunger: pending
-complete: pending
+complete: yes
 ```
 
 | Time | What | kcal | P (g) | C (g) | Source |
@@ -148,3 +148,23 @@ complete: pending
 
 Session A: Strava 413 kcal, 81 min `[data]`. Burned ~2,600 in total `[inferred]`, so ~750
 under. Taken with Monday's ~600 over, the two days roughly net out.
+
+## Wed 21 Oct: easy 5km planned (moved from Tue)
+
+```yaml
+training: run
+kcal_est: pending
+protein_g_est: pending
+carbs_g_est: pending
+alcohol_units: pending
+energy: pending
+hunger: pending
+complete: pending
+```
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
+| Lunch | Tuna mayo sandwich (usual fillings); Walkers Baked crisps, small bag | 600 | 27 | 58 | `[stated]`, estimate `[inferred]` |
+| Day | Banana; 2 black coffees | 110 | 1 | 27 | `[stated]`, estimate `[inferred]` |
+| **So far** | | **~1,050** | **~58** | **~111** | |
