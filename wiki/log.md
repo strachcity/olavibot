@@ -1324,3 +1324,10 @@ agreement `[stated, 2026-10-22]` and kept the fuller entries. Facts only the dup
 - Achilles 0 on 21 Oct morning `[stated]`.
 - Session A moved to Tuesday in place of the easy 5km `[stated, 2026-10-20]`.
 The review entry correcting the duplicate's "longest Session A" claim stays, as history.
+
+## [2026-10-22] block | Week 5 Friday run 4km → 6km
+Jack's call `[stated, 2026-10-22]`: Friday's easy run goes from 4km to 6km, so week 5 totals
+~28km, matching week 4 (hold, not build). Conditions: skip it or cut it to 4km if the calves
+are sore from Thursday's heel-raise baseline; easy pace, no strides. Third upward change in
+week 5, after the back squat at 95kg and the strides on 21 Oct. Week 6 should be planned
+closer to what Jack actually intends to run.
