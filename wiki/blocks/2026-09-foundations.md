@@ -42,7 +42,7 @@ are targets, ±1km either way — the ceiling is what matters, not hitting the n
 | 4 | Easy 3 | 5km | 5:30–6:00/km | as 2×2.5km to and from the gym, or one run (changed 11 Oct) |
 | 4 | Long | 12km | 5:30–6:00/km or slower | 12km, Jack's call (changed 11 Oct; block had 9) |
 | 5 | Easy 1 | 5km | 5:30–6:00/km | no strides, for the foot (changed 18 Oct) |
-| 5 | Easy 2 | 4km | 5:30–6:00/km | (changed 18 Oct; block had 5km) |
+| 5 | Easy 2 | 6km | 5:30–6:00/km | (changed 18 Oct to 4km; changed 22 Oct to 6km, Jack's call) |
 | 5 | Easy 3 | 5km | 5:30–6:00/km | as 2×2.5km to and from Session B; no strides (changed 18 Oct; block had 6km + strides) |
 | 5 | Long | 11km | 5:30–6:00/km or slower | |
 | 6 | Easy 1 | 5km | 5:30–6:00/km | cutback |
@@ -360,6 +360,10 @@ on pain-free walking that morning. If walking hurts, cycle or skip the run.
   a heavy day counts as on plan.
 - **The baseline only works if it happens.** If Thursday slips, the next valid morning is
   Friday, before the run.
+
+Changed 22 Oct: Friday's easy run goes from 4km to 6km, so the week totals ~28km, the same as
+week 4 `[stated, 2026-10-22]`. Conditions: skip it or cut it to 4km if the calves are sore from
+Thursday's baseline; easy pace, no strides.
 
 ## What would change the plan
 - Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,
