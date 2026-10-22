@@ -153,13 +153,14 @@ under. Taken with Monday's ~600 over, the two days roughly net out.
 
 ```yaml
 training: run
-kcal_est: pending
-protein_g_est: pending
-carbs_g_est: pending
-alcohol_units: pending
+relative_effort: 18
+kcal_est: 2170
+protein_g_est: 135
+carbs_g_est: 234
+alcohol_units: 0
 energy: pending
 hunger: pending
-complete: pending
+complete: yes
 ```
 
 | Time | What | kcal | P (g) | C (g) | Source |
@@ -173,3 +174,22 @@ complete: pending
 | **Day** | | **~2,170** | **~135** | **~234** | |
 
 Run: 6.0km, Strava 406 kcal `[data]`. Burned ~2,650 in total `[inferred]`, so ~480 under.
+
+## Thu 22 Oct: heel-raise baseline, nothing else
+
+```yaml
+training: test
+kcal_est: pending
+protein_g_est: pending
+carbs_g_est: pending
+alcohol_units: pending
+energy: pending
+hunger: pending
+complete: pending
+```
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk; black coffee | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
+| Lunch | Tuna mayo sandwich (usual fillings); Walkers Baked crisps, small bag | 600 | 27 | 58 | `[stated]`, estimate `[inferred]` |
+| **So far** | | **~940** | **~57** | **~84** | |

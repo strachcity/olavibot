@@ -1332,7 +1332,7 @@ relative_effort: 18
 ## [2026-10-21] run | Easy 6km — Foundations wk5 (moved from Tue)
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: 1km extra
 duration_min: 34
 distance_km: 6.0
