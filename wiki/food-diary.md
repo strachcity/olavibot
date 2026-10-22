@@ -193,5 +193,5 @@ complete: pending
 | Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk; black coffee | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
 | Lunch | Tuna mayo sandwich (usual fillings); Walkers Baked crisps, small bag | 600 | 27 | 58 | `[stated]`, estimate `[inferred]` |
 | Evening | Canapés at an event: about a chicken breast's worth of chicken, 4 small spring rolls, 1 gyoza. No drinks `[stated]` | 515 | 51 | 30 | `[stated]`, estimate `[inferred]` |
-| Dinner | Butter paneer curry with rice (source not given; taken as midway between a ready meal ~700 and a takeaway ~1,200) | 900 | 30 | 100 | `[stated]`, estimate `[inferred]` |
-| **So far** | | **~2,355** | **~138** | **~214** | |
+| Dinner | Baked butter paneer, cooked from scratch from a cookbook recipe (serves 4: 500g paneer, 150ml double cream, 5 tbsp Greek yoghurt, 2 tbsp honey, 2 tins tomatoes, oil; no butter) `[data: recipe]`. Taken as 1 of 4 portions (~710 kcal), ~75g dry rice (~270), pak choi instead of naan (~20) | 1,000 | 35 | 78 | `[stated]` + `[data]`, portion and rice `[inferred]` |
+| **So far** | | **~2,455** | **~143** | **~192** | |
