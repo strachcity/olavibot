@@ -193,4 +193,5 @@ complete: pending
 | Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk; black coffee | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
 | Lunch | Tuna mayo sandwich (usual fillings); Walkers Baked crisps, small bag | 600 | 27 | 58 | `[stated]`, estimate `[inferred]` |
 | Evening | Canapés at an event: about a chicken breast's worth of chicken, 4 small spring rolls, 1 gyoza. No drinks `[stated]` | 515 | 51 | 30 | `[stated]`, estimate `[inferred]` |
-| **So far** | | **~1,455** | **~108** | **~114** | |
+| Dinner | Butter paneer curry with rice (source not given; taken as midway between a ready meal ~700 and a takeaway ~1,200) | 900 | 30 | 100 | `[stated]`, estimate `[inferred]` |
+| **So far** | | **~2,355** | **~138** | **~214** | |
