@@ -212,4 +212,5 @@ complete: pending
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
 | Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
-| **So far** | | **~340** | **~30** | **~26** | |
+| Lunch | Small bowl of leftover pasta; 1 ham and cheese croissant | 800 | 45 | 75 | `[stated]`, estimate `[inferred]` |
+| **So far** | | **~1,140** | **~75** | **~101** | |
