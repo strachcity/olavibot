@@ -179,6 +179,27 @@ Run: 6.0km, Strava 406 kcal `[data]`. Burned ~2,650 in total `[inferred]`, so ~4
 
 ```yaml
 training: test
+kcal_est: 2455
+protein_g_est: 143
+carbs_g_est: 192
+alcohol_units: 0
+energy: pending
+hunger: pending
+complete: yes
+```
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk; black coffee | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
+| Lunch | Tuna mayo sandwich (usual fillings); Walkers Baked crisps, small bag | 600 | 27 | 58 | `[stated]`, estimate `[inferred]` |
+| Evening | Canapés at an event: about a chicken breast's worth of chicken, 4 small spring rolls, 1 gyoza. No drinks `[stated]` | 515 | 51 | 30 | `[stated]`, estimate `[inferred]` |
+| Dinner | Baked butter paneer, cooked from scratch from a cookbook recipe (serves 4: 500g paneer, 150ml double cream, 5 tbsp Greek yoghurt, 2 tbsp honey, 2 tins tomatoes, oil; no butter) `[data: recipe]`. Taken as 1 of 4 portions (~710 kcal), 75g dry rice `[stated]` (~270), pak choi instead of naan (~20) | 1,000 | 35 | 78 | `[stated]` + `[data]`, portion `[inferred]` |
+| **So far** | | **~2,455** | **~143** | **~192** | |
+
+## Fri 23 Oct: easy 4km planned
+
+```yaml
+training: run
 kcal_est: pending
 protein_g_est: pending
 carbs_g_est: pending
@@ -190,8 +211,5 @@ complete: pending
 
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
-| Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk; black coffee | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
-| Lunch | Tuna mayo sandwich (usual fillings); Walkers Baked crisps, small bag | 600 | 27 | 58 | `[stated]`, estimate `[inferred]` |
-| Evening | Canapés at an event: about a chicken breast's worth of chicken, 4 small spring rolls, 1 gyoza. No drinks `[stated]` | 515 | 51 | 30 | `[stated]`, estimate `[inferred]` |
-| Dinner | Baked butter paneer, cooked from scratch from a cookbook recipe (serves 4: 500g paneer, 150ml double cream, 5 tbsp Greek yoghurt, 2 tbsp honey, 2 tins tomatoes, oil; no butter) `[data: recipe]`. Taken as 1 of 4 portions (~710 kcal), 75g dry rice `[stated]` (~270), pak choi instead of naan (~20) | 1,000 | 35 | 78 | `[stated]` + `[data]`, portion `[inferred]` |
-| **So far** | | **~2,455** | **~143** | **~192** | |
+| Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
+| **So far** | | **~340** | **~30** | **~26** | |
