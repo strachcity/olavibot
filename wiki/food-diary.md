@@ -196,7 +196,7 @@ complete: yes
 | Dinner | Baked butter paneer, cooked from scratch from a cookbook recipe (serves 4: 500g paneer, 150ml double cream, 5 tbsp Greek yoghurt, 2 tbsp honey, 2 tins tomatoes, oil; no butter) `[data: recipe]`. Taken as 1 of 4 portions (~710 kcal), 75g dry rice `[stated]` (~270), pak choi instead of naan (~20) | 1,000 | 35 | 78 | `[stated]` + `[data]`, portion `[inferred]` |
 | **So far** | | **~2,455** | **~143** | **~192** | |
 
-## Fri 23 Oct: easy 4km planned
+## Fri 23 Oct: easy 6km (plan changed from 4km, 22 Oct)
 
 ```yaml
 training: run
@@ -213,4 +213,5 @@ complete: pending
 |---|---|---|---|---|---|
 | Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
 | Lunch | Small bowl of leftover pasta; 1 ham and cheese croissant | 800 | 45 | 75 | `[stated]`, estimate `[inferred]` |
-| **So far** | | **~1,140** | **~75** | **~101** | |
+| Afternoon | Cheese and tomato croissant | 350 | 12 | 30 | `[stated]`, estimate `[inferred]` |
+| **So far** | | **~1,490** | **~87** | **~131** | |
