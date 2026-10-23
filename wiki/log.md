@@ -1331,3 +1331,20 @@ Jack's call `[stated, 2026-10-22]`: Friday's easy run goes from 4km to 6km, so w
 are sore from Thursday's heel-raise baseline; easy pace, no strides. Third upward change in
 week 5, after the back squat at 95kg and the strides on 21 Oct. Week 6 should be planned
 closer to what Jack actually intends to run.
+
+## [2026-10-23] run | Easy 6km — Foundations wk5
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 38
+distance_km: 6.35
+avg_pace: 6:01
+run_type: easy
+relative_effort: 31
+```
+- Planned: Easy 6km, no strides (changed 22 Oct from 4km). Skip it or cut it to 4km if the calves are sore from the heel-raise baseline.
+- Done: 6.35km in 38:15 moving, 6:01/km, avg HR 143, max 151, Victoria Park `[data, Strava activity 20703728873]`. No strides `[data: top speed 4.68 m/s]`. How it felt, and whether the baseline was done on 22 Oct, not reported.
+- Beyond plan: none. The extra 0.35km is inside the ±1km tolerance.
+- Capacity: not reported.
+- Review: Slower and harder than Wednesday's run over the same park. HR 143 at 6:01/km against 138 at 5:38/km two days earlier, and relative effort 31 against 18 for about the same distance `[data]`. Higher HR at a slower pace usually means tiredness, poor sleep, heat, stress or alcohol, rather than fitness going backwards. One run isn't a trend. Take it into Saturday: if HR sits above ~145 in the first 3km of the long run at easy pace, shorten it to 8–9km rather than push through.
