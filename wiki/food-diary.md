@@ -200,13 +200,14 @@ complete: yes
 
 ```yaml
 training: run
-kcal_est: pending
-protein_g_est: pending
-carbs_g_est: pending
-alcohol_units: pending
+relative_effort: 31
+kcal_est: 2490
+protein_g_est: 162
+carbs_g_est: 216
+alcohol_units: 0
 energy: pending
 hunger: pending
-complete: pending
+complete: yes
 ```
 
 | Time | What | kcal | P (g) | C (g) | Source |
@@ -214,10 +215,10 @@ complete: pending
 | Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
 | Lunch | Small bowl of leftover pasta; 1 ham and cheese croissant | 800 | 45 | 75 | `[stated]`, estimate `[inferred]` |
 | Afternoon | Cheese and tomato croissant | 350 | 12 | 30 | `[stated]`, estimate `[inferred]` |
-| Dinner | Not yet reported (chicken fajitas planned) | pending | pending | pending | |
-| **So far** | | **~1,490** | **~87** | **~131** | |
+| Dinner | Chicken fajitas, 2 wraps, peppers, onion, fresh salsa, guac (~½ avocado). No drinks `[stated]` | 1,000 | 75 | 85 | `[stated]`, estimate `[inferred]` |
+| **Day** | | **~2,490** | **~162** | **~216** | |
 
-Run: 6.35km, Strava 425 kcal `[data]`.
+Run: 6.35km, Strava 425 kcal `[data]`. Burned ~2,700 `[inferred]`, so ~200 under.
 
 ## Sat 24 Oct: long run, 12.1km at 08:29
 
