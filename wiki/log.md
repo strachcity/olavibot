@@ -1348,3 +1348,20 @@ relative_effort: 31
 - Beyond plan: none. The extra 0.35km is inside the ±1km tolerance.
 - Capacity: not reported.
 - Review: Slower and harder than Wednesday's run over the same park. HR 143 at 6:01/km against 138 at 5:38/km two days earlier, and relative effort 31 against 18 for about the same distance `[data]`. Higher HR at a slower pace usually means tiredness, poor sleep, heat, stress or alcohol, rather than fitness going backwards. One run isn't a trend. Take it into Saturday: if HR sits above ~145 in the first 3km of the long run at easy pace, shorten it to 8–9km rather than push through.
+
+## [2026-10-24] run | Long 11km — Foundations wk5
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 71
+distance_km: 12.08
+avg_pace: 5:36
+run_type: long
+relative_effort: 47
+```
+- Planned: Long 11km, natural easy pace, by the talk test. Shorten to 8–9km if flat in the first 3km or HR above ~145 while chatting (after a week of 5–6h sleep).
+- Done: 12.08km in 67:42 moving (70:30 elapsed), 5:36/km, avg HR 141, max 160, Victoria Park and London Fields `[data, Strava activity 20709173271]`. Titled "Full of beans" on Strava. First lap of the park averaged HR ~134; the second lap ~142 at the same pace; max 160 near the end, through London Fields `[data, segments]`.
+- Beyond plan: none. The extra 1.08km is at the edge of the block's ±1km tolerance.
+- Capacity: fastest long run of the block. 5:36/km for 12km, against 5:54/km for 12.3km on 17 Oct and 6:12/km for 11.9km on 10 Oct `[data]`.
+- Review: A strong run, and the first lap was properly easy at HR 134. Two flags. HR drifted about 8 beats from the first lap to the second at the same pace, and the finish pushed to 160. That's the shape of an easy run that turned into a steady one, after a week of short sleep. And it's 18 s/km faster than last week's long run and a km over plan. Not a problem on its own, but it's the fourth upward move this week (squat 95kg, strides, Friday 6km). Tomorrow morning's Achilles and foot scores show whether it cost anything.
