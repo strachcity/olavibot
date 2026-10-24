@@ -237,6 +237,7 @@ complete: pending
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
 | Breakfast, after the run | Deli bagel (everything/seeded): sliced turkey or ham, bacon, lettuce, tomato, mayo `[stated: photo]` | 650 | 35 | 55 | estimate `[inferred]` |
-| **So far** | | **~650** | **~35** | **~55** | |
+| Lunch | Tuna mayo wrap, 1 large tortilla: onion, pepper, chilli, lettuce, a few cherry tomatoes; Walkers Baked crisps, small bag | 600 | 32 | 55 | `[stated]`, estimate `[inferred]` |
+| **So far** | | **~1,250** | **~67** | **~110** | |
 
 Run: 12.1km, Strava 822 kcal `[data]`. Burn today ~3,100 `[inferred]`.
