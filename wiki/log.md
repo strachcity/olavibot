@@ -1365,3 +1365,11 @@ relative_effort: 47
 - Beyond plan: none. The extra 1.08km is at the edge of the block's ±1km tolerance.
 - Capacity: fastest long run of the block. 5:36/km for 12km, against 5:54/km for 12.3km on 17 Oct and 6:12/km for 11.9km on 10 Oct `[data]`.
 - Review: A strong run, and the first lap was properly easy at HR 134. Two flags. HR drifted about 8 beats from the first lap to the second at the same pace, and the finish pushed to 160. That's the shape of an easy run that turned into a steady one, after a week of short sleep. And it's 18 s/km faster than last week's long run and a km over plan. Not a problem on its own, but it's the fourth upward move this week (squat 95kg, strides, Friday 6km). Tomorrow morning's Achilles and foot scores show whether it cost anything.
+
+## [2026-10-24] model | Food diary extended to a one-month pilot
+Jack's call `[stated, 2026-10-24]`: the food diary runs for a month, 19 Oct → 15 Nov, not one
+week, to spot patterns. His social weeks vary: some weeks he goes out, some he doesn't, and
+19–25 Oct was a quiet one `[stated]`. So week 1's lack of alcohol is not a change against the
+12–18 Oct baseline, and the review compares like with like across the month. Short weekly
+summaries; full review and recommendations after 15 Nov. `food-diary.md` header and
+`index.md` updated.

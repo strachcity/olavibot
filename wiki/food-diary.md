@@ -1,19 +1,24 @@
-# Food diary: prototype week
+# Food diary: one-month pilot
 
-**Mon 19 → Sun 25 Oct 2026** (Foundations week 5). Agreed with Jack `[stated, 2026-10-19]`.
+**Mon 19 Oct → Sun 15 Nov 2026**, four weeks. Started as a one-week prototype `[stated,
+2026-10-19]`; extended to a month on 24 Oct to catch patterns one week can't `[stated,
+2026-10-24]`. Some weeks Jack goes out, some he doesn't; week 1 (19–25 Oct) was a quiet one
+`[stated, 2026-10-24]`, so it isn't the typical week, and neither was the 12–18 Oct baseline.
+A short summary at the end of each week; the full review and recommendations after 15 Nov.
 
 **Why:** a sense check, not a diet. Jack doesn't want to gain fat `[stated, 2026-10-19]`. The
 question: does what he eats match what his training asks, especially protein, and carbs on
 light days compared with heavy ones? Targets come from `references/evidence-nutrition.md`.
 
 **How it runs:**
-- Background only. Session plans and reviews don't mention it until the week is reviewed.
+- Background only. Session plans and training reviews don't mention it until the month is reviewed.
 - Jack messages meals as he goes, roughly. He can add packet details when he has them.
 - Claude estimates kcal, protein and carbs. Every estimate is `[inferred]`, probably out by
   20–30%. Packet figures become `[data]`.
 - Weigh at the gym scale on gym days. Compare the weekly figures, not single days.
 - Training per day comes from `log.md` and Strava.
-- The end-of-week review goes at the bottom of this page, with one `review` entry in `log.md`.
+- A short weekly summary goes under each week. The full review goes at the bottom of this page,
+  with one `review` entry in `log.md`.
 
 **Daily block.** Each field is a number, a listed word or `pending`. Omit what's genuinely
 unknown.
