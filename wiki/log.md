@@ -1365,3 +1365,9 @@ relative_effort: 47
 - Beyond plan: none. The extra 1.08km is at the edge of the block's ±1km tolerance.
 - Capacity: fastest long run of the block. 5:36/km for 12km, against 5:54/km for 12.3km on 17 Oct and 6:12/km for 11.9km on 10 Oct `[data]`.
 - Review: A strong run, and the first lap was properly easy at HR 134. Two flags. HR drifted about 8 beats from the first lap to the second at the same pace, and the finish pushed to 160. That's the shape of an easy run that turned into a steady one, after a week of short sleep. And it's 18 s/km faster than last week's long run and a km over plan. Not a problem on its own, but it's the fourth upward move this week (squat 95kg, strides, Friday 6km). Tomorrow morning's Achilles and foot scores show whether it cost anything.
+
+## [2026-10-24] model | Agreed weeks go to Google Calendar
+Agreed with Jack `[stated, 2026-10-24]`: pushing the week to his Google Calendar is now a
+standard step of planning a week. Each session gets its own event, 18:00 by default, and Jack
+moves them himself. A morning test keeps its morning slot. Plan changes update the matching
+event. Added to `plan-training` (Weekly plans) and to the operations table in `CLAUDE.md`.
