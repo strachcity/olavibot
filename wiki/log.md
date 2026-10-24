@@ -1375,3 +1375,12 @@ event. Added to `plan-training` (Weekly plans) and to the operations table in `C
 ## [2026-10-24] model | Calendar events go on "Running"
 Correction to the entry above, from Jack `[stated, 2026-10-24]`: training events go on his
 "Running" calendar, not his primary "Life" one. `plan-training` updated.
+
+## [2026-10-24] block | Week 6 planned: cutback and tests
+Week 6 (26 Oct – 1 Nov) added to `blocks/2026-09-foundations.md`: rest Monday, 5k test
+Tuesday, Session A Wednesday, heel-raise test Thursday, easy 4km Friday, threshold test
+Saturday, Session B plus 2×2.5km Sunday. ~26km, no long run. Jack swapped the two run tests
+(5k Tuesday, threshold Saturday) and runs to the gym only at weekends `[stated, 2026-10-24]`.
+Also recorded in `athlete.md`: no physio access, and he won't book one `[stated, 2026-10-24]`,
+so the repeated "book a physio" recommendation stops. Events created on the "Running" calendar.
+Planned before the week 5 summary; whether the 22 Oct heel-raise baseline happened is not known.

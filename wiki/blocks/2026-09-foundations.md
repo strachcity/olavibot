@@ -365,6 +365,55 @@ Changed 22 Oct: Friday's easy run goes from 4km to 6km, so the week totals ~28km
 week 4 `[stated, 2026-10-22]`. Conditions: skip it or cut it to 4km if the calves are sore from
 Thursday's baseline; easy pace, no strides.
 
+**Week 6 (26 Oct – 1 Nov).** Cutback and test week. Constraint: Monday, Wednesday, Thursday
+and Friday evenings are work; Saturday and Sunday mornings are busy; Tuesday evening is a
+placeholder `[stated, 2026-10-24]`. Runs to and from the gym only at weekends `[stated,
+2026-10-24]`. Planned before the week 5 summary, which waits on Sunday 25 Oct.
+
+| Day | Session |
+|---|---|
+| Mon 26 | Rest |
+| Tue 27 | 5k test, race effort. 2km warm-up, 1–1.5km cool-down, ~8km. Only if walking is pain-free that morning |
+| Wed 28 | Gym — Session A (full gym): front squat 65kg (even week). Hip-flexion, balance and knee-to-wall tests in the warm-up. No calf work beyond the warm-up |
+| Thu 29 | Heel-raise test, first thing, fresh (`tests.md`). Nothing else. Skip it if the baseline was already done on 22 Oct |
+| Fri 30 | Easy — 4km. Doubles as the easy-pace-at-fixed-HR test |
+| Sat 31 | Threshold test — 3×10min just below half-marathon effort, jog 2min between. 2km warm-up, 1.5km cool-down, ~9km |
+| Sun 1 | Gym — Session B (full gym): trap bar 95kg, Nordic curl (even week), seated calf raise vs bodyweight test, hop test only if landing is pain-free + Easy — 2×2.5km to and from |
+
+~26km, down from ~29.5km in week 5. No long run, as the block planned.
+
+*Why this week*
+
+| Decision | Why | Source |
+|---|---|---|
+| Cutback, no long run, both run tests | The block's week 6 | Block plan |
+| Monday rest | Day after Sunday 25's Session B and runs | Constraint `[stated, 2026-10-24]` |
+| 5k Tuesday, threshold Saturday | Jack's swap. The 5k gets the freshest day, after the rest day; 4 days between the two hard runs | `[stated, 2026-10-24]`; spacing **[W/H]** |
+| Threshold run by effort, as bounded reps | First threshold of the block. Reps, not continuous, so it doesn't become grey-zone running | Model §5; `evidence-norwegian-method.md` **[I]** |
+| No run to Session A; Sunday's 5km as runs to and from Session B | Runs to the gym only at weekends | `[stated, 2026-10-24]` |
+| Heel-raise Thursday | ≥72h after Sunday 25's calf work; no calf loading Wednesday | `tests.md` protocol **[W]** |
+| Calf and hop tests in Session B | The seated calf test is heavy calf work, so it follows the heel-raise test. Last day of the block | `tests.md` |
+| Squat and deadlift e1RM from week 5–6 working sets, no max attempts | Avoids a heavy single in a test week | Judgement `[inferred]` |
+| Anchors: front squat 65kg, trap bar 95kg, target = ceiling | Jack's call | `[stated, 2026-10-18]` |
+
+*Weak points*
+
+- **Two hard runs in one week.** The block's ceiling says no second quality session; both
+  tests sit here anyway, so this is a planned exception. The 5k has the hardest landings of
+  the block on a foot that won't be assessed (no physio access, `[stated, 2026-10-24]`). If the
+  foot or Achilles flags, the 5k is dropped first and moves to the next block.
+- **The heel-raise test comes ~36h after the 5k.** The 5k isn't heavy calf work in the
+  protocol's sense, but the calves won't be fully fresh. Record it with the result and repeat
+  the same spacing next time, or the trend means nothing.
+- **Fri, Sat and Sun are three running days in a row** again, ending with Session B the day
+  after the threshold run. Same shape as weeks 4 and 5. The calf and trap-bar numbers will be
+  a little down; read them as a baseline under these conditions.
+- **Week 5 had four upward moves** (squat 95kg, strides, Friday 6km, long run +1km). On test
+  days "more" is the point; easy days stay strictly easy. Threshold ceiling: 3 reps, each
+  finished with one more in hand. No 4th rep, no racing the reps.
+- **Recency.** Day placement comes from today's constraints only `[stated, 2026-10-24]`; what
+  the week contains is the block plan's.
+
 ## What would change the plan
 - Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,
   freeze reactive level, keep calf work.

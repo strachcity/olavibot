@@ -136,3 +136,6 @@ should come from a working set, not a guess.
 - Warm-up and cool-down/stretching matter to him, even 5–10 minutes
 - Not trying to win anything. Testing himself
 - Expects 12–16 weeks' notice for a marathon
+- No access to a physio, and won't book one `[stated, 2026-10-24]`. Plans can't lean on a
+  diagnosis: pain is managed by the Achilles rules and by easing the load that provokes it
+- Runs to and from the gym only at weekends `[stated, 2026-10-24]`
