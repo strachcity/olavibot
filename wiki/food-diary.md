@@ -237,10 +237,9 @@ complete: pending
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
 | Breakfast, after the run | Deli bagel (everything/seeded): sliced turkey or ham, bacon, lettuce, tomato, mayo `[stated: photo]` | 650 | 35 | 55 | estimate `[inferred]` |
-| Lunch | Tuna mayo wrap, 1 large tortilla: onion, pepper, chilli, lettuce, a few cherry tomatoes; Walkers Baked crisps, small bag | 600 | 32 | 55 | `[stated]`, estimate `[inferred]` |
-| Afternoon | 2 tuna mayo wraps with the same veg and a little melted cheese (logged as a second meal; if it's the lunch corrected, lunch's 600 comes out) | 770 | 38 | 65 | `[stated]`, estimate `[inferred]` |
+| Lunch | 2 tuna mayo wraps: onion, pepper, chilli, lettuce, a few cherry tomatoes, a little melted cheese; Walkers Baked crisps, small bag. Not all of it eaten `[stated]` | 750 | 35 | 70 | `[stated]`, estimate `[inferred]` |
 | Day | Tesco chocolate milk (taken as 330ml); Lucozade (type not given, taken as ~100 kcal) | 320 | 11 | 58 | `[stated]`, estimate `[inferred]` |
 | Dinner (planned) | Chicken fajitas, 2 wraps, salsa, guac, as Fri | 1,000 | 75 | 85 | `[stated]`, estimate `[inferred]` |
-| **Day** | | **~3,340** | **~191** | **~318** | |
+| **Day** | | **~2,720** | **~156** | **~268** | |
 
-Run: 12.1km, Strava 822 kcal `[data]`. Burn today ~3,100 `[inferred]`, so ~240 over.
+Run: 12.1km, Strava 822 kcal `[data]`. Burn today ~3,100 `[inferred]`, so ~380 under. Lunch corrected 24 Oct: one meal of 2 wraps, not 1 wrap plus a second meal `[stated]`.
