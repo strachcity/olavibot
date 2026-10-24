@@ -73,7 +73,9 @@ format every week: a `**Week <n> (<dates>).** Constraint: …` line, then a `| D
 table with days as `Mon 21`. Commit as a `block` entry.
 
 **Push the agreed week to Google Calendar** `[stated, 2026-10-24]`. Once the week is agreed
-and written, create one event per session on Jack's primary calendar (Google Calendar MCP).
+and written, create one event per session on Jack's **Running** calendar (Google Calendar
+MCP; find its id with `list_calendars`), never on his primary "Life" calendar
+`[stated, 2026-10-24]`.
 This applies to every week, including the first week of a new block. Jack moves the events
 around himself.
 - **Time:** 18:00 by default. Only a session that needs a set time (a fresh-morning test)

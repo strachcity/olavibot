@@ -1371,3 +1371,7 @@ Agreed with Jack `[stated, 2026-10-24]`: pushing the week to his Google Calendar
 standard step of planning a week. Each session gets its own event, 18:00 by default, and Jack
 moves them himself. A morning test keeps its morning slot. Plan changes update the matching
 event. Added to `plan-training` (Weekly plans) and to the operations table in `CLAUDE.md`.
+
+## [2026-10-24] model | Calendar events go on "Running"
+Correction to the entry above, from Jack `[stated, 2026-10-24]`: training events go on his
+"Running" calendar, not his primary "Life" one. `plan-training` updated.
