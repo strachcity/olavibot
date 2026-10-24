@@ -214,4 +214,28 @@ complete: pending
 | Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
 | Lunch | Small bowl of leftover pasta; 1 ham and cheese croissant | 800 | 45 | 75 | `[stated]`, estimate `[inferred]` |
 | Afternoon | Cheese and tomato croissant | 350 | 12 | 30 | `[stated]`, estimate `[inferred]` |
+| Dinner | Not yet reported (chicken fajitas planned) | pending | pending | pending | |
 | **So far** | | **~1,490** | **~87** | **~131** | |
+
+Run: 6.35km, Strava 425 kcal `[data]`.
+
+## Sat 24 Oct: long run, 12.1km at 08:29
+
+```yaml
+training: run
+relative_effort: 47
+kcal_est: pending
+protein_g_est: pending
+carbs_g_est: pending
+alcohol_units: pending
+energy: pending
+hunger: pending
+complete: pending
+```
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| Breakfast, after the run | Deli bagel (everything/seeded): sliced turkey or ham, bacon, lettuce, tomato, mayo `[stated: photo]` | 650 | 35 | 55 | estimate `[inferred]` |
+| **So far** | | **~650** | **~35** | **~55** | |
+
+Run: 12.1km, Strava 822 kcal `[data]`. Burn today ~3,100 `[inferred]`.
