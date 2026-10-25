@@ -1431,3 +1431,21 @@ relative_effort: 6
 ```
 - Planned: Second half of the easy 2×2.5km to and from Session B.
 - Done: 2.51km, 14:02 moving, 5:36/km `[data, Strava activity 20729590337]`. Left foot 1/10 during today's running, after a week with no pain `[stated]`.
+
+## [2026-10-25] review | Week 5 summary
+Written under week 5 in `blocks/2026-09-foundations.md`, from Jack's claude.ai draft:
+- 29.5km over 5 runs. The Achilles and foot had their cleanest week of the block.
+- Four upward moves on good days.
+- Baseline missed for the fourth time.
+- Foot 1/10 on the third run in three days.
+- No physio, by Jack's decision.
+
+Added from this session: the 5–6h sleep all week.
+
+## [2026-10-25] block | Heel-raise test moves to the start of Session A
+Jack won't do the heel-raise test as a separate morning session; he will in a gym session
+`[stated, 2026-10-25]`. Changes:
+- `tests.md`: the protocol's "When" becomes the start of Session A, after mobility, ≥72h
+  after heavy calf work, the same slot every retest.
+- Week 6: the test moves from Thursday morning to the start of Wednesday's Session A, and
+  Thursday becomes rest.

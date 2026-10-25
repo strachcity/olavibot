@@ -365,6 +365,49 @@ Changed 22 Oct: Friday's easy run goes from 4km to 6km, so the week totals ~28km
 week 4 `[stated, 2026-10-22]`. Conditions: skip it or cut it to 4km if the calves are sore from
 Thursday's baseline; easy pace, no strides.
 
+*Week 5 summary (19–25 Oct)*
+
+From Jack's claude.ai draft `[stated, 2026-10-25]`, checked against the log and Strava.
+
+- **Progress.**
+  - 6 of 7 planned items done. The heel-raise baseline was missed for the fourth time.
+    Session A moved to Tuesday.
+  - Running 29.5km over 5 runs (6.0 + 6.4 + 12.1 + 2.5 + 2.5), against ~28km after Friday's
+    change to 6km `[data, Strava]`. Gym 2/2.
+  - Achilles 0 on every reported morning (21, 22 Oct). "Hasn't hurt at all this week"
+    `[stated]`.
+  - Left foot pain-free walking all week, 1/10 when running on 25 Oct `[stated]`.
+  - Reactive Level 2, held.
+  - No physio access, by Jack's decision `[stated, 2026-10-24]`.
+- **Went well.**
+  - The cleanest week for the foot and the Achilles since the block started, despite the
+    highest running total so far.
+  - Long run 12.1km at 5:36/km, the fastest of the block.
+  - Back squat 95kg and deadlift 100kg both felt good `[stated]`.
+  - Shoulder press now 17.5kg × 10.
+- **Went badly.**
+  - Four upward moves on good days:
+    - squat 95kg over the 90kg ceiling
+    - strides on 21 Oct after they'd been dropped
+    - Friday 4 → 6km
+    - the long run +1km and faster, with HR drifting 134 → 142 and finishing at 160
+  - Each one is small. Together they're the pattern model §3 exists for, five days after
+    targets were set equal to ceilings.
+  - The baseline missed again.
+  - Sleep was 5–6h a night all week `[stated, 2026-10-23]`.
+- **Watch.**
+  - The foot reacts to running landings, not to lifting or walking. It was pain-free all
+    week, then 1/10 on the third run in three days.
+  - Week 6 has two hard runs, the 5k and threshold tests. They are the first race-effort
+    landings since Sydney. Gate each on pain-free walking that morning, and stop the 5k if
+    the foot goes above 2/10.
+- **Next.**
+  - Week 6 is a cutback and test week. On test days "more" is the point; on easy days
+    nothing gets added.
+  - The heel-raise test goes first in Wednesday's Session A.
+  - Skip Sunday's hop test if any run that week caused foot pain.
+  - Thin bar for the trap bar on Sunday.
+
 **Week 6 (26 Oct – 1 Nov).** Cutback and test week. Constraint: Monday, Wednesday, Thursday
 and Friday evenings are work; Saturday and Sunday mornings are busy; Tuesday evening is a
 placeholder `[stated, 2026-10-24]`. Runs to and from the gym only at weekends `[stated,
@@ -381,6 +424,11 @@ placeholder `[stated, 2026-10-24]`. Runs to and from the gym only at weekends `[
 | Sun 1 | Gym — Session B (full gym): trap bar 95kg, Nordic curl (even week), seated calf raise vs bodyweight test, hop test only if landing is pain-free + Easy — 2×2.5km to and from |
 
 ~26km, down from ~29.5km in week 5. No long run, as the block planned.
+
+Changed 25 Oct: the heel-raise test moves from Thursday morning to the start of Wednesday's
+Session A, after mobility and before anything else. Jack won't do it as a separate morning
+session; he will in a gym session `[stated, 2026-10-25]`. That's ≥72h after Sunday's calf
+work. Thursday becomes rest.
 
 *Why this week*
 
