@@ -14,8 +14,9 @@ Add protocol detail here as tests actually get run, not before.
 **Single-leg heel raise to fatigue** (first run: baseline, 7 Oct 2026). Source:
 Silbernagel-style test, `raw/research/01-achilles-and-endurance-structure.md` **[W]**; home
 version, so height is approximate.
-- When: morning, fresh. ≥72h after heavy calf work, no run beforehand. Same conditions every
-  retest, or it's a new test.
+- When: start of Session A, after the mobility warm-up and before anything else `[stated,
+  2026-10-25]` (was: morning, fresh). ≥72h after heavy calf work, no run beforehand that day.
+  Same slot every retest, or it's a new test.
 - Set-up: barefoot, ball of foot on a step edge or a ~10° wedge if available (flat floor
   otherwise, and record which). Fingertips on a wall for balance only. Phone filming from the
   side with a tape measure or marked card behind the heel.
