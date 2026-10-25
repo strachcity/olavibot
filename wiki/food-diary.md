@@ -225,9 +225,9 @@ Run: 6.35km, Strava 425 kcal `[data]`. Burned ~2,700 `[inferred]`, so ~200 under
 ```yaml
 training: run
 relative_effort: 47
-kcal_est: 3270
-protein_g_est: 158
-carbs_g_est: 308
+kcal_est: 3370
+protein_g_est: 163
+carbs_g_est: 323
 alcohol_units: 7
 energy: pending
 hunger: pending
@@ -241,6 +241,26 @@ complete: yes
 | Day | Tesco chocolate milk (taken as 330ml); Lucozade (type not given, taken as ~100 kcal) | 320 | 11 | 58 | `[stated]`, estimate `[inferred]` |
 | Dinner | Chicken fajitas, 2 wraps, salsa, guac, as Fri | 1,000 | 75 | 85 | `[stated]`, estimate `[inferred]` |
 | Evening | 2 pints of hazy IPA (taken as ~6% ABV: ~275 kcal and ~3.4 units a pint) | 550 | 2 | 40 | `[stated]`, estimate `[inferred]` |
-| **Day** | | **~3,270** | **~158** | **~308** | |
+| Late | Chocolate milk, ~150ml (logged as a second one, on top of the earlier one) `[stated]` | 100 | 5 | 15 | `[stated]`, estimate `[inferred]` |
+| **Day** | | **~3,370** | **~163** | **~323** | |
 
-Run: 12.1km, Strava 822 kcal `[data]`. Burn today ~3,100 `[inferred]`, so ~170 over. Lunch corrected 24 Oct: one meal of 2 wraps, not 1 wrap plus a second meal `[stated]`.
+Run: 12.1km, Strava 822 kcal `[data]`. Burn today ~3,100 `[inferred]`, so ~270 over. Lunch corrected 24 Oct: one meal of 2 wraps, not 1 wrap plus a second meal `[stated]`.
+
+## Sun 25 Oct: Session B + easy 2×2.5km to and from
+
+```yaml
+training: run+gym
+kcal_est: pending
+protein_g_est: pending
+carbs_g_est: pending
+alcohol_units: pending
+energy: pending
+hunger: pending
+complete: pending
+```
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| Breakfast | 1 egg on 1 slice of seeded bread | 220 | 11 | 18 | `[stated]`, estimate `[inferred]` |
+| Lunch | Walkers Baked crisps, small bag (rest of lunch not yet bought) | 100 | 1 | 16 | `[stated]`, estimate `[inferred]` |
+| **So far** | | **~320** | **~12** | **~34** | |
