@@ -1384,3 +1384,50 @@ Saturday, Session B plus 2×2.5km Sunday. ~26km, no long run. Jack swapped the t
 Also recorded in `athlete.md`: no physio access, and he won't book one `[stated, 2026-10-24]`,
 so the repeated "book a physio" recommendation stops. Events created on the "Running" calendar.
 Planned before the week 5 summary; whether the 22 Oct heel-raise baseline happened is not known.
+
+## [2026-10-25] run | Easy — to gym (Session B)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 15
+distance_km: 2.50
+avg_pace: 5:57
+run_type: easy
+relative_effort: 16
+```
+- Planned: First half of the easy 2×2.5km to and from Session B.
+- Done: 2.50km, 14:53 moving, 5:57/km `[data, Strava activity 20729590193]`. Third run in three days.
+
+## [2026-10-25] gym | Session B — Foundations wk5 (full gym)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 56
+gym: full
+session: B
+reactive_level: 2
+relative_effort: 8
+```
+- Planned: Mobility warm-up. Reactive L2 seated calf raise 3×12 @35kg (fresh, before the anchor). Conventional deadlift ramp bar×10 → 50×5 → 70×3 → 85×1–2, then 3×5 @100kg RPE7 (target = ceiling). Superset: standing calf raise both legs 3×10 @15kg + seated DB shoulder press 3×10 @16kg (overhead push moved here after Tuesday's was missed). Superset: Copenhagen plank long lever 3×15–20s/side + barbell row 3×8 @50kg. Cool-down.
+- Done: Mobility warm-up. Deadlift ramp and working 3×5 @100kg; first working set on a thick bar, grip struggled, switched to the thin deadlift bar and grip held `[stated]`. Seated calf raise 3×12 @35kg after the deadlift, not before — "same difficulty as last time" `[stated]`. Standing calf raise 3×10 @15kg. Seated DB shoulder press 1×10 @15kg, 2×10 @17.5kg (no 16kg; 15kg too easy). Copenhagen plank long lever, 3 holds/side as planned. Single-arm DB row 3×8/side @30kg (barbell unavailable). "Gym felt great" `[stated]` `[data, Strava activity 20729590176]`.
+- Beyond plan: none. Order swap (calf raises after the deadlift) and kit swaps only.
+- Capacity: first long-lever Copenhagen plank. Seated shoulder press 17.5kg × 10, up from 16kg on 14 Oct.
+- Review: Deadlift held at 100kg, on plan. The grip finding sharpens: grip gave way on a thick bar at 100kg but held on the thin one. Grip limits depend on bar diameter, not just load. Until grip is trained deliberately, deadlifts go on the thin bar or with straps so sessions stay comparable. Reactive Level 2 holding at the same difficulty is right for a held week. Calf raises should go first next time, as reactive work is meant to be fresh.
+- Questions raised (to build the model):
+  - Heel-raise baseline — "I don't get it", won't do it as a separate morning session; will do it in a gym session `[stated, 2026-10-25]`. Answered: it's the only measure of whether the calf work is building capacity, and the only left/right comparison, with the left side the one in pain. Agreed change: the test moves to the start of Session A, after mobility, before anything else. Same slot every retest.
+
+## [2026-10-25] run | Easy — home (Session B)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 14
+distance_km: 2.51
+avg_pace: 5:36
+run_type: easy
+relative_effort: 6
+```
+- Planned: Second half of the easy 2×2.5km to and from Session B.
+- Done: 2.51km, 14:02 moving, 5:36/km `[data, Strava activity 20729590337]`. Left foot 1/10 during today's running, after a week with no pain `[stated]`.
