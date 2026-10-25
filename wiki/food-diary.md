@@ -225,13 +225,13 @@ Run: 6.35km, Strava 425 kcal `[data]`. Burned ~2,700 `[inferred]`, so ~200 under
 ```yaml
 training: run
 relative_effort: 47
-kcal_est: pending
-protein_g_est: pending
-carbs_g_est: pending
-alcohol_units: pending
+kcal_est: 3270
+protein_g_est: 158
+carbs_g_est: 308
+alcohol_units: 7
 energy: pending
 hunger: pending
-complete: pending
+complete: yes
 ```
 
 | Time | What | kcal | P (g) | C (g) | Source |
@@ -239,7 +239,8 @@ complete: pending
 | Breakfast, after the run | Deli bagel (everything/seeded): sliced turkey or ham, bacon, lettuce, tomato, mayo `[stated: photo]` | 650 | 35 | 55 | estimate `[inferred]` |
 | Lunch | 2 tuna mayo wraps: onion, pepper, chilli, lettuce, a few cherry tomatoes, a little melted cheese; Walkers Baked crisps, small bag. Not all of it eaten `[stated]` | 750 | 35 | 70 | `[stated]`, estimate `[inferred]` |
 | Day | Tesco chocolate milk (taken as 330ml); Lucozade (type not given, taken as ~100 kcal) | 320 | 11 | 58 | `[stated]`, estimate `[inferred]` |
-| Dinner (planned) | Chicken fajitas, 2 wraps, salsa, guac, as Fri | 1,000 | 75 | 85 | `[stated]`, estimate `[inferred]` |
-| **Day** | | **~2,720** | **~156** | **~268** | |
+| Dinner | Chicken fajitas, 2 wraps, salsa, guac, as Fri | 1,000 | 75 | 85 | `[stated]`, estimate `[inferred]` |
+| Evening | 2 pints of hazy IPA (taken as ~6% ABV: ~275 kcal and ~3.4 units a pint) | 550 | 2 | 40 | `[stated]`, estimate `[inferred]` |
+| **Day** | | **~3,270** | **~158** | **~308** | |
 
-Run: 12.1km, Strava 822 kcal `[data]`. Burn today ~3,100 `[inferred]`, so ~380 under. Lunch corrected 24 Oct: one meal of 2 wraps, not 1 wrap plus a second meal `[stated]`.
+Run: 12.1km, Strava 822 kcal `[data]`. Burn today ~3,100 `[inferred]`, so ~170 over. Lunch corrected 24 Oct: one meal of 2 wraps, not 1 wrap plus a second meal `[stated]`.
