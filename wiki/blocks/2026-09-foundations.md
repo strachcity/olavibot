@@ -1,5 +1,5 @@
 # Block: Foundations
-Dates: 2026-09-21 → 2026-11-01 (6 weeks)  ·  Phase: A  ·  Status: active
+Dates: 2026-09-21 → 2026-11-08 (7 weeks; extended 27 Oct)  ·  Phase: A  ·  Status: active
 
 ## Emphasis
 Re-establish running frequency and relearn the gym movements after the backyard/Achilles
@@ -46,9 +46,10 @@ are targets, ±1km either way — the ceiling is what matters, not hitting the n
 | 5 | Easy 3 | 5km | 5:30–6:00/km | as 2×2.5km to and from Session B; no strides (changed 18 Oct; block had 6km + strides) |
 | 5 | Long | 11km | 5:30–6:00/km or slower | |
 | 6 | Easy 1 | 5km | 5:30–6:00/km | cutback |
-| 6 | Easy 2 | 4km | 5:30–6:00/km | cutback |
-| 6 | Test: threshold | 3×10min | just below half-marathon effort, jog 2min between | reintroduces threshold, `tests.md` |
+| 6 | Easy 2 | 6km | 5:30–6:00/km | Friday; 6km is the route (changed 27 Oct) |
+| 6 | Long | 10km | 5:30–6:00/km or slower | Saturday with friends, at chatting pace (changed 27 Oct; replaces the threshold test) |
 | 6 | Test: 5k | race effort | | `tests.md` |
+| 7 | Test: threshold | 3×10min | just below half-marathon effort, jog 2min between | moved from week 6 (changed 27 Oct); rest of week 7 planned later |
 
 The difference between runs: two or three "easy" runs a week hold frequency and are
 interchangeable; the long run is the one that carries duration and terrain, and is the only
@@ -461,6 +462,20 @@ work. Thursday becomes rest.
   finished with one more in hand. No 4th rep, no racing the reps.
 - **Recency.** Day placement comes from today's constraints only `[stated, 2026-10-24]`; what
   the week contains is the block plan's.
+
+Changed 27 Oct: the two run tests split across two weeks `[stated, 2026-10-27]`. Two
+race-effort runs in a cutback week, with an unassessed foot, was too much. The block becomes 7
+weeks and ends 8 Nov.
+- Tue 27: the 5k test as planned.
+- Wed 28: Session A drops pull-ups and the shoulder press, which were done in Monday's
+  unplanned upper session. The heel-raise test still goes first.
+- Fri 30: easy 6km instead of 4km (the route) `[stated]`.
+- Sat 31: an easy 10km with friends, at chatting pace, instead of the threshold test. Claude
+  proposed the 10km cap for a cutback week, and Jack agreed.
+- Week 7 (2–8 Nov): the threshold test, then the block review. The rest of the week gets
+  planned later.
+
+Week 6 is now ~29km: 8 + 6 + 10 + 5.
 
 ## What would change the plan
 - Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,
