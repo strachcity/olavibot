@@ -334,18 +334,21 @@ Strava: gym 161 kcal `[data]`. Burned ~2,450 `[inferred]`, so ~490 under.
 
 ```yaml
 training: run
-kcal_est: pending
-protein_g_est: pending
-carbs_g_est: pending
+kcal_est: 2515
+protein_g_est: 128
+carbs_g_est: 239
 alcohol_units: 5
 energy: pending
 hunger: pending
-complete: pending
+complete: yes
 ```
 
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
-| Breakfast | Not reported | pending | | | |
+| Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
 | Lunch | Tuna mayo sandwich (usual fillings); Walkers Baked crisps, small bag; banana | 705 | 28 | 85 | `[stated]`, estimate `[inferred]` |
 | Day | 2 pints of Beavertown Neck Oil (~4.3%: ~195 kcal and ~2.4 units a pint) | 390 | 2 | 30 | `[stated]`, estimate `[inferred]` |
-| **So far** | | **~1,095** | **~30** | **~115** | |
+| Dinner | Rest of the squash rigatoni (about half a portion) with 1 chicken breast; garlic bread (taken as half a baguette) | 1,080 | 68 | 98 | `[stated]`, estimate `[inferred]` |
+| **Day** | | **~2,515** | **~128** | **~239** | |
+
+Burned ~2,700 with the 6km `[inferred]`, so ~185 under.
