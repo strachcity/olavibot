@@ -280,27 +280,28 @@ Weight: 77.5 kg, gym scale `[stated, 2026-10-27]`, reported 27 Oct for this week
 
 ### Week 1 summary (19–25 Oct, a quiet week)
 
-All numbers `[inferred]` estimates unless tagged. Sunday's lunch wasn't reported, so Sunday and
-the week totals run low.
+All numbers `[inferred]` estimates unless tagged.
 
 | | Week 1 | Baseline 12–18 Oct (recall, social week) |
 |---|---|---|
-| Energy, average per day | ~2,420 eaten vs ~2,640 burned (~220 under) | ~2,550 vs ~2,450–2,600 (about level) |
-| Protein, average | ~150 g (1.9 g/kg), Mon–Sat | ~115 g (1.5 g/kg) |
-| Carbs, average | ~225 g (2.9 g/kg), Mon–Sat | ~215 g (2.8 g/kg) |
+| Energy, average per day | ~2,470 eaten vs ~2,640 burned (~170 under) | ~2,550 vs ~2,450–2,600 (about level) |
+| Protein, average | ~140 g (1.8 g/kg) | ~115 g (1.5 g/kg) |
+| Carbs, average | ~225 g (2.9 g/kg) | ~215 g (2.8 g/kg) |
 | Alcohol | 2 pints, ~7 units (Sat) | ~14.5 pints, ~37 units |
 | Fruit | 1 banana | none |
-| Weight | not measured | 78.5 kg (18 Oct) |
+| Weight, gym scale | 77.5 kg `[stated]` | 78.5 kg (18 Oct) `[stated]` |
 
-- **Lunch is a fixed habit.** Tuna mayo sandwich or wrap with Baked crisps on 5 of 7 days,
-  ~600 kcal. Breakfast is Huel with milk or nothing. The day's variation is all in dinner.
-- **The big days come from sauces and toppings, not portions of meat.** Mon 19 (cheese, mayo,
-  avocado: ~1,500 dinner) and the squash rigatoni (cream, burrata, oil, chorizo: ~1,400) are
-  the two heaviest dinners. The butter paneer was similar. Lean protein dinners (fajitas,
-  chicken pasta) came in at ~850–1,000.
-- **Protein is fine when dinner has meat in it, and low otherwise.** The rigatoni is ~36 g a
-  portion; Sun's known intake was ~48 g on the second-hardest day of the week.
+- **Lunch is a fixed habit.** Tuna mayo sandwich or wraps with Baked crisps on 6 of 7 days,
+  ~600–800 kcal. Breakfast is Huel with milk or nothing. The day's variation is all in dinner.
+- **The heaviest dinner came from toppings, not meat.** Mon 19's chicken sandwiches with cheese,
+  mayo and avocado were ~1,500. Everything else landed ~850–1,050, and the lightest versions
+  were the lean ones (fajitas, chicken pasta, the rigatoni made with single cream and no burrata).
+- **Protein is fine when dinner has meat in it, and drops when it doesn't.** The rigatoni is ~29
+  g a portion; Sunday came to ~76 g on one of the hardest days of the week.
 - **Carbs still sit at the bottom of the light-day band**, even on the long-run day.
+- **Weight down 1 kg on the same scale** (78.5 → 77.5). A ~170 kcal/day deficit only explains
+  ~0.15 kg of fat; the rest is within normal 1–2 kg day-to-day swing **[H]**. One reading
+  isn't a trend.
 - **Quiet week `[stated, 2026-10-24]`**, so the alcohol difference isn't a change in habit.
   The month will show what a typical mix looks like.
 
