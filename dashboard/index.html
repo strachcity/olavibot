@@ -481,7 +481,7 @@ function parseBlock(file, text) {
   // Weekly schedule: **Week N (dates).** Constraint… then | Day | Session |
   b.schedule = {};
   const sched = section(text, "Weekly schedule");
-  const heads = [...sched.matchAll(/\*\*Week (\d+)[^*]*\*\*([^\n]*)/g)];
+  const heads = [...sched.matchAll(/^\*\*Week (\d+)[^*]*\*\*([^\n]*)/gm)];   // line start only: bold \"Week n\" inside a bullet isn't a schedule
   heads.forEach((m, i) => {
     const body = sched.slice(m.index, i + 1 < heads.length ? heads[i + 1].index : undefined);
     const days = {};
@@ -607,6 +607,8 @@ function weeksWithData(b) {
 function kindOf(text) {
   if (!text) return null;
   if (/^rest/i.test(text)) return "rest";
+  // A run that mentions the gym ("Easy — 5km to and from Session A") is still a run: the leading word decides.
+  if (/^(easy|long|threshold|tempo|stride|test|5k)/i.test(text)) return "run";
   if (/gym|session [a-z]\b/i.test(text)) return "gym";
   if (/easy|long|run|threshold|test|5k|stride|tempo/i.test(text)) return "run";
   return null;
@@ -633,9 +635,11 @@ const planName = t => planShort(t || "").replace(/\s*@.*$/, "");
 // Days don't matter; a session is missed only if the week ends without it.
 function matchWeek(b, n) {
   const s = weekStart(b, n), e = addDays(s, 6), sch = b.schedule[n];
-  const items = DOW.map((dow, i) => {
-    const date = addDays(s, i), plan = sch?.days[dow] ? planShort(sch.days[dow]) : null, kind = kindOf(plan);
-    return { date, dow, plan, kind, key: planKey(plan, kind), match: null, how: null };
+  // A day can hold two sessions ("Gym — Session B … + Easy — 2×2.5km to and from"): one item each.
+  const items = DOW.flatMap((dow, i) => {
+    const date = addDays(s, i), full = sch?.days[dow] ? planShort(sch.days[dow]) : null;
+    const parts = full ? full.split(/\s\+\s(?=(?:Easy|Long|Threshold)\b)/) : [null];
+    return parts.map(plan => { const kind = kindOf(plan); return { date, dow, plan, kind, key: planKey(plan, kind), match: null, how: null }; });
   }).filter(p => p.kind === "run" || p.kind === "gym");
   // Commute legs to or from the gym are free choice: their km count, but they never match or miss a session.
   const done = S.log.filter(x => (x.type === "run" || x.type === "gym") && x.date >= s && x.date <= e && !/commute/i.test(x.title));
@@ -649,6 +653,10 @@ function matchWeek(b, n) {
   pass((p, x) => x.date === p.date && sameKey(p.key, entryKey(x)), "day");
   pass((p, x) => sameKey(p.key, entryKey(x)), "moved");
   pass((p, x) => x.type === p.kind, "different");
+  // A run split into legs to and from the gym is one session: the other leg rides with the matched one.
+  items.filter(p => p.match?.type === "run").forEach(p => [...free].forEach(x => {
+    if (x.type === "run" && x.date === p.match.date && /to gym|home/i.test(x.title) && /to gym|home/i.test(p.match.title)) free.delete(x);
+  }));
   const over = TODAY > e;
   const off = [];
   items.filter(p => p.how === "different").forEach(p => off.push({ x: p.match, why: `planned ${planName(p.plan)}` }));
