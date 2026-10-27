@@ -285,7 +285,7 @@ the week totals run low.
 |---|---|---|
 | Energy, average per day | ~2,420 eaten vs ~2,640 burned (~220 under) | ~2,550 vs ~2,450–2,600 (about level) |
 | Protein, average | ~150 g (1.9 g/kg), Mon–Sat | ~115 g (1.5 g/kg) |
-| Carbs, average | ~250 g (3.2 g/kg) | ~215 g (2.8 g/kg) |
+| Carbs, average | ~225 g (2.9 g/kg), Mon–Sat | ~215 g (2.8 g/kg) |
 | Alcohol | 2 pints, ~7 units (Sat) | ~14.5 pints, ~37 units |
 | Fruit | 1 banana | none |
 | Weight | not measured | 78.5 kg (18 Oct) |
