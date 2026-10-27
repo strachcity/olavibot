@@ -1474,3 +1474,11 @@ Changes:
 - Wed 28: Session A drops pull-ups and the shoulder press after Monday's upper session.
 
 Week 6 is now ~29km.
+
+## [2026-10-24] model | Food diary extended to a one-month pilot
+Jack's call `[stated, 2026-10-24]`: the food diary runs for a month, 19 Oct → 15 Nov, not one
+week, to spot patterns. His social weeks vary: some weeks he goes out, some he doesn't, and
+19–25 Oct was a quiet one `[stated]`. So week 1's lack of alcohol is not a change against the
+12–18 Oct baseline, and the review compares like with like across the month. Short weekly
+summaries; full review and recommendations after 15 Nov. `food-diary.md` header and
+`index.md` updated.

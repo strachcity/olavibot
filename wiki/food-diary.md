@@ -1,19 +1,24 @@
-# Food diary: prototype week
+# Food diary: one-month pilot
 
-**Mon 19 → Sun 25 Oct 2026** (Foundations week 5). Agreed with Jack `[stated, 2026-10-19]`.
+**Mon 19 Oct → Sun 15 Nov 2026**, four weeks. Started as a one-week prototype `[stated,
+2026-10-19]`; extended to a month on 24 Oct to catch patterns one week can't `[stated,
+2026-10-24]`. Some weeks Jack goes out, some he doesn't; week 1 (19–25 Oct) was a quiet one
+`[stated, 2026-10-24]`, so it isn't the typical week, and neither was the 12–18 Oct baseline.
+A short summary at the end of each week; the full review and recommendations after 15 Nov.
 
 **Why:** a sense check, not a diet. Jack doesn't want to gain fat `[stated, 2026-10-19]`. The
 question: does what he eats match what his training asks, especially protein, and carbs on
 light days compared with heavy ones? Targets come from `references/evidence-nutrition.md`.
 
 **How it runs:**
-- Background only. Session plans and reviews don't mention it until the week is reviewed.
+- Background only. Session plans and training reviews don't mention it until the month is reviewed.
 - Jack messages meals as he goes, roughly. He can add packet details when he has them.
 - Claude estimates kcal, protein and carbs. Every estimate is `[inferred]`, probably out by
   20–30%. Packet figures become `[data]`.
 - Weigh at the gym scale on gym days. Compare the weekly figures, not single days.
 - Training per day comes from `log.md` and Strava.
-- The end-of-week review goes at the bottom of this page, with one `review` entry in `log.md`.
+- A short weekly summary goes under each week. The full review goes at the bottom of this page,
+  with one `review` entry in `log.md`.
 
 **Daily block.** Each field is a number, a listed word or `pending`. Omit what's genuinely
 unknown.
@@ -271,6 +276,34 @@ Strava: Session B 294 kcal, runs 172 + 162 kcal `[data]`. Burned ~2,850 `[inferr
 under. Corrected 27 Oct: lunch added, dinner recalculated (single cream, no burrata, less oil).
 
 Weight: 77.5 kg, gym scale `[stated, 2026-10-27]`, reported 27 Oct for this weekend's gym visit.
+
+
+### Week 1 summary (19–25 Oct, a quiet week)
+
+All numbers `[inferred]` estimates unless tagged.
+
+| | Week 1 | Baseline 12–18 Oct (recall, social week) |
+|---|---|---|
+| Energy, average per day | ~2,470 eaten vs ~2,640 burned (~170 under) | ~2,550 vs ~2,450–2,600 (about level) |
+| Protein, average | ~140 g (1.8 g/kg) | ~115 g (1.5 g/kg) |
+| Carbs, average | ~225 g (2.9 g/kg) | ~215 g (2.8 g/kg) |
+| Alcohol | 2 pints, ~7 units (Sat) | ~14.5 pints, ~37 units |
+| Fruit | 1 banana | none |
+| Weight, gym scale | 77.5 kg `[stated]` | 78.5 kg (18 Oct) `[stated]` |
+
+- **Lunch is a fixed habit.** Tuna mayo sandwich or wraps with Baked crisps on 5 of 7 days,
+  ~600–800 kcal. Breakfast is Huel with milk or nothing. The day's variation is all in dinner.
+- **The heaviest dinner came from toppings, not meat.** Mon 19's chicken sandwiches with cheese,
+  mayo and avocado were ~1,500. Everything else landed ~850–1,050, and the lightest versions
+  were the lean ones (fajitas, chicken pasta, the rigatoni made with single cream and no burrata).
+- **Protein is fine when dinner has meat in it, and drops when it doesn't.** The rigatoni is ~29
+  g a portion; Sunday came to ~76 g on one of the hardest days of the week.
+- **Carbs still sit at the bottom of the light-day band**, even on the long-run day.
+- **Weight down 1 kg on the same scale** (78.5 → 77.5). A ~170 kcal/day deficit only explains
+  ~0.15 kg of fat; the rest is within normal 1–2 kg day-to-day swing **[H]**. One reading
+  isn't a trend.
+- **Quiet week `[stated, 2026-10-24]`**, so the alcohol difference isn't a change in habit.
+  The month will show what a typical mix looks like.
 
 ---
 
