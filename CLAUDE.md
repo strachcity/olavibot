@@ -89,7 +89,7 @@ physio. Don't diagnose.
 | Operation | Skill | Writes to |
 |---|---|---|
 | Plan a session | `programme-session` | nothing until done |
-| Plan a week or block | `plan-training` | `wiki/blocks/` |
+| Plan a week or block | `plan-training` | `wiki/blocks/`, Google Calendar (agreed weeks) |
 | Log and review a session | `review-training` | `wiki/log.md`, `wiki/observations.md` |
 | Review a block (lint) | `review-training` | `wiki/blocks/`, `wiki/observations.md`, `wiki/index.md` |
 | Run the test battery | `review-training` | `wiki/tests.md`, `wiki/log.md` |

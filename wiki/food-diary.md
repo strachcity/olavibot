@@ -230,18 +230,72 @@ Run: 6.35km, Strava 425 kcal `[data]`. Burned ~2,700 `[inferred]`, so ~200 under
 ```yaml
 training: run
 relative_effort: 47
-kcal_est: pending
-protein_g_est: pending
-carbs_g_est: pending
-alcohol_units: pending
+kcal_est: 3370
+protein_g_est: 163
+carbs_g_est: 323
+alcohol_units: 7
 energy: pending
 hunger: pending
-complete: pending
+complete: yes
 ```
 
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
 | Breakfast, after the run | Deli bagel (everything/seeded): sliced turkey or ham, bacon, lettuce, tomato, mayo `[stated: photo]` | 650 | 35 | 55 | estimate `[inferred]` |
-| **So far** | | **~650** | **~35** | **~55** | |
+| Lunch | 2 tuna mayo wraps: onion, pepper, chilli, lettuce, a few cherry tomatoes, a little melted cheese; Walkers Baked crisps, small bag. Not all of it eaten `[stated]` | 750 | 35 | 70 | `[stated]`, estimate `[inferred]` |
+| Day | Tesco chocolate milk (taken as 330ml); Lucozade (type not given, taken as ~100 kcal) | 320 | 11 | 58 | `[stated]`, estimate `[inferred]` |
+| Dinner | Chicken fajitas, 2 wraps, salsa, guac, as Fri | 1,000 | 75 | 85 | `[stated]`, estimate `[inferred]` |
+| Evening | 2 pints of hazy IPA (taken as ~6% ABV: ~275 kcal and ~3.4 units a pint) | 550 | 2 | 40 | `[stated]`, estimate `[inferred]` |
+| Late | Chocolate milk, ~150ml (logged as a second one, on top of the earlier one) `[stated]` | 100 | 5 | 15 | `[stated]`, estimate `[inferred]` |
+| **Day** | | **~3,370** | **~163** | **~323** | |
 
-Run: 12.1km, Strava 822 kcal `[data]`. Burn today ~3,100 `[inferred]`.
+Run: 12.1km, Strava 822 kcal `[data]`. Burn today ~3,100 `[inferred]`, so ~270 over. Lunch corrected 24 Oct: one meal of 2 wraps, not 1 wrap plus a second meal `[stated]`.
+
+## Sun 25 Oct: Session B + easy 2×2.5km to and from
+
+```yaml
+training: run+gym
+relative_effort: 30
+kcal_est: 1720
+protein_g_est: 48
+carbs_g_est: 149
+alcohol_units: pending
+energy: pending
+hunger: pending
+complete: partial
+```
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| Breakfast | 1 egg on 1 slice of seeded bread | 220 | 11 | 18 | `[stated]`, estimate `[inferred]` |
+| Lunch | Walkers Baked crisps, small bag; rest of lunch not reported | 100 | 1 | 16 | `[stated]`, estimate `[inferred]` |
+| Dinner | Squash and hot honey rigatoni with chorizo, 1 of 3 portions of an Instagram recipe (serves 3: 1 large squash, garlic bulb, sage, 3 tsp butter, onion, 300g pasta, 200ml cream, 1 burrata, hot honey, olive oil) `[data: recipe]`; chorizo amount not given, taken as ~50g. Cream taken as double | 1,400 | 36 | 115 | `[stated]` + `[data]`, portion `[inferred]` |
+| **Known** | | **~1,720** | **~48** | **~149** | |
+
+Strava: Session B 294 kcal, runs 172 + 162 kcal `[data]`. Burned ~2,850 `[inferred]`. Lunch
+not reported, so the day is incomplete; as logged it's ~1,100 under.
+
+---
+
+## Mon 26 Oct: rest planned; unplanned upper-body gym session
+
+```yaml
+training: gym
+relative_effort: 4
+kcal_est: 2340
+protein_g_est: 93
+carbs_g_est: 199
+alcohol_units: pending
+energy: pending
+hunger: pending
+complete: yes
+```
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
+| Lunch | Tuna mayo sandwich (usual fillings); Walkers Baked crisps, small bag | 600 | 27 | 58 | `[stated]`, estimate `[inferred]` |
+| Dinner | Squash and hot honey rigatoni with chorizo, second portion, as Sun | 1,400 | 36 | 115 | `[stated]`, estimate `[inferred]` |
+| **Day** | | **~2,340** | **~93** | **~199** | |
+
+Strava: gym 161 kcal `[data]`. Burned ~2,450 `[inferred]`, so ~110 under.

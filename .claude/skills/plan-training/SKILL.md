@@ -72,6 +72,25 @@ what happened (that's `log.md`'s job; plan + log together show what was missed).
 format every week: a `**Week <n> (<dates>).** Constraint: …` line, then a `| Day | Session |`
 table with days as `Mon 21`. Commit as a `block` entry.
 
+**Push the agreed week to Google Calendar** `[stated, 2026-10-24]`. Once the week is agreed
+and written, create one event per session on Jack's **Running** calendar (Google Calendar
+MCP; find its id with `list_calendars`), never on his primary "Life" calendar
+`[stated, 2026-10-24]`.
+This applies to every week, including the first week of a new block. Jack moves the events
+around himself.
+- **Time:** 18:00 by default. Only a session that needs a set time (a fresh-morning test)
+  gets one.
+- **Length:** gym 90 min; a run gets its rough running time plus 15 min, rounded to 15 min.
+- **Title:** short and matching the table, e.g. `Easy 5km`, `Gym: Session A (full gym)`.
+- **Description:** target, ceiling, gates and warm-up/cool-down, in a few lines. Point to the
+  block file for the rest.
+- No events for rest days. A run and a gym session that go together (to and from the gym)
+  share one event.
+- Check the week first and don't duplicate events that are already there.
+- A moved event is a day move, not a plan change: nothing to do. A plan change
+  (`Changed <date>: …`) updates or deletes the matching event in the same turn.
+- **If Calendar is unavailable**, say so and give Jack the table to add by hand.
+
 **Every week carries its reasoning** `[stated, 2026-10-04]`. Jack wants to learn as he goes and
 to see that the plan is built on evidence, not on whatever happened last. Under each week's
 table, before it's agreed:

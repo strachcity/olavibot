@@ -1366,6 +1366,115 @@ relative_effort: 47
 - Capacity: fastest long run of the block. 5:36/km for 12km, against 5:54/km for 12.3km on 17 Oct and 6:12/km for 11.9km on 10 Oct `[data]`.
 - Review: A strong run, and the first lap was properly easy at HR 134. Two flags. HR drifted about 8 beats from the first lap to the second at the same pace, and the finish pushed to 160. That's the shape of an easy run that turned into a steady one, after a week of short sleep. And it's 18 s/km faster than last week's long run and a km over plan. Not a problem on its own, but it's the fourth upward move this week (squat 95kg, strides, Friday 6km). Tomorrow morning's Achilles and foot scores show whether it cost anything.
 
+## [2026-10-24] model | Agreed weeks go to Google Calendar
+Agreed with Jack `[stated, 2026-10-24]`: pushing the week to his Google Calendar is now a
+standard step of planning a week. Each session gets its own event, 18:00 by default, and Jack
+moves them himself. A morning test keeps its morning slot. Plan changes update the matching
+event. Added to `plan-training` (Weekly plans) and to the operations table in `CLAUDE.md`.
+
+## [2026-10-24] model | Calendar events go on "Running"
+Correction to the entry above, from Jack `[stated, 2026-10-24]`: training events go on his
+"Running" calendar, not his primary "Life" one. `plan-training` updated.
+
+## [2026-10-24] block | Week 6 planned: cutback and tests
+Week 6 (26 Oct – 1 Nov) added to `blocks/2026-09-foundations.md`: rest Monday, 5k test
+Tuesday, Session A Wednesday, heel-raise test Thursday, easy 4km Friday, threshold test
+Saturday, Session B plus 2×2.5km Sunday. ~26km, no long run. Jack swapped the two run tests
+(5k Tuesday, threshold Saturday) and runs to the gym only at weekends `[stated, 2026-10-24]`.
+Also recorded in `athlete.md`: no physio access, and he won't book one `[stated, 2026-10-24]`,
+so the repeated "book a physio" recommendation stops. Events created on the "Running" calendar.
+Planned before the week 5 summary; whether the 22 Oct heel-raise baseline happened is not known.
+
+## [2026-10-25] run | Easy — to gym (Session B)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 15
+distance_km: 2.50
+avg_pace: 5:57
+run_type: easy
+relative_effort: 16
+```
+- Planned: First half of the easy 2×2.5km to and from Session B.
+- Done: 2.50km, 14:53 moving, 5:57/km `[data, Strava activity 20729590193]`. Third run in three days.
+
+## [2026-10-25] gym | Session B — Foundations wk5 (full gym)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 56
+gym: full
+session: B
+reactive_level: 2
+relative_effort: 8
+```
+- Planned: Mobility warm-up. Reactive L2 seated calf raise 3×12 @35kg (fresh, before the anchor). Conventional deadlift ramp bar×10 → 50×5 → 70×3 → 85×1–2, then 3×5 @100kg RPE7 (target = ceiling). Superset: standing calf raise both legs 3×10 @15kg + seated DB shoulder press 3×10 @16kg (overhead push moved here after Tuesday's was missed). Superset: Copenhagen plank long lever 3×15–20s/side + barbell row 3×8 @50kg. Cool-down.
+- Done: Mobility warm-up. Deadlift ramp and working 3×5 @100kg; first working set on a thick bar, grip struggled, switched to the thin deadlift bar and grip held `[stated]`. Seated calf raise 3×12 @35kg after the deadlift, not before — "same difficulty as last time" `[stated]`. Standing calf raise 3×10 @15kg. Seated DB shoulder press 1×10 @15kg, 2×10 @17.5kg (no 16kg; 15kg too easy). Copenhagen plank long lever, 3 holds/side as planned. Single-arm DB row 3×8/side @30kg (barbell unavailable). "Gym felt great" `[stated]` `[data, Strava activity 20729590176]`.
+- Beyond plan: none. Order swap (calf raises after the deadlift) and kit swaps only.
+- Capacity: first long-lever Copenhagen plank. Seated shoulder press 17.5kg × 10, up from 16kg on 14 Oct.
+- Review: Deadlift held at 100kg, on plan. The grip finding sharpens: grip gave way on a thick bar at 100kg but held on the thin one. Grip limits depend on bar diameter, not just load. Until grip is trained deliberately, deadlifts go on the thin bar or with straps so sessions stay comparable. Reactive Level 2 holding at the same difficulty is right for a held week. Calf raises should go first next time, as reactive work is meant to be fresh.
+- Questions raised (to build the model):
+  - Heel-raise baseline — "I don't get it", won't do it as a separate morning session; will do it in a gym session `[stated, 2026-10-25]`. Answered: it's the only measure of whether the calf work is building capacity, and the only left/right comparison, with the left side the one in pain. Agreed change: the test moves to the start of Session A, after mobility, before anything else. Same slot every retest.
+
+## [2026-10-25] run | Easy — home (Session B)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 14
+distance_km: 2.51
+avg_pace: 5:36
+run_type: easy
+relative_effort: 6
+```
+- Planned: Second half of the easy 2×2.5km to and from Session B.
+- Done: 2.51km, 14:02 moving, 5:36/km `[data, Strava activity 20729590337]`. Left foot 1/10 during today's running, after a week with no pain `[stated]`.
+
+## [2026-10-25] review | Week 5 summary
+Written under week 5 in `blocks/2026-09-foundations.md`, from Jack's claude.ai draft:
+- 29.5km over 5 runs. The Achilles and foot had their cleanest week of the block.
+- Four upward moves on good days.
+- Baseline missed for the fourth time.
+- Foot 1/10 on the third run in three days.
+- No physio, by Jack's decision.
+
+Added from this session: the 5–6h sleep all week.
+
+## [2026-10-25] block | Heel-raise test moves to the start of Session A
+Jack won't do the heel-raise test as a separate morning session; he will in a gym session
+`[stated, 2026-10-25]`. Changes:
+- `tests.md`: the protocol's "When" becomes the start of Session A, after mobility, ≥72h
+  after heavy calf work, the same slot every retest.
+- Week 6: the test moves from Thursday morning to the start of Wednesday's Session A, and
+  Thursday becomes rest.
+
+## [2026-10-26] gym | Upper body, unplanned — Foundations wk6 (full gym)
+```yaml
+planned: no
+beyond_plan: extra upper session on a rest day
+duration_min: 43
+gym: full
+relative_effort: 4
+```
+- Planned: Rest (week 6 Monday).
+- Done: DB press 3×12 @18kg. Seated DB chest press, dumbbells held at the centre and pushed up, 3×10 @16kg. Lat pulldown 3×12 @35lb. Cable biceps curl 3×12 @35lb. Pull-ups 3×4 `[stated]`. Strava 42:46, relative effort 4 `[data, Strava activity 20743034219]`. A free evening after a day at the desk; legs rested on purpose `[stated, 2026-10-26]`.
+- Beyond plan: a whole extra session, on a rest day. Upper body only, so no running or calf cost.
+- Capacity: pull-ups 3×4, the same as 20 Oct.
+- Review: Low cost (relative effort 4) and the right body part to pick. It does overlap with Wednesday's Session A, which has pull-ups and a shoulder press, two days later. Wednesday should drop those two and keep its legs, trunk and tests. Pull-ups went to the 4-rep max again. 5×3 one short of max is what moves that number.
+
+## [2026-10-27] block | Run tests split over weeks 6 and 7; block extended to 8 Nov
+Jack's call `[stated, 2026-10-27]`: two race-effort runs in one cutback week was wrong.
+Changes:
+- The 5k test stays on Tue 27.
+- The threshold test moves to week 7 (2–8 Nov), and Foundations ends 8 Nov.
+- Sat 31 becomes an easy 10km with friends. Claude proposed the cap; Jack agreed.
+- Fri 30 becomes 6km (the route).
+- Wed 28: Session A drops pull-ups and the shoulder press after Monday's upper session.
+
+Week 6 is now ~29km.
+
 ## [2026-10-24] model | Food diary extended to a one-month pilot
 Jack's call `[stated, 2026-10-24]`: the food diary runs for a month, 19 Oct → 15 Nov, not one
 week, to spot patterns. His social weeks vary: some weeks he goes out, some he doesn't, and

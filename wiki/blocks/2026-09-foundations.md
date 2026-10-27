@@ -1,5 +1,5 @@
 # Block: Foundations
-Dates: 2026-09-21 → 2026-11-01 (6 weeks)  ·  Phase: A  ·  Status: active
+Dates: 2026-09-21 → 2026-11-08 (7 weeks; extended 27 Oct)  ·  Phase: A  ·  Status: active
 
 ## Emphasis
 Re-establish running frequency and relearn the gym movements after the backyard/Achilles
@@ -46,9 +46,10 @@ are targets, ±1km either way — the ceiling is what matters, not hitting the n
 | 5 | Easy 3 | 5km | 5:30–6:00/km | as 2×2.5km to and from Session B; no strides (changed 18 Oct; block had 6km + strides) |
 | 5 | Long | 11km | 5:30–6:00/km or slower | |
 | 6 | Easy 1 | 5km | 5:30–6:00/km | cutback |
-| 6 | Easy 2 | 4km | 5:30–6:00/km | cutback |
-| 6 | Test: threshold | 3×10min | just below half-marathon effort, jog 2min between | reintroduces threshold, `tests.md` |
-| 6 | Test: 5k | race effort | | `tests.md` |
+| 6 | Easy 2 | 6km | 5:30–6:00/km | Friday; 6km is the route (changed 27 Oct) |
+| 6 | Long | 10km | 5:30–6:00/km or slower | Saturday with friends, at chatting pace (changed 27 Oct; replaces the threshold test) |
+| 6 | Test: 5k | 8km | race effort for 5km | 2km warm-up and 1km cool-down make up the 8km, `tests.md` |
+| 7 | Test: threshold | 3×10min | just below half-marathon effort, jog 2min between | moved from week 6 (changed 27 Oct); rest of week 7 planned later |
 
 The difference between runs: two or three "easy" runs a week hold frequency and are
 interchangeable; the long run is the one that carries duration and terrain, and is the only
@@ -364,6 +365,117 @@ on pain-free walking that morning. If walking hurts, cycle or skip the run.
 Changed 22 Oct: Friday's easy run goes from 4km to 6km, so the week totals ~28km, the same as
 week 4 `[stated, 2026-10-22]`. Conditions: skip it or cut it to 4km if the calves are sore from
 Thursday's baseline; easy pace, no strides.
+
+*Week 5 summary (19–25 Oct)*
+
+From Jack's claude.ai draft `[stated, 2026-10-25]`, checked against the log and Strava.
+
+- **Progress.**
+  - 6 of 7 planned items done. The heel-raise baseline was missed for the fourth time.
+    Session A moved to Tuesday.
+  - Running 29.5km over 5 runs (6.0 + 6.4 + 12.1 + 2.5 + 2.5), against ~28km after Friday's
+    change to 6km `[data, Strava]`. Gym 2/2.
+  - Achilles 0 on every reported morning (21, 22 Oct). "Hasn't hurt at all this week"
+    `[stated]`.
+  - Left foot pain-free walking all week, 1/10 when running on 25 Oct `[stated]`.
+  - Reactive Level 2, held.
+  - No physio access, by Jack's decision `[stated, 2026-10-24]`.
+- **Went well.**
+  - The cleanest week for the foot and the Achilles since the block started, despite the
+    highest running total so far.
+  - Long run 12.1km at 5:36/km, the fastest of the block.
+  - Back squat 95kg and deadlift 100kg both felt good `[stated]`.
+  - Shoulder press now 17.5kg × 10.
+- **Went badly.**
+  - Four upward moves on good days:
+    - squat 95kg over the 90kg ceiling
+    - strides on 21 Oct after they'd been dropped
+    - Friday 4 → 6km
+    - the long run +1km and faster, with HR drifting 134 → 142 and finishing at 160
+  - Each one is small. Together they're the pattern model §3 exists for, five days after
+    targets were set equal to ceilings.
+  - The baseline missed again.
+  - Sleep was 5–6h a night all week `[stated, 2026-10-23]`.
+- **Watch.**
+  - The foot reacts to running landings, not to lifting or walking. It was pain-free all
+    week, then 1/10 on the third run in three days.
+  - Week 6 has two hard runs, the 5k and threshold tests. They are the first race-effort
+    landings since Sydney. Gate each on pain-free walking that morning, and stop the 5k if
+    the foot goes above 2/10.
+- **Next.**
+  - Week 6 is a cutback and test week. On test days "more" is the point; on easy days
+    nothing gets added.
+  - The heel-raise test goes first in Wednesday's Session A.
+  - Skip Sunday's hop test if any run that week caused foot pain.
+  - Thin bar for the trap bar on Sunday.
+
+**Week 6 (26 Oct – 1 Nov).** Cutback and test week. Constraint: Monday, Wednesday, Thursday
+and Friday evenings are work; Saturday and Sunday mornings are busy; Tuesday evening is a
+placeholder `[stated, 2026-10-24]`. Runs to and from the gym only at weekends `[stated,
+2026-10-24]`. Planned before the week 5 summary, which waits on Sunday 25 Oct.
+
+| Day | Session |
+|---|---|
+| Mon 26 | Rest |
+| Tue 27 | 5k test, race effort. 2km warm-up, 1–1.5km cool-down, ~8km. Only if walking is pain-free that morning |
+| Wed 28 | Gym — Session A (full gym): heel-raise test first, then front squat 65kg (even week). Hip-flexion, balance and knee-to-wall tests in the warm-up. No pull-ups or press (done Monday). No other calf work (changed 25 and 27 Oct) |
+| Thu 29 | Rest (heel-raise test moved into Session A, changed 25 Oct) |
+| Fri 30 | Easy — 6km. Doubles as the easy-pace-at-fixed-HR test (changed 27 Oct from 4km) |
+| Sat 31 | Long — 10km easy with friends, at chatting pace (changed 27 Oct; threshold test moved to week 7) |
+| Sun 1 | Gym — Session B (full gym): trap bar 95kg, Nordic curl (even week), seated calf raise vs bodyweight test, hop test only if landing is pain-free + Easy — 2×2.5km to and from |
+
+~26km, down from ~29.5km in week 5. No long run, as the block planned.
+
+Changed 25 Oct: the heel-raise test moves from Thursday morning to the start of Wednesday's
+Session A, after mobility and before anything else. Jack won't do it as a separate morning
+session; he will in a gym session `[stated, 2026-10-25]`. That's ≥72h after Sunday's calf
+work. Thursday becomes rest.
+
+*Why this week*
+
+| Decision | Why | Source |
+|---|---|---|
+| Cutback, no long run, both run tests | The block's week 6 | Block plan |
+| Monday rest | Day after Sunday 25's Session B and runs | Constraint `[stated, 2026-10-24]` |
+| 5k Tuesday, threshold Saturday | Jack's swap. The 5k gets the freshest day, after the rest day; 4 days between the two hard runs | `[stated, 2026-10-24]`; spacing **[W/H]** |
+| Threshold run by effort, as bounded reps | First threshold of the block. Reps, not continuous, so it doesn't become grey-zone running | Model §5; `evidence-norwegian-method.md` **[I]** |
+| No run to Session A; Sunday's 5km as runs to and from Session B | Runs to the gym only at weekends | `[stated, 2026-10-24]` |
+| Heel-raise Thursday | ≥72h after Sunday 25's calf work; no calf loading Wednesday | `tests.md` protocol **[W]** |
+| Calf and hop tests in Session B | The seated calf test is heavy calf work, so it follows the heel-raise test. Last day of the block | `tests.md` |
+| Squat and deadlift e1RM from week 5–6 working sets, no max attempts | Avoids a heavy single in a test week | Judgement `[inferred]` |
+| Anchors: front squat 65kg, trap bar 95kg, target = ceiling | Jack's call | `[stated, 2026-10-18]` |
+
+*Weak points*
+
+- **Two hard runs in one week.** The block's ceiling says no second quality session; both
+  tests sit here anyway, so this is a planned exception. The 5k has the hardest landings of
+  the block on a foot that won't be assessed (no physio access, `[stated, 2026-10-24]`). If the
+  foot or Achilles flags, the 5k is dropped first and moves to the next block.
+- **The heel-raise test comes ~36h after the 5k.** The 5k isn't heavy calf work in the
+  protocol's sense, but the calves won't be fully fresh. Record it with the result and repeat
+  the same spacing next time, or the trend means nothing.
+- **Fri, Sat and Sun are three running days in a row** again, ending with Session B the day
+  after the threshold run. Same shape as weeks 4 and 5. The calf and trap-bar numbers will be
+  a little down; read them as a baseline under these conditions.
+- **Week 5 had four upward moves** (squat 95kg, strides, Friday 6km, long run +1km). On test
+  days "more" is the point; easy days stay strictly easy. Threshold ceiling: 3 reps, each
+  finished with one more in hand. No 4th rep, no racing the reps.
+- **Recency.** Day placement comes from today's constraints only `[stated, 2026-10-24]`; what
+  the week contains is the block plan's.
+
+Changed 27 Oct: the two run tests split across two weeks `[stated, 2026-10-27]`. Two
+race-effort runs in a cutback week, with an unassessed foot, was too much. The block becomes 7
+weeks and ends 8 Nov.
+- Tue 27: the 5k test as planned.
+- Wed 28: Session A drops pull-ups and the shoulder press, which were done in Monday's
+  unplanned upper session. The heel-raise test still goes first.
+- Fri 30: easy 6km instead of 4km (the route) `[stated]`.
+- Sat 31: an easy 10km with friends, at chatting pace, instead of the threshold test. Claude
+  proposed the 10km cap for a cutback week, and Jack agreed.
+- Week 7 (2–8 Nov): the threshold test, then the block review. The rest of the week gets
+  planned later.
+
+Week 6 is now ~29km: 8 + 6 + 10 + 5.
 
 ## What would change the plan
 - Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,
