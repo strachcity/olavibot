@@ -1,5 +1,5 @@
 # Block: Foundations
-Dates: 2026-09-21 → 2026-11-01 (6 weeks)  ·  Phase: A  ·  Status: active
+Dates: 2026-09-21 → 2026-11-08 (7 weeks; extended 27 Oct)  ·  Phase: A  ·  Status: active
 
 ## Emphasis
 Re-establish running frequency and relearn the gym movements after the backyard/Achilles
@@ -46,9 +46,10 @@ are targets, ±1km either way — the ceiling is what matters, not hitting the n
 | 5 | Easy 3 | 5km | 5:30–6:00/km | as 2×2.5km to and from Session B; no strides (changed 18 Oct; block had 6km + strides) |
 | 5 | Long | 11km | 5:30–6:00/km or slower | |
 | 6 | Easy 1 | 5km | 5:30–6:00/km | cutback |
-| 6 | Easy 2 | 4km | 5:30–6:00/km | cutback |
-| 6 | Test: threshold | 3×10min | just below half-marathon effort, jog 2min between | reintroduces threshold, `tests.md` |
-| 6 | Test: 5k | race effort | | `tests.md` |
+| 6 | Easy 2 | 6km | 5:30–6:00/km | Friday; 6km is the route (changed 27 Oct) |
+| 6 | Long | 10km | 5:30–6:00/km or slower | Saturday with friends, at chatting pace (changed 27 Oct; replaces the threshold test) |
+| 6 | Test: 5k | 8km | race effort for 5km | 2km warm-up and 1km cool-down make up the 8km, `tests.md` |
+| 7 | Test: threshold | 3×10min | just below half-marathon effort, jog 2min between | moved from week 6 (changed 27 Oct); rest of week 7 planned later |
 
 The difference between runs: two or three "easy" runs a week hold frequency and are
 interchangeable; the long run is the one that carries duration and terrain, and is the only
@@ -417,10 +418,10 @@ placeholder `[stated, 2026-10-24]`. Runs to and from the gym only at weekends `[
 |---|---|
 | Mon 26 | Rest |
 | Tue 27 | 5k test, race effort. 2km warm-up, 1–1.5km cool-down, ~8km. Only if walking is pain-free that morning |
-| Wed 28 | Gym — Session A (full gym): front squat 65kg (even week). Hip-flexion, balance and knee-to-wall tests in the warm-up. No calf work beyond the warm-up |
-| Thu 29 | Heel-raise test, first thing, fresh (`tests.md`). Nothing else. Skip it if the baseline was already done on 22 Oct |
-| Fri 30 | Easy — 4km. Doubles as the easy-pace-at-fixed-HR test |
-| Sat 31 | Threshold test — 3×10min just below half-marathon effort, jog 2min between. 2km warm-up, 1.5km cool-down, ~9km |
+| Wed 28 | Gym — Session A (full gym): heel-raise test first, then front squat 65kg (even week). Hip-flexion, balance and knee-to-wall tests in the warm-up. No pull-ups or press (done Monday). No other calf work (changed 25 and 27 Oct) |
+| Thu 29 | Rest (heel-raise test moved into Session A, changed 25 Oct) |
+| Fri 30 | Easy — 6km. Doubles as the easy-pace-at-fixed-HR test (changed 27 Oct from 4km) |
+| Sat 31 | Long — 10km easy with friends, at chatting pace (changed 27 Oct; threshold test moved to week 7) |
 | Sun 1 | Gym — Session B (full gym): trap bar 95kg, Nordic curl (even week), seated calf raise vs bodyweight test, hop test only if landing is pain-free + Easy — 2×2.5km to and from |
 
 ~26km, down from ~29.5km in week 5. No long run, as the block planned.
@@ -461,6 +462,20 @@ work. Thursday becomes rest.
   finished with one more in hand. No 4th rep, no racing the reps.
 - **Recency.** Day placement comes from today's constraints only `[stated, 2026-10-24]`; what
   the week contains is the block plan's.
+
+Changed 27 Oct: the two run tests split across two weeks `[stated, 2026-10-27]`. Two
+race-effort runs in a cutback week, with an unassessed foot, was too much. The block becomes 7
+weeks and ends 8 Nov.
+- Tue 27: the 5k test as planned.
+- Wed 28: Session A drops pull-ups and the shoulder press, which were done in Monday's
+  unplanned upper session. The heel-raise test still goes first.
+- Fri 30: easy 6km instead of 4km (the route) `[stated]`.
+- Sat 31: an easy 10km with friends, at chatting pace, instead of the threshold test. Claude
+  proposed the 10km cap for a cutback week, and Jack agreed.
+- Week 7 (2–8 Nov): the threshold test, then the block review. The rest of the week gets
+  planned later.
+
+Week 6 is now ~29km: 8 + 6 + 10 + 5.
 
 ## What would change the plan
 - Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,

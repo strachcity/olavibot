@@ -1463,3 +1463,14 @@ relative_effort: 4
 - Beyond plan: a whole extra session, on a rest day. Upper body only, so no running or calf cost.
 - Capacity: pull-ups 3×4, the same as 20 Oct.
 - Review: Low cost (relative effort 4) and the right body part to pick. It does overlap with Wednesday's Session A, which has pull-ups and a shoulder press, two days later. Wednesday should drop those two and keep its legs, trunk and tests. Pull-ups went to the 4-rep max again. 5×3 one short of max is what moves that number.
+
+## [2026-10-27] block | Run tests split over weeks 6 and 7; block extended to 8 Nov
+Jack's call `[stated, 2026-10-27]`: two race-effort runs in one cutback week was wrong.
+Changes:
+- The 5k test stays on Tue 27.
+- The threshold test moves to week 7 (2–8 Nov), and Foundations ends 8 Nov.
+- Sat 31 becomes an easy 10km with friends. Claude proposed the cap; Jack agreed.
+- Fri 30 becomes 6km (the route).
+- Wed 28: Session A drops pull-ups and the shoulder press after Monday's upper session.
+
+Week 6 is now ~29km.
