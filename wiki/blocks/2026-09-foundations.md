@@ -418,10 +418,10 @@ placeholder `[stated, 2026-10-24]`. Runs to and from the gym only at weekends `[
 |---|---|
 | Mon 26 | Rest |
 | Tue 27 | 5k test, race effort. 2km warm-up, 1–1.5km cool-down, ~8km. Only if walking is pain-free that morning |
-| Wed 28 | Gym — Session A (full gym): front squat 65kg (even week). Hip-flexion, balance and knee-to-wall tests in the warm-up. No calf work beyond the warm-up |
-| Thu 29 | Heel-raise test, first thing, fresh (`tests.md`). Nothing else. Skip it if the baseline was already done on 22 Oct |
-| Fri 30 | Easy — 4km. Doubles as the easy-pace-at-fixed-HR test |
-| Sat 31 | Threshold test — 3×10min just below half-marathon effort, jog 2min between. 2km warm-up, 1.5km cool-down, ~9km |
+| Wed 28 | Gym — Session A (full gym): heel-raise test first, then front squat 65kg (even week). Hip-flexion, balance and knee-to-wall tests in the warm-up. No pull-ups or press (done Monday). No other calf work (changed 25 and 27 Oct) |
+| Thu 29 | Rest (heel-raise test moved into Session A, changed 25 Oct) |
+| Fri 30 | Easy — 6km. Doubles as the easy-pace-at-fixed-HR test (changed 27 Oct from 4km) |
+| Sat 31 | Long — 10km easy with friends, at chatting pace (changed 27 Oct; threshold test moved to week 7) |
 | Sun 1 | Gym — Session B (full gym): trap bar 95kg, Nordic curl (even week), seated calf raise vs bodyweight test, hop test only if landing is pain-free + Easy — 2×2.5km to and from |
 
 ~26km, down from ~29.5km in week 5. No long run, as the block planned.
