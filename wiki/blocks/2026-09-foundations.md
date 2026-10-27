@@ -48,7 +48,7 @@ are targets, ±1km either way — the ceiling is what matters, not hitting the n
 | 6 | Easy 1 | 5km | 5:30–6:00/km | cutback |
 | 6 | Easy 2 | 6km | 5:30–6:00/km | Friday; 6km is the route (changed 27 Oct) |
 | 6 | Long | 10km | 5:30–6:00/km or slower | Saturday with friends, at chatting pace (changed 27 Oct; replaces the threshold test) |
-| 6 | Test: 5k | race effort | | `tests.md` |
+| 6 | Test: 5k | 8km | race effort for 5km | 2km warm-up and 1km cool-down make up the 8km, `tests.md` |
 | 7 | Test: threshold | 3×10min | just below half-marathon effort, jog 2min between | moved from week 6 (changed 27 Oct); rest of week 7 planned later |
 
 The difference between runs: two or three "easy" runs a week hold frequency and are
