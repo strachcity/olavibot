@@ -329,3 +329,23 @@ complete: yes
 | **Day** | | **~1,960** | **~86** | **~200** | |
 
 Strava: gym 161 kcal `[data]`. Burned ~2,450 `[inferred]`, so ~490 under.
+
+## Tue 27 Oct: easy 6km in the evening
+
+```yaml
+training: run
+kcal_est: pending
+protein_g_est: pending
+carbs_g_est: pending
+alcohol_units: 5
+energy: pending
+hunger: pending
+complete: pending
+```
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| Breakfast | Not reported | pending | | | |
+| Lunch | Tuna mayo sandwich (usual fillings); Walkers Baked crisps, small bag; banana | 705 | 28 | 85 | `[stated]`, estimate `[inferred]` |
+| Day | 2 pints of Beavertown Neck Oil (~4.3%: ~195 kcal and ~2.4 units a pint) | 390 | 2 | 30 | `[stated]`, estimate `[inferred]` |
+| **So far** | | **~1,095** | **~30** | **~115** | |
