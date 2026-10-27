@@ -1449,3 +1449,17 @@ Jack won't do the heel-raise test as a separate morning session; he will in a gy
   after heavy calf work, the same slot every retest.
 - Week 6: the test moves from Thursday morning to the start of Wednesday's Session A, and
   Thursday becomes rest.
+
+## [2026-10-26] gym | Upper body, unplanned — Foundations wk6 (full gym)
+```yaml
+planned: no
+beyond_plan: extra upper session on a rest day
+duration_min: 43
+gym: full
+relative_effort: 4
+```
+- Planned: Rest (week 6 Monday).
+- Done: DB press 3×12 @18kg. Seated DB chest press, dumbbells held at the centre and pushed up, 3×10 @16kg. Lat pulldown 3×12 @35lb. Cable biceps curl 3×12 @35lb. Pull-ups 3×4 `[stated]`. Strava 42:46, relative effort 4 `[data, Strava activity 20743034219]`. A free evening after a day at the desk; legs rested on purpose `[stated, 2026-10-26]`.
+- Beyond plan: a whole extra session, on a rest day. Upper body only, so no running or calf cost.
+- Capacity: pull-ups 3×4, the same as 20 Oct.
+- Review: Low cost (relative effort 4) and the right body part to pick. It does overlap with Wednesday's Session A, which has pull-ups and a shoulder press, two days later. Wednesday should drop those two and keep its legs, trunk and tests. Pull-ups went to the 4-rep max again. 5×3 one short of max is what moves that number.
