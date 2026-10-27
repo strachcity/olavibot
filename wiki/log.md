@@ -1482,3 +1482,20 @@ week, to spot patterns. His social weeks vary: some weeks he goes out, some he d
 12–18 Oct baseline, and the review compares like with like across the month. Short weekly
 summaries; full review and recommendations after 15 Nov. `food-diary.md` header and
 `index.md` updated.
+
+## [2026-10-27] run | Easy 6km — Foundations wk6
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 38
+distance_km: 6.40
+avg_pace: 5:49
+run_type: easy
+relative_effort: 24
+```
+- Planned: Week 6's easy 6km (Friday's), run Tuesday. The 5k test moves to Friday because of work `[stated, 2026-10-27]`; that's a day swap, not a plan change.
+- Done: 6.40km in 37:18 moving, 5:49/km, avg HR 140, max 145, Victoria Park, 12°C, light wind `[data, Strava activity 20756239119]`. "Easy, slow" `[stated]`.
+- Beyond plan: none.
+- Capacity: not reported.
+- Review: A properly easy run. Max HR was only 5 beats above the average, so there was no drift and no surges, unlike Saturday's long run that finished at 160. It also leaves the legs fresh for Wednesday's heel-raise test, which needs no hard run the night before. If the 5k goes on Friday, Saturday's friends' run is capped at 8km and kept genuinely easy.
