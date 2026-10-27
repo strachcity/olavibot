@@ -291,7 +291,7 @@ All numbers `[inferred]` estimates unless tagged.
 | Fruit | 1 banana | none |
 | Weight, gym scale | 77.5 kg `[stated]` | 78.5 kg (18 Oct) `[stated]` |
 
-- **Lunch is a fixed habit.** Tuna mayo sandwich or wraps with Baked crisps on 6 of 7 days,
+- **Lunch is a fixed habit.** Tuna mayo sandwich or wraps with Baked crisps on 5 of 7 days,
   ~600–800 kcal. Breakfast is Huel with milk or nothing. The day's variation is all in dinner.
 - **The heaviest dinner came from toppings, not meat.** Mon 19's chicken sandwiches with cheese,
   mayo and avocado were ~1,500. Everything else landed ~850–1,050, and the lightest versions
