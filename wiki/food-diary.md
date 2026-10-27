@@ -251,24 +251,26 @@ Run: 12.1km, Strava 822 kcal `[data]`. Burn today ~3,100 `[inferred]`, so ~270 o
 ```yaml
 training: run+gym
 relative_effort: 30
-kcal_est: 1720
-protein_g_est: 48
-carbs_g_est: 149
+kcal_est: 2040
+protein_g_est: 76
+carbs_g_est: 215
 alcohol_units: pending
 energy: pending
 hunger: pending
-complete: partial
+complete: yes
 ```
 
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
 | Breakfast | 1 egg on 1 slice of seeded bread | 220 | 11 | 18 | `[stated]`, estimate `[inferred]` |
-| Lunch | Walkers Baked crisps, small bag; rest of lunch not reported | 100 | 1 | 16 | `[stated]`, estimate `[inferred]` |
-| Dinner | Squash and hot honey rigatoni with chorizo, 1 of 3 portions of an Instagram recipe (serves 3: 1 large squash, garlic bulb, sage, 3 tsp butter, onion, 300g pasta, 200ml cream, 1 burrata, hot honey, olive oil) `[data: recipe]`; chorizo amount not given, taken as ~50g. Cream taken as double | 1,400 | 36 | 115 | `[stated]` + `[data]`, portion `[inferred]` |
-| **Known** | | **~1,720** | **~48** | **~149** | |
+| Lunch | 2 tuna mayo wraps with veg `[stated, 2026-10-27]`; Walkers Baked crisps, small bag | 800 | 36 | 81 | `[stated]`, estimate `[inferred]` |
+| Dinner | Squash and hot honey rigatoni with chorizo, 1 of 3 portions of an Instagram recipe (serves 3: 1 large squash, garlic bulb, sage, 3 tsp butter, onion, 300g pasta, 200ml cream, hot honey, olive oil) `[data: recipe]`. Made with single cream, no burrata, less oil `[stated, 2026-10-27]`; chorizo not given, taken as ~50g | 1,020 | 29 | 116 | `[stated]` + `[data]`, portion `[inferred]` |
+| **Day** | | **~2,040** | **~76** | **~215** | |
 
-Strava: Session B 294 kcal, runs 172 + 162 kcal `[data]`. Burned ~2,850 `[inferred]`. Lunch
-not reported, so the day is incomplete; as logged it's ~1,100 under.
+Strava: Session B 294 kcal, runs 172 + 162 kcal `[data]`. Burned ~2,850 `[inferred]`, so ~810
+under. Corrected 27 Oct: lunch added, dinner recalculated (single cream, no burrata, less oil).
+
+Weight: 77.5 kg, gym scale `[stated, 2026-10-27]`, reported 27 Oct for this weekend's gym visit.
 
 ---
 
@@ -277,9 +279,9 @@ not reported, so the day is incomplete; as logged it's ~1,100 under.
 ```yaml
 training: gym
 relative_effort: 4
-kcal_est: 2340
-protein_g_est: 93
-carbs_g_est: 199
+kcal_est: 1960
+protein_g_est: 86
+carbs_g_est: 200
 alcohol_units: pending
 energy: pending
 hunger: pending
@@ -290,7 +292,7 @@ complete: yes
 |---|---|---|---|---|---|
 | Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
 | Lunch | Tuna mayo sandwich (usual fillings); Walkers Baked crisps, small bag | 600 | 27 | 58 | `[stated]`, estimate `[inferred]` |
-| Dinner | Squash and hot honey rigatoni with chorizo, second portion, as Sun | 1,400 | 36 | 115 | `[stated]`, estimate `[inferred]` |
-| **Day** | | **~2,340** | **~93** | **~199** | |
+| Dinner | Squash and hot honey rigatoni with chorizo, second portion, as Sun | 1,020 | 29 | 116 | `[stated]`, estimate `[inferred]` |
+| **Day** | | **~1,960** | **~86** | **~200** | |
 
-Strava: gym 161 kcal `[data]`. Burned ~2,450 `[inferred]`, so ~110 under.
+Strava: gym 161 kcal `[data]`. Burned ~2,450 `[inferred]`, so ~490 under.
