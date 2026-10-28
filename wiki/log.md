@@ -1499,3 +1499,28 @@ relative_effort: 24
 - Beyond plan: none.
 - Capacity: not reported.
 - Review: A properly easy run. Max HR was only 5 beats above the average, so there was no drift and no surges, unlike Saturday's long run that finished at 160. It also leaves the legs fresh for Wednesday's heel-raise test, which needs no hard run the night before. If the 5k goes on Friday, Saturday's friends' run is capped at 8km and kept genuinely easy.
+
+## [2026-10-28] test | Baseline battery, part 1 — Foundations wk6 (start of Session A)
+- Conditions: start of Session A, after the mobility warm-up, before any other work (protocol agreed 25 Oct). ~72h after Sunday 25's calf work. Easy 6.4km the evening before (27 Oct). Socks, not barefoot, for knee-to-wall. No standard-conditions bodyweight taken. Metronome and video not reported.
+- Heel raise to fatigue, single leg, box edge, full range: **L 40, R 43** reps `[stated]`. Symmetry 93% on reps (no height data, so reps only). No Achilles pain; ended on calf cramp `[stated]`.
+- Knee-to-wall: **~6–10cm both sides, R possibly slightly further** — `[inferred]` estimate from two top-down photos at Jack's request, not a measurement. Not a usable baseline; retest with a tape measure.
+- Single-leg balance, eyes closed, hands on hips: **≥60s** (hit the 60s cap) `[stated]`. Sides assumed both. Ceiling effect — the next retest needs a harder version (folded mat or 90s cap), recorded as a new test.
+- Hanging knee raise: **10 reps, a floor, not a max** `[stated]`. Stopped because hanging hurt the arms — not the shoulder joint, the cause was hanging without a shoulder warm-up `[stated]`. Retest after a shoulder warm-up, or on the captain's chair; same set-up every time after that.
+- Read: Left calf (the painful-foot side) isn't meaningfully weaker than the right (93% ≥ the 80–90% target), which makes calf weakness on that side less likely as the foot's driver `[inferred]`. 40+ reps each side is a solid capacity number. First real capacity data of the block: from here, calf progressions are judged on this as well as morning symptoms.
+
+## [2026-10-28] gym | Session A — Foundations wk6 (full gym, test day)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 77
+gym: full
+session: A
+reactive_level: 2
+relative_effort: 10
+```
+- Planned: Mobility warm-up, then tests (heel raise, knee-to-wall, balance, hanging knee raise). Front squat ramp bar×10 → 40×5 → 50×3 → 57.5×1–2, then 3×5 @65kg RPE7 (target = ceiling). Superset: Bulgarian split squat 3×8/leg @17.5–18kg + suitcase carry 3×30–40m/side @24–30kg. Banded march 3×30s/leg. Cool-down. No pull-ups or press (Monday's upper session). No calf work beyond the heel-raise test.
+- Done: Mobility warm-up, tests (see the test entry). Front squat ramp and 3×5 @65kg as planned. Bulgarian split squat @17.5kg. Suitcase carry, one 30kg DB, 20m per side. Banded march, yellow band. Cool-down `[stated]`. Strava 77:21, relative effort 10 `[data, Strava activity 20769456145]`.
+- Beyond plan: none.
+- Capacity: front squat 65kg × 3×5, on target.
+- Review: Anchor on its number with nothing added, like the deadlifts on 18 and 25 Oct; only the 20 Oct squat has broken a ceiling since targets were set equal to them. Suitcase carry 20m is short of the 30–40m planned, so the trunk dose was light. New rule from today: shoulders get warmed up (band pull-aparts, scapular pulls, one light pulldown set) before any hanging work, after the dead hang hurt cold arms `[stated]`.
