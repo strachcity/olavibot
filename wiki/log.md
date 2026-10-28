@@ -1524,3 +1524,12 @@ relative_effort: 10
 - Beyond plan: none.
 - Capacity: front squat 65kg × 3×5, on target.
 - Review: Anchor on its number with nothing added, like the deadlifts on 18 and 25 Oct; only the 20 Oct squat has broken a ceiling since targets were set equal to them. Suitcase carry 20m is short of the 30–40m planned, so the trunk dose was light. New rule from today: shoulders get warmed up (band pull-aparts, scapular pulls, one light pulldown set) before any hanging work, after the dead hang hurt cold arms `[stated]`.
+
+## [2026-10-28] review | tests.md: baseline part 1 filed
+Filled the baseline column in `tests.md` from today's `test` entry:
+- heel raise 40 / 43 reps (93% on reps)
+- balance at least 60s, at the cap
+- hanging knee raise at least 10, a floor rather than a max
+- knee-to-wall not usable, to be retested with a tape
+
+Still pending: the seated calf raise vs bodyweight, hop, 5k, threshold, easy pace at fixed HR, e1RMs and a standard-conditions bodyweight.

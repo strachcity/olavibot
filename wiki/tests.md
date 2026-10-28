@@ -31,21 +31,22 @@ version, so height is approximate.
 
 ## Results
 
-| Test | Baseline (pending) |
+| Test | Baseline (Foundations, 28 Oct – 8 Nov 2026, in progress) |
 |---|---|
-| Date | — |
+| Date | 28 Oct (part 1); rest pending |
 | Bodyweight (kg) | — |
 | Easy pace @ fixed HR | — |
 | Threshold 3×10min — pace / HR | — |
 | 5k | — |
 | Squat e1RM / Deadlift e1RM | — |
-| Heel raise L / R (reps, height start → end, work) | — |
+| Heel raise L / R (reps, height start → end, work) | **40 / 43** reps, box edge, start of Session A. No height or work data. Symmetry 93% on reps. Ended on calf cramp, no Achilles pain `[stated, 2026-10-28]` |
 | Seated calf raise (× bodyweight) | — |
-| Hip flexion (hanging knee raise) | — |
+| Hip flexion (hanging knee raise) | ≥10, a floor not a max: stopped for cold arms `[stated, 2026-10-28]`. Retest after a shoulder warm-up |
 | Hop L / R (cm) | — |
-| Balance L / R (s) | — |
-| Knee-to-wall L / R (cm) | — |
+| Balance L / R (s) | ≥60 / ≥60, eyes closed, hands on hips; hit the 60s cap `[stated, 2026-10-28]`. Next time use a harder version, which counts as a new test |
+| Knee-to-wall L / R (cm) | Not usable. ~6–10cm both sides was estimated from photos `[inferred]`. Retest with a tape measure |
 | Over-ceiling sessions | — |
 
-**Baseline not yet done.** Until it is, no capacity claim in the wiki is `[data]`, and Reactive
-Level 4 cannot be cleared. Log a `test` entry with anything that qualifies the results.
+**Baseline in progress** (part 1, 28 Oct). Heel-raise symmetry passes the ≥80–90% gate on reps
+(93%), though not on work or height, which weren't recorded. The seated calf raise vs
+bodyweight is still pending, so Reactive Level 4 cannot be cleared yet. Log a `test` entry with anything that qualifies the results.
