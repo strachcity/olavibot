@@ -1486,7 +1486,7 @@ summaries; full review and recommendations after 15 Nov. `food-diary.md` header 
 ## [2026-10-27] run | Easy 6km — Foundations wk6
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 38
 distance_km: 6.40
