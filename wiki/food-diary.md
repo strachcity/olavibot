@@ -352,3 +352,22 @@ complete: yes
 | **Day** | | **~2,515** | **~128** | **~239** | |
 
 Burned ~2,700 with the 6km `[inferred]`, so ~185 under.
+
+## Wed 28 Oct: Session A (heel-raise test first)
+
+```yaml
+training: gym
+kcal_est: pending
+protein_g_est: pending
+carbs_g_est: pending
+alcohol_units: pending
+energy: pending
+hunger: pending
+complete: pending
+```
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
+| Lunch | Tuna mayo sandwich (usual fillings); Walkers Baked crisps, small bag | 600 | 27 | 58 | `[stated]`, estimate `[inferred]` |
+| **So far** | | **~940** | **~57** | **~84** | |
