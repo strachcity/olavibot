@@ -375,9 +375,10 @@ complete: yes
 
 Burned ~2,600 with Session A `[inferred]`, so ~160 under.
 
-## Thu 29 Oct
+## Thu 29 Oct: rest
 
 ```yaml
+training: none
 kcal_est: 2420
 protein_g_est: 104
 carbs_g_est: 158
@@ -395,4 +396,4 @@ complete: yes
 | Evening | 2 pints of Meantime IPA (taken as 7.4% ABV: ~330 kcal and ~4.2 units a pint) | 660 | 2 | 40 | `[stated]`, estimate `[inferred]` |
 | **Day** | | **~2,420** | **~104** | **~158** | |
 
-No training logged `[inferred]`; burned ~2,300, so ~120 over.
+Rest day in the plan; burned ~2,300 `[inferred]`, so ~120 over.
