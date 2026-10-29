@@ -357,9 +357,9 @@ Burned ~2,700 with the 6km `[inferred]`, so ~185 under.
 
 ```yaml
 training: gym
-kcal_est: 2440
-protein_g_est: 177
-carbs_g_est: 149
+kcal_est: 2605
+protein_g_est: 181
+carbs_g_est: 171
 alcohol_units: pending
 energy: pending
 hunger: pending
@@ -370,10 +370,10 @@ complete: yes
 |---|---|---|---|---|---|
 | Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
 | Lunch | Tuna mayo sandwich (usual fillings); Walkers Baked crisps, small bag | 600 | 27 | 58 | `[stated]`, estimate `[inferred]` |
-| Dinner | 2 chicken sandwiches, 4 slices seeded bread: 2 breasts, avocado, mayo, cheese `[stated]`. Garlic bread not reported | 1,500 | 120 | 65 | `[stated]`, estimate `[inferred]` |
-| **Day** | | **~2,440** | **~177** | **~149** | |
+| Dinner | 2 chicken sandwiches, 4 slices seeded bread: 2 breasts, avocado, mayo, cheese; ¼ garlic baguette `[stated]` | 1,665 | 124 | 87 | `[stated]`, estimate `[inferred]` |
+| **Day** | | **~2,605** | **~181** | **~171** | |
 
-Burned ~2,600 with Session A `[inferred]`, so ~160 under.
+Burned ~2,600 with Session A `[inferred]`, so about level.
 
 ## Thu 29 Oct: rest
 
@@ -392,7 +392,7 @@ complete: yes
 |---|---|---|---|---|---|
 | Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
 | Lunch | Tuna mayo sandwich (usual fillings) with ½ avocado | 570 | 27 | 42 | `[stated]`, estimate `[inferred]` |
-| Dinner | Bread Street Kitchen duck main (restaurant; sides not given) | 850 | 45 | 50 | `[stated]`, estimate `[inferred]` |
+| Dinner | Bread Street Kitchen duck main with veg and a small portion of mash `[stated]` | 850 | 45 | 50 | `[stated]`, estimate `[inferred]` |
 | Evening | 2 pints of Meantime IPA (taken as 7.4% ABV: ~330 kcal and ~4.2 units a pint) | 660 | 2 | 40 | `[stated]`, estimate `[inferred]` |
 | **Day** | | **~2,420** | **~104** | **~158** | |
 
