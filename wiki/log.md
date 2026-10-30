@@ -1542,3 +1542,20 @@ Jack is shattered `[stated, 2026-10-30]`. Changes:
 - Friday 30 becomes an easy ~7km in place of the test.
 
 Week 6 is now all easy running, ~29km. Weeks 7 and 8 are still to be planned.
+
+## [2026-10-30] run | 5k test — Foundations wk6 (brought forward)
+```yaml
+planned: partial
+achilles_next_am: pending
+beyond_plan: 5k test in place of easy run
+duration_min: 37
+distance_km: 7.29
+avg_pace: 4:47
+run_type: race
+relative_effort: 57
+```
+- Planned: Easy ~7km, in place of the 5k test, which had just been moved to week 7 because Jack was shattered.
+- Done: 1km warm-up, 5k at race effort, cool-down `[stated]`. Whole activity 7.29km in 34:48 moving, avg HR 155, max 175, Victoria Park, 13°C, light wind `[data, Strava activity 20794837183]`. **Best 5k inside it: 21:28 (4:18/km)** `[data, Strava best effort]`. First mile 6:37 (4:07/km), second 6:52, then slower; fastest 1km 4:04 `[data]`. "Hard. The quick sudden pace gave me a stitch for the whole thing and I crumbled in the last km. Legs felt great, lungs couldn't handle it" `[stated]`. Tired, sore throat `[stated, 2026-10-30]`.
+- Beyond plan: the 5k test, a week early, in place of an easy run, on a day Jack had called himself shattered.
+- Capacity: 5k 21:28, the benchmark for this block. PB 17:55 (Jan 2025) `[data]`.
+- Review: A fair benchmark under the conditions, but the conditions were poor: tired, a sore throat, a 1km warm-up (2km planned), and a start well faster than he could hold. The first mile was 4:07/km against an average of 4:18, so the last km was the slowest. Legs fine and lungs gone is what a big start does to aerobic fitness that hasn't been trained at speed for months. Easy running carries that base, and none of it is at 4:20/km. Next time: 2km warm-up, and the first km no faster than goal pace. Sore throat and tired: keep the next two days easy or off.
