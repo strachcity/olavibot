@@ -379,9 +379,9 @@ Burned ~2,600 with Session A `[inferred]`, so about level.
 
 ```yaml
 training: none
-kcal_est: 2420
-protein_g_est: 104
-carbs_g_est: 158
+kcal_est: 2670
+protein_g_est: 111
+carbs_g_est: 198
 alcohol_units: 8
 energy: pending
 hunger: pending
@@ -394,6 +394,25 @@ complete: yes
 | Lunch | Tuna mayo sandwich (usual fillings) with ½ avocado | 570 | 27 | 42 | `[stated]`, estimate `[inferred]` |
 | Dinner | Bread Street Kitchen duck main with veg and a small portion of mash `[stated]` | 850 | 45 | 50 | `[stated]`, estimate `[inferred]` |
 | Evening | 2 pints of Meantime IPA (taken as 7.4% ABV: ~330 kcal and ~4.2 units a pint) | 660 | 2 | 40 | `[stated]`, estimate `[inferred]` |
-| **Day** | | **~2,420** | **~104** | **~158** | |
+| Evening | Slice of focaccia `[stated, 2026-10-30]` | 250 | 7 | 40 | `[stated]`, estimate `[inferred]` |
+| **Day** | | **~2,670** | **~111** | **~198** | |
 
-Rest day in the plan; burned ~2,300 `[inferred]`, so ~120 over.
+Rest day in the plan; burned ~2,300 `[inferred]`, so ~370 over.
+
+## Fri 30 Oct: 5k test
+
+```yaml
+training: test
+kcal_est: pending
+protein_g_est: pending
+carbs_g_est: pending
+alcohol_units: pending
+energy: pending
+hunger: pending
+complete: pending
+```
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| Breakfast | Not reported | pending | | | |
+| Lunch | Meal deal (contents to come) | pending | | | `[stated]` |
