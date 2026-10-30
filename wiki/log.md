@@ -1533,3 +1533,12 @@ Filled the baseline column in `tests.md` from today's `test` entry:
 - knee-to-wall not usable, to be retested with a tape
 
 Still pending: the seated calf raise vs bodyweight, hop, 5k, threshold, easy pace at fixed HR, e1RMs and a standard-conditions bodyweight.
+
+## [2026-10-30] block | 5k test to week 7, threshold to week 8; Foundations extended to 15 Nov
+Jack is shattered `[stated, 2026-10-30]`. Changes:
+- The 5k test moves to week 7 and the threshold test to week 8, so each hard run gets its own
+  week.
+- The block extends to 8 weeks, ending 15 Nov.
+- Friday 30 becomes an easy ~7km in place of the test.
+
+Week 6 is now all easy running, ~29km. Weeks 7 and 8 are still to be planned.
