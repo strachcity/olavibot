@@ -414,5 +414,7 @@ complete: pending
 
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
-| Breakfast | Not reported | pending | | | |
-| Lunch | Meal deal (contents to come) | pending | | | `[stated]` |
+| Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
+| Lunch | Meal deal: chicken salad sandwich, Walkers Baked crisps, Tenzing mango energy drink | 560 | 26 | 71 | `[stated]`, estimate `[inferred]` |
+| Afternoon | Cheese and onion crisps, big bag (taken as ~50g grab bag); small slice of focaccia | 410 | 7 | 51 | `[stated]`, estimate `[inferred]` |
+| **So far** | | **~1,310** | **~63** | **~148** | |
