@@ -1,5 +1,5 @@
 # Block: Foundations
-Dates: 2026-09-21 → 2026-11-08 (7 weeks; extended 27 Oct)  ·  Phase: A  ·  Status: active
+Dates: 2026-09-21 → 2026-11-15 (8 weeks; extended 27 and 30 Oct)  ·  Phase: A  ·  Status: active
 
 ## Emphasis
 Re-establish running frequency and relearn the gym movements after the backyard/Achilles
@@ -48,8 +48,9 @@ are targets, ±1km either way — the ceiling is what matters, not hitting the n
 | 6 | Easy 1 | 5km | 5:30–6:00/km | cutback |
 | 6 | Easy 2 | 6km | 5:30–6:00/km | Friday; 6km is the route (changed 27 Oct) |
 | 6 | Long | 10km | 5:30–6:00/km or slower | Saturday with friends, at chatting pace (changed 27 Oct; replaces the threshold test) |
-| 6 | Test: 5k | 8km | race effort for 5km | 2km warm-up and 1km cool-down make up the 8km, `tests.md` |
-| 7 | Test: threshold | 3×10min | just below half-marathon effort, jog 2min between | moved from week 6 (changed 27 Oct); rest of week 7 planned later |
+| 6 | Easy 3 | 7km | 5:30–6:00/km | in place of the 5k test, which moves to week 7 (changed 30 Oct) |
+| 7 | Test: 5k | 8km | race effort for 5km | moved from week 6 (changed 30 Oct); 2km warm-up and 1km cool-down; rest of week 7 planned later |
+| 8 | Test: threshold | 3×10min | just below half-marathon effort, jog 2min between | moved to week 8 (changed 30 Oct); rest of week 8 planned later |
 
 The difference between runs: two or three "easy" runs a week hold frequency and are
 interchangeable; the long run is the one that carries duration and terrain, and is the only
@@ -417,10 +418,10 @@ placeholder `[stated, 2026-10-24]`. Runs to and from the gym only at weekends `[
 | Day | Session |
 |---|---|
 | Mon 26 | Rest |
-| Tue 27 | 5k test, race effort. 2km warm-up, 1–1.5km cool-down, ~8km. Only if walking is pain-free that morning |
+| Tue 27 | Easy — 6km (was the 5k test; swapped with Friday, then the 5k moved to week 7, changed 30 Oct) |
 | Wed 28 | Gym — Session A (full gym): heel-raise test first, then front squat 65kg (even week). Hip-flexion, balance and knee-to-wall tests in the warm-up. No pull-ups or press (done Monday). No other calf work (changed 25 and 27 Oct) |
 | Thu 29 | Rest (heel-raise test moved into Session A, changed 25 Oct) |
-| Fri 30 | Easy — 6km. Doubles as the easy-pace-at-fixed-HR test (changed 27 Oct from 4km) |
+| Fri 30 | Easy — 7km, in place of the 5k test (changed 30 Oct). Doubles as the easy-pace-at-fixed-HR test |
 | Sat 31 | Long — 10km easy with friends, at chatting pace (changed 27 Oct; threshold test moved to week 7) |
 | Sun 1 | Gym — Session B (full gym): trap bar 95kg, Nordic curl (even week), seated calf raise vs bodyweight test, hop test only if landing is pain-free + Easy — 2×2.5km to and from |
 
@@ -476,6 +477,11 @@ weeks and ends 8 Nov.
   planned later.
 
 Week 6 is now ~29km: 8 + 6 + 10 + 5.
+
+Changed 30 Oct: Jack is shattered `[stated, 2026-10-30]`. The 5k test moves to week 7, the
+threshold test to week 8, and the block is extended again, to 8 weeks ending 15 Nov. That
+keeps the two hard runs in separate weeks `[stated]`. Friday becomes an easy ~7km in place of
+the test. Week 6 is now ~29km of easy running: 6.4 + 7 + 10 + 5.
 
 ## What would change the plan
 - Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,
