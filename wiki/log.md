@@ -1559,3 +1559,9 @@ relative_effort: 57
 - Beyond plan: the 5k test, a week early, in place of an easy run, on a day Jack had called himself shattered.
 - Capacity: 5k 21:28, the benchmark for this block. PB 17:55 (Jan 2025) `[data]`.
 - Review: A fair benchmark under the conditions, but the conditions were poor: tired, a sore throat, a 1km warm-up (2km planned), and a start well faster than he could hold. The first mile was 4:07/km against an average of 4:18, so the last km was the slowest. Legs fine and lungs gone is what a big start does to aerobic fitness that hasn't been trained at speed for months. Easy running carries that base, and none of it is at 4:20/km. Next time: 2km warm-up, and the first km no faster than goal pace. Sore throat and tired: keep the next two days easy or off.
+
+## [2026-10-31] block | 5k done in week 6; extra week kept; threshold stays in week 8
+Jack ran the 5k test on 30 Oct (21:28), a week ahead of the 30 Oct reshuffle. Jack's call
+`[stated, 2026-10-31]`: keep the extra week. Week 7 is a normal training week with no test,
+the threshold test stays in week 8, and Foundations ends 15 Nov. The 5k result is filed in
+`tests.md`, with its conditions: tired, sore throat, short warm-up, fast start.
