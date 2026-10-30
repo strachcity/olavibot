@@ -33,11 +33,11 @@ version, so height is approximate.
 
 | Test | Baseline (Foundations, 28 Oct – 8 Nov 2026, in progress) |
 |---|---|
-| Date | 28 Oct (part 1); rest pending |
+| Date | 28 Oct (part 1), 30 Oct (5k); rest pending |
 | Bodyweight (kg) | — |
 | Easy pace @ fixed HR | — |
 | Threshold 3×10min — pace / HR | — |
-| 5k | — |
+| 5k | **21:28** (4:18/km), 30 Oct, Victoria Park. Tired, sore throat, 1km warm-up, first mile 4:07/km then faded; stitch throughout `[data, Strava]` `[stated]`. PB 17:55 (Jan 2025) |
 | Squat e1RM / Deadlift e1RM | — |
 | Heel raise L / R (reps, height start → end, work) | **40 / 43** reps, box edge, start of Session A. No height or work data. Symmetry 93% on reps. Ended on calf cramp, no Achilles pain `[stated, 2026-10-28]` |
 | Seated calf raise (× bodyweight) | — |
