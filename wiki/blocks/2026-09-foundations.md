@@ -49,7 +49,11 @@ are targets, ±1km either way — the ceiling is what matters, not hitting the n
 | 6 | Easy 2 | 6km | 5:30–6:00/km | Friday; 6km is the route (changed 27 Oct) |
 | 6 | Long | 10km | 5:30–6:00/km or slower | Saturday with friends, at chatting pace (changed 27 Oct; replaces the threshold test) |
 | 6 | Test: 5k | 7km | race effort for 5km | changed 30 Oct to an easy 7km, then run as the 5k test the same evening: 21:28 |
-| 7 | — | — | — | a normal training week, no test (changed 31 Oct); planned later |
+| 7 | Easy 1 | 5km | 5:30–6:00/km | Swansea |
+| 7 | Easy 2 | 5km | 5:30–6:00/km | + strides 4–6×20s, Swansea |
+| 7 | Easy 3 | 4km | 5:30–6:00/km | or 2×2km to and from Session A if it moves to Friday |
+| 7 | Long | 12km | 5:30–6:00/km or slower | |
+| 7 | Easy 4 | 5km | 5:30–6:00/km | 2×2.5km to and from Session B |
 | 8 | Test: threshold | 3×10min | just below half-marathon effort, jog 2min between | moved to week 8 (changed 30 Oct); rest of week 8 planned later |
 
 The difference between runs: two or three "easy" runs a week hold frequency and are
@@ -486,6 +490,44 @@ the test. Week 6 is now ~29km of easy running: 6.4 + 7 + 10 + 5.
 Changed 31 Oct: Jack ran the 5k test on Friday 30 after all: 21:28 `[data]`, tired and with a
 sore throat. The extra week stays `[stated, 2026-10-31]`. Week 7 is a normal training week with
 no test. The threshold test stays in week 8, and the block ends 15 Nov.
+
+**Week 7 (2–8 Nov).** Normal training, no test. Constraint: Swansea Monday and Tuesday nights
+(easy runs fine), dinner Wednesday night, fireworks possibly Thursday; Friday to Sunday free
+`[stated, 2026-10-31]`. Agreed provisionally, before the week 6 summary, which waits on
+Sunday's Session B `[stated, 2026-10-31]`.
+
+| Day | Session |
+|---|---|
+| Mon 2 | Easy — 5km, Swansea, evening |
+| Tue 3 | Easy — 5km + strides 4–6×20s (full recovery), Swansea |
+| Wed 4 | Rest (dinner) |
+| Thu 5 | Gym — Session A (full gym): back squat 90kg (odd week). Shoulder warm-up before pull-ups 5×3. Friday if the fireworks clash |
+| Fri 6 | Easy — 4km (or 2×2km to and from Session A if it moved here) |
+| Sat 7 | Long — 12km, easy |
+| Sun 8 | Gym — Session B (full gym): calf raises first, conventional deadlift 100kg on the thin bar or straps, Copenhagen (odd week) + Easy — 2×2.5km to and from |
+
+~31km.
+
+*Why this week*
+
+| Decision | Why | Source |
+|---|---|---|
+| ~30km, held | Jack's call; it matches week 6's actual total. The threshold test is next week, so arrive fresh rather than after a jump | `[stated, 2026-10-31]`; spike evidence **[W]** |
+| Strides back, once (Tue) | The foot was clean through a race-effort 5k and the day after. A small dose of speed before the threshold test | Log, 30–31 Oct; judgement **[H]** |
+| Long run 12km | The longest of the last month (12.1–12.3km). No increase | Log |
+| Wed rest | Dinner. It also splits Swansea from the gym | `[stated]` |
+| Session A Thu, falls back to Fri | Fireworks may clash. Either day is ≥48h before the long run | `[stated]` |
+| Anchors: squat 90, deadlift 100, target = ceiling | Jack's call. 95kg on 20 Oct is capacity, not a new floor | `[stated, 2026-10-18]` |
+| Pull-ups 5×3 after a shoulder warm-up | Max is 4. Stop one short of max, and don't hang cold | Log, 26 and 28 Oct |
+| Reactive calf load | Set by Sunday 1 Nov's seated calf test. At or above bodyweight with the Achilles at 0, it progresses | `tests.md` gate |
+
+*Weak points*
+
+- **Fri, Sat and Sun are three running days in a row again**, ending with deadlifts. The foot
+  has tolerated this shape for two weeks, but it's still the most likely trigger.
+- **Mon and Tue are back-to-back runs while travelling.** Keep both genuinely easy.
+- **Recency.** "Hold 30km" comes from today's conversation, but it matches the block's
+  direction and week 6's actual total.
 
 ## What would change the plan
 - Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,

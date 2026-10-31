@@ -1582,3 +1582,15 @@ relative_effort: 16
 - Beyond plan: none. 10km is the block's number; the 6–8km was a suggestion for the day after the 5k.
 - Capacity: not reported.
 - Review: The easiest run of the block by heart rate for its length: avg 130 and never above 142, at 5:59/km. Group pace held back as it should. No pain the morning after a race-effort 5k is the best foot news since it flared, and the hardest landing session of the block left nothing behind. Session B tomorrow: cycle rather than run if the throat is still sore.
+
+## [2026-10-31] block | Week 7 schedule, Foundations
+Agreed provisionally with Jack `[stated, 2026-10-31]`, before the week 6 summary (due after
+Sunday's Session B). Normal training, no test, ~31km:
+- easy 5km (Mon) and easy 5km + strides (Tue) in Swansea
+- Wed rest
+- Session A Thu or Fri (back squat 90kg)
+- easy 4km Fri
+- long run 12km Sat
+- Session B Sun (deadlift 100kg), with 2×2.5km to and from the gym
+
+Pushed to the Running calendar.
