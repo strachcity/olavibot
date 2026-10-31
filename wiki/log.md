@@ -1546,7 +1546,7 @@ Week 6 is now all easy running, ~29km. Weeks 7 and 8 are still to be planned.
 ## [2026-10-30] run | 5k test — Foundations wk6 (brought forward)
 ```yaml
 planned: partial
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: 5k test in place of easy run
 duration_min: 37
 distance_km: 7.29
