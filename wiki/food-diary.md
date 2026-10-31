@@ -404,9 +404,9 @@ Rest day in the plan; burned ~2,300 `[inferred]`, so ~370 over.
 ```yaml
 training: test
 relative_effort: 57
-kcal_est: 2180
-protein_g_est: 124
-carbs_g_est: 216
+kcal_est: 2830
+protein_g_est: 174
+carbs_g_est: 251
 alcohol_units: pending
 energy: pending
 hunger: pending
@@ -418,12 +418,12 @@ complete: yes
 | Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
 | Lunch | Meal deal: chicken salad sandwich, Walkers Baked crisps, Tenzing mango energy drink | 560 | 26 | 71 | `[stated]`, estimate `[inferred]` |
 | Afternoon | Cheese and onion crisps, big bag (taken as ~50g grab bag); small slice of focaccia | 410 | 7 | 51 | `[stated]`, estimate `[inferred]` |
-| Dinner | Chicken sandwich with avocado (taken as 1 sandwich, 1 breast, ½ avocado, mayo) | 650 | 50 | 35 | `[stated]`, estimate `[inferred]` |
+| Dinner | 2 chicken sandwiches with avocado (2 breasts, 1 avocado, mayo) `[stated, 2026-10-31]` | 1,300 | 100 | 70 | `[stated]`, estimate `[inferred]` |
 | Evening | Chocolate milk (taken as 330ml) | 220 | 11 | 33 | `[stated]`, estimate `[inferred]` |
-| **Day** | | **~2,180** | **~124** | **~216** | |
+| **Day** | | **~2,830** | **~174** | **~251** | |
 
 5k test: 7.3km with warm-up and cool-down, Strava 501 kcal `[data]`. Burned ~2,750 `[inferred]`,
-so ~570 under.
+so ~80 over.
 
 ## Sat 31 Oct: long 10km easy with friends
 
