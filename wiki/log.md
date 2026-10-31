@@ -1565,3 +1565,20 @@ Jack ran the 5k test on 30 Oct (21:28), a week ahead of the 30 Oct reshuffle. Ja
 `[stated, 2026-10-31]`: keep the extra week. Week 7 is a normal training week with no test,
 the threshold test stays in week 8, and Foundations ends 15 Nov. The 5k result is filed in
 `tests.md`, with its conditions: tired, sore throat, short warm-up, fast start.
+
+## [2026-10-31] run | Easy 10km with friends — Foundations wk6
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 70
+distance_km: 10.15
+avg_pace: 5:59
+run_type: long
+relative_effort: 16
+```
+- Planned: Easy run with friends, up to 10km (block, changed 27 Oct). After the 5k test, Claude suggested 6–8km, or skipping it if the sore throat had spread.
+- Done: 10.15km in 60:42 moving (69:30 elapsed, with stops), 5:59/km, avg HR 130, max 142, Victoria Park and the Olympic Park `[data, Strava activity 20802730385]`. "No pain at all" `[stated, 2026-10-31]`. Throat not reported.
+- Beyond plan: none. 10km is the block's number; the 6–8km was a suggestion for the day after the 5k.
+- Capacity: not reported.
+- Review: The easiest run of the block by heart rate for its length: avg 130 and never above 142, at 5:59/km. Group pace held back as it should. No pain the morning after a race-effort 5k is the best foot news since it flared, and the hardest landing session of the block left nothing behind. Session B tomorrow: cycle rather than run if the throat is still sore.
