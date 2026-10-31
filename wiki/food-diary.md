@@ -403,6 +403,33 @@ Rest day in the plan; burned ~2,300 `[inferred]`, so ~370 over.
 
 ```yaml
 training: test
+relative_effort: 57
+kcal_est: 2180
+protein_g_est: 124
+carbs_g_est: 216
+alcohol_units: pending
+energy: pending
+hunger: pending
+complete: yes
+```
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
+| Lunch | Meal deal: chicken salad sandwich, Walkers Baked crisps, Tenzing mango energy drink | 560 | 26 | 71 | `[stated]`, estimate `[inferred]` |
+| Afternoon | Cheese and onion crisps, big bag (taken as ~50g grab bag); small slice of focaccia | 410 | 7 | 51 | `[stated]`, estimate `[inferred]` |
+| Dinner | Chicken sandwich with avocado (taken as 1 sandwich, 1 breast, ½ avocado, mayo) | 650 | 50 | 35 | `[stated]`, estimate `[inferred]` |
+| Evening | Chocolate milk (taken as 330ml) | 220 | 11 | 33 | `[stated]`, estimate `[inferred]` |
+| **Day** | | **~2,180** | **~124** | **~216** | |
+
+5k test: 7.3km with warm-up and cool-down, Strava 501 kcal `[data]`. Burned ~2,750 `[inferred]`,
+so ~570 under.
+
+## Sat 31 Oct: long 10km easy with friends
+
+```yaml
+training: run
+relative_effort: 16
 kcal_est: pending
 protein_g_est: pending
 carbs_g_est: pending
@@ -414,7 +441,7 @@ complete: pending
 
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
-| Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
-| Lunch | Meal deal: chicken salad sandwich, Walkers Baked crisps, Tenzing mango energy drink | 560 | 26 | 71 | `[stated]`, estimate `[inferred]` |
-| Afternoon | Cheese and onion crisps, big bag (taken as ~50g grab bag); small slice of focaccia | 410 | 7 | 51 | `[stated]`, estimate `[inferred]` |
-| **So far** | | **~1,310** | **~63** | **~148** | |
+| Morning | Paulie's veg bagel: everything bagel, plenty of cream cheese, tomato, cucumber, red onion `[stated: photo]` | 520 | 15 | 60 | estimate `[inferred]` |
+| **So far** | | **~520** | **~15** | **~60** | |
+
+Run: 10.1km, Strava 684 kcal `[data]`. Burn today ~2,900 `[inferred]`.
