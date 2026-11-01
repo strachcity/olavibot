@@ -1594,3 +1594,20 @@ Sunday's Session B). Normal training, no test, ~31km:
 - Session B Sun (deadlift 100kg), with 2×2.5km to and from the gym
 
 Pushed to the Running calendar.
+
+## [2026-11-01] run | Easy 6km, in place of Session B — Foundations wk6
+```yaml
+planned: partial
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 38
+distance_km: 6.30
+avg_pace: 5:57
+run_type: easy
+relative_effort: 28
+```
+- Planned: Session B (trap bar 95kg, Nordic curl, seated calf raise test, hop test) + easy 2×2.5km to and from.
+- Done: Session B skipped, "super hungover" `[stated, 2026-11-01]`. One easy run instead: 6.30km in 37:27 moving, 5:57/km, avg HR 142, max 149, Victoria Park `[data, Strava activity 20821330493]`.
+- Beyond plan: none. The run covers the planned 5km of running to and from the gym, plus 1.3km.
+- Capacity: not reported.
+- Review: The run did what a hangover run should: steady, never above 149. HR 142 at 5:57/km sits about 10 beats above Saturday's 130 at 5:59/km, which is the alcohol, not lost fitness. Session B is missed for week 6, along with the seated calf raise test, which moves to Sunday 8 Nov. Alcohol is a known confounder for the Achilles (`observations.md`), so tomorrow's morning score should be read with that in mind.
