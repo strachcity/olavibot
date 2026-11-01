@@ -436,12 +436,27 @@ carbs_g_est: pending
 alcohol_units: pending
 energy: pending
 hunger: pending
-complete: pending
+complete: partial
 ```
 
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
 | Morning | Paulie's veg bagel: everything bagel, plenty of cream cheese, tomato, cucumber, red onion `[stated: photo]` | 520 | 15 | 60 | estimate `[inferred]` |
-| **So far** | | **~520** | **~15** | **~60** | |
+| Lunch | Not reported | | | | |
+| Evening | Night out: beer and punch, "very drunk" `[stated]`; amounts not given | pending | | | `[stated]` |
+| Late | About half a pizza `[stated]` | 500 | 20 | 55 | `[stated]`, estimate `[inferred]` |
+| **Known** | | **~1,020 + drinks** | **~35** | **~115** | |
 
 Run: 10.1km, Strava 684 kcal `[data]`. Burn today ~2,900 `[inferred]`.
+
+## Sun 1 Nov: unwell after Saturday night
+
+```yaml
+training: none
+alcohol_units: 0
+complete: partial
+```
+
+Vomiting most of the day `[stated, 2026-11-01]`. Ate half a garlic bread in the evening
+`[stated]`. Intake not estimated: what stayed down is unknown, and the number would mean little.
+Session B planned; not done as far as this diary knows.
