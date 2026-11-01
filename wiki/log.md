@@ -1611,3 +1611,12 @@ relative_effort: 28
 - Beyond plan: none. The run covers the planned 5km of running to and from the gym, plus 1.3km.
 - Capacity: not reported.
 - Review: The run did what a hangover run should: steady, never above 149. HR 142 at 5:57/km sits about 10 beats above Saturday's 130 at 5:59/km, which is the alcohol, not lost fitness. Session B is missed for week 6, along with the seated calf raise test, which moves to Sunday 8 Nov. Alcohol is a known confounder for the Achilles (`observations.md`), so tomorrow's morning score should be read with that in mind.
+
+## [2026-11-01] review | Week 6 summary
+Written under week 6 in `blocks/2026-09-foundations.md`. In short:
+- 5 of 6 planned items done; Session B missed (hangover). 30.1km over 4 runs.
+- Achilles 0 and the foot pain-free through the 5k.
+- Baseline part 1 and the 5k (21:28) done.
+- The plan changed four times in the week.
+- Alcohol hit two days in three weeks.
+- The seated calf test moves to Sunday 8 Nov.

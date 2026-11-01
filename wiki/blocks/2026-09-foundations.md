@@ -491,6 +491,49 @@ Changed 31 Oct: Jack ran the 5k test on Friday 30 after all: 21:28 `[data]`, tir
 sore throat. The extra week stays `[stated, 2026-10-31]`. Week 7 is a normal training week with
 no test. The threshold test stays in week 8, and the block ends 15 Nov.
 
+*Week 6 summary (26 Oct – 1 Nov)*
+
+- **Progress.**
+  - 5 of 6 planned items done: easy 6km, Session A with the tests, the 5k test, the easy
+    10km, and the Sunday run. Session B was missed (hungover) `[stated, 2026-11-01]`.
+  - One unplanned upper-body session on Monday, which changed Wednesday's Session A.
+  - Running 30.1km over 4 runs (6.4 + 7.3 + 10.2 + 6.3), the target Jack set
+    `[data, Strava]`.
+  - Gym 2 of 3 sessions (A, plus the unplanned upper; B missed).
+  - Achilles 0 on every reported morning (28 and 31 Oct). The foot was pain-free, including
+    the morning after the 5k `[stated]`.
+  - Reactive Level 2, held. The seated calf test is not done, so progression is still
+    blocked.
+- **Tests.**
+  - Heel raise L 40 / R 43 (93%).
+  - Balance ≥60s, at the cap.
+  - Hanging knee raise ≥10, a floor.
+  - Knee-to-wall not usable.
+  - 5k 21:28, tired and with a sore throat. PB 17:55.
+  - The baseline finally exists, after four misses.
+- **Went well.**
+  - The foot came through its hardest landings of the block (a race-effort 5k) with no pain
+    the next morning, the best sign since it flared.
+  - Easy days were genuinely easy: 6.4km on 27 Oct with max HR 145, and 10.2km on 31 Oct
+    averaging HR 130.
+  - Front squat on target (65kg). Monday's upper session targeted the weak link.
+- **Went badly.**
+  - Session B missed to a hangover. The second alcohol-hit day in three weeks (10 Oct,
+    1 Nov). It also pushed the seated calf test back a week.
+  - The 5k was run on a day Jack had called himself shattered, with a sore throat, a 1km
+    warm-up and a 4:07/km first mile. It's a valid benchmark, but a soft one.
+  - The week's plan changed four times (27, 30 and 31 Oct, and the Sunday swap).
+    Flexibility is the deal `[stated]`, but tests need fixed conditions to be comparable.
+  - Trunk dose was light (20m carries against 30–40m planned).
+- **Watch.**
+  - The sore throat. If it comes back with chest symptoms or fever, week 7 goes easy or off.
+  - Alcohol and the Achilles: read the 2 Nov morning with that in mind.
+  - Monday and Tuesday are back-to-back runs while travelling.
+- **Next.** Week 7 holds at ~30km as agreed. Strides come back once. Next Sunday's Session B
+  carries the seated calf raise test, which decides whether the Reactive level progresses.
+  The threshold test is in week 8: same warm-up as the protocol (2km), and pace by effort
+  from the first rep.
+
 **Week 7 (2–8 Nov).** Normal training, no test. Constraint: Swansea Monday and Tuesday nights
 (easy runs fine), dinner Wednesday night, fireworks possibly Thursday; Friday to Sunday free
 `[stated, 2026-10-31]`. Agreed provisionally, before the week 6 summary, which waits on
