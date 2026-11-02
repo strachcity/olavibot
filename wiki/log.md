@@ -1598,7 +1598,7 @@ Pushed to the Running calendar.
 ## [2026-11-01] run | Easy 6km, in place of Session B — Foundations wk6
 ```yaml
 planned: partial
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 38
 distance_km: 6.30
@@ -1620,3 +1620,20 @@ Written under week 6 in `blocks/2026-09-foundations.md`. In short:
 - The plan changed four times in the week.
 - Alcohol hit two days in three weeks.
 - The seated calf test moves to Sunday 8 Nov.
+
+## [2026-11-02] run | Easy 5km, Swansea — Foundations wk7
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 32
+distance_km: 5.10
+avg_pace: 6:17
+run_type: easy
+relative_effort: 8
+```
+- Planned: Easy 5km, Swansea, evening. No strides.
+- Done: 5.10km in 32:04, 6:17/km, avg HR 127, max 147, Swansea seafront, 10°C, NE wind `[data, Strava activity 20832681707]`. Achilles and foot "no pain at all" `[stated, 2026-11-02]`.
+- Beyond plan: none.
+- Capacity: not reported.
+- Review: As easy as a run gets: HR 127 and relative effort 8. The Achilles and foot were clean the morning after the hangover run, so alcohol didn't show up this time. Tomorrow: easy 5km + 4–6 strides, the first strides since 21 Oct, relaxed and with full recovery.
