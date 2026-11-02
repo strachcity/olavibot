@@ -484,3 +484,6 @@ complete: pending
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
 | Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
+
+Hotel buffet breakfasts: usually eggs, toast, tomatoes and mushrooms, and no meat `[stated,
+2026-11-02]`. Logged that way unless he says otherwise.
