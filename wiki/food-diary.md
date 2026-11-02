@@ -469,9 +469,11 @@ Session B planned; not done as far as this diary knows.
 
 ---
 
-## Mon 2 Nov: travelling, hotel for a few days
+## Mon 2 Nov: travelling, hotel for a few days; easy 5.1km in Swansea
 
 ```yaml
+training: run
+relative_effort: 8
 kcal_est: pending
 protein_g_est: pending
 carbs_g_est: pending
@@ -487,6 +489,8 @@ complete: pending
 | Mid-morning | Strawberry high-protein yoghurt and seeded berry granola pot (22g protein `[data: label]`; kcal not visible, estimated) | 300 | 22 | 30 | `[data]` + `[inferred]` |
 | Lunch | Buffet: chicken and bacon sandwiches, cheese and Marmite sandwiches, a few duck spring rolls; "a good amount" `[stated]`. Taken as ~1 round of each sandwich + 3 spring rolls | 1,050 | 50 | 100 | `[stated]`, estimate `[inferred]` |
 | **So far** | | **~1,690** | **~102** | **~156** | |
+
+Run: 5.1km, Strava 339 kcal `[data]`. Burn today ~2,600 `[inferred]`.
 
 Hotel buffet breakfasts: usually eggs, toast, tomatoes and mushrooms, and no meat `[stated,
 2026-11-02]`. Logged that way unless he says otherwise.
