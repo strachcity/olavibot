@@ -458,5 +458,29 @@ complete: partial
 ```
 
 Vomiting most of the day `[stated, 2026-11-01]`. Ate half a garlic bread in the evening
-`[stated]`. Intake not estimated: what stayed down is unknown, and the number would mean little.
+`[stated]`, then dinner below. Earlier intake not estimated: what stayed down is unknown.
 Session B planned; not done as far as this diary knows.
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| Evening | Half a garlic bread (taken as ¼ baguette) | 165 | 4 | 22 | `[stated]`, estimate `[inferred]` |
+| Dinner | Tonkotsu chicken katsu curry; chicken wings side; large Lucozade Sport | 1,450 | 70 | 170 | `[stated, 2026-11-02]`, estimate `[inferred]` |
+| **Known** | | **~1,615** | **~74** | **~192** | |
+
+---
+
+## Mon 2 Nov: travelling, hotel for a few days
+
+```yaml
+kcal_est: pending
+protein_g_est: pending
+carbs_g_est: pending
+alcohol_units: pending
+energy: pending
+hunger: pending
+complete: pending
+```
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
