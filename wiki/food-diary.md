@@ -512,4 +512,5 @@ complete: pending
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
 | Breakfast | Hotel buffet: 2 slices sourdough, 2 fried eggs, a little scrambled egg, a few mushrooms, a tomato | 560 | 30 | 50 | `[stated]`, estimate `[inferred]` |
-| **So far** | | **~560** | **~30** | **~50** | |
+| Lunch | Chicken mayo baguette with red leaves; Popchips sour cream and onion, small bag `[stated: photo]` | 680 | 32 | 77 | estimate `[inferred]` |
+| **So far** | | **~1,240** | **~62** | **~127** | |
