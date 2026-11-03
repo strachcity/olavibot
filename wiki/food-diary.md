@@ -474,6 +474,31 @@ Session B planned; not done as far as this diary knows.
 ```yaml
 training: run
 relative_effort: 8
+kcal_est: 2890
+protein_g_est: 158
+carbs_g_est: 251
+alcohol_units: pending
+energy: pending
+hunger: pending
+complete: yes
+```
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
+| Mid-morning | Strawberry high-protein yoghurt and seeded berry granola pot (22g protein `[data: label]`; kcal not visible, estimated) | 300 | 22 | 30 | `[data]` + `[inferred]` |
+| Lunch | Buffet: chicken and bacon sandwiches, cheese and Marmite sandwiches, a few duck spring rolls; "a good amount" `[stated]`. Taken as ~1 round of each sandwich + 3 spring rolls | 1,050 | 50 | 100 | `[stated]`, estimate `[inferred]` |
+| Dinner | 3 meatballs (starter); lasagne; 2 slices garlic bread | 1,200 | 56 | 95 | `[stated]`, estimate `[inferred]` |
+| **Day** | | **~2,890** | **~158** | **~251** | |
+
+Run: 5.1km, Strava 339 kcal `[data]`. Burn today ~2,600 `[inferred]`, so ~290 over.
+
+Hotel buffet breakfasts: usually eggs, toast, tomatoes and mushrooms, and no meat `[stated,
+2026-11-02]`. Logged that way unless he says otherwise.
+
+## Tue 3 Nov: hotel
+
+```yaml
 kcal_est: pending
 protein_g_est: pending
 carbs_g_est: pending
@@ -485,12 +510,5 @@ complete: pending
 
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
-| Breakfast | Huel Black 1 scoop, 300ml semi-skimmed milk (assumed the usual) | 340 | 30 | 26 | `[stated]`, estimate `[inferred]` |
-| Mid-morning | Strawberry high-protein yoghurt and seeded berry granola pot (22g protein `[data: label]`; kcal not visible, estimated) | 300 | 22 | 30 | `[data]` + `[inferred]` |
-| Lunch | Buffet: chicken and bacon sandwiches, cheese and Marmite sandwiches, a few duck spring rolls; "a good amount" `[stated]`. Taken as ~1 round of each sandwich + 3 spring rolls | 1,050 | 50 | 100 | `[stated]`, estimate `[inferred]` |
-| **So far** | | **~1,690** | **~102** | **~156** | |
-
-Run: 5.1km, Strava 339 kcal `[data]`. Burn today ~2,600 `[inferred]`.
-
-Hotel buffet breakfasts: usually eggs, toast, tomatoes and mushrooms, and no meat `[stated,
-2026-11-02]`. Logged that way unless he says otherwise.
+| Breakfast | Hotel buffet: 2 slices sourdough, 2 fried eggs, a little scrambled egg, a few mushrooms, a tomato | 560 | 30 | 50 | `[stated]`, estimate `[inferred]` |
+| **So far** | | **~560** | **~30** | **~50** | |
