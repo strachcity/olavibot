@@ -500,17 +500,22 @@ Hotel buffet breakfasts: usually eggs, toast, tomatoes and mushrooms, and no mea
 ## Tue 3 Nov: hotel
 
 ```yaml
-kcal_est: pending
-protein_g_est: pending
-carbs_g_est: pending
-alcohol_units: pending
+training: none
+kcal_est: 3150
+protein_g_est: 160
+carbs_g_est: 238
+alcohol_units: 5.5
 energy: pending
 hunger: pending
-complete: pending
+complete: yes
 ```
 
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
 | Breakfast | Hotel buffet: 2 slices sourdough, 2 fried eggs, a little scrambled egg, a few mushrooms, a tomato | 560 | 30 | 50 | `[stated]`, estimate `[inferred]` |
 | Lunch | Chicken mayo baguette with red leaves; Popchips sour cream and onion, small bag `[stated: photo]` | 680 | 32 | 77 | estimate `[inferred]` |
-| **So far** | | **~1,240** | **~62** | **~127** | |
+| Dinner | Piri-piri ribeye flatbread (ribeye, piri-piri sauce and mayo, tomato, red onion, romaine, charred flatbread) `[data: menu]`; souvlaki chicken side with roasted garlic mayo `[data: menu]` | 1,450 | 95 | 73 | `[stated]` + `[data]`, portions `[inferred]` |
+| Dinner | 1 pint IPA (taken as ~5.5%: ~250 kcal, ~3.1 units); 1 pint Guinness (4.2%: ~210 kcal, ~2.4 units) | 460 | 3 | 38 | `[stated]`, estimate `[inferred]` |
+| **Day** | | **~3,150** | **~160** | **~238** | |
+
+No training on Strava `[data]`. Burned ~2,300 `[inferred]`, so ~850 over.
