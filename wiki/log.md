@@ -1637,3 +1637,20 @@ relative_effort: 8
 - Beyond plan: none.
 - Capacity: not reported.
 - Review: As easy as a run gets: HR 127 and relative effort 8. The Achilles and foot were clean the morning after the hangover run, so alcohol didn't show up this time. Tomorrow: easy 5km + 4–6 strides, the first strides since 21 Oct, relaxed and with full recovery.
+
+## [2026-11-04] run | Easy 5km (strides planned), Swansea — Foundations wk7
+```yaml
+planned: partial
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 33
+distance_km: 5.88
+avg_pace: 5:37
+run_type: easy
+relative_effort: 11
+```
+- Planned: Easy 5km + strides 4–6×20s, Swansea. Moved from Tuesday evening to Wednesday morning.
+- Done: 5.88km in 33:00 moving, 5:37/km, avg HR 135, max 142, Swansea seafront, 06:11, 9°C `[data, Strava activity 20852531657]`. No strides; picked up the pace towards the end because he needed the toilet `[stated, 2026-11-04]`.
+- Beyond plan: none.
+- Capacity: not reported.
+- Review: Still easy by heart rate (max 142) despite the faster finish. Strides not done: the second time in a row the planned dose of speed hasn't happened before the threshold test. No need to chase them. One relaxed set of 4 strides at the end of Friday's 4km would do the same job. Achilles score this morning not given.
