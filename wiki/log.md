@@ -1654,3 +1654,8 @@ relative_effort: 11
 - Beyond plan: none.
 - Capacity: not reported.
 - Review: Still easy by heart rate (max 142) despite the faster finish. Strides not done: the second time in a row the planned dose of speed hasn't happened before the threshold test. No need to chase them. One relaxed set of 4 strides at the end of Friday's 4km would do the same job. Achilles score this morning not given.
+
+## [2026-11-04] review | Correction to today's run review
+Today's review said this was "the second time in a row" planned strides hadn't happened. That's
+wrong. Weeks 5 and 6 had no strides planned, and the last strides were done, unplanned, on
+21 Oct. Today is the first planned strides session missed since they came back.
