@@ -519,3 +519,25 @@ complete: yes
 | **Day** | | **~3,150** | **~160** | **~238** | |
 
 No training on Strava `[data]`. Burned ~2,300 `[inferred]`, so ~850 over.
+
+## Wed 4 Nov: hotel; easy 5.9km at 06:11; dinner out
+
+```yaml
+training: run
+relative_effort: 11
+kcal_est: pending
+protein_g_est: pending
+carbs_g_est: pending
+alcohol_units: pending
+energy: pending
+hunger: pending
+complete: pending
+```
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| After the run | Greek yoghurt with granola | 350 | 15 | 35 | `[stated]`, estimate `[inferred]` |
+| Breakfast | Hotel buffet: 1 slice sourdough, 1 fried egg, a large portion of scrambled egg, mushrooms, grilled tomato `[stated: photo]` | 590 | 30 | 25 | estimate `[inferred]` |
+| **So far** | | **~940** | **~45** | **~60** | |
+
+Run: 5.9km, Strava 405 kcal `[data]`. Burn today ~2,650 `[inferred]`.
