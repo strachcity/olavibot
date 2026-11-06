@@ -43,6 +43,10 @@ Run these checks. If one fails, change the session and say why in a line.
   block mid-block, and don't repeat the exact same session twice in a row if the block
   allows alternatives.
 - **Balance:** Tier 1 every week; Tier 2 on its fortnightly rotation; Tier 3 in the warm-up.
+- **Order and length:** nothing that matters goes last. Whatever comes last should cost little
+  if it's dropped on a tired night. Aim for ≤75 min. Session A runs: anchor → Bulgarian
+  split squat + DB shoulder press → banded march + trunk → pull-ups on their own, after the
+  shoulder warm-up → cool-down `[stated, 2026-11-06]`.
 
 ## 4. Output
 
