@@ -1624,7 +1624,7 @@ Written under week 6 in `blocks/2026-09-foundations.md`. In short:
 ## [2026-11-02] run | Easy 5km, Swansea — Foundations wk7
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 32
 distance_km: 5.10
@@ -1641,7 +1641,7 @@ relative_effort: 8
 ## [2026-11-04] run | Easy 5km (strides planned), Swansea — Foundations wk7
 ```yaml
 planned: partial
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 33
 distance_km: 5.88
@@ -1659,3 +1659,21 @@ relative_effort: 11
 Today's review said this was "the second time in a row" planned strides hadn't happened. That's
 wrong. Weeks 5 and 6 had no strides planned, and the last strides were done, unplanned, on
 21 Oct. Today is the first planned strides session missed since they came back.
+
+## [2026-11-05] gym | Session A — Foundations wk7 (full gym)
+```yaml
+planned: partial
+achilles_next_am: 0
+beyond_plan: none
+duration_min: 96
+gym: full
+session: A
+reactive_level: 2
+relative_effort: 18
+```
+- Planned (claude.ai version, the one followed): Warm-up (mobility, tibialis raises 1×15, single-leg balance 3×20s), Level 2 pogos 2×10 (first time this block, gated on pain-free walking and Achilles ≤1), shoulder warm-up before hanging. Back squat ramp bar×10 → 50×5 → 70×3 → 80×1–2, then 3×5 @90kg RPE7 (target = ceiling). Superset: Bulgarian split squat 3×8/leg @17.5kg + side plank 3×30s/side. Superset: banded march 3×30s/leg + pull-ups 5×3. Seated DB shoulder press 3×10 @17.5kg. Cool-down. The block's week 7 plan had no pogos (parked for the foot since week 4); claude.ai brought them back on the day, gated.
+- Done: Warm-up, shoulder warm-up, Bulgarian split squat 3×8/leg @17.5kg, side plank 3×30s/side, banded march 3×30s/leg, pogos 2×10 and cool-down all as planned `[stated, 2026-11-06]`; pogos done after the squats, not in the warm-up, so shoes could go back on, foot fine `[stated]`. Back squat ramp bar → 60×5 (20kg plates, less faff than 15s) → working 3×5 @90kg, "breezy and comfortable" `[stated]`. Pull-ups 4×3. Seated shoulder press dropped — "I just wanted to go home" `[stated]`. Strava 95:44, relative effort 18 `[data, Strava activity 20875196715]`.
+- Beyond plan: none.
+- Capacity: back squat 90kg × 3×5, felt well under RPE7 ("breezy"); pull-ups 4×3, one rep under max every set.
+- Context: "Achilles no longer hurts ever, foot also fine" `[stated, 2026-11-06]`.
+- Review: The first pogos of the block, a step up the reactive ladder, with no foot or Achilles reaction the day after. A breezy 90kg squat held at 90kg is what targets equal to ceilings is for: the 20 Oct 95kg stays the exception. Pull-ups were done the right way (sets of 3, one short of max), one set short of five. The overhead press has now been dropped in two of the last three Session As (20 Oct, 5 Nov), at the end of a long session — see the model change. Relative effort 18 is the highest for any gym session this block. 96 minutes is the second longest, after Session B on 4 Oct (101).
