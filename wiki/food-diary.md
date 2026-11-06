@@ -525,6 +525,52 @@ No training on Strava `[data]`. Burned ~2,300 `[inferred]`, so ~850 over.
 ```yaml
 training: run
 relative_effort: 11
+kcal_est: 2870
+protein_g_est: 112
+carbs_g_est: 267
+alcohol_units: pending
+energy: pending
+hunger: pending
+complete: yes
+```
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| After the run | Greek yoghurt with granola | 350 | 15 | 35 | `[stated]`, estimate `[inferred]` |
+| Breakfast | Hotel buffet: 1 slice sourdough, 1 fried egg, a large portion of scrambled egg, mushrooms, grilled tomato `[stated: photo]` | 590 | 30 | 25 | estimate `[inferred]` |
+| Lunch | Chicken mayo baguette and Popchips, as Tue `[stated, 2026-11-06]` | 680 | 32 | 77 | `[stated]`, estimate `[inferred]` |
+| Dinner | Mushroom pasta (restaurant); half a fried burrata sandwich. Drinks not reported | 1,250 | 35 | 130 | `[stated]`, estimate `[inferred]` |
+| **Day** | | **~2,870** | **~112** | **~267** | |
+
+Run: 5.9km, Strava 405 kcal `[data]`. Burn today ~2,650 `[inferred]`, so ~220 over.
+
+## Thu 5 Nov: home; gym in the evening
+
+```yaml
+training: gym
+relative_effort: 18
+kcal_est: 2350
+protein_g_est: 158
+carbs_g_est: 181
+alcohol_units: pending
+energy: pending
+hunger: pending
+complete: yes
+```
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| Breakfast | Half the usual Huel, out of milk (taken as half a scoop with water) | 100 | 10 | 6 | `[stated]`, estimate `[inferred]` |
+| Lunch | Meal deal: chicken and bacon wrap, Walkers Baked crisps, energy drink | 600 | 26 | 60 | `[stated]`, estimate `[inferred]` |
+| Before the gym | Toasted teacake (taken as buttered) | 300 | 7 | 50 | `[stated]`, estimate `[inferred]` |
+| Dinner | 2 chicken and avocado sandwiches (2 breasts, 1 avocado, mayo; no cheese reported) | 1,350 | 115 | 65 | `[stated]`, estimate `[inferred]` |
+| **Day** | | **~2,350** | **~158** | **~181** | |
+
+Gym: Strava 561 kcal, 96 min `[data]`. Burned ~2,800 `[inferred]`, so ~450 under.
+
+## Fri 6 Nov
+
+```yaml
 kcal_est: pending
 protein_g_est: pending
 carbs_g_est: pending
@@ -536,8 +582,4 @@ complete: pending
 
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
-| After the run | Greek yoghurt with granola | 350 | 15 | 35 | `[stated]`, estimate `[inferred]` |
-| Breakfast | Hotel buffet: 1 slice sourdough, 1 fried egg, a large portion of scrambled egg, mushrooms, grilled tomato `[stated: photo]` | 590 | 30 | 25 | estimate `[inferred]` |
-| **So far** | | **~940** | **~45** | **~60** | |
-
-Run: 5.9km, Strava 405 kcal `[data]`. Burn today ~2,650 `[inferred]`.
+| Breakfast | None, missed `[stated]` | 0 | 0 | 0 | `[stated]` |
