@@ -66,17 +66,22 @@ Ceiling: no 5th run, no second quality session, strides stay strides not a fartl
 Both sessions at the full gym this block — front squat and trap-bar both assumed to need a
 rack/bar the flat gym doesn't have. Flag if that's wrong; sessions would split across gyms.
 
-**Session A**
+**Session A** (order changed 6 Nov `[stated, 2026-11-06]`; target ≤75 min)
 1. Anchor — Back squat (odd weeks) / Front squat (even weeks), 3–5×3–6, RPE-capped
-2. Bulgarian split squat — single-leg, doubles as hip-flexion strength
-3. Trunk, anti-movement, rotating — superset with #2. One per session: suitcase carry
+2. Bulgarian split squat — single-leg, doubles as hip-flexion strength. Superset with #3
+3. DB shoulder press or push-up — upper push. Moved here from last place: it was dropped at
+   the end of a long session in two of the three Session As before the change (20 Oct, 5 Nov)
+4. Banded march — hip-flexion endurance. Superset with #5
+5. Trunk, anti-movement, rotating. One per session: suitcase carry
    (default when the gym is busy or at the flat gym; one DB, also trains grip), dead bug,
    side plank, or Pallof press (only if a cable is free; Jack finds it tedious, so not the
    default). The slot's job is resisting being moved; woodchops and crunches don't fill it
    `[stated, 2026-10-06]`
-4. Banded march — hip-flexion endurance, superset with #5
-5. Pull-up / lat pulldown — upper pull
-6. DB shoulder press or push-up — upper push *(new addition — upper body was too thin)*
+6. Pull-up / lat pulldown — upper pull, on its own, after a shoulder warm-up (band
+   pull-aparts, scapular pulls, one light pulldown set) `[stated, 2026-10-28]`
+
+Nothing that matters goes last. If the last thing gets dropped on a tired night, it should
+cost little.
 
 **Session B**
 1. Reactive — fresh, before the anchor: Level 1 isometric seated calf holds → Level 2 if two clean sessions

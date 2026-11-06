@@ -1677,3 +1677,17 @@ relative_effort: 18
 - Capacity: back squat 90kg × 3×5, felt well under RPE7 ("breezy"); pull-ups 4×3, one rep under max every set.
 - Context: "Achilles no longer hurts ever, foot also fine" `[stated, 2026-11-06]`.
 - Review: The first pogos of the block, a step up the reactive ladder, with no foot or Achilles reaction the day after. A breezy 90kg squat held at 90kg is what targets equal to ceilings is for: the 20 Oct 95kg stays the exception. Pull-ups were done the right way (sets of 3, one short of max), one set short of five. The overhead press has now been dropped in two of the last three Session As (20 Oct, 5 Nov), at the end of a long session — see the model change. Relative effort 18 is the highest for any gym session this block. 96 minutes is the second longest, after Session B on 4 Oct (101).
+
+## [2026-11-06] model | Session A order: press into superset 1, nothing that matters goes last
+Jack's call `[stated, 2026-11-06]`. The seated DB shoulder press was dropped at the end of a
+long session in two of the last three Session As (20 Oct; 5 Nov: "I just wanted to go
+home"). New order:
+1. Anchor.
+2. Bulgarian split squat + DB shoulder press.
+3. Banded march + trunk.
+4. Pull-ups on their own, after the shoulder warm-up.
+5. Cool-down.
+
+Target ≤75 min, within the model's 45–75 min (§6). Rule: nothing that matters goes last.
+Updated the Session A template in `blocks/2026-09-foundations.md` and the `programme-session`
+skill, and rebuilt its zip.
