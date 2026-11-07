@@ -106,6 +106,12 @@ one — don't quietly rewrite history.
 Critical and useful, not cheerleading.
 - Against the plan: did he stay under the ceiling? If not, name it plainly.
 - Anything the data shows he didn't say (pace drifted into the grey zone, HR high for easy).
+- **Ask before explaining it** `[stated, 2026-11-07]`. When HR, pace or distance looks off,
+  check the splits first (Strava streams: HR against altitude and pace), then ask Jack what
+  happened before writing a cause or a verdict into the review. Hills, stairs, heat, stops and
+  his own routes have all explained "anomalies" Claude got wrong: a 4km plan he has no route
+  for, and a hilly, hot long run called steady. Until he answers, log the numbers and leave
+  out the interpretation.
 - One thing to carry into the next session.
 
 ### Observations
