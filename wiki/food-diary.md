@@ -608,6 +608,7 @@ complete: pending
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
 | After the run | Paulie's veg bagel, as 31 Oct | 520 | 15 | 60 | `[stated]`, estimate `[inferred]` |
-| **So far** | | **~520** | **~15** | **~60** | |
+| Lunch | 2 tuna mayo sandwiches with onion and pepper | 900 | 50 | 80 | `[stated]`, estimate `[inferred]` |
+| **So far** | | **~1,420** | **~65** | **~140** | |
 
 Run: 12.2km, Strava 844 kcal `[data]`. Burn today ~3,100 `[inferred]`.
