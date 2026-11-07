@@ -1739,3 +1739,16 @@ relative_effort: 66
   through the slow, stop-start South Bank section in the middle, so the overall average (146)
   and relative effort (66) were high. Possibly crowds and stops. Not a fitness claim either
   way.
+
+## [2026-11-07] review | 7 Nov long run: HR from hills, stairs and heat
+Jack: HR was high because of hills and because he got very hot `[stated, 2026-11-07]`. The
+splits agree `[data, Strava streams]`:
+- 0–4.5km: HR 133–145 at ~5:15/km, flat.
+- 5–8km: HR 150–162 through the river section, with bridges, steps and climbs back up from
+  the Thames (altitude down to ~6m and back up), stop-start.
+- 8–11km: HR 141–148.
+- Last ~1km: HR 151–163, the quick finish.
+
+So it was an easy run made harder by terrain and heat, with a quick end. It wasn't a steady
+run. Claude explained the HR without asking first. The `review-training` skill now says to
+check the splits and ask Jack before writing a cause into a review `[stated, 2026-11-07]`.
