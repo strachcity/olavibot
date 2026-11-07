@@ -139,3 +139,6 @@ should come from a working set, not a guess.
 - No access to a physio, and won't book one `[stated, 2026-10-24]`. Plans can't lean on a
   diagnosis: pain is managed by the Achilles rules and by easing the load that provokes it
 - Runs to and from the gym only at weekends `[stated, 2026-10-24]`
+- **Easy-run routes are 5km or 6km. There is no 4km route** `[stated, 2026-10-22, repeated
+  2026-11-07]`. Plan standalone easy runs as 5 or 6km; shorter running only as legs to and from
+  the gym

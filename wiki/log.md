@@ -1725,3 +1725,17 @@ relative_effort: 66
 - Beyond plan: run as a steady run, not an easy one.
 - Capacity: not reported.
 - Review: The hardest run of the block by relative effort: 66, more than the 5k test (57). The average HR of 146 was over the 145 cap, with stretches at near-threshold pace. It was the long run for distance, but the effort was a steady-to-tempo session, four to five days before the threshold test. The foot and Achilles mornings will show whether it cost anything. For the test: keep Monday to Wednesday genuinely easy, or the test measures this run's fatigue rather than fitness.
+
+## [2026-11-07] review | Corrections to the 6 and 7 Nov run entries
+- **6 Nov, easy 6km:** the "2km extra" against a planned 4km was a planning error, not
+  over-running. Jack's easy routes are 5 or 6km and there is no 4km route `[stated, 2026-10-22,
+  repeated 2026-11-07]`. Claude kept planning 4km anyway. The run was as intended; read its
+  `beyond_plan` as none. Now recorded in `athlete.md` → Constraints, so plans use 5 or 6km.
+- **7 Nov, long 12km:** Jack says it was "easy with a quick end" `[stated, 2026-11-07]`. The
+  data agrees that the fast stretches (Broadway Market, Goldsmith's Row, ~4:25–4:40/km, HR
+  151–159) were at the end of the run. The original review called the whole run "steady to
+  tempo", which overstated it. Read its `beyond_plan` as "quick finish": the plan said no
+  faster finish. One thing the data shows that the account doesn't: HR averaged 150–153
+  through the slow, stop-start South Bank section in the middle, so the overall average (146)
+  and relative effort (66) were high. Possibly crowds and stops. Not a fitness claim either
+  way.
