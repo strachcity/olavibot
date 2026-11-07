@@ -1691,3 +1691,37 @@ home"). New order:
 Target ≤75 min, within the model's 45–75 min (§6). Rule: nothing that matters goes last.
 Updated the Session A template in `blocks/2026-09-foundations.md` and the `programme-session`
 skill, and rebuilt its zip.
+
+## [2026-11-06] run | Easy 6km — Foundations wk7
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: 2km extra
+duration_min: 34
+distance_km: 6.06
+avg_pace: 5:31
+run_type: easy
+relative_effort: 21
+```
+- Planned: Easy 4km, with 4 optional relaxed strides at the end.
+- Done: 6.06km in 33:28 moving, 5:31/km, avg HR 141, max 152, Victoria Park `[data, Strava activity 20886209216]`. No clear strides in the data `[data]`.
+- Beyond plan: 2km over the planned 4km. That's outside the block's ±1km tolerance, though 6km is Jack's usual route `[stated, 2026-10-22]`.
+- Capacity: not reported.
+- Review: Easy by HR, but at the quick end of the band (5:31/km), the day before the long run. The plan said 4km so that Saturday's 12km started fresh. If 6km is the real distance on a Friday, it should go in the plan as 6km.
+
+## [2026-11-07] run | Long 12km — Foundations wk7
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: steady not easy
+duration_min: 69
+distance_km: 12.19
+avg_pace: 5:30
+run_type: long
+relative_effort: 66
+```
+- Planned: Long 12km, easy (5:30–6:00/km or slower). Ease off if HR climbs past ~145 at easy pace. No faster finish.
+- Done: 12.19km in 67:03 moving (68:51 elapsed, with stops), 5:30/km, avg HR 146, max 167, central London: Hackney, the City, the South Bank, Tower Bridge `[data, Strava activity 20892198686]`. Sections through Broadway Market and Goldsmith's Row ran at ~4:25–4:40/km with HR 151–159 `[data, segments]`. Fastest 1km 4:44, fastest mile 7:59 `[data]`.
+- Beyond plan: run as a steady run, not an easy one.
+- Capacity: not reported.
+- Review: The hardest run of the block by relative effort: 66, more than the 5k test (57). The average HR of 146 was over the 145 cap, with stretches at near-threshold pace. It was the long run for distance, but the effort was a steady-to-tempo session, four to five days before the threshold test. The foot and Achilles mornings will show whether it cost anything. For the test: keep Monday to Wednesday genuinely easy, or the test measures this run's fatigue rather than fitness.
