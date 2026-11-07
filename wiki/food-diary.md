@@ -568,9 +568,34 @@ complete: yes
 
 Gym: Strava 561 kcal, 96 min `[data]`. Burned ~2,800 `[inferred]`, so ~450 under.
 
-## Fri 6 Nov
+## Fri 6 Nov: easy 6.1km
 
 ```yaml
+training: run
+relative_effort: 21
+kcal_est: 1750
+protein_g_est: 125
+carbs_g_est: 105
+alcohol_units: pending
+energy: pending
+hunger: pending
+complete: yes
+```
+
+| Time | What | kcal | P (g) | C (g) | Source |
+|---|---|---|---|---|---|
+| Breakfast | None, missed `[stated]` | 0 | 0 | 0 | `[stated]` |
+| Lunch | Avocado and cucumber sandwich | 400 | 10 | 40 | `[stated]`, estimate `[inferred]` |
+| Dinner | 2 chicken and avocado sandwiches (2 breasts, 1 avocado, mayo; no cheese reported) | 1,350 | 115 | 65 | `[stated]`, estimate `[inferred]` |
+| **Day** | | **~1,750** | **~125** | **~105** | |
+
+Run: 6.1km, Strava 408 kcal `[data]`. Burned ~2,650 `[inferred]`, so ~900 under.
+
+## Sat 7 Nov: long 12.2km
+
+```yaml
+training: run
+relative_effort: 66
 kcal_est: pending
 protein_g_est: pending
 carbs_g_est: pending
@@ -582,4 +607,7 @@ complete: pending
 
 | Time | What | kcal | P (g) | C (g) | Source |
 |---|---|---|---|---|---|
-| Breakfast | None, missed `[stated]` | 0 | 0 | 0 | `[stated]` |
+| After the run | Paulie's veg bagel, as 31 Oct | 520 | 15 | 60 | `[stated]`, estimate `[inferred]` |
+| **So far** | | **~520** | **~15** | **~60** | |
+
+Run: 12.2km, Strava 844 kcal `[data]`. Burn today ~3,100 `[inferred]`.
