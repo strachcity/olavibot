@@ -1752,3 +1752,48 @@ splits agree `[data, Strava streams]`:
 So it was an easy run made harder by terrain and heat, with a quick end. It wasn't a steady
 run. Claude explained the HR without asking first. The `review-training` skill now says to
 check the splits and ask Jack before writing a cause into a review `[stated, 2026-11-07]`.
+
+## [2026-11-08] run | Easy — to gym (Session B)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 14
+distance_km: 2.50
+avg_pace: 5:36
+run_type: easy
+relative_effort: 14
+```
+- Planned: First half of the easy 2×2.5km to and from Session B.
+- Done: 2.50km, 14:00 moving, 5:36/km `[data, Strava activity 20911338968]`.
+
+## [2026-11-08] gym | Session B — Foundations wk7 (full gym)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 70
+gym: full
+session: B
+reactive_level: 2
+relative_effort: 10
+```
+- Planned: Warm-up. Seated calf raise test, which was taken out on the day because of DOMS from the week's load `[stated, 2026-11-08]`. Reactive L2 seated calf raise 3×12 @35kg, 3s up / 3s down. Pogos 2×10, only if landing felt fine. Deadlift ramp bar×10 → 60×5 → 80×3 → 90×1, then 3×5 @100kg on the thin bar or with straps (target = ceiling). Superset: seated DB shoulder press 3×10 @17.5kg + single-arm DB row 3×8/side @30kg. Superset: Copenhagen plank long lever 3×20s/side + bench press 3×8 @50kg. Cool-down.
+- Done: Everything as planned except the pogos, which were skipped `[stated, 2026-11-08]`. Deadlift 3×5 @100kg. Strava 70:14, relative effort 10 `[data, Strava activity 20912856337]`.
+- Beyond plan: none.
+- Capacity: not reported.
+- Review: The first Session A or B under the new ≤75 min target, and it came in at 70. The shoulder press, missed on Thursday, got done here, so upper push is covered for the week. Deadlift held at 100kg, on plan. Skipping the calf test was right: a max on sore calves would have set a low baseline. It moves to week 8's Session B.
+
+## [2026-11-08] run | Easy — home (Session B)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 14
+distance_km: 2.51
+avg_pace: 5:44
+run_type: easy
+relative_effort: 6
+```
+- Planned: Second half of the easy 2×2.5km to and from Session B.
+- Done: 2.51km, 14:22 moving, 5:44/km `[data, Strava activity 20912856343]`.
