@@ -577,6 +577,45 @@ Sunday's Session B `[stated, 2026-10-31]`.
 - **Recency.** "Hold 30km" comes from today's conversation, but it matches the block's
   direction and week 6's actual total.
 
+*Week 7 summary (2–8 Nov)*
+
+- **Progress.**
+  - 6 of 6 planned sessions done. Two were partial: Session A dropped the shoulder press, and
+    Tuesday's strides weren't done.
+  - Running 34.2km over 6 runs (5.1 + 5.9 + 6.1 + 12.2 + 2.5 + 2.5), against ~31km planned
+    `[data, Strava]`. Most of the gap is my error: Friday was planned as 4km, a distance Jack
+    has no route for.
+  - Gym 2/2. Achilles 0 every reported morning, "no longer hurts ever"; foot fine
+    `[stated, 2026-11-06]`.
+  - First pogos of the block (5 Nov), with no reaction.
+  - Reactive Level 2.
+  - Seated calf test postponed to week 8: DOMS on the day `[stated, 2026-11-08]`.
+- **Went well.**
+  - Pain-free all week at the highest running total of the block.
+  - Squat at 90kg "breezy" and deadlift at 100kg: both on target, neither over.
+  - Pull-ups done the right way, one short of max.
+  - Session B came in at 70 min under the new ≤75 min order. The overhead press, dropped in
+    Session A, was done in B.
+- **Went badly.**
+  - Strides missed again; there was a reason (needed the toilet), but still no speed work
+    before the threshold test.
+  - Session A ran 96 min, and the press was dropped for the second time in three Session As.
+    That's why the order changed.
+  - Claude got two reviews wrong this week by explaining before asking: the 4km route, and
+    the hilly, hot long run. The skill now says ask first.
+  - DOMS by Sunday: pogos Thursday, then hills and stairs Saturday.
+- **Watch.**
+  - Calf soreness ahead of the threshold test and the calf test. Both need fresh legs.
+  - The block total is creeping up: 30 → 34km.
+- **Next.**
+  - Week 8 is the test week:
+    - threshold 3×10min
+    - seated calf raise test, done first in Session B
+    - knee-to-wall retest with a tape measure
+    - hanging knee raise retest after a shoulder warm-up
+  - Easy runs as 5 or 6km routes. Hold ~30km and add nothing on easy days.
+  - Then the block review.
+
 ## What would change the plan
 - Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,
   freeze reactive level, keep calf work.
