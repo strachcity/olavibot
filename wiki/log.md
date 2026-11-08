@@ -1797,3 +1797,12 @@ relative_effort: 6
 ```
 - Planned: Second half of the easy 2×2.5km to and from Session B.
 - Done: 2.51km, 14:22 moving, 5:44/km `[data, Strava activity 20912856343]`.
+
+## [2026-11-08] review | Week 7 summary
+Written under week 7 in `blocks/2026-09-foundations.md`. In short:
+- 6/6 sessions, two partial. 34.2km against ~31 planned, mostly a planning error (a 4km run
+  with no route).
+- Achilles 0 all week; first pogos, no reaction.
+- The calf test moves to week 8 (DOMS).
+- Strides missed.
+- Week 8 is the test week, then the block review.
