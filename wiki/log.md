@@ -1838,3 +1838,20 @@ relative_effort: 30
 - Done: 5.80km in 30:58 moving, 5:20/km, avg HR 144, max 155, Wapping and the Tower: canal, basin, river path `[data, Strava activity 20929988589]`. Several stretches ran at ~4:30–4:45/km `[data, segments]`.
 - Beyond plan: none recorded yet; the run type waits on Jack.
 - Review: Numbers only for now. It was quicker than the easy band (5:30–6:00/km), with relative effort 30. What the run was (a run to work, a planned steady run, a race against time) is waiting on Jack's answer, per the ask-first rule.
+
+## [2026-11-11] review | 10 Nov run: team run, comfortable
+The 10 Nov run (5:20/km, HR 144) was an ad hoc run with Jack's work team, at a comfortable
+pace, "really nice" `[stated, 2026-11-11]`. It was social and comfortable, not a session. They
+may do it more often; nothing is committed yet `[stated]`. If it becomes regular, it goes into
+the plan as one of the week's easy runs.
+
+## [2026-11-11] block | Week 8 schedule, Foundations (test week)
+Agreed `[stated, 2026-11-11]`:
+- Mon and Tue easy 6km (both done).
+- Wed rest.
+- Thu threshold test 3×10min.
+- Fri Session A with the knee-to-wall and hanging knee raise retests.
+- Sat long 10km (8km to hold nearer 30km).
+- Sun Session B with the seated calf raise test first, with 2×2.5km to and from.
+
+~37km. The block review follows.
