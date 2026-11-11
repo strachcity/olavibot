@@ -1806,3 +1806,35 @@ Written under week 7 in `blocks/2026-09-foundations.md`. In short:
 - The calf test moves to week 8 (DOMS).
 - Strides missed.
 - Week 8 is the test week, then the block review.
+
+## [2026-11-09] run | Easy 6km — Foundations wk8
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 37
+distance_km: 6.15
+avg_pace: 5:55
+run_type: easy
+relative_effort: 18
+```
+- Planned: Week 8, the test week, was proposed on 8 Nov but not yet agreed, and Session A Monday was in the proposal. Jack ran instead and moved Session A to Friday `[stated, 2026-11-11]`.
+- Done: 6.15km in 36:20 moving, 5:55/km, avg HR 138, max 153, Victoria Park `[data, Strava activity 20925617128]`.
+- Beyond plan: none.
+- Review: Easy, as easy should be.
+
+## [2026-11-10] run | 6km, morning — Foundations wk8
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 32
+distance_km: 5.80
+avg_pace: 5:20
+run_type: easy
+relative_effort: 30
+```
+- Planned: Optional easy 5km Tuesday morning (proposal).
+- Done: 5.80km in 30:58 moving, 5:20/km, avg HR 144, max 155, Wapping and the Tower: canal, basin, river path `[data, Strava activity 20929988589]`. Several stretches ran at ~4:30–4:45/km `[data, segments]`.
+- Beyond plan: none recorded yet; the run type waits on Jack.
+- Review: Numbers only for now. It was quicker than the easy band (5:30–6:00/km), with relative effort 30. What the run was (a run to work, a planned steady run, a race against time) is waiting on Jack's answer, per the ask-first rule.
