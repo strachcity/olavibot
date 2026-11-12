@@ -1855,3 +1855,19 @@ Agreed `[stated, 2026-11-11]`:
 - Sun Session B with the seated calf raise test first, with 2×2.5km to and from.
 
 ~37km. The block review follows.
+
+## [2026-11-12] run | Easy 6km with the work team — Foundations wk8
+```yaml
+planned: no
+achilles_next_am: pending
+beyond_plan: extra run with work team
+duration_min: 33
+distance_km: 5.96
+avg_pace: 5:29
+run_type: easy
+relative_effort: 23
+```
+- Planned: Threshold test in the evening. A morning run wasn't in the plan.
+- Done: Ran with the work team again in the morning `[stated, 2026-11-12]`. 5.96km in 32:37 moving, 5:29/km, avg HR 142, max 153, Wapping and the canal `[data, Strava activity 20957191228]`.
+- Beyond plan: an extra team run. The threshold test moves to Saturday, in place of the long run `[stated, 2026-11-12]`.
+- Review: Comfortable by HR (max 153) and the second team run this week. Taking the threshold test off a day that already had a run is the right call.
