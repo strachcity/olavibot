@@ -56,8 +56,8 @@ are targets, ±1km either way — the ceiling is what matters, not hitting the n
 | 7 | Easy 4 | 5km | 5:30–6:00/km | 2×2.5km to and from Session B |
 | 8 | Easy 1 | 6km | 5:30–6:00/km | Monday (run in place of Session A) |
 | 8 | Easy 2 | 6km | comfortable | Tuesday, ad hoc run with the work team |
-| 8 | Test: threshold | 9km | 3×10min just below half-marathon effort, jog 2min between | Thursday; 2km warm-up, 1.5km cool-down |
-| 8 | Long | 10km | 5:30–6:00/km or slower | Saturday; 8km if holding nearer 30km |
+| 8 | Test: threshold | ~10km | 3×10min just below half-marathon effort, jog 2min between | Saturday, in place of the long run (changed 12 Nov); 2km warm-up, cool-down to ~10km |
+| 8 | Easy 3 | 6km | comfortable | Thursday morning, with the work team (changed 12 Nov) |
 | 8 | Easy 3 | 5km | 5:30–6:00/km | 2×2.5km to and from Session B |
 
 The difference between runs: two or three "easy" runs a week hold frequency and are
@@ -630,9 +630,9 @@ Friday `[stated, 2026-11-11]`. Agreed on 11 Nov, after Monday and Tuesday had be
 | Mon 9 | Easy — 6km (in place of Session A, which moved to Friday) |
 | Tue 10 | Easy — 6km with the work team, comfortable, ad hoc |
 | Wed 11 | Rest |
-| Thu 12 | Threshold test — 3×10min "comfortably hard" (RPE 6–7), 2min jogs, 2km warm-up, 1.5km cool-down, ~9km. First rep should feel too easy |
+| Thu 12 | Easy — 6km with the work team, morning (changed 12 Nov; threshold test moved to Saturday) |
 | Fri 13 | Gym — Session A (full gym): front squat 65kg (even week). Knee-to-wall (tape measure) and hanging knee raise (after a shoulder warm-up) retests in the warm-up |
-| Sat 14 | Long — 10km, easy (8km to hold nearer 30km) |
+| Sat 14 | Threshold test — inside a ~10km run: 2km warm-up, 3×10min "comfortably hard" (RPE 6–7), 2min jogs, easy cool-down to ~10km (changed 12 Nov; replaces the long run) |
 | Sun 15 | Gym — Session B (full gym): seated calf raise test first, then trap bar 95kg, Nordic curl (even week) + Easy — 2×2.5km to and from |
 
 ~37km; ~35km with Saturday at 8km. Then the block review.
@@ -653,6 +653,12 @@ Friday `[stated, 2026-11-11]`. Agreed on 11 Nov, after Monday and Tuesday had be
   were run before the week was agreed. Saturday at 8km keeps it nearer.
 - **Friday, Saturday and Sunday stack again,** with the calf test on the third day.
 - **Threshold pace and HR are estimates.** The first test sets the real numbers.
+
+Changed 12 Nov: Jack ran with the work team on Thursday morning `[stated, 2026-11-12]`. The
+threshold test moves to Saturday and replaces the long run: a ~10km run with the test inside
+it. That's almost the same distance, so the week stays ~33km. Friday's Session A goes the day
+before the test, so the front squat stays at 65kg with nothing extra. The test protocol (2km
+warm-up, 3×10min, 2min jogs) is unchanged, and so is the calf test on Sunday.
 
 ## What would change the plan
 - Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,
