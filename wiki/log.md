@@ -1876,3 +1876,20 @@ relative_effort: 23
 Jack's call `[stated, 2026-11-12]`, after an unplanned team run on Thursday morning.
 Saturday's long run becomes ~10km with the threshold test inside it (same protocol). Thursday
 is the team run. Week 8 is ~33km.
+
+## [2026-11-13] gym | Session A — Foundations wk8 (full gym)
+```yaml
+planned: partial
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 63
+gym: full
+session: A
+reactive_level: 2
+relative_effort: 10
+```
+- Planned: Warm-up. Retests: knee-to-wall (tape measure) and hanging knee raise (after a shoulder warm-up). Front squat ramp, then 3×5 @65kg (target = ceiling). Superset: Bulgarian split squat 3×8/leg @17.5kg + seated DB shoulder press 3×10 @17.5kg. Superset: banded march 3×30s/leg + dead bug 3×8/side. Pull-ups 5×3. Cool-down. No calf work; the threshold test is tomorrow.
+- Done: Warm-up. Retests not done. Front squat 3×5 @65kg, Bulgarian split squat and shoulder press as planned. Banded march, each leg done back to back rather than supersetted. Then had to go home: dead bug, pull-ups and cool-down not done `[stated, 2026-11-13]`. Strava 62:54, relative effort 10 `[data, Strava activity 20975848530]`.
+- Beyond plan: none.
+- Capacity: front squat 65kg × 3×5, on target.
+- Review: The new Session A order did its job on its first test. The session was cut short, and what got dropped was the cheap end (trunk, pull-ups). The anchor, the split squats and the shoulder press, which had been dropped twice before, all got done. The knee-to-wall and hanging knee raise retests are still outstanding. Knee-to-wall takes two minutes at home with a tape measure; the hanging knee raise can go into Sunday's warm-up.
