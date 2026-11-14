@@ -1931,3 +1931,9 @@ conflict resolves as follows:
   a floor.
 - **Next retest, to make it comparable:** own watch, lap button at the start and end of each
   rep, same loop, a 2km warm-up, and run solo or note the partner.
+
+## [2026-11-14] review | Threshold test: recoveries were walked
+Jack walked the 2-min recoveries between reps instead of jogging `[stated, 2026-11-14]`.
+Walked recoveries make each rep a little easier than the protocol (jogged), so the baseline
+is slightly flattering. Noted in `tests.md`. The next retest either walks again, so it's
+comparable, or jogs and records the change as a new condition.
