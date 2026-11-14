@@ -36,7 +36,7 @@ version, so height is approximate.
 | Date | 28 Oct (part 1), 30 Oct (5k), 14 Nov (threshold); rest pending |
 | Bodyweight (kg) | — |
 | Easy pace @ fixed HR | — |
-| Threshold 3×10min — pace / HR | **~4:30 → 4:25 → 4:20/km** (GPS segments), HR ~153 → 160 → 166. Full sentences throughout `[stated]`, so at or below threshold. A floor, not a ceiling. Victoria Park, −1°C, with a partner, paced off his watch; the 4:40–4:50 he thought he ran was wrong `[stated, 2026-11-14]` |
+| Threshold 3×10min — pace / HR | **~4:30 → 4:25 → 4:20/km** (GPS segments), HR ~153 → 160 → 166. Full sentences throughout `[stated]`, so at or below threshold. A floor, not a ceiling. Victoria Park, −1°C, with a partner, paced off his watch; the 4:40–4:50 he thought he ran was wrong `[stated, 2026-11-14]`. **Recoveries were 2 min walking, not jogging** `[stated, 2026-11-14]`. That's slightly easier than the protocol, so keep it the same next time or note the difference |
 | 5k | **21:28** (4:18/km), 30 Oct, Victoria Park. Tired, sore throat, 1km warm-up, first mile 4:07/km then faded; stitch throughout `[data, Strava]` `[stated]`. PB 17:55 (Jan 2025) |
 | Squat e1RM / Deadlift e1RM | — |
 | Heel raise L / R (reps, height start → end, work) | **40 / 43** reps, box edge, start of Session A. No height or work data. Symmetry 93% on reps. Ended on calf cramp, no Achilles pain `[stated, 2026-10-28]` |
