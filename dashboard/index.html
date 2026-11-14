@@ -466,7 +466,7 @@ function parseBlock(file, text) {
   b.targets = [];
   section(text, "Running").split("\n").forEach(l => {
     const m = /^\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|/.exec(l);
-    if (m) b.targets.push({ week: +m[1], run: m[2], km: /km/.test(m[3]) ? parseFloat(m[3]) : null });
+    if (m) b.targets.push({ week: +m[1], run: m[2], km: /km/.test(m[3]) ? parseFloat(m[3].replace(/^[^\d]+/, "")) || null : null });   // tolerate "~10km"
   });
   // Gym sessions: **Session X** then a numbered list
   b.sessions = {};
