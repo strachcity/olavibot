@@ -1916,3 +1916,18 @@ relative_effort: 76
 - Result `[stated]`: 3×10min at ~4:40–4:50/km, conversational.
 - Result `[data, Strava segments]`: rep sections ~4:30 → ~4:25 → ~4:20/km, HR ~153 → ~160 → ~166 by the end of rep 3. Max 167.
 - **Conflict, flagged:** `[data]` contradicts `[stated]` on pace and on effort. Possible causes: the watch's live pace reading differently from the GPS track, segment boundaries spilling into the jogs, or a wrist HR reading high in the cold. To be asked, not picked. `tests.md` is filled once Jack has answered.
+
+## [2026-11-14] review | Threshold test reconciled
+Jack: the reps were paced off Luka's watch, so 4:40 was the assumption, "likely faster to be
+honest". Full sentences the whole time `[stated, 2026-11-14]`. The `[data]`/`[stated]`
+conflict resolves as follows:
+- **Pace:** the GPS segments stand, ~4:30 → 4:25 → 4:20/km `[data]`.
+- **Effort:** conversational in full sentences `[stated]`. HR 153 → 166 `[data]`. Full
+  sentences at that pace means it was at or below threshold. The HR may read high from a
+  wrist sensor at −1°C, or the talk test may be generous with company `[inferred]`.
+- **Read:** threshold is likely at or faster than ~4:25/km `[inferred]`. That's a good deal
+  quicker than the ~4:45–4:55 estimated from the 30 Oct 5k (21:28). The 5k, run tired, ill
+  and from a fast start, underestimated current fitness `[inferred]`. Filed in `tests.md` as
+  a floor.
+- **Next retest, to make it comparable:** own watch, lap button at the start and end of each
+  rep, same loop, a 2km warm-up, and run solo or note the partner.
