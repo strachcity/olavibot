@@ -1893,3 +1893,26 @@ relative_effort: 10
 - Beyond plan: none.
 - Capacity: front squat 65kg × 3×5, on target.
 - Review: The new Session A order did its job on its first test. The session was cut short, and what got dropped was the cheap end (trunk, pull-ups). The anchor, the split squats and the shoulder press, which had been dropped twice before, all got done. The knee-to-wall and hanging knee raise retests are still outstanding. Knee-to-wall takes two minutes at home with a tape measure; the hanging knee raise can go into Sunday's warm-up.
+
+## [2026-11-14] run | Threshold test 3×10min, with Luka — Foundations wk8
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 70
+distance_km: 13.63
+avg_pace: 5:09
+run_type: threshold
+relative_effort: 76
+```
+- Planned: Threshold test inside a ~10km run: 2km warm-up, 3×10min "comfortably hard" (RPE 6–7), 2min jogs, easy to ~10km. Flat loop.
+- Done: 3km warm-up, 3×10min with Luka, "all around 4:40–4:50", talking the whole time; coffee, then jogged home `[stated, 2026-11-14]`. Whole activity 13.63km in 70:17 moving (102:46 elapsed, with the café stop), avg HR 147, max 167, Victoria Park, −1°C `[data, Strava activity 20981399669]`. Rep section on Strava: segments on the second loop ran at ~4:16–4:30/km with HR 153–166, rising through the reps; fastest 1km 4:23, fastest mile 7:09 `[data, segments, best efforts]`.
+- Beyond plan: none. ~10.8km before the café plus ~2.8km jogging home.
+- Capacity: see the test entry.
+- Review: Numbers only, pending Jack. The stated pace (4:40–4:50, talking throughout) and the GPS segments (~4:20–4:30, HR into the 160s) don't match. Per the ask-first rule, not resolved yet.
+
+## [2026-11-14] test | Threshold 3×10min — baseline (Foundations wk8)
+- Conditions: Saturday morning, −1°C, Victoria Park loop (flat), with a partner (Luka), talking. 3km warm-up instead of 2km. Two team runs earlier in the week (10 and 12 Nov), Session A the day before (front squat 65kg).
+- Result `[stated]`: 3×10min at ~4:40–4:50/km, conversational.
+- Result `[data, Strava segments]`: rep sections ~4:30 → ~4:25 → ~4:20/km, HR ~153 → ~160 → ~166 by the end of rep 3. Max 167.
+- **Conflict, flagged:** `[data]` contradicts `[stated]` on pace and on effort. Possible causes: the watch's live pace reading differently from the GPS track, segment boundaries spilling into the jogs, or a wrist HR reading high in the cold. To be asked, not picked. `tests.md` is filled once Jack has answered.
