@@ -2008,3 +2008,21 @@ Written in `blocks/2026-09-foundations.md`. Status set to `reviewed`. In short:
   lifts tracked below legs, retests, enjoyment scored.
 
 Next: plan the next block with Jack (`plan-training`).
+
+## [2026-11-15] review | Block review corrected after Jack's read
+Jack's points `[stated, 2026-11-15]`, applied to the Foundations review:
+- Genuinely missed: 2 sessions (7 Oct run, 1 Nov Session B), not "3 of 47".
+- Longest run 13.6km (14 Nov).
+- Achilles: around 2/10 in the mornings at first, then settled and painless.
+- No foot pain since 21 Oct.
+- The 5k was bad pacing plus the first fast run in months.
+- Added: why loads didn't go heavier.
+
+Still under discussion (no model change yet):
+- dropping the enjoyment score
+- a trimmed test battery built on lifts
+- weekly threshold with rotating types
+- 30–40km/week
+- a strength test at block end
+
+A research pass on strength testing, threshold sessions and lifting progression is running.

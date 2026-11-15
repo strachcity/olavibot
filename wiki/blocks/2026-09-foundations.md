@@ -701,11 +701,14 @@ Written 15 Nov 2026 from the log's metrics blocks and Strava, not from memory. F
 ran 8 weeks (21 Sep – 15 Nov), extended twice from 6, for the two run tests.
 
 **Planned vs done**
-- Sessions: ~44 of 47 planned sessions done (~94%) `[data, log]`.
-  - Missed: week 3's fourth run, the week 5 heel-raise baseline, week 6 Session B.
-  - 11 logged as partial, mostly sessions cut at the end, or strides and tests dropped.
+- Sessions: **2 training sessions genuinely missed in 8 weeks**: week 3's fourth run (7 Oct) and
+  week 6's Session B (1 Nov, hangover; a 6.3km run was done instead). Everything else that moved
+  was done on another day `[data, log]`. 11 were logged as partial, mostly cut at the end or
+  with strides or tests dropped. *(Corrected 15 Nov: an earlier version said ~44 of 47, which
+  counted the week 5 heel-raise baseline, a test, as a session `[stated, 2026-11-15]`.)*
 - Volume: 20 → 23 → 25 → 29 → 29 → 30 → 34 → 37km per week, 228km in 35 runs `[data]`. Runs
-  per week went from 3 to 5–6, so the block's frequency goal was met. Long run 8 → 12km.
+  per week went from 3 to 5–6, so the block's frequency goal was met. Long runs 8 → 12.3km;
+  longest single run 13.6km (14 Nov, threshold test plus the jog home) `[data]`.
 - Gym: 16 sessions in 8 weeks, 2 a week every week, plus 1 unplanned upper session.
 
 **Tests (first baseline, so nothing to compare against)**
@@ -720,8 +723,8 @@ ran 8 weeks (21 Sep – 15 Nov), extended twice from 6, for the two run tests.
 | Hanging knee raise | ≥10, a floor |
 | Knee-to-wall | Not usable |
 
-Both gates pass. The 5k and threshold disagree: the threshold implies fitness well ahead of a
-21:28 5k `[inferred]`.
+Both gates pass. The 5k and threshold disagree because the 5k was badly paced and was the
+first fast run in months `[stated, 2026-11-15]`. It's a fair number for that day.
 
 **Enjoyment.** Almost never scored in the metrics blocks, so it can't be averaged; this is a
 gap. What was `[stated]`:
@@ -742,10 +745,12 @@ time, and nothing it caused needed fixing. Rule 4 holds, but in this block it sh
 in the gym and the extras, not in running load spikes.
 
 **Achilles and foot.**
-- Achilles: 1s in week 1, then 0 nearly every reported morning. Peak 2/10 on 18 Oct.
-  "No longer hurts ever" from early November `[stated, 2026-11-06]`.
-- Left lateral foot: flared 11–18 Oct (walking pain), gone since 21 Oct, including through a
-  race-effort 5k and pogos. No physio, by Jack's choice.
+- Achilles: morning pain at the start of the block, around 2/10, then settled and painless; the
+  block ended in a good place `[stated, 2026-11-15]`. Scores logged at the time: mostly 1/10 in
+  week 1 and a peak of 2/10 on 18 Oct, then 0 `[data, log]`. "No longer hurts ever" from early
+  November `[stated, 2026-11-06]`.
+- Left lateral foot: flared 11–18 Oct (walking pain). No foot pain since 21 Oct
+  `[stated, 2026-11-15]`, including through a race-effort 5k and pogos.
 - Volume rose 83% with the Achilles quiet: the block's main safety result.
 
 **Hypotheses**
@@ -758,6 +763,15 @@ in the gym and the extras, not in running load spikes.
   - `[inferred]`: back squat and trap bar look like the better fits. Jack decides.
 - *A gradual return to frequency keeps the Achilles quiet*: **supported** by this block
   `[data]`.
+
+**Why loads didn't go heavier** (Jack asked, 15 Nov)
+- It was a re-entry block after the Achilles episode. The aim was to relearn the movements and
+  rebuild running.
+- Targets were capped at about RPE 7 with ceilings. From 18 Oct, targets were set equal to the
+  ceilings, which froze loads at 90/65/100/95.
+- The variant comparison needed stable loads.
+- Loads still rose (squat 80 → 95, deadlift 90 → 100), but no progression was planned. The next
+  block should build it in.
 
 **Lint**
 - `athlete.md` → Strength is stale (August numbers). The block's working sets are better
