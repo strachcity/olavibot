@@ -1996,3 +1996,15 @@ relative_effort: 5
 ```
 - Planned: Second half of the easy 2×2.5km to and from Session B.
 - Done: 2.56km, 16:48 moving, 6:34/km `[data, Strava activity 21001093774]`. Gym Strava data (56:50, relative effort 8, activity 21001093771) added to the Session B entry.
+
+## [2026-11-15] review | Week 8 summary and Foundations block review
+Written in `blocks/2026-09-foundations.md`. Status set to `reviewed`. In short:
+- ~94% of planned sessions done. 228km in 35 runs; 20 → 37km/week; long run 8 → 12km.
+- Both test gates pass: seated calf raise 1.14× BW, heel-raise symmetry 93%.
+- Threshold ~4:25/km, conversational; 5k 21:28.
+- Achilles quiet throughout (peak 2), and the foot clear since 21 Oct.
+- Variants lean towards back squat and trap bar.
+- Proposals for the next block: weekly threshold, reactive progression, volume held, upper
+  lifts tracked below legs, retests, enjoyment scored.
+
+Next: plan the next block with Jack (`plan-training`).
