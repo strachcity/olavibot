@@ -504,7 +504,9 @@ function buildRuns(csv, log) {
   const last = runs.reduce((m, r) => r.date > m ? r.date : m, "");
   log.filter(e => e.type === "run" && e.date > last && +e.y.distance_km > 0).forEach(e => {
     const km = +e.y.distance_km, p = paceSec(e.y.avg_pace);
-    runs.push({ date: e.date, km, sec: p ? p * km : (+e.y.duration_min || 0) * 60, note: e.y.run_type === "race" ? "RACE" : "" });
+    const hk = +e.y.hard_km, hm = +e.y.hard_min;   // quality runs: the reps, measured from the Strava pace stream
+    runs.push({ date: e.date, km, sec: p ? p * km : (+e.y.duration_min || 0) * 60, note: e.y.run_type === "race" ? "RACE" : "",
+      ...(hk > 0 && hm > 0 && hk < km ? { hardKm: hk, hardSec: hm * 60 } : {}) });
   });
   runs.sort((a, b) => a.date < b.date ? -1 : 1);
   return { runs: runs.filter(r => !/EXCLUDE/.test(r.note)), csvTo: last };
@@ -516,6 +518,14 @@ function buildGym(csv, log) {
   return dates.sort();
 }
 const isRace = r => /^(BACKYARD|RACE)/.test(r.note);
+// A quality run is banded in two parts: its reps at their own pace, the rest (warm-up, jogs, cool-down) at theirs.
+// Otherwise the average lands a threshold session in grey.
+function bandParts(r) {
+  if (!r.hardKm) return [{ band: bandOf(r.sec / r.km), km: r.km, sec: r.sec }];
+  const km = r.km - r.hardKm, sec = r.sec - r.hardSec;
+  return [{ band: bandOf(r.hardSec / r.hardKm), km: r.hardKm, sec: r.hardSec },
+          { band: bandOf(sec / km), km, sec }];
+}
 
 // ---------- app ----------
 const $ = id => document.getElementById(id);
@@ -855,9 +865,9 @@ function viewNow() {
   // pace shares by year: backyards and hikes excluded, as in strava-history.md
   const years = {};
   S.runs.filter(r => !/^BACKYARD/.test(r.note)).forEach(r => {
-    const y = r.date.slice(0, 4), band = bandOf(r.sec / r.km);
+    const y = r.date.slice(0, 4);
     years[y] ??= { easy: 0, steady: 0, grey: 0, hard: 0 };
-    years[y][band] += r.sec;
+    bandParts(r).forEach(b => years[y][b.band] += b.sec);
   });
   const ys = Object.keys(years).sort().slice(-4).map(y => {
     const t = years[y], T = t.easy + t.steady + t.grey + t.hard;
@@ -1044,7 +1054,7 @@ function drawChart(host) {
   const N = diffDays(first, latest) / 7 + 1;
   const weeks = Array.from({ length: N }, (_, i) => ({ w: addDays(first, i * 7), easy: 0, steady: 0, grey: 0, hard: 0, race: 0, gym: 0, notes: [] }));
   const idx = d => { const i = diffDays(first, mondayOf(d)) / 7; return i >= 0 && i < N ? i : -1; };
-  S.runs.forEach(r => { const i = idx(r.date); if (i < 0) return; const b = isRace(r) ? "race" : bandOf(r.sec / r.km); weeks[i][b] += r.km; if (isRace(r)) weeks[i].notes.push(r.note.replace(/^RACE_|^BACKYARD_?/, "").replace(/_/g, " ").trim() || "Race"); });
+  S.runs.forEach(r => { const i = idx(r.date); if (i < 0) return; if (isRace(r)) weeks[i].race += r.km; else bandParts(r).forEach(b => weeks[i][b.band] += b.km); if (isRace(r)) weeks[i].notes.push(r.note.replace(/^RACE_|^BACKYARD_?/, "").replace(/_/g, " ").trim() || "Race"); });
   S.gym.forEach(d => { const i = idx(d); if (i >= 0) weeks[i].gym++; });
   const maxPage = Math.max(0, Math.ceil((N - 52) / 52));
   // First week index shown on a page: whole 52-week steps back from this week; the oldest page starts at the first run.
