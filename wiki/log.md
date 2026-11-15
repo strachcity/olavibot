@@ -1551,8 +1551,10 @@ beyond_plan: 5k test in place of easy run
 duration_min: 37
 distance_km: 7.29
 avg_pace: 4:47
-run_type: race
+run_type: test
 relative_effort: 57
+hard_km: 5.0
+hard_min: 21.5
 ```
 - Planned: Easy ~7km, in place of the 5k test, which had just been moved to week 7 because Jack was shattered.
 - Done: 1km warm-up, 5k at race effort, cool-down `[stated]`. Whole activity 7.29km in 34:48 moving, avg HR 155, max 175, Victoria Park, 13°C, light wind `[data, Strava activity 20794837183]`. **Best 5k inside it: 21:28 (4:18/km)** `[data, Strava best effort]`. First mile 6:37 (4:07/km), second 6:52, then slower; fastest 1km 4:04 `[data]`. "Hard. The quick sudden pace gave me a stitch for the whole thing and I crumbled in the last km. Legs felt great, lungs couldn't handle it" `[stated]`. Tired, sore throat `[stated, 2026-10-30]`.
@@ -2078,3 +2080,7 @@ Agreed with Jack `[stated, 2026-11-15]`, informed by research passes 5–7:
 
 ## [2026-11-15] model | Quality reps count as hard, whatever their pace
 - Jack: quality sessions will have reps in the grey pace range, but they shouldn't show as grey, because the purpose was quality `[stated, 2026-11-15]`. The dashboard now puts `hard_km` in the hard band regardless of pace; the rest of the run is still banded by its own pace. Grey now means drift on runs meant to be easy or steady. Follows the entry above.
+
+## [2026-11-15] model | 5k test is a test, not a race
+- Jack: the 30 Oct 5k test should count as hard, not race; `race` is reserved for genuine races `[stated, 2026-11-15]`. New `run_type: test` for time trials and benchmarks.
+- 30 Oct entry edited in place at Jack's request: `run_type` race → test, plus `hard_km: 5.0` and `hard_min: 21.5` (the 21:28 best 5k inside the activity `[data, Strava best effort]`). The dashboard now shows the 5k as hard and the warm-up and cool-down by their pace, and no longer marks a race that week.

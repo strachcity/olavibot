@@ -64,7 +64,7 @@ relative_effort: 12   # Strava's number, as-is; omit if the activity has none
 
 **Run:** same shape, header type `run`, and swap `gym`, `session` and `reactive_level` for
 `distance_km`, `avg_pace` (m:ss) and `run_type` (easy | long | threshold | speed | strides |
-race); keep `relative_effort`. The Done line carries distance / time / pace / HR.
+test | race: `race` only for genuine races, a time trial is `test`); keep `relative_effort`. The Done line carries distance / time / pace / HR.
 
 **Quality runs add `hard_km` and `hard_min`** `[stated, 2026-11-15]`. Jack doesn't lap his
 runs, so measure the reps from the Strava pace stream (`get_activity_streams`: time, distance,
