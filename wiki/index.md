@@ -11,6 +11,7 @@ Read this first. Every wiki page, one line each.
 | [log.md](log.md) | Append-only record of every session, review, ingest and model change |
 | [tests.md](tests.md) | The §12 battery: protocols, and every result over time. Baseline pending |
 | [food-diary.md](food-diary.md) | Food diary, one-month pilot 19 Oct → 15 Nov 2026: daily intake against training, then a review |
+| [body-map.md](body-map.md) | One row per body region, each sourced from another page. Feeds the dashboard's body diagram |
 
 ## Derived
 Regenerated from a source, never hand-edited.
