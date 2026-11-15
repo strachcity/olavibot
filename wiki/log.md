@@ -2075,3 +2075,8 @@ Agreed with Jack `[stated, 2026-11-15]`, informed by research passes 5–7:
 - The dashboard put the whole 14 Nov threshold run (13.63km at 5:09 average) in the grey band. Jack: no laps on the watch, so recognise the hard session and split it `[stated, 2026-11-15]`.
 - New optional run fields `hard_km` and `hard_min`, measured by Claude from the Strava pace stream. The dashboard bands the reps at their own pace and the rest at its own. Rule added to `CLAUDE.md` and `review-training`, and late-filling the two fields is allowed like the other Strava fields.
 - 14 Nov filled in: 3×10min reps at ~4:30, ~4:25, ~4:20/km → ~6.8km in 30min, hard. Rest 6.8km in ~40min at ~5:55/km, easy `[data, Strava stream and segments]`.
+
+## [2026-11-15] model | Dashboard body map replaces the Achilles card
+- New page `wiki/body-map.md`: nine rows (shoulder, grip, bench and row, hip flexors, squat and deadlift, knee, calf, Achilles, left foot), each restating a claim from `athlete.md`, `tests.md` or `observations.md` with its provenance tag. Nothing new asserted `[stated, 2026-11-15]`.
+- The dashboard reads it and draws a body diagram with arrows to each callout; selecting one shows its detail and tags. The Achilles callout keeps the live morning score, the Hold rule, the 14-day sparkline and the three Achilles rules.
+- The only `[inferred]` row is the "mid-portion" reading, labelled as such. Sides are not recorded except the left foot, so markers show region, not side.
