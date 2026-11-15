@@ -23,7 +23,8 @@ Regenerated from a source, never hand-edited.
 | Page | What it's for |
 |---|---|
 | [blocks/README.md](blocks/README.md) | Block template. One file per block: plan, then review |
-| [blocks/2026-09-foundations.md](blocks/2026-09-foundations.md) | Foundations, 21 Sep → 1 Nov 2026. Phase A, active |
+| [blocks/2026-09-foundations.md](blocks/2026-09-foundations.md) | Foundations, 21 Sep → 15 Nov 2026. Phase A, reviewed |
+| [blocks/2026-11-build.md](blocks/2026-11-build.md) | Build, 16 Nov → 27 Dec 2026. Phase B, active: weekly rotating quality run, progressive lifting, tests in week 5 |
 
 ## References (evidence, compiled from `raw/research/`)
 | Page | What it's for |
