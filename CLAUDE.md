@@ -147,7 +147,8 @@ duration_min: 62
 ```
 
 `run` adds `distance_km`, `avg_pace` (m:ss), and `run_type` (easy | long | threshold | speed |
-strides | race). `gym` adds `gym` (full | flat), `session` (A | B) and `reactive_level` (0-5).
+strides | test | race; `race` is for genuine races only, a time trial or benchmark is `test`
+`[stated, 2026-11-15]`). `gym` adds `gym` (full | flat), `session` (A | B) and `reactive_level` (0-5).
 Both add `relative_effort`: Strava's Relative Effort for the activity, copied as-is (for a split
 session, the sum of its Strava activities). Omit it when Strava has none (no heart rate).
 
