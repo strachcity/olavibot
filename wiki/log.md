@@ -1958,3 +1958,11 @@ reactive_level: 2
 - Beyond plan: trap bar 100kg against a 95kg ceiling. It was a misread, not chasing a number `[stated]`.
 - Capacity: trap bar 3×5 @100kg, the best on record (previously 95kg, 18 Oct), matching the conventional deadlift's 100kg. Seated calf raise 90kg single (1.14× BW).
 - Review: The block's key gate is cleared: seated calf raise 90kg at 79kg bodyweight. Trap bar and conventional deadlift now sit at the same 100kg, which is a fair comparison for the block review's variant question. Cutting the session short dropped the cheap end again (Nordics, Copenhagen), as the new order intends. Ramp change agreed on the day: bar → 60kg (two 20s) → ~75 → ~85, to save reloading (model change, filed separately).
+
+## [2026-11-15] model | Ramp sets start at 60kg (two 20s); baseline gates filed
+- **Ramp:** Jack's request `[stated, 2026-11-15]`. The default anchor ramp becomes bar × 8–10
+  → 60kg × 5 → ~75 × 3 → ~85 × 1–2 → working sets, with a ~90kg single at 100kg or more, so
+  there's no reloading of small plates. Updated in `training-model.md` §8. Same job, faster
+  to load.
+- **`tests.md`:** seated calf raise 90kg = 1.14× bodyweight (79kg) filed. Both gates now pass;
+  the knee-to-wall and hanging knee raise retests carry into the next block.

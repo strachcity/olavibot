@@ -33,20 +33,25 @@ version, so height is approximate.
 
 | Test | Baseline (Foundations, 28 Oct – 8 Nov 2026, in progress) |
 |---|---|
-| Date | 28 Oct (part 1), 30 Oct (5k), 14 Nov (threshold); rest pending |
-| Bodyweight (kg) | — |
+| Date | 28 Oct (part 1), 30 Oct (5k), 14 Nov (threshold), 15 Nov (seated calf) |
+| Bodyweight (kg) | 79, gym scale, 15 Nov (not standard conditions) `[stated]` |
 | Easy pace @ fixed HR | — |
 | Threshold 3×10min — pace / HR | **~4:30 → 4:25 → 4:20/km** (GPS segments), HR ~153 → 160 → 166. Full sentences throughout `[stated]`, so at or below threshold. A floor, not a ceiling. Victoria Park, −1°C, with a partner, paced off his watch; the 4:40–4:50 he thought he ran was wrong `[stated, 2026-11-14]`. **Recoveries were 2 min walking, not jogging** `[stated, 2026-11-14]`. That's slightly easier than the protocol, so keep it the same next time or note the difference |
 | 5k | **21:28** (4:18/km), 30 Oct, Victoria Park. Tired, sore throat, 1km warm-up, first mile 4:07/km then faded; stitch throughout `[data, Strava]` `[stated]`. PB 17:55 (Jan 2025) |
 | Squat e1RM / Deadlift e1RM | — |
 | Heel raise L / R (reps, height start → end, work) | **40 / 43** reps, box edge, start of Session A. No height or work data. Symmetry 93% on reps. Ended on calf cramp, no Achilles pain `[stated, 2026-10-28]` |
-| Seated calf raise (× bodyweight) | — |
+| Seated calf raise (× bodyweight) | **90kg single = 1.14×** (79kg). Full range, start of Session B, the day after the threshold test. Stopped when reps felt rushed `[stated, 2026-11-15]` |
 | Hip flexion (hanging knee raise) | ≥10, a floor not a max: stopped for cold arms `[stated, 2026-10-28]`. Retest after a shoulder warm-up |
 | Hop L / R (cm) | — |
 | Balance L / R (s) | ≥60 / ≥60, eyes closed, hands on hips; hit the 60s cap `[stated, 2026-10-28]`. Next time use a harder version, which counts as a new test |
 | Knee-to-wall L / R (cm) | Not usable. ~6–10cm both sides was estimated from photos `[inferred]`. Retest with a tape measure |
 | Over-ceiling sessions | — |
 
-**Baseline in progress** (part 1, 28 Oct). Heel-raise symmetry passes the ≥80–90% gate on reps
-(93%), though not on work or height, which weren't recorded. The seated calf raise vs
-bodyweight is still pending, so Reactive Level 4 cannot be cleared yet. Log a `test` entry with anything that qualifies the results.
+**Baseline done** (28 Oct – 15 Nov), apart from hop, easy pace at fixed HR, e1RMs, and the
+knee-to-wall and hanging knee raise retests, which carry into the next block's week 1. **Both
+gates pass:**
+- Seated calf raise 1.14× bodyweight (≥1.0×).
+- Heel-raise symmetry 93% on reps (≥80–90%; work and height not recorded).
+
+Reactive Level 4 is no longer blocked by the gates. Levels are still earned one at a time, from
+Level 2. Log a `test` entry with anything that qualifies the results.
