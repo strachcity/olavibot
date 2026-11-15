@@ -348,8 +348,10 @@ keep the calf work. The calf work is the treatment, not the cause.
 **Before a run:** 5 minutes easy, then drills (leg swings, A-skips, high knees) before quality.
 **Before gym:** 8–10 minutes dynamic hip and ankle mobility, activation, then ramp sets on
 each anchor lift. Load up, reps down; finish near the working load and don't pile up reps on
-the way. Default for a working load W: bar × 8–10 → ~50% W × 5 → ~70% W × 3 → ~85–90% W × 1–2
-`[stated, 2026-09-27]`. Ramp sets are preparation, not volume. The last one also sets the day's
+the way. Default: bar × 8–10 → **60kg (two 20kg plates) × 5** → ~75kg × 3 → ~85kg × 1–2 → working
+sets; add a ~90kg single when the working load is 100kg or more. Starting from two 20s
+means no reloading of small plates between ramp sets `[stated, 2026-11-15]` (was: bar → ~50% W
+→ ~70% W → ~85–90% W, `[stated, 2026-09-27]`). Ramp sets are preparation, not volume. The last one also sets the day's
 working load (RPE check).
 
 *Evidence note (ramp sets): specific warm-ups raise 1RM and bar speed **[I]**. Finishing near
