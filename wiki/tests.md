@@ -3,6 +3,14 @@
 The §12 battery. Run at the end of each block, same way every time — a test done differently
 is a new test, not a trend. Read the trend, not the number.
 
+**Battery from Nov 2026** `[stated, 2026-11-15]`:
+- squat and deadlift heavy triple → estimated 1RM
+- seated calf raise max vs bodyweight
+- 5k or the threshold session
+
+Heel-raise symmetry only if the Achilles flares. The other tests below are retired; their
+results stay as history.
+
 Two results are gates, not information:
 - **Seated calf raise vs bodyweight** — below 1.0× blocks Reactive Level 4 `[evidence: I]`
 - **Heel-raise symmetry** — target ≥80–90%, judged on work and height, not reps alone `[evidence: W]`

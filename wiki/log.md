@@ -2043,3 +2043,19 @@ Summaries added to `references/evidence-gym-pool.md` and
 - Progression: +2.5–5kg via the 2-for-2 rule under an RPE 7–8 ceiling.
 - Pogo gate (seated ≥110% BW) already met at 114%.
 - No running benefit from upper-body strength, which fits "legs first".
+
+## [2026-11-15] model | Next-block rules: progression, quality, volume, Achilles, tests, enjoyment
+Agreed with Jack `[stated, 2026-11-15]`, informed by research passes 5–7:
+1. **Anchors** progress by the 2-for-2 rule under an RPE 7–8 cap: +2.5–5kg, with the ceiling
+   moving with it. Upper lifts are tracked but rank below the legs. `training-model.md` §3, §6.
+2. **Quality:** one session a week, rotating threshold-in-long-run, progression, cruise and
+   tempo. Paced to current fitness, starting around 15–20 min of hard running and building to
+   ~30, by talk test. §5.
+3. **Volume:** no fixed maximum, rising sensibly. The long run grows by 1–2km at most past the
+   4-week longest. High weeks drop an easy run. No scheduled cutbacks; lighter weeks by feel. §5.
+4. **Achilles:** 0/10 for weeks, so watch it but don't let it dictate. The rules apply if it
+   comes back. §7.
+5. **Tests:** squat and deadlift heavy triple → estimated 1RM, seated calf max, 5k or
+   threshold. The rest are retired. §12, `tests.md`.
+6. **Enjoyment score** removed from the metrics block (`CLAUDE.md`, `review-training`).
+   Rule 1 stays as a principle.

@@ -17,9 +17,9 @@ Four modes. Work out which one Jack wants.
   waiting for data.
 - The session plan — made this conversation, in the pasted draft, or in the active block — and
   the active block.
-- **Don't interrogate a standard run.** Jack won't answer an RPE/enjoyment/Achilles checklist
+- **Don't interrogate a standard run.** Jack won't answer an RPE/Achilles checklist
   per run, and asking anyway wastes his patience — `[stated, 2026-09-21]`. Log a run straight
-  from Strava (distance, pace, duration, date). Omit `rpe`, `enjoyment`, `achilles_during` if
+  from Strava (distance, pace, duration, date). Omit `rpe`, `achilles_during` if
   he hasn't volunteered them — that's already what "omit what you don't have" below means, so
   stop short of asking. If he flags a concern (pain, missed the plan, something felt off), log
   that detail and follow up on it specifically — that's the exception, not the default.
@@ -46,7 +46,6 @@ makes block reviews arithmetic instead of impression — see `CLAUDE.md` for the
 ```yaml
 planned: yes          # yes | no | partial
 rpe: 7
-enjoyment: 4
 achilles_during: 2
 achilles_next_am: pending
 beyond_plan: none     # none | short phrase, no commas

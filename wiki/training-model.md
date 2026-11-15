@@ -81,6 +81,7 @@ Confirmed rather than Hypotheses `[data: gym log, Aug 2026]`.
 
 So the system builds restraint in structurally rather than relying on willpower:
 - **Every session has a stated ceiling**, not just a target. "40 minutes easy, stop at 45."
+  For anchor lifts, the ceiling moves by rule, not by mood: see §6, anchor progression.
 - **Good-day allowances are pre-agreed.** If a session feels great, the permitted extra is
   specific and small — 4 strides, one more set of an accessory, 5 more minutes easy. Never
   more pace, never more load on an anchor.
@@ -123,9 +124,9 @@ Year-round default.
 |---|---|
 | Runs | 4–5 |
 | Gym | 2 |
-| Quality | 1 threshold session |
+| Quality | 1 session, rotating type (see Threshold) |
 | Speed | Strides twice a week (4–6 × 20s, relaxed-fast, full recovery) |
-| Long run | 1, progressed by duration |
+| Long run | 1, progressed by duration; never more than 1–2km past the longest run of the last 4 weeks |
 | Cross-training | Optional, counts toward aerobic load |
 | Distribution | ~80% easy / 20% harder, by distance (the evidence counts km; by time the easy share runs higher, as easy km take longer) |
 
@@ -137,6 +138,28 @@ survives. This structure, not just the pace band, is what fixes grey-zone runnin
 effort run continuously and undosed is the grey zone; run as bounded reps, it's a session
 `[I]` (`references/evidence-norwegian-method.md`). This shift from short fast intervals to
 longer reps is what moved him from 3:24 to 3:11.
+
+**Quality, rotating** `[stated, 2026-11-15]`. One quality session a week, rotated for
+enjoyment, since rotating types makes no physiological difference when load is matched **[I]**.
+- The menu: threshold reps (including inside a long run, e.g. 3×10min), progression runs
+  (start easy, finish around threshold effort, paced to current fitness, not a fixed pace),
+  cruise intervals (e.g. 5×5min), and tempo.
+- Dose: start around 15–20 min of hard running and build towards ~30 min over a block **[H]**.
+- Effort by talk test ("yes, but…" is about threshold) and recent test pace **[I]**.
+- Introduce new types in their easier form first.
+- Faster running loads the Achilles more per step **[W]**, so the quality session is where
+  symptoms get watched.
+
+Source: `references/evidence-endurance-structure.md` → One weekly quality session.
+
+**Volume** `[stated, 2026-11-15]`.
+- No fixed weekly maximum. Volume rises sensibly, and 50km+ is fine if reached gradually.
+  Higher chronic load protects **[W]**, and the 10% rule has no evidence **[W]**.
+- The hard limit is the single run: the long run grows by 1–2km at most beyond the longest of
+  the last 4 weeks, because single-session spikes are the evidence-backed risk **[W]**.
+- When a week runs high (team runs, social runs), drop an easy run, never the long run or the
+  quality session.
+- No scheduled cutback weeks. Lighter weeks happen when he feels he needs one.
 
 **Strides.** Keep speed and running mechanics alive at almost no fatigue cost. After easy runs.
 This is also the sanctioned outlet for a good-legs day.
@@ -178,6 +201,14 @@ points.
 |---|---|---|
 | Squat (anchor) | Session A | 3–5 × 3–6, ≥80% 1RM in strength blocks **[W]** |
 | Deadlift (anchor) | Session B | 3–5 × 3–6, straps on top sets **[W]** |
+
+**Anchor progression** `[stated, 2026-11-15]`. Working sets capped at about RPE 7–8. Strength
+doesn't need sets near failure **[I]**. Add load by the "2-for-2" rule: once the last set beats
+the rep target by 2 or more in two sessions running, add 2.5–5kg on the anchors (1–2.5kg on
+upper-body lifts) **[H]**, and the ceiling moves up with it. A target hit on a good day is not
+the rule being met. Upper-body lifts (bench, pull-ups) are tracked and progressed the same way,
+but always rank below the legs: on a short day they're what gets cut `[stated, 2026-11-15]`.
+Source: `references/evidence-gym-pool.md` → Strength testing and progression.
 
 *Anchor normally means one exercise held fixed for the block. During Foundations, or whenever
 the right variant isn't yet known, a block may instead rotate the anchor's variant week to
@@ -337,6 +368,8 @@ broad durability and back-to-back long days matter as much.
 - Must not **climb week on week**.
 - **Morning first-steps stiffness is the signal.**
 - He does not need to stop running. He needs to regulate load.
+- **Current status (Nov 2026):** 0/10 for weeks. Watch it, don't let it dictate planning
+  `[stated, 2026-11-15]`. The rules below apply if symptoms come back.
 
 **If morning symptoms rise two days running:** hold volume, drop the next quality session,
 keep the calf work. The calf work is the treatment, not the cause.
@@ -428,13 +461,15 @@ the how, and it holds every result. Baseline is not yet done (§13).
 | Aerobic | Easy-run pace at a fixed heart rate |
 | Threshold | Pace and HR on a standard threshold session (e.g. 3×10min) |
 | Speed | Parkrun or 5k time trial, once or twice a block |
-| Strength | Estimated 1RM squat and deadlift from working sets |
-| Calf | Single-leg heel raise to fatigue, both sides — reps, height, symmetry. Seated calf raise vs bodyweight |
-| Hip flexion | Hanging knee raise max reps, or knee-drive hold time |
-| Reactive | Single-leg hop distance, both sides |
-| Balance | Single-leg stance, eyes closed, both sides |
-| Mobility | Couch stretch and ankle knee-to-wall, both sides |
+| Strength | Heavy triple on squat and deadlift in the block's final week → estimated 1RM (Epley/Brzycki). ≥48h before a quality run. A first-ever true 1RM under-reads anyway **[I]** |
+| Calf | Seated calf raise max vs bodyweight (the gate) |
 | Behaviour | Sessions where he exceeded the ceiling |
+
+*Trimmed 15 Nov 2026* `[stated]`: tests should be the lifts and runs themselves, ones he'll
+actually do. Retired: hanging knee raise, hop, balance, couch stretch and knee-to-wall (nothing
+in the plan depended on them, and they kept being skipped). Single-leg heel raise symmetry only
+if the Achilles flares (baseline 93%). Easy pace at fixed HR is read from ordinary easy runs, not
+a separate test. Sources: `references/evidence-gym-pool.md`, `evidence-endurance-structure.md`.
 
 ---
 
