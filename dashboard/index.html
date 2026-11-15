@@ -553,12 +553,12 @@ function buildGym(csv, log) {
   return dates.sort();
 }
 const isRace = r => /^(BACKYARD|RACE)/.test(r.note);
-// A quality run is banded in two parts: its reps at their own pace, the rest (warm-up, jogs, cool-down) at theirs.
-// Otherwise the average lands a threshold session in grey.
+// A quality run is banded in two parts. Its reps count as hard whatever their pace: they were the point of the
+// session, not drift [stated, 2026-11-15]. The rest (warm-up, jogs, cool-down) is banded by its own pace.
 function bandParts(r) {
   if (!r.hardKm) return [{ band: bandOf(r.sec / r.km), km: r.km, sec: r.sec }];
   const km = r.km - r.hardKm, sec = r.sec - r.hardSec;
-  return [{ band: bandOf(r.hardSec / r.hardKm), km: r.hardKm, sec: r.hardSec },
+  return [{ band: "hard", km: r.hardKm, sec: r.hardSec },
           { band: bandOf(sec / km), km, sec }];
 }
 
@@ -965,7 +965,7 @@ function viewNow() {
       }).join("")}<div class="target" style="left:80%"></div></div></div>`).join("")}</div>
       <div class="legend">
         <span style="--c:var(--easy)">Easy ≥5:30</span><span style="--c:var(--steady)">Steady 5:15–5:30</span>
-        <span style="--c:var(--grey)">Grey 4:45–5:15</span><span style="--c:var(--hard)">Hard &lt;4:45</span>
+        <span style="--c:var(--grey)">Grey 4:45–5:15</span><span style="--c:var(--hard)">Hard &lt;4:45, or quality reps</span>
       </div>` : `<div class="empty">No running data found.</div>`}
     </div>
 
