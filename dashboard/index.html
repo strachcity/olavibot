@@ -170,13 +170,48 @@
   .stat .d { font-size: 12.5px; color: var(--ink-3); margin-top: 4px; }
   .up { color: var(--accent); } .down { color: var(--warm); }
 
-  /* The Achilles card scales its contents to its own width (cqi), so it fills a big desktop card and stays compact on a phone. */
-  .achilles { container-type: inline-size; display: grid; grid-template-columns: minmax(64px, 32%) 1fr; gap: clamp(14px, 5cqi, 36px); align-items: center; }
-  .tendon { width: 100%; height: auto; max-height: 100%; }
-  .ach-body { display: flex; flex-direction: column; gap: clamp(4px, 1.4cqi, 10px); min-width: 0; }
-  .ach-big { font-size: clamp(40px, 17cqi, 104px); font-weight: 200; letter-spacing: -.03em; line-height: 1; }
-  .ach-note { font-size: clamp(13px, 3.4cqi, 18px); color: var(--ink-2); }
-  .rules { display: flex; gap: 6px; flex-wrap: wrap; margin-top: clamp(6px, 2cqi, 14px); }
+  /* ---------- body map ---------- */
+  .bodymap { container-type: inline-size; display: grid; gap: 14px; align-content: start; }
+  .bm { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) 150px minmax(0, 1fr); gap: 12px; }
+  .bm-col { display: flex; flex-direction: column; justify-content: space-between; gap: 8px; }
+  .bm-fig svg { display: block; width: 150px; height: auto; }
+  .bm-lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+  .bm-lines path { fill: none; stroke: color-mix(in srgb, var(--fg) 35%, transparent); stroke-width: 1; }
+  .bm-lines path.on { stroke: var(--accent); stroke-width: 1.5; }
+  .bm-lines path.hot { stroke: var(--hard); }
+  .body-fill { fill: color-mix(in srgb, var(--fg) 9%, transparent); stroke: color-mix(in srgb, var(--fg) 30%, transparent); stroke-width: 1; }
+  .mk { fill: var(--accent); stroke: var(--ground); stroke-width: 1.5; }
+  .mk.on { stroke: var(--accent); stroke-width: 2.5; fill: var(--accent); }
+  .mk.hot { fill: var(--hard); stroke: var(--hard); }
+  .mk-halo { fill: var(--accent); opacity: .22; }
+  .mk-halo.hot { fill: var(--hard); }
+  .mk-n { display: none; font: 600 7px var(--mono); fill: var(--ground); text-anchor: middle; pointer-events: none; }
+  .bm-list { display: none; }
+  button.bm-c { font: inherit; color: inherit; text-align: left; cursor: pointer; border-radius: 12px; padding: 8px 10px; display: grid; gap: 2px; align-content: start;
+    border: 1px solid color-mix(in srgb, var(--fg) 10%, transparent); background: color-mix(in srgb, var(--sink) 20%, transparent); transition: border-color .15s ease; }
+  button.bm-c:hover { border-color: color-mix(in srgb, var(--fg) 30%, transparent); }
+  button.bm-c:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  button.bm-c[aria-pressed="true"] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 9%, transparent); }
+  button.bm-c.hot[aria-pressed="true"] { border-color: var(--hard); }
+  .bm-c .t { font-family: var(--mono); font-size: 9.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); }
+  .bm-c .v { font-size: 12.5px; line-height: 1.25; color: var(--ink); text-wrap: pretty; }
+  .bm-panel { border-top: 1px solid color-mix(in srgb, var(--fg) 10%, transparent); padding-top: 14px; display: grid; gap: 8px; }
+  .bm-panel .v { font-size: 22px; font-weight: 300; letter-spacing: -.02em; line-height: 1.15; }
+  .bm-panel p { margin: 0; font-size: 13px; color: var(--ink-2); }
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tg { font-family: var(--mono); font-size: 10px; letter-spacing: .04em; padding: 3px 8px; border-radius: 999px; border: 1px solid var(--edge); color: var(--ink-2); }
+  .tg b { font-weight: 500; text-transform: uppercase; letter-spacing: .08em; margin-right: 5px; }
+  .tg.data b { color: var(--easy); } .tg.stated b { color: var(--ink); }
+  .tg.inferred { border-style: dashed; color: var(--ink-3); } .tg.inferred b { color: var(--warn); }
+  .bm-note { font-size: 12px; color: var(--ink-3); }
+  .rules { display: flex; gap: 6px; flex-wrap: wrap; }
+  @container (max-width: 400px) {
+    .bm { grid-template-columns: 1fr; }
+    .bm-col, .bm-lines { display: none; }
+    .bm-fig svg { margin: 0 auto; }
+    .bm-list { display: grid; gap: 8px; grid-template-columns: 1fr; }
+    .mk-n { display: block; }
+  }
 
   /* ---------- middle ---------- */
   .mid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 16px; }
@@ -354,7 +389,7 @@
 // Everything on this page is read from the repo at load time. Nothing here is hand-typed data.
 const ROOT = "../";
 const FILES = {
-  index: "wiki/index.md", log: "wiki/log.md", tests: "wiki/tests.md", history: "wiki/strava-history.md",
+  index: "wiki/index.md", log: "wiki/log.md", tests: "wiki/tests.md", history: "wiki/strava-history.md", bodymap: "wiki/body-map.md",
   rawReadme: "raw/README.md",
 };
 // The Strava exports are named in strava-history.md's "Row data" line, so a renamed export still loads.
@@ -562,6 +597,15 @@ async function load() {
   S.tests = T.tests ? parseTests(T.tests) : null;
   S.load = buildLoad(T.effort ? parseCSV(T.effort) : [], S.log);
   S.bests = T.history ? parseBests(T.history) : [];
+  S.body = T.bodymap ? parseBodyMap(T.bodymap) : [];
+}
+
+// Body map: one table row per callout in wiki/body-map.md. `source` is " · "-separated "tag detail" pairs.
+function parseBodyMap(text) {
+  return text.split("\n").filter(l => l.startsWith("|")).map(l => l.split("|").slice(1, -1).map(c => c.trim()))
+    .filter(r => r.length >= 5 && r[0] !== "key" && !/^-+$/.test(r[0]))
+    .map(([key, title, value, detail, source]) => ({ key, title, value, detail,
+      tags: source.split(" · ").filter(Boolean).map(t => { const [tag, ...rest] = t.trim().split(" "); return { tag, note: rest.join(" ") }; }) }));
 }
 
 // Blocks & weeks
@@ -859,9 +903,6 @@ function viewNow() {
   const pk = plannedKm(b, n, days);
 
   const a = achilles();
-  const glow = { ok: "var(--accent)", hot: "var(--hard)", wait: "var(--ink-3)" }[a.cls];
-  const spark = a.pts.length >= 2 ? `<div class="spark" aria-label="Morning scores">${a.pts.slice(-14).map(p => `<i title="${dm(p.date)}: ${p.v}/10" style="height:${10 + p.v * 9}%;background:${p.v > 5 ? "var(--hard)" : "var(--accent)"}"></i>`).join("")}</div>` : "";
-
   // pace shares by year: backyards and hikes excluded, as in strava-history.md
   const years = {};
   S.runs.filter(r => !/^BACKYARD/.test(r.note)).forEach(r => {
@@ -906,24 +947,7 @@ function viewNow() {
           <div class="stat"><div class="label">Long run</div><div class="v num">${long21.toFixed(1)}<small>km</small></div><div class="d">Longest, last 3 wks${longT ? ` · target ${longT.km}` : ""}</div></div>
         </div>
       </div>
-      <div class="glass achilles">
-        <svg class="tendon" viewBox="0 0 84 132" aria-hidden="true">
-          <defs>
-            <radialGradient id="hot" cx="50%" cy="50%" r="50%"><stop offset="0" style="stop-color:${glow}" stop-opacity=".9"/><stop offset="1" style="stop-color:${glow}" stop-opacity="0"/></radialGradient>
-            <linearGradient id="leg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--fg)" stop-opacity=".02"/><stop offset="1" style="stop-color:var(--fg)" stop-opacity=".22"/></linearGradient>
-          </defs>
-          <path d="M30 0 C28 40 34 70 40 96 C42 106 38 112 26 116 C14 120 8 124 10 128 L74 128 C78 124 74 118 66 114 C58 110 56 100 56 88 C58 60 60 30 58 0 Z" fill="url(#leg)" stroke="rgba(255,255,255,.18)"/>
-          <circle cx="46" cy="100" r="18" fill="url(#hot)"/>
-          <circle cx="46" cy="100" r="3.5" style="fill:${glow}"/>
-        </svg>
-        <div class="ach-body">
-          <div class="label">Achilles · morning signal</div>
-          <div class="ach-big">${a.word}</div>
-          <div class="ach-note">${a.last ? `Morning of ${fmt(a.last.date, { weekday: "short", day: "numeric", month: "short" })}: ${a.last.v}/10.${a.rising ? " Two rising mornings: hold volume, drop the next quality session." : ""} ${a.pts.length} score${a.pts.length === 1 ? "" : "s"} logged.` : "No next-morning scores in the log yet."}</div>
-          ${spark}
-          <div class="rules"><span class="pill">Load ≤5/10</span><span class="pill">Settled by AM</span><span class="pill">2 rising AMs → hold</span></div>
-        </div>
-      </div>
+      <div class="glass bodymap" id="bm"></div>
     </div>
   </section>
 
@@ -1285,6 +1309,80 @@ function drawFitness(host) {
   ].map(([k, on, t, d]) => `<div class="${on ? "" : "off"}"><i class="${k}"></i><b>${t}</b> ${d}</div>`).join("");
 }
 
+// ---------- body map ----------
+// Marker positions on the figure (viewBox 160 × 360). The diagram marks regions, not sides.
+const ANCHORS = {
+  shoulder: { x: 116, y: 68, side: "R" }, chest: { x: 100, y: 98, side: "R" }, hip: { x: 104, y: 202, side: "R" },
+  knee: { x: 96, y: 278, side: "R" }, foot: { x: 98, y: 349, side: "R" },
+  hand: { x: 33, y: 210, side: "L" }, thigh: { x: 62, y: 236, side: "L" }, calf: { x: 63, y: 306, side: "L" }, ankle: { x: 65, y: 331, side: "L" },
+};
+const FIGURE = `
+  <g class="body-fill">
+    <ellipse cx="80" cy="24" rx="15" ry="19"/>
+    <path d="M73 40h14v20H73z"/>
+    <path d="M42 66C52 58 66 58 80 58s28 0 38 8l-6 54c-2 20-4 40-2 70-10 6-20 8-30 8s-20-2-30-8c2-30 0-50-2-70z"/>
+    <path d="M42 66C34 94 32 130 30 172c0 20-2 34-2 46h14c0-14 2-28 4-48 2-34 4-66 4-100z"/>
+    <path d="M118 66c8 28 10 64 12 106 0 20 2 34 2 46h-14c0-14-2-28-4-48-2-34-4-66-4-100z"/>
+    <path id="leg" d="M48 192c-4 38 0 70 6 88 4 16 2 38 4 56h14c0-18-2-40 0-56 4-22 8-54 8-82z"/>
+    <path d="M56 336h16v14c0 4-4 6-10 6H48c-4-2 0-10 8-14z"/>
+    <use href="#leg" transform="translate(160 0) scale(-1 1)"/>
+    <path d="M104 336h-16v14c0 4 4 6 10 6h14c4-2 0-10-8-14z"/>
+  </g>`;
+function drawBody(root) {
+  const host = root && root.querySelector("#bm");
+  if (!host) return;
+  const rows = (S.body || []).filter(r => ANCHORS[r.key]).sort((a, b) => ANCHORS[a.key].y - ANCHORS[b.key].y);
+  if (!rows.length) { host.hidden = true; return; }
+  const a = achilles();
+  const live = r => r.key === "ankle" ? { ...r, value: a.word, hot: a.cls === "hot" } : r;
+  const items = rows.map(live);
+  S.bm = items.some(r => r.key === S.bm) ? S.bm : "ankle";
+  if (!items.some(r => r.key === S.bm)) S.bm = items[0].key;
+  const sel = items.find(r => r.key === S.bm);
+  const btn = (r, i) => `<button type="button" class="bm-c${r.hot ? " hot" : ""}" data-k="${esc(r.key)}" aria-pressed="${r.key === S.bm}"><span class="t">${i + 1} · ${esc(r.title)}</span><span class="v">${esc(r.value)}</span></button>`;
+  const col = side => items.map((r, i) => ANCHORS[r.key].side === side ? btn(r, i) : "").join("");
+  const marks = items.map((r, i) => { const p = ANCHORS[r.key], on = r.key === S.bm;
+    return `<g data-m="${esc(r.key)}"><circle class="mk-halo${r.hot ? " hot" : ""}" cx="${p.x}" cy="${p.y}" r="${on ? 10 : 7}"/><circle class="mk${on ? " on" : ""}${r.hot ? " hot" : ""}" cx="${p.x}" cy="${p.y}" r="5.5"/><text class="mk-n" x="${p.x}" y="${p.y + 2.5}">${i + 1}</text></g>`; }).join("");
+  const spark = a.pts.length >= 2 ? `<div class="spark" aria-label="Morning scores">${a.pts.slice(-14).map(p => `<i title="${dm(p.date)}: ${p.v}/10" style="height:${10 + p.v * 9}%;background:${p.v > 5 ? "var(--hard)" : "var(--accent)"}"></i>`).join("")}</div>` : "";
+  const extra = sel.key !== "ankle" ? "" : `
+    <div class="bm-note">${a.last ? `Morning of ${fmt(a.last.date, { weekday: "short", day: "numeric", month: "short" })}: ${a.last.v}/10.${a.rising ? " Two rising mornings: hold volume, drop the next quality session." : ""} ${a.pts.length} score${a.pts.length === 1 ? "" : "s"} logged.` : "No next-morning scores in the log yet."}</div>
+    ${spark}
+    <div class="rules"><span class="pill">Load ≤5/10</span><span class="pill">Settled by AM</span><span class="pill">2 rising AMs → hold</span></div>`;
+  host.innerHTML = `
+    <div><div class="label">Body map · what the wiki says</div></div>
+    <div class="bm">
+      <div class="bm-col">${col("L")}</div>
+      <div class="bm-fig"><svg viewBox="0 0 160 360" role="img" aria-label="Body diagram with a marker for each callout">${FIGURE}${marks}</svg></div>
+      <div class="bm-col">${col("R")}</div>
+      <svg class="bm-lines" aria-hidden="true"></svg>
+    </div>
+    <div class="bm-list">${items.map(btn).join("")}</div>
+    <div class="bm-panel">
+      <div class="label">${esc(sel.title)}</div>
+      <div class="v">${esc(sel.value)}</div>
+      <p>${esc(sel.detail)}</p>
+      <div class="tags">${sel.tags.map(t => `<span class="tg ${esc(t.tag)}"><b>${esc(t.tag)}</b>${esc(t.note)}</span>`).join("")}</div>
+      ${extra}
+    </div>`;
+  host.onclick = e => { const b = e.target.closest("[data-k]"); if (b) { S.bm = b.dataset.k; drawBody(root); } };
+  const lines = () => {
+    const svg = host.querySelector(".bm-lines"), box = host.querySelector(".bm").getBoundingClientRect();
+    if (!svg || getComputedStyle(svg).display === "none") return;
+    svg.setAttribute("viewBox", `0 0 ${box.width} ${box.height}`);
+    svg.innerHTML = items.map(r => {
+      const c = host.querySelector(`.bm-col [data-k="${r.key}"]`), m = host.querySelector(`[data-m="${r.key}"] .mk`);
+      if (!c || !m) return "";
+      const cb = c.getBoundingClientRect(), mb = m.getBoundingClientRect(), left = ANCHORS[r.key].side === "L";
+      const x1 = (left ? cb.right : cb.left) - box.left, y1 = cb.top + cb.height / 2 - box.top;
+      const x2 = mb.left + mb.width / 2 - box.left, y2 = mb.top + mb.height / 2 - box.top, xm = (x1 + x2) / 2;
+      return `<path class="${r.key === S.bm ? "on" : ""}${r.hot ? " hot" : ""}" d="M${x1} ${y1}C${xm} ${y1} ${xm} ${y2} ${x2} ${y2}"/>`;
+    }).join("");
+  };
+  lines();
+  new ResizeObserver(lines).observe(host);
+  document.fonts && document.fonts.ready.then(lines);
+}
+
 // ---------- palette: the "coordinate" look ----------
 // One look for every week: dot grid, halftone marks, orange crosslines. Light by default;
 // the header switch flips to dark.
@@ -1380,6 +1478,7 @@ function render() {
   drawYears(view);
   drawChart(view.querySelector("#chart"));
   drawFitness(view.querySelector("#fit"));
+  drawBody(view);
   if (route !== "now") window.scrollTo({ top: 0 });
 }
 

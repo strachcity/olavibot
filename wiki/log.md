@@ -2081,6 +2081,11 @@ Agreed with Jack `[stated, 2026-11-15]`, informed by research passes 5–7:
 ## [2026-11-15] model | Quality reps count as hard, whatever their pace
 - Jack: quality sessions will have reps in the grey pace range, but they shouldn't show as grey, because the purpose was quality `[stated, 2026-11-15]`. The dashboard now puts `hard_km` in the hard band regardless of pace; the rest of the run is still banded by its own pace. Grey now means drift on runs meant to be easy or steady. Follows the entry above.
 
+## [2026-11-15] model | Dashboard body map replaces the Achilles card
+- New page `wiki/body-map.md`: nine rows (shoulder, grip, bench and row, hip flexors, squat and deadlift, knee, calf, Achilles, left foot), each restating a claim from `athlete.md`, `tests.md` or `observations.md` with its provenance tag. Nothing new asserted `[stated, 2026-11-15]`.
+- The dashboard reads it and draws a body diagram with arrows to each callout; selecting one shows its detail and tags. The Achilles callout keeps the live morning score, the Hold rule, the 14-day sparkline and the three Achilles rules.
+- The only `[inferred]` row is the "mid-portion" reading, labelled as such. Sides are not recorded except the left foot, so markers show region, not side.
+
 ## [2026-11-15] model | 5k test is a test, not a race
 - Jack: the 30 Oct 5k test should count as hard, not race; `race` is reserved for genuine races `[stated, 2026-11-15]`. New `run_type: test` for time trials and benchmarks.
 - 30 Oct entry edited in place at Jack's request: `run_type` race → test, plus `hard_km: 5.0` and `hard_min: 21.5` (the 21:28 best 5k inside the activity `[data, Strava best effort]`). The dashboard now shows the 5k as hard and the warm-up and cool-down by their pace, and no longer marks a race that week.
