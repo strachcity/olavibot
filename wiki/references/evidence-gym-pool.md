@@ -111,3 +111,40 @@ only; no full texts were read, so treat grades as provisional.
 - Common conventions (load up, reps down; last ramp ~85–90% × 1–2) fit that signal but are
   practitioner heuristics. **H**
 - Ramp sets as injury prevention in lifting: no direct evidence, mechanistic only. **H**
+
+## Strength testing and progression alongside running (Nov 2026)
+Compiled from `raw/research/05-strength-testing.md` and `07-lifting-progression.md`. Mostly
+abstracts and secondary summaries; the raw files flag which.
+
+*Testing*
+- A true 1RM is reliable: median ICC 0.97, CV ~4% (Grgic 2020, 32 studies). **W**
+- A first-ever 1RM under-reads. Retests come out higher, by a median of ~5.5kg on lower-body
+  lifts and up to ~11% over four sessions in novices. **I**
+- Rep-based estimates from a 3–5RM come within ~3kg on the squat in trained athletes
+  (DiStasio 2014). Equations under-predict the deadlift by 9–14% (LeSuer 1997, untrained). **I**
+- Accuracy falls as reps rise. Use ≤10 reps, ideally 3–6. **W**
+- Reps-in-reserve self-ratings are out by ~1 rep on average, and better near failure. **W**
+- 1RM testing has a low injury rate under a proper protocol; risk is higher in inexperienced
+  lifters. **I**
+- The NSCA-style protocol: graded warm-up, then 3–5 attempts with 2–5 min rest. **H**
+- No study on max testing after Achilles tendinopathy.
+
+*Progression and dose*
+- Heavy strength improves running economy by 2–8% (Blagrove 2018). Heavy and heavy + plyometric
+  work; light and isometric don't. **W / I**
+- Durability: heavy + plyometric training 2×/wk improved economy late in a 90-min run and
+  fatigued time to exhaustion by 35% (Zanini 2025, one RCT). **I**
+- Running at this volume doesn't meaningfully blunt maximal strength; explosive strength is
+  slightly blunted, more so in the same session (Schumann 2022). **W**
+- On a shared day, lift before running (~7% more lower-body strength, Eddens 2018). **I**
+  Allow ~24–48h from heavy legs to quality running. **I/H**
+- Strength can be maintained on ~1 heavy session a week once built (cyclists). **I**
+- No progression model clearly wins. Load chosen by RPE works as well as %1RM. Strength doesn't
+  need sets near failure, so an RPE 7–8 ceiling still lets loads progress. **I**
+- Load jumps by the "2-for-2" rule: +2.5–5kg lower body, +1–2.5kg upper body. **H**
+- Achilles: carrying on loading under pain monitoring is as good as rest; heavy slow calf work
+  is as good as eccentrics. **W**
+- One protocol gates double-leg pogos on a seated calf raise >110% BW and <5/10 pain on 10
+  hops, then single-leg hops and drop jumps 20–30cm (Griffin 2021, untested). **H**
+- No evidence that upper-body strength helps distance running; pull-up methods are
+  practitioner-only. **H**

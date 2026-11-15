@@ -74,3 +74,21 @@ sources below are the ones the model leans on heaviest, so verify those first if
 - Marathon base transfers substantially. The backyard limiter is musculoskeletal durability
   and transitions, not VO2max. **I**
 - Time on feet, back-to-back long days, lower-limb capacity, rehearsed restarts. **I**
+
+## One weekly quality session (Nov 2026)
+Compiled from `raw/research/06-threshold-sessions.md`. Mostly abstracts.
+- Mostly easy running works, whether polarised or pyramidal. Neither clearly wins on race
+  performance (Oliveira 2024 meta-analysis). **W**
+- In recreational runners, threshold-including plans matched polarised on 10k (Muñoz 2014;
+  Festa 2020). One weekly threshold session is reasonable. **I**
+- Rotating session types made no difference to physiology when load was matched (Sylta 2016,
+  cyclists). The reason to rotate is enjoyment and adherence. **I**
+- Dose: ~20 min continuous, or cruise reps of 5–15 min with ~1 min rest per 5 min, about 10%
+  of weekly volume. No tested rate for building it up. **H**
+- Progression runs and threshold blocks inside a long run: no trials. Practitioner convention:
+  start easy and finish around marathon to half-marathon effort. **H**
+- Intensity without a lab: the talk test ("yes, but…" is around threshold) and critical speed
+  from race and training data. **I**
+- Faster running raises Achilles peak force (+19.5%) and loading rate (+57%) per step (Starbuck
+  2021). **W** mechanism; its effect on injury risk is **H**. Running within a ≤5/10 pain rule
+  doesn't harm tendon recovery. **I**

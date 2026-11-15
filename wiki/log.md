@@ -2026,3 +2026,20 @@ Still under discussion (no model change yet):
 - a strength test at block end
 
 A research pass on strength testing, threshold sessions and lifting progression is running.
+
+## [2026-11-15] ingest | Research passes 5–7: strength testing, threshold sessions, lifting progression
+Run at Jack's request `[stated, 2026-11-15]`. Web search, mostly abstracts. Files:
+- `raw/research/05-strength-testing.md`
+- `raw/research/06-threshold-sessions.md`
+- `raw/research/07-lifting-progression.md`
+
+Summaries added to `references/evidence-gym-pool.md` and
+`references/evidence-endurance-structure.md`. Takeaways:
+- A heavy triple with an estimated 1RM is a defensible strength test; a first-ever 1RM
+  under-reads anyway.
+- One weekly quality session, rotated for enjoyment.
+- Threshold dose ~10% of weekly volume, by talk test or pace.
+- Lift before running; ~24–48h from heavy legs to quality running.
+- Progression: +2.5–5kg via the 2-for-2 rule under an RPE 7–8 ceiling.
+- Pogo gate (seated ≥110% BW) already met at 114%.
+- No running benefit from upper-body strength, which fits "legs first".
