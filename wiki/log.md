@@ -1937,3 +1937,24 @@ Jack walked the 2-min recoveries between reps instead of jogging `[stated, 2026-
 Walked recoveries make each rep a little easier than the protocol (jogged), so the baseline
 is slightly flattering. Noted in `tests.md`. The next retest either walks again, so it's
 comparable, or jogs and records the change as a new condition.
+
+## [2026-11-15] test | Seated calf raise vs bodyweight — Foundations wk8 (start of Session B)
+- Conditions: start of Session B, after a 5-min warm-up. The threshold test was the day before. Seated calf raise machine, full range. Bodyweight **79kg** on the gym scale `[stated, 2026-11-15]`.
+- Ramp 35kg × 8 → 50 × 3 → 60 × 1 → 70 × 1, then singles: 75, 80, 85, **90kg**, which was the best clean single `[stated]`. Stopped when reps started to feel rushed.
+- **Result: 90kg = 1.14× bodyweight.** That passes the ≥1.0× gate in `tests.md`, so Reactive Level 4 is no longer blocked by calf strength `[data]`.
+- Hanging knee raise and knee-to-wall retests not done (50 minutes available) `[stated]`. They carry into the next block's week 1.
+
+## [2026-11-15] gym | Session B — Foundations wk8 (full gym, calf test)
+```yaml
+planned: partial
+achilles_next_am: pending
+beyond_plan: trap bar 100kg over 95kg ceiling
+gym: full
+session: B
+reactive_level: 2
+```
+- Planned (50-min version, tests removed except the calf test): Warm-up. Seated calf raise test. Trap bar ramp, then 3×5 @95kg (target = ceiling). Superset: bench press 3×8 @50kg + single-arm DB row 3×8/side @30kg. Superset: Nordic curl eccentric 3×3 + Copenhagen plank 3×20s/side. Cool-down.
+- Done: Calf test (see the test entry). Trap bar ramp 60 → 75 → 85, working 3×5 @**100kg**, "felt great and strong", after misreading the plan `[stated, 2026-11-15]`. Bench press and single-arm DB row done. Nordics, Copenhagen and cool-down not done: had to run home `[stated]`. Strava not uploaded yet.
+- Beyond plan: trap bar 100kg against a 95kg ceiling. It was a misread, not chasing a number `[stated]`.
+- Capacity: trap bar 3×5 @100kg, the best on record (previously 95kg, 18 Oct), matching the conventional deadlift's 100kg. Seated calf raise 90kg single (1.14× BW).
+- Review: The block's key gate is cleared: seated calf raise 90kg at 79kg bodyweight. Trap bar and conventional deadlift now sit at the same 100kg, which is a fair comparison for the block review's variant question. Cutting the session short dropped the cheap end again (Nordics, Copenhagen), as the new order intends. Ramp change agreed on the day: bar → 60kg (two 20s) → ~75 → ~85, to save reloading (model change, filed separately).
