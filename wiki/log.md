@@ -2059,3 +2059,9 @@ Agreed with Jack `[stated, 2026-11-15]`, informed by research passes 5–7:
    threshold. The rest are retired. §12, `tests.md`.
 6. **Enjoyment score** removed from the metrics block (`CLAUDE.md`, `review-training`).
    Rule 1 stays as a principle.
+
+## [2026-11-15] block | Build planned (16 Nov → 27 Dec, 6 weeks)
+- New block `wiki/blocks/2026-11-build.md`, Phase B, agreed by Jack `[stated, 2026-11-15]`. 6 weeks with Christmas as week 6; tests in week 5, before the holidays.
+- Running: one rotating quality session a week (cruise intervals → progression → threshold in the long run → tempo → threshold retest), long run 12 → 16km within the spike rule, ~33–38km/week.
+- Gym: anchors keep the odd/even rotation from 90/65/100/100 under the 2-for-2 rule. Accessories rotate: high-knee step-up alternates with Bulgarian split squat (odd/even), Jack likes BSS `[stated, 2026-11-15]`; standing overhead press, knee-drive hold + side plank, Reactive Level 3, single-leg calf, RDL new; Nordic, Copenhagen, bench, row, pull-ups kept.
+- Week 1 schedule written with days as a default; Jack to move them. Plan to adapt as it goes `[stated, 2026-11-15]`.
