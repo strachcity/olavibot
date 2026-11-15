@@ -1904,6 +1904,8 @@ distance_km: 13.63
 avg_pace: 5:09
 run_type: threshold
 relative_effort: 76
+hard_km: 6.8
+hard_min: 30
 ```
 - Planned: Threshold test inside a ~10km run: 2km warm-up, 3×10min "comfortably hard" (RPE 6–7), 2min jogs, easy to ~10km. Flat loop.
 - Done: 3km warm-up, 3×10min with Luka, "all around 4:40–4:50", talking the whole time; coffee, then jogged home `[stated, 2026-11-14]`. Whole activity 13.63km in 70:17 moving (102:46 elapsed, with the café stop), avg HR 147, max 167, Victoria Park, −1°C `[data, Strava activity 20981399669]`. Rep section on Strava: segments on the second loop ran at ~4:16–4:30/km with HR 153–166, rising through the reps; fastest 1km 4:23, fastest mile 7:09 `[data, segments, best efforts]`.
@@ -2068,3 +2070,8 @@ Agreed with Jack `[stated, 2026-11-15]`, informed by research passes 5–7:
 
 ## [2026-11-15] block | Build wk1 reshuffled for Swansea
 - Swansea Monday and Tuesday; easy run Monday night, nothing Tuesday evening `[stated, 2026-11-15]`. Tuesday rest, cruise intervals Wednesday, Session A Thursday. Rest of the week unchanged, ~35km.
+
+## [2026-11-15] model | Quality runs banded by their reps, not their average
+- The dashboard put the whole 14 Nov threshold run (13.63km at 5:09 average) in the grey band. Jack: no laps on the watch, so recognise the hard session and split it `[stated, 2026-11-15]`.
+- New optional run fields `hard_km` and `hard_min`, measured by Claude from the Strava pace stream. The dashboard bands the reps at their own pace and the rest at its own. Rule added to `CLAUDE.md` and `review-training`, and late-filling the two fields is allowed like the other Strava fields.
+- 14 Nov filled in: 3×10min reps at ~4:30, ~4:25, ~4:20/km → ~6.8km in 30min, hard. Rest 6.8km in ~40min at ~5:55/km, easy `[data, Strava stream and segments]`.

@@ -66,6 +66,13 @@ relative_effort: 12   # Strava's number, as-is; omit if the activity has none
 `distance_km`, `avg_pace` (m:ss) and `run_type` (easy | long | threshold | speed | strides |
 race); keep `relative_effort`. The Done line carries distance / time / pace / HR.
 
+**Quality runs add `hard_km` and `hard_min`** `[stated, 2026-11-15]`. Jack doesn't lap his
+runs, so measure the reps from the Strava pace stream (`get_activity_streams`: time, distance,
+velocity_smooth): find the sustained faster sections that match the planned structure, then
+sum their distance and minutes. Use the planned rep length to set the boundaries, not single
+fast samples. The dashboard bands the reps at their pace and the rest at its own pace. Without
+these fields a threshold session averages out as grey running.
+
 **`relative_effort`** comes straight from the Strava activity (`list_activities` returns it) —
 no asking, no estimating. It feeds the Fitness line on the dashboard.
 
