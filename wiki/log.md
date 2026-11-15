@@ -2065,3 +2065,6 @@ Agreed with Jack `[stated, 2026-11-15]`, informed by research passes 5–7:
 - Running: one rotating quality session a week (cruise intervals → progression → threshold in the long run → tempo → threshold retest), long run 12 → 16km within the spike rule, ~33–38km/week.
 - Gym: anchors keep the odd/even rotation from 90/65/100/100 under the 2-for-2 rule. Accessories rotate: high-knee step-up alternates with Bulgarian split squat (odd/even), Jack likes BSS `[stated, 2026-11-15]`; standing overhead press, knee-drive hold + side plank, Reactive Level 3, single-leg calf, RDL new; Nordic, Copenhagen, bench, row, pull-ups kept.
 - Week 1 schedule written with days as a default; Jack to move them. Plan to adapt as it goes `[stated, 2026-11-15]`.
+
+## [2026-11-15] block | Build wk1 reshuffled for Swansea
+- Swansea Monday and Tuesday; easy run Monday night, nothing Tuesday evening `[stated, 2026-11-15]`. Tuesday rest, cruise intervals Wednesday, Session A Thursday. Rest of the week unchanged, ~35km.
