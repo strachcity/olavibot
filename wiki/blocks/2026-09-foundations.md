@@ -1,5 +1,5 @@
 # Block: Foundations
-Dates: 2026-09-21 → 2026-11-15 (8 weeks; extended 27 and 30 Oct)  ·  Phase: A  ·  Status: active
+Dates: 2026-09-21 → 2026-11-15 (8 weeks; extended 27 and 30 Oct)  ·  Phase: A  ·  Status: reviewed
 
 ## Emphasis
 Re-establish running frequency and relearn the gym movements after the backyard/Achilles
@@ -660,6 +660,32 @@ it. That's almost the same distance, so the week stays ~33km. Friday's Session A
 before the test, so the front squat stays at 65kg with nothing extra. The test protocol (2km
 warm-up, 3×10min, 2min jogs) is unchanged, and so is the calf test on Sunday.
 
+
+*Week 8 summary (9–15 Nov)*
+
+- **Progress.**
+  - Every planned item done, the plan changed twice (Session A to Friday; threshold to
+    Saturday). Two unplanned team runs (10 and 12 Nov) `[stated]`.
+  - Running 36.6km over 6 runs, against ~33km planned `[data, Strava]`.
+  - Gym 2/2, both cut short at the cheap end (trunk and pull-ups on Friday; Nordics and
+    Copenhagen on Sunday).
+  - Tests: threshold 3×10min at ~4:30 → 4:20/km, full sentences, walked recoveries; seated
+    calf raise 90kg = 1.14× bodyweight `[data]` `[stated]`.
+  - Knee-to-wall and hanging knee raise not retested.
+  - Achilles: no morning scores logged this week. "No longer hurts ever" stands
+    `[stated, 2026-11-06]`.
+- **Went well.**
+  - Both strength gates cleared.
+  - The threshold test came in far quicker than estimated (~4:25 against ~4:50).
+  - Trap bar 3×5 @100kg felt strong.
+  - The new session order cut the right things on both short days.
+- **Went badly.**
+  - Two retests missed again: a test placed inside a short session is the first thing to go.
+  - The threshold test ran off a partner's watch with walked recoveries, so the next one has to
+    copy those conditions to compare.
+  - Volume crept to 36.6km, the block's highest, from unplanned social runs.
+- **Next.** See the block review.
+
 ## What would change the plan
 - Achilles >5/10 during loading, or two rising AM mornings in a row: hold running volume,
   freeze reactive level, keep calf work.
@@ -669,11 +695,90 @@ warm-up, 3×10min, 2min jogs) is unchanged, and so is the calf test on Sunday.
 
 ---
 
-## Review (filled at the end)
-- Planned vs done (sessions, volume, adherence %)
-- Tests (training-model §12) vs previous block — first baseline, no prior to compare
-- Enjoyment — did it feel good?
-- Beyond-plan count, and what drove it
-- Achilles trend
-- Hypotheses tested — confirmed, refuted, still open (which squat/deadlift variant won)
-- What the next block changes
+## Review
+
+Written 15 Nov 2026 from the log's metrics blocks and Strava, not from memory. Foundations
+ran 8 weeks (21 Sep – 15 Nov), extended twice from 6, for the two run tests.
+
+**Planned vs done**
+- Sessions: ~44 of 47 planned sessions done (~94%) `[data, log]`.
+  - Missed: week 3's fourth run, the week 5 heel-raise baseline, week 6 Session B.
+  - 11 logged as partial, mostly sessions cut at the end, or strides and tests dropped.
+- Volume: 20 → 23 → 25 → 29 → 29 → 30 → 34 → 37km per week, 228km in 35 runs `[data]`. Runs
+  per week went from 3 to 5–6, so the block's frequency goal was met. Long run 8 → 12km.
+- Gym: 16 sessions in 8 weeks, 2 a week every week, plus 1 unplanned upper session.
+
+**Tests (first baseline, so nothing to compare against)**
+
+| Test | Result |
+|---|---|
+| Heel raise L / R | 40 / 43 reps (93%) |
+| Seated calf raise | 90kg = 1.14× BW (79kg) |
+| 5k | 21:28, tired and sore-throated, fast start |
+| Threshold 3×10 | ~4:30 → 4:20/km, conversational, walked recoveries |
+| Balance | ≥60s, at the cap |
+| Hanging knee raise | ≥10, a floor |
+| Knee-to-wall | Not usable |
+
+Both gates pass. The 5k and threshold disagree: the threshold implies fitness well ahead of a
+21:28 5k `[inferred]`.
+
+**Enjoyment.** Almost never scored in the metrics blocks, so it can't be averaged; this is a
+gap. What was `[stated]`:
+- "Breezy" squats, "felt great" gym sessions, "really nice" team runs, "full of beans" long
+  runs.
+- Low points were tired weeks (5–6h sleep), hangovers (10 Oct, 1 Nov) and a shattered 5k day.
+- No session was reported as disliked apart from the Pallof press, which was dropped.
+
+**Beyond plan: 8 logged.**
+- Good days: back squat 95kg on 20 Oct; strides on 21 Oct.
+- Social runs: 10 and 12 Nov.
+- Misreads: trap bar 100kg on 15 Nov.
+- Planning errors Claude made: 4km runs with no route.
+- One the plan didn't want: the 5k test on a shattered day.
+
+Pattern: when he goes over the plan, it's on good days and on social runs. It's small each
+time, and nothing it caused needed fixing. Rule 4 holds, but in this block it showed up mostly
+in the gym and the extras, not in running load spikes.
+
+**Achilles and foot.**
+- Achilles: 1s in week 1, then 0 nearly every reported morning. Peak 2/10 on 18 Oct.
+  "No longer hurts ever" from early November `[stated, 2026-11-06]`.
+- Left lateral foot: flared 11–18 Oct (walking pain), gone since 21 Oct, including through a
+  race-effort 5k and pogos. No physio, by Jack's choice.
+- Volume rose 83% with the Achilles quiet: the block's main safety result.
+
+**Hypotheses**
+- *Which squat and deadlift variants work best*: **still open, but leaning one way.**
+  - Back squat went 80 → 95kg, with 90kg "breezy". Front squat held 60–65kg. They're
+    different lifts, so the comparison is enjoyment and progress, and the back squat led on
+    both.
+  - Conventional deadlift 100kg was grip-limited on a thick bar. Trap bar 100kg was
+    "great and strong" with no grip limit.
+  - `[inferred]`: back squat and trap bar look like the better fits. Jack decides.
+- *A gradual return to frequency keeps the Achilles quiet*: **supported** by this block
+  `[data]`.
+
+**Lint**
+- `athlete.md` → Strength is stale (August numbers). The block's working sets are better
+  evidence: back squat 95×5, trap bar and deadlift 100×5, bench 50×8, pull-ups 4.
+- Bodyweight now 79kg (was 77–78).
+- `tests.md` e1RM row is still empty; it could be estimated from working sets.
+- Open hypotheses in `observations.md` (hip flexor failure, post-ultra return) are older than
+  one block and still `[inferred]`. Ask Jack, or design a test.
+- Model drift: the "one variable at a time" idea was dropped early. Easy runs are 5 or 6km
+  routes, now in `athlete.md`.
+
+**What the next block should change** (proposals, for Jack)
+1. **Threshold weekly**, now tested and the foot clear: one session of 3×8–10min by effort,
+   with a jogged or walked recovery kept the same throughout.
+2. **Reactive progression**: gates passed, Level 2 → 3 when mornings stay at 0.
+3. **Hold volume ~30–35km**, with the long run building gently from 12km. Team runs count as an
+   easy run when they happen.
+4. **Choose anchor variants**, probably back squat and trap bar.
+5. **Upper lifts tracked** (bench, pull-ups) with a ramp, target and ceiling, at a lower
+   priority than legs `[stated, 2026-11-15]`.
+6. **Week 1 retests**, done at home or at the start of the session: knee-to-wall (tape) and
+   hanging knee raise.
+7. **Score enjoyment** in the metrics blocks, one number per session, so the next review can
+   use it.
