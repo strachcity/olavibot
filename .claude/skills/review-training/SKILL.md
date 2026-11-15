@@ -70,7 +70,8 @@ race); keep `relative_effort`. The Done line carries distance / time / pace / HR
 runs, so measure the reps from the Strava pace stream (`get_activity_streams`: time, distance,
 velocity_smooth): find the sustained faster sections that match the planned structure, then
 sum their distance and minutes. Use the planned rep length to set the boundaries, not single
-fast samples. The dashboard bands the reps at their pace and the rest at its own pace. Without
+fast samples. The dashboard counts the reps as hard whatever their pace (they were the point of the session,
+not drift) and bands the rest at its own pace. Without
 these fields a threshold session averages out as grey running.
 
 **`relative_effort`** comes straight from the Strava activity (`list_activities` returns it) —
