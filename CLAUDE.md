@@ -139,7 +139,6 @@ either a number, one of the listed words, or `pending`. Never prose, never a ran
 ```yaml
 planned: yes          # yes | no | partial — drives adherence %
 rpe: 7                # 1-10
-enjoyment: 4          # 1-5
 achilles_during: 2    # 0-10
 achilles_next_am: pending   # 0-10 | pending
 beyond_plan: none     # none | a short phrase, no commas
