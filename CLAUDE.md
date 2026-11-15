@@ -154,7 +154,8 @@ session, the sum of its Strava activities). Omit it when Strava has none (no hea
 Quality runs (`threshold`, `speed`, a progression or a long run with reps) add `hard_km` and
 `hard_min`: the distance and time of the hard running, which Claude measures from the Strava
 pace stream. Jack doesn't lap his runs `[stated, 2026-11-15]`. The dashboard bands the reps and
-the rest separately, so the average pace doesn't put the session in grey.
+the rest separately: the reps always count as hard, whatever their pace, because they were the
+purpose of the run `[stated, 2026-11-15]`. Grey is for drift, not for quality.
 
 Omit a field you genuinely don't have rather than guessing it. Block reviews count these
 blocks rather than estimating from the prose.

@@ -2075,3 +2075,6 @@ Agreed with Jack `[stated, 2026-11-15]`, informed by research passes 5–7:
 - The dashboard put the whole 14 Nov threshold run (13.63km at 5:09 average) in the grey band. Jack: no laps on the watch, so recognise the hard session and split it `[stated, 2026-11-15]`.
 - New optional run fields `hard_km` and `hard_min`, measured by Claude from the Strava pace stream. The dashboard bands the reps at their own pace and the rest at its own. Rule added to `CLAUDE.md` and `review-training`, and late-filling the two fields is allowed like the other Strava fields.
 - 14 Nov filled in: 3×10min reps at ~4:30, ~4:25, ~4:20/km → ~6.8km in 30min, hard. Rest 6.8km in ~40min at ~5:55/km, easy `[data, Strava stream and segments]`.
+
+## [2026-11-15] model | Quality reps count as hard, whatever their pace
+- Jack: quality sessions will have reps in the grey pace range, but they shouldn't show as grey, because the purpose was quality `[stated, 2026-11-15]`. The dashboard now puts `hard_km` in the hard band regardless of pace; the rest of the run is still banded by its own pace. Grey now means drift on runs meant to be easy or steady. Follows the entry above.
