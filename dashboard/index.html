@@ -8,68 +8,53 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-  /* Colours are tokens. The palette script sets them per week from the recipe book;
-     these defaults are the dusk recipe, so the page still looks right if the script fails. */
+  /* Colours are tokens. The palette script sets them (light by default, dark from the header
+     switch); these defaults are the light palette, so the page still looks right if it fails. */
   :root {
-    color-scheme: dark;
-    --ground: #0c0e12;
-    --ink: #eef1f0;
-    --ink-2: #b4bcbd;
-    --ink-3: #7c8588;
-    --fg: #ffffff;            /* hairlines and faint fills */
-    --sink: #000000;          /* recessed wells */
-    --glass: rgba(255, 255, 255, 0.055);
-    --glass-hi: rgba(255, 255, 255, 0.10);
-    --edge: rgba(255, 255, 255, 0.13);
-    --highlight: rgba(255, 255, 255, 0.08);
-    --shadow-color: rgba(0, 0, 0, 0.6);
-    --blob-opacity: .75;
-    --accent: #7ef2c1;
-    --accent-2: #d9fff0;
-    --text-glow: rgba(0, 0, 0, 0);
-    --warm: #ff7a45;
-    --glow-1a: #ff8a4c; --glow-1b: #c2410c;
-    --glow-2a: #1f6f5a; --glow-2b: #0f3b33;
-    --glow-3: #6d6a86;
-    --grey-top: #e3e4ea;
-    --easy: #4fd8a0;
-    --steady: #2f8a70;
-    --grey: #8d90a0;
-    --hard: #ff7a45;
-    --race: #f3ece4;
+    color-scheme: light;
+    --ground: #c6e0e8;
+    --ink: #101d21;
+    --ink-2: #384346;
+    --ink-3: #556063;
+    --fg: #172428;            /* hairlines and faint fills */
+    --sink: #ffffff;          /* recessed wells */
+    --edge: rgba(255, 255, 255, .65);
+    --accent: #ff7f00;
+    --accent-2: #ffa541;
+    --warm: #ff7f00;
+    --grey-top: #5b5e6b;
+    --easy: #1b9a6b;
+    --steady: #7cc4a8;
+    --grey: #9a9dab;
+    --hard: #e0602c;
+    --race: #2b2f36;
+    --dot: rgba(28, 50, 56, .32);
+    --tone: #040f13;
+    --tone-shade: rgba(31, 126, 148, .55);
+    --beam-glow: rgba(255, 146, 0, .85);
+    --beam-haze: rgba(255, 169, 88, .45);
     --warn: #ffc15e;
     --display: "Urbanist", "Avenir Next", "Segoe UI", system-ui, sans-serif;
     --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
   }
-  /* Colour tokens are registered so a mode or week change blends every colour over 0.5s. */
+  /* Colour tokens are registered so a mode change blends every colour over 0.5s. */
   @property --ground { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --ink { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --ink-2 { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --ink-3 { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --fg { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --sink { syntax: "<color>"; inherits: true; initial-value: transparent; }
-  @property --glass { syntax: "<color>"; inherits: true; initial-value: transparent; }
-  @property --glass-hi { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --edge { syntax: "<color>"; inherits: true; initial-value: transparent; }
-  @property --highlight { syntax: "<color>"; inherits: true; initial-value: transparent; }
-  @property --shadow-color { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --accent { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --accent-2 { syntax: "<color>"; inherits: true; initial-value: transparent; }
-  @property --text-glow { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --warm { syntax: "<color>"; inherits: true; initial-value: transparent; }
-  @property --glow-1a { syntax: "<color>"; inherits: true; initial-value: transparent; }
-  @property --glow-1b { syntax: "<color>"; inherits: true; initial-value: transparent; }
-  @property --glow-2a { syntax: "<color>"; inherits: true; initial-value: transparent; }
-  @property --glow-2b { syntax: "<color>"; inherits: true; initial-value: transparent; }
-  @property --glow-3 { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --grey-top { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --easy { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --steady { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --grey { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --hard { syntax: "<color>"; inherits: true; initial-value: transparent; }
   @property --race { syntax: "<color>"; inherits: true; initial-value: transparent; }
-  @property --blob-opacity { syntax: "<number>"; inherits: true; initial-value: .75; }
-  :root { transition: --text-glow .5s ease, --ground .5s ease, --ink .5s ease, --ink-2 .5s ease, --ink-3 .5s ease, --fg .5s ease, --sink .5s ease, --glass .5s ease, --glass-hi .5s ease, --edge .5s ease, --highlight .5s ease, --shadow-color .5s ease, --accent .5s ease, --accent-2 .5s ease, --warm .5s ease, --glow-1a .5s ease, --glow-1b .5s ease, --glow-2a .5s ease, --glow-2b .5s ease, --glow-3 .5s ease, --grey-top .5s ease, --easy .5s ease, --steady .5s ease, --grey .5s ease, --hard .5s ease, --race .5s ease, --blob-opacity .5s ease; }
+  :root { transition: --ground .5s ease, --ink .5s ease, --ink-2 .5s ease, --ink-3 .5s ease, --fg .5s ease, --sink .5s ease, --edge .5s ease, --accent .5s ease, --accent-2 .5s ease, --warm .5s ease, --grey-top .5s ease, --easy .5s ease, --steady .5s ease, --grey .5s ease, --hard .5s ease, --race .5s ease; }
   :root.instant { transition: none; }
   @media (prefers-reduced-motion: reduce) { :root { transition: none; } }
   * { box-sizing: border-box; }
@@ -84,29 +69,12 @@
     overflow-x: hidden;
   }
 
-  /* ---------- atmosphere ---------- */
+  /* ---------- sky: dot grid, halftone marks, orange crosslines, grain ---------- */
   .sky { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
-  .blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: var(--blob-opacity); }
-  .b1 { width: 62vw; height: 62vw; right: -18vw; top: -22vw; background: radial-gradient(circle, var(--glow-1a) 0%, var(--glow-1b) 45%, transparent 70%); animation: drift1 38s ease-in-out infinite alternate; }
-  .b2 { width: 55vw; height: 55vw; left: -20vw; bottom: -25vw; background: radial-gradient(circle, var(--glow-2a) 0%, var(--glow-2b) 50%, transparent 72%); animation: drift2 46s ease-in-out infinite alternate; }
-  .b3 { width: 38vw; height: 38vw; left: 30vw; top: 30vh; background: radial-gradient(circle, var(--glow-3) 0%, transparent 70%); opacity: .35; animation: drift1 52s ease-in-out infinite alternate-reverse; }
-  .streaks { position: absolute; inset: -10%; background:
-      repeating-linear-gradient(97deg, transparent 0 38px, color-mix(in srgb, var(--fg) 1.8%, transparent) 38px 40px, transparent 40px 120px);
-    filter: blur(2px); animation: slide 24s linear infinite; }
   .grain { position: absolute; inset: 0; opacity: .08; mix-blend-mode: overlay;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)' fill='%23ffffff'/></svg>"); }
-  @keyframes drift1 { to { transform: translate(-8vw, 10vh) scale(1.12); } }
-  @keyframes drift2 { to { transform: translate(10vw, -8vh) scale(1.08); } }
-  @keyframes slide { to { transform: translateX(-120px); } }
-  @media (prefers-reduced-motion: reduce) { .blob, .streaks { animation: none; } }
-
-  /* ---------- "coordinate" sky: dot grid, halftone marks, orange crosslines ----------
-     Used instead of the glow blobs when a week's recipe sets sky: "coordinate". */
-  .coord { display: none; position: absolute; inset: 0; }
-  [data-sky="coordinate"] .coord { display: block; }
-  [data-sky="coordinate"] .blob, [data-sky="coordinate"] .streaks { display: none; }
-  [data-sky="coordinate"] .glass { background: color-mix(in srgb, var(--ground) 38%, transparent); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); box-shadow: none; }
-  .dots { position: absolute; inset: 0; background-image: radial-gradient(circle, var(--dot) 1px, transparent 1.5px); background-size: 12px 12px; }
+  .coord { position: absolute; inset: 0; }
+  .sky .dots { position: absolute; inset: 0; background-image: radial-gradient(circle, var(--dot) 1px, transparent 1.5px); background-size: 12px 12px; }
   .tone, .tone-shade { position: absolute; inset: 0; --m:
       radial-gradient(ellipse 6% 3.5% at 90% 8%, #000 35%, transparent 72%),
       radial-gradient(ellipse 3% 9% at 5% 22%, #000 35%, transparent 72%),
@@ -128,12 +96,11 @@
   /* ---------- frame ---------- */
   .wrap { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding-inline: 20px; padding-block: 22px 48px; display: grid; gap: 16px; }
   .glass {
-    background: linear-gradient(160deg, var(--glass-hi), var(--glass) 55%);
+    background: color-mix(in srgb, var(--ground) 38%, transparent);
     border: 1px solid var(--edge);
     border-radius: 22px;
-    backdrop-filter: blur(24px) saturate(160%);
-    -webkit-backdrop-filter: blur(24px) saturate(160%);
-    box-shadow: inset 0 1px 0 var(--highlight), 0 30px 60px -30px var(--shadow-color);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     padding: 20px 22px;
     min-width: 0;
   }
@@ -342,7 +309,6 @@
     a.strip { grid-template-columns: 1fr; }
     .totals { grid-template-columns: repeat(2, 1fr); }
   }
-  .pill.mood { display: inline-flex; align-items: center; gap: 8px; text-transform: lowercase; letter-spacing: .06em; color: var(--ink); }
   .switch { position: relative; flex: none; width: 62px; height: 32px; padding: 0; border-radius: 999px; cursor: pointer;
     border: 1px solid var(--edge); background: color-mix(in srgb, var(--sink) 22%, transparent); box-shadow: inset 0 1px 2px rgba(0,0,0,.18); }
   .switch:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
@@ -356,13 +322,10 @@
   :root[data-mode="dark"] .knob svg { transform: rotate(-90deg); }
   :root.instant .knob, :root.instant .knob svg { transition: none; }
   @media (prefers-reduced-motion: reduce) { .knob, .knob svg { transition: none; } }
-  .pill.mood i { width: 12px; height: 12px; border-radius: 50%; background: conic-gradient(var(--glow-1a), var(--accent), var(--glow-2a), var(--glow-1a)); }
   @media (prefers-reduced-motion: reduce) { a.wk { transition: none; } }
 </style>
 
 <div class="sky" aria-hidden="true">
-  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
-  <div class="streaks"></div>
   <div class="coord"><div class="dots"></div><div class="tone-shade"></div><div class="tone"></div>
     <div class="hline h1"></div><div class="hline h2"></div></div>
   <div class="grain"></div>
@@ -373,7 +336,6 @@
     <div class="mark"><i></i>olavibot</div>
     <nav class="nav" id="nav" aria-label="Views"></nav>
     <span class="spacer"></span>
-    <span class="pill mood" id="mood-pill" title="This week's palette"></span>
     <button type="button" class="switch" id="mode-btn" role="switch" aria-checked="true" aria-label="Dark mode">
       <svg class="ico sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="3"/><path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3 3l1 1M12 12l1 1M3 13l1-1M12 4l1-1"/></svg>
       <svg class="ico moon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M13.5 9.5A6 6 0 0 1 6.5 2.5a6 6 0 1 0 7 7z"/></svg>
@@ -1313,35 +1275,10 @@ function drawFitness(host) {
   ].map(([k, on, t, d]) => `<div class="${on ? "" : "off"}"><i class="${k}"></i><b>${t}</b> ${d}</div>`).join("");
 }
 
-// ---------- palette: one per week, from the recipe book ----------
-// Each week (by its Monday) deterministically picks a recipe and a hue, so a week keeps its
-// colours on every device and past weeks keep theirs. The name is "<hue word> <recipe>".
-// To grow the book, add a recipe. To fix a week you don't like, pin it in PINNED.
-// To keep one look running week after week, set HOLD; clear it (null) to go back to the deal.
-const RECIPES = [
-  { name: "dusk",     mode: "dark",  hue: [25, 60],   shift: 125 },   // ember glow, mint accent
-  { name: "frost",    mode: "light", hue: [215, 255], shift: 25 },    // bright, frosted, blue
-  { name: "nocturne", mode: "dark",  hue: [250, 295], shift: 175 },   // violet night, amber accent
-  { name: "bloom",    mode: "light", hue: [335, 370], shift: 160 },   // pastel rose, deep teal accent
-  { name: "canopy",   mode: "dark",  hue: [140, 175], shift: -115 },  // forest, coral accent
-  { name: "haze",     mode: "light", hue: [55, 90],   shift: 170 },   // sand and sun, indigo accent
-];
-// Pin-only recipes: not in the dealt deck (adding them there would re-deal past weeks).
-const SPECIALS = [
-  { name: "coordinate", mode: "light", hue: [205, 230], shift: -160, sky: "coordinate" },  // dot grid, halftone marks, orange crosslines
-];
-const PINNED = {
-  "2026-09-21": { recipe: "dusk", hue: 42 },   // the original ember-and-mint week
-  "2026-09-28": { recipe: "frost", hue: 235 }, // dealt moss canopy, too close to week 1's green and orange
-  "2026-10-12": { recipe: "coordinate", hue: 218 }, // Jack's pick: the Ewha "The Coordinate" poster look
-};
-// Every week from `from` on wears this until Jack changes it. When he does, pin the held
-// weeks in PINNED first so they keep this look.
-const HOLD = { from: "2026-10-12", recipe: "coordinate", hue: 218 };
-const HUE_WORDS = [[20, "cherry"], [45, "ember"], [75, "amber"], [105, "citrus"], [150, "moss"], [185, "jade"],
-  [215, "lagoon"], [250, "cobalt"], [285, "indigo"], [320, "violet"], [345, "orchid"], [360, "cherry"]];
-const hueWord = h => HUE_WORDS.find(([m]) => ((h % 360) + 360) % 360 < m)[1];
-
+// ---------- palette: the "coordinate" look ----------
+// One look for every week: dot grid, halftone marks, orange crosslines. Light by default;
+// the header switch flips to dark.
+const HUE = 218, ACCENT_HUE = HUE - 160;
 function oklch(L, C, h) {
   const r = h * Math.PI / 180, a = C * Math.cos(r), b = C * Math.sin(r);
   const l = (L + .3963377774 * a + .2158037573 * b) ** 3, m = (L - .1055613458 * a - .0638541728 * b) ** 3, s = (L - .0894841775 * a - 1.291485548 * b) ** 3;
@@ -1360,47 +1297,12 @@ function readable(L, C, h, ground, min, dark) {
   for (let i = 0; i < 30 && contrast(c, ground) < min; i++) { L += dark ? .015 : -.015; c = oklch(L, C, h); }
   return c;
 }
-function rand(seed) {  // mulberry32
-  let t = (seed + 0x6d2b79f5) | 0;
-  t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
-  return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-}
-const REROLL = +(new URLSearchParams(location.search).get("palette") || 0);
-// Recipes are dealt like a shuffled deck: every recipe once per cycle, reshuffled each cycle,
-// never the same recipe two weeks running (pins included).
-function dealt(w) {
-  const n = RECIPES.length, cycle = Math.floor(w / n), order = [...RECIPES.keys()];
-  for (let i = n - 1; i > 0; i--) { const j = Math.floor(rand(cycle * 9973 + i) * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
-  return order[((w % n) + n) % n];
-}
-// A week is fresh when its ground colour (the one that fills the page) sits at least 60° from
-// both of last week's colours, so swapped pairs (ember/mint, then moss/coral) count as a repeat.
-const FIRST_WEEK = "2026-09-21", PICKS = {};
-const hueGap = (a, b) => { const d = Math.abs(((a - b) % 360 + 360) % 360); return Math.min(d, 360 - d); };
-const huesOf = p => [p.hue, p.hue + p.recipe.shift];
-const fresh = (p, q) => huesOf(q).every(b => hueGap(p.hue, b) >= 60);
-function pickFor(monday) {
-  if (PICKS[monday]) return PICKS[monday];
-  const fixed = !REROLL && (PINNED[monday] || (HOLD && monday >= HOLD.from && HOLD));
-  if (fixed) return PICKS[monday] = { recipe: [...RECIPES, ...SPECIALS].find(r => r.name === fixed.recipe) || RECIPES[0], hue: fixed.hue };
-  const w = Math.round(ms(monday) / (7 * DAY)) + REROLL * 7919;
-  const at = i => { const r = RECIPES[i]; return { recipe: r, hue: r.hue[0] + rand(w * 40503 + 7) * (r.hue[1] - r.hue[0]) }; };
-  // The last three weeks, newest first. No recipe returns within three weeks; failing that,
-  // at least keep the colours clear of last week's.
-  const recent = [];
-  for (let d = addDays(monday, -7); d >= FIRST_WEEK && recent.length < 3; d = addDays(d, -7)) recent.push(pickFor(d));
-  const order = RECIPES.map((_, k) => (dealt(w) + k) % RECIPES.length).map(at);
-  const ok = p => !recent.length || fresh(p, recent[0]);
-  return PICKS[monday] = order.find(p => ok(p) && !recent.some(q => q.recipe === p.recipe))
-    || order.find(p => ok(p) && p.recipe !== recent[0].recipe)
-    || order.find(p => p.recipe !== recent[0].recipe);
-}
-function paletteFor(monday, mode) {
-  const { recipe, hue } = pickFor(monday);
-  const dark = (mode || recipe.mode) === "dark", h = hue, ah = hue + recipe.shift;
-  const ground = dark ? oklch(.155, .012, h) : oklch(.89, .03, h);   // light: mid-tone, so the glass has colour to frost
-  const P = {
-    name: `${hueWord(h)} ${recipe.name}`, dark, ground, sky: recipe.sky || "glow",
+function palette(dark) {
+  const h = HUE, ah = ACCENT_HUE;
+  const ground = dark ? oklch(.155, .012, h) : oklch(.89, .03, h);
+  const accent = oklch(.73, .2, ah);   // bright orange by choice, below 4.5:1 for small text
+  return {
+    dark, ground, accent, warm: accent, "accent-2": oklch(.82, .17, ah),   // one orange everywhere
     dot: dark ? rgba(oklch(.9, .02, h), .22) : rgba(oklch(.3, .03, h), .32),
     tone: dark ? oklch(.92, .02, h) : oklch(.16, .02, h),
     "tone-shade": dark ? rgba(oklch(.6, .08, h), .5) : rgba(oklch(.55, .09, h), .55),
@@ -1410,27 +1312,13 @@ function paletteFor(monday, mode) {
     "ink-3": readable(dark ? .62 : .54, .015, h, ground, 4.5, dark),
     fg: dark ? "#ffffff" : oklch(.25, .02, h),
     sink: dark ? "#000000" : "#ffffff",
-    glass: dark ? "rgba(255,255,255,.045)" : "rgba(255,255,255,.18)",
-    "glass-hi": dark ? "rgba(255,255,255,.10)" : "rgba(255,255,255,.42)",
     edge: dark ? "rgba(255,255,255,.13)" : "rgba(255,255,255,.65)",
-    highlight: dark ? "rgba(255,255,255,.08)" : "rgba(255,255,255,.9)",
-    "shadow-color": dark ? "rgba(0,0,0,.6)" : rgba(oklch(.35, .1, h), .35),
-    accent: recipe.sky === "coordinate" ? oklch(.73, .2, ah) : readable(dark ? .88 : .5, dark ? .14 : .15, ah, ground, 4.5, dark),   // coordinate: bright orange by choice, below 4.5:1 for small text
-    "accent-2": dark ? oklch(.96, .05, ah) : oklch(.68, .16, ah),   // light: runs up to a brighter tint for sheen
-    "text-glow": dark ? "rgba(0,0,0,0)" : rgba(oklch(.72, .17, ah), .55),   // dark glows on its own; light gets a halo
-    warm: readable(dark ? .72 : .6, .17, h, ground, 3, dark),
-    "glow-1a": dark ? oklch(.7, .17, h) : oklch(.78, .15, h), "glow-1b": dark ? oklch(.5, .16, h) : oklch(.68, .18, h),
-    "glow-2a": dark ? oklch(.46, .09, ah) : oklch(.79, .12, ah), "glow-2b": dark ? oklch(.3, .06, ah) : oklch(.87, .08, ah),
-    "glow-3": dark ? oklch(.5, .04, h + 60) : oklch(.78, .11, h + 60),
-    "blob-opacity": dark ? ".75" : ".9",
-    // Pace colours keep their meaning every week; only their lightness follows the mode.
+    // Pace colours keep their meaning; only their lightness follows the mode.
     easy: dark ? "#4fd8a0" : "#1b9a6b", steady: dark ? "#2f8a70" : "#7cc4a8", grey: dark ? "#8d90a0" : "#9a9dab",
     "grey-top": dark ? "#e3e4ea" : "#5b5e6b", hard: dark ? "#ff7a45" : "#e0602c", race: dark ? "#f3ece4" : "#2b2f36",
   };
-  if (recipe.sky === "coordinate") { P.warm = P.accent; P["accent-2"] = oklch(.82, .17, ah); }   // one orange everywhere
-  return P;
 }
-// Light/dark: each week's recipe picks a default; the header button overrides it, and the
+// Light/dark: light by default; the header button overrides it, and the
 // choice is remembered in this browser until switched back.
 let MODE = null;
 try { MODE = localStorage.getItem("olavi-mode"); } catch (e) {}
@@ -1438,25 +1326,22 @@ const ICONS = {
   sun: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="3"/><path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3 3l1 1M12 12l1 1M3 13l1-1M12 4l1-1"/></svg>',
   moon: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M13.5 9.5A6 6 0 0 1 6.5 2.5a6 6 0 1 0 7 7z"/></svg>',
 };
-function applyPalette(monday) {
-  S.monday = monday;
-  const P = paletteFor(monday, MODE), root = document.documentElement.style;
-  Object.entries(P).forEach(([k, v]) => typeof v === "string" && k !== "name" && root.setProperty("--" + k, v));
+function applyPalette() {
+  const P = palette(MODE === "dark"), root = document.documentElement.style;
+  Object.entries(P).forEach(([k, v]) => typeof v === "string" && root.setProperty("--" + k, v));
   root.setProperty("color-scheme", P.dark ? "dark" : "light");
   document.documentElement.dataset.mode = P.dark ? "dark" : "light";
-  document.documentElement.dataset.sky = P.sky;
-  $("mood-pill").innerHTML = `<i></i>${esc(P.name)}`;
   const btn = $("mode-btn");
   $("knob").innerHTML = P.dark ? ICONS.moon : ICONS.sun;
   btn.setAttribute("aria-checked", String(P.dark));
   btn.title = P.dark ? "Dark mode · switch to light" : "Light mode · switch to dark";
-  // First paint lands without a fade; later changes (switch, week to week) blend.
+  // First paint lands without a fade; later changes blend.
   if (document.documentElement.classList.contains("instant")) requestAnimationFrame(() => requestAnimationFrame(() => document.documentElement.classList.remove("instant")));
 }
 $("mode-btn").addEventListener("click", () => {
   MODE = document.documentElement.dataset.mode === "dark" ? "light" : "dark";
   try { localStorage.setItem("olavi-mode", MODE); } catch (err) {}
-  if (S.monday) applyPalette(S.monday);
+  applyPalette();
 });
 
 // ---------- router ----------
@@ -1468,7 +1353,6 @@ function render() {
   const n = b && wk && /^w\d+$/.test(wk) ? +wk.slice(1) : null;
   const route = !b ? "now" : n && weeksWithData(b).includes(n) ? "week" : "block";
   const cur = b || S.active;
-  applyPalette(route === "week" ? weekStart(b, n) : route === "block" ? mondayOf(b.start) : mondayOf(TODAY));
 
   $("nav").innerHTML = [`<a class="pill" href="#now"${route === "now" ? ' aria-current="page"' : ""}>Now</a>`,
     ...S.blocks.map(x => `<a class="pill" href="#${x.id}"${route !== "now" && x === b ? ' aria-current="page"' : ""}>${esc(x.name)}</a>`)].join("");
@@ -1489,6 +1373,7 @@ function render() {
   if (route !== "now") window.scrollTo({ top: 0 });
 }
 
+applyPalette();
 $("today-pill").textContent = fmt(TODAY, { weekday: "short", day: "numeric", month: "short", year: "numeric" });
 load().then(() => {
   const lastLog = S.log.map(e => e.date).sort().pop();
