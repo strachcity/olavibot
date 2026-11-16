@@ -119,8 +119,13 @@ deleted.** Amending a field that was explicitly recorded as `pending` inside an 
 — the next-morning Achilles score, usually — is allowed and expected. So is adding Strava's
 `duration_min` and `relative_effort` to an entry logged before the activity reached Strava
 `[stated, 2026-10-14]`, or `hard_km` and `hard_min` to a quality run measured after logging
-`[stated, 2026-11-15]`. Nothing else gets edited after the fact; a correction is a new entry
-that references the old one.
+`[stated, 2026-11-15]`.
+
+**Jack's corrections are made in place** `[stated, 2026-11-16]`. When Jack corrects an entry
+(what he did, how it went, a field that was wrong), edit that entry's metrics block and prose
+to match, and add a last line `- Corrected YYYY-MM-DD: <what changed, from what>` so the
+history stays visible. Anything else that turns out wrong, including Claude's own reviews and
+interpretations, still gets a new entry that references the old one.
 
 Every entry starts with a parseable header:
 

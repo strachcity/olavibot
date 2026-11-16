@@ -2092,7 +2092,7 @@ Agreed with Jack `[stated, 2026-11-15]`, informed by research passes 5–7:
 
 ## [2026-11-16] run | Easy 6km, Swansea — Build wk1
 ```yaml
-planned: partial
+planned: yes
 achilles_next_am: pending
 beyond_plan: none
 duration_min: 39
@@ -2102,11 +2102,16 @@ run_type: easy
 relative_effort: 17
 ```
 - Planned: Easy 6km + strides 4–6×20s, Swansea, evening.
-- Done: Two Strava activities `[data, Strava 21012537208 and 21013214629]`. 18:32: 5.41km in 34:46 moving, 6:25/km, 29m gain. 20:06, about an hour and a half later: 0.82km home in 3:50, 4:39/km. Rain, wind 23–29km/h from the east, feels like 0–(−1)°C `[data, Strava weather]`. Very stormy, stomach "a bit funny", no strides `[stated, 2026-11-16]`.
-- Beyond plan: none. Strides dropped.
+- Done: Two Strava activities `[data, Strava 21012537208 and 21013214629]`. 18:32: 5.41km in 34:46 moving, 6:25/km, 29m gain. 20:06, about an hour and a half later: 0.82km home in 3:50, 4:39/km. Rain, wind 23–29km/h from the east, feels like 0–(−1)°C `[data, Strava weather]`. Very stormy, stomach "a bit funny" `[stated, 2026-11-16]`. The 0.82km home was the strides `[stated, 2026-11-16]`.
+- Beyond plan: none.
 - Capacity: not reported.
-- Review: Partial only because the strides went, which was the right call with a stomach problem in a storm. The first 5.4km was comfortably easy. The 0.8km home ran at 4:39/km; numbers only, not interpreted. Wednesday's cruise intervals only go ahead if the stomach is back to normal.
+- Review: As planned, in a storm with a dodgy stomach. The first 5.4km was comfortably easy; the strides went into the run home. Wednesday's cruise intervals only go ahead if the stomach is back to normal.
+- Corrected 2026-11-16: planned partial → yes, "no strides" → strides done on the run home (Jack). See the correction entry below.
 
 ## [2026-11-16] review | Correction: Swansea run did include strides
 - Corrects the 16 Nov run entry. The 0.82km home at 4:39/km was the strides `[stated, 2026-11-16]`, not a run without them. So the session was effectively as planned (6km + strides). The entry's `planned: partial` and "no strides" lines stand as written, and this entry supersedes them.
 - Wind: Strava's weather for the two activities gives 23–29km/h from the east, rain, feels like 0 to −1°C `[data, Strava weather]`. That's a fresh breeze from the nearest station; gusts in a storm would be higher. Fair to call it a lot.
+
+## [2026-11-16] model | Jack's corrections are made in place
+- Jack: allow the log to be edited after the fact with his corrections `[stated, 2026-11-16]`. His corrections now change the entry itself, with a closing `Corrected <date>:` line saying what changed. Claude's own errors still get a new entry. Rule in `CLAUDE.md` and `review-training`.
+- Applied to the 16 Nov Swansea run: planned partial → yes, strides done.

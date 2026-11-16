@@ -102,12 +102,16 @@ no asking, no estimating. It feeds the Fitness line on the dashboard.
 Fields you don't have, omit. Never guess a number into the block — an invented RPE becomes
 `[data]` in a review three months later.
 
-**The one permitted edit.** When Jack later reports the next-morning Achilles score, change
+**Permitted edits.** When Jack later reports the next-morning Achilles score, change
 `achilles_next_am: pending` to the number, in place, in the existing entry. Append-only forbids
 reordering, rewriting and deleting entries; resolving a field explicitly recorded as `pending`
 is the exception. So is adding `duration_min` and `relative_effort` from Strava to an entry
-logged before the activity uploaded `[stated, 2026-10-14]`. Anything else that turns out wrong gets a **new** entry referencing the old
-one — don't quietly rewrite history.
+logged before the activity uploaded `[stated, 2026-10-14]`, and `hard_km` / `hard_min` to a
+quality run `[stated, 2026-11-15]`. **Jack's own corrections** are made in place too
+`[stated, 2026-11-16]`: fix the metrics block and prose of the entry he corrects, and end it
+with `- Corrected YYYY-MM-DD: <what changed, from what>`. Anything else that turns out wrong,
+including Claude's own reviews, gets a **new** entry referencing the old one — don't quietly
+rewrite history.
 
 ### The review (2–4 lines)
 Critical and useful, not cheerleading.
