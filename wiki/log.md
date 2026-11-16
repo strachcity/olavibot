@@ -2089,3 +2089,20 @@ Agreed with Jack `[stated, 2026-11-15]`, informed by research passes 5–7:
 ## [2026-11-15] model | 5k test is a test, not a race
 - Jack: the 30 Oct 5k test should count as hard, not race; `race` is reserved for genuine races `[stated, 2026-11-15]`. New `run_type: test` for time trials and benchmarks.
 - 30 Oct entry edited in place at Jack's request: `run_type` race → test, plus `hard_km: 5.0` and `hard_min: 21.5` (the 21:28 best 5k inside the activity `[data, Strava best effort]`). The dashboard now shows the 5k as hard and the warm-up and cool-down by their pace, and no longer marks a race that week.
+
+## [2026-11-16] run | Easy 6km, Swansea — Build wk1
+```yaml
+planned: partial
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 39
+distance_km: 6.24
+avg_pace: 6:11
+run_type: easy
+relative_effort: 17
+```
+- Planned: Easy 6km + strides 4–6×20s, Swansea, evening.
+- Done: Two Strava activities `[data, Strava 21012537208 and 21013214629]`. 18:32: 5.41km in 34:46 moving, 6:25/km, 29m gain. 20:06, about an hour and a half later: 0.82km home in 3:50, 4:39/km. Rain, wind 23–29km/h from the east, feels like 0–(−1)°C `[data, Strava weather]`. Very stormy, stomach "a bit funny", no strides `[stated, 2026-11-16]`.
+- Beyond plan: none. Strides dropped.
+- Capacity: not reported.
+- Review: Partial only because the strides went, which was the right call with a stomach problem in a storm. The first 5.4km was comfortably easy. The 0.8km home ran at 4:39/km; numbers only, not interpreted. Wednesday's cruise intervals only go ahead if the stomach is back to normal.
