@@ -2106,3 +2106,7 @@ relative_effort: 17
 - Beyond plan: none. Strides dropped.
 - Capacity: not reported.
 - Review: Partial only because the strides went, which was the right call with a stomach problem in a storm. The first 5.4km was comfortably easy. The 0.8km home ran at 4:39/km; numbers only, not interpreted. Wednesday's cruise intervals only go ahead if the stomach is back to normal.
+
+## [2026-11-16] review | Correction: Swansea run did include strides
+- Corrects the 16 Nov run entry. The 0.82km home at 4:39/km was the strides `[stated, 2026-11-16]`, not a run without them. So the session was effectively as planned (6km + strides). The entry's `planned: partial` and "no strides" lines stand as written, and this entry supersedes them.
+- Wind: Strava's weather for the two activities gives 23–29km/h from the east, rain, feels like 0 to −1°C `[data, Strava weather]`. That's a fresh breeze from the nearest station; gusts in a storm would be higher. Fair to call it a lot.
