@@ -2115,3 +2115,20 @@ relative_effort: 17
 ## [2026-11-16] model | Jack's corrections are made in place
 - Jack: allow the log to be edited after the fact with his corrections `[stated, 2026-11-16]`. His corrections now change the entry itself, with a closing `Corrected <date>:` line saying what changed. Claude's own errors still get a new entry. Rule in `CLAUDE.md` and `review-training`.
 - Applied to the 16 Nov Swansea run: planned partial → yes, strides done.
+
+## [2026-11-18] run | Easy 5km in place of cruise intervals — Build wk1
+```yaml
+planned: partial
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 30
+distance_km: 5.51
+avg_pace: 5:25
+run_type: easy
+relative_effort: 22
+```
+- Planned: Cruise intervals ~7km: 2km warm-up, 4×5min at threshold effort, 1min jog, cool-down.
+- Done: Relaxed 5km instead, after a few pints `[stated, 2026-11-19]`. 5.51km in 29:51 moving, 5:25/km, 11m gain, London, 20:02 `[data, Strava 21039234221]`.
+- Beyond plan: none. Quality session not done.
+- Capacity: not reported.
+- Review: Right call not to do intervals after pints. "Relaxed" ran at 5:25/km, just quicker than the 5:30 easy band; numbers only. The week's quality session is still to place.
