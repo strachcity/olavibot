@@ -203,10 +203,13 @@ points.
 | Deadlift (anchor) | Session B | 3–5 × 3–6, straps on top sets **[W]** |
 
 **Anchor progression** `[stated, 2026-11-15]`. Working sets capped at about RPE 7–8. Strength
-doesn't need sets near failure **[I]**. Add load by the "2-for-2" rule: once the last set beats
-the rep target by 2 or more in two sessions running, add 2.5–5kg on the anchors (1–2.5kg on
-upper-body lifts) **[H]**, and the ceiling moves up with it. A target hit on a good day is not
-the rule being met. Upper-body lifts (bench, pull-ups) are tracked and progressed the same way,
+doesn't need sets near failure **[I]**. Add load by effort `[stated, 2026-11-19]`: when every
+working set of a session felt RPE 7 or easier (2–3 reps left), add 2.5–5kg on the anchors
+(1–2.5kg on upper-body lifts) next time, and the ceiling moves up with it. Any set at RPE 8 or
+harder holds the load. Replaces the "2-for-2" rule (last set beating the rep target by 2, two
+sessions running) **[H]**, which could never trigger on fixed 3×5 sets: back squat sat at 90kg
+from 6 Oct to 19 Nov while 95kg "felt great" (20 Oct) and 90kg was "breezy" (5 Nov) `[data, log]`.
+A pre-agreed top set at the next load counts as part of the plan, not a good-day extra. Upper-body lifts (bench, pull-ups) are tracked and progressed the same way,
 but always rank below the legs: on a short day they're what gets cut `[stated, 2026-11-15]`.
 Source: `references/evidence-gym-pool.md` → Strength testing and progression.
 
