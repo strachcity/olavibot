@@ -2140,3 +2140,21 @@ relative_effort: 22
 ## [2026-11-19] block | Build wk1: intervals to Friday, back squat up
 - Cruise intervals move from Wednesday (relaxed 5km instead) to Friday, replacing the easy 5km `[stated, 2026-11-19]`.
 - Today's back squat: 2×5 @95kg, then 100kg × 5 as the last set if both 95s felt RPE 7 or easier `[stated, 2026-11-19]`.
+
+## [2026-11-19] gym | Session A — Build wk1 (full gym)
+```yaml
+planned: partial
+rpe: 7
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 89
+gym: full
+session: A
+reactive_level: 3
+relative_effort: 11
+```
+- Planned: Back squat ramp (bar → 60 → 75 → 85 → 90), then 95×5, 95×5, 100×5 (100 only if both 95s RPE ≤7). High-knee step-up 3×8/leg + standing overhead press 3×6–8 (new). Knee-drive hold 3×20s/side + side plank 3×30s/side. Pull-ups 5×3 after a shoulder warm-up.
+- Done: Back squat 95×5, 95×5, 100×5; squats "good", 100 "felt good", RPE 7 `[stated, 2026-11-19]`. High-knee step-up 3×8/leg @2×12.5kg DBs; arms fatigue before legs `[stated]`. Standing overhead press 3×8 @30kg bar `[stated]`. Pull-ups 3×3 `[stated]`. Warm-up, knee-drive hold, side plank and cool-down: not reported. Bodyweight 78.6kg `[stated, 2026-11-19]`. Strava: 89 min, relative effort 11 `[data, Strava 21051794397]`.
+- Beyond plan: none. 100kg top set was pre-agreed.
+- Capacity: back squat 100kg × 5 at RPE 7, the heaviest working set on record (previous 95kg × 3×5, 20 Oct). Overhead press 30kg × 3×8, first record.
+- Review: Partial only because pull-ups were 3×3, not 5×3. The new rule moves the back squat to 100kg 3×5 in week 3, and the press to 32.5kg. Step-ups: Jack wants to see how heavy they go `[stated, 2026-11-19]`. Two dumbbells, +2.5kg each when every set is RPE ≤7 (2×15kg next); goblet hold at the same total once grip gives out first; Bulgarian split squat if that stops working. 89 min against a ≤75 target, with the 100kg set, new exercises and finding loads. Cruise intervals tomorrow.
