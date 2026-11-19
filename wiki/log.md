@@ -2132,3 +2132,11 @@ relative_effort: 22
 - Beyond plan: none. Quality session not done.
 - Capacity: not reported.
 - Review: Right call not to do intervals after pints. "Relaxed" ran at 5:25/km, just quicker than the 5:30 easy band; numbers only. The week's quality session is still to place.
+
+## [2026-11-19] model | Anchors progress by effort, not 2-for-2
+- Jack asked why his squat wasn't going up `[stated, 2026-11-19]`. The 2-for-2 rule needs the last set to beat the rep target by 2, but sets are fixed at 3×5, so it could never trigger. Back squat held at 90kg since 6 Oct despite 95kg "felt great" (20 Oct) and 90kg "breezy" (5 Nov) `[data, log]`. Claude's design error.
+- New rule, agreed `[stated, 2026-11-19]`: every working set RPE 7 or easier → add 2.5–5kg next time (1–2.5kg upper body); any set RPE 8+ holds. `training-model.md` §6 and the Build block updated.
+
+## [2026-11-19] block | Build wk1: intervals to Friday, back squat up
+- Cruise intervals move from Wednesday (relaxed 5km instead) to Friday, replacing the easy 5km `[stated, 2026-11-19]`.
+- Today's back squat: 2×5 @95kg, then 100kg × 5 as the last set if both 95s felt RPE 7 or easier `[stated, 2026-11-19]`.
