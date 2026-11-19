@@ -2158,3 +2158,6 @@ relative_effort: 11
 - Beyond plan: none. 100kg top set was pre-agreed.
 - Capacity: back squat 100kg × 5 at RPE 7, the heaviest working set on record (previous 95kg × 3×5, 20 Oct). Overhead press 30kg × 3×8, first record.
 - Review: Partial only because pull-ups were 3×3, not 5×3. The new rule moves the back squat to 100kg 3×5 in week 3, and the press to 32.5kg. Step-ups: Jack wants to see how heavy they go `[stated, 2026-11-19]`. Two dumbbells, +2.5kg each when every set is RPE ≤7 (2×15kg next); goblet hold at the same total once grip gives out first; Bulgarian split squat if that stops working. 89 min against a ≤75 target, with the 100kg set, new exercises and finding loads. Cruise intervals tomorrow.
+
+## [2026-11-19] block | Build: step-up progression path
+- Step-ups stay and progress by load: two dumbbells (2×12.5kg on 19 Nov), +2.5kg each when every set is RPE ≤7; goblet hold at the same total once grip fails before the legs; Bulgarian split squat if that stops working `[stated, 2026-11-19]`. Session A line in the Build block updated.
