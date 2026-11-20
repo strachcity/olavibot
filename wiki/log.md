@@ -2164,3 +2164,20 @@ relative_effort: 11
 
 ## [2026-11-20] block | Build wk1: cruise intervals into the long run
 - Jack: do the intervals in the long run this week `[stated, 2026-11-20]`. Saturday 12km: 3km easy, 4×5min threshold effort, 1min jog, easy to 12km. Friday easy 5km or rest. Sunday Session B with pogos only, no box jumps. Week ~34km.
+
+## [2026-11-20] run | Easy 6.5km — Build wk1
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 37
+distance_km: 6.52
+avg_pace: 5:43
+run_type: easy
+relative_effort: 18
+```
+- Planned: Easy 5km, or rest if legs heavy from Thursday's 100kg squat.
+- Done: 6.52km in 37:17 moving, 5:43/km, 13m gain, London, 18:46 `[data, Strava 21062645915]`.
+- Beyond plan: none.
+- Capacity: not reported.
+- Review: Easy pace, in the band. 1.5km over the 5km planned; numbers only. Long run with cruise intervals tomorrow.
