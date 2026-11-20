@@ -2161,3 +2161,6 @@ relative_effort: 11
 
 ## [2026-11-19] block | Build: step-up progression path
 - Step-ups stay and progress by load: two dumbbells (2×12.5kg on 19 Nov), +2.5kg each when every set is RPE ≤7; goblet hold at the same total once grip fails before the legs; Bulgarian split squat if that stops working `[stated, 2026-11-19]`. Session A line in the Build block updated.
+
+## [2026-11-20] block | Build wk1: cruise intervals into the long run
+- Jack: do the intervals in the long run this week `[stated, 2026-11-20]`. Saturday 12km: 3km easy, 4×5min threshold effort, 1min jog, easy to 12km. Friday easy 5km or rest. Sunday Session B with pogos only, no box jumps. Week ~34km.
