@@ -2181,3 +2181,22 @@ relative_effort: 18
 - Beyond plan: none.
 - Capacity: not reported.
 - Review: Easy pace, in the band. 1.5km over the 5km planned; numbers only. Long run with cruise intervals tomorrow.
+
+## [2026-11-21] run | Long run with 4×5min cruise intervals, with Luka — Build wk1
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: 3km extra to get home
+duration_min: 80
+distance_km: 15.03
+avg_pace: 5:21
+run_type: long
+relative_effort: 77
+hard_km: 3.7
+hard_min: 17
+```
+- Planned: Long 12km: 3km easy, 4×5min at threshold effort, 1min jog, easy to 12km. Ceiling 12km, each rep with one more in hand.
+- Done: 4×5min efforts with Luka, jogged between; "talkable but got harder", around 4:30/km, the last one about 4:00; ran longer to get home, coffee stop at 13km `[stated, 2026-11-21]`. 15.03km in 80:26 moving (2:19:31 elapsed, with the café), 78m gain, London, 07:57 `[data, Strava 21068178157]`. Rep sections from the pace stream, ~4.3km onward: ~1.03km at ~4:49, ~0.93km at ~4:35, ~0.94km at ~4:26, then ~0.78km at ~3:57 over about 3 minutes of fast running; ~3.7km in ~17 min in total `[data, Strava stream; Claude's measurement]`.
+- Beyond plan: 3km over the 12km ceiling, to get home.
+- Capacity: longest run of the year so far, 15.0km (previous 13.6km, 14 Nov) `[data, log]`.
+- Review: Reps 1–3 match the plan and got quicker, ~4:49 → ~4:26. Rep 4 at ~4:00 is faster than the 21:28 5k pace (4:18/km), so it wasn't a cruise interval: that's the ceiling broken, rule 4. 15km is 3km over the agreed 12km, within the spike rule (+1.4km on the 4-week longest) but above the plan. Tomorrow's Session B stays pogos only. Next time: the last rep at the same effort as the first.
