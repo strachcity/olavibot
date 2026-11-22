@@ -2201,3 +2201,51 @@ hard_min: 18
 - Capacity: longest run of the year so far, 15.0km (previous 13.6km, 14 Nov) `[data, log]`.
 - Review: Reps 1–3 match the plan and got quicker, ~4:49 → ~4:26. Rep 4 opened at ~4:00, quicker than the 21:28 5k pace (4:18/km); Jack: a fun last one, "didn't kill me", warmed up and having fun `[stated, 2026-11-21]`. Above the cruise-interval effort, and his call. 15km is 3km over the agreed 12km, within the spike rule (+1.4km on the 4-week longest). Tomorrow's Session B stays pogos only.
 - Corrected 2026-11-21: rep 4 was a full 5min, eased for terrain, not ~3min (Jack); hard_km 3.7 → 3.9, hard_min 17 → 18.
+
+## [2026-11-22] run | Easy — to gym (Session B)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 15
+distance_km: 2.55
+avg_pace: 5:57
+run_type: easy
+relative_effort: 11
+```
+- Planned: Easy 2.5km to the gym.
+- Done: 2.55km in 15:11, 5:57/km, 26m gain, 11:06 `[data, Strava 21083349800]`.
+- Review: Easy, as planned.
+
+## [2026-11-22] gym | Session B — Build wk1 (full gym)
+```yaml
+planned: yes
+rpe: 8
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 62
+gym: full
+session: B
+reactive_level: 3
+relative_effort: 8
+```
+- Planned: Pogos 3×10 only (no box jumps, the day after a quality long run). Conventional deadlift ramp, then 3×5 @100kg. Single-leg standing calf raise 3×10/leg + seated calf raise 3×12 @45kg. Bench 3×8. Romanian deadlift 3×8 (new). Barbell row 3×8.
+- Done: Ran to the gym. Conventional deadlift 3×5 @100kg, RPE 7–8 `[stated, 2026-11-22]`. Romanian deadlift @60kg `[stated]`, sets and reps not reported. Seated calf raise @45kg, "a decent workout" `[stated]`. Pogos, single-leg calf raise, bench, row, warm-up and cool-down: not reported. Strava: 62 min, relative effort 8 `[data, Strava 21083349871]`.
+- Beyond plan: none.
+- Capacity: Romanian deadlift 60kg, first record. Seated calf working load up from 35kg to 45kg.
+- Review: Within the ceiling, under 75 min. Deadlift at RPE 7–8 holds at 100kg next odd week under the new rule (any set at RPE 8 holds). Seated calf at 45kg is the right sort of hard; keep it. RPE recorded as 8, the top of the stated range.
+
+## [2026-11-22] run | Easy — home (Session B)
+```yaml
+planned: yes
+achilles_next_am: pending
+beyond_plan: none
+duration_min: 13
+distance_km: 2.38
+avg_pace: 5:25
+run_type: easy
+relative_effort: 4
+```
+- Planned: Easy 2.5km home.
+- Done: 2.38km in 12:54, 5:25/km, 12:24 `[data, Strava 21083349756]`.
+- Review: Numbers only.
