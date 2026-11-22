@@ -2256,4 +2256,7 @@ relative_effort: 4
 
 ## [2026-11-22] model | Achilles defaults to 0; weekly running same or higher
 - Jack: the Achilles is 0 unless he says otherwise `[stated, 2026-11-22]`. `achilles_next_am` is now logged as 0 by default and changed only when he reports a number. Build week 1 pending fields filled with 0. Rule in `CLAUDE.md` and `review-training`.
-- Jack: running can hold around 38km; he wants each week the same as or higher than the last `[stated, 2026-11-22]`. Build block weekly totals updated; the week 1 summary's "over plan" and "Session A 89 min" points corrected in place (the 89 min included cycling).
+- Jack: running can hold around 38km and grow sensibly, in proportion `[stated, 2026-11-22]`. Build block weekly totals updated; the week 1 summary's "over plan" and "Session A 89 min" points corrected in place (the 89 min included cycling).
+
+## [2026-11-22] model | Session A: pull-ups out of last place
+- Pull-ups were short three sessions running because they come last and Jack wants to go home `[stated, 2026-11-22]`. Agreed to try `[stated, 2026-11-22]`: pull-ups go into the step-up + press superset (three sets in the rests), two more alongside the knee-drive hold and side plank, which now go last. Build block and `programme-session` updated.

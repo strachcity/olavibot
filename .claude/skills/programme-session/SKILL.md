@@ -44,9 +44,10 @@ Run these checks. If one fails, change the session and say why in a line.
   allows alternatives.
 - **Balance:** Tier 1 every week; Tier 2 on its fortnightly rotation; Tier 3 in the warm-up.
 - **Order and length:** nothing that matters goes last. Whatever comes last should cost little
-  if it's dropped on a tired night. Aim for ≤75 min. Session A runs: anchor → Bulgarian
-  split squat + DB shoulder press → banded march + trunk → pull-ups on their own, after the
-  shoulder warm-up → cool-down `[stated, 2026-11-06]`.
+  if it's dropped on a tired night. Aim for ≤75 min. Session A runs: anchor → single-leg +
+  overhead press + pull-ups (quick shoulder warm-up first; three pull-up sets in the superset
+  rests) → hip-flexion hold + trunk (last two pull-up sets alongside) → cool-down
+  `[stated, 2026-11-22]`. Pull-ups moved out of last place because they kept getting cut short.
 
 ## 4. Output
 
