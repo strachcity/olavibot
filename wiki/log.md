@@ -2249,3 +2249,6 @@ relative_effort: 4
 - Planned: Easy 2.5km home.
 - Done: 2.38km in 12:54, 5:25/km, 12:24 `[data, Strava 21083349756]`.
 - Review: Numbers only.
+
+## [2026-11-22] review | Week 1 summary
+- Build week 1 summary written in `wiki/blocks/2026-11-build.md`: all sessions done (quality moved into the long run), 38.2km against ~35 planned, back squat 100kg × 5 at RPE 7, 15km longest run with 4×5min. Issues: ~4km over plan, Session A 89 min, pull-ups short again, no Achilles mornings logged. Next: hold ~35km.
