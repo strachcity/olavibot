@@ -146,7 +146,7 @@ either a number, one of the listed words, or `pending`. Never prose, never a ran
 planned: yes          # yes | no | partial — drives adherence %
 rpe: 7                # 1-10
 achilles_during: 2    # 0-10
-achilles_next_am: pending   # 0-10 | pending
+achilles_next_am: 0   # 0-10 | pending. Defaults to 0 unless Jack says otherwise [stated, 2026-11-22]
 beyond_plan: none     # none | a short phrase, no commas
 duration_min: 62
 ```
