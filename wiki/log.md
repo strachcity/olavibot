@@ -2260,3 +2260,6 @@ relative_effort: 4
 
 ## [2026-11-22] model | Session A: pull-ups out of last place
 - Pull-ups were short three sessions running because they come last and Jack wants to go home `[stated, 2026-11-22]`. Agreed to try `[stated, 2026-11-22]`: pull-ups go into the step-up + press superset (three sets in the rests), two more alongside the knee-drive hold and side plank, which now go last. Build block and `programme-session` updated.
+
+## [2026-11-22] block | Build wk2 planned (23–29 Nov)
+- Swansea Mon–Wed (event Wednesday night), London Thursday, Devon Friday night to Monday; gyms only in London `[stated, 2026-11-22]`. Progression run Tuesday, Session B Thursday, Session A Friday, long 14km Saturday and easy 6km Sunday in Devon. Front squat to 70kg (65kg was easy `[stated, 2026-11-22]`). ~39km. Pushed to the Running calendar.
