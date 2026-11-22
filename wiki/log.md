@@ -2093,7 +2093,7 @@ Agreed with Jack `[stated, 2026-11-15]`, informed by research passes 5–7:
 ## [2026-11-16] run | Easy 6km, Swansea — Build wk1
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 39
 distance_km: 6.24
@@ -2119,7 +2119,7 @@ relative_effort: 17
 ## [2026-11-18] run | Easy 5km in place of cruise intervals — Build wk1
 ```yaml
 planned: partial
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 30
 distance_km: 5.51
@@ -2145,7 +2145,7 @@ relative_effort: 22
 ```yaml
 planned: partial
 rpe: 7
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 89
 gym: full
@@ -2157,7 +2157,8 @@ relative_effort: 11
 - Done: Back squat 95×5, 95×5, 100×5; squats "good", 100 "felt good", RPE 7 `[stated, 2026-11-19]`. High-knee step-up 3×8/leg @2×12.5kg DBs; arms fatigue before legs `[stated]`. Standing overhead press 3×8 @30kg bar `[stated]`. Pull-ups 3×3 `[stated]`. Warm-up, knee-drive hold, side plank and cool-down: not reported. Bodyweight 78.6kg `[stated, 2026-11-19]`. Strava: 89 min, relative effort 11 `[data, Strava 21051794397]`.
 - Beyond plan: none. 100kg top set was pre-agreed.
 - Capacity: back squat 100kg × 5 at RPE 7, the heaviest working set on record (previous 95kg × 3×5, 20 Oct). Overhead press 30kg × 3×8, first record.
-- Review: Partial only because pull-ups were 3×3, not 5×3. The new rule moves the back squat to 100kg 3×5 in week 3, and the press to 32.5kg. Step-ups: Jack wants to see how heavy they go `[stated, 2026-11-19]`. Two dumbbells, +2.5kg each when every set is RPE ≤7 (2×15kg next); goblet hold at the same total once grip gives out first; Bulgarian split squat if that stops working. 89 min against a ≤75 target, with the 100kg set, new exercises and finding loads. Cruise intervals tomorrow.
+- Review: Partial only because pull-ups were 3×3, not 5×3. The new rule moves the back squat to 100kg 3×5 in week 3, and the press to 32.5kg. Step-ups: Jack wants to see how heavy they go `[stated, 2026-11-19]`. Two dumbbells, +2.5kg each when every set is RPE ≤7 (2×15kg next); goblet hold at the same total once grip gives out first; Bulgarian split squat if that stops working. The 89 min on Strava includes cycling to and from the gym `[stated, 2026-11-22]`, so the session itself was within target. Cruise intervals tomorrow.
+- Corrected 2026-11-22: duration includes the cycle there and back (Jack), not an over-long session. Pull-ups were short because they come at the end and he wanted to go home `[stated, 2026-11-22]`.
 
 ## [2026-11-19] block | Build: step-up progression path
 - Step-ups stay and progress by load: two dumbbells (2×12.5kg on 19 Nov), +2.5kg each when every set is RPE ≤7; goblet hold at the same total once grip fails before the legs; Bulgarian split squat if that stops working `[stated, 2026-11-19]`. Session A line in the Build block updated.
@@ -2168,7 +2169,7 @@ relative_effort: 11
 ## [2026-11-20] run | Easy 6.5km — Build wk1
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 37
 distance_km: 6.52
@@ -2185,7 +2186,7 @@ relative_effort: 18
 ## [2026-11-21] run | Long run with 4×5min cruise intervals, with Luka — Build wk1
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: 3km extra to get home
 duration_min: 80
 distance_km: 15.03
@@ -2205,7 +2206,7 @@ hard_min: 18
 ## [2026-11-22] run | Easy — to gym (Session B)
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 15
 distance_km: 2.55
@@ -2221,7 +2222,7 @@ relative_effort: 11
 ```yaml
 planned: yes
 rpe: 8
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 62
 gym: full
@@ -2238,7 +2239,7 @@ relative_effort: 8
 ## [2026-11-22] run | Easy — home (Session B)
 ```yaml
 planned: yes
-achilles_next_am: pending
+achilles_next_am: 0
 beyond_plan: none
 duration_min: 13
 distance_km: 2.38
@@ -2252,3 +2253,7 @@ relative_effort: 4
 
 ## [2026-11-22] review | Week 1 summary
 - Build week 1 summary written in `wiki/blocks/2026-11-build.md`: all sessions done (quality moved into the long run), 38.2km against ~35 planned, back squat 100kg × 5 at RPE 7, 15km longest run with 4×5min. Issues: ~4km over plan, Session A 89 min, pull-ups short again, no Achilles mornings logged. Next: hold ~35km.
+
+## [2026-11-22] model | Achilles defaults to 0; weekly running same or higher
+- Jack: the Achilles is 0 unless he says otherwise `[stated, 2026-11-22]`. `achilles_next_am` is now logged as 0 by default and changed only when he reports a number. Build week 1 pending fields filled with 0. Rule in `CLAUDE.md` and `review-training`.
+- Jack: running can hold around 38km; he wants each week the same as or higher than the last `[stated, 2026-11-22]`. Build block weekly totals updated; the week 1 summary's "over plan" and "Session A 89 min" points corrected in place (the 89 min included cycling).

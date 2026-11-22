@@ -47,7 +47,7 @@ makes block reviews arithmetic instead of impression — see `CLAUDE.md` for the
 planned: yes          # yes | no | partial
 rpe: 7
 achilles_during: 2
-achilles_next_am: pending
+achilles_next_am: 0   # default 0 unless Jack reports otherwise [stated, 2026-11-22]
 beyond_plan: none     # none | short phrase, no commas
 duration_min: 62
 gym: full
