@@ -2263,3 +2263,20 @@ relative_effort: 4
 
 ## [2026-11-22] block | Build wk2 planned (23–29 Nov)
 - Swansea Mon–Wed (event Wednesday night), London Thursday, Devon Friday night to Monday; gyms only in London `[stated, 2026-11-22]`. Progression run Tuesday, Session B Thursday, Session A Friday, long 14km Saturday and easy 6km Sunday in Devon. Front squat to 70kg (65kg was easy `[stated, 2026-11-22]`). ~39km. Pushed to the Running calendar.
+
+## [2026-11-23] run | Easy 6km, Swansea — Build wk2
+```yaml
+planned: yes
+achilles_next_am: 0
+beyond_plan: none
+duration_min: 46
+distance_km: 5.80
+avg_pace: 7:58
+run_type: easy
+relative_effort: 14
+```
+- Planned: Easy 6km, Swansea, evening.
+- Done: 5.80km in 46:11 moving, 7:58/km average, 29m gain, 18:21 `[data, Strava 21099381193]`; walked the end while chatting `[stated, 2026-11-23]`. Hamstrings sore, "not painful, nothing to worry about", which Jack puts down to Sunday's RDLs `[stated, 2026-11-23]`.
+- Beyond plan: none.
+- Capacity: not reported.
+- Review: Easy, with walking. Hamstring soreness noted; RDLs to be introduced more gradually.
