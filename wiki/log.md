@@ -2280,3 +2280,6 @@ relative_effort: 14
 - Beyond plan: none.
 - Capacity: not reported.
 - Review: Easy, with walking. Hamstring soreness noted; RDLs to be introduced more gradually.
+
+## [2026-11-23] block | Build: RDLs introduced gradually
+- Hamstrings sore (not painful) after the first RDLs at 60kg on 22 Nov; Jack wants them introduced slowly and carefully `[stated, 2026-11-23]`. Week 3: 2×8 @50kg; week 5: 3×8 @50kg; then load by effort. Thursday's Nordic curls drop to 2×3 if the hamstrings are still sore.
