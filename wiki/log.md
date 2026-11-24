@@ -2283,3 +2283,22 @@ relative_effort: 14
 
 ## [2026-11-23] block | Build: RDLs introduced gradually
 - Hamstrings sore (not painful) after the first RDLs at 60kg on 22 Nov; Jack wants them introduced slowly and carefully `[stated, 2026-11-23]`. Week 3: 2×8 @50kg; week 5: 3×8 @50kg; then load by effort. Thursday's Nordic curls drop to 2×3 if the hamstrings are still sore.
+
+## [2026-11-24] run | Progression run 8km, Swansea seafront — Build wk2
+```yaml
+planned: yes
+achilles_next_am: 0
+beyond_plan: none
+duration_min: 42
+distance_km: 8.03
+avg_pace: 5:14
+run_type: threshold
+relative_effort: 26
+hard_km: 2.0
+hard_min: 9
+```
+- Planned: Progression run ~8km on the seafront: easy ~6km, last 2km at threshold effort.
+- Done: 4km out with a tailwind, 4km back into a heavy headwind ("fuck me difficult"); the last 2km "very hard", HR felt very high, maybe higher than Strava shows `[stated, 2026-11-24]`. 8.03km in 42:06, 18:56 `[data, Strava 21110775617]`. Per km from the stream: 5:38, 5:26, 5:27, 5:25 (tailwind), 5:19, 5:35 (headwind), then 4:32 and 4:26 for the last 2km, HR averaging ~152 and ~148, max 155 `[data, Strava stream]`.
+- Beyond plan: none.
+- Capacity: not reported.
+- Review: Easy part on target. The last 2km held ~4:30 into a heavy headwind, which Jack rated very hard: above the comfortably-hard threshold effort. The HR stream has long stretches of identical values (e.g. flat at 135, 140 and 152), a sign of the wrist sensor dropping out, so Jack's sense that HR was higher than recorded is plausible and the HR here is unreliable. Next time into a headwind: hold the effort, let the pace drop.
