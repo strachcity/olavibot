@@ -2302,3 +2302,7 @@ hard_min: 9
 - Beyond plan: none.
 - Capacity: not reported.
 - Review: Easy part on target. The last 2km held ~4:30 into a heavy headwind, which Jack rated very hard: above the comfortably-hard threshold effort. The HR stream has long stretches of identical values (e.g. flat at 135, 140 and 152), a sign of the wrist sensor dropping out, so Jack's sense that HR was higher than recorded is plausible and the HR here is unreliable. Next time into a headwind: hold the effort, let the pace drop.
+
+## [2026-11-24] review | Correction: progression run was on target
+- Corrects the 24 Nov progression run review. The last 2km at 4:32 and 4:26 sit right on Jack's threshold pace from the 14 Nov test (~4:30 → 4:20), so he ran what was planned `[data, log]`. Jack: the plan said 2km threshold, and he had no reliable way to judge effort with the watch playing up `[stated, 2026-11-24]`. Calling it "too hard" was Claude's error.
+- What made it feel very hard was the headwind, not the pace choice. Fix for future quality runs: judge effort without the watch (talk test: a full sentence is threshold, a few words is over), and on an out-and-back, put the hard part with the wind behind or on a sheltered loop.
