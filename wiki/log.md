@@ -2335,10 +2335,11 @@ reactive_level: 3
 relative_effort: 6
 ```
 - Planned: Pogos 3×10 + low box jumps 3×5 first. Trap bar ramp, then 3×5 @100kg. Single-leg standing calf 3×10 + seated 3×12 @45kg. Bench 3×8. Nordic curl 3×3 (2×3 if hamstrings sore). Barbell row 3×8 + Copenhagen long lever 3×20s/side.
-- Done: Ran to the gym. Trap bar 3×5 @100kg, RPE 6–7 `[stated, 2026-11-26]`. Low box jumps "fine" `[stated]`, first time this block. Barbell row + Copenhagen plank as a superset `[stated]`. Bench press and Nordic curls not done: ran out of time `[stated]`. Pogos, calf raises, loads and sets for row and Copenhagen, warm-up and cool-down: not reported. Strava: 56 min, relative effort 6 `[data, Strava 21137131920]`.
+- Done: Ran to the gym. Trap bar 3×5 @100kg, RPE 6–7 `[stated, 2026-11-26]`. Low box jumps "fine" `[stated]`, first time this block. Barbell row + Copenhagen plank as a superset `[stated]`. Bench press and Nordic curls not done: ran out of time `[stated]`. Pogos 3×10, single-leg + seated calf raise @45kg, row 3×8 and Copenhagen 3×20s/side done as planned `[stated, 2026-11-26]`. Warm-up and cool-down: not reported. Strava: 56 min, relative effort 6 `[data, Strava 21137131920]`.
 - Beyond plan: none.
 - Capacity: trap bar 100kg × 3×5 at RPE 6–7, easier than 15 Nov at the same load. Reactive Level 3 complete for the first time (box jumps added).
 - Review: Partial: bench and Nordics dropped for time. Bench ranking below the legs is the agreed order; Nordics are the second Session B running to go (15 Nov too). Trap bar at RPE 6–7 moves to 105kg next even week. Session A tomorrow.
+- Corrected 2026-11-26: pogos, calf raises, row and Copenhagen done as planned, not "not reported" (Jack).
 
 ## [2026-11-26] run | Easy — home (Session B)
 ```yaml
