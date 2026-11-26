@@ -2306,3 +2306,51 @@ hard_min: 9
 ## [2026-11-24] review | Correction: progression run was on target
 - Corrects the 24 Nov progression run review. The last 2km at 4:32 and 4:26 sit right on Jack's threshold pace from the 14 Nov test (~4:30 → 4:20), so he ran what was planned `[data, log]`. Jack: the plan said 2km threshold, and he had no reliable way to judge effort with the watch playing up `[stated, 2026-11-24]`. Calling it "too hard" was Claude's error.
 - What made it feel very hard was the headwind, not the pace choice. Fix for future quality runs: judge effort without the watch (talk test: a full sentence is threshold, a few words is over), and on an out-and-back, put the hard part with the wind behind or on a sheltered loop.
+
+## [2026-11-26] run | Easy — to gym (Session B)
+```yaml
+planned: yes
+achilles_next_am: 0
+beyond_plan: none
+duration_min: 20
+distance_km: 3.13
+avg_pace: 6:15
+run_type: easy
+relative_effort: 8
+```
+- Planned: Easy 2.5km to the gym.
+- Done: 3.13km in 19:33, 6:15/km, 19:46 `[data, Strava 21137131943]`.
+- Review: Easy, as planned.
+
+## [2026-11-26] gym | Session B — Build wk2 (full gym)
+```yaml
+planned: partial
+rpe: 7
+achilles_next_am: 0
+beyond_plan: none
+duration_min: 56
+gym: full
+session: B
+reactive_level: 3
+relative_effort: 6
+```
+- Planned: Pogos 3×10 + low box jumps 3×5 first. Trap bar ramp, then 3×5 @100kg. Single-leg standing calf 3×10 + seated 3×12 @45kg. Bench 3×8. Nordic curl 3×3 (2×3 if hamstrings sore). Barbell row 3×8 + Copenhagen long lever 3×20s/side.
+- Done: Ran to the gym. Trap bar 3×5 @100kg, RPE 6–7 `[stated, 2026-11-26]`. Low box jumps "fine" `[stated]`, first time this block. Barbell row + Copenhagen plank as a superset `[stated]`. Bench press and Nordic curls not done: ran out of time `[stated]`. Pogos, calf raises, loads and sets for row and Copenhagen, warm-up and cool-down: not reported. Strava: 56 min, relative effort 6 `[data, Strava 21137131920]`.
+- Beyond plan: none.
+- Capacity: trap bar 100kg × 3×5 at RPE 6–7, easier than 15 Nov at the same load. Reactive Level 3 complete for the first time (box jumps added).
+- Review: Partial: bench and Nordics dropped for time. Bench ranking below the legs is the agreed order; Nordics are the second Session B running to go (15 Nov too). Trap bar at RPE 6–7 moves to 105kg next even week. Session A tomorrow.
+
+## [2026-11-26] run | Easy — home (Session B)
+```yaml
+planned: yes
+achilles_next_am: 0
+beyond_plan: none
+duration_min: 18
+distance_km: 3.00
+avg_pace: 5:55
+run_type: easy
+relative_effort: 5
+```
+- Planned: Easy 2.5km home.
+- Done: 3.00km in 17:49, 5:55/km, 21:02 `[data, Strava 21137131926]`.
+- Review: Easy, as planned.
