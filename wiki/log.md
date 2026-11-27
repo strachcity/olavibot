@@ -2355,3 +2355,7 @@ relative_effort: 5
 - Planned: Easy 2.5km home.
 - Done: 3.00km in 17:49, 5:55/km, 21:02 `[data, Strava 21137131926]`.
 - Review: Easy, as planned.
+
+## [2026-11-27] block | Session B slimmed; no weekday-midday gym
+- Session B from week 3: Nordic 2×3 and Copenhagen 2×20s/side move into the warm-up (Jack's idea), bench and row become one superset; four working blocks after the warm-up instead of seven. Agreed to try `[stated, 2026-11-27]`.
+- Weekday gym only early morning or evening, never midday `[stated, 2026-11-27]`. Filed in `athlete.md`.
