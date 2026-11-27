@@ -2359,3 +2359,17 @@ relative_effort: 5
 ## [2026-11-27] block | Session B slimmed; no weekday-midday gym
 - Session B from week 3: Nordic 2×3 and Copenhagen 2×20s/side move into the warm-up (Jack's idea), bench and row become one superset; four working blocks after the warm-up instead of seven. Agreed to try `[stated, 2026-11-27]`.
 - Weekday gym only early morning or evening, never midday `[stated, 2026-11-27]`. Filed in `athlete.md`.
+
+## [2026-11-27] gym | Session A — Build wk2 (home gym, short)
+```yaml
+planned: partial
+achilles_next_am: 0
+beyond_plan: RDL 3x10 at 20kg
+session: A
+reactive_level: 3
+```
+- Planned: 30-minute version at the home gym, after 5.5h sleep and only if feeling OK: front squat ramp, then 3×5 @70kg (ceiling 72.5kg); Bulgarian split squat 3×8/leg @2×18kg + pull-ups 3×3. Overhead press, knee-drive hold and side plank cut for time.
+- Done: Front squat and Bulgarian split squat as planned `[stated, 2026-11-27]`, so front squat 3×5 @70kg and BSS 3×8/leg @2×18kg. Romanian deadlift 3×10 @20kg to finish `[stated]`. Pull-ups not mentioned. No Strava activity, so no duration or relative effort.
+- Beyond plan: Romanian deadlift 3×10 @20kg. Light, so a small extra, but not in the plan.
+- Capacity: front squat 70kg × 3×5, heaviest on record (previous 65kg, 14 Oct and 13 Nov).
+- Review: The key lift done on short sleep, at the planned load. The extra RDLs were light, but they're the movement that left the hamstrings sore four days earlier, the day before a 14km long run. Front squat RPE not given, so next even week holds at 70kg unless Jack says it was RPE 7 or easier.
