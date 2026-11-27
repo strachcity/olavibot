@@ -2364,12 +2364,13 @@ relative_effort: 5
 ```yaml
 planned: partial
 achilles_next_am: 0
-beyond_plan: RDL 3x10 at 20kg
+beyond_plan: none
 session: A
 reactive_level: 3
 ```
 - Planned: 30-minute version at the home gym, after 5.5h sleep and only if feeling OK: front squat ramp, then 3×5 @70kg (ceiling 72.5kg); Bulgarian split squat 3×8/leg @2×18kg + pull-ups 3×3. Overhead press, knee-drive hold and side plank cut for time.
-- Done: Front squat and Bulgarian split squat as planned `[stated, 2026-11-27]`, so front squat 3×5 @70kg and BSS 3×8/leg @2×18kg. Romanian deadlift 3×10 @20kg to finish `[stated]`. Pull-ups not mentioned. No Strava activity, so no duration or relative effort.
-- Beyond plan: Romanian deadlift 3×10 @20kg. Light, so a small extra, but not in the plan.
+- Done: Front squat and Bulgarian split squat as planned `[stated, 2026-11-27]`, so front squat 3×5 @70kg and BSS 3×8/leg @2×18kg. Romanian deadlift 3×10 @20kg to finish, as a replacement for the cut slots and a sensible, lighter version of the RDL after going too heavy on 22 Nov `[stated, 2026-11-27]`. Pull-ups not mentioned. No Strava activity, so no duration or relative effort.
+- Beyond plan: none. The RDLs replaced cut slots `[stated, 2026-11-27]`.
 - Capacity: front squat 70kg × 3×5, heaviest on record (previous 65kg, 14 Oct and 13 Nov).
-- Review: The key lift done on short sleep, at the planned load. The extra RDLs were light, but they're the movement that left the hamstrings sore four days earlier, the day before a 14km long run. Front squat RPE not given, so next even week holds at 70kg unless Jack says it was RPE 7 or easier.
+- Review: The key lift done on short sleep, at the planned load. Light RDLs as the gradual reintroduction Jack wanted after the 22 Nov soreness. Front squat RPE not given, so next even week holds at 70kg unless Jack says it was RPE 7 or easier.
+- Corrected 2026-11-27: RDLs were a replacement, not an extra (Jack); beyond_plan RDL → none.
