@@ -2386,3 +2386,6 @@ beyond_plan: none
 - Planned: Long run 14km easy, Devon.
 - Done: Rest. Shattered from travel and work; long run moved to Sunday `[stated, 2026-11-28]`.
 - Review: The right call after 5.5h sleep, an early session and travel.
+
+## [2026-11-28] block | Build wk2: long run to Sunday
+- Long run moves to Sunday in place of the easy 6km `[stated, 2026-11-28]`. 14km planned, ceiling 16km under the spike rule; Jack's 18km would be +3km on the 4-week longest. Missed volume isn't made up.
