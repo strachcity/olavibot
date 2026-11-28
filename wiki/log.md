@@ -2376,3 +2376,13 @@ relative_effort: 4
 - Capacity: front squat 70kg × 3×5, heaviest on record (previous 65kg, 14 Oct and 13 Nov).
 - Review: The key lift done on short sleep, at the planned load. Light RDLs as the gradual reintroduction Jack wanted after the 22 Nov soreness. Front squat RPE not given, so next even week holds at 70kg unless Jack says it was RPE 7 or easier.
 - Corrected 2026-11-27: RDLs were a replacement, not an extra (Jack); beyond_plan RDL → none.
+
+## [2026-11-28] rest | Rest day, long run moved to Sunday — Build wk2
+```yaml
+planned: no
+achilles_next_am: 0
+beyond_plan: none
+```
+- Planned: Long run 14km easy, Devon.
+- Done: Rest. Shattered from travel and work; long run moved to Sunday `[stated, 2026-11-28]`.
+- Review: The right call after 5.5h sleep, an early session and travel.
